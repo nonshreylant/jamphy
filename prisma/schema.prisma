@@ -140,6 +140,7 @@ model Question {
   type           String   // MCQ, MSQ, NAT
   question       String   @db.Text
   options        String[] // Array of strings, null/empty for NAT
+  optionImages   String[] // Array of base64 image strings or URLs
   correctAnswer  Int?     // For MCQ
   correctAnswers Int[]    // For MSQ
   natAnswer      String?  // For NAT

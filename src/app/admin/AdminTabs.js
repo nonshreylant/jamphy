@@ -259,6 +259,85 @@ export default function AdminTabs({ reports, users }) {
     reader.readAsDataURL(imageFile);
   };
 
+  const handleOptionImageUpload = (qIndex, optIndex, e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const updated = [...extractedQuestions];
+      if (!updated[qIndex].optionImages) {
+        updated[qIndex].optionImages = [null, null, null, null];
+      }
+      updated[qIndex].optionImages[optIndex] = event.target.result;
+      setExtractedQuestions(updated);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handlePasteOptionImage = async (qIndex, optIndex) => {
+    try {
+      const clipboardItems = await navigator.clipboard.read();
+      let imageBlob = null;
+      for (const item of clipboardItems) {
+        const imageTypes = item.types.filter(type => type.startsWith('image/'));
+        if (imageTypes.length > 0) {
+          imageBlob = await item.getType(imageTypes[0]);
+          break;
+        }
+      }
+      
+      if (!imageBlob) {
+        setMessage('No image found in clipboard');
+        return;
+      }
+      
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const updated = [...extractedQuestions];
+        if (!updated[qIndex].optionImages) {
+          updated[qIndex].optionImages = [null, null, null, null];
+        }
+        updated[qIndex].optionImages[optIndex] = event.target.result;
+        setExtractedQuestions(updated);
+        setMessage(`Option ${String.fromCharCode(65 + optIndex)} image pasted successfully`);
+      };
+      reader.readAsDataURL(imageBlob);
+    } catch (err) {
+      console.error(err);
+      setMessage('Failed to read clipboard. Check permissions.');
+    }
+  };
+
+  const handleOptionContainerPaste = (qIndex, optIndex, e) => {
+    const items = e.clipboardData?.items;
+    if (!items) return;
+    
+    let imageFile = null;
+    for (const item of items) {
+      if (item.type.indexOf('image') !== -1) {
+        imageFile = item.getAsFile();
+        break;
+      }
+    }
+    
+    if (!imageFile) {
+      return;
+    }
+    
+    e.preventDefault();
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const updated = [...extractedQuestions];
+      if (!updated[qIndex].optionImages) {
+        updated[qIndex].optionImages = [null, null, null, null];
+      }
+      updated[qIndex].optionImages[optIndex] = event.target.result;
+      setExtractedQuestions(updated);
+      setMessage(`Option ${String.fromCharCode(65 + optIndex)} image pasted successfully`);
+    };
+    reader.readAsDataURL(imageFile);
+  };
+
   const handleMainPaste = async () => {
     try {
       const clipboardItems = await navigator.clipboard.read();
@@ -715,11 +794,66 @@ export default function AdminTabs({ reports, users }) {
                             <MathText>{q.question}</MathText>
                           </div>
                           {q.options && q.options.length > 0 && (
-                            <div className="mb-4 pl-3 border-l-2 border-zinc-700 space-y-2">
+                            <div className="mb-4 pl-3 border-l-2 border-zinc-700 space-y-4">
                               {q.options.map((opt, oIdx) => (
-                                <div key={oIdx} className="text-sm text-zinc-400 flex items-start gap-2">
-                                  <span className="font-bold text-zinc-500 mt-0.5">{String.fromCharCode(65 + oIdx)}.</span>
-                                  <div><MathText>{opt}</MathText></div>
+                                <div key={oIdx} className="space-y-2">
+                                  <div className="text-sm text-zinc-400 flex items-start gap-2">
+                                    <span className="font-bold text-zinc-500 mt-0.5">{String.fromCharCode(65 + oIdx)}.</span>
+                                    <div><MathText>{opt}</MathText></div>
+                                  </div>
+                                  
+                                  {/* Option Image Clipboard/Upload Container */}
+                                  <div 
+                                    className="p-2 border border-dashed border-zinc-800 rounded-xl bg-zinc-950/20 hover:border-zinc-700 transition focus:outline-none focus:border-zinc-500 flex flex-col gap-2 max-w-md"
+                                    tabIndex={0}
+                                    onPaste={(e) => handleOptionContainerPaste(idx, oIdx, e)}
+                                  >
+                                    <div className="flex justify-between items-center gap-2">
+                                      <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Option {String.fromCharCode(65 + oIdx)} Image</span>
+                                      <div className="flex gap-2">
+                                        <button 
+                                          type="button"
+                                          onClick={() => handlePasteOptionImage(idx, oIdx)}
+                                          className="text-[10px] bg-zinc-850 hover:bg-zinc-700 text-white px-2 py-0.5 rounded transition"
+                                        >
+                                          Paste
+                                        </button>
+                                        <input 
+                                          type="file" 
+                                          accept="image/*" 
+                                          onChange={(e) => handleOptionImageUpload(idx, oIdx, e)}
+                                          className="hidden" 
+                                          id={`opt-file-${idx}-${oIdx}`}
+                                        />
+                                        <label 
+                                          htmlFor={`opt-file-${idx}-${oIdx}`}
+                                          className="text-[10px] bg-zinc-850 hover:bg-zinc-700 text-white px-2 py-0.5 rounded transition cursor-pointer"
+                                        >
+                                          Upload
+                                        </label>
+                                        {q.optionImages?.[oIdx] && (
+                                          <button 
+                                            type="button"
+                                            onClick={() => {
+                                              const updated = [...extractedQuestions];
+                                              if (updated[idx].optionImages) {
+                                                updated[idx].optionImages[oIdx] = null;
+                                                setExtractedQuestions(updated);
+                                              }
+                                            }}
+                                            className="text-[10px] bg-red-950/40 text-red-400 border border-red-500/20 px-2 py-0.5 rounded hover:bg-red-900/40 transition"
+                                          >
+                                            Clear
+                                          </button>
+                                        )}
+                                      </div>
+                                    </div>
+                                    {q.optionImages?.[oIdx] && (
+                                      <div className="mt-1">
+                                        <img src={q.optionImages[oIdx]} alt={`Option ${String.fromCharCode(65 + oIdx)}`} className="max-h-24 object-contain rounded border border-zinc-800" />
+                                      </div>
+                                    )}
+                                  </div>
                                 </div>
                               ))}
                             </div>

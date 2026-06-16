@@ -27,6 +27,7 @@ export async function POST(req) {
         type: q.type || "MCQ",
         question: q.question,
         options: q.options || [],
+        optionImages: q.optionImages || [],
         correctAnswer: q.correctAnswer !== undefined ? q.correctAnswer : null,
         correctAnswers: q.correctAnswers || [],
         natAnswer: q.natAnswer !== undefined ? String(q.natAnswer) : null,
