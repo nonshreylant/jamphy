@@ -1,5 +1,6 @@
 "use client";
 
+// Premium circular progress indicator for daily prep goals
 import { useEffect, useState } from "react";
 import { motion, useSpring, useTransform } from "framer-motion";
 
