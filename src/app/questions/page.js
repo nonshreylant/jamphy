@@ -676,35 +676,66 @@ export default function IITJamPhysicsHub() {
 
       <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 shrink-0">
             <Link
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 navigateWithTransition("/");
               }}
+              className="shrink-0"
             >
               <Image
                 src="/logo.png"
                 alt="Logo"
                 width={148}
                 height={40}
-                className="rounded-xl object-contain"
+                className="rounded-xl object-contain shrink-0"
                 priority
               />
             </Link>
           </div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-4 items-center min-w-0">
             {session?.user && (
-              <div className="relative group cursor-pointer flex flex-col items-center">
-                {/* Loading bar container */}
-                <div className="flex items-center gap-2 py-2">
+              <div className="relative group cursor-pointer flex flex-col items-center shrink-0">
+                {/* Desktop Goal Bar */}
+                <div className="hidden sm:flex items-center gap-2 py-2">
                   <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider hidden md:inline">Goal</span>
-                  <div className="w-20 sm:w-36 h-2 rounded-full bg-zinc-800 overflow-hidden relative border border-zinc-700/30">
+                  <div className="w-36 h-2 rounded-full bg-zinc-800 overflow-hidden relative border border-zinc-700/30">
                     <div 
                       className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-500" 
                       style={{ width: `${Math.min(goalData.percentage, 100)}%` }}
                     />
+                  </div>
+                </div>
+
+                {/* Mobile Goal Circle */}
+                <div className="flex sm:hidden items-center justify-center py-2 shrink-0">
+                  <div className="relative w-8 h-8 flex items-center justify-center">
+                    <svg className="w-full h-full transform -rotate-90">
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="12"
+                        className="stroke-zinc-800"
+                        strokeWidth="2.5"
+                        fill="transparent"
+                      />
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="12"
+                        className="stroke-amber-500"
+                        strokeWidth="2.5"
+                        fill="transparent"
+                        strokeDasharray={2 * Math.PI * 12}
+                        strokeDashoffset={2 * Math.PI * 12 * (1 - Math.min(goalData.percentage, 100) / 100)}
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <span className="absolute text-[8px] font-black text-amber-400">
+                      {Math.round(goalData.percentage)}%
+                    </span>
                   </div>
                 </div>
                 

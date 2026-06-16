@@ -50,8 +50,9 @@ export default function ProfilePage() {
                 e.preventDefault();
                 navigateWithTransition("/");
               }}
+              className="shrink-0"
             >
-              <Image src="/logo.png" alt="Logo" width={148} height={40} className="rounded-xl object-contain" priority />
+              <Image src="/logo.png" alt="Logo" width={148} height={40} className="rounded-xl object-contain shrink-0" priority />
             </Link>
             <span className="font-bold text-xl tracking-tight text-zinc-500 hidden sm:block">
               Profile
