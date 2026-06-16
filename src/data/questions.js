@@ -7047,9 +7047,8 @@ Substitute the given values (\(R = 0.05\), \(B_0 = 0.98\), \(\omega = 100\), \(r
     correctAnswerMax: 1.75,
   },
 
-  [
-    {
-      id: 1,
+  {
+    id: 1,
       year: 2023,
       subject: "Solid State Physics",
       type: "MCQ",
@@ -7842,7 +7841,6 @@ $\sigma \approx 2.78 \times 10^{-4} \text{ } \Omega^{-1}\text{m}^{-1}$`,
 
       correctAnswers: [0]
     }
-  ]
-
+  
 ];
 
