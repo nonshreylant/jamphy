@@ -8,7 +8,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import UserMenu from "../../components/UserMenu";
 import InvitesMenu from "../../components/InvitesMenu";
-import { questions } from "../../data/questions";
+import { questions as staticQuestions } from "../../data/questions";
 import { syllabus } from "../../data/syllabus";
 import TestManager from "../../components/test/TestManager";
 import TestModal from "../../components/test/TestModal";
@@ -47,6 +47,24 @@ export default function IITJamPhysicsHub() {
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
   const [myFollows, setMyFollows] = useState(new Set());
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false);
+  const [questionsList, setQuestionsList] = useState(staticQuestions);
+
+  useEffect(() => {
+    fetch("/api/questions")
+      .then(res => res.json())
+      .then(data => {
+        if (data.questions && data.questions.length > 0) {
+          setQuestionsList(prev => {
+            const existingKeys = new Set(prev.map(q => `${q.year}-${q.id}`));
+            const uniqueDbQuestions = data.questions.filter(
+              q => !existingKeys.has(`${q.year}-${q.id}`)
+            );
+            return [...prev, ...uniqueDbQuestions];
+          });
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleSaveGoal = (newTarget) => {
     setIsGoalModalOpen(false);
@@ -372,7 +390,7 @@ export default function IITJamPhysicsHub() {
 
   const filteredQuestions = useMemo(() => {
 
-    return questions.filter((q) => {
+    return questionsList.filter((q) => {
 
       const subjectMatch = selectedSubject
         ? selectedSubject.subtopics.includes(q.subject)
@@ -976,7 +994,7 @@ export default function IITJamPhysicsHub() {
                   </option>
 
                   {[...new Set(
-                    questions.map((q) => q.year)
+                    questionsList.map((q) => q.year)
                   )]
                     .sort((a, b) => b - a)
                     .map((year) => (
@@ -1606,7 +1624,7 @@ export default function IITJamPhysicsHub() {
 
           {testActive && (
             <TestManager
-              allQuestions={questions}
+              allQuestions={questionsList}
               onClose={() => setTestActive(false)}
             />
           )}
