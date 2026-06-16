@@ -89,29 +89,35 @@ CRITICAL INSTRUCTIONS:
     try {
       questions = JSON.parse(text);
     } catch (parseError) {
-      console.log("JSON parse failed, attempting fallback repair...");
+      console.error("JSON parse failed, error message:", parseError.message);
+      console.log("Attempting robust repair on text...");
       partial = true;
       try {
-        const firstBracket = text.indexOf('[');
-        const lastBracket = text.lastIndexOf(']');
-        if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
-          questions = JSON.parse(text.substring(firstBracket, lastBracket + 1));
-        } else {
-           throw new Error("No array brackets found");
-        }
-      } catch (fallbackError) {
-         console.log("Fallback failed. Regex extraction...");
-         const matches = text.matchAll(/\\{[^{}]*(?:\\{[^{}]*\\}[^{}]*)*\\}/g);
-         for (const match of matches) {
-           try {
-             const obj = JSON.parse(match[0]);
-             if (obj && typeof obj === 'object') {
-               questions.push(obj);
+        questions = repairJson(text);
+      } catch (repairError) {
+        console.error("Robust repair failed:", repairError.message);
+        try {
+          const firstBracket = text.indexOf('[');
+          const lastBracket = text.lastIndexOf(']');
+          if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
+            questions = repairJson(text.substring(firstBracket, lastBracket + 1));
+          } else {
+             throw new Error("No array brackets found");
+          }
+        } catch (fallbackError) {
+           console.log("Fallback failed. Regex extraction...");
+           const matches = text.matchAll(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g);
+           for (const match of matches) {
+             try {
+               const obj = repairJson(match[0]);
+               if (obj && typeof obj === 'object') {
+                 questions.push(obj);
+               }
+             } catch (e) {
+               // ignore invalid matches
              }
-           } catch (e) {
-             // ignore invalid matches
            }
-         }
+        }
       }
     }
 
@@ -135,4 +141,100 @@ CRITICAL INSTRUCTIONS:
     
     return NextResponse.json({ error: "Failed to extract questions: " + error.message }, { status: 500 });
   }
+}
+
+function repairJson(jsonString) {
+  let cleaned = jsonString.trim();
+
+  // 1. Remove markdown code block wrappers if present (e.g. ```json ... ```)
+  cleaned = cleaned.replace(/^```json\s*/i, "").replace(/```$/, "").trim();
+
+  // 2. Fix trailing commas before closing braces/brackets
+  cleaned = cleaned.replace(/,\s*([\]}])/g, "$1");
+
+  // 3. Escape raw newlines, carriage returns, and unescaped backslashes inside string values
+  let inQuote = false;
+  let chars = cleaned.split("");
+  for (let i = 0; i < chars.length; i++) {
+    if (chars[i] === '"' && (i === 0 || chars[i-1] !== '\\')) {
+      inQuote = !inQuote;
+    }
+    if (inQuote) {
+      if (chars[i] === '\n') {
+        chars[i] = '\\n';
+      } else if (chars[i] === '\r') {
+        chars[i] = '\\r';
+      } else if (chars[i] === '\\') {
+        // Check if the next character starts a valid JSON escape sequence
+        const nextChar = chars[i+1];
+        const isDoubleBackslash = nextChar === '\\';
+        const isQuote = nextChar === '"';
+        const isSlash = nextChar === '/';
+        const isControl = ['b', 'f', 'n', 'r', 't'].includes(nextChar);
+        const isUnicode = nextChar === 'u' && 
+                          i + 5 < chars.length && 
+                          /^[0-9a-fA-F]{4}$/.test(chars.slice(i+2, i+6).join(""));
+                          
+        if (!isDoubleBackslash && !isQuote && !isSlash && !isControl && !isUnicode) {
+          // It's an invalid escape sequence (like \vec, \theta, etc. or unescaped single backslash)
+          // Double escape it by inserting an extra backslash
+          chars[i] = '\\\\';
+        } else if (isDoubleBackslash) {
+          // Skip the next backslash so we don't process it as an unescaped backslash
+          i++;
+        }
+      }
+    }
+  }
+  cleaned = chars.join("");
+
+  // 4. Try parsing the cleaned string
+  try {
+    return JSON.parse(cleaned);
+  } catch (e) {
+    console.log("Initial repair attempt failed, applying bracket balancing...");
+  }
+
+  // 5. Bracket balancer for truncated JSON:
+  let openBraces = 0;
+  let openBrackets = 0;
+  let inString = false;
+  let escaped = false;
+
+  for (let i = 0; i < cleaned.length; i++) {
+    const char = cleaned[i];
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+    if (char === '\\') {
+      escaped = true;
+      continue;
+    }
+    if (char === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (!inString) {
+      if (char === '{') openBraces++;
+      if (char === '}') openBraces--;
+      if (char === '[') openBrackets++;
+      if (char === ']') openBrackets--;
+    }
+  }
+
+  // If truncated, let's close the open strings and brackets/braces
+  if (inString) {
+    cleaned += '"';
+  }
+  while (openBraces > 0) {
+    cleaned += '}';
+    openBraces--;
+  }
+  while (openBrackets > 0) {
+    cleaned += ']';
+    openBrackets--;
+  }
+
+  return JSON.parse(cleaned);
 }
