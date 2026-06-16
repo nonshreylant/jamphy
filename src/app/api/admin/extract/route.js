@@ -3,10 +3,6 @@ import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-// Initialize Gemini
-const apiKey = process.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(apiKey);
-
 export async function POST(req) {
   try {
     const { base64Data, mimeType, adminPassword } = await req.json();
@@ -23,9 +19,12 @@ export async function POST(req) {
       return NextResponse.json({ error: "Missing file data" }, { status: 400 });
     }
 
+    const apiKey = process.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
     if (!apiKey || apiKey === "your_gemini_api_key_here") {
       return NextResponse.json({ error: "Gemini API key is missing or invalid in the .env file. Please add a valid GEMINI_API_KEY." }, { status: 500 });
     }
+
+    const genAI = new GoogleGenerativeAI(apiKey);
 
     // Clean base64 string if it contains the data url prefix
     const base64Clean = base64Data.replace(/^data:.*?;base64,/, "");
