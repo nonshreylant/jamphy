@@ -7047,5 +7047,802 @@ Substitute the given values (\(R = 0.05\), \(B_0 = 0.98\), \(\omega = 100\), \(r
     correctAnswerMax: 1.75,
   },
 
+  [
+    {
+      id: 1,
+      year: 2023,
+      subject: "Solid State Physics",
+      type: "MCQ",
+
+      question: String.raw`
+For a cubic unit cell, the dashed arrow in which of the following figures represents the direction [220]?
+`,
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/1a_23.png",
+        "/images/1b_23.png",
+        "/images/1c_23.png",
+        "/images/1d_23.png"
+      ],
+
+      detailedSolution: String.raw`The direction [220] in a cubic unit cell corresponds to a vector pointing from the origin $(0,0,0)$ to the point $(2,2,0)$. Because direction indices only denote the vector's orientation, we can reduce the indices to their smallest integer ratio, giving the equivalent direction [110]. 
+
+A vector pointing in the [110] direction has equal positive components along the X and Y axes, and a zero component along the Z axis. Therefore, the arrow representing this direction must lie entirely within the X-Y plane (the base of the cube) and point diagonally across it.`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 2,
+      year: 2023,
+      subject: "Mathematical Physics",
+      type: "MCQ",
+
+      question: String.raw`
+Which of the following fields has non-zero curl?
+`,
+
+      options: [
+        String.raw`$x\hat{i}+y\hat{j}+z\hat{k}$`,
+        String.raw`$(y+z)\hat{i}+(x+z)\hat{j}+(x+y)\hat{k}$`,
+        String.raw`$y^{2}\hat{i}+(2xy+z^{2})\hat{j}+2yz\hat{k}$`,
+        String.raw`$xy\hat{i}+2yz\hat{j}+3xz\hat{k}$`
+      ],
+
+      detailedSolution: String.raw`To determine which field has a non-zero curl, we calculate $\nabla \times \mathbf{F}$ for each option:
+
+(A) $\mathbf{F} = x\hat{i} + y\hat{j} + z\hat{k}$
+$\nabla \times \mathbf{F} = \left(\frac{\partial z}{\partial y} - \frac{\partial y}{\partial z}\right)\hat{i} - \left(\frac{\partial z}{\partial x} - \frac{\partial x}{\partial z}\right)\hat{j} + \left(\frac{\partial y}{\partial x} - \frac{\partial x}{\partial y}\right)\hat{k} = 0\hat{i} + 0\hat{j} + 0\hat{k} = \mathbf{0}$
+
+(B) $\mathbf{F} = (y+z)\hat{i} + (x+z)\hat{j} + (x+y)\hat{k}$
+$\nabla \times \mathbf{F} = (1 - 1)\hat{i} - (1 - 1)\hat{j} + (1 - 1)\hat{k} = \mathbf{0}$
+
+(C) $\mathbf{F} = y^2\hat{i} + (2xy+z^2)\hat{j} + 2yz\hat{k}$
+$\nabla \times \mathbf{F} = (2z - 2z)\hat{i} - (0 - 0)\hat{j} + (2y - 2y)\hat{k} = \mathbf{0}$
+
+(D) $\mathbf{F} = xy\hat{i} + 2yz\hat{j} + 3xz\hat{k}$
+$\nabla \times \mathbf{F} = (0 - 2y)\hat{i} - (3z - 0)\hat{j} + (0 - x)\hat{k} = -2y\hat{i} - 3z\hat{j} - x\hat{k} \neq \mathbf{0}$
+
+Therefore, the field in option (D) is the only one with a non-zero curl.`,
+
+      correctAnswers: [3]
+    },
+
+    {
+      id: 3,
+      year: 2023,
+      subject: "Thermal Physics",
+      type: "MCQ",
+
+      question: String.raw`
+Which of the following statements about the viscosity of a dilute gas is correct?
+`,
+
+      options: [
+        String.raw`It increases with increasing pressure at fixed temperature`,
+        String.raw`It is independent of pressure at fixed temperature`,
+        String.raw`It decreases with increasing temperature`,
+        String.raw`It is independent of temperature`
+      ],
+
+      detailedSolution: String.raw`According to the kinetic theory of gases, the dynamic viscosity ($\eta$) of a dilute, ideal gas is given by the expression:
+$\eta = \frac{1}{3} \rho \bar{v} \lambda$
+
+Where:
+* $\rho$ is the mass density of the gas ($\rho = \frac{mN}{V} = mn$)
+* $\bar{v}$ is the mean speed of the gas molecules ($\bar{v} = \sqrt{\frac{8k_BT}{\pi m}}$)
+* $\lambda$ is the mean free path ($\lambda = \frac{1}{\sqrt{2}\pi d^2 n}$, where $n = \frac{N}{V}$)
+
+Substituting $\rho$ and $\lambda$:
+$\eta = \frac{1}{3} (mn) \bar{v} \left(\frac{1}{\sqrt{2}\pi d^2 n}\right) = \frac{m \bar{v}}{3\sqrt{2}\pi d^2}$
+
+Notice that the number density '$n$' cancels out. Since pressure $P = n k_B T$, changes in pressure at a fixed temperature only change '$n$'. Because '$n$' cancels out in the viscosity formula, the viscosity of a dilute gas is **independent of pressure** at a fixed temperature. 
+(It does depend on temperature since $\bar{v} \propto \sqrt{T}$, making $\eta \propto \sqrt{T}$).`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 4,
+      year: 2023,
+      subject: "Mathematical Physics",
+      type: "MCQ",
+
+      question: String.raw`
+The plot of the function $f(x) = ||x| - 1|$ is
+`,
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/4a_23.png",
+        "/images/4b_23.png",
+        "/images/4c_23.png",
+        "/images/4d_23.png"
+      ],
+
+      detailedSolution: String.raw`To sketch the function $f(x) = ||x| - 1|$, we can build it step-by-step:
+1. Start with the standard absolute value graph $y = |x|$, which is a "V" shape with its vertex at the origin $(0,0)$.
+2. Apply a vertical downward shift by 1 unit to get $y = |x| - 1$. The vertex moves to $(0, -1)$, and the graph intersects the x-axis at $x = -1$ and $x = 1$.
+3. Apply the outer absolute value to get $f(x) = ||x| - 1|$. This transformation reflects any part of the graph that lies below the x-axis ($y < 0$) to above the x-axis ($y > 0$).
+
+The segment from $x = -1$ to $x = 1$, which was previously below the x-axis dipping down to $-1$, flips upwards to form a peak at $(0, 1)$. The rest of the graph remains a "V" shape extending outwards from $x = -1$ and $x = 1$. This yields a 'W' shaped curve.`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 5,
+      year: 2023,
+      subject: "Statistical Mechanics",
+      type: "MCQ",
+
+      question: String.raw`
+A system has N spins, where each spin is capable of existing in 4 possible states. The difference in entropy of disordered states (where all possible spin configurations are equally probable) and ordered states is
+`,
+
+      options: [
+        String.raw`$2(N-1)k_B\ln 2$`,
+        String.raw`$(N-1)k_B\ln 2$`,
+        String.raw`$4k_B\ln N$`,
+        String.raw`$Nk_B\ln 2$`
+      ],
+
+      detailedSolution: String.raw`In statistical mechanics, the entropy $S$ is related to the number of accessible microstates $\Omega$ by Boltzmann's entropy formula:
+$S = k_B \ln(\Omega)$
+
+**Disordered State:**
+If each of the $N$ spins can be in any of the 4 possible states independently, the total number of microstates is:
+$\Omega_{\text{disordered}} = 4^N$
+The entropy of the disordered state is:
+$S_{\text{disordered}} = k_B \ln(4^N) = N k_B \ln(2^2) = 2N k_B \ln(2)$
+
+**Ordered State:**
+In a completely ordered state, all $N$ spins must be in the exact same state. Since there are 4 possible states a spin can take, there are exactly 4 completely ordered configurations.
+$\Omega_{\text{ordered}} = 4$
+The entropy of the ordered state is:
+$S_{\text{ordered}} = k_B \ln(4) = k_B \ln(2^2) = 2 k_B \ln(2)$
+
+**Difference in Entropy:**
+$\Delta S = S_{\text{disordered}} - S_{\text{ordered}}$
+$\Delta S = 2N k_B \ln(2) - 2 k_B \ln(2)$
+$\Delta S = 2(N-1) k_B \ln(2)$`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 6,
+      year: 2023,
+      subject: "Solid State Physics",
+      type: "MCQ",
+
+      question: String.raw`
+Temperature (T) dependence of the total specific heat $(C_v)$ for a two dimensional metallic solid at low temperatures is
+`,
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/6a_23.png",
+        "/images/6b_23.png",
+        "/images/6c_23.png",
+        "/images/6d_23.png"
+      ],
+
+      detailedSolution: String.raw`The total specific heat $C_v$ of a metallic solid at low temperatures consists of two contributions: the electronic specific heat ($C_{el}$) and the phonon/lattice specific heat ($C_{ph}$).
+$C_v = C_{el} + C_{ph}$
+
+1. **Electronic Contribution:** Regardless of dimensionality, at low temperatures, the specific heat of the free electron gas is linear with respect to temperature.
+$C_{el} = \gamma T$
+
+2. **Phonon Contribution (Debye Model):** The lattice specific heat depends on the dimensionality ($d$) of the system. At low temperatures ($T \ll \Theta_D$), $C_{ph} \propto T^d$.
+For a 2-dimensional solid ($d=2$):
+$C_{ph} = \beta T^2$
+
+Therefore, the total specific heat is:
+$C_v = \gamma T + \beta T^2$
+
+To find the plot of $\frac{C_v}{T}$ versus $T$, we divide by $T$:
+$\frac{C_v}{T} = \gamma + \beta T$
+
+This represents a straight line equation ($y = mx + c$) where the independent variable is $T$, the slope is $\beta$ (positive), and the y-intercept is $\gamma$ (positive). The plot that shows a straight line with a positive y-intercept and positive slope corresponds to this derived relationship.`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 7,
+      year: 2023,
+      subject: "Electronics",
+      type: "MCQ",
+
+      question: String.raw`
+For the following circuit, choose the correct waveform corresponding to the output signal $(V_{out})$.
+Given $V_{in} = 5 \sin(200\pi t)$ V, forward bias voltage of the diodes (D and Z) = $0.7$ V and reverse Zener voltage = $3$ V.
+`,
+
+      questionImage: "/images/7_23.png",
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/7a_23.png",
+        "/images/7b_23.png",
+        "/images/7c_23.png",
+        "/images/7d_23.png"
+      ],
+
+      detailedSolution: String.raw`The given circuit has two parallel branches connected across the output $V_{out}$:
+1. A standard diode D in series with a DC battery of $2\text{ V}$ (with positive terminal facing D's cathode).
+2. A Zener diode Z pointing upwards (cathode at top).
+
+Let's analyze the clamping levels during the positive and negative half cycles of $V_{in} = 5 \sin(\omega t)$.
+
+**Positive Half Cycle ($V_{in} > 0$):**
+* **Zener branch:** The Zener diode is reverse-biased. It will break down and regulate the voltage when the voltage across it reaches its Zener voltage $V_Z = 3\text{ V}$. Therefore, the output cannot exceed $+3\text{ V}$.
+* **Diode D branch:** The diode D is reverse-biased because the input is positive, and its anode is connected to ground through the $2\text{ V}$ battery (which also opposes positive current). It acts as an open circuit.
+* **Result:** The positive peak is clipped at exactly $+3\text{ V}$.
+
+**Negative Half Cycle ($V_{in} < 0$):**
+* **Zener branch:** The Zener diode is now forward-biased. It acts like a regular diode with a voltage drop of $0.7\text{ V}$. This attempts to clip the signal at $-0.7\text{ V}$.
+* **Diode D branch:** For diode D to conduct, the input voltage must be more negative than the battery voltage plus the diode drop. The cathode is at $V_{in}$, and the anode is at $-2\text{ V}$. For D to be forward biased, $V_{anode} - V_{cathode} \ge 0.7\text{ V} \Rightarrow -2\text{ V} - V_{in} \ge 0.7\text{ V} \Rightarrow V_{in} \le -2.7\text{ V}$.
+* **Result:** As $V_{in}$ goes negative, it hits $-0.7\text{ V}$ first. At this point, the Zener diode becomes forward-biased and starts conducting, clamping the output voltage at $-0.7\text{ V}$. The voltage will never reach $-2.7\text{ V}$ to turn on diode D.
+
+**Conclusion:** The output waveform is clipped at $+3\text{ V}$ on the positive side and $-0.7\text{ V}$ on the negative side.`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 8,
+      year: 2023,
+      subject: "Quantum Mechanics",
+      type: "MCQ",
+
+      question: String.raw`
+If the ground state energy of a particle in an infinite potential well of width $L_1$ is equal to the energy of the second excited state in another infinite potential well of width $L_2$, then the ratio $\frac{L_1}{L_2}$ is equal to
+`,
+
+      options: [
+        String.raw`$1$`,
+        String.raw`$1/3$`,
+        String.raw`$1/\sqrt{3}$`,
+        String.raw`$1/9$`
+      ],
+
+      detailedSolution: String.raw`The energy levels of a particle of mass $m$ in a 1D infinite potential well of width $L$ are given by:
+$E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}$
+
+For the first well of width $L_1$, the ground state energy corresponds to $n = 1$:
+$E_{1}^{(1)} = \frac{(1)^2 \pi^2 \hbar^2}{2mL_1^2} = \frac{\pi^2 \hbar^2}{2mL_1^2}$
+
+For the second well of width $L_2$, the second excited state corresponds to $n = 3$ (since ground is $n=1$, first excited is $n=2$):
+$E_{3}^{(2)} = \frac{(3)^2 \pi^2 \hbar^2}{2mL_2^2} = \frac{9\pi^2 \hbar^2}{2mL_2^2}$
+
+We are given that these two energies are equal:
+$\frac{\pi^2 \hbar^2}{2mL_1^2} = \frac{9\pi^2 \hbar^2}{2mL_2^2}$
+
+Simplifying the equation gives:
+$\frac{1}{L_1^2} = \frac{9}{L_2^2}$
+$\left(\frac{L_1}{L_2}\right)^2 = \frac{1}{9}$
+
+Taking the positive square root (since width must be positive):
+$\frac{L_1}{L_2} = \frac{1}{3}$`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 9,
+      year: 2023,
+      subject: "Electronics",
+      type: "MCQ",
+
+      question: String.raw`
+In the given circuit, with an ideal op-amp for what value of $\frac{R_1}{R_2}$ the output of the amplifier $V_{out} = V_2 - V_1$?
+`,
+
+      questionImage: "/images/9_23.png",
+
+      options: [
+        String.raw`$1$`,
+        String.raw`$1/2$`,
+        String.raw`$2$`,
+        String.raw`$3/2$`
+      ],
+
+      detailedSolution: String.raw`This circuit is a standard Difference Amplifier using an ideal op-amp. 
+Let the non-inverting terminal voltage be $V_+$ and the inverting terminal voltage be $V_-$.
+For an ideal op-amp, the virtual short property holds: $V_+ = V_-$.
+
+**1. Calculate $V_+$:**
+The non-inverting terminal is connected to a voltage divider formed by $R_1$ and $R_2$ across the input $V_2$.
+$V_+ = V_2 \left( \frac{R_2}{R_1 + R_2} \right)$
+
+**2. Calculate $V_{out}$ using KCL at the inverting node ($V_-$):**
+Assuming no current flows into the op-amp terminals:
+$\frac{V_1 - V_-}{R} + \frac{V_{out} - V_-}{R} = 0$
+Since $V_- = V_+$, substitute $V_+$:
+$\frac{V_1 - V_+}{R} + \frac{V_{out} - V_+}{R} = 0$
+$V_{out} = 2V_+ - V_1$
+
+**3. Substitute $V_+$ into the $V_{out}$ equation:**
+$V_{out} = 2 \left[ V_2 \left( \frac{R_2}{R_1 + R_2} \right) \right] - V_1$
+$V_{out} = V_2 \left( \frac{2R_2}{R_1 + R_2} \right) - V_1$
+
+We are given the condition that $V_{out} = V_2 - V_1$.
+Comparing the derived expression with the given condition, the coefficient of $V_2$ must be 1.
+$\frac{2R_2}{R_1 + R_2} = 1 \implies 2R_2 = R_1 + R_2 \implies R_2 = R_1$
+
+Therefore, the ratio $\frac{R_1}{R_2} = 1$.`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 10,
+      year: 2023,
+      subject: "Classical Mechanics",
+      type: "MCQ",
+
+      question: String.raw`
+A projectile of mass m is moving in the vertical x-y plane with the origin on the ground and y-axis pointing vertically up. Taking the gravitational potential energy to be zero on the ground, the total energy of the particle written in planar polar coordinates $(r, \theta)$ is (here g is the acceleration due to gravity)
+`,
+
+      options: [
+        String.raw`$\frac{m}{2}\dot{r}^2 + mgr\sin\theta$`,
+        String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\cos\theta$`,
+        String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
+        String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) - mgr\cos\theta$`
+      ],
+
+      detailedSolution: String.raw`The total energy ($E$) of a system is the sum of its kinetic energy ($T$) and potential energy ($V$).
+$E = T + V$
+
+**1. Kinetic Energy in Polar Coordinates:**
+In 2D Cartesian coordinates, velocity squared is $v^2 = \dot{x}^2 + \dot{y}^2$.
+To convert to polar coordinates $(r, \theta)$, we use the standard transformations:
+$x = r\cos\theta \implies \dot{x} = \dot{r}\cos\theta - r\sin\theta\dot{\theta}$
+$y = r\sin\theta \implies \dot{y} = \dot{r}\sin\theta + r\cos\theta\dot{\theta}$
+Squaring and adding gives the velocity squared in polar coordinates:
+$v^2 = \dot{r}^2 + (r\dot{\theta})^2 = \dot{r}^2 + r^2\dot{\theta}^2$
+So, the kinetic energy is:
+$T = \frac{1}{2}mv^2 = \frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2)$
+
+**2. Potential Energy in Polar Coordinates:**
+The gravitational potential energy near the Earth's surface is $V = mgy$, where $y$ is the vertical height from the reference point.
+The problem states the origin is on the ground and the y-axis points vertically up, with $V=0$ at the ground ($y=0$).
+Using the polar transformation for the vertical axis:
+$y = r\sin\theta$
+So, the potential energy is:
+$V = mg(r\sin\theta) = mgr\sin\theta$
+
+**3. Total Energy:**
+Adding $T$ and $V$:
+$E = \frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
+
+      correctAnswers: [2]
+    },
+
+    {
+      id: 11,
+      year: 2023,
+      subject: "Electrodynamics",
+      type: "MCQ",
+
+      question: String.raw`
+A small bar magnet is dropped through different hollow copper tubes with same length and inner diameter but with different outer diameter. The variation in the time (t) taken for the magnet to reach the bottom of the tube depends on its wall thickness (d) as
+`,
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/11a_23.png",
+        "/images/11b_23.png",
+        "/images/11c_23.png",
+        "/images/11d_23.png"
+      ],
+
+      detailedSolution: String.raw`As the magnet falls through the copper tube, the changing magnetic flux induces an electromotive force (EMF) which generates eddy currents in the tube. According to Lenz's Law, these currents produce a magnetic field that opposes the motion of the falling magnet, leading to a terminal velocity.
+
+1. **Resistance and Thickness:** The resistance $R$ of the cylindrical tube to the flow of eddy currents is inversely proportional to its cross-sectional area. If the wall thickness is $d$, $R \propto 1/d$.
+2. **Opposing Force:** The induced current $I = EMF/R$. Since $EMF \propto v$ (velocity), $I \propto v \cdot d$. The opposing magnetic force $F_m \propto I \propto v \cdot d$.
+3. **Terminal Velocity:** The magnet reaches terminal velocity $v_T$ when the magnetic force equals gravity ($mg = F_m \propto v_T \cdot d$). Thus, $v_T \propto 1/d$.
+4. **Time of Fall:** The time $t$ taken to fall a length $L$ is $t = L/v_T \propto d$. Initially, the time of fall increases linearly with the wall thickness $d$.
+5. **Saturation:** However, as the wall thickness $d$ becomes very large, the outer layers of the copper tube are far from the magnet. The magnetic field of the small magnet drops off rapidly with distance, so these distant outer layers contribute negligibly to the opposing force. Therefore, the time $t$ will eventually saturate and approach a constant maximum value.
+
+The graph representing an initial increase that eventually saturates corresponds to Option A.`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 12,
+      year: 2023,
+      subject: "Electronics",
+      type: "MCQ",
+
+      question: String.raw`
+Two digital inputs A and B are given to the following circuit. For $A = 1$, $B = 0$, the values of X and Y are:
+`,
+
+      questionImage: "/images/12_23.png",
+
+      options: [
+        String.raw`$X=0, Y=0$`,
+        String.raw`$X=1, Y=0$`,
+        String.raw`$X=0, Y=1$`,
+        String.raw`$X=1, Y=1$`
+      ],
+
+      detailedSolution: String.raw`Let's trace the logic states through the circuit layer by layer with inputs $A=1$ and $B=0$.
+
+**First Stage (Input layer):**
+* **Top OR gate:** Inputs are A and B. Output $O_1 = A + B = 1 + 0 = 1$.
+* **Bottom AND gate:** Inputs are A and B. Output $A_1 = A \cdot B = 1 \cdot 0 = 0$.
+
+**Second Stage:**
+* **Top OR gate:** Inputs are $O_1$ and $A_1$. Output $O_2 = O_1 + A_1 = 1 + 0 = 1$.
+* **Bottom AND gate:** Inputs are $O_1$ and $A_1$. Output $A_2 = O_1 \cdot A_1 = 1 \cdot 0 = 0$.
+
+**Third Stage (Output layer):**
+* **Top OR gate:** Inputs are $O_2$ and $A_2$. Output $X = O_2 + A_2 = 1 + 0 = 1$.
+* **Bottom AND gate:** Inputs are $O_2$ and $A_2$. Output $Y = O_2 \cdot A_2 = 1 \cdot 0 = 0$.
+
+Thus, the final output states are $X = 1$ and $Y = 0$.`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 13,
+      year: 2023,
+      subject: "Mathematical Physics",
+      type: "MCQ",
+
+      question: String.raw`
+The Jacobian matrix for transforming from (x, y) to another orthogonal coordinates system (u, v) as shown in the figure is
+`,
+
+      questionImage: "/images/13_23.png",
+
+      options: [
+        String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&1\\ 1&-1\end{bmatrix}$`,
+        String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&1\\ -1&1\end{bmatrix}$`,
+        String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&-1\\ 1&-1\end{bmatrix}$`,
+        String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&-1\\ 1&1\end{bmatrix}$`
+      ],
+
+      detailedSolution: String.raw`Based on the provided figure, the new coordinate axes $(u, v)$ are rotated with respect to $(x,y)$.
+The $v$-axis is at an angle of $+45^\circ$ from the $x$-axis.
+The $u$-axis is at an angle of $-45^\circ$ from the $x$-axis.
+
+We can express the unit vectors of the new system in terms of the old:
+$\hat{v} = \cos(45^\circ)\hat{i} + \sin(45^\circ)\hat{j} = \frac{1}{\sqrt{2}}\hat{i} + \frac{1}{\sqrt{2}}\hat{j}$
+$\hat{u} = \cos(-45^\circ)\hat{i} + \sin(-45^\circ)\hat{j} = \frac{1}{\sqrt{2}}\hat{i} - \frac{1}{\sqrt{2}}\hat{j}$
+
+This gives the transformation equations for coordinates:
+$v = \frac{1}{\sqrt{2}}(x + y)$
+$u = \frac{1}{\sqrt{2}}(x - y)$
+
+The Jacobian matrix $J$ for transforming *from* $(x,y)$ *to* $(u,v)$ is composed of the partial derivatives $\frac{\partial(u,v)}{\partial(x,y)}$:
+$J = \begin{bmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} \end{bmatrix}$
+
+Calculating the partial derivatives:
+$\frac{\partial u}{\partial x} = \frac{1}{\sqrt{2}}$, $\frac{\partial u}{\partial y} = -\frac{1}{\sqrt{2}}$
+$\frac{\partial v}{\partial x} = \frac{1}{\sqrt{2}}$, $\frac{\partial v}{\partial y} = \frac{1}{\sqrt{2}}$
+
+Substitute these into the matrix:
+$J = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}$`,
+
+      correctAnswers: [3]
+    },
+
+    {
+      id: 14,
+      year: 2023,
+      subject: "Classical Mechanics",
+      type: "MCQ",
+
+      question: String.raw`
+A rotating disc is held in front of a plane mirror in two different orientations which are (i) angular momentum parallel to the mirror and (ii) angular momentum perpendicular to the mirror. Which of the following schematic figures correctly describes the angular momentum (solid arrow) and its mirror image (shown by dashed arrows) in the two orientations?
+`,
+
+      options: [
+        "",
+        "",
+        "",
+        ""
+      ],
+
+      optionImages: [
+        "/images/14a_23.png",
+        "/images/14b_23.png",
+        "/images/14c_23.png",
+        "/images/14d_23.png"
+      ],
+
+      detailedSolution: String.raw`Angular momentum $\mathbf{L} = \mathbf{r} \times \mathbf{p}$ is a pseudovector (or axial vector). 
+Under a mirror reflection, pseudovectors behave differently than ordinary polar vectors (like displacement or velocity). If the mirror lies in the $x-y$ plane, the reflection transformation is $(x, y, z) \to (x, y, -z)$.
+
+For a pseudovector $\mathbf{L}$:
+1. The components **parallel** to the mirror ($L_x, L_y$) flip their sign.
+2. The component **perpendicular** to the mirror ($L_z$) remains unchanged.
+
+Let's apply this to the two cases:
+* **Case (i): Angular momentum parallel to the mirror.** Since parallel components reverse, the mirror image of the angular momentum vector will point in the exact opposite direction (anti-parallel) to the physical vector.
+* **Case (ii): Angular momentum perpendicular to the mirror.** Since the perpendicular component is unchanged ($L_z \to L_z$), the mirror image of the angular momentum vector will point in the *same* spatial direction as the physical vector. For example, if the object's vector points toward the mirror ($+z$), the image's vector also points toward the $+z$ direction (which visually means it points away from the mirror surface towards the viewer).
+
+Option A correctly illustrates these pseudovector reflection rules.`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 15,
+      year: 2023,
+      subject: "Mathematical Physics",
+      type: "MCQ",
+
+      question: String.raw`
+Inverse of the matrix $A = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$ is
+`,
+
+      options: [
+        String.raw`$\begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
+        String.raw`$\begin{bmatrix} 3 & -1 & 0 \\ -3 & 1 & 0 \\ -3 & 1 & 1 \end{bmatrix}$`,
+        String.raw`$\begin{bmatrix} 1 & 1 & 0 \\ 2 & 3 & 0 \\ 1 & 0 & 1 \end{bmatrix}$`,
+        String.raw`$\begin{bmatrix} 1 & 2 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`
+      ],
+
+      detailedSolution: String.raw`We want to find the inverse of the upper triangular matrix $A = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$. 
+The inverse of an upper triangular matrix is also an upper triangular matrix. Let $A^{-1} = \begin{bmatrix} a & b & c \\ 0 & d & e \\ 0 & 0 & f \end{bmatrix}$.
+
+Since $A \cdot A^{-1} = I$:
+$\begin{bmatrix} 1 & -2 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} a & b & c \\ 0 & d & e \\ 0 & 0 & f \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+
+Multiplying the matrices out gives us the following equations for the elements:
+1. Diagonal elements: $1\cdot a = 1 \implies a = 1$; $3\cdot d = 1 \implies d = 1/3$; $1\cdot f = 1 \implies f = 1$.
+2. Element (1,2): $1\cdot b - 2\cdot d = 0 \implies b - 2(1/3) = 0 \implies b = 2/3$.
+3. Element (2,3): $3\cdot e = 0 \implies e = 0$.
+4. Element (1,3): $1\cdot c - 2\cdot e + 1\cdot f = 0 \implies c - 0 + 1 = 0 \implies c = -1$.
+
+Reconstructing the inverse matrix with these values:
+$A^{-1} = \begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
+
+      correctAnswers: [0]
+    },
+
+    {
+      id: 16,
+      year: 2023,
+      subject: "Electrodynamics",
+      type: "MCQ",
+
+      question: String.raw`
+Suppose the divergence of magnetic field $\vec{B}$ is nonzero and is given as $\vec{\nabla}\cdot\vec{B} = \mu_0\rho_m$, where $\mu_0$ is the permeability of vacuum and $\rho_m$ is the magnetic charge density. If the corresponding magnetic current density is $\vec{J}_m$, then the curl $\vec{\nabla}\times\vec{E}$ of the electric field $\vec{E}$ is
+`,
+
+      options: [
+        String.raw`$\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
+        String.raw`$\mu_0\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
+        String.raw`$-\mu_0\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
+        String.raw`$-\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`
+      ],
+
+      detailedSolution: String.raw`If magnetic monopoles existed, Maxwell's equations would become symmetric. The presence of magnetic charge density ($\rho_m$) and magnetic current density ($\mathbf{J}_m$) requires modifying Faraday's Law.
+
+We start with the generalized Faraday's law:
+$\nabla \times \mathbf{E} = - k \mathbf{J}_m - \frac{\partial\mathbf{B}}{\partial t}$
+where $k$ is an unknown proportionality constant.
+
+Taking the divergence of both sides:
+$\nabla \cdot (\nabla \times \mathbf{E}) = \nabla \cdot \left( -k \mathbf{J}_m - \frac{\partial\mathbf{B}}{\partial t} \right)$
+Since the divergence of a curl is always zero:
+$0 = -k (\nabla \cdot \mathbf{J}_m) - \frac{\partial}{\partial t}(\nabla \cdot \mathbf{B})$
+
+We are given $\nabla \cdot \mathbf{B} = \mu_0 \rho_m$. Substituting this:
+$0 = -k (\nabla \cdot \mathbf{J}_m) - \mu_0 \frac{\partial\rho_m}{\partial t}$
+
+By the continuity equation for magnetic charge, $\nabla \cdot \mathbf{J}_m = -\frac{\partial\rho_m}{\partial t}$. Substituting this in:
+$0 = -k \left( -\frac{\partial\rho_m}{\partial t} \right) - \mu_0 \frac{\partial\rho_m}{\partial t}$
+$0 = (k - \mu_0) \frac{\partial\rho_m}{\partial t}$
+
+For this to hold true, the constant $k$ must be equal to $\mu_0$. 
+Therefore, the modified Faraday's law is:
+$\nabla \times \mathbf{E} = -\mu_0 \mathbf{J}_m - \frac{\partial\mathbf{B}}{\partial t}$`,
+
+      correctAnswers: [2]
+    },
+
+    {
+      id: 17,
+      year: 2023,
+      subject: "Thermal Physics",
+      type: "MCQ",
+
+      question: String.raw`
+For a thermodynamic system, the coefficient of volume expansion $\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P$ and compressibility $\kappa = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$ where $V$, $T$, and $P$ are respectively the volume, temperature, and pressure. Considering that $\frac{dV}{V}$ is a perfect differential, we get
+`,
+
+      options: [
+        String.raw`$\left(\frac{\partial\beta}{\partial P}\right)_T = \left(\frac{\partial\kappa}{\partial T}\right)_P$`,
+        String.raw`$\left(\frac{\partial\beta}{\partial T}\right)_P = -\left(\frac{\partial\kappa}{\partial P}\right)_T$`,
+        String.raw`$\left(\frac{\partial\beta}{\partial T}\right)_P = \left(\frac{\partial\kappa}{\partial P}\right)_T$`,
+        String.raw`$\left(\frac{\partial\beta}{\partial P}\right)_T = -\left(\frac{\partial\kappa}{\partial T}\right)_P$`
+      ],
+
+      detailedSolution: String.raw`The differential of volume $V(T, P)$ can be written in terms of partial derivatives:
+$dV = \left(\frac{\partial V}{\partial T}\right)_P dT + \left(\frac{\partial V}{\partial P}\right)_T dP$
+
+Dividing the entire equation by $V$:
+$\frac{dV}{V} = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P dT + \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T dP$
+
+Using the definitions provided for volume expansion ($\beta$) and isothermal compressibility ($\kappa$):
+$\beta = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P$
+$-\kappa = \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$
+
+Substitute these into the equation:
+$\frac{dV}{V} = \beta dT - \kappa dP$
+
+Since $\frac{dV}{V} = d(\ln V)$ is an exact (perfect) differential, the cross-partial derivatives of its coefficients must be equal (Euler's reciprocity relation). For an exact differential $dz = M dx + N dy$, we must have $\left(\frac{\partial M}{\partial y}\right)_x = \left(\frac{\partial N}{\partial x}\right)_y$.
+Applying this to our equation where $x=T$, $y=P$, $M=\beta$, and $N=-\kappa$:
+$\left(\frac{\partial \beta}{\partial P}\right)_T = \left(\frac{\partial (-\kappa)}{\partial T}\right)_P$
+$\left(\frac{\partial \beta}{\partial P}\right)_T = -\left(\frac{\partial \kappa}{\partial T}\right)_P$`,
+
+      correctAnswers: [3]
+    },
+
+    {
+      id: 18,
+      year: 2023,
+      subject: "Optics",
+      type: "MCQ",
+
+      question: String.raw`
+A linearly polarized light of wavelength 590 nm is incident normally on the surface of a $20\mu m$ thick quartz film. The plane of polarization makes an angle $30^\circ$ with the optic axis. Refractive indices of ordinary and extraordinary waves differ by 0.0091, resulting in a phase difference of $f\pi$ between them after transmission. The value of $f$ (rounded off to two decimal places) and the state of polarization of the transmitted light is
+`,
+
+      options: [
+        String.raw`$0.62$ and linear`,
+        String.raw`$0.62$ and elliptical`,
+        String.raw`$-0.38$ and elliptic`,
+        String.raw`$0.5$ and circular`
+      ],
+
+      detailedSolution: String.raw`**1. Calculate Phase Difference ($f$):**
+When light passes through a birefringent material, the phase difference $\Delta\phi$ introduced between the ordinary and extraordinary waves is given by:
+$\Delta\phi = \frac{2\pi}{\lambda} |n_o - n_e| t$
+
+Given:
+* Wavelength $\lambda = 590 \text{ nm} = 590 \times 10^{-9} \text{ m}$
+* Thickness $t = 20 \mu m = 20 \times 10^{-6} \text{ m}$
+* Difference in refractive index $\Delta n = |n_o - n_e| = 0.0091$
+
+Substitute the values:
+$\Delta\phi = \frac{2\pi}{590 \times 10^{-9}} (0.0091) (20 \times 10^{-6}) = \frac{2\pi \times 0.182}{0.59} = \left(\frac{0.364}{0.59}\right)\pi \approx 0.6169\pi$
+
+We are given that $\Delta\phi = f\pi$. Therefore:
+$f \approx 0.62$
+
+**2. Determine State of Polarization:**
+* The phase difference is $\approx 0.62\pi$, which is NOT an integer multiple of $\pi$ (would be linear) nor an odd multiple of $\pi/2$ (could be circular if amplitudes were equal).
+* The angle of incidence relative to the optic axis is $30^\circ$, meaning the amplitudes of the ordinary and extraordinary components are proportional to $\cos(30^\circ)$ and $\sin(30^\circ)$. Since $30^\circ \neq 45^\circ$, the amplitudes are unequal.
+* An arbitrary phase difference with unequal orthogonal amplitudes results in **elliptical polarization**.`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 19,
+      year: 2023,
+      subject: "Solid State Physics",
+      type: "MCQ",
+
+      question: String.raw`
+The phase velocity $v_p$ of transverse waves on a one-dimensional crystal of atomic separation $d$ is related to the wavevector $k$ as $v_p = C\frac{\sin(kd/2)}{(kd/2)}$. The group velocity of these waves is
+`,
+
+      options: [
+        String.raw`$C\left[\cos(kd/2) - \frac{\sin(kd/2)}{(kd/2)}\right]$`,
+        String.raw`$C\cos(kd/2)$`,
+        String.raw`$C\left[\cos(kd/2) + \frac{\sin(kd/2)}{(kd/2)}\right]$`,
+        String.raw`$C\frac{\sin(kd/2)}{(kd/2)}$`
+      ],
+
+      detailedSolution: String.raw`The relationship between angular frequency ($\omega$), wavevector ($k$), and phase velocity ($v_p$) is:
+$v_p = \frac{\omega}{k} \implies \omega = k v_p$
+
+Given the phase velocity equation:
+$v_p = C\frac{\sin(kd/2)}{(kd/2)}$
+
+Multiply by $k$ to find the dispersion relation $\omega(k)$:
+$\omega = k \left( C\frac{\sin(kd/2)}{kd/2} \right)$
+$\omega = k \cdot C \cdot \frac{2 \sin(kd/2)}{kd}$
+$\omega = \frac{2C}{d} \sin\left(\frac{kd}{2}\right)$
+
+The group velocity $v_g$ is defined as the derivative of $\omega$ with respect to $k$:
+$v_g = \frac{d\omega}{dk}$
+$v_g = \frac{d}{dk} \left[ \frac{2C}{d} \sin\left(\frac{kd}{2}\right) \right]$
+Using the chain rule:
+$v_g = \frac{2C}{d} \cos\left(\frac{kd}{2}\right) \cdot \frac{d}{2}$
+$v_g = C \cos\left(\frac{kd}{2}\right)$`,
+
+      correctAnswers: [1]
+    },
+
+    {
+      id: 20,
+      year: 2023,
+      subject: "Electrodynamics",
+      type: "MCQ",
+
+      question: String.raw`
+In a dielectric medium of relative permittivity 5, the amplitudes of the displacement current and conduction current are equal for an applied sinusoidal voltage of frequency $f = 1$ MHz. The value of conductivity (in $\Omega^{-1}m^{-1}$) of the medium at this frequency is
+`,
+
+      options: [
+        String.raw`$2.78\times 10^{-4}$`,
+        String.raw`$2.44\times 10^{-4}$`,
+        String.raw`$2.78\times 10^{-3}$`,
+        String.raw`$2.44\times 10^{-3}$`
+      ],
+
+      detailedSolution: String.raw`For an applied sinusoidal electric field $\mathbf{E} = \mathbf{E}_0 e^{j\omega t}$, there are two types of current densities in the medium:
+
+1.  **Conduction Current Density ($J_c$):** Governed by Ohm's law.
+    $J_c = \sigma E \implies |J_c| = \sigma E_0$
+2.  **Displacement Current Density ($J_d$):** Governed by the time derivative of the electric displacement field $\mathbf{D} = \epsilon \mathbf{E}$.
+    $J_d = \frac{\partial \mathbf{D}}{\partial t} = \epsilon \frac{\partial \mathbf{E}}{\partial t} = \epsilon \frac{\partial}{\partial t}(\mathbf{E}_0 e^{j\omega t}) = j\omega\epsilon\mathbf{E}_0 \implies |J_d| = \omega\epsilon E_0$
+
+We are given that the amplitudes are equal: $|J_c| = |J_d|$.
+$\sigma E_0 = \omega\epsilon E_0$
+$\sigma = \omega\epsilon$
+
+We know that $\omega = 2\pi f$ and $\epsilon = \epsilon_r \epsilon_0$.
+Given values:
+* $f = 1 \text{ MHz} = 10^6 \text{ Hz}$
+* $\epsilon_r = 5$
+* $\epsilon_0 \approx 8.854 \times 10^{-12} \text{ F/m}$
+
+Calculate conductivity $\sigma$:
+$\sigma = (2\pi \times 10^6) \times (5) \times (8.854 \times 10^{-12})$
+$\sigma = 10\pi \times 10^6 \times 8.854 \times 10^{-12}$
+$\sigma \approx 31.4159 \times 8.854 \times 10^{-6}$
+$\sigma \approx 278.15 \times 10^{-6} \text{ } \Omega^{-1}\text{m}^{-1}$
+$\sigma \approx 2.78 \times 10^{-4} \text{ } \Omega^{-1}\text{m}^{-1}$`,
+
+      correctAnswers: [0]
+    }
+  ]
+
 ];
 

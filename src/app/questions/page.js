@@ -702,7 +702,7 @@ export default function IITJamPhysicsHub() {
                   <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider hidden md:inline">Goal</span>
                   <div className="w-20 sm:w-36 h-2 rounded-full bg-zinc-800 overflow-hidden relative border border-zinc-700/30">
                     <div 
-                      className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full transition-all duration-500" 
+                      className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-500" 
                       style={{ width: `${Math.min(goalData.percentage, 100)}%` }}
                     />
                   </div>

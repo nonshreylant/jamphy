@@ -90,7 +90,7 @@ export default function PublicProfilePage() {
     return (
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">User not found</h1>
-        <Link href="/leaderboard" className="px-6 py-3 bg-cyan-600 text-white rounded-xl font-bold">Return to Leaderboard</Link>
+        <Link href="/" className="px-6 py-3 bg-cyan-600 text-white rounded-xl font-bold">Go Home</Link>
       </div>
     );
   }
