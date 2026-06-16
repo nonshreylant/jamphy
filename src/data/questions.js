@@ -2126,7 +2126,6 @@ Substitute these into the error equation:
     type: "NAT",
     question:
       "A particle of mass $m$ in a potential $V(x)=\\frac{1}{2}kx^2$ is described by normalized wavefunction $\\sum_{n=0}^{\\infty}(\\sqrt{2})^{-(n+1)}\\phi_n(x)$, where $\\{\\phi_n\\}$ are the eigenstates of the particle. The energy corresponding to the wavefunction, in units of $\\dfrac{h}{\\pi}\\sqrt{\\dfrac{k}{m}}$, is ____.\n\n(Rounded off to two decimal places)\n\n[Given: $\\sum_{n=0}^{\\infty}(a)^{-n}=\\dfrac{a}{a-1},\\ a>1$]",
-    image: "/images/questions/q60.png",
     detailedSolution: String.raw`The normalized wavefunction is \(\psi = \sum_{n=0}^{\infty} (\sqrt{2})^{-(n+1)} \phi_n\).
 The probability of finding the particle in state \(n\) is \(P_n = |c_n|^2 = ((\sqrt{2})^{-(n+1)})^2 = (\frac{1}{2})^{n+1} = \frac{1}{2^{n+1}}\).
 
@@ -2183,7 +2182,7 @@ The expression given in the question includes a factor of \(\frac{1}{9}\):
     type: "MCQ",
     question:
       "Two point-particles having masses $m_1$ and $m_2$ approach each other in perpendicular directions with speeds $v_1$ and $v_2$, respectively, as shown in the figure below. After an elastic collision, they move away from each other in perpendicular directions with speeds $v_1'$ and $v_2'$, respectively. The ratio $\\dfrac{v_2'}{v_1'}$ is",
-    image: "/images/questions/2025/q2.png",
+    image: "/images/2_25.png",
     options: [
       "$\\dfrac{m_1^2 v_1}{m_2^2 v_2}$",
       "$\\dfrac{m_1 v_1}{m_2 v_2}$",
@@ -2231,9 +2230,9 @@ The ratio is:
     ],
     optionImages: [
       "/images/3a_25.png",
-      "/images/3a_25.png",
-      "/images/3a_25.png",
-      "/images/3a_25.png"
+      "/images/3b_25.png",
+      "/images/3c_25.png",
+      "/images/3d_25.png"
     ],
     detailedSolution: String.raw`The vector field is given by \(\mathbf{A} = y\hat{i}\).
 
@@ -7117,7 +7116,7 @@ Therefore, the field in option (D) is the only one with a non-zero curl.`,
     {
       id: 3,
       year: 2023,
-      subject: "Thermal Physics",
+      subject: "Thermodynamics",
       type: "MCQ",
 
       question: String.raw`
@@ -7185,7 +7184,7 @@ The segment from $x = -1$ to $x = 1$, which was previously below the x-axis dipp
     {
       id: 5,
       year: 2023,
-      subject: "Statistical Mechanics",
+      subject: "Thermodynamics",
       type: "MCQ",
 
       question: String.raw`
@@ -7685,7 +7684,7 @@ $\nabla \times \mathbf{E} = -\mu_0 \mathbf{J}_m - \frac{\partial\mathbf{B}}{\par
     {
       id: 17,
       year: 2023,
-      subject: "Thermal Physics",
+      subject: "Thermodynamics",
       type: "MCQ",
 
       question: String.raw`
