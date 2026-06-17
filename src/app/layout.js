@@ -14,6 +14,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className="h-full antialiased"
     >
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2942995488059202" crossOrigin="anonymous"></script>
+      </head>
       <body className="min-h-full flex flex-col">
         <Providers>
           <TransitionProvider>
