@@ -7,23 +7,34 @@ export default function AdminShortcut() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed bottom-4 right-4 flex items-center gap-2 z-50">
-      {pathname !== "/admin" && (
-        <Link
-          href="/admin"
-          className="px-3 py-1.5 text-xs font-medium rounded-lg bg-zinc-950/30 text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800/80 backdrop-blur transition-all border border-transparent hover:border-zinc-700"
-        >
-          Admin
-        </Link>
-      )}
+    <>
+      <div className="fixed bottom-4 right-4 flex items-center z-50">
+        {pathname !== "/admin" && (
+          <Link
+            href="/admin"
+            className="text-xs font-medium text-zinc-600 hover:text-zinc-300 transition-all"
+          >
+            Admin
+          </Link>
+        )}
+      </div>
+
       {pathname === "/" && (
-        <Link
-          href="/privacy"
-          className="px-3 py-1.5 text-xs font-medium rounded-lg bg-zinc-950/30 text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800/80 backdrop-blur transition-all border border-transparent hover:border-zinc-700"
-        >
-          Privacy Policy
-        </Link>
+        <div className="fixed bottom-4 left-4 flex items-center gap-4 z-50">
+          <Link
+            href="/privacy"
+            className="text-xs font-medium text-zinc-600 hover:text-zinc-300 transition-all"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="text-xs font-medium text-zinc-600 hover:text-zinc-300 transition-all"
+          >
+            Terms of Service
+          </Link>
+        </div>
       )}
-    </div>
+    </>
   );
 }
