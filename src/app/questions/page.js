@@ -196,6 +196,10 @@ export default function IITJamPhysicsHub() {
   const [testActive, setTestActive] = useState(false);
   const [liveRoomActive, setLiveRoomActive] = useState(false);
 
+  const [browseMode, setBrowseMode] = useState("subject");
+  const [selectedBrowseYear, setSelectedBrowseYear] = useState(null);
+  const [selectedSubjectFilter, setSelectedSubjectFilter] = useState("All");
+
   const [selectedSubject, setSelectedSubject] =
     useState(null);
 
@@ -388,6 +392,10 @@ export default function IITJamPhysicsHub() {
     }
   };
 
+  const availableYears = useMemo(() => {
+    return [...new Set(questionsList.map((q) => q.year))].sort((a, b) => b - a);
+  }, [questionsList]);
+
   const filteredQuestions = useMemo(() => {
 
     return questionsList.filter((q) => {
@@ -396,7 +404,11 @@ export default function IITJamPhysicsHub() {
         ? selectedSubject.subtopics.includes(q.subject)
         : true;
 
-      const yearMatch =
+      const browseYearMatch = selectedBrowseYear
+        ? q.year === selectedBrowseYear
+        : true;
+
+      const yearFilterMatch =
         selectedYear === "All"
           ? true
           : q.year === Number(selectedYear);
@@ -406,6 +418,11 @@ export default function IITJamPhysicsHub() {
           ? true
           : q.subject === selectedSubtopic;
 
+      const subjectFilterMatch =
+        selectedSubjectFilter === "All"
+          ? true
+          : syllabus.find(s => s.id === selectedSubjectFilter)?.subtopics.includes(q.subject);
+
       const typeMatch =
         selectedType === "All"
           ? true
@@ -413,8 +430,10 @@ export default function IITJamPhysicsHub() {
 
       return (
         subjectMatch &&
-        yearMatch &&
+        browseYearMatch &&
+        yearFilterMatch &&
         subtopicMatch &&
+        subjectFilterMatch &&
         typeMatch
       );
 
@@ -422,9 +441,12 @@ export default function IITJamPhysicsHub() {
 
   }, [
     selectedSubject,
+    selectedBrowseYear,
     selectedYear,
     selectedSubtopic,
+    selectedSubjectFilter,
     selectedType,
+    questionsList,
   ]);
 
   const currentQuestionIndex =
@@ -849,26 +871,28 @@ export default function IITJamPhysicsHub() {
                   </div>
                 </button>
                 
-                <div className="absolute right-0 mt-3 w-56 bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden opacity-0 scale-95 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:scale-100 group-hover/menu:pointer-events-auto transition-all duration-200 z-50 transform origin-top-right">
-                  <div className="py-2">
-                    <button
-                      onClick={() => setTestActive(true)}
-                      className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
-                    >
-                      Create Test
-                    </button>
-                    <button
-                      onClick={() => setLiveRoomActive(true)}
-                      className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
-                    >
-                      Live Room
-                    </button>
-                    <Link
-                      href="/sprint"
-                      className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
-                    >
-                      Sprint Mode
-                    </Link>
+                <div className="absolute right-0 top-full pt-3 w-56 opacity-0 scale-95 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:scale-100 group-hover/menu:pointer-events-auto transition-all duration-200 z-50 transform origin-top-right">
+                  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden">
+                    <div className="py-2">
+                      <button
+                        onClick={() => setTestActive(true)}
+                        className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                      >
+                        Create Test
+                      </button>
+                      <button
+                        onClick={() => setLiveRoomActive(true)}
+                        className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                      >
+                        Live Room
+                      </button>
+                      <Link
+                        href="/sprint"
+                        className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                      >
+                        Sprint Mode
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -914,7 +938,7 @@ export default function IITJamPhysicsHub() {
 
       {status === "authenticated" && session?.user?.username && (
         <AnimatePresence mode="wait">
-          {!selectedSubject && !testActive && !liveRoomActive && (
+          {!selectedSubject && !selectedBrowseYear && !testActive && !liveRoomActive && (
 
             <motion.section
               key="categories"
@@ -925,39 +949,100 @@ export default function IITJamPhysicsHub() {
               className="max-w-7xl mx-auto px-6 py-16"
             >
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                {syllabus.map((subject) => (
-
-                  <button
-                    key={subject.id}
-                    onClick={() => {
-                      setSelectedSubject(subject);
-                      setSelectedYear("All");
-                      setSelectedSubtopic("All");
-                    }}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 text-left hover:bg-zinc-900 transition h-full flex flex-col items-start"
+              <div className="flex justify-center mb-10">
+                <div className="bg-zinc-900/80 backdrop-blur-sm p-1.5 rounded-2xl flex gap-2 inline-flex border border-zinc-800/50">
+                  <button 
+                    onClick={() => setBrowseMode('subject')}
+                    className={`px-8 py-3 rounded-xl font-bold transition-all duration-300 ${browseMode === 'subject' ? 'bg-zinc-800 text-white shadow-[0_4px_12px_rgba(0,0,0,0.5)]' : 'text-zinc-500 hover:text-zinc-300'}`}
                   >
-
-                    <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-2xl mb-4">
-                      {icons[subject.id]}
-                    </div>
-
-                    <h3 className="text-2xl font-bold tracking-tight">
-                      {subject.name}
-                    </h3>
-
+                    Choose by Subject
                   </button>
-
-                ))}
-
+                  <button 
+                    onClick={() => setBrowseMode('year')}
+                    className={`px-8 py-3 rounded-xl font-bold transition-all duration-300 ${browseMode === 'year' ? 'bg-zinc-800 text-white shadow-[0_4px_12px_rgba(0,0,0,0.5)]' : 'text-zinc-500 hover:text-zinc-300'}`}
+                  >
+                    Choose by Year
+                  </button>
+                </div>
               </div>
+
+              {browseMode === 'subject' ? (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                  {syllabus.map((subject) => (
+
+                    <button
+                      key={subject.id}
+                      onClick={() => {
+                        setSelectedSubject(subject);
+                        setSelectedBrowseYear(null);
+                        setSelectedYear("All");
+                        setSelectedSubtopic("All");
+                      }}
+                      className="rounded-3xl border border-zinc-800/50 bg-zinc-950/50 p-6 text-left hover:bg-zinc-900/80 hover:border-zinc-700 transition-all duration-300 h-full flex flex-col items-start group relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                      <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-xl relative z-10">
+                        {icons[subject.id]}
+                      </div>
+
+                      <h3 className="text-2xl font-black tracking-tight text-white mb-2 relative z-10">
+                        {subject.name}
+                      </h3>
+                      
+                      <div className="text-zinc-500 text-sm font-medium mt-auto flex items-center gap-2 relative z-10 group-hover:text-white transition-colors">
+                        Explore Questions <span className="text-lg">→</span>
+                      </div>
+
+                    </button>
+
+                  ))}
+
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                  {availableYears.map((year) => (
+
+                    <button
+                      key={year}
+                      onClick={() => {
+                        setSelectedBrowseYear(year);
+                        setSelectedSubject(null);
+                        setSelectedSubjectFilter("All");
+                        setSelectedType("All");
+                      }}
+                      className="rounded-3xl border border-zinc-800/50 bg-zinc-950/50 p-6 text-left hover:bg-zinc-900/80 hover:border-zinc-700 transition-all duration-300 h-full flex flex-col items-start group relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-xl font-black mb-5 group-hover:scale-110 transition-transform duration-300 shadow-xl relative z-10 text-zinc-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                          <path d="M12 17v5"/>
+                          <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
+                        </svg>
+                      </div>
+
+                      <h3 className="text-2xl font-black tracking-tight text-white mb-2 relative z-10">
+                        {year} Questions
+                      </h3>
+                      
+                      <div className="text-zinc-500 text-sm font-medium mt-auto flex items-center gap-2 relative z-10 group-hover:text-white transition-colors pt-4">
+                        Attempt <span className="text-lg">→</span>
+                      </div>
+                    </button>
+
+                  ))}
+
+                </div>
+              )}
 
             </motion.section>
 
           )}
 
-          {selectedSubject && !activeQuestion && !testActive && !liveRoomActive && (
+          {(selectedSubject || selectedBrowseYear) && !activeQuestion && !testActive && !liveRoomActive && (
 
             <motion.section
               key="questions"
@@ -969,80 +1054,92 @@ export default function IITJamPhysicsHub() {
             >
 
               <button
-                onClick={() => setSelectedSubject(null)}
-                className="text-zinc-500 hover:text-white mb-8"
+                onClick={() => {
+                  setSelectedSubject(null);
+                  setSelectedBrowseYear(null);
+                }}
+                className="text-zinc-500 hover:text-white mb-8 transition font-medium flex items-center gap-2"
               >
-                ← Back to Subjects
+                <span>←</span> Back to Browse
               </button>
 
-              <h2 className="text-6xl font-black tracking-tight mb-10">
-                {selectedSubject.name}
+              <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-10 text-white">
+                {selectedSubject ? selectedSubject.name : `IIT JAM ${selectedBrowseYear}`}
               </h2>
 
               <div className="flex flex-wrap gap-4 mb-10">
 
-                <select
-                  value={selectedYear}
-                  onChange={(e) =>
-                    setSelectedYear(e.target.value)
-                  }
-                  className="rounded-2xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white outline-none"
-                >
+                {selectedSubject && (
+                  <select
+                    value={selectedYear}
+                    onChange={(e) =>
+                      setSelectedYear(e.target.value)
+                    }
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                  >
 
-                  <option value="All">
-                    All Years
-                  </option>
+                    <option value="All">
+                      All Years
+                    </option>
 
-                  {[...new Set(
-                    questionsList.map((q) => q.year)
-                  )]
-                    .sort((a, b) => b - a)
-                    .map((year) => (
-
+                    {availableYears.map((year) => (
                       <option
                         key={year}
                         value={year}
                       >
                         {year}
                       </option>
-
                     ))}
 
-                </select>
+                  </select>
+                )}
 
-                <select
-                  value={selectedSubtopic}
-                  onChange={(e) =>
-                    setSelectedSubtopic(e.target.value)
-                  }
-                  className="rounded-2xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white outline-none"
-                >
+                {selectedSubject && (
+                  <select
+                    value={selectedSubtopic}
+                    onChange={(e) =>
+                      setSelectedSubtopic(e.target.value)
+                    }
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                  >
 
-                  <option value="All">
-                    All Subtopics
-                  </option>
+                    <option value="All">
+                      All Subtopics
+                    </option>
 
-                  {selectedSubject.subtopics.map(
-                    (topic) => (
+                    {selectedSubject.subtopics.map(
+                      (topic) => (
+                        <option
+                          key={topic}
+                          value={topic}
+                        >
+                          {topic}
+                        </option>
+                      )
+                    )}
 
-                      <option
-                        key={topic}
-                        value={topic}
-                      >
-                        {topic}
-                      </option>
+                  </select>
+                )}
 
-                    )
-                  )}
-
-                </select>
+                {selectedBrowseYear && (
+                  <select
+                    value={selectedSubjectFilter}
+                    onChange={(e) => setSelectedSubjectFilter(e.target.value)}
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                  >
+                    <option value="All">All Subjects</option>
+                    {syllabus.map((s) => (
+                      <option key={s.id} value={s.id}>{s.name}</option>
+                    ))}
+                  </select>
+                )}
 
                 <select
                   value={selectedType}
                   onChange={(e) =>
                     setSelectedType(e.target.value)
                   }
-                  className="rounded-2xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white outline-none"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
                 >
                   <option value="All">All Types</option>
                   <option value="MCQ">MCQ</option>
@@ -1052,15 +1149,12 @@ export default function IITJamPhysicsHub() {
 
                 <button
                   onClick={() => {
-
                     setSelectedYear("All");
-
                     setSelectedSubtopic("All");
-
+                    setSelectedSubjectFilter("All");
                     setSelectedType("All");
-
                   }}
-                  className="rounded-2xl border border-zinc-700 px-5 py-4 text-white hover:bg-zinc-900"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 text-white hover:bg-zinc-800 transition font-bold"
                 >
                   Reset Filters
                 </button>

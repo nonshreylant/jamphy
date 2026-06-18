@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTransitionContext } from "../../../components/TransitionProvider";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -11,6 +12,7 @@ export default function AdminLogin() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const { navigateWithTransition } = useTransitionContext();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,7 +27,8 @@ export default function AdminLogin() {
       });
 
       if (res.ok) {
-        window.location.href = "/admin";
+        router.push("/admin");
+        router.refresh();
       } else {
         const data = await res.json();
         setError(data.error || "Invalid credentials");
@@ -41,13 +44,21 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
       <div className="w-full max-w-md p-8 rounded-3xl border border-zinc-800 bg-zinc-950">
         <div className="flex justify-center mb-6">
-          <Image
-            src="/logo.png"
-            alt="Jamphy Logo"
-            width={180}
-            height={49}
-            className="rounded-2xl object-contain"
-          />
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateWithTransition("/");
+            }}
+          >
+            <Image
+              src="/logo.png"
+              alt="Jamphy Logo"
+              width={180}
+              height={49}
+              className="rounded-2xl object-contain hover:opacity-80 transition-opacity"
+            />
+          </Link>
         </div>
         <h1 className="text-3xl font-black mb-2 text-center">Admin Login</h1>
         <p className="text-zinc-500 text-center mb-8">Enter your credentials to access the dashboard</p>

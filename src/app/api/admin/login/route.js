@@ -20,7 +20,6 @@ export async function POST(req) {
         value: "authenticated",
         httpOnly: true,
         path: "/",
-        maxAge: 60 * 60 * 24 * 7, // 1 week
         sameSite: "lax",
       });
 
