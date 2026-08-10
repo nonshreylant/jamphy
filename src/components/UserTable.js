@@ -4,20 +4,22 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 
 export default function UserTable({ initialUsers }) {
+  const [usersData, setUsersData] = useState(initialUsers);
   const [sortOrder, setSortOrder] = useState("recent"); // "recent" or "oldest"
   const [warningUser, setWarningUser] = useState(null);
   const [warningMessage, setWarningMessage] = useState("");
   const [isSendingWarning, setIsSendingWarning] = useState(false);
+  const [isBlocking, setIsBlocking] = useState(null); // id of user being blocked
   const [feedback, setFeedback] = useState({ type: "", text: "" });
 
   const sortedUsers = useMemo(() => {
     // initialUsers are already sorted descending (recent) by ID from Prisma
     if (sortOrder === "recent") {
-      return [...initialUsers];
+      return [...usersData];
     } else {
-      return [...initialUsers].reverse();
+      return [...usersData].reverse();
     }
-  }, [initialUsers, sortOrder]);
+  }, [usersData, sortOrder]);
 
   const handleSendWarning = async (e) => {
     e.preventDefault();
@@ -52,6 +54,30 @@ export default function UserTable({ initialUsers }) {
       setFeedback({ type: "error", text: "An error occurred." });
     } finally {
       setIsSendingWarning(false);
+    }
+  };
+
+  const handleToggleBlock = async (userId, currentBlockStatus) => {
+    if (!window.confirm(`Are you sure you want to ${currentBlockStatus ? "unblock" : "block"} this user?`)) return;
+    setIsBlocking(userId);
+    try {
+      const res = await fetch("/api/admin/block", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId, block: !currentBlockStatus })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setUsersData(prev => prev.map(u => u.id === userId ? { ...u, isBlocked: !currentBlockStatus } : u));
+        setFeedback({ type: "success", text: `User ${currentBlockStatus ? "unblocked" : "blocked"} successfully!` });
+        setTimeout(() => setFeedback({ type: "", text: "" }), 3000);
+      } else {
+        alert(data.error || "Failed to update block status");
+      }
+    } catch (err) {
+      alert("Error updating block status");
+    } finally {
+      setIsBlocking(null);
     }
   };
 
@@ -167,12 +193,21 @@ export default function UserTable({ initialUsers }) {
                     <span className="text-sm text-zinc-400">{user.dob || '-'}</span>
                   </td>
                   <td className="p-4 text-center">
-                    <button 
-                      onClick={() => setWarningUser(user)}
-                      className="px-3 py-1.5 text-xs font-bold text-yellow-400 bg-yellow-500/10 border border-yellow-500/20 rounded-lg hover:bg-yellow-500/20 transition"
-                    >
-                      Warn
-                    </button>
+                    <div className="flex items-center justify-center gap-2">
+                      <button 
+                        onClick={() => setWarningUser(user)}
+                        className="px-3 py-1.5 text-xs font-bold text-yellow-400 bg-yellow-500/10 border border-yellow-500/20 rounded-lg hover:bg-yellow-500/20 transition"
+                      >
+                        Warn
+                      </button>
+                      <button 
+                        onClick={() => handleToggleBlock(user.id, user.isBlocked)}
+                        disabled={isBlocking === user.id}
+                        className={`px-3 py-1.5 text-xs font-bold rounded-lg border transition disabled:opacity-50 ${user.isBlocked ? 'text-zinc-300 bg-zinc-800 border-zinc-700 hover:bg-zinc-700' : 'text-red-400 bg-red-500/10 border-red-500/20 hover:bg-red-500/20'}`}
+                      >
+                        {isBlocking === user.id ? "..." : (user.isBlocked ? "Unblock" : "Block")}
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))

@@ -69,6 +69,7 @@ model User {
   showHeatmapPublicly   Boolean   @default(true)
   showActivityPublicly  Boolean   @default(true)
   showSubjectsPublicly  Boolean   @default(true)
+  isBlocked             Boolean   @default(false)
 
   @@index([email])
 }

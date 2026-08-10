@@ -24,6 +24,22 @@ export const authOptions = {
     strategy: "jwt",
   },
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      if (user?.id) {
+        try {
+          const dbUser = await prisma.user.findUnique({
+            where: { id: user.id },
+            select: { isBlocked: true }
+          });
+          if (dbUser?.isBlocked) {
+            return false; // Prevent login
+          }
+        } catch (err) {
+          console.error("Error checking block status on signIn", err);
+        }
+      }
+      return true;
+    },
     async jwt({ token, account, user, trigger, session }) {
       // Initial sign in
       if (account && user) {
@@ -120,13 +136,16 @@ export const authOptions = {
         try {
           const dbUser = await prisma.user.findUnique({
             where: { id: session.user.id },
-            select: { name: true, image: true, username: true }
+            select: { name: true, image: true, username: true, isBlocked: true }
           });
           
           if (dbUser) {
             session.user.name = dbUser.name;
             session.user.image = dbUser.image;
             session.user.username = dbUser.username;
+            if (dbUser.isBlocked) {
+              session.error = "UserBlocked";
+            }
           }
         } catch (error) {
           console.error("Error fetching latest user session info:", error);
