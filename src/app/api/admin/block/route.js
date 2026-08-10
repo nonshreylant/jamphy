@@ -1,12 +1,18 @@
 import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { cookies } from "next/headers";
 
 export async function POST(req) {
   try {
-    // Basic admin check
-    const adminPassword = cookies().get("admin_password")?.value;
-    if (adminPassword !== process.env.ADMIN_PASSWORD) {
+    const adminCookie = req.cookies.get("admin_session");
+    const isCookieAdmin = adminCookie && adminCookie.value === "authenticated";
+
+    const session = await getServerSession(authOptions);
+    const isGoogleAdmin = session?.user?.email === "jamphy.admin@gmail.com";
+
+    if (!isCookieAdmin && !isGoogleAdmin) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
