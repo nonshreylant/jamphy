@@ -150,50 +150,6 @@ export default function IITJamPhysicsHub() {
     }
   };
 
-  useEffect(() => {
-
-    let mouseX = -100;
-    let mouseY = -100;
-
-    let currentX = -100;
-    let currentY = -100;
-
-    const moveCursor = (e) => {
-
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-
-    };
-
-    window.addEventListener("mousemove", moveCursor);
-
-    let animationFrameId;
-
-    const animate = () => {
-
-      currentX += (mouseX - currentX) * 0.35;
-      currentY += (mouseY - currentY) * 0.35;
-
-      if (cursorRef.current) {
-
-        cursorRef.current.style.transform =
-          `translate3d(${currentX}px, ${currentY}px, 0)`;
-
-      }
-
-      animationFrameId = requestAnimationFrame(animate);
-
-    };
-
-    animate();
-
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-      cancelAnimationFrame(animationFrameId);
-    };
-
-  }, []);
-
   const [testActive, setTestActive] = useState(false);
   const [liveRoomActive, setLiveRoomActive] = useState(false);
 
@@ -708,12 +664,8 @@ export default function IITJamPhysicsHub() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-
-      <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 w-6 h-6 rounded-full border border-white pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2"
-      />
+    <div className="min-h-screen text-white overflow-x-hidden relative z-0">
+      <div className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/bgpicdarker.png')" }} />
 
       <nav className="border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
@@ -969,7 +921,7 @@ export default function IITJamPhysicsHub() {
               </div>
 
               {browseMode === 'subject' ? (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
 
                   {syllabus.map((subject) => (
 
@@ -981,28 +933,27 @@ export default function IITJamPhysicsHub() {
                         setSelectedYear("All");
                         setSelectedSubtopic("All");
                       }}
-                      className="rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-3xl p-5 text-left hover:bg-white/[0.06] transition-all duration-500 h-full flex flex-col items-start group relative overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+                      className="rounded-[20px] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 text-left hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col items-start group"
                     >
-                      <div className="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform duration-500 shadow-md relative z-10 text-white/80">
+                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg mb-2 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 text-white shadow-lg">
                         {icons[subject.id]}
                       </div>
 
-                      <h3 className="text-base font-medium tracking-wide text-white/90 mb-2 relative z-10">
+                      <h3 className="text-base font-bold tracking-wide text-white/90 mb-1 group-hover:text-white transition-colors">
                         {subject.name}
                       </h3>
                       
-                      <div className="text-zinc-500 text-xs tracking-wide mt-auto flex items-center gap-1.5 relative z-10 group-hover:text-white/80 transition-colors pt-2">
+                      <div className="text-zinc-400 text-xs font-medium flex items-center gap-1.5 group-hover:text-white transition-colors mt-auto pt-2">
                         Explore Questions 
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       </div>
-
                     </button>
 
                   ))}
 
                 </div>
               ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
 
                   {availableYears.map((year) => (
 
@@ -1014,22 +965,22 @@ export default function IITJamPhysicsHub() {
                         setSelectedSubjectFilter("All");
                         setSelectedType("All");
                       }}
-                      className="rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-3xl p-5 text-left hover:bg-white/[0.06] transition-all duration-500 h-full flex flex-col items-start group relative overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+                      className="rounded-[20px] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 text-left hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col items-start group"
                     >
-                      <div className="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform duration-500 shadow-md relative z-10 text-white/80">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-base mb-2 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 text-white shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                           <path d="M12 17v5"/>
                           <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
                         </svg>
                       </div>
 
-                      <h3 className="text-base font-medium tracking-wide text-white/90 mb-2 relative z-10">
+                      <h3 className="text-base font-bold tracking-wide text-white/90 mb-1 group-hover:text-white transition-colors">
                         {year} Questions
                       </h3>
                       
-                      <div className="text-zinc-500 text-xs tracking-wide mt-auto flex items-center gap-1.5 relative z-10 group-hover:text-white/80 transition-colors pt-2">
+                      <div className="text-zinc-400 text-xs font-medium flex items-center gap-1.5 group-hover:text-white transition-colors mt-auto pt-2">
                         Attempt 
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       </div>
                     </button>
 
