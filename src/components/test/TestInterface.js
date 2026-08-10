@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import MathText from "../MathText";
+import InlineLofiPlayer from "../InlineLofiPlayer";
 
 export default function TestInterface({ questions, durationMins, onSubmit }) {
   const [timeRemaining, setTimeRemaining] = useState(durationMins * 60);
@@ -181,6 +182,7 @@ export default function TestInterface({ questions, durationMins, onSubmit }) {
         </div>
 
         <div className="flex items-center gap-6">
+          <InlineLofiPlayer />
           <div className={`text-2xl font-black font-mono ${timeRemaining < 300 ? 'text-red-500 animate-pulse' : 'text-white'}`}>
             {formatTime(timeRemaining)}
           </div>

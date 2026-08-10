@@ -16,7 +16,7 @@ export default function AdminLogo() {
       }}
     >
       <Image
-        src="/logo.png"
+        src="/jamphy2sized.png"
         alt="Jamphy Admin Logo"
         width={148}
         height={40}

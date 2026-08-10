@@ -15,6 +15,7 @@ import TestModal from "../../components/test/TestModal";
 import MathText from "../../components/MathText";
 import { useTransitionContext } from "../../components/TransitionProvider";
 import GoalSettingsModal from "../../components/GoalSettingsModal";
+import InlineLofiPlayer from "../../components/InlineLofiPlayer";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LEAGUE_COLORS = {
@@ -714,8 +715,8 @@ export default function IITJamPhysicsHub() {
         className="fixed top-0 left-0 w-6 h-6 rounded-full border border-white pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2"
       />
 
-      <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-4 shrink-0">
             <Link
               href="/"
@@ -726,11 +727,11 @@ export default function IITJamPhysicsHub() {
               className="shrink-0"
             >
               <Image
-                src="/logo.png"
+                src="/jamphy2sized.png"
                 alt="Logo"
-                width={148}
-                height={40}
-                className="rounded-xl object-contain shrink-0"
+                width={120}
+                height={32}
+                className="h-auto w-32 object-contain shrink-0"
                 priority
               />
             </Link>
@@ -856,6 +857,7 @@ export default function IITJamPhysicsHub() {
             )}
 
             {session?.user && <InvitesMenu />}
+            <InlineLofiPlayer />
             <UserMenu session={session} />
 
             {/* Three-line Options Dropdown Menu */}
@@ -907,7 +909,7 @@ export default function IITJamPhysicsHub() {
           <div className="w-full max-w-md bg-zinc-950/90 border border-zinc-800 rounded-[32px] p-8 md:p-10 shadow-2xl flex flex-col items-center text-center">
             <div className="mb-8 drop-shadow-2xl">
               <Image
-                src="/logo.png"
+                src="/jamphy2sized.png"
                 alt="Jamphy Logo"
                 width={180}
                 height={49}
@@ -946,20 +948,20 @@ export default function IITJamPhysicsHub() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.22, ease: "easeInOut" }}
-              className="max-w-7xl mx-auto px-6 py-16"
+              className="max-w-7xl mx-auto px-6 py-6"
             >
 
-              <div className="flex justify-center mb-10">
-                <div className="bg-zinc-900/80 backdrop-blur-sm p-1.5 rounded-2xl flex gap-2 inline-flex border border-zinc-800/50">
+              <div className="flex justify-center mb-6 mt-2">
+                <div className="bg-white/[0.02] backdrop-blur-xl p-1.5 rounded-full flex gap-1 inline-flex border border-white/5 shadow-xl">
                   <button 
                     onClick={() => setBrowseMode('subject')}
-                    className={`px-8 py-3 rounded-xl font-bold transition-all duration-300 ${browseMode === 'subject' ? 'bg-zinc-800 text-white shadow-[0_4px_12px_rgba(0,0,0,0.5)]' : 'text-zinc-500 hover:text-zinc-300'}`}
+                    className={`px-6 py-2 rounded-full font-medium text-xs tracking-wide transition-all duration-300 ${browseMode === 'subject' ? 'bg-white/10 text-white shadow-md' : 'text-zinc-500 hover:text-zinc-300'}`}
                   >
                     Choose by Subject
                   </button>
                   <button 
                     onClick={() => setBrowseMode('year')}
-                    className={`px-8 py-3 rounded-xl font-bold transition-all duration-300 ${browseMode === 'year' ? 'bg-zinc-800 text-white shadow-[0_4px_12px_rgba(0,0,0,0.5)]' : 'text-zinc-500 hover:text-zinc-300'}`}
+                    className={`px-6 py-2 rounded-full font-medium text-xs tracking-wide transition-all duration-300 ${browseMode === 'year' ? 'bg-white/10 text-white shadow-md' : 'text-zinc-500 hover:text-zinc-300'}`}
                   >
                     Choose by Year
                   </button>
@@ -967,7 +969,7 @@ export default function IITJamPhysicsHub() {
               </div>
 
               {browseMode === 'subject' ? (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
 
                   {syllabus.map((subject) => (
 
@@ -979,20 +981,19 @@ export default function IITJamPhysicsHub() {
                         setSelectedYear("All");
                         setSelectedSubtopic("All");
                       }}
-                      className="rounded-3xl border border-zinc-800/50 bg-zinc-950/50 p-6 text-left hover:bg-zinc-900/80 hover:border-zinc-700 transition-all duration-300 h-full flex flex-col items-start group relative overflow-hidden"
+                      className="rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-3xl p-5 text-left hover:bg-white/[0.06] transition-all duration-500 h-full flex flex-col items-start group relative overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                      <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-xl relative z-10">
+                      <div className="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform duration-500 shadow-md relative z-10 text-white/80">
                         {icons[subject.id]}
                       </div>
 
-                      <h3 className="text-2xl font-black tracking-tight text-white mb-2 relative z-10">
+                      <h3 className="text-base font-medium tracking-wide text-white/90 mb-2 relative z-10">
                         {subject.name}
                       </h3>
                       
-                      <div className="text-zinc-500 text-sm font-medium mt-auto flex items-center gap-2 relative z-10 group-hover:text-white transition-colors">
-                        Explore Questions <span className="text-lg">→</span>
+                      <div className="text-zinc-500 text-xs tracking-wide mt-auto flex items-center gap-1.5 relative z-10 group-hover:text-white/80 transition-colors pt-2">
+                        Explore Questions 
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       </div>
 
                     </button>
@@ -1001,7 +1002,7 @@ export default function IITJamPhysicsHub() {
 
                 </div>
               ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
 
                   {availableYears.map((year) => (
 
@@ -1013,23 +1014,22 @@ export default function IITJamPhysicsHub() {
                         setSelectedSubjectFilter("All");
                         setSelectedType("All");
                       }}
-                      className="rounded-3xl border border-zinc-800/50 bg-zinc-950/50 p-6 text-left hover:bg-zinc-900/80 hover:border-zinc-700 transition-all duration-300 h-full flex flex-col items-start group relative overflow-hidden"
+                      className="rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-3xl p-5 text-left hover:bg-white/[0.06] transition-all duration-500 h-full flex flex-col items-start group relative overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      
-                      <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-xl font-black mb-5 group-hover:scale-110 transition-transform duration-300 shadow-xl relative z-10 text-zinc-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                      <div className="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform duration-500 shadow-md relative z-10 text-white/80">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                           <path d="M12 17v5"/>
                           <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>
                         </svg>
                       </div>
 
-                      <h3 className="text-2xl font-black tracking-tight text-white mb-2 relative z-10">
+                      <h3 className="text-base font-medium tracking-wide text-white/90 mb-2 relative z-10">
                         {year} Questions
                       </h3>
                       
-                      <div className="text-zinc-500 text-sm font-medium mt-auto flex items-center gap-2 relative z-10 group-hover:text-white transition-colors pt-4">
-                        Attempt <span className="text-lg">→</span>
+                      <div className="text-zinc-500 text-xs tracking-wide mt-auto flex items-center gap-1.5 relative z-10 group-hover:text-white/80 transition-colors pt-2">
+                        Attempt 
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                       </div>
                     </button>
 

@@ -52,7 +52,7 @@ export default function AdminLogin() {
             }}
           >
             <Image
-              src="/logo.png"
+              src="/jamphy2sized.png"
               alt="Jamphy Logo"
               width={180}
               height={49}

@@ -4,6 +4,8 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
 import UserMenu from "@/components/UserMenu";
+import InlineLofiPlayer from "@/components/InlineLofiPlayer";
+
 import { useTransitionContext } from "@/components/TransitionProvider";
 
 export default function AboutPage() {
@@ -14,7 +16,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-black text-white pb-24">
       {/* Navbar */}
       <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
           <Link 
             href="/"
             onClick={(e) => {
@@ -23,9 +25,10 @@ export default function AboutPage() {
             }}
             className="shrink-0"
           >
-            <Image src="/logo.png" alt="Logo" width={148} height={40} className="rounded-xl object-contain shrink-0" priority />
+            <Image src="/jamphy2sized.png" alt="Logo" width={148} height={40} className="h-auto w-32 object-contain shrink-0" priority />
           </Link>
-          <UserMenu session={session} />
+          <InlineLofiPlayer />
+            <UserMenu session={session} />
         </div>
       </nav>
 

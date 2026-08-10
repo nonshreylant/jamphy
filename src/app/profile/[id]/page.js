@@ -6,6 +6,8 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import UserMenu from "@/components/UserMenu";
+import InlineLofiPlayer from "@/components/InlineLofiPlayer";
+
 import { LEAGUE_COLORS } from "@/lib/constants";
 import { useTransitionContext } from "@/components/TransitionProvider";
 
@@ -110,7 +112,7 @@ export default function PublicProfilePage() {
     <div className="min-h-screen bg-black text-white pb-24">
       {/* Navbar */}
       <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
           <Link 
             href="/"
             onClick={(e) => {
@@ -119,9 +121,10 @@ export default function PublicProfilePage() {
             }}
             className="shrink-0"
           >
-            <Image src="/logo.png" alt="Logo" width={148} height={40} className="rounded-xl object-contain shrink-0" priority />
+            <Image src="/jamphy2sized.png" alt="Logo" width={148} height={40} className="h-auto w-32 object-contain shrink-0" priority />
           </Link>
-          <UserMenu session={session} />
+          <InlineLofiPlayer />
+            <UserMenu session={session} />
         </div>
       </nav>
 

@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import UserMenu from "@/components/UserMenu";
+import InlineLofiPlayer from "@/components/InlineLofiPlayer";
+
 import EditProfileModal from "@/components/EditProfileModal";
 import { useTransitionContext } from "@/components/TransitionProvider";
 
@@ -42,7 +44,7 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-black text-white pb-24">
       {/* Navbar */}
       <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link 
               href="/"
@@ -52,13 +54,14 @@ export default function ProfilePage() {
               }}
               className="shrink-0"
             >
-              <Image src="/logo.png" alt="Logo" width={148} height={40} className="rounded-xl object-contain shrink-0" priority />
+              <Image src="/jamphy2sized.png" alt="Logo" width={148} height={40} className="h-auto w-32 object-contain shrink-0" priority />
             </Link>
             <span className="font-bold text-xl tracking-tight text-zinc-500 hidden sm:block">
               Profile
             </span>
           </div>
-          <UserMenu session={session} />
+          <InlineLofiPlayer />
+            <UserMenu session={session} />
         </div>
       </nav>
 

@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import InlineLofiPlayer from "@/components/InlineLofiPlayer";
 import Link from "next/link";
 import Image from "next/image";
 import { cookies } from "next/headers";

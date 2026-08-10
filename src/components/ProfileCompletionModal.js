@@ -90,7 +90,7 @@ export default function ProfileCompletionModal() {
       <div className="w-full max-w-md bg-zinc-950/90 border border-zinc-800 rounded-[32px] p-8 md:p-10 shadow-2xl flex flex-col items-center text-center">
         <div className="mb-8 drop-shadow-2xl">
           <Image
-            src="/logo.png"
+            src="/jamphy2sized.png"
             alt="Jamphy Logo"
             width={180}
             height={49}
