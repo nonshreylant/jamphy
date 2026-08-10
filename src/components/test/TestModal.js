@@ -42,7 +42,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
 
   return (
     <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 overflow-y-auto font-sans">
-      <div className="w-full max-w-2xl bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[32px] p-6 md:p-8 shadow-2xl flex flex-col my-8">
+      <div className="w-full max-w-2xl bg-white/[0.04] backdrop-blur-[40px] border border-white/10 rounded-[32px] p-6 md:p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] flex flex-col my-8">
         
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-3xl font-light tracking-wide text-white">{title}</h2>
@@ -56,17 +56,17 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
         <div className="space-y-6">
           {/* Syllabus Selection */}
           <div className="space-y-3">
-            <label className="text-sm font-bold text-zinc-400 uppercase tracking-wider">1. Syllabus</label>
+            <label className="text-sm font-light text-zinc-400 tracking-wide">Syllabus</label>
             <div className="flex gap-4">
               <button 
                 onClick={() => setSyllabusMode("full")}
-                className={`flex-1 py-3 px-4 rounded-2xl border font-bold transition ${syllabusMode === "full" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${syllabusMode === "full" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
               >
                 Full Syllabus
               </button>
               <button 
                 onClick={() => setSyllabusMode("specific")}
-                className={`flex-1 py-3 px-4 rounded-2xl border font-bold transition ${syllabusMode === "specific" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${syllabusMode === "specific" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
               >
                 Specific Chapters
               </button>
@@ -91,19 +91,19 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
           {/* Question Count & Duration */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-3">
-              <label className="text-sm font-bold text-zinc-400 uppercase tracking-wider">2. No. of Questions</label>
+              <label className="text-sm font-light text-zinc-400 tracking-wide">Number of Questions</label>
               <input 
                 type="number" 
                 value={numQuestions}
                 onChange={(e) => setNumQuestions(Number(e.target.value))}
                 min={1}
                 max={100}
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-2xl px-5 py-4 text-white text-lg font-bold outline-none focus:border-zinc-500 transition"
+                className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-4 text-white text-lg font-light outline-none focus:border-white/30 transition"
               />
             </div>
             
             <div className="space-y-3">
-              <label className="text-sm font-bold text-zinc-400 uppercase tracking-wider">3. Duration (Mins)</label>
+              <label className="text-sm font-light text-zinc-400 tracking-wide">Duration (Mins)</label>
               <div className="flex gap-3">
                 <button 
                   onClick={() => setDuration(Math.max(5, duration - 5))}
@@ -113,7 +113,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
                   type="number" 
                   value={duration}
                   onChange={(e) => setDuration(Math.max(5, Number(e.target.value)))}
-                  className="w-24 shrink-0 bg-zinc-900 border border-zinc-800 rounded-2xl px-2 py-4 text-center text-white text-xl font-black outline-none focus:border-zinc-500 transition"
+                  className="w-24 shrink-0 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-2 py-4 text-center text-white text-xl font-light outline-none focus:border-white/30 transition"
                 />
                 <button 
                   onClick={() => setDuration(duration + 5)}
@@ -125,13 +125,13 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
 
           {/* Question Types */}
           <div className="space-y-3">
-            <label className="text-sm font-bold text-zinc-400 uppercase tracking-wider">4. Question Types</label>
+            <label className="text-sm font-light text-zinc-400 tracking-wide">Question Types</label>
             <div className="flex gap-3">
               {["MCQ", "MSQ", "NAT"].map(type => (
                 <button 
                   key={type}
                   onClick={() => handleTypeToggle(type)}
-                  className={`flex-1 py-3 px-4 rounded-2xl border font-bold transition ${types.includes(type) ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                  className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${types.includes(type) ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
                 >
                   {type}
                 </button>
@@ -141,13 +141,13 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
 
           {/* Years */}
           <div className="space-y-3">
-            <label className="text-sm font-bold text-zinc-400 uppercase tracking-wider">5. Years</label>
+            <label className="text-sm font-light text-zinc-400 tracking-wide">Years</label>
             <div className="flex flex-wrap gap-2">
               {["All", "Last 3", "Last 5", "Last 10", "Custom"].map(mode => (
                 <button 
                   key={mode}
                   onClick={() => setYearMode(mode)}
-                  className={`py-2 px-5 rounded-xl border text-sm font-bold transition ${yearMode === mode ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                  className={`py-2 px-5 rounded-xl border text-sm font-light tracking-wide transition ${yearMode === mode ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
                 >
                   {mode}
                 </button>
@@ -164,7 +164,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
                   max={2022}
                   className="flex-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-white/30 transition text-center"
                 />
-                <span className="text-zinc-500 font-bold">to</span>
+                <span className="text-zinc-500 font-light tracking-wide">to</span>
                 <input 
                   type="number" 
                   value={customYearEnd}
@@ -183,7 +183,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
           <button 
             onClick={handleGenerate}
             disabled={types.length === 0 || (syllabusMode === "specific" && selectedChapters.length === 0) || numQuestions < 1 || duration < 5}
-            className="w-full py-4 rounded-2xl bg-white text-black font-black text-xl hover:bg-zinc-200 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-4 rounded-2xl bg-white/10 backdrop-blur-md text-white font-light tracking-wide text-lg uppercase border border-white/10 hover:bg-white/20 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Generate Test
           </button>

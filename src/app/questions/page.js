@@ -723,7 +723,7 @@ export default function IITJamPhysicsHub() {
               <div className="relative group cursor-pointer flex flex-col items-center shrink-0">
                 {/* Desktop Goal Bar */}
                 <div className="hidden sm:flex items-center gap-2 py-2">
-                  <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider hidden md:inline">Goal</span>
+                  <span className="text-[12px] text-zinc-400 font-light tracking-wide hidden md:inline">Goal</span>
                   <div className="w-36 h-2 rounded-full bg-zinc-800 overflow-hidden relative border border-zinc-700/30">
                     <div 
                       className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-500" 
