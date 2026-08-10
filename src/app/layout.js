@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata = {
   title: "jamphy",
   description: "Practice IIT JAM Physics questions with math-ready explanations.",
+  icons: {
+    icon: "/faviconnew.png",
+  },
 };
 
 export default function RootLayout({ children }) {

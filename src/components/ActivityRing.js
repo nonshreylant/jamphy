@@ -70,8 +70,8 @@ export default function ActivityRing({ percentage = 0, size = 120, strokeWidth =
         <span className="text-2xl font-bold text-white leading-none">
           {Math.round(percentage)}%
         </span>
-        <span className="text-[10px] text-zinc-400 font-medium tracking-wide">
-          GOAL
+        <span className="text-[12px] text-zinc-400 font-light tracking-wide">
+          Goal
         </span>
       </div>
     </div>

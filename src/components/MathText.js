@@ -12,7 +12,9 @@ const normalizeMathDelimiters = (value) =>
     .replace(/\\\[/g, "$$")
     .replace(/\\\]/g, "$$")
     .replace(/\\\(/g, "$")
-    .replace(/\\\)/g, "$");
+    .replace(/\\\)/g, "$")
+    .replace(/\\begin\s*{\s*([^}\s]+)\s*}/g, "\\begin{$1}")
+    .replace(/\\end\s*{\s*([^}\s]+)\s*}/g, "\\end{$1}");
 
 export default function MathText({ children, className = "" }) {
   return (

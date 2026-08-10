@@ -125,7 +125,7 @@ export default function IITJamPrepPlatform() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] z-10 flex flex-col items-center justify-center w-full px-4"
         >
           <Image
-            src="/jamphy-logo-3.png"
+            src="/jamphybetter.png"
             alt="Jamphy Logo"
             width={700}
             height={200}
@@ -145,7 +145,11 @@ export default function IITJamPrepPlatform() {
             href="/questions"
             onClick={(e) => {
               e.preventDefault();
-              navigateWithTransition("/questions");
+              if (status === "unauthenticated") {
+                signIn("google", { callbackUrl: "/questions" });
+              } else {
+                navigateWithTransition("/questions");
+              }
             }}
             className="flex items-center gap-2 text-white/90 text-sm font-medium tracking-wide"
           >

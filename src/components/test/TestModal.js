@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { syllabus } from "../../data/syllabus";
 
-export default function TestModal({ onClose, onGenerate }) {
+export default function TestModal({ onClose, onGenerate, title = "Create Test" }) {
   const [syllabusMode, setSyllabusMode] = useState("full");
   const [selectedChapters, setSelectedChapters] = useState([]);
   const [numQuestions, setNumQuestions] = useState(30);
@@ -9,7 +9,7 @@ export default function TestModal({ onClose, onGenerate }) {
   const [duration, setDuration] = useState(5);
   const [yearMode, setYearMode] = useState("All");
   const [customYearStart, setCustomYearStart] = useState(2015);
-  const [customYearEnd, setCustomYearEnd] = useState(2026);
+  const [customYearEnd, setCustomYearEnd] = useState(2022);
 
   const handleChapterToggle = (chapterId) => {
     if (selectedChapters.includes(chapterId)) {
@@ -41,11 +41,11 @@ export default function TestModal({ onClose, onGenerate }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 overflow-y-auto">
-      <div className="w-full max-w-2xl bg-zinc-950/90 border border-zinc-800 rounded-[32px] p-6 md:p-8 shadow-2xl flex flex-col my-8">
+    <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 overflow-y-auto font-sans">
+      <div className="w-full max-w-2xl bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[32px] p-6 md:p-8 shadow-2xl flex flex-col my-8">
         
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-black text-white">Create Test</h2>
+          <h2 className="text-3xl font-light tracking-wide text-white">{title}</h2>
           <button onClick={onClose} className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -160,14 +160,18 @@ export default function TestModal({ onClose, onGenerate }) {
                   type="number" 
                   value={customYearStart}
                   onChange={(e) => setCustomYearStart(Number(e.target.value))}
-                  className="flex-1 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white outline-none focus:border-zinc-500 transition text-center"
+                  min={2005}
+                  max={2022}
+                  className="flex-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-white/30 transition text-center"
                 />
                 <span className="text-zinc-500 font-bold">to</span>
                 <input 
                   type="number" 
                   value={customYearEnd}
                   onChange={(e) => setCustomYearEnd(Number(e.target.value))}
-                  className="flex-1 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white outline-none focus:border-zinc-500 transition text-center"
+                  min={2005}
+                  max={2022}
+                  className="flex-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-white/30 transition text-center"
                 />
               </div>
             )}

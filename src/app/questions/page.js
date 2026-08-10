@@ -17,6 +17,7 @@ import { useTransitionContext } from "../../components/TransitionProvider";
 import GoalSettingsModal from "../../components/GoalSettingsModal";
 import InlineLofiPlayer from "../../components/InlineLofiPlayer";
 import { motion, AnimatePresence } from "framer-motion";
+import * as htmlToImage from "html-to-image";
 
 const LEAGUE_COLORS = {
   Bronze: "#cd7f32",
@@ -49,6 +50,35 @@ export default function IITJamPhysicsHub() {
   const [myFollows, setMyFollows] = useState(new Set());
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false);
   const [questionsList, setQuestionsList] = useState(staticQuestions);
+  const [isSharing, setIsSharing] = useState(false);
+  const captureRef = useRef(null);
+
+  const handleShareQuestion = async () => {
+    if (!captureRef.current) return;
+    try {
+      setIsSharing(true);
+      // Brief delay to let the UI update and fonts load in the hidden div
+      await new Promise(r => setTimeout(r, 100));
+      
+      const dataUrl = await htmlToImage.toBlob(captureRef.current, {
+        quality: 1,
+        backgroundColor: '#09090b', // zinc-950
+        pixelRatio: 2, // High res for retina
+      });
+      
+      if (dataUrl) {
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': dataUrl })
+        ]);
+        alert("Image copied to clipboard!");
+      }
+    } catch (error) {
+      console.error("Failed to copy image", error);
+      alert("Failed to copy image. Please try again.");
+    } finally {
+      setIsSharing(false);
+    }
+  };
 
   useEffect(() => {
     fetch("/api/questions")
@@ -1175,12 +1205,70 @@ export default function IITJamPhysicsHub() {
               className="max-w-7xl mx-auto px-4 md:px-6 py-6"
             >
 
-              <button
-                onClick={() => setActiveQuestion(null)}
-                className="text-zinc-500 hover:text-white mb-6"
-              >
-                ← Back to Questions
-              </button>
+              <div className="flex justify-between items-center mb-6">
+                <button
+                  onClick={() => setActiveQuestion(null)}
+                  className="text-zinc-500 hover:text-white transition-colors"
+                >
+                  ← Back to Questions
+                </button>
+                
+                <button
+                  onClick={handleShareQuestion}
+                  disabled={isSharing}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
+                >
+                  {isSharing ? (
+                    <span className="w-4 h-4 border-2 border-zinc-500 border-t-zinc-200 rounded-full animate-spin" />
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                  )}
+                  {isSharing ? 'Copying...' : 'Copy Image'}
+                </button>
+              </div>
+
+              {/* Hidden Capture Area for Sharing */}
+              <div className="absolute top-0 left-0 -z-50 pointer-events-none opacity-0 overflow-hidden w-[800px]">
+                <div 
+                  ref={captureRef}
+                  className="bg-zinc-950 p-10 border border-zinc-800 rounded-3xl m-8 flex flex-col"
+                  style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                >
+                  <div className="flex items-center gap-3 mb-6 pb-6 border-b border-zinc-800/50">
+                    <img src="/jamphy2sized.png" alt="Jamphy" className="h-8 object-contain" />
+                  </div>
+                  
+                  <div className="flex gap-2 flex-wrap mb-5">
+                    <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                      {activeQuestion.year}
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                      {activeQuestion.subject}
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                      {activeQuestion.type}
+                    </span>
+                  </div>
+
+                  <MathText className="text-[20px] leading-[1.8] text-white font-normal">
+                    {activeQuestion.question}
+                  </MathText>
+
+                  {(activeQuestion.imageUrl || activeQuestion.questionImage || activeQuestion.image) && (
+                    <div className="flex mt-6">
+                      <img
+                        src={activeQuestion.imageUrl || activeQuestion.questionImage || activeQuestion.image}
+                        alt="Question diagram"
+                        className="max-h-[400px] w-auto rounded-xl border border-zinc-800"
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="mt-8 text-zinc-500 text-sm font-medium">
+                    Practice more questions like this at jamphy.com
+                  </div>
+                </div>
+              </div>
 
               <div className="rounded-[32px] border border-zinc-800 bg-zinc-950 p-5 md:p-7">
 
@@ -1676,6 +1764,7 @@ export default function IITJamPhysicsHub() {
 
           {liveRoomActive && (
             <TestModal 
+              title="Create Live Room"
               onClose={() => setLiveRoomActive(false)}
               onGenerate={async (config) => {
                 try {
