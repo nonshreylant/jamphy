@@ -18,25 +18,25 @@ content = content.replace(/\}\s*,?\s*\[\s*\{/g, '},\n  {');
 // 2. Ensure the file ends properly
 content = content.replace(/\}\s*\]?\s*\]?\s*;?\s*$/g, '}\n];');
 
-// 3. Update the 2021 Image URLs
+// 3. Update the 2020 Image URLs
 let lines = content.split('\n');
-let is2021 = false;
+let isTargetYear = false;
 let updatedCount = 0;
 
 for (let i = 0; i < lines.length; i++) {
-  if (lines[i].includes('year: 2021') || lines[i].includes('"year": 2021')) {
-    is2021 = true;
-  } else if (lines[i].match(/["']?year["']?:\s*(2022|2023|2024|2025|2026)/)) {
-    is2021 = false;
+  if (lines[i].includes('year: 2020') || lines[i].includes('"year": 2020')) {
+    isTargetYear = true;
+  } else if (lines[i].match(/["']?year["']?:\s*(2021|2022|2023|2024|2025|2026)/)) {
+    isTargetYear = false;
   }
   
-  if (is2021) {
+  if (isTargetYear) {
     if (lines[i].includes('/images/')) {
-      lines[i] = lines[i].replace(/\/images\//g, 'https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/');
+      lines[i] = lines[i].replace(/\/images\//g, 'https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/');
       updatedCount++;
     }
   }
 }
 
 fs.writeFileSync(filePath, lines.join('\n'));
-console.log(`Syntax fixed and ${updatedCount} image URLs updated for 2021 questions.`);
+console.log(`Syntax fixed and ${updatedCount} image URLs updated for 2020 questions.`);
