@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import ImageCropperModal from "./ImageCropperModal";
 
 export default function EditProfileModal({ onClose }) {
   const { data: session, update } = useSession();
@@ -11,6 +12,7 @@ export default function EditProfileModal({ onClose }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [message, setMessage] = useState({ type: "", text: "" });
+  const [croppingImage, setCroppingImage] = useState(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -70,37 +72,15 @@ export default function EditProfileModal({ onClose }) {
 
     const reader = new FileReader();
     reader.onload = (event) => {
-      const img = new window.Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        const MAX_WIDTH = 256;
-        const MAX_HEIGHT = 256;
-        let width = img.width;
-        let height = img.height;
-
-        if (width > height) {
-          if (width > MAX_WIDTH) {
-            height = Math.round((height * MAX_WIDTH) / width);
-            width = MAX_WIDTH;
-          }
-        } else {
-          if (height > MAX_HEIGHT) {
-            width = Math.round((width * MAX_HEIGHT) / height);
-            height = MAX_HEIGHT;
-          }
-        }
-
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, width, height);
-
-        const dataUrl = canvas.toDataURL("image/jpeg", 0.8);
-        setFormData((prev) => ({ ...prev, image: dataUrl }));
-      };
-      img.src = event.target.result;
+      setCroppingImage(event.target.result);
     };
     reader.readAsDataURL(file);
+    e.target.value = ''; // Reset input to allow re-uploading the same file
+  };
+
+  const handleCropComplete = (croppedBase64) => {
+    setFormData((prev) => ({ ...prev, image: croppedBase64 }));
+    setCroppingImage(null);
   };
 
   const handleSubmit = async (e) => {
@@ -132,9 +112,10 @@ export default function EditProfileModal({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="bg-zinc-950 border border-zinc-800 w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
-        <div className="flex justify-between items-center p-6 border-b border-zinc-800">
+    <>
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div className="bg-zinc-950 border border-zinc-800 w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
+          <div className="flex justify-between items-center p-6 border-b border-zinc-800">
           <h2 className="text-2xl font-bold text-white">Edit Profile</h2>
           <button onClick={onClose} className="text-zinc-500 hover:text-white transition p-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -326,5 +307,14 @@ export default function EditProfileModal({ onClose }) {
         </div>
       </div>
     </div>
+    
+    {croppingImage && (
+      <ImageCropperModal
+        imageSrc={croppingImage}
+        onCropComplete={handleCropComplete}
+        onCancel={() => setCroppingImage(null)}
+      />
+    )}
+  </>
   );
 }

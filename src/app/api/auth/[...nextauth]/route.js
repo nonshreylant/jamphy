@@ -54,7 +54,6 @@ export const authOptions = {
       // Support manual updates from client useSession().update()
       if (trigger === "update" && session) {
         if (session.name !== undefined) token.name = session.name;
-        if (session.image !== undefined) token.picture = session.image;
         if (session.username !== undefined) token.username = session.username;
         return token;
       }
