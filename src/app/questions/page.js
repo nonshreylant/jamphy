@@ -67,14 +67,21 @@ export default function IITJamPhysicsHub() {
       });
       
       if (dataUrl) {
+        const textBlob = new Blob(
+          [`Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`],
+          { type: 'text/plain' }
+        );
         await navigator.clipboard.write([
-          new ClipboardItem({ 'image/png': dataUrl })
+          new ClipboardItem({ 
+            'image/png': dataUrl,
+            'text/plain': textBlob
+          })
         ]);
-        alert("Image copied to clipboard!");
+        alert("Question shared to clipboard!");
       }
     } catch (error) {
-      console.error("Failed to copy image", error);
-      alert("Failed to copy image. Please try again.");
+      console.error("Failed to share question", error);
+      alert("Failed to share question. Please try again.");
     } finally {
       setIsSharing(false);
     }
@@ -1223,7 +1230,7 @@ export default function IITJamPhysicsHub() {
                   ) : (
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
                   )}
-                  {isSharing ? 'Copying...' : 'Copy Image'}
+                  {isSharing ? 'Sharing...' : 'Share Image'}
                 </button>
               </div>
 
@@ -1261,6 +1268,30 @@ export default function IITJamPhysicsHub() {
                         alt="Question diagram"
                         className="max-h-[400px] w-auto rounded-xl border border-zinc-800"
                       />
+                    </div>
+                  )}
+                  
+                  {(activeQuestion.type === "MCQ" || activeQuestion.type === "MSQ") && activeQuestion.options && (
+                    <div className="grid grid-cols-2 gap-4 mt-6">
+                      {activeQuestion.options.map((option, index) => (
+                        <div key={index} className="flex gap-4 items-start rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4">
+                          <div className="w-10 h-10 shrink-0 rounded-full flex items-center justify-center text-[15px] font-bold text-white bg-zinc-800">
+                            {String.fromCharCode(65 + index)}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            {activeQuestion.optionImages?.[index] && (
+                              <img
+                                src={activeQuestion.optionImages[index]}
+                                alt={`Option ${index + 1}`}
+                                className="rounded-xl border border-zinc-700 mb-3 h-auto max-w-full object-contain"
+                              />
+                            )}
+                            <MathText className="text-[16px] leading-relaxed text-zinc-300 break-words font-normal">
+                              {option}
+                            </MathText>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
                   
