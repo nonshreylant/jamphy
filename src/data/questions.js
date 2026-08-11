@@ -16644,11 +16644,7 @@ $$C_V = C_{V,trans} + C_{V,rot} + C_{V,vib}$$
 $$C_V = \frac{3}{2}R + \frac{3}{2}R + R = 3R + R = 4R$$
 This matches option (C)[cite: 5, 6].`,
     "correctAnswers": [2]
-  }
-  ]
-
-
-  [
+  },
   {
     "id": 16,
     "year": 2018,
