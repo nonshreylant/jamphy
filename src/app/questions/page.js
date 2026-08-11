@@ -1235,10 +1235,10 @@ export default function IITJamPhysicsHub() {
               </div>
 
               {/* Hidden Capture Area for Sharing */}
-              <div className="absolute top-0 left-0 -z-50 pointer-events-none opacity-0 overflow-hidden w-[800px]">
+              <div className="fixed top-0 left-0 -z-50 pointer-events-none opacity-0 overflow-hidden">
                 <div 
                   ref={captureRef}
-                  className="bg-zinc-950 p-10 border border-zinc-800 rounded-3xl m-8 flex flex-col"
+                  className="bg-zinc-950 p-10 border border-zinc-800 rounded-3xl flex flex-col w-[800px]"
                   style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
                 >
                   <div className="flex items-center gap-3 mb-6 pb-6 border-b border-zinc-800/50">
@@ -1294,10 +1294,6 @@ export default function IITJamPhysicsHub() {
                       ))}
                     </div>
                   )}
-                  
-                  <div className="mt-8 text-zinc-500 text-sm font-medium">
-                    Practice more questions like this at jamphy.com
-                  </div>
                 </div>
               </div>
 
