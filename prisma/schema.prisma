@@ -251,3 +251,9 @@ model Notification {
 
   @@index([userId])
 }
+
+model SharedImage {
+  id        String   @id
+  imageData String   @db.Text
+  createdAt DateTime @default(now())
+}

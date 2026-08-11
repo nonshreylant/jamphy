@@ -51,7 +51,48 @@ export default function IITJamPhysicsHub() {
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false);
   const [questionsList, setQuestionsList] = useState(staticQuestions);
   const [isSharing, setIsSharing] = useState(false);
+  const [isCopyingLink, setIsCopyingLink] = useState(false);
   const captureRef = useRef(null);
+
+  const handleCopyLink = async () => {
+    if (!captureRef.current) return;
+    try {
+      setIsCopyingLink(true);
+      
+      const shareId = crypto.randomUUID();
+      const shareUrl = `${window.location.origin}/share/${shareId}`;
+      
+      const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at ${shareUrl}`;
+      await navigator.clipboard.writeText(textMessage);
+      alert("Link copied! Preview is generating in the background...");
+
+      await new Promise(r => setTimeout(r, 100));
+      
+      const dataBlob = await htmlToImage.toBlob(captureRef.current, {
+        quality: 1,
+        backgroundColor: '#09090b',
+        pixelRatio: 2,
+      });
+
+      const reader = new FileReader();
+      reader.readAsDataURL(dataBlob);
+      reader.onloadend = async () => {
+        try {
+          await fetch('/api/share', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: shareId, imageData: reader.result })
+          });
+        } catch (err) {
+          console.error("Failed to upload share image", err);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to copy link", error);
+    } finally {
+      setIsCopyingLink(false);
+    }
+  };
 
   const handleShareQuestion = async () => {
     if (!captureRef.current) return;
@@ -1244,14 +1285,16 @@ export default function IITJamPhysicsHub() {
                 
                 <div className="flex items-center gap-3">
                   <button
-                    onClick={() => {
-                      navigator.clipboard.writeText(`Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`);
-                      alert("Link copied to clipboard!");
-                    }}
+                    onClick={handleCopyLink}
+                    disabled={isCopyingLink}
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
                   >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                    Copy Link
+                    {isCopyingLink ? (
+                      <span className="w-4 h-4 border-2 border-zinc-500 border-t-zinc-200 rounded-full animate-spin" />
+                    ) : (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    )}
+                    {isCopyingLink ? 'Copying...' : 'Copy Link'}
                   </button>
                   
                   <button
