@@ -67,17 +67,39 @@ export default function IITJamPhysicsHub() {
       });
       
       if (dataUrl) {
-        const textBlob = new Blob(
-          [`Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`],
-          { type: 'text/plain' }
-        );
+        const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`;
+        
+        // Use Web Share API if supported (Works on mobile, Safari, macOS Chrome)
+        // This flawlessly passes both the image AND text directly to WhatsApp/other apps.
+        if (navigator.canShare) {
+          const file = new File([dataUrl], 'jamphy-question.png', { type: 'image/png' });
+          if (navigator.canShare({ files: [file], text: textMessage })) {
+            try {
+              await navigator.share({
+                title: 'Jamphy Question',
+                text: textMessage,
+                files: [file]
+              });
+              return; // Shared successfully via share sheet
+            } catch (err) {
+              if (err.name === 'AbortError') return; // User cancelled, do nothing
+              console.error("Web Share failed, falling back to clipboard", err);
+            }
+          }
+        }
+
+        // Fallback: Clipboard API
+        const textBlob = new Blob([textMessage], { type: 'text/plain' });
+        const htmlBlob = new Blob([`<p>${textMessage}</p>`], { type: 'text/html' });
+        
         await navigator.clipboard.write([
           new ClipboardItem({ 
             'image/png': dataUrl,
-            'text/plain': textBlob
+            'text/plain': textBlob,
+            'text/html': htmlBlob
           })
         ]);
-        alert("Question shared to clipboard!");
+        alert("Image and link copied to clipboard! You may need to paste twice depending on the app.");
       }
     } catch (error) {
       console.error("Failed to share question", error);
