@@ -992,7 +992,7 @@ export default function IITJamPhysicsHub() {
 
       {status === "authenticated" && session?.user?.username && (
         <AnimatePresence mode="wait">
-          {!selectedSubject && !selectedBrowseYear && !testActive && !liveRoomActive && (
+          {!selectedSubject && !selectedBrowseYear && (
 
             <motion.section
               key="categories"
@@ -1093,7 +1093,7 @@ export default function IITJamPhysicsHub() {
 
           )}
 
-          {(selectedSubject || selectedBrowseYear) && !activeQuestion && !testActive && !liveRoomActive && (
+          {(selectedSubject || selectedBrowseYear) && !activeQuestion && (
 
             <motion.section
               key="questions"
@@ -1264,7 +1264,7 @@ export default function IITJamPhysicsHub() {
             </motion.section>
 
           )}
-          {activeQuestion && !testActive && !liveRoomActive && (
+          {activeQuestion && (
 
             <motion.section
               key={activeQuestion.id}
@@ -1378,10 +1378,6 @@ export default function IITJamPhysicsHub() {
               <div className="rounded-[32px] border border-zinc-800 bg-zinc-950 p-5 md:p-7">
 
                 <div className="flex gap-2 flex-wrap mb-5">
-
-                  <span className="px-4 py-1 rounded-full bg-blue-600 text-sm font-bold">
-                    Question {currentQuestionIndex + 1} / {filteredQuestions.length}
-                  </span>
 
                   <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
                     {activeQuestion.year}

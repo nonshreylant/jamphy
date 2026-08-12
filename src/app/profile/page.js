@@ -41,7 +41,8 @@ export default function ProfilePage() {
   if (status === "unauthenticated" || !session) return null;
 
   return (
-    <div className="min-h-screen bg-black text-white pb-24">
+    <div className="min-h-screen bg-transparent text-white pb-24 font-sans">
+      <div className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/bgpicdarker.png')" }} />
       {/* Navbar */}
       <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
@@ -56,22 +57,23 @@ export default function ProfilePage() {
             >
               <Image src="/jamphy2sized.png" alt="Logo" width={148} height={40} className="h-auto w-32 object-contain shrink-0" priority />
             </Link>
-            <span className="font-bold text-xl tracking-tight text-zinc-500 hidden sm:block">
+            <span className="font-light tracking-widest text-sm uppercase text-zinc-500 hidden sm:block">
               Profile
             </span>
           </div>
-          <InlineLofiPlayer />
+          <div className="flex items-center gap-4 shrink-0">
+            <InlineLofiPlayer />
             <UserMenu session={session} />
+          </div>
         </div>
       </nav>
 
-      <main className="max-w-5xl mx-auto px-6 py-12 space-y-8">
+      <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
         
         {/* HERO CARD */}
-        <div className="bg-zinc-950 border border-white/10 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-8 md:gap-10 relative overflow-hidden break-words">
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-blue-900/20 to-cyan-900/20" />
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10 border-b border-zinc-800 pb-12 break-words">
           
-          <div className="relative z-10 w-32 h-32 rounded-full overflow-hidden border-4 border-zinc-900 bg-zinc-800 flex items-center justify-center text-4xl font-bold shrink-0">
+          <div className="relative z-10 w-32 h-32 rounded-full overflow-hidden border border-zinc-700 bg-black/40 backdrop-blur-md flex items-center justify-center text-4xl font-light shrink-0">
             {session.user.image ? (
               <Image src={session.user.image} alt={session.user.name} fill className="object-cover" sizes="96px" />
             ) : (
@@ -79,9 +81,9 @@ export default function ProfilePage() {
             )}
           </div>
           
-          <div className="relative z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-3 w-full">
-            <h1 className="text-3xl font-black truncate w-full max-w-full">{session.user.name}</h1>
-            <p className="text-zinc-400 truncate w-full max-w-full">{session.user.email}</p>
+          <div className="relative z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-2 w-full">
+            <h1 className="text-4xl font-light tracking-wide truncate w-full max-w-full">{session.user.name}</h1>
+            <p className="text-zinc-500 font-light tracking-wider truncate w-full max-w-full">{session.user.email}</p>
             {profileData?.stats && (
               <div className="flex items-center gap-4 text-sm font-bold mt-2">
                 <span className="text-zinc-300">
@@ -97,7 +99,7 @@ export default function ProfilePage() {
           <div className="relative z-10 mt-6 md:mt-0 shrink-0">
             <button 
               onClick={() => setIsEditModalOpen(true)}
-              className="px-6 py-3 rounded-2xl bg-white text-black font-bold hover:scale-105 transition"
+              className="text-sm font-light tracking-widest text-zinc-400 uppercase hover:text-white transition border-b border-transparent hover:border-white pb-1"
             >
               Edit Profile
             </button>
@@ -107,35 +109,32 @@ export default function ProfilePage() {
         {profileData && (
           <>
             {/* STATS ROW */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 flex flex-col items-center justify-center">
-                <div className="text-zinc-500 text-sm font-bold uppercase tracking-wider mb-2">Total Questions</div>
-                <div className="text-4xl font-mono text-white font-black">{profileData.stats.totalQuestions}</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="flex flex-col items-start border-b border-zinc-800 pb-4">
+                <div className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em] mb-2">Total Questions</div>
+                <div className="text-3xl font-light text-white">{profileData.stats.totalQuestions}</div>
               </div>
-              <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 flex flex-col items-center justify-center">
-                <div className="text-zinc-500 text-sm font-bold uppercase tracking-wider mb-2">Correct</div>
-                <div className="text-4xl font-mono text-emerald-400 font-black">{profileData.stats.totalCorrect}</div>
+              <div className="flex flex-col items-start border-b border-zinc-800 pb-4">
+                <div className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em] mb-2">Correct</div>
+                <div className="text-3xl font-light text-white">{profileData.stats.totalCorrect}</div>
               </div>
-              <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 flex flex-col items-center justify-center">
-                <div className="text-zinc-500 text-sm font-bold uppercase tracking-wider mb-2">Accuracy</div>
-                <div className="text-4xl font-mono text-cyan-400 font-black">{profileData.stats.accuracy}%</div>
+              <div className="flex flex-col items-start border-b border-zinc-800 pb-4">
+                <div className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em] mb-2">Accuracy</div>
+                <div className="text-3xl font-light text-white">{profileData.stats.accuracy}%</div>
               </div>
-              <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 flex flex-col items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-orange-500/5" />
-                <div className="relative z-10 text-zinc-500 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
-                  <span className="text-orange-500">🔥</span> Streak
-                </div>
-                <div className="relative z-10 text-4xl font-mono text-orange-400 font-black">{profileData.stats.currentStreak} d</div>
+              <div className="flex flex-col items-start border-b border-zinc-800 pb-4">
+                <div className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em] mb-2">Streak</div>
+                <div className="text-3xl font-light text-white">{profileData.stats.currentStreak} d</div>
               </div>
             </div>
 
             {/* TWO COLUMNS: Heatmap + Subjects on Left, Recent Activity on Right */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               
-              <div className="lg:col-span-2 space-y-8">
+              <div className="lg:col-span-2 space-y-12">
                 {/* CALENDAR HEATMAP */}
-                <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6">
-                  <h3 className="text-xl font-bold mb-6">Activity Calendar (Last 90 Days)</h3>
+                <div className="border-b border-zinc-800 pb-12">
+                  <h3 className="text-xl font-light tracking-wide mb-8">Activity Calendar</h3>
                   <div className="grid grid-rows-7 grid-flow-col gap-1.5 w-fit">
                     {/* Render a simple grid of squares for the last 91 days (13 weeks) */}
                     {Array.from({ length: 91 }).map((_, i) => {
@@ -145,10 +144,10 @@ export default function ProfilePage() {
                       const entry = profileData.heatmap.find(h => h.date === dStr);
                       const count = entry ? entry.count : 0;
                       
-                      let bgClass = "bg-zinc-900 border border-zinc-800/50";
-                      if (count > 0 && count <= 5) bgClass = "bg-[#0e4429] border border-[#006d32]/50";
-                      else if (count > 5 && count <= 15) bgClass = "bg-[#006d32] border border-[#26a641]/50";
-                      else if (count > 15) bgClass = "bg-[#39d353] border border-[#39d353] shadow-[0_0_8px_rgba(57,211,83,0.3)]";
+                      let bgClass = "bg-zinc-900 border border-zinc-800";
+                      if (count > 0 && count <= 5) bgClass = "bg-white/20 border border-white/20";
+                      else if (count > 5 && count <= 15) bgClass = "bg-white/50 border border-white/50";
+                      else if (count > 15) bgClass = "bg-white border border-white shadow-[0_0_8px_rgba(255,255,255,0.3)]";
 
                       return (
                         <div 
@@ -159,32 +158,32 @@ export default function ProfilePage() {
                       );
                     })}
                   </div>
-                  <div className="flex items-center gap-1.5 mt-4 text-xs text-zinc-500 justify-end">
+                  <div className="flex items-center gap-1.5 mt-6 text-xs text-zinc-500 font-light tracking-widest uppercase justify-end">
                     <span>Less</span>
-                    <div className="w-[11px] h-[11px] rounded-[2px] bg-zinc-900 border border-zinc-800/50" />
-                    <div className="w-[11px] h-[11px] rounded-[2px] bg-[#0e4429] border border-[#006d32]/50" />
-                    <div className="w-[11px] h-[11px] rounded-[2px] bg-[#006d32] border border-[#26a641]/50" />
-                    <div className="w-[11px] h-[11px] rounded-[2px] bg-[#39d353] border border-[#39d353]" />
+                    <div className="w-[11px] h-[11px] rounded-[2px] bg-zinc-900 border border-zinc-800" />
+                    <div className="w-[11px] h-[11px] rounded-[2px] bg-white/20 border border-white/20" />
+                    <div className="w-[11px] h-[11px] rounded-[2px] bg-white/50 border border-white/50" />
+                    <div className="w-[11px] h-[11px] rounded-[2px] bg-white border border-white" />
                     <span>More</span>
                   </div>
                 </div>
 
                 {/* SUBJECT BREAKDOWN */}
-                <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6">
-                  <h3 className="text-xl font-bold mb-6">Subject Accuracy</h3>
+                <div className="border-b border-zinc-800 pb-12">
+                  <h3 className="text-xl font-light tracking-wide mb-8">Subject Accuracy</h3>
                   <div className="space-y-4">
                     {profileData.breakdown.length === 0 ? (
                       <p className="text-zinc-500 italic">No subject data yet.</p>
                     ) : (
                       profileData.breakdown.map((subject, idx) => (
-                        <div key={idx}>
-                          <div className="flex justify-between text-sm mb-1">
-                            <span className="font-bold text-zinc-300">{subject.subject || "Mixed"}</span>
-                            <span className="text-zinc-500">{subject.accuracy}% ({subject.correct}/{subject.total})</span>
+                        <div key={idx} className="mb-4">
+                          <div className="flex justify-between text-xs tracking-wider uppercase font-light text-zinc-400 mb-2">
+                            <span>{subject.subject || "Mixed"}</span>
+                            <span>{subject.accuracy}% ({subject.correct}/{subject.total})</span>
                           </div>
-                          <div className="h-2 bg-zinc-900 rounded-full overflow-hidden">
+                          <div className="h-[2px] bg-zinc-900 overflow-hidden w-full">
                             <div 
-                              className="h-full bg-cyan-400"
+                              className="h-full bg-white transition-all"
                               style={{ width: `${subject.accuracy}%` }}
                             />
                           </div>
@@ -197,25 +196,29 @@ export default function ProfilePage() {
 
               {/* RECENT ACTIVITY */}
               <div className="lg:col-span-1">
-                <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 h-full">
-                  <h3 className="text-xl font-bold mb-6">Recent Activity</h3>
+                <div className="border-b lg:border-b-0 border-zinc-800 pb-12 h-full">
+                  <h3 className="text-xl font-light tracking-wide mb-8">Recent Activity</h3>
                   <div className="space-y-4">
                     {profileData.recentActivity.length === 0 ? (
                       <p className="text-zinc-500 italic">No recent activity.</p>
                     ) : (
                       profileData.recentActivity.map((attempt) => (
-                        <div key={attempt.id} className="flex items-start gap-4 p-3 rounded-2xl bg-zinc-900/50 border border-zinc-800/50">
-                          <div className={`mt-1 flex-shrink-0 w-2.5 h-2.5 rounded-full ${attempt.isCorrect ? "bg-emerald-400" : "bg-red-400"}`} />
-                          <div className="flex-1 min-w-0">
-                            <div className="text-sm font-bold text-zinc-200 truncate">
+                        <div key={attempt.id} className="flex items-start justify-between py-4 border-b border-zinc-800/50 group">
+                          <div className="flex-1 min-w-0 pr-4">
+                            <div className="text-sm font-light text-zinc-200 truncate group-hover:text-white transition">
                               {attempt.subject || "Question Practice"}
                             </div>
-                            <div className="text-xs text-zinc-500 mt-1">
+                            <div className="text-xs font-light tracking-wider text-zinc-500 mt-1 uppercase">
                               {new Date(attempt.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit' })}
                             </div>
                           </div>
-                          <div className="text-xs font-mono text-zinc-600 bg-zinc-950 px-2 py-1 rounded">
-                            {attempt.timeTaken}s
+                          <div className="flex flex-col items-end gap-1 shrink-0">
+                            <div className={`text-xs tracking-widest uppercase font-light ${attempt.isCorrect ? "text-white" : "text-zinc-500"}`}>
+                              {attempt.isCorrect ? "Correct" : "Incorrect"}
+                            </div>
+                            <div className="text-xs font-light tracking-widest text-zinc-600">
+                              {attempt.timeTaken}s
+                            </div>
                           </div>
                         </div>
                       ))

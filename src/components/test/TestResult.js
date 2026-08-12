@@ -122,33 +122,33 @@ export default function TestResult({ questions, answers, onClose }) {
   const score = results.correct;
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black flex flex-col items-center p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-xl flex flex-col items-center p-6 overflow-y-auto font-sans text-white">
       
-      <div className="w-full max-w-4xl mt-12 bg-zinc-950 border border-zinc-800 rounded-[32px] p-8 shadow-2xl flex flex-col items-center">
-        <h1 className="text-5xl font-black text-white mb-4">Test Submitted</h1>
-        <p className="text-zinc-400 mb-12">Here is your performance summary</p>
+      <div className="w-full max-w-4xl mt-12 flex flex-col items-center">
+        <h1 className="text-6xl font-light tracking-wide mb-4">Test Submitted</h1>
+        <p className="text-zinc-400 mb-16 font-light tracking-wide text-lg">Here is your performance summary</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full mb-12">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col items-center justify-center">
-            <div className="text-4xl font-black text-white mb-2">{results.total}</div>
-            <div className="text-zinc-500 font-bold uppercase text-xs tracking-wider">Total</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 w-full mb-16">
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-6xl font-light text-white mb-2">{results.total}</div>
+            <div className="text-zinc-500 font-medium uppercase tracking-[0.2em]">Total</div>
           </div>
-          <div className="bg-green-500/10 border border-green-500/30 rounded-3xl p-6 flex flex-col items-center justify-center">
-            <div className="text-4xl font-black text-green-400 mb-2">{results.correct}</div>
-            <div className="text-green-500/70 font-bold uppercase text-xs tracking-wider">Correct</div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-6xl font-light text-green-400 mb-2">{results.correct}</div>
+            <div className="text-green-500/70 font-medium uppercase tracking-[0.2em]">Correct</div>
           </div>
-          <div className="bg-red-500/10 border border-red-500/30 rounded-3xl p-6 flex flex-col items-center justify-center">
-            <div className="text-4xl font-black text-red-400 mb-2">{results.wrong}</div>
-            <div className="text-red-500/70 font-bold uppercase text-xs tracking-wider">Wrong</div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-6xl font-light text-red-400 mb-2">{results.wrong}</div>
+            <div className="text-red-500/70 font-medium uppercase tracking-[0.2em]">Wrong</div>
           </div>
-          <div className="bg-zinc-800/50 border border-zinc-700 rounded-3xl p-6 flex flex-col items-center justify-center">
-            <div className="text-4xl font-black text-zinc-300 mb-2">{results.unattempted}</div>
-            <div className="text-zinc-500 font-bold uppercase text-xs tracking-wider">Unattempted</div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-6xl font-light text-zinc-500 mb-2">{results.unattempted}</div>
+            <div className="text-zinc-600 font-medium uppercase tracking-[0.2em]">Unattempted</div>
           </div>
         </div>
 
         {/* Filters */}
-        <div className="w-full mb-8 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="w-full mb-12 flex gap-8 justify-center overflow-x-auto pb-2 scrollbar-hide">
           {[
             { id: "all", label: "All Questions" },
             { id: "correct", label: "Correct" },
@@ -158,10 +158,10 @@ export default function TestResult({ questions, answers, onClose }) {
             <button
               key={f.id}
               onClick={() => { setFilter(f.id); setExpandedQuestionId(null); }}
-              className={`px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition border ${
+              className={`text-xl font-light tracking-wide whitespace-nowrap transition pb-1 ${
                 filter === f.id 
-                  ? "bg-white text-black border-white" 
-                  : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white"
+                  ? "text-white border-b border-white" 
+                  : "text-zinc-500 hover:text-zinc-300"
               }`}
             >
               {f.label}
@@ -189,50 +189,51 @@ export default function TestResult({ questions, answers, onClose }) {
               }
 
               return (
-                <div key={q.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                <div key={q.id} className="border-b border-zinc-800 transition-all duration-300">
                   {/* Header (Always Visible) */}
                   <button 
                     onClick={() => setExpandedQuestionId(isExpanded ? null : q.id)}
-                    className="w-full p-4 flex items-center justify-between gap-4 hover:bg-zinc-800/50 transition text-left"
+                    className="w-full py-6 flex items-center justify-between gap-4 hover:pl-4 transition-all text-left group"
                   >
-                    <div className="flex items-center gap-4 min-w-0">
-                      <span className="shrink-0 w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-sm font-bold text-white">
-                        {q.originalIndex + 1}
+                    <div className="flex items-center gap-6 min-w-0">
+                      <span className="text-xl font-light text-zinc-500 group-hover:text-white transition">
+                        {String(q.originalIndex + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-zinc-300 truncate max-w-xs md:max-w-md">
-                        {q.question.replace(/\\\[.*?\\\]|\\\(.*?\\\)/g, '...').slice(0, 60).trim()}...
+                      <span className="text-zinc-300 font-light truncate max-w-xs md:max-w-xl text-lg group-hover:text-white transition">
+                        {q.question.replace(/\\\[.*?\\\]|\\\(.*?\\\)/g, '...').slice(0, 80).trim()}...
                       </span>
                     </div>
-                    <div className="flex items-center gap-4 shrink-0">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${badgeStyle}`}>
+                    <div className="flex items-center gap-6 shrink-0">
+                      <span className={`text-sm font-medium tracking-widest uppercase ${badgeStyle}`}>
                         {badgeLabel}
                       </span>
-                      <svg className={`w-5 h-5 text-zinc-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg className={`w-6 h-6 text-zinc-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                   </button>
 
                   {/* Expanded Content */}
                   {isExpanded && (
-                    <div className="p-6 md:p-8 border-t border-zinc-800 bg-zinc-900/50">
-                      <div className="flex gap-2 mb-6">
-                        <span className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs font-bold">{q.type}</span>
-                        <span className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs font-bold">{q.subject}</span>
+                    <div className="py-8 pl-12 pr-4 bg-transparent">
+                      <div className="flex gap-4 mb-8">
+                        <span className="text-zinc-500 text-sm font-medium tracking-widest uppercase">{q.type}</span>
+                        <span className="text-zinc-700 text-sm">|</span>
+                        <span className="text-zinc-500 text-sm font-medium tracking-widest uppercase">{q.subject}</span>
                       </div>
                       
-                      <MathText className="text-lg text-white mb-8 leading-relaxed">{q.question}</MathText>
+                      <MathText className="text-xl text-white mb-12 leading-relaxed font-light">{q.question}</MathText>
                       
-                      <div className="grid gap-3 mb-8">
+                      <div className="grid gap-6 mb-12">
                         {q.type === "NAT" ? (
-                          <div className="flex gap-8 bg-zinc-950 border border-zinc-800 p-6 rounded-2xl">
+                          <div className="flex gap-16">
                             <div>
-                              <div className="text-zinc-500 text-xs font-bold uppercase tracking-wider mb-1">Your Answer</div>
-                              <div className={`text-xl font-black ${!q.isAttempted ? 'text-zinc-500' : q.isCorrect ? 'text-green-400' : 'text-red-400'}`}>{q.isAttempted ? q.userAns : "-"}</div>
+                              <div className="text-zinc-500 text-sm font-medium uppercase tracking-[0.2em] mb-2">Your Answer</div>
+                              <div className={`text-3xl font-light ${!q.isAttempted ? 'text-zinc-500' : q.isCorrect ? 'text-green-400' : 'text-red-400'}`}>{q.isAttempted ? q.userAns : "-"}</div>
                             </div>
                             <div>
-                              <div className="text-zinc-500 text-xs font-bold uppercase tracking-wider mb-1">Correct Answer</div>
-                              <div className="text-xl font-black text-white">{q.correctAnswerMin !== undefined ? `${q.correctAnswerMin} - ${q.correctAnswerMax}` : q.correctAnswer}</div>
+                              <div className="text-zinc-500 text-sm font-medium uppercase tracking-[0.2em] mb-2">Correct Answer</div>
+                              <div className="text-3xl font-light text-white">{q.correctAnswerMin !== undefined ? `${q.correctAnswerMin} - ${q.correctAnswerMax}` : q.correctAnswer}</div>
                             </div>
                           </div>
                         ) : (
@@ -240,20 +241,26 @@ export default function TestResult({ questions, answers, onClose }) {
                             const isUserSelected = q.type === "MSQ" ? (Array.isArray(q.userAns) && q.userAns.includes(optIndex)) : q.userAns === optIndex;
                             const isOptionCorrect = q.correctOpts.includes(optIndex);
                             
-                            let style = "border-zinc-800 bg-zinc-950 text-zinc-300";
+                            let style = "text-zinc-500";
+                            let icon = null;
                             
                             if (isOptionCorrect) {
-                              style = "border-green-500 bg-green-500/10 text-green-400";
+                              style = "text-green-400";
+                              icon = <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>;
                             } else if (isUserSelected && !isOptionCorrect) {
-                              style = "border-red-500 bg-red-500/10 text-red-400";
+                              style = "text-red-400";
+                              icon = <svg className="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>;
                             }
                             
                             return (
-                              <div key={optIndex} className={`p-4 rounded-xl border flex gap-4 items-center ${style}`}>
-                                <div className="w-8 h-8 shrink-0 rounded-full border border-current flex items-center justify-center font-bold text-sm">
-                                  {String.fromCharCode(65 + optIndex)}
+                              <div key={optIndex} className={`flex gap-6 items-start ${style}`}>
+                                <div className="text-xl font-light w-6">
+                                  {String.fromCharCode(65 + optIndex)}.
                                 </div>
-                                <MathText className="text-md">{opt}</MathText>
+                                <div className="flex-1">
+                                  <MathText className={`text-xl font-light ${isOptionCorrect ? 'text-white' : (isUserSelected ? 'text-white' : 'text-zinc-400')}`}>{opt}</MathText>
+                                </div>
+                                {icon && <div className="shrink-0">{icon}</div>}
                               </div>
                             );
                           })
@@ -261,14 +268,14 @@ export default function TestResult({ questions, answers, onClose }) {
                       </div>
 
                       {q.detailedSolution && (
-                        <div className="pt-6 border-t border-zinc-800">
-                          <h4 className="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                        <div className="pt-12 mt-12 border-t border-zinc-800">
+                          <h4 className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                             </svg>
                             Detailed Solution
                           </h4>
-                          <MathText className="text-zinc-300 leading-relaxed bg-zinc-950 p-6 rounded-2xl border border-zinc-800 text-md">
+                          <MathText className="text-zinc-300 leading-relaxed font-light text-lg">
                             {q.detailedSolution}
                           </MathText>
                         </div>
@@ -283,9 +290,12 @@ export default function TestResult({ questions, answers, onClose }) {
 
         <button 
           onClick={onClose}
-          className="px-10 py-5 rounded-3xl bg-white text-black font-black text-xl hover:bg-zinc-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          className="mt-16 text-3xl font-light tracking-widest text-zinc-500 uppercase hover:text-white transition group flex items-center gap-4"
         >
-          Return to Practice Questions
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 group-hover:-translate-x-2 transition-transform">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+          </svg>
+          Return to Practice
         </button>
       </div>
     </div>

@@ -41,47 +41,53 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 overflow-y-auto font-sans">
-      <div className="w-full max-w-2xl bg-white/[0.04] backdrop-blur-[40px] border border-white/10 rounded-[32px] p-6 md:p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] flex flex-col my-8">
+    <div className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-xl flex flex-col items-center justify-center p-6 overflow-y-auto font-sans text-zinc-100">
+      <div className="w-full max-w-4xl flex flex-col my-8 mt-16">
         
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-light tracking-wide text-white">{title}</h2>
-          <button onClick={onClose} className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+        <div className="flex items-start justify-between mb-12">
+          <div className="flex items-baseline gap-4">
+            <h2 className="text-3xl font-light tracking-wide">{title}</h2>
+            <p className="text-zinc-400 font-light tracking-wider text-xs uppercase pt-1">
+              {title === "Create Test" ? "Generate a personalized practice exam" : "Compete with others in real-time"}
+            </p>
+          </div>
+          <button onClick={onClose} className="text-zinc-500 hover:text-white transition mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-12">
           {/* Syllabus Selection */}
-          <div className="space-y-3">
-            <label className="text-sm font-light text-zinc-400 tracking-wide">Syllabus</label>
-            <div className="flex gap-4">
+          <div className="space-y-4">
+            <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Syllabus</label>
+            <div className="flex gap-6">
               <button 
                 onClick={() => setSyllabusMode("full")}
-                className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${syllabusMode === "full" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                className={`text-base font-light tracking-wide transition ${syllabusMode === "full" ? "text-white border-b border-white pb-1" : "text-zinc-500 hover:text-zinc-300 pb-1"}`}
               >
                 Full Syllabus
               </button>
               <button 
                 onClick={() => setSyllabusMode("specific")}
-                className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${syllabusMode === "specific" ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                className={`text-base font-light tracking-wide transition ${syllabusMode === "specific" ? "text-white border-b border-white pb-1" : "text-zinc-500 hover:text-zinc-300 pb-1"}`}
               >
                 Specific Chapters
               </button>
             </div>
             
             {syllabusMode === "specific" && (
-              <div className="grid grid-cols-2 gap-2 mt-3 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl max-h-48 overflow-y-auto">
+              <div className="grid grid-cols-2 gap-4 mt-6 max-h-64 overflow-y-auto scrollbar-hide">
                 {syllabus.map(subject => (
-                  <label key={subject.id} className="flex items-center gap-3 p-2 hover:bg-zinc-800 rounded-xl cursor-pointer transition">
-                    <div className={`w-5 h-5 rounded border flex items-center justify-center ${selectedChapters.includes(subject.id) ? "bg-white border-white" : "bg-zinc-950 border-zinc-700"}`}>
+                  <label key={subject.id} className="flex items-center gap-4 cursor-pointer group">
+                    <div className="relative flex items-center justify-center w-6 h-6">
+                      <div className={`absolute inset-0 border transition-all ${selectedChapters.includes(subject.id) ? "border-white bg-white" : "border-zinc-700 group-hover:border-zinc-500"}`}></div>
                       {selectedChapters.includes(subject.id) && (
-                        <svg className="w-3 h-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <svg className="w-4 h-4 text-black relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                       )}
                     </div>
-                    <span className="text-sm text-zinc-200 select-none">{subject.name}</span>
+                    <span className="text-sm text-zinc-300 font-light tracking-wide select-none group-hover:text-white transition">{subject.name}</span>
                   </label>
                 ))}
               </div>
@@ -89,49 +95,49 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
           </div>
 
           {/* Question Count & Duration */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-3">
-              <label className="text-sm font-light text-zinc-400 tracking-wide">Number of Questions</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-4">
+              <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Questions</label>
               <input 
                 type="number" 
                 value={numQuestions}
                 onChange={(e) => setNumQuestions(Number(e.target.value))}
                 min={1}
                 max={100}
-                className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-4 text-white text-lg font-light outline-none focus:border-white/30 transition"
+                className="w-full bg-transparent border-b border-zinc-700 pb-2 text-white text-xl font-light outline-none focus:border-white transition placeholder-zinc-700"
               />
             </div>
             
-            <div className="space-y-3">
-              <label className="text-sm font-light text-zinc-400 tracking-wide">Duration (Mins)</label>
-              <div className="flex gap-3">
+            <div className="space-y-4">
+              <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Duration (Mins)</label>
+              <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setDuration(Math.max(5, duration - 5))}
-                  className="flex-1 bg-zinc-900 border border-zinc-800 rounded-2xl text-white font-black text-xl hover:bg-zinc-800 transition"
-                >-5</button>
+                  className="text-zinc-500 hover:text-white transition text-xl font-light"
+                >-</button>
                 <input 
                   type="number" 
                   value={duration}
                   onChange={(e) => setDuration(Math.max(5, Number(e.target.value)))}
-                  className="w-24 shrink-0 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-2 py-4 text-center text-white text-xl font-light outline-none focus:border-white/30 transition"
+                  className="w-20 bg-transparent border-b border-zinc-700 pb-2 text-center text-white text-xl font-light outline-none focus:border-white transition"
                 />
                 <button 
                   onClick={() => setDuration(duration + 5)}
-                  className="flex-1 bg-zinc-900 border border-zinc-800 rounded-2xl text-white font-black text-xl hover:bg-zinc-800 transition"
-                >+5</button>
+                  className="text-zinc-500 hover:text-white transition text-xl font-light"
+                >+</button>
               </div>
             </div>
           </div>
 
           {/* Question Types */}
-          <div className="space-y-3">
-            <label className="text-sm font-light text-zinc-400 tracking-wide">Question Types</label>
-            <div className="flex gap-3">
+          <div className="space-y-4">
+            <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Types</label>
+            <div className="flex gap-6">
               {["MCQ", "MSQ", "NAT"].map(type => (
                 <button 
                   key={type}
                   onClick={() => handleTypeToggle(type)}
-                  className={`flex-1 py-3 px-4 rounded-2xl border font-light tracking-wide transition ${types.includes(type) ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                  className={`text-base font-light tracking-wide transition ${types.includes(type) ? "text-white border-b border-white pb-1" : "text-zinc-500 hover:text-zinc-300 pb-1"}`}
                 >
                   {type}
                 </button>
@@ -140,14 +146,14 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
           </div>
 
           {/* Years */}
-          <div className="space-y-3">
-            <label className="text-sm font-light text-zinc-400 tracking-wide">Years</label>
-            <div className="flex flex-wrap gap-2">
+          <div className="space-y-4">
+            <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Years</label>
+            <div className="flex flex-wrap gap-6">
               {["All", "Last 3", "Last 5", "Last 10", "Custom"].map(mode => (
                 <button 
                   key={mode}
                   onClick={() => setYearMode(mode)}
-                  className={`py-2 px-5 rounded-xl border text-sm font-light tracking-wide transition ${yearMode === mode ? "bg-white text-black border-white" : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-600"}`}
+                  className={`text-base font-light tracking-wide transition ${yearMode === mode ? "text-white border-b border-white pb-1" : "text-zinc-500 hover:text-zinc-300 pb-1"}`}
                 >
                   {mode}
                 </button>
@@ -155,23 +161,23 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
             </div>
             
             {yearMode === "Custom" && (
-              <div className="flex items-center gap-4 mt-3">
+              <div className="flex items-center gap-4 mt-4">
                 <input 
                   type="number" 
                   value={customYearStart}
                   onChange={(e) => setCustomYearStart(Number(e.target.value))}
                   min={2005}
                   max={2022}
-                  className="flex-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-white/30 transition text-center"
+                  className="w-24 bg-transparent border-b border-zinc-700 pb-2 text-white text-lg font-light outline-none focus:border-white transition text-center"
                 />
-                <span className="text-zinc-500 font-light tracking-wide">to</span>
+                <span className="text-zinc-500 font-light tracking-wide text-sm">to</span>
                 <input 
                   type="number" 
                   value={customYearEnd}
                   onChange={(e) => setCustomYearEnd(Number(e.target.value))}
                   min={2005}
                   max={2022}
-                  className="flex-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-white/30 transition text-center"
+                  className="w-24 bg-transparent border-b border-zinc-700 pb-2 text-white text-lg font-light outline-none focus:border-white transition text-center"
                 />
               </div>
             )}
@@ -179,13 +185,16 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
 
         </div>
 
-        <div className="mt-8 pt-6 border-t border-zinc-800">
+        <div className="mt-8 flex justify-end">
           <button 
             onClick={handleGenerate}
             disabled={types.length === 0 || (syllabusMode === "specific" && selectedChapters.length === 0) || numQuestions < 1 || duration < 5}
-            className="w-full py-4 rounded-2xl bg-white/10 backdrop-blur-md text-white font-light tracking-wide text-lg uppercase border border-white/10 hover:bg-white/20 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="text-2xl font-light tracking-widest text-white uppercase hover:text-zinc-400 transition disabled:opacity-20 disabled:cursor-not-allowed group flex items-center gap-3"
           >
-            Generate Test
+            Start
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:translate-x-1 transition-transform">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
           </button>
         </div>
 
