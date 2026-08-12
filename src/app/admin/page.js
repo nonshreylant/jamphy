@@ -34,19 +34,20 @@ export default async function AdminDashboard() {
   });
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <nav className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur sticky top-0 z-50">
+    <div className="min-h-screen bg-transparent text-white font-sans pb-24">
+      <div className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat pointer-events-none" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/bgpicdarker.png')" }} />
+      <nav className="border-b border-white/10 bg-black/40 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <AdminLogo />
-            <span className="font-bold text-xl tracking-tight text-zinc-500 hidden sm:block">Admin</span>
+            <span className="font-light text-sm tracking-widest uppercase text-zinc-500 hidden sm:block">Admin</span>
           </div>
-          <div className="flex items-center gap-4">
-            <Link href="/" className="px-4 py-2 text-sm rounded-xl border border-zinc-700 hover:bg-zinc-800 transition">
+          <div className="flex items-center gap-6">
+            <Link href="/" className="text-sm font-light tracking-widest uppercase text-zinc-400 hover:text-white transition border-b border-transparent hover:border-white pb-1">
               Back to App
             </Link>
             <form action={adminLogout}>
-              <button type="submit" className="px-4 py-2 text-sm rounded-xl bg-red-500/20 text-red-500 border border-red-500/50 hover:bg-red-500/30 transition">
+              <button type="submit" className="text-sm font-light tracking-widest uppercase text-red-400 hover:text-red-300 transition border-b border-transparent hover:border-red-300 pb-1">
                 Logout
               </button>
             </form>

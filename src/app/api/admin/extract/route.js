@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
 import { getServerSession } from "next-auth/next";
+import { cookies } from "next/headers";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export async function POST(req) {
@@ -10,8 +11,10 @@ export async function POST(req) {
     const session = await getServerSession(authOptions);
     const isGoogleAdmin = session?.user?.email === "jamphy.admin@gmail.com";
     const isPasswordAdmin = adminPassword === process.env.ADMIN_PASSWORD;
+    const adminCookie = cookies().get("admin_session");
+    const isCookieAdmin = adminCookie && adminCookie.value === "authenticated";
 
-    if (!isGoogleAdmin && !isPasswordAdmin) {
+    if (!isGoogleAdmin && !isPasswordAdmin && !isCookieAdmin) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 

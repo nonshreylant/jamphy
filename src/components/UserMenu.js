@@ -44,7 +44,7 @@ export default function UserMenu() {
   if (!mounted || status === "loading") {
     return (
       <div className="w-[38px] h-[38px] rounded-full border border-zinc-800 bg-transparent flex items-center justify-center shrink-0">
-        <div className="w-4 h-4 border-2 border-zinc-750 border-t-white rounded-full animate-spin"></div>
+        <div className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin"></div>
       </div>
     );
   }

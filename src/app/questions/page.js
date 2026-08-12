@@ -758,7 +758,7 @@ export default function IITJamPhysicsHub() {
   if (status === "loading" || !mounted) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-zinc-800 border-t-white rounded-full animate-spin"></div>
+        <div className="w-10 h-10 border border-white/20 border-t-white rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -861,7 +861,7 @@ export default function IITJamPhysicsHub() {
                   className="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-3 py-1.5 text-xs text-white outline-none focus:border-cyan-500/50 transition-colors"
                 />
                 {isSearching && (
-                  <div className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 border-2 border-zinc-500 border-t-white rounded-full animate-spin"></div>
+                  <div className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 border border-white/20 border-t-white rounded-full animate-spin"></div>
                 )}
                 
                 {showSearchDropdown && searchResults.length > 0 && (
@@ -1290,7 +1290,7 @@ export default function IITJamPhysicsHub() {
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
                   >
                     {isCopyingLink ? (
-                      <span className="w-4 h-4 border-2 border-zinc-500 border-t-zinc-200 rounded-full animate-spin" />
+                      <span className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin" />
                     ) : (
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                     )}
@@ -1303,7 +1303,7 @@ export default function IITJamPhysicsHub() {
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
                   >
                     {isSharing ? (
-                      <span className="w-4 h-4 border-2 border-zinc-500 border-t-zinc-200 rounded-full animate-spin" />
+                      <span className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin" />
                     ) : (
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
                     )}

@@ -27,8 +27,7 @@ export default function AdminLogin() {
       });
 
       if (res.ok) {
-        router.push("/admin");
-        router.refresh();
+        window.location.href = "/admin";
       } else {
         const data = await res.json();
         setError(data.error || "Invalid credentials");
@@ -41,8 +40,9 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
-      <div className="w-full max-w-md p-8 rounded-3xl border border-zinc-800 bg-zinc-950">
+    <div className="min-h-screen bg-transparent text-white flex items-center justify-center p-4 font-sans relative">
+      <div className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat opacity-50" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/bgpicdarker.png')" }} />
+      <div className="w-full max-w-md p-8 bg-black/40 border border-white/5 backdrop-blur-xl">
         <div className="flex justify-center mb-6">
           <Link
             href="/"
@@ -60,8 +60,8 @@ export default function AdminLogin() {
             />
           </Link>
         </div>
-        <h1 className="text-3xl font-black mb-2 text-center">Admin Login</h1>
-        <p className="text-zinc-500 text-center mb-8">Enter your credentials to access the dashboard</p>
+        <h1 className="text-2xl font-light tracking-widest uppercase mb-2 text-center">Admin Login</h1>
+        <p className="text-zinc-500 text-xs font-light text-center mb-8">AUTHENTICATE TO ACCESS DASHBOARD</p>
 
         {error && (
           <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-4 rounded-xl mb-6 text-sm">
@@ -69,34 +69,36 @@ export default function AdminLogin() {
           </div>
         )}
 
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-zinc-400 mb-2">Username</label>
+            <label className="block text-xs font-light tracking-widest uppercase text-zinc-500 mb-2">Username</label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white outline-none focus:border-zinc-500 transition"
+              className="w-full bg-transparent border-b border-zinc-800 px-4 py-2 text-white outline-none focus:border-white transition-colors font-light"
               required
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-zinc-400 mb-2">Password</label>
+            <label className="block text-xs font-light tracking-widest uppercase text-zinc-500 mb-2">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 text-white outline-none focus:border-zinc-500 transition"
+              className="w-full bg-transparent border-b border-zinc-800 px-4 py-2 text-white outline-none focus:border-white transition-colors font-light"
               required
             />
           </div>
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full bg-white text-black font-bold py-3 rounded-xl mt-4 disabled:opacity-50 transition hover:bg-zinc-200"
-          >
-            {isLoading ? "Signing in..." : "Sign In"}
-          </button>
+          <div className="pt-4 border-t border-white/5">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full text-sm font-light tracking-widest uppercase text-zinc-300 hover:text-white transition border-b border-transparent hover:border-white pb-1 disabled:opacity-50"
+            >
+              {isLoading ? "Signing in..." : "Sign In"}
+            </button>
+          </div>
 
           <div className="mt-6 text-center">
             <Link href="/" className="text-zinc-500 hover:text-white transition text-sm">

@@ -33,7 +33,7 @@ export default function ProfilePage() {
   if (status === "loading" || (status === "authenticated" && isLoading)) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-zinc-800 border-t-white rounded-full animate-spin"></div>
+        <div className="w-10 h-10 border border-white/20 border-t-white rounded-full animate-spin"></div>
       </div>
     );
   }

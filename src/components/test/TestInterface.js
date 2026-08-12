@@ -150,7 +150,7 @@ export default function TestInterface({ questions, durationMins, onSubmit }) {
   if (!activeQuestion) {
     return (
       <div className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-3xl flex flex-col items-center justify-center h-screen text-white">
-        <div className="w-8 h-8 border-4 border-white/10 border-t-cyan-500 rounded-full animate-spin mb-4"></div>
+        <div className="w-8 h-8 border border-white/20 border-t-white rounded-full animate-spin mb-4"></div>
         <p className="text-zinc-400 font-light tracking-wide">Loading question...</p>
       </div>
     );

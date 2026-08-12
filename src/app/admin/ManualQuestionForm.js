@@ -97,7 +97,7 @@ export default function ManualQuestionForm({ adminPassword, onSuccess }) {
   };
 
   return (
-    <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 md:p-8 max-w-5xl mx-auto">
+    <div className="border border-white/5 bg-black/20 backdrop-blur-xl p-6 md:p-8 max-w-5xl mx-auto">
       <h2 className="text-2xl font-black text-white mb-6">Add New Question Manually</h2>
       
       {message && (

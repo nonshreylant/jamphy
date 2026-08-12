@@ -406,28 +406,6 @@ export default function AdminTabs({ reports, users }) {
 
   const { data: session } = useSession();
   const isGoogleAdmin = session?.user?.email === "jamphy.admin@gmail.com";
-  const displayAuthenticated = isAuthenticated || isGoogleAdmin;
-
-  if (!displayAuthenticated) {
-    return (
-      <div className="flex items-center justify-center p-6 mt-16">
-        <form onSubmit={handleLogin} className="bg-zinc-950 border border-zinc-800 p-8 rounded-3xl w-full max-w-md">
-          <h1 className="text-3xl font-black text-white mb-6 text-center">Admin Access</h1>
-          <input 
-            type="password" 
-            placeholder="Enter Admin Password" 
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            className="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white outline-none mb-4 focus:border-zinc-500"
-          />
-          <button type="submit" className="w-full bg-white text-black font-bold py-3 rounded-xl hover:bg-zinc-200 transition">
-            Login
-          </button>
-        </form>
-      </div>
-    );
-  }
-
   return (
     <div className="space-y-8">
       {/* Tab Navigation */}
@@ -455,7 +433,7 @@ export default function AdminTabs({ reports, users }) {
             </div>
 
             {reports.length === 0 ? (
-              <div className="text-zinc-500 bg-zinc-950 border border-zinc-800 rounded-3xl p-8 text-center">
+              <div className="text-zinc-500 border border-white/5 bg-black/20 backdrop-blur-xl p-8 text-center">
                 No reports yet. Everything looks good!
               </div>
             ) : (
@@ -465,7 +443,7 @@ export default function AdminTabs({ reports, users }) {
                   const declineAction = updateReportStatus.bind(null, report.id, "DECLINED");
 
                   return (
-                    <div key={report.id} className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6">
+                    <div key={report.id} className="border border-white/5 bg-black/20 backdrop-blur-xl p-6">
                       <div className="flex justify-between items-start mb-4">
                         <div className="flex items-center gap-3">
                           <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm font-bold">
@@ -555,10 +533,10 @@ export default function AdminTabs({ reports, users }) {
 
           {isLoadingQuestions ? (
             <div className="flex justify-center py-12">
-              <div className="w-8 h-8 border-4 border-zinc-800 border-t-white rounded-full animate-spin"></div>
+              <div className="w-8 h-8 border border-white/20 border-t-white rounded-full animate-spin"></div>
             </div>
           ) : filteredQuestions.length === 0 ? (
-            <div className="text-zinc-500 bg-zinc-950 border border-zinc-800 rounded-3xl p-8 text-center">
+            <div className="text-zinc-500 border border-white/5 bg-black/20 backdrop-blur-xl p-8 text-center">
               No questions found.
             </div>
           ) : (
@@ -566,7 +544,7 @@ export default function AdminTabs({ reports, users }) {
               {filteredQuestions.map(q => {
                 const isExpanded = expandedQuestionId === q.id;
                 return (
-                  <div key={q.id} className="bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden transition-all duration-300">
+                  <div key={q.id} className="border border-white/5 bg-black/20 backdrop-blur-xl overflow-hidden transition-all duration-300">
                     <div 
                       onClick={() => handleToggleQuestion(q)}
                       className="p-6 flex justify-between items-center cursor-pointer hover:bg-zinc-900/40 transition select-none"
@@ -652,7 +630,7 @@ export default function AdminTabs({ reports, users }) {
 
                           {isLoadingComments ? (
                             <div className="flex justify-center py-6">
-                              <div className="w-6 h-6 border-2 border-zinc-800 border-t-white rounded-full animate-spin"></div>
+                              <div className="w-6 h-6 border border-white/20 border-t-white rounded-full animate-spin"></div>
                             </div>
                           ) : activeComments.length === 0 ? (
                             <p className="text-zinc-500 text-sm">No comments on this question yet.</p>
@@ -715,7 +693,7 @@ export default function AdminTabs({ reports, users }) {
           )}
 
           <div 
-            className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 max-w-3xl focus:outline-none focus:border-zinc-500"
+            className="border border-white/5 bg-black/20 backdrop-blur-xl p-8 max-w-3xl focus:outline-none focus:border-zinc-500"
             tabIndex={0}
             onPaste={handleMainContainerPaste}
           >
@@ -762,7 +740,7 @@ export default function AdminTabs({ reports, users }) {
 
           {/* Review Table */}
           {extractedQuestions.length > 0 && (
-            <div className="bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden">
+            <div className="border border-white/5 bg-black/20 backdrop-blur-xl overflow-hidden">
               <div className="p-6 border-b border-zinc-800 flex justify-between items-center bg-zinc-900/50">
                 <h2 className="text-xl font-bold">Review Extracted Questions</h2>
                 <button 

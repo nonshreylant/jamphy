@@ -36,7 +36,7 @@ export default function FriendsPage() {
   if (status === "loading" || isLoading) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-zinc-800 border-t-cyan-500 rounded-full animate-spin"></div>
+        <div className="w-8 h-8 border border-white/20 border-t-white rounded-full animate-spin"></div>
       </div>
     );
   }
