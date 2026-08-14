@@ -8,8 +8,8 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
   const [types, setTypes] = useState(["MCQ", "MSQ", "NAT"]);
   const [duration, setDuration] = useState(5);
   const [yearMode, setYearMode] = useState("All");
-  const [customYearStart, setCustomYearStart] = useState(2015);
-  const [customYearEnd, setCustomYearEnd] = useState(2022);
+  const [customYearStart, setCustomYearStart] = useState(2018);
+  const [customYearEnd, setCustomYearEnd] = useState(2026);
 
   const handleChapterToggle = (chapterId) => {
     if (selectedChapters.includes(chapterId)) {
@@ -166,8 +166,8 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
                   type="number" 
                   value={customYearStart}
                   onChange={(e) => setCustomYearStart(Number(e.target.value))}
-                  min={2005}
-                  max={2022}
+                  min={2018}
+                  max={2026}
                   className="w-24 bg-transparent border-b border-zinc-700 pb-2 text-white text-lg font-light outline-none focus:border-white transition text-center"
                 />
                 <span className="text-zinc-500 font-light tracking-wide text-sm">to</span>
@@ -175,8 +175,8 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
                   type="number" 
                   value={customYearEnd}
                   onChange={(e) => setCustomYearEnd(Number(e.target.value))}
-                  min={2005}
-                  max={2022}
+                  min={2018}
+                  max={2026}
                   className="w-24 bg-transparent border-b border-zinc-700 pb-2 text-white text-lg font-light outline-none focus:border-white transition text-center"
                 />
               </div>
