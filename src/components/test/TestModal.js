@@ -149,7 +149,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
           <div className="space-y-4">
             <label className="text-xs font-medium text-zinc-500 tracking-[0.2em] uppercase">Years</label>
             <div className="flex flex-wrap gap-6">
-              {["All", "Last 3", "Last 5", "Last 10", "Custom"].map(mode => (
+              {["All", "Last 3", "Last 5", "Custom"].map(mode => (
                 <button 
                   key={mode}
                   onClick={() => setYearMode(mode)}

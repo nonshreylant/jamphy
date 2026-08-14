@@ -32,8 +32,6 @@ export async function POST(req) {
           if (q.year < 2024) return false;
         } else if (config.yearMode === "Last 5") {
           if (q.year < 2022) return false;
-        } else if (config.yearMode === "Last 10") {
-          if (q.year < 2017) return false;
         } else if (config.yearMode === "Custom") {
           if (q.year < config.customYearStart || q.year > config.customYearEnd) return false;
         }

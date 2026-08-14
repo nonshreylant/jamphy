@@ -48,8 +48,6 @@ export default function TestManager({ allQuestions, onClose }) {
           if (q.year < 2024) return false; // Assuming 2026 is latest
         } else if (newConfig.yearMode === "Last 5") {
           if (q.year < 2022) return false;
-        } else if (newConfig.yearMode === "Last 10") {
-          if (q.year < 2017) return false;
         } else if (newConfig.yearMode === "Custom") {
           if (q.year < newConfig.customYearStart || q.year > newConfig.customYearEnd) return false;
         }
