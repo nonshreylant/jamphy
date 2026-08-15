@@ -80,7 +80,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
             {syllabusMode === "specific" && (
               <div className="grid grid-cols-2 gap-4 mt-6 max-h-64 overflow-y-auto scrollbar-hide">
                 {syllabus.map(subject => (
-                  <label key={subject.id} className="flex items-center gap-4 cursor-pointer group">
+                  <div key={subject.id} onClick={() => handleChapterToggle(subject.id)} className="flex items-center gap-4 cursor-pointer group">
                     <div className="relative flex items-center justify-center w-6 h-6">
                       <div className={`absolute inset-0 border transition-all ${selectedChapters.includes(subject.id) ? "border-white bg-white" : "border-zinc-700 group-hover:border-zinc-500"}`}></div>
                       {selectedChapters.includes(subject.id) && (
@@ -88,7 +88,7 @@ export default function TestModal({ onClose, onGenerate, title = "Create Test" }
                       )}
                     </div>
                     <span className="text-sm text-zinc-300 font-light tracking-wide select-none group-hover:text-white transition">{subject.name}</span>
-                  </label>
+                  </div>
                 ))}
               </div>
             )}

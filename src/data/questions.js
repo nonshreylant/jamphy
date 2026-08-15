@@ -66,7 +66,7 @@ According to the mass action law:
   {
     id: 3,
     year: 2026,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
 
     question: String.raw`
@@ -98,7 +98,7 @@ Furthermore, for it to be an ellipse and not a circle, the amplitudes must not b
   {
     id: 4,
     year: 2026,
-    subject: "Boolean Algebra",
+    subject: "Logic Gates",
     type: "MCQ",
 
     question: String.raw`
@@ -318,7 +318,7 @@ If the path shown in the figure is a closed loop, the start and end points are t
   {
     id: 10,
     year: 2026,
-    subject: "Linear Algebra",
+    subject: "Matrices & Determinants",
     type: "MCQ",
 
     question: String.raw`
@@ -360,7 +360,7 @@ Using the property of determinants for inverse matrices:
   {
     id: 11,
     year: 2026,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -388,7 +388,7 @@ By applying Kirchhoff's Voltage and Current Laws to find the nodal voltages acro
   {
     id: 12,
     year: 2026,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -424,7 +424,7 @@ Which of the following statements is correct?
   {
     id: 13,
     year: 2026,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -529,7 +529,7 @@ After reflection, it continues along another diagonal path, ensuring the constan
   {
     id: 16,
     year: 2026,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
 
     question: String.raw`
@@ -560,7 +560,7 @@ Thus, the ray experiences total internal reflection at the \(2^{nd}\) to \(3^{rd
   {
     id: 17,
     year: 2026,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -594,7 +594,7 @@ Packing fraction = \(\frac{\frac{8}{3}\pi R^3}{\frac{64R^3}{3\sqrt{3}}} = \frac{
   {
     id: 18,
     year: 2026,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -669,7 +669,7 @@ Rounded to the nearest integer, this is \(5\).`,
   {
     id: 20,
     year: 2026,
-    subject: "Electromagnetism",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -707,7 +707,7 @@ The ratio of magnetic moment to angular momentum is:
   {
     id: 21,
     year: 2026,
-    subject: "Oscillations",
+    subject: "Damped & Forced Oscillations",
     type: "MCQ",
 
     question: String.raw`
@@ -746,7 +746,7 @@ Rounded to the nearest integer, it is \(1\) cm.`,
   {
     id: 22,
     year: 2026,
-    subject: "Circular Motion",
+    subject: "Central Force Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -784,7 +784,7 @@ Using the half-angle identity \(1 - \cos\theta = 2\sin^2(\frac{\theta}{2})\):
   {
     id: 23,
     year: 2026,
-    subject: "LCR Circuits",
+    subject: "DC & AC Circuits",
     type: "MCQ",
 
     question: String.raw`
@@ -869,7 +869,7 @@ This means that the coefficients \(a_0\) and \(a_n\) will be identically zero, a
   {
     id: 25,
     year: 2026,
-    subject: "Taylor Series",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -907,7 +907,7 @@ The coefficient of the \(x\) term is \(-3\).`,
   {
     id: 26,
     year: 2026,
-    subject: "Linear Algebra",
+    subject: "Matrices & Determinants",
     type: "MCQ",
 
     question: String.raw`
@@ -955,7 +955,7 @@ Using the quadratic formula to solve for \(\lambda\):
   {
     id: 27,
     year: 2026,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -997,7 +997,7 @@ The resultant vector is \(y\hat{i} + x\hat{j}\), which has no \(\hat{k}\) compon
   {
     id: 28,
     year: 2026,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
 
     question: String.raw`
@@ -1049,7 +1049,7 @@ The fringe width (distance between adjacent bright fringes, \(\Delta m = 1\)) is
   {
     id: 29,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -1109,7 +1109,7 @@ Using the thermodynamic sign convention where work done ON the system is positiv
   {
     id: 30,
     year: 2026,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -1144,7 +1144,7 @@ Average power is work done per unit time:
   {
     id: 31,
     year: 2026,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -1224,7 +1224,7 @@ Comparing with the options, Option C and Option D match these derivations exactl
   {
     id: 32,
     year: 2026,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MSQ",
 
     question: String.raw`
@@ -1260,7 +1260,7 @@ Without the exact resistor values from the image, we rely on the options. Based 
   {
     id: 33,
     year: 2026,
-    subject: "Work Power Energy",
+    subject: "Conservation Laws",
     type: "MSQ",
 
     question: String.raw`
@@ -1310,7 +1310,7 @@ Therefore, options stating that \(\hat{e}_r\) and \(\hat{e}_\theta\) are not con
   {
     id: 34,
     year: 2026,
-    subject: "Relativity",
+    subject: "Special Relativity",
     type: "MSQ",
 
     question: String.raw`
@@ -1357,7 +1357,7 @@ Since \(\Delta s^2 > 0\), the interval is strictly positive, which means the eve
   {
     id: 35,
     year: 2026,
-    subject: "Relativity",
+    subject: "Special Relativity",
     type: "MSQ",
 
     question: String.raw`
@@ -1412,7 +1412,7 @@ Therefore, the plot will consist of two separate hyperbolic branches that do not
   {
     id: 36,
     year: 2026,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MSQ",
 
     question: String.raw`
@@ -1452,7 +1452,7 @@ By Kirchhoff's loop rule, the max potential difference across the inductor must 
   {
     id: 37,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -1485,7 +1485,7 @@ Thus, the only unconditionally correct statement is that the internal energy dep
   {
     id: 38,
     year: 2026,
-    subject: "Electromagnetism",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MSQ",
 
     question: String.raw`
@@ -1564,7 +1564,7 @@ Thus, \(V(r) = \frac{Q}{4\pi\varepsilon_0} (\frac{1}{r} - \frac{1}{2R})\), which
   {
     id: 40,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -1596,7 +1596,7 @@ Which of the following statements is/are true for a first order phase transition
   {
     id: 41,
     year: 2026,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "NAT",
 
     question: String.raw`
@@ -1630,7 +1630,7 @@ Rounded to two decimal places, this is \(1.05\).`,
   {
     id: 42,
     year: 2026,
-    subject: "Electromagnetism",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -1667,7 +1667,7 @@ Rounded to one decimal place, it is \(274.4\).`,
   {
     id: 43,
     year: 2026,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -1727,7 +1727,7 @@ Rounding to the nearest integer, \(n = 6\).`,
   {
     id: 45,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
     question:
       "One mole of an ideal gas undergoes a reversible isothermal expansion from $V_i = 1.5 \\times 10^{-5}\\ m^3$ to $V_f = 1.6 \\times 10^{-5}m^3$ at a temperature $273\\ K$. The amount of heat transfer during the process is $\\alpha R$, where $R$ is the gas constant. The value of $\\alpha$ is ____.\n\n(Rounded off to one decimal place)",
@@ -1807,7 +1807,7 @@ Rounding to the nearest integer gives \(711\) J.`,
   {
     id: 48,
     year: 2026,
-    subject: "Modern Physics",
+    subject: "Quantum Phenomena",
     type: "NAT",
     question:
       "Light of wavelength $500\\ nm$ is incident on the surface of Na metal for photoelectric emission. The corresponding threshold wavelength is $600\\ nm$. The maximum kinetic energy of the emitted electron, in $eV$, is ____.\n\n(Rounded off to two decimal places)\n\n[Use Planck’s constant $h = 6.625 \\times 10^{-34}\\ J\\ s$, speed of light $c = 3 \\times 10^8\\ m/s$, charge of electron $e = 1.6 \\times 10^{-19}\\ C$]",
@@ -1835,7 +1835,7 @@ Rounded to two decimal places, this is \(0.41\).`,
   {
     id: 49,
     year: 2026,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "NAT",
     question:
       "The first order Bragg peak for $(100)$ plane of a material with simple cubic structure is measured using an X-ray of wavelength $1\\text{Å}$. If the lattice constant is $5\\text{Å}$ then the Bragg peak is observed at an angle, in degrees, ____.\n\n(Rounded off to two decimal places)",
@@ -1863,7 +1863,7 @@ Rounded to two decimal places, the angle is \(5.74^\circ\).`,
   {
     id: 50,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
     question:
       "Consider an ensemble of hydrogen gas. The temperature, in $K$, at which the $rms$ speed of the hydrogen molecule is twice the $rms$ speed of the molecule at $300\\ K$ is ________.\n\n(Answer in integer)",
@@ -1889,7 +1889,7 @@ Squaring both sides:
   {
     id: 51,
     year: 2026,
-    subject: "Work Power Energy",
+    subject: "Conservation Laws",
     type: "NAT",
     question:
       "A particle of mass $m$ undergoes periodic motion in one-dimension with its total energy given as $E = \\frac{1}{2}m\\dot{x}^2 + \\frac{1}{4}kx^4$, where $k$ is a positive constant and $\\dot{x}=\\frac{dx}{dt}$. Assuming that $E$ is conserved, the time period $T$ has the relation $T \\propto E^{-1/n}$. The value of $n$ is ________.\n\n(Answer in integer)",
@@ -1910,7 +1910,7 @@ Comparing the exponents, we have \(-1/4 = -1/n\), which implies \(n = 4\).`,
   {
     id: 52,
     year: 2026,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
     question:
       "A spacecraft is placed $200\\ km$ above Earth in a circular orbit. The minimum change in the speed required to place the spacecraft in a parabolic orbit, in $km/s$, is ______.\n\n(Rounded off to one decimal place)\n\n[Use $G = 6.67 \\times 10^{-11}Nm^2/kg^2$, mass of Earth $= 6 \\times 10^{24}\\ kg$, radius of Earth $= 6400\\ km$]",
@@ -1936,7 +1936,7 @@ Rounded to one decimal place, it is \(3.2\) km/s.`,
   {
     id: 53,
     year: 2026,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
     question:
       "Consider a light source having a spectral linewidth of $10^{10}\\ Hz$, used in a Michelson interferometer. The mirrors $M_1$ and $M_2$ are equidistant from the beam-splitter of negligible thickness as shown in the figure. The minimum distance $d_2$ that the mirror $M_1$ is to be moved for the interference pattern to completely disappear, in $cm$, is ____.\n\n(Rounded off to one decimal place)\n\n[Use speed of light to be $3 \\times 10^8\\ m/s$]",
@@ -1989,7 +1989,7 @@ Rounded to three decimal places, \(\frac{v}{c} = 0.994\).`,
   {
     id: 55,
     year: 2026,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
     question:
       "On the surface of a thin water film of refractive index $1.33$, two light beams of wavelength $\\lambda_1 = 0.64\\ \\mu m$ and $\\lambda_2 = 0.40\\ \\mu m$ are incident at an angle of $30^\\circ$. The light of wavelength $\\lambda_1$ exhibits maximum reflection, but that of wavelength $\\lambda_2$ is not reflected at all. The minimum thickness of the water film, in $\\mu m$, is ______ .\n\n(Rounded off to two decimal places)\n\n[Assume refractive index is independent of wavelength]",
@@ -2095,7 +2095,7 @@ Now evaluate the dot product:
   {
     id: 59,
     year: 2026,
-    subject: "Oscillations",
+    subject: "Damped & Forced Oscillations",
     type: "NAT",
     question:
       "Consider a simple pendulum of length $l$ and time period $T$. In a laboratory experiment, the time for $100$ oscillations is measured to be $80\\ s$ using a stop-watch with least count $1\\ s$. The gravitational constant is known with a percentage error of $2.5\\%$.\n\nThe percentage error in the measured length of the pendulum, in %, is ____.\n\n(Answer in integer)",
@@ -2149,7 +2149,7 @@ The value is \(0.75\).`,
   {
     id: 1,
     year: 2025,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
     question:
       "Consider a volume $V$ enclosed by a closed surface $S$ having unit surface normal $\\hat{n}$. For $\\mathbf{r}=x\\hat{i}+y\\hat{j}+z\\hat{k}$, the value of the surface integral $$\\frac{1}{9}\\oiint \\mathbf{r}\\cdot\\hat{n}\\ dS$$ is",
@@ -2178,7 +2178,7 @@ The expression given in the question includes a factor of \(\frac{1}{9}\):
   {
     id: 2,
     year: 2025,
-    subject: "Work Power Energy",
+    subject: "Conservation Laws",
     type: "MCQ",
     question:
       "Two point-particles having masses $m_1$ and $m_2$ approach each other in perpendicular directions with speeds $v_1$ and $v_2$, respectively, as shown in the figure below. After an elastic collision, they move away from each other in perpendicular directions with speeds $v_1'$ and $v_2'$, respectively. The ratio $\\dfrac{v_2'}{v_1'}$ is",
@@ -2217,7 +2217,7 @@ The ratio is:
   {
     id: 3,
     year: 2025,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
     question:
       "Which one of the following figures represents the vector field $\\mathbf{A} = y\\hat{i}$?\n\n($\\hat{i}$ is the unit vector along the $x$-direction)",
@@ -2250,7 +2250,7 @@ The figure that accurately represents arrows parallel to the x-axis, pointing ri
   {
     id: 4,
     year: 2025,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
     question:
       "Two parallel light rays ① and ② are incident from air on a system consisting of media P, Q, and air, as shown in the figure below. The incident angle is $45^\\circ$. Ray ① passes through medium P, air and medium Q and ray ② passes through media P and Q before leaving the system. After passing through the system, the angular deviation (in radians) between the two rays is",
@@ -2387,7 +2387,7 @@ The plot showing \(E=0\), a sudden spike and decay, followed by another spike an
   {
     id: 8,
     year: 2025,
-    subject: "Modern Physics",
+    subject: "Quantum Phenomena",
     type: "MCQ",
     question:
       "Consider radioactive decays $A \\to B$ with half-life $(T_{1/2})_A$ and $B \\to C$ with half-life $(T_{1/2})_B$. At any time $t$, the number of nuclides of $B$ is given by\n\n$$(N_B)_t = \\frac{\\lambda_A}{\\lambda_B-\\lambda_A}(N_A)_0\\left(e^{-\\lambda_A t}-e^{-\\lambda_B t}\\right),$$\n\nwhere $(N_A)_0$ is the number of nuclides of $A$ at $t=0$. The decay constants of $A$ and $B$ are $\\lambda_A$ and $\\lambda_B$, respectively.\n\nIf $(T_{1/2})_B < (T_{1/2})_A$, then the ratio $\\dfrac{(N_B)_t}{(N_A)_t}$ at time $t \\gg (T_{1/2})_A$ is\n\n[$(N_A)_t$ is the number of nuclides of $A$ at time $t$]",
@@ -2487,7 +2487,7 @@ The graph showing a constant negative step function correctly represents this ou
   {
     id: 11,
     year: 2025,
-    subject: "LCR Circuits",
+    subject: "DC & AC Circuits",
     type: "MCQ",
     question:
       "In the circuit given below, the frequency of the input voltage $V_{IN}$ is $\\omega = 10^4\\ \\text{rad/s}$. The output voltage $V_{AB}$ leads $V_{IN}$ by",
@@ -2543,7 +2543,7 @@ Evaluate the derivative at \(t = 0\):
   {
     id: 13,
     year: 2025,
-    subject: "Linear Algebra",
+    subject: "Matrices & Determinants",
     type: "MCQ",
     question:
       "If the system of linear equations\n\n$$x + my + az = 0$$\n$$2x + ay + mz = 0$$\n$$ax + 2y - z = 0$$\n\nwith $m$ and $a$ as non-zero constants, admits a non-trivial solution, then which one of the following conditions is correct?",
@@ -2612,7 +2612,7 @@ Therefore, \(n=4\) is a valid solution.`,
   {
     id: 15,
     year: 2025,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
     question:
       "In Cartesian coordinates, consider the functions $u(x,y)=\\dfrac{1}{2}(x^2-y^2)$ and $v(x,y)=xy$. If $(r,\\theta)$ are the polar coordinates, the Jacobian determinant\n\n$$\\left|\\dfrac{\\partial(u,v)}{\\partial(r,\\theta)}\\right|$$\n\nis",
@@ -2644,7 +2644,7 @@ Step 3: Multiply them together.
   {
     id: 16,
     year: 2025,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "MCQ",
     question:
       "Three particles of equal mass $M$, interacting via gravity, lie on the vertices of an equilateral triangle of side $d$, as shown in the figure below. The whole system is rotating with an angular velocity $\\omega$ about an axis perpendicular to the plane of the system and passing through the center of mass. The value of $\\omega$, for which the distance between the masses remains $d$, is\n\n($G$ is the universal gravitational constant)",
@@ -2675,7 +2675,7 @@ Equating the forces:
   {
     id: 17,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
     question:
       "Two masses, $M_1$ and $M_2$, are connected through a massless spring of spring constant $k$, as shown in the figure below. The mass $M_1$ is at rest against a rigid wall. Both $M_1$ and $M_2$ are on a frictionless surface. The mass $M_2$ is pushed towards $M_1$ by a distance $x$ from its equilibrium position and then released. After $M_1$ leaves the wall, the speed of the center of mass of the composite system is",
@@ -2707,7 +2707,7 @@ The speed of the center of mass is the total momentum divided by the total mass:
   {
     id: 18,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
     question:
       "One end of a long chain is lifted vertically from flat ground to a height $H$ with constant speed $v$ by a force of magnitude $F$. Assume that the length of the chain is greater than $H$ and that it has a uniform mass per unit length $\\rho$. The magnitude of the force $F$ at height $H$ is",
@@ -2737,7 +2737,7 @@ The total applied force \(F\) must provide both the lift for the weight and the 
   {
     id: 19,
     year: 2025,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
     question:
       "For a two-slit Fraunhofer diffraction, each slit is $0.1\\,\\text{mm}$ wide and separation between the two slits is $0.8\\,\\text{mm}$. The total number of interference minima between the first diffraction minima on both sides of the central maxima is",
@@ -2809,7 +2809,7 @@ This equation is of the form \(x = k y^2 + C\), which represents the equation of
   {
     id: 21,
     year: 2025,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
     question:
       "An unpolarized light ray passing through air (refractive index $n_a=1$) is incident on a glass slab (refractive index $n_g=\\sqrt{3}$) at an angle of $60^\\circ$, as shown in the figure below. The amplitude of the in-plane $(x-y)$ electric field component of the incident light is $4\\ \\text{V/m}$ and amplitude of the out of plane $(z)$ electric field component is $3\\ \\text{V/m}$. After passing through the glass slab, the electric field amplitude (in V/m) of the light is",
@@ -2836,7 +2836,7 @@ Its amplitude remains exactly \(4\) V/m.`,
   {
     id: 22,
     year: 2025,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
     question:
       "Consider a slowly charging parallel plate capacitor (distance between the plates is $d$) having circular plates each with an area $A$, as shown in the figure below. An electric field of magnitude $E = E_0\\sin(\\omega t)$ exists between the plates while charging. The associated magnitude of the magnetic field $B$ at the periphery (outer edge) of the capacitor is (Neglect fringe effects)",
@@ -2870,7 +2870,7 @@ Substitute \(R\):
   {
     id: 23,
     year: 2025,
-    subject: "Electromagnetism",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
     question:
       "A surface current density $K = ae^{-y}$ exists on a thin strip of width $b$, as shown in the figure below. The associated surface current is ($a$ is a constant of appropriate dimensions)",
@@ -2903,7 +2903,7 @@ This represents the total associated surface current flowing along the strip.`,
   {
     id: 24,
     year: 2025,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
     question:
       "For an electromagnetic wave, consider an electric field $\\mathbf{E}=E_0 e^{-i[a(x+y)-\\omega t]}\\hat{k}$. The corresponding magnetic field $\\mathbf{B}$ is ($E_0$, $a$, $\\omega$ are constants of appropriate dimensions and $c$ is the speed of light)",
@@ -2939,7 +2939,7 @@ Substitute \(a = \frac{\omega}{c\sqrt{2}}\):
   {
     id: 25,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
     question:
       "Consider Maxwell’s relation $\\left(\\frac{\\partial S}{\\partial V}\\right)_T = \\left(\\frac{\\partial P}{\\partial T}\\right)_V$. The equation of state of a thermodynamic system is given as $P = \\frac{AT}{V^2} + \\frac{BT^3}{V}$, where $A$ and $B$ are constants of appropriate dimensions. Then $\\left(\\frac{\\partial C_V}{\\partial V}\\right)_T$ of the system varies with temperature as ($C_V$ is the heat capacity at constant volume)",
@@ -3053,7 +3053,7 @@ Substitute back into the Schrödinger equation and solve for \(V(x)\):
   {
     id: 28,
     year: 2025,
-    subject: "Relativity",
+    subject: "Special Relativity",
     type: "MCQ",
     question:
       "Two non-relativistic particles with masses $m_1$ and $m_2$ move with momenta $p_1$ and $p_2$, respectively, in an inertial frame $S$. In another inertial frame $S'$, moving with a constant speed with respect to $S$, the same particles are observed to have momenta $p_1'$ and $p_2'$, respectively. Galilean invariance implies that",
@@ -3125,7 +3125,7 @@ Thus, the difference is directly proportional to \((Z^2 - N^2)\).`,
   {
     id: 30,
     year: 2025,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -3185,7 +3185,7 @@ Since \(B_z = -2by\), its derivative with respect to \(y\) is \(-2b\), and with 
   {
     id: 31,
     year: 2025,
-    subject: "Boolean Algebra",
+    subject: "Logic Gates",
     type: "MSQ",
     question:
       "In the logic circuit shown below, for which of the following combination(s) of inputs $P$ and $Q$, the output $Y$ will be $0$?",
@@ -3210,7 +3210,7 @@ Thus, the correct combination is \(P=1, Q=1\).`,
   {
     id: 32,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MSQ",
     question:
       "Two particles of masses $m_1$ and $m_2$, interacting via gravity, rotate in circular orbits about their common center of mass with the same angular velocity $\\omega$. For masses $m_1$ and $m_2$, respectively, $r_1$ and $r_2$ are the constant distances from the center of mass, $L_1$ and $L_2$ are the magnitudes of the angular momenta about the center of mass, and $K_1$ and $K_2$ are the kinetic energies. Which of the following is(are) correct? ($G$ is the universal gravitational constant)",
@@ -3250,7 +3250,7 @@ Using \(r_1 = \frac{m_2}{m_1+m_2}(r_1+r_2)\), we get Kepler's Third Law:
   {
     id: 33,
     year: 2025,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MSQ",
     question:
       "Which of these cubic lattice plane pairs is(are) perpendicular to each other?",
@@ -3284,7 +3284,7 @@ Option D: \((112)\) and \((220)\)
   {
     id: 34,
     year: 2025,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MSQ",
 
     question: String.raw`
@@ -3325,7 +3325,7 @@ This is the equation of a straight line (\(y = mx\)) passing through the origin,
   {
     id: 35,
     year: 2025,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -3364,7 +3364,7 @@ This is a function of \((ax+bt)\), which can be written as \(a(x + \frac{b}{a}t)
   {
     id: 36,
     year: 2025,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MSQ",
 
     question: String.raw`
@@ -3404,7 +3404,7 @@ Inside the sphere (\(r=0.5R\)), the charge density changes as the sphere expands
   {
     id: 37,
     year: 2025,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MSQ",
 
     question: String.raw`
@@ -3459,7 +3459,7 @@ Therefore, the relation \(\nabla \cdot \mathbf{D} = \rho_f + \rho_b\) is incorre
   {
     id: 38,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -3529,7 +3529,7 @@ If \(G_2\) and \(G_3\) are in thermal equilibrium, their temperatures must be eq
   {
     id: 39,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -3584,7 +3584,7 @@ This matches exactly with Option B.`,
   {
     id: 40,
     year: 2025,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MSQ",
 
     question: String.raw`
@@ -3621,7 +3621,7 @@ Therefore, a peak is observed only for \(h^2 + k^2 + l^2 = 4\).`,
   {
     id: 41,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -3657,7 +3657,7 @@ Taking the fourth root:
   {
     id: 42,
     year: 2025,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "NAT",
 
     question: String.raw`
@@ -3689,7 +3689,7 @@ Given the focal length \(f = 20\) cm:
   {
     id: 43,
     year: 2025,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -3739,7 +3739,7 @@ Its magnitude is:
   {
     id: 44,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -3778,7 +3778,7 @@ Therefore, the ratio \(\frac{T_2}{T_1} = 2\).`,
   {
     id: 45,
     year: 2025,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -3895,7 +3895,7 @@ The distance is approximately \(1.63\) fm.`,
   {
     id: 48,
     year: 2025,
-    subject: "Modern Physics",
+    subject: "Quantum Phenomena",
     type: "NAT",
 
     question: String.raw`
@@ -3952,7 +3952,7 @@ The value is \(24\).`,
   {
     id: 49,
     year: 2025,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "NAT",
 
     question: String.raw`
@@ -3985,7 +3985,7 @@ Planar density \(\sigma_{110} = \frac{1}{\sqrt{2} a^2} \approx \frac{0.707}{a^2}
   {
     id: 50,
     year: 2025,
-    subject: "Boolean Algebra",
+    subject: "Logic Gates",
     type: "NAT",
 
     question: String.raw`
@@ -4067,7 +4067,7 @@ The maximum value of the base resistance is \(20\) k\(\Omega\).`,
   {
     id: 52,
     year: 2025,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -4119,7 +4119,7 @@ Rounded to two decimal places, the ratio is \(1.80\).`,
   {
     id: 53,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4164,7 +4164,7 @@ Rounded to two decimal places, it is \(1.03\) cal/K.`,
   {
     id: 54,
     year: 2025,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -4216,7 +4216,7 @@ Result \(= \frac{1}{\pi} \times \pi = 1\).`,
   {
     id: 55,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4265,7 +4265,7 @@ Since \(\beta\) is specified as a positive constant, \(\beta = 1\) rad/s.`,
   {
     id: 56,
     year: 2025,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4300,7 +4300,7 @@ The ratio of the speed at perihelion to the speed at aphelion is:
   {
     id: 57,
     year: 2025,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "NAT",
 
     question: String.raw`
@@ -4387,7 +4387,7 @@ The integer value is \(24\).`,
   {
     id: 59,
     year: 2025,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "NAT",
 
     question: String.raw`
@@ -4427,7 +4427,7 @@ The distance is \(2.4\) \AA.`,
   {
     id: 60,
     year: 2025,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4482,7 +4482,7 @@ Rounding to two decimal places, the value is \(0.76\).`,
   {
     id: 1,
     year: 2024,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -4517,7 +4517,7 @@ Therefore, the total number of ions (Na⁺ and Cl⁻ combined) in a single unit 
   {
     id: 2,
     year: 2024,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -4547,7 +4547,7 @@ $22.50 + 26.25 + 21.75 = 70.50$`,
   {
     id: 3,
     year: 2024,
-    subject: "Linear Algebra",
+    subject: "Matrices & Determinants",
     type: "MCQ",
 
     question: String.raw`
@@ -4604,7 +4604,7 @@ Thus, the matrix is also **Unitary**.`,
   {
     id: 4,
     year: 2024,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -4766,7 +4766,7 @@ Therefore, the angle $\alpha$ between the reflected wave and the refracted wave 
   {
     id: 8,
     year: 2024,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -4853,7 +4853,7 @@ The constant $A$ can be any value, such as $A = 1$. Thus, $A=1$ and $B=0$ is a v
   {
     id: 10,
     year: 2024,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -4886,7 +4886,7 @@ Simple harmonic motion maps to a sine/cosine wave or an ellipse in phase space. 
   {
     id: 11,
     year: 2024,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -4924,7 +4924,7 @@ The Miller indices are enclosed in parentheses: $(436)$.`,
   {
     id: 12,
     year: 2024,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -4953,7 +4953,7 @@ Therefore, the number of atoms in the basis of the primitive cell is 2.`,
   {
     id: 13,
     year: 2024,
-    subject: "Boolean Algebra",
+    subject: "Logic Gates",
     type: "MCQ",
 
     question: String.raw`
@@ -4997,7 +4997,7 @@ In a typical logic evaluation:
   {
     id: 14,
     year: 2024,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -5056,7 +5056,7 @@ Subtracting the two parts gives: $\frac{3\pi}{4} - \frac{1}{4} = \frac{1}{4}(3\p
   {
     id: 15,
     year: 2024,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -5294,7 +5294,7 @@ Option C correctly illustrates that the electron has a higher energy level than 
   {
     id: 20,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "MCQ",
 
     question: String.raw`
@@ -5371,7 +5371,7 @@ The minimum thickness is $6\ \mu\text{m}$.`,
   {
     id: 22,
     year: 2024,
-    subject: "Electromagnetic Theory",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -5477,7 +5477,7 @@ $\mathbf{D}_2 = \mathbf{D}_{2\parallel} + \mathbf{D}_{2\perp} = (9\hat{x} + 6\ha
   {
     id: 24,
     year: 2024,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -5532,7 +5532,7 @@ Therefore, the maximum value of $D$ is indeed $h$.`,
   {
     id: 25,
     year: 2024,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -5576,7 +5576,7 @@ $Q_h = \frac{A_o}{n} v_b = \frac{A_o}{n} \sqrt{v_o^2 + 2gh}$.`,
   {
     id: 26,
     year: 2024,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -5626,7 +5626,7 @@ Thus, the total time required is proportional to $\frac{1+e}{1-e}$.`,
   {
     id: 27,
     year: 2024,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -5676,7 +5676,7 @@ The average time is proportional to $\sqrt{T}$.`,
   {
     id: 28,
     year: 2024,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -5725,7 +5725,7 @@ $\gamma = \frac{C_p}{C_v} = \frac{4R}{3R} = \frac{4}{3}$.`,
   {
     id: 29,
     year: 2024,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -5793,7 +5793,7 @@ This exactly matches Option C.`,
   {
     id: 30,
     year: 2024,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -5882,7 +5882,7 @@ Therefore, P, As, and Sb are the correct choices.`,
   {
     id: 32,
     year: 2024,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MSQ",
 
     question: String.raw`
@@ -5927,7 +5927,7 @@ Therefore, \(v_{out}\) is out-of-phase with \(v_{in}\), and the gain is unity wh
   {
     id: 33,
     year: 2024,
-    subject: "Oscillations",
+    subject: "Damped & Forced Oscillations",
     type: "MSQ",
 
     question: String.raw`
@@ -5980,7 +5980,7 @@ Substitute \(A\) and \(B\) back into the general solution:
   {
     id: 34,
     year: 2024,
-    subject: "Modern Physics",
+    subject: "Quantum Phenomena",
     type: "MSQ",
 
     question: String.raw`
@@ -6029,7 +6029,7 @@ The scattered wavelength would be \(0.049 + 0.024 = 0.073\ \text{\AA}\). (Option
   {
     id: 35,
     year: 2024,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -6077,7 +6077,7 @@ Substitute the velocity:
   {
     id: 36,
     year: 2024,
-    subject: "Relativity",
+    subject: "Special Relativity",
     type: "MSQ",
 
     question: String.raw`
@@ -6128,7 +6128,7 @@ Given the intervals in \(S'\):
   {
     id: 37,
     year: 2024,
-    subject: "AC Circuits",
+    subject: "DC & AC Circuits",
     type: "MSQ",
 
     question: String.raw`
@@ -6171,7 +6171,7 @@ At \(\omega = \omega_0 / 2\), the circuit is not at resonance, and the current d
   {
     id: 38,
     year: 2024,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -6225,7 +6225,7 @@ Entropy is a state function. For any closed, reversible thermodynamic cycle, the
   {
     id: 39,
     year: 2024,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -6291,7 +6291,7 @@ Therefore, the observed frequency is \(f\) exactly when the source is at \(x=0\)
   {
     id: 40,
     year: 2024,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -6390,7 +6390,7 @@ The depletion width on the n-side is \(1.6\ \mu\text{m}\).`,
   {
     id: 42,
     year: 2024,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -6436,7 +6436,7 @@ Evaluate the determinant by expanding along the third row:
   {
     id: 43,
     year: 2024,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -6481,7 +6481,7 @@ Rounded to one decimal place, the area is \(4.3\).`,
   {
     id: 44,
     year: 2024,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "NAT",
 
     question: String.raw`
@@ -6517,7 +6517,7 @@ Rounded to the nearest integer, the torque is \(87\) N-m.`,
   {
     id: 45,
     year: 2024,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -6552,7 +6552,7 @@ Rounded to two decimal places, the distance is \(0.38 R\).`,
   {
     id: 46,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
 
     question: String.raw`
@@ -6612,7 +6612,7 @@ The total induced charge is \(8.00\) C.`,
   {
     id: 48,
     year: 2024,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -6638,7 +6638,7 @@ The calculated voltage drop is \(6.2\) V.`,
   {
     id: 49,
     year: 2024,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "NAT",
 
     question: String.raw`
@@ -6678,7 +6678,7 @@ Rounded to two decimal places, the energy is \(5.56\) eV.`,
   {
     id: 50,
     year: 2024,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -6713,7 +6713,7 @@ Rounded to two decimal places, the net change in entropy is \(0.47 R\).`,
   {
     id: 51,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
 
     question: String.raw`
@@ -6742,7 +6742,7 @@ The smallest spacing is \(1.32\ \text{\AA}\).`,
   {
     id: 52,
     year: 2024,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -6768,7 +6768,7 @@ Evaluating the specific resistor and voltage values shown in the schematic diagr
   {
     id: 53,
     year: 2024,
-    subject: "Taylor Series",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -6858,7 +6858,7 @@ Rounding to one decimal place, the kinetic energy of Oxygen is \(0.4\) MeV.`,
   {
     id: 55,
     year: 2024,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "NAT",
 
     question: String.raw`
@@ -6886,7 +6886,7 @@ Therefore, the total energy is:
   {
     id: 56,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
 
     question: String.raw`
@@ -6917,7 +6917,7 @@ Substitute \(n\) and \(N\) into the resolving power equation:
   {
     id: 57,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Interference",
     type: "NAT",
 
     question: String.raw`
@@ -6944,7 +6944,7 @@ Executing these optical matrix steps with the provided values (\(R_1 = 30\), \(R
   {
     id: 58,
     year: 2024,
-    subject: "Relativity",
+    subject: "Special Relativity",
     type: "NAT",
 
     question: String.raw`
@@ -7049,7 +7049,7 @@ Substitute the given values (\(R = 0.05\), \(B_0 = 0.98\), \(\omega = 100\), \(r
   {
     id: 1,
     year: 2023,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -7080,7 +7080,7 @@ A vector pointing in the [110] direction has equal positive components along the
   {
     id: 2,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -7116,7 +7116,7 @@ Therefore, the field in option (D) is the only one with a non-zero curl.`,
   {
     id: 3,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7150,7 +7150,7 @@ Notice that the number density '$n$' cancels out. Since pressure $P = n k_B T$, 
   {
     id: 4,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -7184,7 +7184,7 @@ The segment from $x = -1$ to $x = 1$, which was previously below the x-axis dipp
   {
     id: 5,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7224,7 +7224,7 @@ $\Delta S = 2(N-1) k_B \ln(2)$`,
   {
     id: 6,
     year: 2023,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -7269,7 +7269,7 @@ This represents a straight line equation ($y = mx + c$) where the independent va
   {
     id: 7,
     year: 2023,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -7356,7 +7356,7 @@ $\frac{L_1}{L_2} = \frac{1}{3}$`,
   {
     id: 9,
     year: 2023,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -7403,7 +7403,7 @@ Therefore, the ratio $\frac{R_1}{R_2} = 1$.`,
   {
     id: 10,
     year: 2023,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7448,7 +7448,7 @@ $E = \frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
   {
     id: 11,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -7485,7 +7485,7 @@ The graph representing an initial increase that eventually saturates corresponds
   {
     id: 12,
     year: 2023,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -7523,7 +7523,7 @@ Thus, the final output states are $X = 1$ and $Y = 0$.`,
   {
     id: 13,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -7567,7 +7567,7 @@ $J = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bm
   {
     id: 14,
     year: 2023,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7607,7 +7607,7 @@ Option A correctly illustrates these pseudovector reflection rules.`,
   {
     id: 15,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -7642,7 +7642,7 @@ $A^{-1} = \begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}
   {
     id: 16,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -7684,7 +7684,7 @@ $\nabla \times \mathbf{E} = -\mu_0 \mathbf{J}_m - \frac{\partial\mathbf{B}}{\par
   {
     id: 17,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7722,7 +7722,7 @@ $\left(\frac{\partial \beta}{\partial P}\right)_T = -\left(\frac{\partial \kappa
   {
     id: 18,
     year: 2023,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "MCQ",
 
     question: String.raw`
@@ -7762,7 +7762,7 @@ $f \approx 0.62$
   {
     id: 19,
     year: 2023,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -7800,7 +7800,7 @@ $v_g = C \cos\left(\frac{kd}{2}\right)$`,
   {
     id: 20,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -7843,7 +7843,7 @@ $\sigma \approx 2.78 \times 10^{-4} \text{ } \Omega^{-1}\text{m}^{-1}$`,
   {
     id: 21,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -7889,7 +7889,7 @@ $\oint_C \mathbf{F} \cdot d\mathbf{r} = \int_{0}^{2\pi} R^2 \sin^2\theta \, d\th
   {
     id: 22,
     year: 2023,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -7947,7 +7947,7 @@ This perfectly matches option A.`,
   {
     id: 23,
     year: 2023,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7983,7 +7983,7 @@ $\frac{\omega_r}{\omega_s} = \frac{\sqrt{\frac{3g}{2l}}}{\sqrt{\frac{g}{l}}} = \
   {
     id: 24,
     year: 2023,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "MCQ",
 
     question: String.raw`
@@ -8028,7 +8028,7 @@ The wavelength of $499.8 \text{ nm}$ closely matches Green light ($\sim 500 \tex
   {
     id: 25,
     year: 2023,
-    subject: "Work Power Energy",
+    subject: "Conservation Laws",
     type: "MCQ",
 
     question: String.raw`
@@ -8072,7 +8072,7 @@ The closest value among the options is $13.5$.`,
   {
     id: 26,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -8105,7 +8105,7 @@ Therefore, the normal component of $\vec{D}$ is continuous, and that of $\vec{P}
   {
     id: 27,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -8146,7 +8146,7 @@ The mean energy is closest to 0.97 meV.`,
   {
     id: 28,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -8214,7 +8214,7 @@ Therefore, the graph should show $E_F$ starting close to $E_V$ at $T=0$, and ris
   {
     id: 30,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -8282,7 +8282,7 @@ First, let's verify normalization: $|c_0|^2 + |c_1|^2 + |c_2|^2 = (\frac{1}{\sqr
   {
     id: 34,
     year: 2023,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -8325,7 +8325,7 @@ Since $\frac{5}{6}g \neq g$, Option D is **False**. (The point falling with acce
   {
     id: 35,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -8360,7 +8360,7 @@ Therefore, plots A, B, and C correctly represent a first-order phase transition.
   {
     id: 36,
     year: 2023,
-    subject: "Work Power Energy",
+    subject: "Conservation Laws",
     type: "MSQ",
 
     question: String.raw`
@@ -8404,7 +8404,7 @@ The kinetic energy of the center of mass is $\frac{1}{2} (2m) v_{cm}^2$, which r
   {
     id: 37,
     year: 2023,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -8440,7 +8440,7 @@ Because the question states "A wave travelling along the x-axis" (without specif
   {
     id: 38,
     year: 2023,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "MSQ",
 
     question: String.raw`
@@ -8484,7 +8484,7 @@ Evaluating the options based on these rules:
   {
     id: 39,
     year: 2023,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MSQ",
 
     question: String.raw`
@@ -8523,7 +8523,7 @@ This is not $15\ \Omega$. Option B is **False**.
   {
     id: 40,
     year: 2023,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -8552,7 +8552,7 @@ For a particle moving in a general central force field, which of the following s
   {
     id: 41,
     year: 2023,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "NAT",
 
     question: String.raw`
@@ -8615,7 +8615,7 @@ Assuming the two diodes are in parallel branches, each connected in series with 
   {
     id: 43,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -8647,7 +8647,7 @@ Rounding to three decimal places gives $0.010$.`,
   {
     id: 44,
     year: 2023,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "NAT",
 
     question: String.raw`
@@ -8719,7 +8719,7 @@ Rounding off to two decimal places gives $0.87$.`,
   {
     id: 46,
     year: 2023,
-    subject: "Vector Calculus",
+    subject: "Vector Algebra & Vector Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -8755,7 +8755,7 @@ Rounding to two decimal places gives $-0.25$.`,
   {
     id: 47,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Newtonian Mechanics",
     type: "NAT",
 
     question: String.raw`
@@ -8792,7 +8792,7 @@ $\Delta m = m_{\text{total}} - m_{\text{initial}} = 1.125 - 0.5 = 0.625 \text{ k
   {
     id: 48,
     year: 2023,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "NAT",
 
     question: String.raw`
@@ -8832,7 +8832,7 @@ $\frac{\mu_1}{\mu_2} = \frac{49}{25} = 1.96$`,
   {
     id: 49,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -9011,7 +9011,7 @@ Rounded to two decimal places, the fractional efficiency is $0.73$.`,
   {
     id: 54,
     year: 2023,
-    subject: "Modern Physics",
+    subject: "Quantum Phenomena",
     type: "NAT",
 
     question: String.raw`
@@ -9054,7 +9054,7 @@ The value is $f \times 10^{-11}$, so $f \approx 2.4$.`,
   {
     id: 55,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -9088,7 +9088,7 @@ $\text{Trace}(B) = 2 + 2.5 + 3.25 = 7.75$.`,
   {
     id: 56,
     year: 2023,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -9206,7 +9206,7 @@ Rounding to two decimal places gives $1.62$.`,
   {
     id: 59,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -9240,7 +9240,7 @@ The flux magnitude evaluates to $0.008$ (W).`,
   {
     id: 60,
     year: 2023,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -9282,7 +9282,7 @@ Rounding to two decimal places gives $1.67$.`,
   {
     id: 1,
     year: 2022,
-    subject: "Linear Algebra",
+    subject: "Matrices & Determinants",
     type: "MCQ",
 
     question: String.raw`
@@ -9354,7 +9354,7 @@ $t ^ { \prime } = \frac{ 2 } { \sqrt{ 3 } } \left(t - \frac{(c / 2)x}{ c^ 2}\rig
   {
     id: 3,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9387,7 +9387,7 @@ $\langle E \rangle = N \langle E_1 \rangle = -N\epsilon \tanh(\beta\epsilon) = -
   {
     id: 4,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9426,7 +9426,7 @@ Therefore, $\frac{ \beta } { \kappa } = \left(\frac{ \partial P }{ \partial T }\
   {
     id: 5,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -9508,7 +9508,7 @@ These states are: $(3, 2, 1), (3, 1, 2), (2, 3, 1), (2, 1, 3), (1, 3, 2), (1, 2,
   {
     id: 7,
     year: 2022,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9551,7 +9551,7 @@ $r = \left(\frac{ L^ 2}{ 2mk }\right) ^ { \frac{ 1 } { 4 }}$`,
   {
     id: 8,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -9593,7 +9593,7 @@ Therefore, $a = 2$ and $b = 8$.`,
   {
     id: 9,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -9620,7 +9620,7 @@ Consider an electrostatic field $\vec{ E } $ in a region of space.Identify the I
   {
     id: 10,
     year: 2022,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "MCQ",
 
     question: String.raw`
@@ -9663,7 +9663,7 @@ Looking at the typical options:
   {
     id: 11,
     year: 2022,
-    subject: "Matrices",
+    subject: "Matrices & Determinants",
     type: "MCQ",
 
     question: String.raw`
@@ -9703,7 +9703,7 @@ $1 + 1 + \frac{ 1 } { 2 } = 2.5 = \frac{ 5 } { 2 } $.`,
   {
     id: 12,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MCQ",
 
     question: String.raw`
@@ -9744,7 +9744,7 @@ $2 \times \pi = 2\pi$.`,
   {
     id: 13,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -9782,7 +9782,7 @@ $i(1 \, \mu\text{ s }) = (1 - e ^ {- 1}) \text{ mA } $.`,
   {
     id: 14,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9826,7 +9826,7 @@ Therefore, the correct relations are $\Delta S > 0$, $\Delta U = 0$, $\Delta F <
   {
     id: 15,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9906,7 +9906,7 @@ Since the ground state particle is more likely to be found near the center of th
   {
     id: 17,
     year: 2022,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9939,7 +9939,7 @@ The first term is the centripetal acceleration, and the second term is the Corio
   {
     id: 18,
     year: 2022,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9986,7 +9986,7 @@ $L = m \sqrt{ \frac{ 2GMRr } { R + r } } $`,
   {
     id: 19,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -10020,7 +10020,7 @@ $\Phi_c = -B_0 \pi R ^ 2$.
   {
     id: 20,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -10095,7 +10095,7 @@ $\frac{ N_2(t) } { N_1(t) } = \frac{ \frac{ N_0 } { 9 } (e ^ {-\lambda t } - e ^
   {
     id: 22,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -10135,7 +10135,7 @@ $\vec{ a } = \frac{ \vec{ F } } { m } = \frac{ qvB_0 } { \sqrt{ 2 } m } \hat{ x 
   {
     id: 23,
     year: 2022,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MCQ",
 
     question: String.raw`
@@ -10161,7 +10161,7 @@ At absolute zero($0\text{ K }$), the valence band is completely full of electron
   {
     id: 24,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -10193,7 +10193,7 @@ $ |\mathcal{ E }| = \frac{ 2\pi k R ^ 5 } { 5 } (3t ^ 2) = \frac{ 6\pi k t ^ 2 R
   {
     id: 25,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -10241,7 +10241,7 @@ Rounding to one decimal place, $V_i ^ { max } = 19.5\text{ V } $.`,
   {
     id: 26,
     year: 2022,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -10281,7 +10281,7 @@ $I_y = \sigma_0 a \left(\frac{ a^ 3}{ 3} - \frac{ a^ 3}{ 4} \right) = \sigma_0 a
   {
     id: 27,
     year: 2022,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -10320,7 +10320,7 @@ This matches Option D.`,
   {
     id: 28,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -10367,7 +10367,7 @@ Since $P \propto T ^ 2$, then $T \propto \sqrt{ P } = \sqrt{ U / V } $.
   {
     id: 29,
     year: 2022,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MCQ",
 
     question: String.raw`
@@ -10409,7 +10409,7 @@ The plot should start at the origin, increase almost linearly at first, and then
   {
     id: 30,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MCQ",
 
     question: String.raw`
@@ -10444,7 +10444,7 @@ The sum of a geometric progression is $S_n = a \frac{ r ^ n - 1 } { r - 1 } $.
   {
     id: 31,
     year: 2022,
-    subject: "Matrices",
+    subject: "Matrices & Determinants",
     type: "MSQ",
 
     question: String.raw`
@@ -10513,7 +10513,7 @@ $\frac{\Delta\lambda}{\lambda} = \frac{h}{m_0 c \lambda} (1 - \cos\theta)$
   {
     id: 33,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -10543,7 +10543,7 @@ The figure shows a section of the phase boundary separating the vapour (1) and l
   {
     id: 34,
     year: 2022,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -10631,7 +10631,7 @@ Propagation is along the x-axis: $\hat{k}_1 = \hat{x}$.
   {
     id: 36,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MSQ",
 
     question: String.raw`
@@ -10670,7 +10670,7 @@ $\frac{d\hat{\theta}}{dr} = 0 \neq \hat{r}$. **(False)**`,
   {
     id: 37,
     year: 2022,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "MSQ",
 
     question: String.raw`
@@ -10711,7 +10711,7 @@ $\omega_1$ alone is not present.`,
   {
     id: 38,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "MSQ",
 
     question: String.raw`
@@ -10751,7 +10751,7 @@ Functions B, C, and D satisfy the necessary boundary conditions to represent a p
   {
     id: 39,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "MSQ",
 
     question: String.raw`
@@ -10804,7 +10804,7 @@ $Y = \overline{P}R + Q$.`,
   {
     id: 40,
     year: 2022,
-    subject: "Solid State Physics",
+    subject: "Crystal Structure",
     type: "MSQ",
 
     question: String.raw`
@@ -10839,7 +10839,7 @@ Option D claims all donor levels are ionized in this regime. This is the exact o
   {
     id: 41,
     year: 2022,
-    subject: "Taylor Series",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -10903,7 +10903,7 @@ $I_0 = \frac{V_{out}}{R_1 + R_2} = \frac{8.1\text{ V}}{1620\ \Omega} = 0.005\tex
   {
     id: 43,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -10951,7 +10951,7 @@ Therefore, $\frac{V_D}{V_A} = 2$.`,
   {
     id: 44,
     year: 2022,
-    subject: "Gravitation",
+    subject: "Central Force Motion",
     type: "NAT",
 
     question: String.raw`
@@ -10986,7 +10986,7 @@ $e = \frac{11000 - 9000}{11000 + 9000} = \frac{2000}{20000} = \frac{1}{10} = 0.1
   {
     id: 45,
     year: 2022,
-    subject: "Rotational Dynamics",
+    subject: "Rigid Body Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -11024,7 +11024,7 @@ $x_0 = 6$`,
   {
     id: 46,
     year: 2022,
-    subject: "Optics",
+    subject: "Geometrical Optics",
     type: "NAT",
 
     question: String.raw`
@@ -11130,7 +11130,7 @@ Rounding off to 2 decimal places gives 1.09.`,
   {
     id: 49,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -11168,7 +11168,7 @@ The coefficient of $\pi$ is 2.`,
   {
     id: 50,
     year: 2022,
-    subject: "Electronics",
+    subject: "Digital Electronics",
     type: "NAT",
 
     question: String.raw`
@@ -11210,7 +11210,7 @@ Rounding off to 2 decimal places gives 0.58.`,
   {
     id: 51,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -11251,7 +11251,7 @@ Rounding off to 3 decimal places gives 0.043.`,
   {
     id: 52,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -11284,7 +11284,7 @@ Therefore, $x = 1.50$.`,
   {
     id: 53,
     year: 2022,
-    subject: "Thermodynamics",
+    subject: "Laws of Thermodynamics",
     type: "NAT",
 
     question: String.raw`
@@ -11357,7 +11357,7 @@ Comparing this to the given form $R \approx \frac{U_0^2}{nE^2}$, we identify tha
   {
     id: 55,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -11396,7 +11396,7 @@ Since $e \approx 2.71828...$, rounding to two decimal places gives 2.72.`,
   {
     id: 56,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -11433,7 +11433,7 @@ $W_{ext} = -5 \times 10^{-6} \times (-400 - (-200)) = -5 \times 10^{-6} \times (
   {
     id: 57,
     year: 2022,
-    subject: "Waves",
+    subject: "Wave Motion",
     type: "NAT",
 
     question: String.raw`
@@ -11497,7 +11497,7 @@ Rounding off to the nearest integer gives 63 degrees.`,
   {
     id: 59,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
@@ -11537,7 +11537,7 @@ Rounding off to 2 decimal places gives 297.88.`,
   {
     id: 60,
     year: 2022,
-    subject: "Electrodynamics",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
     type: "NAT",
 
     question: String.raw`
