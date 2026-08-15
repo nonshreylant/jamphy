@@ -388,7 +388,7 @@ By applying Kirchhoff's Voltage and Current Laws to find the nodal voltages acro
   {
     id: 12,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -1109,7 +1109,7 @@ Using the thermodynamic sign convention where work done ON the system is positiv
   {
     id: 30,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -1260,7 +1260,7 @@ Without the exact resistor values from the image, we rely on the options. Based 
   {
     id: 33,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Work Power Energy",
     type: "MSQ",
 
     question: String.raw`
@@ -1357,7 +1357,7 @@ Since \(\Delta s^2 > 0\), the interval is strictly positive, which means the eve
   {
     id: 35,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Relativity",
     type: "MSQ",
 
     question: String.raw`
@@ -1889,7 +1889,7 @@ Squaring both sides:
   {
     id: 51,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Work Power Energy",
     type: "NAT",
     question:
       "A particle of mass $m$ undergoes periodic motion in one-dimension with its total energy given as $E = \\frac{1}{2}m\\dot{x}^2 + \\frac{1}{4}kx^4$, where $k$ is a positive constant and $\\dot{x}=\\frac{dx}{dt}$. Assuming that $E$ is conserved, the time period $T$ has the relation $T \\propto E^{-1/n}$. The value of $n$ is ________.\n\n(Answer in integer)",
@@ -1910,7 +1910,7 @@ Comparing the exponents, we have \(-1/4 = -1/n\), which implies \(n = 4\).`,
   {
     id: 52,
     year: 2026,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
     question:
       "A spacecraft is placed $200\\ km$ above Earth in a circular orbit. The minimum change in the speed required to place the spacecraft in a parabolic orbit, in $km/s$, is ______.\n\n(Rounded off to one decimal place)\n\n[Use $G = 6.67 \\times 10^{-11}Nm^2/kg^2$, mass of Earth $= 6 \\times 10^{24}\\ kg$, radius of Earth $= 6400\\ km$]",
@@ -2178,7 +2178,7 @@ The expression given in the question includes a factor of \(\frac{1}{9}\):
   {
     id: 2,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Work Power Energy",
     type: "MCQ",
     question:
       "Two point-particles having masses $m_1$ and $m_2$ approach each other in perpendicular directions with speeds $v_1$ and $v_2$, respectively, as shown in the figure below. After an elastic collision, they move away from each other in perpendicular directions with speeds $v_1'$ and $v_2'$, respectively. The ratio $\\dfrac{v_2'}{v_1'}$ is",
@@ -2644,7 +2644,7 @@ Step 3: Multiply them together.
   {
     id: 16,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Gravitation",
     type: "MCQ",
     question:
       "Three particles of equal mass $M$, interacting via gravity, lie on the vertices of an equilateral triangle of side $d$, as shown in the figure below. The whole system is rotating with an angular velocity $\\omega$ about an axis perpendicular to the plane of the system and passing through the center of mass. The value of $\\omega$, for which the distance between the masses remains $d$, is\n\n($G$ is the universal gravitational constant)",
@@ -2675,7 +2675,7 @@ Equating the forces:
   {
     id: 17,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
     question:
       "Two masses, $M_1$ and $M_2$, are connected through a massless spring of spring constant $k$, as shown in the figure below. The mass $M_1$ is at rest against a rigid wall. Both $M_1$ and $M_2$ are on a frictionless surface. The mass $M_2$ is pushed towards $M_1$ by a distance $x$ from its equilibrium position and then released. After $M_1$ leaves the wall, the speed of the center of mass of the composite system is",
@@ -2707,7 +2707,7 @@ The speed of the center of mass is the total momentum divided by the total mass:
   {
     id: 18,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
     question:
       "One end of a long chain is lifted vertically from flat ground to a height $H$ with constant speed $v$ by a force of magnitude $F$. Assume that the length of the chain is greater than $H$ and that it has a uniform mass per unit length $\\rho$. The magnitude of the force $F$ at height $H$ is",
@@ -3053,7 +3053,7 @@ Substitute back into the Schrödinger equation and solve for \(V(x)\):
   {
     id: 28,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Relativity",
     type: "MCQ",
     question:
       "Two non-relativistic particles with masses $m_1$ and $m_2$ move with momenta $p_1$ and $p_2$, respectively, in an inertial frame $S$. In another inertial frame $S'$, moving with a constant speed with respect to $S$, the same particles are observed to have momenta $p_1'$ and $p_2'$, respectively. Galilean invariance implies that",
@@ -3210,7 +3210,7 @@ Thus, the correct combination is \(P=1, Q=1\).`,
   {
     id: 32,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MSQ",
     question:
       "Two particles of masses $m_1$ and $m_2$, interacting via gravity, rotate in circular orbits about their common center of mass with the same angular velocity $\\omega$. For masses $m_1$ and $m_2$, respectively, $r_1$ and $r_2$ are the constant distances from the center of mass, $L_1$ and $L_2$ are the magnitudes of the angular momenta about the center of mass, and $K_1$ and $K_2$ are the kinetic energies. Which of the following is(are) correct? ($G$ is the universal gravitational constant)",
@@ -3621,7 +3621,7 @@ Therefore, a peak is observed only for \(h^2 + k^2 + l^2 = 4\).`,
   {
     id: 41,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4216,7 +4216,7 @@ Result \(= \frac{1}{\pi} \times \pi = 1\).`,
   {
     id: 55,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4265,7 +4265,7 @@ Since \(\beta\) is specified as a positive constant, \(\beta = 1\) rad/s.`,
   {
     id: 56,
     year: 2025,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -4853,7 +4853,7 @@ The constant $A$ can be any value, such as $A = 1$. Thus, $A=1$ and $B=0$ is a v
   {
     id: 10,
     year: 2024,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -5477,7 +5477,7 @@ $\mathbf{D}_2 = \mathbf{D}_{2\parallel} + \mathbf{D}_{2\perp} = (9\hat{x} + 6\ha
   {
     id: 24,
     year: 2024,
-    subject: "Classical Mechanics",
+    subject: "Gravitation",
     type: "MCQ",
 
     question: String.raw`
@@ -5576,7 +5576,7 @@ $Q_h = \frac{A_o}{n} v_b = \frac{A_o}{n} \sqrt{v_o^2 + 2gh}$.`,
   {
     id: 26,
     year: 2024,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -6481,7 +6481,7 @@ Rounded to one decimal place, the area is \(4.3\).`,
   {
     id: 44,
     year: 2024,
-    subject: "Classical Mechanics",
+    subject: "Gravitation",
     type: "NAT",
 
     question: String.raw`
@@ -6517,7 +6517,7 @@ Rounded to the nearest integer, the torque is \(87\) N-m.`,
   {
     id: 45,
     year: 2024,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
 
     question: String.raw`
@@ -7403,7 +7403,7 @@ Therefore, the ratio $\frac{R_1}{R_2} = 1$.`,
   {
     id: 10,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7567,7 +7567,7 @@ $J = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bm
   {
     id: 14,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -7947,7 +7947,7 @@ This perfectly matches option A.`,
   {
     id: 23,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -8028,7 +8028,7 @@ The wavelength of $499.8 \text{ nm}$ closely matches Green light ($\sim 500 \tex
   {
     id: 25,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Work Power Energy",
     type: "MCQ",
 
     question: String.raw`
@@ -8282,7 +8282,7 @@ First, let's verify normalization: $|c_0|^2 + |c_1|^2 + |c_2|^2 = (\frac{1}{\sqr
   {
     id: 34,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -8360,7 +8360,7 @@ Therefore, plots A, B, and C correctly represent a first-order phase transition.
   {
     id: 36,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Work Power Energy",
     type: "MSQ",
 
     question: String.raw`
@@ -8523,7 +8523,7 @@ This is not $15\ \Omega$. Option B is **False**.
   {
     id: 40,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MSQ",
 
     question: String.raw`
@@ -8647,7 +8647,7 @@ Rounding to three decimal places gives $0.010$.`,
   {
     id: 44,
     year: 2023,
-    subject: "Classical Mechanics",
+    subject: "Gravitation",
     type: "NAT",
 
     question: String.raw`
@@ -9508,7 +9508,7 @@ These states are: $(3, 2, 1), (3, 1, 2), (2, 3, 1), (2, 1, 3), (1, 3, 2), (1, 2,
   {
     id: 7,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9906,7 +9906,7 @@ Since the ground state particle is more likely to be found near the center of th
   {
     id: 17,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -9939,7 +9939,7 @@ The first term is the centripetal acceleration, and the second term is the Corio
   {
     id: 18,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -10241,7 +10241,7 @@ Rounding to one decimal place, $V_i ^ { max } = 19.5\text{ V } $.`,
   {
     id: 26,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "MCQ",
 
     question: String.raw`
@@ -10951,7 +10951,7 @@ Therefore, $\frac{V_D}{V_A} = 2$.`,
   {
     id: 44,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Gravitation",
     type: "NAT",
 
     question: String.raw`
@@ -10986,7 +10986,7 @@ $e = \frac{11000 - 9000}{11000 + 9000} = \frac{2000}{20000} = \frac{1}{10} = 0.1
   {
     id: 45,
     year: 2022,
-    subject: "Classical Mechanics",
+    subject: "Rotational Dynamics",
     type: "NAT",
 
     question: String.raw`
