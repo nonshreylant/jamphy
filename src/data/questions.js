@@ -1776,7 +1776,7 @@ Therefore, \(z^3 = 8(-1) = -8\).`,
   {
     id: 47,
     year: 2026,
-    subject: "Thermodynamics",
+    subject: "Phase Transitions",
     type: "NAT",
     question:
       "Two thermodynamic systems separated by diathermic wall have the equations of state $U_1 = \\frac{3}{2} R N_1 T_1$ and $U_2 = \\frac{5}{2} R N_2 T_2$, where $R$ is the gas constant. $N_1, N_2$ and $T_1, T_2$ are the mole numbers and the temperature of the two systems, respectively. The composite system in equilibrium has the total energy $1.5 \\times 10^3$ Joule. If $N_1 = 3$ and $N_2 = 2$, then the internal energy $U_1$ of the system one is ________.\n\n(Answer in integer)",
@@ -2451,7 +2451,7 @@ The ratio of phase velocity to group velocity is:
   {
     id: 10,
     year: 2025,
-    subject: "Electronics",
+    subject: "Semiconductors",
     type: "MCQ",
     question:
       "If the input voltage waveform $V_{IN}$ is a ramp function (as shown in the $V_{IN}$-$t$ plot below), then the output waveform ($V_{OUT}$) for the given circuit diagram having an ideal operational amplifier (Op-Amp) is",
@@ -3284,7 +3284,7 @@ Option D: \((112)\) and \((220)\)
   {
     id: 34,
     year: 2025,
-    subject: "Optics",
+    subject: "Wave Optics",
     type: "MSQ",
 
     question: String.raw`
@@ -3985,7 +3985,7 @@ Planar density \(\sigma_{110} = \frac{1}{\sqrt{2} a^2} \approx \frac{0.707}{a^2}
   {
     id: 50,
     year: 2025,
-    subject: "Solid State Physics",
+    subject: "Boolean Algebra",
     type: "NAT",
 
     question: String.raw`
@@ -4021,7 +4021,7 @@ The packing fraction is approximately \(0.91\).`,
   {
     id: 51,
     year: 2025,
-    subject: "Electronics",
+    subject: "Semiconductors",
     type: "NAT",
 
     question: String.raw`
@@ -4348,7 +4348,7 @@ The amplitude of this combination of sine and cosine waves is:
   {
     id: 58,
     year: 2025,
-    subject: "Optics",
+    subject: "Polarization",
     type: "NAT",
 
     question: String.raw`
@@ -5793,7 +5793,7 @@ This exactly matches Option C.`,
   {
     id: 30,
     year: 2024,
-    subject: "Wave Optics",
+    subject: "Waves",
     type: "MCQ",
 
     question: String.raw`
@@ -7317,7 +7317,7 @@ Let's analyze the clamping levels during the positive and negative half cycles o
   {
     id: 8,
     year: 2023,
-    subject: "Quantum Mechanics",
+    subject: "Nuclear Physics",
     type: "MCQ",
 
     question: String.raw`
@@ -8177,7 +8177,7 @@ $\text{Ratio} = \frac{v_{rms}}{v_{mp}} = \frac{\sqrt{\frac{3k_BT}{m}}}{\sqrt{\fr
   {
     id: 29,
     year: 2023,
-    subject: "Solid State Physics",
+    subject: "Semiconductors",
     type: "MCQ",
 
     question: String.raw`
@@ -8586,7 +8586,7 @@ Since $1 \text{ \AA} = 10^{-8} \text{ cm}$, the lattice constant is $3.62 \text{
   {
     id: 42,
     year: 2023,
-    subject: "Electronics",
+    subject: "Semiconductors",
     type: "NAT",
 
     question: String.raw`
@@ -8719,7 +8719,7 @@ Rounding off to two decimal places gives $0.87$.`,
   {
     id: 46,
     year: 2023,
-    subject: "Mathematical Physics",
+    subject: "Vector Calculus",
     type: "NAT",
 
     question: String.raw`
@@ -9282,7 +9282,7 @@ Rounding to two decimal places gives $1.67$.`,
   {
     id: 1,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Linear Algebra",
     type: "MCQ",
 
     question: String.raw`
@@ -9663,7 +9663,7 @@ Looking at the typical options:
   {
     id: 11,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Matrices",
     type: "MCQ",
 
     question: String.raw`
@@ -10444,7 +10444,7 @@ The sum of a geometric progression is $S_n = a \frac{ r ^ n - 1 } { r - 1 } $.
   {
     id: 31,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Matrices",
     type: "MSQ",
 
     question: String.raw`
@@ -10588,7 +10588,7 @@ This is the equation of an ellipse. **(True)**`,
   {
     id: 35,
     year: 2022,
-    subject: "Optics",
+    subject: "Polarization",
     type: "MSQ",
 
     question: String.raw`
@@ -10839,7 +10839,7 @@ Option D claims all donor levels are ionized in this regime. This is the exact o
   {
     id: 41,
     year: 2022,
-    subject: "Mathematical Physics",
+    subject: "Taylor Series",
     type: "NAT",
 
     question: String.raw`
@@ -10874,7 +10874,7 @@ The coefficient of $\pi$ is $2.67$.`,
   {
     id: 42,
     year: 2022,
-    subject: "Electronics",
+    subject: "Semiconductors",
     type: "NAT",
 
     question: String.raw`
@@ -11468,7 +11468,7 @@ Total number of nodes = 3.`,
   {
     id: 58,
     year: 2022,
-    subject: "Optics",
+    subject: "Polarization",
     type: "NAT",
 
     question: String.raw`
