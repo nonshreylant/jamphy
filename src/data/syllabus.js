@@ -1,7 +1,7 @@
 export const syllabus = [
   {
     id: "math",
-    name: "∫ Mathematical Methods",
+    name: "Mathematical Methods",
     subtopics: [
       "Calculus",
       "Vector Algebra & Vector Calculus",
@@ -14,7 +14,7 @@ export const syllabus = [
   },
   {
     id: "mechanics",
-    name: "⚛ Mechanics & General Properties",
+    name: "Mechanics & General Properties",
     subtopics: [
       "Newtonian Mechanics",
       "Non-Inertial Frames",
@@ -28,7 +28,7 @@ export const syllabus = [
   },
   {
     id: "waves",
-    name: "〰 Oscillations, Waves & Optics",
+    name: "Oscillations, Waves & Optics",
     subtopics: [
       "Simple Harmonic Motion",
       "Superposition of Oscillations",
@@ -44,7 +44,7 @@ export const syllabus = [
   },
   {
     id: "em",
-    name: "⚡ Electricity & Magnetism",
+    name: "Electricity & Magnetism",
     subtopics: [
       "Electrostatics",
       "Laplace's Equation",
@@ -60,7 +60,7 @@ export const syllabus = [
   },
   {
     id: "thermo",
-    name: "🔥 Thermodynamics & KTG",
+    name: "Thermodynamics & KTG",
     subtopics: [
       "Kinetic Theory of Gases",
       "Equations of State",
@@ -75,7 +75,7 @@ export const syllabus = [
   },
   {
     id: "modern",
-    name: "☄ Modern Physics",
+    name: "Modern Physics",
     subtopics: [
       "Special Relativity",
       "Quantum Phenomena",
@@ -88,7 +88,7 @@ export const syllabus = [
   },
   {
     id: "solid",
-    name: "⌁ Solid State & Electronics",
+    name: "Solid State & Electronics",
     subtopics: [
       "Crystal Structure",
       "X-Ray Diffraction",
