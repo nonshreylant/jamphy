@@ -12882,7 +12882,7 @@ Let $P_{other}$ be the product of the remaining five roots.
 $$2 \cdot P_{other} = -16$$
 $$P_{other} = \frac{-16}{2} = -8$$
 The value of the product of the other five roots is $-8$[cite: 1].`,
-    "correctAnswers": [-8]
+    correctAnswer: -8
   },
   {
     "id": 42,
@@ -12906,7 +12906,7 @@ $$35\text{ V} - (0.5\text{ A})R - 20\text{ V} = 0$$
 $$15\text{ V} = 0.5 R$$
 $$R = \frac{15}{0.5} = 30\ \Omega$$
 The minimum value of the resistance $R$ required to ensure safe operation under all load conditions is $30\ \Omega$[cite: 1].`,
-    "correctAnswers": [30]
+    correctAnswer: 30
   },
   {
     "id": 43,
@@ -12928,7 +12928,7 @@ $$M = \frac{\Phi}{I} = \frac{2\sqrt{2} \mu_0 l^2}{\pi L}$$
 We are given that $M = \frac{n\mu_0 l^2}{\pi L}$. Comparing the two expressions:
 $$n = 2\sqrt{2} \approx 2 \times 1.414 = 2.828$$
 Rounding to two decimal places, $n = 2.83$[cite: 1].`,
-    "correctAnswers": [2.83]
+    correctAnswer: 2.83
   },
   {
     "id": 44,
@@ -12953,7 +12953,7 @@ $$2 = \frac{V_2}{V_1}$$
 We are asked to find the ratio $\frac{V_1}{V_2}$:
 $$\frac{V_1}{V_2} = \frac{1}{2} = 0.5$$
 The ratio is $0.5$[cite: 1].`,
-    "correctAnswers": [0.5]
+    correctAnswer: 0.5
   },
   {
     "id": 45,
@@ -12984,7 +12984,7 @@ The energy in $S_2$ is $E_2 = \gamma_2 mc^2 = \frac{25}{9}mc^2$.
 **4. Calculate the ratio:**
 $$\frac{E_2}{E_1} = \frac{\frac{25}{9}mc^2}{\frac{5}{3}mc^2} = \frac{25}{9} \times \frac{3}{5} = \frac{5}{3} \approx 1.6667$$
 Rounding off to two decimal places, we get $1.67$[cite: 1].`,
-    "correctAnswers": [1.67]
+    correctAnswer: 1.67
   },
   {
     "id": 46,
@@ -13003,7 +13003,7 @@ We are given that the free electron density of A is $64$ times that of B, so $n_
 Substitute this into the ratio equation:
 $$\frac{\epsilon_A}{\epsilon_B} = (64)^{2/3} = (4^3)^{2/3} = 4^2 = 16$$
 The ratio is $16$[cite: 1].`,
-    "correctAnswers": [16]
+    correctAnswer: 16
   },
   {
     "id": 47,
@@ -13030,7 +13030,7 @@ $$V_2 = (5.09)^2 \times 5.27 = 25.9081 \times 5.27 \approx 136.536\text{ \AA}^3$
 **3. Calculate the fractional change in volume:**
 $$\left|\frac{\Delta V}{V}\right| = \left|\frac{V_2 - V_1}{V_1}\right| = \frac{|136.536 - 139.91|}{139.91} = \frac{3.374}{139.91} \approx 0.0241$$
 Rounding off to two decimal places, the fractional change is $0.02$[cite: 1].`,
-    "correctAnswers": [0.02]
+    correctAnswer: 0.02
   },
   {
     "id": 48,
@@ -13054,7 +13054,7 @@ $$n - 1 = \frac{6.25 \times 10^{-9} \times 3 \times 10^8}{2.5}$$
 $$n - 1 = \frac{18.75 \times 10^{-1}}{2.5} = \frac{1.875}{2.5} = 0.75$$
 $$n = 1 + 0.75 = 1.75$$
 The refractive index of the block is $1.75$[cite: 1].`,
-    "correctAnswers": [1.75]
+    correctAnswer: 1.75
   },
   {
     "id": 49,
@@ -13077,7 +13077,7 @@ Substitute the known values:
 $$\epsilon = \frac{\frac{u}{256}}{\frac{u}{16}} = \frac{16}{256} = \frac{1}{16}$$
 $$\epsilon = 0.0625$$
 The emissivity of the material is $0.063$ (rounded to three decimal places)[cite: 1].`,
-    "correctAnswers": [0.063]
+    correctAnswer: 0.063
   },
   {
     "id": 50,
@@ -13106,7 +13106,7 @@ $$R = \left(\frac{5}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}}\right) + \frac{1}{
 $$R = \frac{5}{2} + \frac{1}{2}(0.05)\left(\frac{1}{2}\right)$$
 $$R = 2.5 + \frac{0.05}{4} = 2.5 + 0.0125 = 2.5125\text{ m}$$
 Rounding off to three decimal places, the range is $2.513\text{ m}$[cite: 1].`,
-    "correctAnswers": [2.513]
+    correctAnswer: 2.513
   },
   {
     "id": 51,
@@ -13142,7 +13142,7 @@ $$1.5 \times \alpha \approx \beta \implies \beta \approx 1.5 \left(\frac{1}{36}\
 The ray crosses the optical axis at a distance $d$ from the flat surface:
 $$d = \frac{h'}{\tan\beta} \approx \frac{h'}{\beta} = \frac{2/3}{1/24} = \frac{2}{3} \times 24 = 16\text{ cm}$$
 *(Note: A rigorous paraxial calculation yields exactly $16\text{ cm}$, and non-paraxial exact ray tracing gives $15.95\text{ cm}$. Both are within the accepted range of $15.81$ to $16.01$)*[cite: 1].`,
-    "correctAnswers": [15.95]
+    correctAnswer: 15.95
   },
   {
     "id": 52,
@@ -13170,7 +13170,7 @@ $$E_{total} = (2 \times E_0) + (6 \times E_1) + (12 \times E_2)$$
 $$E_{total} = \left[ 2 \left(\frac{3}{2}\right) + 6 \left(\frac{5}{2}\right) + 12 \left(\frac{7}{2}\right) \right] \hbar\omega$$
 $$E_{total} = (3 + 15 + 42) \hbar\omega = 60 \hbar\omega$$
 In units of $\hbar\omega$, the energy is $60$[cite: 1].`,
-    "correctAnswers": [60]
+    correctAnswer: 60
   },
   {
     "id": 53,
@@ -13196,7 +13196,7 @@ Now, use $m = 2$ to find the minimum thickness $t$:
 $$2nt = 2 \times 640\text{ nm}$$
 $$t = \frac{640}{n} = \frac{640}{1.36} \approx 470.588\text{ nm}$$
 Rounding off to two decimal places, the minimum thickness is $470.59\text{ nm}$[cite: 1].`,
-    "correctAnswers": [470.59]
+    correctAnswer: 470.59
   },
   {
     "id": 54,
@@ -13216,7 +13216,7 @@ Let's list the combinations that make each term equal to $1$:
 *   $A \bar{B} \bar{C} = 1$ when $A=1, B=0, C=0$.
 Since these four combinations are mutually exclusive, the total output $Y$ will be $1$ if and only if any of these specific four combinations occur.
 There are a total of $2^3 = 8$ possible input combinations. The output $Y$ is $1$ for exactly $4$ of them[cite: 1].`,
-    "correctAnswers": [4]
+    correctAnswer: 4
   },
   {
     "id": 55,
@@ -13255,7 +13255,7 @@ At $t = 2.4\text{ ms}$:
 $$V(2.4\text{ ms}) = 8 + 12e^{-2.4/24} = 8 + 12e^{-0.1}$$
 $$V(2.4\text{ ms}) \approx 8 + 12(0.9048) = 8 + 10.858 = 18.858\text{ V}$$
 Rounding to one decimal place, the voltage is $18.9\text{ V}$[cite: 1].`,
-    "correctAnswers": [18.9]
+    correctAnswer: 18.9
   },
   {
     "id": 56,
@@ -13278,7 +13278,7 @@ Rounding to one decimal place, the voltage is $18.9\text{ V}$[cite: 1].`,
 3.  **Ratio of the magnetic fields:**
     $$\frac{B_P}{B_Q} = \frac{\frac{\mu_0 I}{6\pi a}}{\frac{\mu_0 I}{18\pi a}} = \frac{18\pi a}{6\pi a} = 3$$
 The ratio is $3$[cite: 1].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 57,
@@ -13311,7 +13311,7 @@ $$4v_B^2 = 2v_A^2 + 2v_B^2$$
 $$2v_B^2 = 2v_A^2$$
 $$v_A^2 = 1 \cdot v_B^2$$
 Comparing this with the given expression $v_A^2 = k v_B^2$, we find $k = 1$[cite: 1].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 58,
@@ -13331,7 +13331,7 @@ The wavelength is $\lambda = 0.090\text{ nm} = 0.90\text{ \AA}$.
 To find the maximum order $n_{max}$, we set $\sin\theta_{max} = 1$:
 $$n_{max} = \frac{2d_{220}}{\lambda} = \frac{2 \times 1.276\text{ \AA}}{0.90\text{ \AA}} = \frac{2.552}{0.90} \approx 2.83$$
 Since $n$ must be an integer, the highest order present is $n = 2$[cite: 1].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 59,
@@ -13363,7 +13363,7 @@ $$|\cot(200 \text{ rad})| \approx 0.567$$
 Now calculate the ratio:
 $$\left| \frac{I_D}{I_R} \right| = 4.427 \times \pi \times 10^{-3} \times 0.567 \approx 13.9 \times 10^{-3} \times 0.567 \approx 0.00788$$
 Rounding to three decimal places, the ratio is $0.008$[cite: 1].`,
-    "correctAnswers": [0.008]
+    correctAnswer: 0.008
   },
   {
     "id": 60,
@@ -13385,7 +13385,7 @@ $$\lambda = \frac{1}{1.374 \times 10^7} \approx 7.27 \times 10^{-11}\text{ m}$$
 Convert the wavelength to Angstroms ($1\text{ \AA} = 10^{-10}\text{ m}$):
 $$\lambda = 0.727\text{ \AA}$$
 Rounding off to one decimal place gives $0.7\text{ \AA}$[cite: 1].`,
-    "correctAnswers": [0.7]
+    correctAnswer: 0.7
   },
   {
     "id": 1,
@@ -14452,7 +14452,7 @@ $$I = \int_{0}^{2} (4x\,dx + 2x\,dx) = \int_{0}^{2} 6x\,dx$$
 Evaluate the integral:
 $$I = \left[ 3x^2 \right]_{0}^{2} = 3(2)^2 - 3(0)^2 = 3(4) = 12$$
 The value of the line integral is $12$[cite: 2].`,
-    "correctAnswers": [12]
+    correctAnswer: 12
   },
   {
     "id": 42,
@@ -14474,7 +14474,7 @@ $$R = \frac{3}{4}f = 0.75f$$
 The magnitude of the larger radius of curvature is $|R_2| = 2R$.
 $$|R_2| = 2(0.75f) = 1.5f$$
 In units of the focal length, the magnitude is $1.5$[cite: 2].`,
-    "correctAnswers": [1.5]
+    correctAnswer: 1.5
   },
   {
     "id": 43,
@@ -14500,7 +14500,7 @@ $$318,000 = 500 v_2^2$$
 $$v_2^2 = \frac{318,000}{500} = 636$$
 $$v_2 = \sqrt{636} \approx 25.219\text{ m/s}$$
 Rounding to one decimal place, the exit speed is $25.2\text{ m/s}$[cite: 2].`,
-    "correctAnswers": [25.2]
+    correctAnswer: 25.2
   },
   {
     "id": 44,
@@ -14522,7 +14522,7 @@ $$t = 33333.333...\text{ nm}$$
 Convert the thickness from nanometers to micrometers ($\mu\text{m}$):
 $$t = 33.333...\text{ }\mu\text{m}$$
 Rounding to two decimal places, the thickness is $33.33\text{ }\mu\text{m}$[cite: 2].`,
-    "correctAnswers": [33.33]
+    correctAnswer: 33.33
   },
   {
     "id": 45,
@@ -14546,7 +14546,7 @@ $$200 + 20 C_2 = 500$$
 $$20 C_2 = 300$$
 $$C_2 = \frac{300}{20} = 15\text{ pF}$$
 The capacitance of the second capacitor is $15\text{ pF}$[cite: 2].`,
-    "correctAnswers": [15]
+    correctAnswer: 15
   },
   {
     "id": 46,
@@ -14570,7 +14570,7 @@ $$\frac{R_1}{R_2} = \left(\frac{T_2}{T_1}\right)^2$$
 Substitute the given temperatures, $T_1 = 1000\text{ K}$ and $T_2 = 2000\text{ K}$:
 $$\frac{R_1}{R_2} = \left(\frac{2000}{1000}\right)^2 = (2)^2 = 4$$
 The ratio of their radii is $4$[cite: 2].`,
-    "correctAnswers": [4]
+    correctAnswer: 4
   },
   {
     "id": 47,
@@ -14590,7 +14590,7 @@ Substitute the given values ($\lambda = 0.500\text{ \AA}$ and $\lambda_c = 0.024
 $$\lambda'_{max} = 0.500 + 2(0.024)$$
 $$\lambda'_{max} = 0.500 + 0.048 = 0.548\text{ \AA}$$
 The longest possible scattered wavelength is $0.548\text{ \AA}$[cite: 2].`,
-    "correctAnswers": [0.548]
+    correctAnswer: 0.548
   },
   {
     "id": 48,
@@ -14615,7 +14615,7 @@ $$a = \frac{0.2}{\sin(21^\circ)}$$
 Using the value $\sin(21^\circ) \approx 0.35837$:
 $$a = \frac{0.2}{0.35837} \approx 0.55808\text{ nm}$$
 Rounding to two decimal places, the unit cell size is $0.56\text{ nm}$[cite: 2].`,
-    "correctAnswers": [0.56]
+    correctAnswer: 0.56
   },
   {
     "id": 49,
@@ -14636,7 +14636,7 @@ $$10\text{ V} - 0.3\text{ V} - I(100\text{ k}\Omega) = 0$$
 $$9.7\text{ V} = I \cdot 100\text{ k}\Omega$$
 $$I = \frac{9.7\text{ V}}{100 \times 10^3\ \Omega} = 9.7 \times 10^{-5}\text{ A} = 0.097\text{ mA} = 97\text{ }\mu\text{A}$$
 The current through the resistor is $97\text{ }\mu\text{A}$[cite: 2].`,
-    "correctAnswers": [97]
+    correctAnswer: 97
   },
   {
     "id": 50,
@@ -14659,7 +14659,7 @@ $$6 + \Delta U_{CD} = 0$$
 $$\Delta U_{CD} = -6\text{ J}$$
 The question asks for the absolute value of the change in internal energy along process CD:
 $$|\Delta U_{CD}| = |-6\text{ J}| = 6\text{ J}$$[cite: 2].`,
-    "correctAnswers": [6]
+    correctAnswer: 6
   },
   {
     "id": 51,
@@ -14693,7 +14693,7 @@ $$y(1) = 6e^{-2} - 4e^{-3}$$
 Using standard values $e^{-2} \approx 0.135335$ and $e^{-3} \approx 0.049787$:
 $$y(1) = 6(0.135335) - 4(0.049787) = 0.81201 - 0.199148 = 0.612862$$
 Rounding to two decimal places, the value is $0.61$[cite: 2].`,
-    "correctAnswers": [0.61]
+    correctAnswer: 0.61
   },
   {
     "id": 52,
@@ -14727,7 +14727,7 @@ $$P = 300 \times \frac{225}{60} = 5 \times 225 = 1125\text{ W}$$
 Convert to kilowatts:
 $$P = 1.125\text{ kW}$$
 Rounding to two decimal places, $P = 1.13\text{ kW}$[cite: 2].`,
-    "correctAnswers": [1.13]
+    correctAnswer: 1.13
   },
   {
     "id": 53,
@@ -14758,7 +14758,7 @@ $$t^4 = 16$$
 Taking the fourth root (and selecting the physically meaningful positive time):
 $$t = 2\text{ s}$$
 The time is $2\text{ s}$[cite: 2].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 54,
@@ -14784,7 +14784,7 @@ $$\omega (0.25) = \pi \implies \omega = \frac{\pi}{0.25} = 4\pi\text{ rad/s}$$
 We extract the frequency $f$ from the angular frequency $\omega = 2\pi f$:
 $$2\pi f = 4\pi \implies f = 2\text{ Hz}$$
 The minimum frequency is $2\text{ Hz}$[cite: 2].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 55,
@@ -14808,7 +14808,7 @@ $$f \approx \frac{1,000,000}{6.283185}\text{ Hz} \approx 159154.94\text{ Hz}$$
 Convert the frequency to kHz:
 $$f \approx 159.15\text{ kHz}$$
 Rounding off to two decimal places, the input signal frequency is $159.15\text{ kHz}$[cite: 2].`,
-    "correctAnswers": [159.15]
+    correctAnswer: 159.15
   },
   {
     "id": 56,
@@ -14838,7 +14838,7 @@ Calculate the numerical value:
 $$\sqrt{13} \approx 3.60555$$
 $$\alpha = \frac{10 \times 3.60555}{4 \times 3.14159} = \frac{36.0555}{12.56637} \approx 2.869$$
 Rounding to two decimal places, $\alpha = 2.87$[cite: 2].`,
-    "correctAnswers": [2.87]
+    correctAnswer: 2.87
   },
   {
     "id": 57,
@@ -14863,7 +14863,7 @@ $$\Delta S_{res} = \frac{-Q}{T_{res}} = \frac{-C_p T}{2T} = -0.5 C_p$$
 $$\Delta S_{total} = \Delta S_{body} + \Delta S_{res} = C_p \ln(2) - 0.5 C_p = (\ln 2 - 0.5) C_p$$
 $$\Delta S_{total} \approx (0.693 - 0.500) C_p = 0.193 C_p$$
 Rounding to two decimal places, the value is $0.19$[cite: 2].`,
-    "correctAnswers": [0.19]
+    correctAnswer: 0.19
   },
   {
     "id": 58,
@@ -14894,7 +14894,7 @@ $$Q_2 = \Delta U_2 = n C_V \Delta T = 1 \cdot (1.5R) \cdot (4T - T) = 1.5R(3T) =
 $$Q_{total} = Q_1 + Q_2 = RT \ln(4) + 4.5 RT = (\ln 4 + 4.5) RT$$
 $$Q_{total} \approx (1.38629 + 4.5) RT = 5.88629 RT$$
 Rounding off to two decimal places, the factor is $5.89$[cite: 2].`,
-    "correctAnswers": [5.89]
+    correctAnswer: 5.89
   },
   {
     "id": 59,
@@ -14931,7 +14931,7 @@ $$17.3 - 0.02 R_B = 0$$
 $$0.02 R_B = 17.3$$
 $$R_B = \frac{17.3}{0.02} = 865\text{ k}\Omega$$
 The value of $R_B$ is $865\text{ k}\Omega$[cite: 2].`,
-    "correctAnswers": [865]
+    correctAnswer: 865
   },
   {
     "id": 60,
@@ -14960,7 +14960,7 @@ $$t \approx 0.028569 \times 1.25 \times 10^9 \text{ years}$$
 $$t \approx 0.03571 \times 10^9 \text{ years} = 3.571 \times 10^7 \text{ years}$$
 The age is given as $m \times 10^7$ years, so $m \approx 3.571$.
 Rounding to two decimal places, $m = 3.57$[cite: 2].`,
-    "correctAnswers": [3.57]
+    correctAnswer: 3.57
   },
   {
     "id": 1,
@@ -15886,7 +15886,7 @@ Activity is the rate of decay: $A = \lambda N$.
 $$A = (1.75836 \times 10^{-17}\text{ s}^{-1}) \times (3.41447 \times 10^{20}\text{ atoms}) \approx 6003.8\text{ decays/second}$$
 Since $1\text{ Bq} = 1\text{ decay/second}$, the activity is $6003.8\text{ Bq}$.
 Converting to kilobecquerels (kBq) yields $6.00\text{ kBq}$[cite: 3, 4].`,
-    "correctAnswers": [6.00]
+    correctAnswer: 6.00
   },
   {
     "id": 42,
@@ -15905,7 +15905,7 @@ We must solve for the lattice parameter $a$, given $r = 0.186\text{ nm}$.
 $$a = \frac{4r}{\sqrt{3}} = \frac{4(0.186\text{ nm})}{1.73205}$$
 $$a = \frac{0.744}{1.73205} \approx 0.42955\text{ nm}$$
 Rounding to two decimal places provides a lattice parameter of $0.43\text{ nm}$[cite: 3, 4].`,
-    "correctAnswers": [0.43]
+    correctAnswer: 0.43
   },
   {
     "id": 43,
@@ -15927,7 +15927,7 @@ $$\sin\theta = \frac{2040}{2500} = 0.816$$
 Now, find the inverse sine to determine the angle in degrees:
 $$\theta = \arcsin(0.816) \approx 54.68^\circ$$
 Rounding to two decimal places, the angle is $54.68^\circ$[cite: 3, 4].`,
-    "correctAnswers": [54.68]
+    correctAnswer: 54.68
   },
   {
     "id": 44,
@@ -15947,7 +15947,7 @@ $$\frac{\lambda_1}{\lambda_2} = \frac{1/D_1^2}{1/D_2^2} = \left(\frac{D_2}{D_1}\
 Substitute the given relationship $D_2 = 2D_1$:
 $$\frac{\lambda_1}{\lambda_2} = \left(\frac{2D_1}{D_1}\right)^2 = 2^2 = 4$$
 The ratio evaluates perfectly to $4$[cite: 3, 4].`,
-    "correctAnswers": [4]
+    correctAnswer: 4
   },
   {
     "id": 45,
@@ -15975,7 +15975,7 @@ $$m = \frac{h'}{h} = -\frac{v}{u}$$
 $$h' = h \left( -\frac{v}{u} \right) = 2 \left( -\frac{-60}{-30} \right) = 2(-2) = -4\text{ cm}$$
 The negative sign signifies that the image is inverted. The question asks for "height", usually implying the physical magnitude.
 Magnitude of image height $|h'| = 4\text{ cm}$[cite: 3, 4].`,
-    "correctAnswers": [4]
+    correctAnswer: 4
   },
   {
     "id": 46,
@@ -16007,7 +16007,7 @@ Now, integrate the result with respect to $z$:
 $$\Phi = \int_{0}^{1} \left( \frac{3}{2} - z^2 \right) dz = \left[ \frac{3z}{2} - \frac{z^3}{3} \right]_{0}^{1} = \frac{3}{2} - \frac{1}{3} = 1.5 - 0.3333...$$
 $$\Phi = 1.1666...$$
 Rounding off to two decimal places, the flux evaluates to $1.17$[cite: 3, 4].`,
-    "correctAnswers": [1.17]
+    correctAnswer: 1.17
   },
   {
     "id": 47,
@@ -16025,7 +16025,7 @@ The question requests the specific numerical magnitude of this energy expressed 
 Substitute the provided parameters $q = 5\text{ C}$ and $R = 4\text{ m}$:
 $$\text{Coefficient} = \frac{5^2}{2(4)} = \frac{25}{8} = 3.125$$
 The energy is $3.125$[cite: 3, 4].`,
-    "correctAnswers": [3.125]
+    correctAnswer: 3.125
   },
   {
     "id": 48,
@@ -16049,7 +16049,7 @@ $$D = \frac{8\pi \times 10^{-2}}{2\pi (20 \times 10^{-3})}$$
 Simplify the expression by canceling identical $\pi$ terms:
 $$D = \frac{4 \times 10^{-2}}{20 \times 10^{-3}} = \frac{0.04}{0.02} = 2\text{ C/m}^2$$
 The magnitude evaluates perfectly to $2$[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 49,
@@ -16070,7 +16070,7 @@ Substitute the given values: wavelength $\lambda = 550\text{ nm} = 550 \times 10
 $$|n_1 - n_2| = \frac{7 \times 550 \times 10^{-9}}{6 \times 10^{-6}} = \frac{3850 \times 10^{-9}}{6 \times 10^{-6}} = \frac{3.85 \times 10^{-6}}{6 \times 10^{-6}}$$
 $$|n_1 - n_2| = \frac{3.85}{6} \approx 0.64166...$$
 Rounding off properly to two decimal places, the value is $0.64$[cite: 3, 4].`,
-    "correctAnswers": [0.64]
+    correctAnswer: 0.64
   },
   {
     "id": 50,
@@ -16106,7 +16106,7 @@ The original input amplitude is rigidly specified as $V_{in, amp} = 200\text{ mV
 The final output amplitude $V_{0, amp}$ is simply the input amplitude scaled by the absolute magnitude of total gain:
 $$V_{0, amp} = |A_{total}| \times V_{in, amp} = 55.125 \times 0.2\text{ V} = 11.025\text{ V}$$
 Rounding appropriately to two decimal places yields $11.03\text{ V}$[cite: 3, 4].`,
-    "correctAnswers": [11.03]
+    correctAnswer: 11.03
   },
   {
     "id": 51,
@@ -16144,7 +16144,7 @@ $$I_E = \frac{979.7}{2202}\text{ mA} \approx 0.44491\text{ mA}$$
 Convert the result to microamperes ($\mu\text{A}$):
 $$I_E \approx 444.91\text{ }\mu\text{A}$$
 Rounding effectively to a single decimal place gives $444.9\text{ }\mu\text{A}$[cite: 3, 4].`,
-    "correctAnswers": [444.9]
+    correctAnswer: 444.9
   },
   {
     "id": 52,
@@ -16180,7 +16180,7 @@ The mathematical request is to find $|I|^2$:
 $$|I|^2 = \left| 10 - \frac{10}{3}i \right|^2 = (10)^2 + \left(-\frac{10}{3}\right)^2 = 100 + \frac{100}{9}$$
 $$|I|^2 = \frac{900 + 100}{9} = \frac{1000}{9} \approx 111.111...$$
 Rounding off cleanly to one decimal place yields $111.1$[cite: 3, 4].`,
-    "correctAnswers": [111.1]
+    correctAnswer: 111.1
   },
   {
     "id": 53,
@@ -16202,7 +16202,7 @@ Take the principal square root:
 $$Z - 1 = \sqrt{787.2} \approx 28.057$$
 $$Z = 29.057$$
 Because atomic numbers identify fundamental elements and must be strict integers, the closest physical element is Copper, giving exactly $Z = 29$[cite: 3, 4].`,
-    "correctAnswers": [29]
+    correctAnswer: 29
   },
   {
     "id": 54,
@@ -16223,7 +16223,7 @@ $$\Delta v \ge \frac{6.626 \times 10^{-34}}{4\pi \times (1.672 \times 10^{-27}) 
 $$\Delta v \ge \frac{6.626 \times 10^{-34}}{21.01 \times 10^{-42}} \approx 0.315 \times 10^8\text{ m/s}$$
 *(Note: Various textbooks alternatively utilize rougher estimate forms like $\Delta x \Delta p \ge \hbar$ or even $\Delta x \Delta p \ge h$, calculating valid acceptable upper boundaries anywhere from $0.3$ to $3.97 \times 10^8\text{ m/s}$. Using the exact canonical limit formulation yields $0.32$.)*
 The velocity uncertainty coefficient evaluates strictly to $0.32$[cite: 3, 4].`,
-    "correctAnswers": [0.32]
+    correctAnswer: 0.32
   },
   {
     "id": 55,
@@ -16246,7 +16246,7 @@ Since $\sin(\pi) = 0$, the mathematical term vanishes completely:
 $$P = \frac{1}{L} \left[ \frac{L}{2} - 0 \right] = \frac{1}{2} = 0.5$$
 This numerical result logically aligns with basic spatial symmetry assumptions, as the ground state wave function is perfectly symmetric evenly about the midpoint $L/2$.
 The precise probability is exactly $0.5$[cite: 3, 4].`,
-    "correctAnswers": [0.5]
+    correctAnswer: 0.5
   },
   {
     "id": 56,
@@ -16269,7 +16269,7 @@ We now analyze the circuit node using Kirchhoff's Current Law.
     The total current diverges into the two parallel branches.
     $$I_Z = I_{total} - I_L = 2\text{ mA} - 1\text{ mA} = 1\text{ mA}$$
 The final Zener current evaluates precisely to $1\text{ mA}$[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 57,
@@ -16289,7 +16289,7 @@ $$\frac{R_{old}^2}{T_{old}} = \frac{R_{new}^2}{T_{new}}$$
 Rearrange to solve explicitly for the new temporal length of the day $T_{new}$:
 $$T_{new} = T_{old} \times \left( \frac{R_{new}}{R_{old}} \right)^2 = 24 \times (1.04)^2 = 24 \times 1.0816 = 25.9584\text{ hours}$$
 Rounding cleanly to two decimal places, the new temporal length is $25.96\text{ hours}$[cite: 3, 4].`,
-    "correctAnswers": [25.96]
+    correctAnswer: 25.96
   },
   {
     "id": 58,
@@ -16309,7 +16309,7 @@ Insert the specific numeric values provided: $W = 2300\text{ J}$, $R = 8.314\tex
 $$n = \frac{2 \times 2300}{5 \times 8.314 \times (1150 - 400)} = \frac{4600}{41.57 \times 750}$$
 $$n = \frac{4600}{31177.5} \approx 0.14754\text{ moles}$$
 Rounding smoothly to two decimal places determines $0.15$ moles are strictly required[cite: 3, 4].`,
-    "correctAnswers": [0.15]
+    correctAnswer: 0.15
   },
   {
     "id": 59,
@@ -16327,7 +16327,7 @@ Determine the fixed numerical values for each corresponding positional slot:
 Summing these structural components together outputs the final decimal value:
 $$\text{Decimal equivalent} = 6 + 0.625 = 6.625$$
 The equivalent decimal format correctly maps to $6.625$[cite: 3, 4].`,
-    "correctAnswers": [6.625]
+    correctAnswer: 6.625
   },
   {
     "id": 60,
@@ -16345,7 +16345,7 @@ From the defined input vector $\vec{B}_1 = 4\hat{x} - 6\hat{y} + 2\hat{z}\text{ 
 Because the normal physical component forcibly bridges the boundary gap without distortion, $B_{2z}$ identically equals $B_{1z}$.
 $$|B_{2n}| = |B_{2z}| = 2\text{ mT}$$
 The resultant magnitude is definitively 2[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 1,
@@ -17393,7 +17393,7 @@ $$\text{Total coefficient} = -\frac{1}{6} - \frac{1}{6} = -\frac{2}{6} = -\frac{
 Convert to a decimal value:
 $$-\frac{1}{3} \approx -0.3333...$$
 Rounding to two decimal places, the coefficient is $-0.33$[cite: 5, 6].`,
-    "correctAnswers": [-0.33]
+    correctAnswer: -0.33
   },
   {
     "id": 42,
@@ -17413,7 +17413,7 @@ $$k_{eff} = k + \frac{3\lambda}{\lambda/k} = k + 3k = 4k$$
 The angular frequency $\omega$ for small harmonic oscillations is defined as:
 $$\omega = \sqrt{\frac{k_{eff}}{m}} = \sqrt{\frac{4k}{m}} = 2\sqrt{\frac{k}{m}}$$
 The numerical integer coefficient in units of $\sqrt{\frac{k}{m}}$ is exactly $2$[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 43,
@@ -17433,7 +17433,7 @@ $$R_p^3 = \frac{1}{8} R_e^3 \implies R_p = \left(\frac{1}{8}\right)^{1/3} R_e = 
 Since surface gravity is directly proportional to radius:
 $$\frac{g_p}{g_e} = \frac{R_p}{R_e} = \frac{1/2 R_e}{R_e} = \frac{1}{2} = 0.5$$
 The ratio is exactly $0.5$[cite: 5, 6].`,
-    "correctAnswers": [0.5]
+    correctAnswer: 0.5
   },
   {
     "id": 44,
@@ -17453,7 +17453,7 @@ The problem states that the 4th order interference maximum is absent. The very f
 $$\frac{a+b}{a} = \frac{4}{1}$$
 $$1 + \frac{b}{a} = 4 \implies \frac{b}{a} = 3$$
 The strict ratio $\frac{b}{a}$ is the integer $3$[cite: 5, 6].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 45,
@@ -17478,7 +17478,7 @@ $$1 - b\sqrt{3} = 0 \implies b = \frac{1}{\sqrt{3}}$$
 Convert the exact result to a decimal value:
 $$b \approx \frac{1}{1.73205} \approx 0.57735$$
 Rounding off accurately to two decimal places, the constant is $0.58$[cite: 5, 6].`,
-    "correctAnswers": [0.58]
+    correctAnswer: 0.58
   },
   {
     "id": 46,
@@ -17506,7 +17506,7 @@ Compute the numeric value:
 $$3^{5/3} = 3^1 \cdot 3^{2/3} = 3 \times (9)^{1/3} \approx 3 \times 2.08008 \approx 6.24025$$
 $$\frac{P_1}{P_2} = \frac{1}{6.24025} \approx 0.16025$$
 Rounding strictly to two decimal places, the ratio is $0.16$[cite: 5, 6].`,
-    "correctAnswers": [0.16]
+    correctAnswer: 0.16
   },
   {
     "id": 47,
@@ -17534,7 +17534,7 @@ $$L = 6790 \times 8.314 \times \ln 10 \approx 56452.06 \times 2.302585 \approx 1
 Convert the result to kilojoules (kJ) per mole:
 $$L \approx 130.0096\text{ kJ/mole}$$
 Rounding to one decimal place, the latent heat is identically $130.0\text{ kJ/mole}$[cite: 5, 6].`,
-    "correctAnswers": [130.0]
+    correctAnswer: 130.0
   },
   {
     "id": 48,
@@ -17559,7 +17559,7 @@ All 8 electrons are perfectly accommodated within the first two energy levels wi
 The total ground state energy is the sum:
 $$E_{total} = 3\hbar\omega + 15\hbar\omega = 18\hbar\omega$$
 The energy expressed in requested units is the integer $18$[cite: 5, 6].`,
-    "correctAnswers": [18]
+    correctAnswer: 18
   },
   {
     "id": 49,
@@ -17580,7 +17580,7 @@ The energy expressed in requested units is the integer $18$[cite: 5, 6].`,
     $$5\text{ mA} = (50 + 1) I_b = 51 I_b$$
     $$I_b = \frac{5}{51}\text{ mA} \approx 0.098039...\text{ mA}$$
 Rounding reliably to two decimal places yields $0.10\text{ mA}$[cite: 5, 6].`,
-    "correctAnswers": [0.10]
+    correctAnswer: 0.10
   },
   {
     "id": 50,
@@ -17601,7 +17601,7 @@ $$\sin\theta = \frac{0.141}{0.6501} \approx 0.21689$$
 Determine the inverse sine (arcsin) to extract the angle in degrees:
 $$\theta = \arcsin(0.21689) \approx 12.525^\circ$$
 *(Note: Occasionally, introductory problems ignore selection rules and simply default to the $(100)$ plane for simple cubes, yielding $d=0.563/2$ and $\theta=14.5^\circ$. However, the rigorous standard for NaCl is $12.52^\circ$)*[cite: 5, 6].`,
-    "correctAnswers": [12.52]
+    correctAnswer: 12.52
   },
   {
     "id": 51,
@@ -17623,7 +17623,7 @@ $$\theta = \arcsin(0.21689) \approx 12.525^\circ$$
     $$V_C = V_{CC} - I_C R_C = 10\text{ V} - (2.3\text{ mA} \times 3\text{ k}\Omega)$$
     $$V_C = 10\text{ V} - 6.9\text{ V} = 3.1\text{ V}$$
 The collector voltage evaluates stably to $3.1\text{ V}$[cite: 5, 6].`,
-    "correctAnswers": [3.1]
+    correctAnswer: 3.1
   },
   {
     "id": 52,
@@ -17648,7 +17648,7 @@ $$T \approx 2000 \times 3.14159 = 6283.185\text{ seconds}$$
 Convert this time into hours (by dividing by $3600\text{ s/hour}$):
 $$T_{hours} = \frac{6283.185}{3600} \approx 1.7453\text{ hours}$$
 Rounding accurately to two decimal places, the time period is $1.75\text{ hours}$[cite: 5, 6].`,
-    "correctAnswers": [1.75]
+    correctAnswer: 1.75
   },
   {
     "id": 53,
@@ -17672,7 +17672,7 @@ $$\left(\frac{D}{R}\right)^3 \approx \frac{5.3331 \times 10^{13}}{2.5266 \times 
 Take the principal cube root of this numerical value:
 $$\frac{D}{R} \approx (211078)^{1/3} \approx 59.54$$
 Rounding cleanly to one decimal place, the ratio is $59.5$[cite: 5, 6].`,
-    "correctAnswers": [59.5]
+    correctAnswer: 59.5
   },
   {
     "id": 54,
@@ -17698,7 +17698,7 @@ $$\Delta P = 0.5 \times 10^5\text{ Pa} = 50,000\text{ Pa}$$
 Substitute the parameters ($\rho = 1000\text{ kg/m}^3$):
 $$v_{exit} = \sqrt{\frac{2 \times 50000}{1000}} = \sqrt{\frac{100000}{1000}} = \sqrt{100} = 10\text{ m/s}$$
 The exact speed is the integer $10$[cite: 5, 6].`,
-    "correctAnswers": [10]
+    correctAnswer: 10
   },
   {
     "id": 55,
@@ -17719,7 +17719,7 @@ The exact speed is the integer $10$[cite: 5, 6].`,
     Using $\pi \approx 3.14159$:
     $$\Delta\theta_{deg} = \frac{1.5}{3.14159} \approx 0.47746^\circ$$
 Rounding smoothly to two decimal places, the angular difference is $0.48^\circ$[cite: 5, 6].`,
-    "correctAnswers": [0.48]
+    correctAnswer: 0.48
   },
   {
     "id": 56,
@@ -17755,7 +17755,7 @@ $$|\vec{L}_2| = m R^2 \omega |1 - 2\pi| = m R^2 \omega (2\pi - 1)$$
 We must express this strictly in the requested format $(mR^2\omega)x$, therefore $x = 2\pi - 1$.
 $$x = 2(3.14159) - 1 = 6.28318 - 1 = 5.28318$$
 Rounding precisely to two decimal places yields $5.28$[cite: 5, 6].`,
-    "correctAnswers": [5.28]
+    correctAnswer: 5.28
   },
   {
     "id": 57,
@@ -17783,7 +17783,7 @@ $$\beta = \frac{4 \pm \sqrt{16 - 4(\sqrt{3})(\sqrt{3})}}{2\sqrt{3}} = \frac{4 \p
 This yields two mathematical solutions: $\beta = \frac{6}{2\sqrt{3}} = \sqrt{3}$ (which is physically impossible since $v < c$) and $\beta = \frac{2}{2\sqrt{3}} = \frac{1}{\sqrt{3}}$.
 $$\frac{v}{c} = \frac{1}{\sqrt{3}} \approx 0.57735$$
 Rounding off accurately to two decimal places produces $0.58$[cite: 5, 6].`,
-    "correctAnswers": [0.58]
+    correctAnswer: 0.58
   },
   {
     "id": 58,
@@ -17806,7 +17806,7 @@ Substitute the standard speed of light $c = 3 \times 10^8\text{ m/s}$:
 3.  **Calculate the temporal difference:**
     $$\Delta t' = t'_2 - t'_1 = -\frac{4}{9} - 0 = -0.4444...\text{ seconds}$$
 Rounding the result consistently to two decimal places yields $-0.44$[cite: 5, 6].`,
-    "correctAnswers": [-0.44]
+    correctAnswer: -0.44
   },
   {
     "id": 59,
@@ -17829,7 +17829,7 @@ $$V_{peak} = 24 \times \sqrt{2} \approx 24 \times 1.4142 = 33.94\text{ V}$$
 Substitute this peak voltage to determine the final doubled DC output:
 $$V_{out} = 2 \times 33.94\text{ V} = 67.88\text{ V}$$
 Rounding off sensibly to one decimal place produces a steady output of $67.9\text{ V}$[cite: 5, 6].`,
-    "correctAnswers": [67.9]
+    correctAnswer: 67.9
   },
   {
     "id": 60,
@@ -17853,6 +17853,6 @@ $$E_F = (6.1037 \times 10^{-39}) \times (1.5312 \times 10^{20}) \approx 9.346 \t
 Finally, convert this minuscule energy quantity from Joules into electron-volts (eV) by dividing by the elementary charge constant:
 $$E_F (\text{in eV}) = \frac{9.346 \times 10^{-19}\text{ J}}{1.6 \times 10^{-19}\text{ J/eV}} \approx 5.841\text{ eV}$$
 Rounding off sensibly to one decimal place yields a final Fermi energy of $5.8\text{ eV}$[cite: 5, 6].`,
-    "correctAnswers": [5.8]
+    correctAnswer: 5.8
   }
 ];
