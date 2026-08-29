@@ -1523,7 +1523,7 @@ export default function IITJamPhysicsHub() {
                                 <div
                                   className={`
       w-12 h-12 shrink-0
-      rounded-full
+      ${isMSQ ? "rounded-[16px]" : "rounded-full"}
       flex items-center justify-center
       text-xl text-white
       ${isSelected
