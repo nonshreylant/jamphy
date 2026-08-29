@@ -3179,7 +3179,7 @@ Next, we calculate the current density \(\vec{J}\) using Ampere's Law in differe
 Since \(B_z = -2by\), its derivative with respect to \(y\) is \(-2b\), and with respect to \(x\) is \(0\).
 \(\vec{J} = \frac{1}{\mu_0} \hat{i}(-2b) = -\frac{2b}{\mu_0} \hat{i}\).`,
 
-    correctAnswers: [3],
+    correctAnswer: 3,
   },
 
   {
@@ -4511,7 +4511,7 @@ Total Na⁺ ions = 4.
 
 Therefore, the total number of ions (Na⁺ and Cl⁻ combined) in a single unit cell is 4 + 4 = 8.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -4541,7 +4541,7 @@ The place values in binary for the integer part are ..., 8, 4, 2, 1. For the fra
 Now, sum the decimal values:
 $22.50 + 26.25 + 21.75 = 70.50$`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -4598,7 +4598,7 @@ $H^\dagger H = H H = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \begin{pmatri
 Since $-i^2 = -(-1) = 1$, the product is $\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I$.
 Thus, the matrix is also **Unitary**.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4642,7 +4642,7 @@ $\frac{\partial}{\partial r}(r^{-1}) = -r^{-2}$
 Multiply by the leading term:
 $\nabla \cdot \mathbf{A} = \frac{1}{r^2} (-r^{-2}) = -\frac{1}{r^4}$`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4688,7 +4688,7 @@ Comparing the proton and neutron, the magnitude for the proton ($2.79$) is great
 
 Thus, the order of magnitudes is: $\mu_e > \mu_p > \mu_n$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4731,7 +4731,7 @@ Therefore, the probability density on the right side must be a flat, horizontal 
 
 Option C correctly shows the oscillating interference pattern on the left and a flat, constant density on the right.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -4760,7 +4760,7 @@ This is because the induced dipoles in the medium are perfectly aligned with the
 
 Therefore, the angle $\alpha$ between the reflected wave and the refracted wave is exactly $90^\circ$.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -4803,7 +4803,7 @@ $-4a + 1800 = 0$
 $4a = 1800$
 $a = 450$`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4847,7 +4847,7 @@ So, $\nabla \times \mathbf{F} = \frac{B}{s^2}\hat{\phi}$.
 For the field to be electrostatic, the curl must be zero everywhere, which requires $B = 0$.
 The constant $A$ can be any value, such as $A = 1$. Thus, $A=1$ and $B=0$ is a valid pair.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4880,7 +4880,7 @@ This is because the horizontal motion occurs at a constant velocity ($x \propto 
 
 Simple harmonic motion maps to a sine/cosine wave or an ellipse in phase space. Uniform circular motion maps to a circle. Motion on an inclined plane is purely linear.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4918,7 +4918,7 @@ $l = 12 \times \frac{1}{2} = 6$
 
 The Miller indices are enclosed in parentheses: $(436)$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -4947,7 +4947,7 @@ The primitive unit cell of the simple hexagonal lattice is a prism with a rhombu
 
 Therefore, the number of atoms in the basis of the primitive cell is 2.`,
 
-    correctAnswers: [1],
+    correctAnswer: 1,
   },
 
   {
@@ -4991,7 +4991,7 @@ In a typical logic evaluation:
 - Take the intermediate outputs and feed them into the final gate.
 - The specific combination of $A=1, B=0$ will exclusively force the final gate to output a logical 0. All other combinations ($00, 01, 11$) will evaluate to HIGH (1).`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5050,7 +5050,7 @@ $= 2 \left[ \frac{\sin^2\theta}{2} \right]_0^{\pi/2} \left[ \frac{r^4}{4} \right
 
 Subtracting the two parts gives: $\frac{3\pi}{4} - \frac{1}{4} = \frac{1}{4}(3\pi - 1)$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5108,7 +5108,7 @@ Integrate over the full loop:
 $\oint_C \mathbf{F} \cdot d\mathbf{l} = \int_0^{2\pi} 1 d\theta = 2\pi$.
 Thus, the magnitude of the flux is $2\pi$.`,
 
-    correctAnswers: [1],
+    correctAnswer: 1,
   },
 
   {
@@ -5161,7 +5161,7 @@ $\frac{z_1 + z_2 + z_3 + z_4}{z_1 z_2 z_3 z_4} = \frac{S}{P} = \frac{8}{26}$
 
 Simplifying the fraction by dividing the numerator and denominator by 2 yields $\frac{4}{13}$.`,
 
-    correctAnswers: [1],
+    correctAnswer: 1,
   },
 
   {
@@ -5192,7 +5192,7 @@ Since the number of allowed modes in a cavity increases proportionally to the sq
 
 Max Planck resolved this by quantizing energy, showing that high-frequency modes require large discrete packets of energy, making them statistically highly unlikely to be excited at normal temperatures, thus naturally reducing their average energy to near zero.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5235,7 +5235,7 @@ $\beta = \sqrt{0.991736} \approx 0.9958$
 
 The speed of the electron is approximately $0.996c$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5288,7 +5288,7 @@ Therefore, the ground state wavefunctions for both particles are identical: $\ps
 
 Option C correctly illustrates that the electron has a higher energy level than the muon, while both share the exact same spatial probability distribution.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -5326,7 +5326,7 @@ $d = \frac{\lambda}{4}$
 Given the wavelength $\lambda = 580$ nm:
 $d = \frac{580}{4} = 145$ nm.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5365,7 +5365,7 @@ $d = \frac{600 \text{ nm}}{2 \times 0.05} = \frac{600}{0.1} = 6000 \text{ nm} = 
 
 The minimum thickness is $6\ \mu\text{m}$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5412,7 +5412,7 @@ $A = \sqrt{2 \times 1249.4} = \sqrt{2498.8} \approx 50$.
 
 The value of $A$ is $50$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5471,7 +5471,7 @@ $\mathbf{D}_{2\parallel} = \varepsilon_2 \mathbf{E}_{2\parallel} = (\varepsilon_
 The total displacement vector in medium 2 is the sum of its tangential and normal parts:
 $\mathbf{D}_2 = \mathbf{D}_{2\parallel} + \mathbf{D}_{2\perp} = (9\hat{x} + 6\hat{y} + 16\hat{z})\varepsilon_0$.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -5526,7 +5526,7 @@ $D_{max} = 2\sqrt{\frac{h}{2}\left(h - \frac{h}{2}\right)} = 2\sqrt{\frac{h^2}{4
 
 Therefore, the maximum value of $D$ is indeed $h$.`,
 
-    correctAnswers: [3],
+    correctAnswer: 3,
   },
 
   {
@@ -5570,7 +5570,7 @@ Distributing the effective incident area equally among the $n$ holes gives an ar
 Multiplying this effective area by the velocity at the bottom yields the flow rate for an individual hole:
 $Q_h = \frac{A_o}{n} v_b = \frac{A_o}{n} \sqrt{v_o^2 + 2gh}$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5620,7 +5620,7 @@ $T = t_0 + \frac{2e t_0}{1-e} = t_0 \left( 1 + \frac{2e}{1-e} \right) = t_0 \lef
 
 Thus, the total time required is proportional to $\frac{1+e}{1-e}$.`,
 
-    correctAnswers: [1],
+    correctAnswer: 1,
   },
 
   {
@@ -5670,7 +5670,7 @@ $t_{avg} \propto \frac{T}{\sqrt{T}} = \sqrt{T}$.
 
 The average time is proportional to $\sqrt{T}$.`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -5719,7 +5719,7 @@ $C_p = C_v + R = 3R + R = 4R$
 The ratio of specific heats, denoted as $\gamma$, is:
 $\gamma = \frac{C_p}{C_v} = \frac{4R}{3R} = \frac{4}{3}$.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -5787,7 +5787,7 @@ This represents a wave packet (beat formation) where:
 The carrier wave is $\sin(1.5kx - 1.5\omega t)$, which has an angular frequency of $1.5\omega = \frac{3}{2}\omega$.
 This exactly matches Option C.`,
 
-    correctAnswers: [2],
+    correctAnswer: 2,
   },
 
   {
@@ -5847,7 +5847,7 @@ $\lambda^2 = \frac{4b}{2a} = \frac{2b}{a}$
 Taking the square root gives the required wavelength:
 $\lambda = \sqrt{\frac{2b}{a}}$`,
 
-    correctAnswers: [0],
+    correctAnswer: 0,
   },
 
   {
@@ -7074,7 +7074,7 @@ For a cubic unit cell, the dashed arrow in which of the following figures repres
 
 A vector pointing in the [110] direction has equal positive components along the X and Y axes, and a zero component along the Z axis. Therefore, the arrow representing this direction must lie entirely within the X-Y plane (the base of the cube) and point diagonally across it.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7110,7 +7110,7 @@ $\nabla \times \mathbf{F} = (0 - 2y)\hat{i} - (3z - 0)\hat{j} + (0 - x)\hat{k} =
 
 Therefore, the field in option (D) is the only one with a non-zero curl.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -7144,7 +7144,7 @@ $\eta = \frac{1}{3} (mn) \bar{v} \left(\frac{1}{\sqrt{2}\pi d^2 n}\right) = \fra
 Notice that the number density '$n$' cancels out. Since pressure $P = n k_B T$, changes in pressure at a fixed temperature only change '$n$'. Because '$n$' cancels out in the viscosity formula, the viscosity of a dilute gas is **independent of pressure** at a fixed temperature. 
 (It does depend on temperature since $\bar{v} \propto \sqrt{T}$, making $\eta \propto \sqrt{T}$).`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7178,7 +7178,7 @@ The plot of the function $f(x) = ||x| - 1|$ is
 
 The segment from $x = -1$ to $x = 1$, which was previously below the x-axis dipping down to $-1$, flips upwards to form a peak at $(0, 1)$. The rest of the graph remains a "V" shape extending outwards from $x = -1$ and $x = 1$. This yields a 'W' shaped curve.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7218,7 +7218,7 @@ $\Delta S = S_{\text{disordered}} - S_{\text{ordered}}$
 $\Delta S = 2N k_B \ln(2) - 2 k_B \ln(2)$
 $\Delta S = 2(N-1) k_B \ln(2)$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7263,7 +7263,7 @@ $\frac{C_v}{T} = \gamma + \beta T$
 
 This represents a straight line equation ($y = mx + c$) where the independent variable is $T$, the slope is $\beta$ (positive), and the y-intercept is $\gamma$ (positive). The plot that shows a straight line with a positive y-intercept and positive slope corresponds to this derived relationship.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7311,7 +7311,7 @@ Let's analyze the clamping levels during the positive and negative half cycles o
 
 **Conclusion:** The output waveform is clipped at $+3\text{ V}$ on the positive side and $-0.7\text{ V}$ on the negative side.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7350,7 +7350,7 @@ $\left(\frac{L_1}{L_2}\right)^2 = \frac{1}{9}$
 Taking the positive square root (since width must be positive):
 $\frac{L_1}{L_2} = \frac{1}{3}$`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7397,7 +7397,7 @@ $\frac{2R_2}{R_1 + R_2} = 1 \implies 2R_2 = R_1 + R_2 \implies R_2 = R_1$
 
 Therefore, the ratio $\frac{R_1}{R_2} = 1$.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7442,7 +7442,7 @@ $V = mg(r\sin\theta) = mgr\sin\theta$
 Adding $T$ and $V$:
 $E = \frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -7479,7 +7479,7 @@ A small bar magnet is dropped through different hollow copper tubes with same le
 
 The graph representing an initial increase that eventually saturates corresponds to Option A.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7517,7 +7517,7 @@ Two digital inputs A and B are given to the following circuit. For $A = 1$, $B =
 
 Thus, the final output states are $X = 1$ and $Y = 0$.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7561,7 +7561,7 @@ $\frac{\partial v}{\partial x} = \frac{1}{\sqrt{2}}$, $\frac{\partial v}{\partia
 Substitute these into the matrix:
 $J = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}$`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -7601,7 +7601,7 @@ Let's apply this to the two cases:
 
 Option A correctly illustrates these pseudovector reflection rules.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7636,7 +7636,7 @@ Multiplying the matrices out gives us the following equations for the elements:
 Reconstructing the inverse matrix with these values:
 $A^{-1} = \begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7678,7 +7678,7 @@ For this to hold true, the constant $k$ must be equal to $\mu_0$.
 Therefore, the modified Faraday's law is:
 $\nabla \times \mathbf{E} = -\mu_0 \mathbf{J}_m - \frac{\partial\mathbf{B}}{\partial t}$`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -7716,7 +7716,7 @@ Applying this to our equation where $x=T$, $y=P$, $M=\beta$, and $N=-\kappa$:
 $\left(\frac{\partial \beta}{\partial P}\right)_T = \left(\frac{\partial (-\kappa)}{\partial T}\right)_P$
 $\left(\frac{\partial \beta}{\partial P}\right)_T = -\left(\frac{\partial \kappa}{\partial T}\right)_P$`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -7756,7 +7756,7 @@ $f \approx 0.62$
 * The angle of incidence relative to the optic axis is $30^\circ$, meaning the amplitudes of the ordinary and extraordinary components are proportional to $\cos(30^\circ)$ and $\sin(30^\circ)$. Since $30^\circ \neq 45^\circ$, the amplitudes are unequal.
 * An arbitrary phase difference with unequal orthogonal amplitudes results in **elliptical polarization**.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7794,7 +7794,7 @@ Using the chain rule:
 $v_g = \frac{2C}{d} \cos\left(\frac{kd}{2}\right) \cdot \frac{d}{2}$
 $v_g = C \cos\left(\frac{kd}{2}\right)$`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -7838,7 +7838,7 @@ $\sigma \approx 31.4159 \times 8.854 \times 10^{-6}$
 $\sigma \approx 278.15 \times 10^{-6} \text{ } \Omega^{-1}\text{m}^{-1}$
 $\sigma \approx 2.78 \times 10^{-4} \text{ } \Omega^{-1}\text{m}^{-1}$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
   {
     id: 21,
@@ -7883,7 +7883,7 @@ $\mathbf{F} \cdot d\mathbf{r} = (-R\sin\theta)(-R\sin\theta \, d\theta) + (0)(R\
 Evaluate the line integral from $0$ to $2\pi$:
 $\oint_C \mathbf{F} \cdot d\mathbf{r} = \int_{0}^{2\pi} R^2 \sin^2\theta \, d\theta = R^2 \int_{0}^{2\pi} \frac{1 - \cos(2\theta)}{2} \, d\theta = R^2 \left[ \frac{\theta}{2} - \frac{\sin(2\theta)}{4} \right]_0^{2\pi} = R^2 (\pi) = \pi R^2$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7941,7 +7941,7 @@ Assume $I_C \approx I_E = 1.303 \text{ mA}$.
 $V_C = 15 - I_C R_C = 15 - (1.303 \text{ mA})(4.7 \text{ k}\Omega) = 15 - 6.124 = 8.876 \text{ V} \approx 8.9 \text{ V}$.
 This perfectly matches option A.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -7977,7 +7977,7 @@ $\omega_s = \sqrt{\frac{g}{l}}$
 3. **Calculate the ratio:**
 $\frac{\omega_r}{\omega_s} = \frac{\sqrt{\frac{3g}{2l}}}{\sqrt{\frac{g}{l}}} = \sqrt{\frac{3}{2}}$`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -8022,7 +8022,7 @@ Now, find the wavelength $\lambda$ for different integer values of $m$:
 
 The wavelength of $499.8 \text{ nm}$ closely matches Green light ($\sim 500 \text{ nm}$). Thus, green will be predominantly visible.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -8066,7 +8066,7 @@ $P = 13.48 \text{ kNm}^{-2}$
 
 The closest value among the options is $13.5$.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -8099,7 +8099,7 @@ At the planar interface of two dielectrics, which of the following statements re
 
 Therefore, the normal component of $\vec{D}$ is continuous, and that of $\vec{P}$ is discontinuous.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -8140,7 +8140,7 @@ $\langle E \rangle = \frac{0 + 0.9619 + 2(0.9254)}{2.8873} = \frac{0.9619 + 1.85
 
 The mean energy is closest to 0.97 meV.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -8171,7 +8171,7 @@ For the Maxwell-Boltzmann speed distribution, the ratio of the root-mean-square 
 We are asked for the ratio of $v_{rms}$ to $v_{mp}$:
 $\text{Ratio} = \frac{v_{rms}}{v_{mp}} = \frac{\sqrt{\frac{3k_BT}{m}}}{\sqrt{\frac{2k_BT}{m}}} = \sqrt{\frac{3}{2}}$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -8208,7 +8208,7 @@ In an extrinsic p-type semiconductor, which of the following schematic diagram d
 
 Therefore, the graph should show $E_F$ starting close to $E_V$ at $T=0$, and rising to stabilize in the middle of the bandgap as $T$ becomes large. This matches Option A.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -8238,7 +8238,7 @@ A container is occupied by a fixed number of non-interacting particles. If they 
 
 Therefore, the correct relationship for the pressures is $P_{FD} > P_{MB} > P_{BE}$.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -9391,7 +9391,7 @@ $x ^ 2 - y ^ 2 = 2$
 
 This is the standard equation of a hyperbola centered at the origin.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9426,7 +9426,7 @@ $x ^ { \prime } = \frac{ 2 } { \sqrt{ 3 } } \left(x - \frac{ c }{ 2}t\right) = \
 2. Temporal coordinate:
 $t ^ { \prime } = \frac{ 2 } { \sqrt{ 3 } } \left(t - \frac{(c / 2)x}{ c^ 2}\right) = \frac{ 2 } { \sqrt{ 3 } } \left(t - \frac{ x }{ 2c }\right)$`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -9459,7 +9459,7 @@ $\langle E_1 \rangle = -\frac{ 1 } { 2 \cosh(\beta\epsilon) } \cdot \frac{ \part
 For an ideal gas of $N$ non - interacting molecules, the total mean energy $\langle E \rangle$ is simply $N$ times the single - particle mean energy:
 $\langle E \rangle = N \langle E_1 \rangle = -N\epsilon \tanh(\beta\epsilon) = -N\epsilon \tanh\left(\frac{ \epsilon }{ k_B T }\right)$`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -9498,7 +9498,7 @@ $ -\frac{ \left(\frac{ \partial V }{ \partial T }\right)_{ P } } { \left(\frac{ 
 
 Therefore, $\frac{ \beta } { \kappa } = \left(\frac{ \partial P }{ \partial T }\right)_{ V } $.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -9541,7 +9541,7 @@ Difference $ = 117 - 30 = 87_{ 10 } $
 Convert $87_{ 10 }$ back to binary:
 $87 = 64 + 16 + 4 + 2 + 1 \implies 1010111_2$.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9580,7 +9580,7 @@ These states are: $(3, 2, 1), (3, 1, 2), (2, 3, 1), (2, 1, 3), (1, 3, 2), (1, 2,
 
   Therefore, the degeneracy of the $5 ^ { \text{ th }}$ excited state is 6.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -9623,7 +9623,7 @@ $r ^ 4 = \frac{ L ^ 2 } { 2mk } $
 Taking the fourth root gives the radius of the circular orbit:
 $r = \left(\frac{ L^ 2}{ 2mk }\right) ^ { \frac{ 1 } { 4 }}$`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9665,7 +9665,7 @@ $2a = 4 \implies a = 2$
 
 Therefore, $a = 2$ and $b = 8$.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9692,7 +9692,7 @@ Consider an electrostatic field $\vec{ E } $ in a region of space.Identify the I
 3. ** Option C:** A vector field with zero curl can always be expressed as the negative gradient of a scalar potential function $V$.Thus, $\vec{ E } = -\nabla V$.This statement is correct.
 4. ** Option D:** The potential difference between two points $A$ and $B$ is given by $\Delta V = V_B - V_A = -\int_A ^ B \vec{ E } \cdot d\vec{ l } $.This integral evaluates to zero * only * if the electric field is zero everywhere along the path, or if points A and B happen to be on the same equipotential surface.It is generally ** not ** zero.Therefore, this statement is INCORRECT.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -9735,7 +9735,7 @@ Looking at the typical options:
 * An option showing a central minimum or dip is incorrect for a single slit.
 * An option showing a prominent central maximum that is noticeably wider and significantly taller than the secondary maxima perfectly matches the $\text{ sinc }^ 2$ profile.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -9775,7 +9775,7 @@ $a_2 = \frac{ 1 } { 2 } $
 The sum $a_0 + a_1 + a_2$ is:
 $1 + 1 + \frac{ 1 } { 2 } = 2.5 = \frac{ 5 } { 2 } $.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -9816,7 +9816,7 @@ The region $D$ is a unit circle(radius $r = 1$), so its area is $\pi(1) ^ 2 = \p
   Therefore, the value of the integral is:
 $2 \times \pi = 2\pi$.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9854,7 +9854,7 @@ $i(t) = 10 ^ {- 3} \left(1 - e ^ {- 1} \right) \text{ A } $
 Since $1 \text{ mA } = 10 ^ {- 3} \text{ A } $, the current in mA is:
 $i(1 \, \mu\text{ s }) = (1 - e ^ {- 1}) \text{ mA } $.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -9898,7 +9898,7 @@ Since $T > 0$(absolute temperature) and $\Delta S > 0$, the change in Helmholtz 
 
 Therefore, the correct relations are $\Delta S > 0$, $\Delta U = 0$, $\Delta F < 0$.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -9937,7 +9937,7 @@ $\text{ Fraction } = \frac{ N(\lambda) - N(2\lambda) } { N_0 } = e ^ {- 1} - e ^
 Factor out $e ^ {- 2}$ to match the options:
 $\text{ Fraction } = \frac{ 1 } { e } - \frac{ 1 } { e ^ 2 } = \frac{ e - 1 } { e ^ 2 } $.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -9978,7 +9978,7 @@ Since the ground state particle is more likely to be found near the center of th
 
     Therefore, $\Delta p =\frac{ \pi\hbar } { L }$ and $0 <\Delta x <\frac{ L } { 2\sqrt{ 3 } } $.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -10011,7 +10011,7 @@ $\vec{ a } = -r\dot{ \theta }^ 2\hat{ r } + 2\dot{ r } \dot{ \theta } \hat{ \the
 
 The first term is the centripetal acceleration, and the second term is the Coriolis acceleration.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -10058,7 +10058,7 @@ $v_r = \sqrt{ \frac{ 2GMR } { r(R + r) } } $
 $L = m v_r r = m \left(\sqrt{ \frac{ 2GMR }{ r(R + r)}} \right) r = m \sqrt{ \frac{ 2GMRr ^ 2 } { r(R + r) } } $
 $L = m \sqrt{ \frac{ 2GMRr } { R + r } } $`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -10092,7 +10092,7 @@ $\Phi_c = -B_0 \pi R ^ 2$.
 
   Thus, $\Phi_b = B_0 \pi R ^ 2$ and $\Phi_c = -B_0 \pi R ^ 2$.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -10126,7 +10126,7 @@ Total flow = $2\pi\sigma\omega_0 \left[\frac{ r ^ 3 } { 3 } \right]_{ R_1 }^ { R
 
   * (Note: The conventional definition of "total current" crossing a radial cross - section would be $I = \int_{ R_1 }^ { R_2 } K dr = \frac{ 1 } { 2 } \sigma\omega_0(R_2 ^ 2 - R_1 ^ 2)$, which has different dimensions.The presence of $R ^ 3$ in the options and the specific coefficient $\frac{ 2\pi } { 3 }$ confirm that the examiner intended for the area integral of $ |\vec{ K }| $ to be computed.)* `,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
   {
     id: 21,
@@ -10167,7 +10167,7 @@ $N_2(t) = \frac{ N_0 } { 9 } (e ^ {-\lambda t} - e ^ {- 10\lambda t}) $
 Now, find the ratio $\frac{ N_2(t) } { N_1(t) } $:
 $\frac{ N_2(t) } { N_1(t) } = \frac{ \frac{ N_0 } { 9 } (e ^ {-\lambda t } - e ^ {- 10\lambda t})}{N_0 e ^ {-\lambda t }} = \frac{ 1 } { 9 } \left(1 - \frac{ e^ {- 10\lambda t}}{ e^ {-\lambda t}} \right) = \frac{ 1 } { 9 } (1 - e ^ {- 9\lambda t}) $.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -10207,7 +10207,7 @@ $\vec{ a } = \frac{ \vec{ F } } { m } = \frac{ qvB_0 } { \sqrt{ 2 } m } \hat{ x 
 
   (Note regarding other options: Since the velocity has a component parallel to the magnetic field, the particle will move in a helical path, not a circular or straight line).`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -10233,7 +10233,7 @@ The Fermi level $E_F$ represents the energy level with a 50 % probability of bei
 At absolute zero($0\text{ K }$), the valence band is completely full of electrons, and the conduction band is completely empty.The Fermi level must lie exactly in the middle of the forbidden energy gap(bandgap) to symmetrically balance the electron and hole probabilities when the temperature is raised slightly.
   Therefore, at $T = 0\text{ K } $, $E_F = \frac{ E_C + E_V } { 2 } $, which is the center of the bandgap.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -10265,7 +10265,7 @@ $ |\mathcal{ E }| = \left | -\frac{ d\Phi } { dt } \right | = \frac{ d } { dt } 
 Differentiating with respect to $t$:
 $ |\mathcal{ E }| = \frac{ 2\pi k R ^ 5 } { 5 } (3t ^ 2) = \frac{ 6\pi k t ^ 2 R ^ 5 } { 5 } $.`,
 
-    correctAnswers: [0]
+    correctAnswer: 0
   },
 
   {
@@ -10313,7 +10313,7 @@ $V_i ^ { max } = (0.08415\text{ A }) (125\ \Omega) + 9\text{ V } $
 $V_i ^ { max } = 10.51875\text{ V } + 9\text{ V } = 19.51875\text{ V } $
 Rounding to one decimal place, $V_i ^ { max } = 19.5\text{ V } $.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -10353,7 +10353,7 @@ $I_y = \sigma_0 a \left(\frac{ a^ 3}{ 3} - \frac{ a^ 3}{ 4} \right) = \sigma_0 a
   ** 3. Substitute $\sigma_0$:**
     $I_y = \left(\frac{ 2M }{ a^ 2}\right) \frac{ a ^ 4 } { 12 } = \frac{ 2Ma ^ 2 } { 12 } = \frac{ Ma ^ 2 } { 6 } $.`,
 
-    correctAnswers: [2]
+    correctAnswer: 2
   },
 
   {
@@ -10392,7 +10392,7 @@ $x ^ 2 = y ^ 2 \left(1 - \frac{ y^ 2}{ 4a ^ 2 } \right)$
 
 This matches Option D.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -10439,7 +10439,7 @@ Integrating gives $S = 2cTV + \text{ constant } $.Assuming the constant is zero,
 Since $P \propto T ^ 2$, then $T \propto \sqrt{ P } = \sqrt{ U / V } $.
   Therefore, $S \propto TV \propto \sqrt{ \frac{ U } { V } } \cdot V = \sqrt{ U \cdot V } = \sqrt{ UV } $.`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -10481,7 +10481,7 @@ Let's analyze the limits of this function:
 
 The plot should start at the origin, increase almost linearly at first, and then smoothly level off to a horizontal asymptote.This behavior is correctly depicted in option B.`,
 
-    correctAnswers: [1]
+    correctAnswer: 1
   },
 
   {
@@ -10516,7 +10516,7 @@ Since $m$ is even, there are exactly $n = m / 2$ terms in this sequence.
 The sum of a geometric progression is $S_n = a \frac{ r ^ n - 1 } { r - 1 } $.
   $N = 2 \frac{ 4 ^ { m/ 2 } - 1}{ 4 - 1 } = 2 \frac{ (2 ^ 2) ^ { m/ 2 } - 1}{ 3 } = \frac{ 2(2 ^ m - 1) } { 3 } = \frac{ 2 } { 3 } (2 ^ m - 1)$`,
 
-    correctAnswers: [3]
+    correctAnswer: 3
   },
 
   {
@@ -11684,7 +11684,7 @@ $$f''(0) = e^{\cos(0)}(\sin^2 0 - \cos 0) = e(0 - 1) = -e$$
 The coefficient of $x^2$ is:
 $$\frac{f''(0)}{2!} = \frac{-e}{2}$$
 Therefore, the correct option is (B).`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 2,
@@ -11710,7 +11710,7 @@ $$\lambda^2 - 6\lambda + 8 = 0$$
 Factoring the quadratic equation:
 $$(\lambda - 2)(\lambda - 4) = 0$$
 Thus, the eigenvalues are $\lambda = 2$ and $\lambda = 4$.`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 3,
@@ -11736,7 +11736,7 @@ Rearranging to find the ratio of speeds:
 $$\frac{v_c}{v_f} = \frac{r_f}{r_c}$$
 Substitute the given ratio:
 $$\frac{v_c}{v_f} = 300$$`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 4,
@@ -11763,7 +11763,7 @@ Canceling $V$ and $g$ from both sides:
 $$\rho = \frac{3}{4} \rho_L$$
 Solving for the density of the liquid $\rho_L$:
 $$\rho_L = \frac{4}{3}\rho$$`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 5,
@@ -11794,7 +11794,7 @@ $$n - 1 = \frac{2.8792 \times 10^{-4}}{2.6 \times 10^{-2}} \approx 1.107 \times 
 $$n - 1 = 0.01107$$
 $$n = 1 + 0.01107 = 1.01107$$
 Rounding to two decimal places, we get $n \approx 1.01$.`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 6,
@@ -11813,7 +11813,7 @@ Rounding to two decimal places, we get $n \approx 1.01$.`,
 In such diagrams, the vertical axis ($Y$) represents the electron energy ($E$), showing energy levels such as the conduction band edge ($E_C$), valence band edge ($E_V$), and sometimes the Fermi level ($E_F$).
 The horizontal axis ($X$) represents the spatial position or distance ($x$) within the semiconductor material. This allows visualization of how energy bands bend across junctions (like a p-n junction) or interfaces. For a homogeneous material in equilibrium without applied fields, these bands are flat across the distance, hence the term "flat band diagram".
 Therefore, $Y$ is Energy and $X$ is Distance.`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 7,
@@ -11846,7 +11846,7 @@ Let's analyze the operation based on the input voltage $V_i$:
 
 Because the diode is enclosed within the negative feedback loop of the op-amp, the op-amp output will swing as high as necessary to overcome the diode threshold voltage $V_D$. Thus, the non-ideal voltage drop $V_D$ is effectively eliminated, and the circuit behaves ideally. 
 The transfer characteristic is $V_o = 0$ for $V_i > 0$, and $V_o = -V_i$ (a line with slope -1) for $V_i < 0$. This perfectly matches the graph in option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 8,
@@ -11879,7 +11879,7 @@ where $D$ is the diameter of the objective lens/mirror and $\lambda$ is the wave
 
 Comparing the values: $10,000,000 > 4,000,000 > 476.19 > 200$.
 Thus, the order of decreasing resolving power is III > II > I > IV. This matches option (D)[cite: 1].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 9,
@@ -11902,7 +11902,7 @@ The volume of a cubic unit cell with side length $a$ is $V = a^3$.
 The number of atoms per unit volume (number density) is the total number of atoms in the unit cell divided by its volume:
 $$\text{Number density} = \frac{n}{V} = \frac{2}{a^3}$$
 This corresponds to option (C)[cite: 1].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 10,
@@ -11928,7 +11928,7 @@ To add the fractions, find a common denominator, which is $20$:
 $$I = \left(\frac{8}{20} + \frac{5}{20}\right)MR^2$$
 $$I = \frac{13}{20}MR^2$$
 This matches option (C)[cite: 1].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 11,
@@ -11962,7 +11962,7 @@ So, $dx'dy' = 17 dxdy$.
 Therefore, the area element of the original system expressed in the coordinates of $C'$ is:
 $$dxdy = \frac{1}{17} dx'dy'$$
 This corresponds to option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 12,
@@ -11990,7 +11990,7 @@ $t'_2$ is a negative quantity.
 $t'_1 = 0$.
 $t'_3$ is a positive quantity.
 Therefore, the ordering of times is $t'_2 < t'_1 < t'_3$. This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 13,
@@ -12022,7 +12022,7 @@ Divide by 3 to write it in standard form:
 $$x^2 + \frac{y^2}{3} = 1$$
 This is the standard equation of an ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, where $a=1$ and $b=\sqrt{3}$.
 Therefore, the solution represents an ellipse. This corresponds to option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 14,
@@ -12040,7 +12040,7 @@ Therefore, the solution represents an ellipse. This corresponds to option (A)[ci
     "detailedSolution": String.raw`According to Fermat's principle of extremum path, the optical path length between an object point and its corresponding image point must be stationary. For a perfect imaging system (like an ideal lens forming a point image from a point object), all rays originating from the object point that converge to the image point traverse the exact same optical path length. 
 The physical distance for ray 2 is the shortest, but it travels through the thickest part of the glass lens (which has a higher refractive index than air), slowing it down. Ray 1 and Ray 3 travel a longer physical distance in air but pass through a thinner section of the lens. These effects exactly compensate for each other to ensure the optical path length (physical distance $\times$ refractive index) is equal for all paths.
 Therefore, $l_1 = l_2 = l_3$. This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 15,
@@ -12070,7 +12070,7 @@ Substitute $t = \frac{\pi}{2\omega}$, $\cos\left(\frac{\pi}{2}\right) = 0$, and 
 $$V'_x = V(0) - V\omega \left(\frac{\pi}{2\omega}\right)(1) = -\frac{V\pi}{2}$$
 $$V'_y = -V(1) - V\omega \left(\frac{\pi}{2\omega}\right)(0) = -V$$
 Therefore, the velocity in the $S'$ frame is $\left(-\frac{V\pi}{2}, -V\right)$. This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 16,
@@ -12096,7 +12096,7 @@ Let's analyze the circuit stage by stage:
 3.  **Third Gate:** The inputs are $A$ (from the top connection) and $O_2 = 0$.
     Output $Y = A \odot 0 = \overline{A \oplus 0} = \bar{A}$.
 The final output Y is $\bar{A}$. This matches option (D)[cite: 1].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 17,
@@ -12126,7 +12126,7 @@ $$Q = \epsilon_0 K \int_{0}^{1} (8x + 3) \, dx$$
 $$Q = \epsilon_0 K \left[ 4x^2 + 3x \right]_{0}^{1}$$
 $$Q = \epsilon_0 K (4(1)^2 + 3(1) - 0) = \epsilon_0 K (7) = 7K\epsilon_0$$
 This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 18,
@@ -12157,7 +12157,7 @@ $$\vec{p} \cdot \hat{r} = -qa \left(\frac{1}{2}\right) + qa \left(\frac{\sqrt{3}
 Substituting this back into the potential formula:
 $$V = \frac{1}{4\pi\epsilon_0} \frac{1}{r^2} \left[ \frac{qa}{2} (\sqrt{3} - 1) \right] = \frac{1}{4\pi\epsilon_0} \frac{qa}{2r^2} (\sqrt{3} - 1)$$
 This perfectly matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 19,
@@ -12186,7 +12186,7 @@ Using the initial condition $N_B(0) = 0$, we find $C = 0$.
 Thus, to the leading order, the number of nuclei B at small time $t$ is:
 $$N_B(t) \approx \lambda_a N_0 t$$
 This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 20,
@@ -12214,7 +12214,7 @@ $$\vec{v} \times \vec{B} = (0.5c \hat{k}) \times \left(\frac{E_0}{c} \hat{j}\rig
 Substitute everything into the Lorentz force equation:
 $$\vec{F} = q \left[ E_0 \hat{i} + (-0.5 E_0 \hat{i}) \right] = q(E_0 - 0.5 E_0)\hat{i} = 0.5 qE_0 \hat{i} = \frac{qE_0}{2} \hat{i}$$
 This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 21,
@@ -12243,7 +12243,7 @@ Solving for $M_2$:
 $$16 M_2 = 32 \implies M_2 = 2\text{ g/mol}$$
 The gas with a molar mass of $2\text{ g/mol}$ is diatomic Hydrogen ($H_2$). Therefore, the second gas is Hydrogen.
 This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 22,
@@ -12271,7 +12271,7 @@ $$\Delta U = Q_2 - W_2$$
 $$20\text{ J} = 30\text{ J} - W_2$$
 $$W_2 = 30\text{ J} - 20\text{ J} = 10\text{ J}$$
 The work done along path 2 is $10\text{ J}$, matching option (B)[cite: 1].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 23,
@@ -12304,7 +12304,7 @@ Multiply the entire equation by $2$ to clear the denominator of the first term:
 $$2 \left( \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \right)x + 2 \left( \frac{1}{2} - \frac{\sqrt{2}}{2} \right)y = 2m\lambda$$
 $$(\sqrt{3} - \sqrt{2})x + (1 - \sqrt{2})y = 2m\lambda$$
 This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 24,
@@ -12338,7 +12338,7 @@ $$E(x) = \frac{a}{\epsilon} \left[ \frac{x'^2}{2} \right]_{-\frac{W}{2}}^{x} = \
 $$E(x) = \frac{a}{2\epsilon} \left( x^2 - \frac{W^2}{4} \right)$$
 This equation represents an inverted parabola (a U-shape entirely below the x-axis for the interval $-\frac{W}{2} < x < \frac{W}{2}$), with its minimum value at $x = 0$.
 Comparing this parabolic shape with the given options, graph (A) shows exactly this characteristic inverted parabolic profile. Therefore, graph (A) is the correct depiction of the electric field. This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 25,
@@ -12375,7 +12375,7 @@ $$kx_{max}^2 = \frac{4}{3}E$$
 $$x_{max}^2 = \frac{4E}{3k}$$
 $$x_{max} = \sqrt{\frac{4E}{3k}}$$
 This corresponds to option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 26,
@@ -12394,7 +12394,7 @@ This corresponds to option (A)[cite: 1].`,
 2.  **If $\theta = 45^\circ, 135^\circ, \dots$**: The electric field vector has equal amplitudes along both the fast and slow axes. The QWP introduces a phase difference of $\frac{\pi}{2}$ ($90^\circ$) between these equal components. The emerging light is exactly **circularly polarized**.
 3.  **If $\theta$ is any other angle (e.g., $30^\circ$)**: The amplitudes of the components along the fast and slow axes are unequal. The QWP still introduces a $\frac{\pi}{2}$ phase difference, resulting in two orthogonal, out-of-phase components with unequal amplitudes. This produces **elliptically polarized** light.
 Since the emerging light is elliptically polarized, the angle must be something other than $0^\circ, 45^\circ, 90^\circ, 135^\circ,$ etc. Among the given choices, $30^\circ$ is the only angle that results in general elliptical polarization. This matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 27,
@@ -12425,7 +12425,7 @@ $$\vec{B} = -\int K(\hat{i} + y\hat{j} - z\hat{k})\cos(\omega t) dt$$
 $$\vec{B} = -K(\hat{i} + y\hat{j} - z\hat{k}) \frac{\sin(\omega t)}{\omega}$$
 $$\vec{B} = -\frac{K}{\omega}(\hat{i} + y\hat{j} - z\hat{k})\sin(\omega t)$$
 This perfectly matches option (A)[cite: 1].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 28,
@@ -12455,7 +12455,7 @@ This perfectly matches option (A)[cite: 1].`,
     Therefore, for $f_2(t)$: $a_n = 0$ and $b_n \neq 0$.
 
 Combining these results, $a_n \neq 0$ and $b_n = 0$ for $f_1(t)$; $a_n = 0$ and $b_n \neq 0$ for $f_2(t)$. This perfectly matches option (B)[cite: 1].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 29,
@@ -12489,7 +12489,7 @@ Find a common denominator:
 $$I = 2\pi \sigma_0 R^4 \left( \frac{3 - 2}{12} \right) = 2\pi \sigma_0 R^4 \left( \frac{1}{12} \right)$$
 $$I = \frac{\pi \sigma_0 R^4}{6}$$
 This matches option (B)[cite: 1].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 30,
@@ -12517,7 +12517,7 @@ $$\vec{a} = (\ddot{r} - r\dot{\theta}^2)\hat{e}_r + (r\ddot{\theta} + 2\dot{r}\d
 The component in the $\hat{e}_r$ direction is the radial acceleration $a_r$:
 $$a_r = \ddot{r} - r\dot{\theta}^2 = \frac{d^2r}{dt^2} - r \left(\frac{d\theta}{dt}\right)^2$$
 The term $\frac{d^2r}{dt^2}$ is the linear acceleration along the radius, and $-r(\frac{d\theta}{dt})^2$ is the centripetal acceleration. This expression matches option (B)[cite: 1].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 31,
@@ -13418,7 +13418,7 @@ Rounding off to one decimal place gives $0.7\text{ \AA}$[cite: 1].`,
     $f''(x) = 2$. This is a constant and continuous everywhere.
 
 Therefore, the function with a discontinuous second derivative at $x=0$ is $f(x)=x|x|$[cite: 2].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 2,
@@ -13440,7 +13440,7 @@ $$R = \left(\frac{0.47}{2.47}\right)^2 \times 100\%$$
 $$R \approx (0.19028)^2 \times 100\%$$
 $$R \approx 0.0362 \times 100\% = 3.62\%$$
 Rounding to one decimal place, the percentage of light intensity reflected back is $3.6\%$[cite: 2].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 3,
@@ -13460,7 +13460,7 @@ $$V = \frac{1}{4\pi\epsilon_0} \frac{q}{r_1} + \frac{1}{4\pi\epsilon_0} \frac{-q
 For the potential to be exactly zero ($V = 0$):
 $$\frac{q}{r_1} = \frac{q}{r_2} \implies r_1 = r_2$$
 The geometric locus of all points that are equidistant from two fixed points in three-dimensional space is a plane. Specifically, it forms the perpendicular bisector plane of the line segment joining the two charges. Therefore, the points having zero electric potential lie on a plane[cite: 2].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 4,
@@ -13484,7 +13484,7 @@ The geometric locus of all points that are equidistant from two fixed points in 
 According to the thermodynamic relation $\Delta S = \frac{L}{T_c}$, the entropy $S$ undergoes a discontinuous, finite jump exactly at $T_c$.
 Below $T_c$ and above $T_c$, the entropy typically increases gradually with temperature, but precisely at $T_c$, it abruptly transitions from a lower entropy state (like a solid or liquid) to a higher entropy state (like a liquid or gas).
 Graph (D) correctly depicts this vertical step (discontinuity) in entropy at the transition temperature $T_c$[cite: 2].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 5,
@@ -13502,7 +13502,7 @@ Graph (D) correctly depicts this vertical step (discontinuity) in entropy at the
 1.  **Power and Intensity:** The power of the monochromatic light source is directly proportional to the number of photons emitted per second. If the power is doubled while keeping the frequency (and thus individual photon energy) constant, the number of incident photons per second precisely doubles. Consequently, the rate of emission of photoelectrons also doubles.
 2.  **Stopping Potential:** The stopping potential strictly depends on the maximum kinetic energy of the emitted photoelectrons, defined by Einstein's photoelectric equation: $K_{max} = h\nu - \Phi$. Because the frequency ($\nu$) of the monochromatic light and the work function ($\Phi$) of the metal remain unaltered, the maximum kinetic energy and, therefore, the stopping potential remain exactly the same.
 Thus, the correct statement is that the stopping potential remains the same[cite: 2].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 6,
@@ -13524,7 +13524,7 @@ Thus, the correct statement is that the stopping potential remains the same[cite
 3.  **Take the reciprocals:** The reciprocals of these specific intercepts are $\frac{1}{1/2}, \frac{1}{1}, \frac{1}{\infty}$, which yields $2, 1, 0$.
 4.  **Clear fractions:** The resulting numbers are already integers, leaving us with $2, 1, 0$.
 Therefore, the Miller indices of the shaded plane are mathematically $(210)$[cite: 2].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 7,
@@ -13544,7 +13544,7 @@ $$\vec{\tau} = \vec{r} \times (f(r)\hat{r}) = 0$$
 According to Newton's second law for rotation, $\vec{\tau} = \frac{d\vec{L}}{dt}$. Since the torque evaluates to zero, the angular momentum vector $\vec{L}$ is a constant of motion (conserved in magnitude and spatial direction).
 Furthermore, by definition, $\vec{L} = \vec{r} \times \vec{p}$. This fundamental relation mandates that the position vector $\vec{r}$ must remain perpendicular to the constant vector $\vec{L}$ at all times. A position vector constantly perpendicular to a fixed axis strictly traces out a two-dimensional plane.
 Thus, the motion of the particle is restricted to a plane due exclusively to the conservation of angular momentum[cite: 2].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 8,
@@ -13571,7 +13571,7 @@ Thus, the motion of the particle is restricted to a plane due exclusively to the
     The particle classically cannot transmit past the barrier. Quantum mechanically, the wave function decays exponentially inside the region $x > 0$. Because the potential barrier extends infinitely, the transmitted probability current evaluates to exactly zero. Consequently, all incident particles are reflected. The reflection coefficient is precisely $1$.
     If $E = \frac{1}{2}V_0$, since the energy is less than $V_0$, $R = 1$.
 Therefore, the statement corresponding to complete reflection when $E < V_0$ is the only valid option[cite: 2].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 9,
@@ -13601,7 +13601,7 @@ Therefore, the statement corresponding to complete reflection when $E < V_0$ is 
     $$\overline{P}(1 + Q + \overline{Q})$$
     Since $1 + \text{anything} = 1$ in Boolean algebra, the expression conclusively reduces to $\overline{P} \cdot 1 = \overline{P}$.
 The equivalent Boolean function is $\overline{P}$[cite: 2].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 10,
@@ -13625,7 +13625,7 @@ $$U = \frac{1}{4\pi\epsilon_0} \left( \frac{q^2}{L} + \frac{q^2}{L} + \frac{q^2}
 $$U = \frac{1}{4\pi\epsilon_0} \left( \frac{3q^2}{L} \right)$$
 $$U = \frac{3}{4\pi\epsilon_0} \frac{q^2}{L}$$
 This resultant calculation directly matches option (C)[cite: 2].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 11,
@@ -13648,7 +13648,7 @@ The real part corresponds to even values of $k$ (where $i^k = \pm 1$):
 $$\text{Real part} = \cos^n\theta - \binom{n}{2}\cos^{n-2}\theta\sin^2\theta + \binom{n}{4}\cos^{n-4}\theta\sin^4\theta - \dots$$
 Equating the real parts gives the expansion for $\cos n\theta$. This perfectly matches option (A).
 The imaginary part corresponds to odd values of $k$, which yields an alternating series for $\sin n\theta$. Option (B) incorrectly uses all plus signs.`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 12,
@@ -13672,7 +13672,7 @@ Evaluating the function $f(\vec{r}) = e^{-(r/R)^2}$ at the origin ($r = 0$):
 $$f(0) = e^0 = 1$$
 Therefore, the integral evaluates to:
 $$I = 4\pi \times 1 = 4\pi$$`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 13,
@@ -13698,7 +13698,7 @@ $$\ln(y) = \lim_{x\rightarrow 0+} (-x) = 0$$
 Since $\ln(y) = 0$, we have:
 $$y = e^0 = 1$$
 Therefore, the limit is $1$.`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 14,
@@ -13721,7 +13721,7 @@ $$\theta = \left(\frac{2\pi f_0 + 0}{2}\right) t_0 = \pi f_0 t_0$$
 The number of turns (revolutions) $N$ is the total angular displacement divided by the angle of one full turn ($2\pi$):
 $$N = \frac{\theta}{2\pi} = \frac{\pi f_0 t_0}{2\pi} = \frac{f_0 t_0}{2}$$
 This matches option (C).`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 15,
@@ -13756,7 +13756,7 @@ Divide both sides by $m^2v^2$:
 $$2 + 2\cos\theta = 1$$
 $$2\cos\theta = -1 \implies \cos\theta = -1/2$$
 The angle is therefore $\theta = 120^\circ$.`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 16,
@@ -13783,7 +13783,7 @@ $r_{min,2} = 2R$ and $r_{max,2} = 4R$
 $$a_2 = \frac{2R + 4R}{2} = 3R$$
 Now, take the ratio of their time periods:
 $$\frac{T_2}{T_1} = \left(\frac{a_2}{a_1}\right)^{3/2} = \left(\frac{3R}{2R}\right)^{3/2} = \left(\frac{3}{2}\right)^{3/2} = \frac{3}{2}\sqrt{\frac{3}{2}}$$`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 17,
@@ -13811,7 +13811,7 @@ $$I_3 = 3^2 I_0 = 9 I_0$$
 Taking the ratio of the two intensities:
 $$\frac{I_2}{I_3} = \frac{4 I_0}{9 I_0} = \frac{4}{9}$$
 Therefore, $I_2 = \frac{4}{9} I_3$.`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 18,
@@ -13841,7 +13841,7 @@ The longitudinal magnification $m_L$ is:
 $$m_L = -m^2 = -\left(-\frac{1}{2}\right)^2 = -\frac{1}{4}$$
 The negative sign indicates the image is inverted longitudinally, but we only need the magnitude for the length $L'$:
 $$\frac{L'}{L} = |m_L| = \frac{1}{4}$$`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 19,
@@ -13867,7 +13867,7 @@ $$\frac{L'}{L} = |m_L| = \frac{1}{4}$$`,
 Finally, calculate the final intensity $I = I_4$:
 $$I = \frac{I_0}{2} \left(\frac{27}{64}\right) = \frac{27 I_0}{128}$$
 Thus, the ratio $\frac{I}{I_0}$ is $\frac{27}{128}$.`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 20,
@@ -13902,7 +13902,7 @@ Substitute $R_c = \frac{Mv}{QB}$:
 $$\frac{Mv}{QB} \le \frac{b^2 - a^2}{2b}$$
 Solving for $B$, we find the minimum magnetic field:
 $$B \ge \frac{Mv}{Q} \left(\frac{2b}{b^2 - a^2}\right) = \frac{Mv}{Q} \left(\frac{b^2 - a^2}{2b}\right)^{-1}$$`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 21,
@@ -13929,7 +13929,7 @@ Evaluate the integral over $y$:
 $$\Phi = \beta_0 t L \left[ y^3 \right]_{0}^{L} = \beta_0 t L (L^3) = \beta_0 L^4 t$$
 According to Faraday's law of induction, the magnitude of the induced electromotive force (EMF) is the rate of change of magnetic flux:
 $$|EMF| = \left| \frac{d\Phi}{dt} \right| = \frac{d}{dt}(\beta_0 L^4 t) = \beta_0 L^4$$`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 22,
@@ -13955,7 +13955,7 @@ $$\frac{\epsilon-\mu}{k_BT} \gg 1 \implies (\epsilon-\mu) \gg k_B T$$
 Under this condition, the $\pm 1$ in the denominators of the quantum distributions becomes negligible compared to the large exponential term, simplifying both distributions to:
 $$n(\epsilon, T) \approx \frac{1}{e^{(\epsilon-\mu)/k_BT}} = e^{-\frac{\epsilon-\mu}{k_BT}}$$
 which is the Maxwell-Boltzmann distribution.`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 23,
@@ -13977,7 +13977,7 @@ For the higher energy level $E_1 = \epsilon$, the number of particles $N_\epsilo
 $$N_\epsilon \propto e^{-\frac{\epsilon}{k_B T}}$$
 The ratio of the number of particles in the lower state to the number in the higher state is:
 $$\frac{N_0}{N_\epsilon} = \frac{e^0}{e^{-\frac{\epsilon}{k_B T}}} = \frac{1}{e^{-\frac{\epsilon}{k_B T}}} = e^{\frac{\epsilon}{k_B T}}$$`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 24,
@@ -14000,7 +14000,7 @@ $$V_H = \sqrt{\frac{3R(500)}{1}} = \sqrt{1500R}$$
 For Helium atoms (He), the molar mass $M_{He} \approx 4\text{ g/mol}$. The temperature is $T_{He} = 2000\text{ K}$.
 $$V_{He} = \sqrt{\frac{3R(2000)}{4}} = \sqrt{\frac{6000R}{4}} = \sqrt{1500R}$$
 Comparing the two values, we see that $V_H = V_{He}$.`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 25,
@@ -14035,7 +14035,7 @@ Let's apply a substitution: $y = \sqrt{\alpha} x$. Then $dy = \sqrt{\alpha} dx$,
 When $x = \frac{1}{\sqrt{\alpha}}$, the lower limit changes to $y = 1$. As $x \to \infty$, $y \to \infty$.
 Substitute into the integral:
 $$P = \frac{2\sqrt{\alpha}}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^2} \frac{dy}{\sqrt{\alpha}} = \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^2} dy$$`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 26,
@@ -14067,7 +14067,7 @@ $$\langle \psi | \hat{O} | \psi \rangle = \left(\frac{1}{\sqrt{2}}\right)\left(\
 $$\langle \psi | \hat{O} | \psi \rangle = \frac{i}{2\sqrt{2}} - \frac{i}{2} - \frac{i^2}{2\sqrt{2}} = \frac{i}{2\sqrt{2}} - \frac{i}{2} + \frac{1}{2\sqrt{2}}$$
 Find a common denominator of $2\sqrt{2}$:
 $$\langle \psi | \hat{O} | \psi \rangle = \frac{i - i\sqrt{2} + 1}{2\sqrt{2}} = \frac{1 - i(\sqrt{2} - 1)}{2\sqrt{2}}$$`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 27,
@@ -14092,7 +14092,7 @@ We need to accommodate 5 non-interacting electrons into the lowest available ene
 The 5th electron occupies the $n = 3$ state. Thus, the highest occupied state corresponds to $n = 3$.
 The energy of this highest occupied state is:
 $$E_3 = \frac{3^2 \pi^2 \hbar^2}{2ma^2} = \frac{9\pi^2 \hbar^2}{2ma^2}$$`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 28,
@@ -14112,7 +14112,7 @@ This arrangement is characteristic of the Cesium Chloride (CsCl) crystal structu
 Even though it visually resembles a body-centered cubic (bcc) setup, the corner atoms and the center atom are of *different* elements. A Bravais lattice must be a mathematical array of identical, indistinguishable points. 
 To construct this structure using identical lattice points, we must define the Bravais lattice as a **Simple Cubic (sc)** lattice, where each lattice point is associated with a 2-atom basis consisting of one grey atom at $(0, 0, 0)$ and one black atom at $(\frac{a}{2}, \frac{a}{2}, \frac{a}{2})$.
 Therefore, the underlying Bravais lattice is Simple cubic.`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 29,
@@ -14137,7 +14137,7 @@ Let's analyze the properties of the individual regions in an n-p-n transistor re
 1.  **n-type emitter and collector regions:** These are doped with donor impurities, meaning the majority carriers are electrons. Consequently, the Fermi level $E_F$ is situated close to the conduction band edge $E_c$. This forces the $E_c$ and $E_v$ lines to be relatively low in these outer regions.
 2.  **p-type base region (the middle):** This region is doped with acceptor impurities, making holes the majority carriers. Here, the Fermi level $E_F$ must be close to the valence band edge $E_v$. To achieve this while $E_F$ remains globally flat, the $E_c$ and $E_v$ energy bands must bend upwards in the p-type region.
 The resulting diagram will show a flat horizontal $E_F$ line, with $E_c$ and $E_v$ forming a "hill" or potential barrier in the central base region. This matches diagram (B)[cite: 2].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 30,
@@ -14172,7 +14172,7 @@ Substitute $V_A = -10V_1$ into the equation:
 $$V_{out} = -2(-10V_1) - 10V_2$$
 $$V_{out} = 20V_1 - 10V_2$$
 This result precisely matches option (D).`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 31,
@@ -14980,7 +14980,7 @@ $$x^2 + 9 = 0$$
 $$x^2 = -9$$
 $$x = \pm \sqrt{-9} = \pm 3i$$
 Therefore, the function has discontinuities at $x = \pm 3i$[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 2,
@@ -15001,7 +15001,7 @@ Since kinetic energy $K = \frac{1}{2}mv^2$ must be non-negative ($K \ge 0$), the
 $$E \ge U(r) \implies K = E - U(r) \ge 0$$
 Any region where $U(r) > E$ is classically forbidden. Looking at the provided potential curve, the potential energy $U(r)$ exceeds the total energy line $E$ in Region I (the high potential wall near the origin) and Region III (the potential barrier peak). 
 Thus, regions I and III are forbidden[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 3,
@@ -15023,7 +15023,7 @@ Thus, regions I and III are forbidden[cite: 3, 4].`,
     ],
     "detailedSolution": String.raw`When Uranium-235 undergoes thermal neutron fission, it rarely splits into two equal halves. Instead, the fission is overwhelmingly asymmetric, predominantly producing one heavier fragment (mass number $A \approx 140$) and one lighter fragment (mass number $A \approx 95$). 
 This results in a characteristic "camel-hump" or bimodal asymmetric distribution curve for the fission yield versus mass number. Option A represents this bimodal shape[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 4,
@@ -15049,7 +15049,7 @@ This results in a characteristic "camel-hump" or bimodal asymmetric distribution
     *   $y$-intercept = $1 / 0 = \infty$ (This means the plane is parallel to the $y$-axis)
     *   $z$-intercept = $1 / 1 = 1$
 2.  **Match with the visual plane:** The correct plane must cut the $x$-axis at $1$, the $z$-axis at $1$, and never intersect the $y$-axis (remaining perfectly parallel to it). Figure (B) illustrates exactly this diagonal plane spanning across the $y$-axis[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 5,
@@ -15068,7 +15068,7 @@ This results in a characteristic "camel-hump" or bimodal asymmetric distribution
 The average number of fermions in a single-particle state of energy $\epsilon$ is given by:
 $$n(\epsilon) = \frac{1}{e^{\frac{\epsilon-\epsilon_F}{k_BT}} + 1}$$
 where $\epsilon_F$ is the Fermi energy (chemical potential at $T=0$). The "+1" in the denominator ensures that the occupation probability $n(\epsilon)$ never exceeds $1$[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 6,
@@ -15090,7 +15090,7 @@ where $\epsilon_F$ is the Fermi energy (chemical potential at $T=0$). The "+1" i
     $$\vec{\nabla} \cdot \vec{A} = \vec{\nabla} \cdot (\vec{\nabla}\phi) = \nabla^2\phi$$
     The problem explicitly states that $\phi$ satisfies the Laplace equation, which is defined as $\nabla^2\phi = 0$. Therefore, $\vec{\nabla} \cdot \vec{A} = 0$, meaning the field is also solenoidal.
 Both properties hold true[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 7,
@@ -15110,7 +15110,7 @@ Both properties hold true[cite: 3, 4].`,
 3.  **Isothermal compression:** Heat $Q_C$ is rejected to the cold reservoir at a constant temperature $T_C$.
 4.  **Adiabatic compression:** The gas is compressed without heat transfer, raising its temperature back to $T_H$.
 Heat addition occurs entirely during the first step, which is an isothermal process. Therefore, heat is added at a constant temperature[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 8,
@@ -15128,7 +15128,7 @@ Heat addition occurs entirely during the first step, which is an isothermal proc
 Since an increase in pressure universally causes a decrease in volume for stable substances, the derivative $\left(\frac{\partial V}{\partial P}\right)_T$ is negative. To define compressibility as a positive physical quantity, a negative sign is explicitly added to the formula:
 $$\beta_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$$
 This matches option (C)[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 9,
@@ -15147,7 +15147,7 @@ In the active region:
 1.  The **base-emitter junction is forward-biased**. A forward-biased diode junction offers a very low dynamic resistance ($R_{BE}$ is very low), allowing the input signal to effectively control the base current.
 2.  The **base-collector junction is reverse-biased**. A reverse-biased diode junction presents a very high dynamic resistance ($R_{BC}$ is very high), allowing the transistor to drop a large output voltage without drawing significant current back into the base.
 This configuration allows for significant voltage and power gain[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 10,
@@ -15171,7 +15171,7 @@ To find the unit vector $\hat{n}$, divide $\vec{C}$ by its magnitude $|\vec{C}|$
 $$|\vec{C}| = \sqrt{(-1)^2 + (-5)^2 + (-3)^2} = \sqrt{1 + 25 + 9} = \sqrt{35}$$
 $$\hat{n} = \frac{\vec{C}}{|\vec{C}|} = \frac{1}{\sqrt{35}}(-\hat{i} - 5\hat{j} - 3\hat{k})$$
 This matches option (D)[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 11,
@@ -15226,7 +15226,7 @@ $$3 - \lambda = \pm 1$$
 $$\lambda = 3 \pm 1$$
 This yields two eigenvalues: $\lambda_1 = 4$ and $\lambda_2 = 2$.
 Therefore, the full set of eigenvalues for the matrix is $2, 4,$ and $6$[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 13,
@@ -15252,7 +15252,7 @@ To find the relationship, take the ratio:
 $$\frac{E_{excited}}{E_0} = \frac{6 E_1}{3 E_1} = 2$$
 $$E_{excited} = 2E_0$$
 The energy of the first excited state is exactly twice the ground state energy[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 14,
@@ -15283,7 +15283,7 @@ $$1 = \frac{q\sigma}{2\epsilon_0 mg}$$
 Solving for the surface charge density $\sigma$:
 $$\sigma = \frac{2\epsilon_0 mg}{q}$$
 This corresponds to option (C)[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 15,
@@ -15308,7 +15308,7 @@ This corresponds to option (C)[cite: 3, 4].`,
     Evaluate the cross product $(-\hat{z} \times \hat{x}) = -\hat{y}$:
     $$\vec{B}_r = \frac{E_r}{v_1} \exp[i(-k_1 z - \omega t)] (-\hat{y}) = \frac{-E_r}{v_1} \exp[i(-k_1 z - \omega t)] \hat{y}$$
     The options normalize the generic amplitude back to the source amplitude $E_0$ to demonstrate the vector and phase form. The correct vectorial relationship mandates a negative sign and propagation along $-z$, which matches option (C)[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 16,
@@ -15336,7 +15336,7 @@ This corresponds to option (C)[cite: 3, 4].`,
     By the Idempotent law ($XY + XY = XY$), the expression simplifies to:
     $$Output = XY + XZ + YZ$$
     Wait, inspecting the provided model answer key indicates $Y+XZ$ as the correct option. A closer microscopic inspection of standard circuit traces of this problem type often reveals the bottom AND gate is actually connected to $X$ and $Z$, or the connections are slightly different than superficial appearance. Assuming the canonical structure that leads to $Y+XZ$, the standard reduction matches option (B)[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 17,
@@ -15359,7 +15359,7 @@ This corresponds to option (C)[cite: 3, 4].`,
     Since $T_W > T_R$, the ratio on the right is greater than 1. This necessarily means:
     $$r_R^2 > r_W^2 \implies r_R > r_W$$
 Combining these deductions, the red star is cooler but must be substantially larger to output the identical total power. Thus, $r_R > r_W$ and $T_R < T_W$[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 18,
@@ -15383,7 +15383,7 @@ Evaluate the integral:
 $$I = 3 \left[ \frac{x^4}{4} \right]_{0}^{2}$$
 $$I = 3 \left( \frac{2^4}{4} - 0 \right) = 3 \left( \frac{16}{4} \right) = 3(4) = 12\text{ kg m}^2$$
 The moment of inertia is 12[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 19,
@@ -15407,7 +15407,7 @@ The moment of inertia is 12[cite: 3, 4].`,
 In an energy band diagram, electron energy $E$ is related to the electrostatic potential $V_{elec}$ by $E = -q V_{elec}$. Applying a positive potential to the p-side reduces the electron potential energy on that side. This effectively "lowers" the entire energy band structure (conduction band, valence band, and Fermi level) of the p-side relative to the n-side.
 Consequently, the once-flat equilibrium Fermi level splits into two quasi-Fermi levels. Because the p-side bands shift downward, the quasi-Fermi level on the p-side ($E_{F(p)}$) appears lower on the vertical energy axis than the quasi-Fermi level on the n-side ($E_{F(n)}$). The potential barrier between the two regions is concurrently reduced. 
 Diagram (A) correctly illustrates $E_{F(p)}$ positioned lower than $E_{F(n)}$ with a reduced junction barrier[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 20,
@@ -15432,7 +15432,7 @@ where $\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$ and the rest mass energy $m c^2 = 
     $$W = (1.34164 - 1.06066) \times 511\text{ keV}$$
     $$W = (0.28098) \times 511\text{ keV} \approx 143.58\text{ keV}$$
 This matches option (B)[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 21,
@@ -15450,7 +15450,7 @@ This matches option (B)[cite: 3, 4].`,
     "detailedSolution": String.raw`The given figure shows a cubic unit cell where $\text{Cl}^-$ ions are located at the eight corners $(0,0,0)$ and the $\text{Cs}^+$ ion is located exactly at the body center $(1/2, 1/2, 1/2)$.
 While this geometric arrangement looks identical to a Body-Centered Cubic (BCC) lattice, a true Bravais lattice strictly requires every lattice point to have an identical physical environment. Since the atom at the corner ($\text{Cl}^-$) is chemically different from the atom at the center ($\text{Cs}^+$), they are not equivalent.
 To correctly describe this crystal structurally, we must use a **Simple Cubic (SC)** Bravais lattice, accompanied by a two-atom basis associated with every lattice point: one $\text{Cl}^-$ at $(0,0,0)$ and one $\text{Cs}^+$ at $(1/2, 1/2, 1/2)$. Thus, the underlying Bravais lattice is mathematically simple cubic[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 22,
@@ -15475,7 +15475,7 @@ $$0.325 \times 10^{-12} = 2.424 \times 10^{-12} (1 - \cos\theta)$$
 $$1 - \cos\theta = \frac{0.325}{2.424} \approx 0.134$$
 $$\cos\theta = 1 - 0.134 = 0.866$$
 The angle whose cosine is $0.866$ ($\approx \frac{\sqrt{3}}{2}$) is $30^\circ$[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 23,
@@ -15495,7 +15495,7 @@ The angle whose cosine is $0.866$ ($\approx \frac{\sqrt{3}}{2}$) is $30^\circ$[c
 Applying these constraints to the First Law:
 $$\Delta U = 0 - 0 = 0$$
 Since the change in internal energy is zero, the internal energy of the gas remains strictly constant[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 24,
@@ -15516,7 +15516,7 @@ Since the change in internal energy is zero, the internal energy of the gas rema
 3.  **Vapor (Region II):** Exists at low pressures and temperatures below the critical temperature. A vapor can be condensed into a liquid simply by increasing pressure isothermally.
 4.  **Gas (Region I):** Refers to the fluid state at temperatures strictly above the critical point. In this domain, no amount of applied pressure can liquefy the substance.
 Ordering these mapped regions as I, II, III, IV matches: Gas, Vapor, Liquid, Solid. This corresponds to option (B)[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 25,
@@ -15540,7 +15540,7 @@ $$n - \lambda \frac{dn}{d\lambda} = (1.5 + 0.6\lambda) - \lambda(0.6) = 1.5 + 0.
 Finally, calculate $v_g$:
 $$v_g = \frac{c}{1.5} = \frac{3 \times 10^8\text{ m/s}}{1.5} = 2.0 \times 10^8\text{ m/s}$$
 The group velocity is $2.0 \times 10^8\text{ m/s}$[cite: 3, 4].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 26,
@@ -15563,7 +15563,7 @@ $$m_{max} = \frac{a \cdot 1}{\lambda} = \frac{10\text{ }\mu\text{m}}{0.630\text{
 $$m_{max} = \frac{10}{0.630} \approx 15.87$$
 Since the order $m$ must be an integer, we must take the floor of this value.
 Therefore, the highest observable diffraction order is $m = 15$. The question in typical phrasing seeks the maximum integer order $m$ observed on one side, which is 15[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 27,
@@ -15582,7 +15582,7 @@ Therefore, the highest observable diffraction order is $m = 15$. The question in
 1.  **Charge $q(t)$:** The charge on the capacitor initially starts at zero and gradually builds up as current flows, eventually plateauing at the maximum steady-state value $Q_{max} = CV$. The mathematical relation is $q(t) = Q_{max}(1 - e^{-t/\tau})$. This is an inverted exponential decay curve starting from the origin, which exactly corresponds to **Fig. I**.
 2.  **Current $i(t)$:** The current is the rate of charge flow ($i = dq/dt$). Initially, the uncharged capacitor acts like a short circuit, and a maximum current $I_{max} = V/R$ flows. As the capacitor charges, its opposing voltage increases, causing the current to decay exponentially towards zero. The relation is $i(t) = I_{max} e^{-t/\tau}$. This exponential decay starting from a maximum value corresponds exactly to **Fig. II**.
 Therefore, the pairing is Fig. I and Fig. II[cite: 3, 4].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 28,
@@ -15603,7 +15603,7 @@ We evaluate the divergence $\vec{\nabla} \cdot \vec{B} = \frac{\partial B_x}{\pa
 *   **(C)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(xz+4y) + \frac{\partial}{\partial y}(-yx^3) + \frac{\partial}{\partial z}(x^3z - z^2/2) = z - x^3 + (x^3 - 2z/2) = z - x^3 + x^3 - z = 0$. (Possible)
 *   **(D)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(-6xz) + \frac{\partial}{\partial y}(3yz^2) + \frac{\partial}{\partial z}(0) = -6z + 3z^2 + 0 \neq 0$.
 Because the divergence for option (D) is non-zero, it represents a mathematically impossible magnetic field[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 29,
@@ -15623,7 +15623,7 @@ Because the divergence for option (D) is non-zero, it represents a mathematicall
     This is the standard equation of a circle with a constant radius of 5 centered on the $z$-axis. The particle undergoes uniform circular motion in the projection onto the $xy$-plane.
 2.  **Along the $z$-axis:** The vertical coordinate $z(t) = 5t$ signifies that the particle moves with a constant velocity along the $z$-axis.
 The simultaneous combination of uniform circular motion in a horizontal plane and uniform linear motion perpendicular to that plane results in a 3D trajectory sweeping upwards like a coiled spring. This geometric shape is definitively a helix[cite: 3, 4].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 30,
@@ -15651,7 +15651,7 @@ where $k$ is the proportionality constant for the drag force.
 2.  As velocity $v$ increases, the opposing drag force $kv$ grows, reducing the net force and consequently the acceleration $\frac{dv}{dt}$. The slope of the curve gradually decreases.
 3.  Eventually, the drag force perfectly balances the gravitational force ($kv = mg$). The net force drops to zero, and the acceleration ceases. The ball achieves a constant maximum velocity called the terminal velocity ($v_t = \frac{mg}{k}$). The curve becomes a horizontal asymptote.
 The mathematical solution is $v(t) = v_t(1 - e^{-\frac{k}{m}t})$, which forms an inverted exponential decay curve that levels off horizontally. This behavior matches Figure D[cite: 3, 4].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 31,
@@ -16372,7 +16372,7 @@ $$\nabla^2 f = 6x - 12y = 0$$
 Solving for $x$:
 $$6x = 12y \implies x = 2y$$
 The curve is a straight line defined by $x = 2y$. This corresponds to option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 2,
@@ -16396,7 +16396,7 @@ $$|\vec{T}(1)| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$$
 Therefore, the unit tangent vector is:
 $$\hat{u} = \frac{\vec{T}(1)}{|\vec{T}(1)|} = \frac{\hat{i} + 2\hat{j} + 3\hat{k}}{\sqrt{14}}$$
 This matches option (D)[cite: 5, 6].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 3,
@@ -16420,7 +16420,7 @@ $$\text{Time required} = \text{LCM}(T, 8T, 27T)$$
 Since $1$, $8$, and $27$ are mutually coprime numbers (they share no common factors other than $1$), their LCM is simply their product:
 $$\text{LCM}(1, 8, 27) = 1 \times 8 \times 27 = 216$$
 Thus, they will align again after a time of $216T$. This matches option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 4,
@@ -16446,7 +16446,7 @@ $$B_1 = \frac{\mu_0 I \cdot 2\sqrt{3}}{4\pi a} \left(\frac{\sqrt{3}}{2} + \frac{
 Since the current flows in a continuous loop, the magnetic fields produced by all three sides point in the same direction (either all into or all out of the page). Thus, the total magnetic field is the sum of the fields from the three sides:
 $$B_{total} = 3 \times B_1 = 3 \times \left(\frac{3\mu_0 I}{2\pi a}\right) = \frac{9\mu_0 I}{2\pi a}$$
 This matches option (A)[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 5,
@@ -16470,7 +16470,7 @@ Therefore, the Doppler shift for both will be identically positive:
 $$f_A = f_s \left( \frac{v}{v - v_A} \right)$$
 $$f_B = f_s \left( \frac{v}{v - v_B} \right)$$
 Since $v_A = v_B$, it follows that $f_A = f_B$. Since they are approaching, the observed frequency is strictly greater than the source frequency, so $f_A = f_B > f_s$. This matches option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 6,
@@ -16499,7 +16499,7 @@ Summing the individual field components:
 $$\vec{E}_{total} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3 = \left( -\frac{\sigma}{2\epsilon_0} - \frac{2\sigma}{2\epsilon_0} - \frac{3\sigma}{2\epsilon_0} \right) \hat{j}$$
 $$\vec{E}_{total} = \left( \frac{-\sigma - 2\sigma - 3\sigma}{2\epsilon_0} \right) \hat{j} = \left( \frac{-6\sigma}{2\epsilon_0} \right) \hat{j} = -\frac{3\sigma}{\epsilon_0}\hat{j}$$
 This corresponds to option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 7,
@@ -16524,7 +16524,7 @@ $$\lambda \propto V \implies \frac{\lambda}{V} = \text{constant}$$
 Applying this relationship to both boxes A and B yields:
 $$\frac{\lambda_A}{V_A} = \frac{\lambda_B}{V_B}$$
 This matches option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 8,
@@ -16550,7 +16550,7 @@ $$T_n \propto \frac{1}{n^2}$$
 Taking the ratio of the kinetic energies:
 $$\frac{T_g}{T_e} = \frac{1}{1/16} = 16$$
 This matches option (D)[cite: 5, 6].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 9,
@@ -16569,7 +16569,7 @@ However, passing the light through a quarter-wave plate ($\lambda/4$ plate) alte
 1.  **Unpolarized light:** The $\lambda/4$ plate introduces a $90^\circ$ phase shift between orthogonal components, but because unpolarized light lacks any fixed phase relationship between its random components, it remains completely unpolarized. When subsequently viewed through a rotating analyser, the transmitted intensity remains constant.
 2.  **Circularly polarized light:** Circularly polarized light consists of two orthogonal linear components with a fixed $90^\circ$ ($\pi/2$) phase difference. A $\lambda/4$ plate introduces an additional $90^\circ$ phase shift. Depending on axis alignment, the total phase difference becomes $180^\circ$ or $0^\circ$, transforming the circularly polarized light into **linearly polarized light**. When this linearly polarized light is viewed through a rotating analyser, the transmitted intensity varies periodically from zero to a maximum.
 Because the outcomes (constant intensity vs. varying intensity) are definitively distinguishable, the sequence of a $\lambda/4$ plate followed by an analyser is the correct arrangement. This corresponds to option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 10,
@@ -16595,7 +16595,7 @@ Let's analyze the circuit's operation based on the input voltage $v_i$ applied t
 1.  **For $v_i > 0$:** The op-amp amplifies the positive input, causing its output to swing positive. This heavily forward-biases the diode, turning it ON. The feedback loop is closed tightly through the conducting diode, establishing a virtual short between the inverting (-) and non-inverting (+) terminals. The op-amp automatically adjusts its internal output to overcome the physical diode forward voltage drop ($V_d$). Thus, the final circuit output $V_o$ (taken after the diode) perfectly tracks the input voltage: $V_o = v_i$. The graph must be a straight line with a slope of 1, starting exactly from the origin ($0,0$), not offset by $V_d$.
 2.  **For $v_i < 0$:** The op-amp output swings negative, definitively reverse-biasing the diode (turning it OFF). The feedback loop is physically broken. No current flows through the load resistor $R_L$, which grounds the output node. Therefore, $V_o = 0$.
 The transfer characteristic is $V_o = 0$ for $v_i < 0$, and a linear line $V_o = v_i$ for $v_i > 0$ starting exactly at the origin. Graph (A) correctly depicts this ideal rectified behavior without the dead-zone caused by $V_d$[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 11,
@@ -16621,7 +16621,7 @@ The transfer characteristic is $V_o = 0$ for $v_i < 0$, and a linear line $V_o =
 3.  **Reversible Isothermal Compression:** The gas is compressed while rejecting heat to a cold reservoir. The temperature $T$ remains perfectly constant at $T_C$. Because heat is removed, entropy $S$ decreases. On a T-S diagram, this is a horizontal line moving left.
 4.  **Reversible Adiabatic (Isentropic) Compression:** The gas is compressed back to its initial state without heat exchange ($dQ = 0$). The temperature rises back to $T_H$, and entropy $S$ remains constant. On a T-S diagram, this is a vertical line moving straight up.
 Combining these four processes constructs a perfect rectangle with horizontal and vertical sides in the Temperature-Entropy (T-S) plane. This exact shape is depicted in figure (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 12,
@@ -16642,7 +16642,7 @@ The problem states that the physical rotation observed is $60^\circ$.
 $$2\alpha = 60^\circ \implies \alpha = 30^\circ$$
 Quarter-wave plates ($\lambda/4$) generally convert linearly polarized light into elliptically or circularly polarized light (unless $\alpha=0$ or $90^\circ$), and thus do not simply rotate the plane of polarization.
 Therefore, the component must be a $\lambda/2$ plate, and the angle is $\alpha = 30^\circ$. This corresponds to option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 13,
@@ -16669,7 +16669,7 @@ Let the length of the leading vertical edge be $l$, and the horizontal width be 
 2.  **Fully inside the field ($w \le x < 4w$):** Once the trailing edge passes $x=0$, the entire loop of width $w$ is completely submerged in the uniform magnetic field. The total enclosed flux reaches a maximum and remains absolutely constant ($\Phi = B \cdot l \cdot w$). Because the flux is unchanging, the derivative $\frac{d\Phi}{dt} = 0$, meaning the induced emf drops instantly to $0$. This zero-emf state persists as long as the entire loop translates within the field.
 3.  **Exiting the field ($4w \le x < 5w$):** As the front edge passes the boundary at $4w$, the leading edge exits the field while the trailing edge is still inside. The enclosed area containing flux steadily decreases. The magnitude is again $|\varepsilon| = Blv$. By Lenz's law, the induced current flips direction to oppose the decreasing flux, resulting in a negative polarity emf: $-Blv$.
 Graph (C) accurately depicts this sequential profile: a positive constant pulse of width $w$, a zero region of width $3w$, and a negative constant pulse of width $w$[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 14,
@@ -16698,7 +16698,7 @@ $$W = A (\ln V_2 - \ln V_1) - AB \left( \frac{1}{V_2} - \frac{1}{V_1} \right)$$
 Using logarithm properties and distributing the negative sign in the second term gives:
 $$W = A \ln\left(\frac{V_2}{V_1}\right) + AB \left( \frac{1}{V_1} - \frac{1}{V_2} \right)$$
 This formula corresponds directly to option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 15,
@@ -16721,7 +16721,7 @@ Summing these independent contributions yields the total molar specific heat at 
 $$C_V = C_{V,trans} + C_{V,rot} + C_{V,vib}$$
 $$C_V = \frac{3}{2}R + \frac{3}{2}R + R = 3R + R = 4R$$
 This matches option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 16,
@@ -16744,7 +16744,7 @@ The displacement current density $\vec{J}_d$ is defined as:
 $$\vec{J}_d = \epsilon_0 \frac{\partial \vec{E}}{\partial t}$$
 $$\vec{J}_d = \epsilon_0 \frac{\partial}{\partial t} \left( -\frac{R^2 B_0 t}{r} \hat{\theta} \right) = -\frac{\epsilon_0 R^2 B_0}{r} \hat{\theta}$$
 Thus, the displacement current at point P is tangential and inversely proportional to $r$[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 17,
@@ -16763,7 +16763,7 @@ Thus, the displacement current at point P is tangential and inversely proportion
 2.  **Canonical ensemble (N, V, T):** Number of particles, volume, and temperature are constant. Minimizes Helmholtz free energy ($F = E - TS$).
 3.  **Isothermal-isobaric ensemble (N, P, T):** Number of particles, pressure, and temperature are constant. Minimizes Gibbs free energy ($G = E - TS + PV$).
 Since the systems are characterized by constant N, P, and T, the corresponding thermodynamic function is the Gibbs free energy[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 18,
@@ -16788,7 +16788,7 @@ Applying Gauss's Law, $E(4\pi r^2) = \frac{q_{enc}}{\epsilon_0}$:
 $$E(4\pi r^2) = \frac{1}{\epsilon_0} Q\frac{r^5}{R^5}$$
 $$E = \frac{Qr^3}{4\pi\epsilon_0 R^5}$$
 The electric field vector is radial, matching option (A)[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 19,
@@ -16809,7 +16809,7 @@ Now, compute the cross product for the Poynting vector direction:
 $$\vec{S} \propto (\hat{\rho} \times \hat{k})$$
 In the right-handed cylindrical coordinate system $(\hat{\rho}, \hat{\phi}, \hat{k})$, the cross product $\hat{\rho} \times \hat{k} = -\hat{\phi}$.
 Therefore, the energy flux vector is specifically directed along the $\hat{\rho} \times \hat{k}$ direction (the azimuthal direction). This corresponds to option (D)[cite: 5, 6].`,
-    "correctAnswers": [3]
+    correctAnswer: 3
   },
   {
     "id": 20,
@@ -16832,7 +16832,7 @@ $$\Delta\omega t - \Delta k z = \text{constant}$$
 Differentiating with respect to time $t$:
 $$\Delta\omega - \Delta k \frac{dz}{dt} = 0 \implies v_g = \frac{dz}{dt} = \frac{\Delta\omega}{\Delta k}$$
 This matches option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 21,
@@ -16855,7 +16855,7 @@ Therefore, the transverse magnification magnitude is $|m| = |v/u| > 1$, which me
 Consequently, $|V_1| = m^2 |V_0| > V_0$. The speed of the image is strictly greater than the speed of the object.
 Since $du/dt$ is positive (moving towards the lens, $u$ is becoming less negative), $dv/dt$ is also positive, meaning $v$ is increasing and the image is physically moving away from the lens.
 Thus, $V_1 > V_0$ and the image moves away from the lens[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 22,
@@ -16876,7 +16876,7 @@ $$I_z = I_{solid} - I_{hole} = \frac{1}{2}(\sigma \pi R_1^2)R_1^2 - \frac{1}{2}(
 By the perpendicular axis theorem for a planar lamina, the moments of inertia about the two orthogonal planar principal axes (x and y axes) must sum to $I_z$, and by symmetry, they are equal ($I_x = I_y$):
 $$I_z = I_x + I_y = 2I_x \implies I_x = I_y = \frac{1}{2} I_z = \frac{1}{4} M (R_1^2 + R_2^2)$$
 The three principal moments of inertia are $\frac{1}{2}M(R_1^2+R_2^2), \frac{1}{4}M(R_1^2+R_2^2), \frac{1}{4}M(R_1^2+R_2^2)$, matching option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 23,
@@ -16902,7 +16902,7 @@ Now let's check the DC offset (average value) $a_0$:
 $$a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) dx = \frac{1}{2\pi} \left[ \int_{-\pi}^{0} x dx + \int_{0}^{\pi} -x dx \right]$$
 $$a_0 = \frac{1}{2\pi} \left[ \left(\frac{0 - \pi^2}{2}\right) + \left(\frac{-\pi^2 - 0}{2}\right) \right] = \frac{1}{2\pi} \left(-\frac{\pi^2}{2} - \frac{\pi^2}{2}\right) = -\frac{\pi}{2} \neq 0$$
 Thus, $a_0 \neq 0$ and $b_n = 0$. This matches option (A)[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 24,
@@ -16938,7 +16938,7 @@ Characteristics of this function:
 1.  At $x = 0$, $f(0) = 0$ (starts at the origin).
 2.  As $x \to \infty$, the exponential term decays to $0$, and $f(x)$ approaches a horizontal asymptote of $3/2$.
 Graph (B) correctly depicts a curve starting at $0$ and exponentially rising to an asymptote of $3/2$[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 25,
@@ -16958,7 +16958,7 @@ Therefore, $\Delta x \propto A^{1/3}$.
 According to the uncertainty principle, $\Delta x \Delta p \approx \hbar$, the momentum uncertainty (which corresponds to the mean magnitude of momentum $\bar{p}$ for a confined particle) is:
 $$\bar{p} \approx \Delta p \propto \frac{1}{\Delta x} \propto \frac{1}{A^{1/3}} = A^{-1/3}$$
 Thus, the mean momentum scales as $A^{-1/3}$, matching option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 26,
@@ -16990,7 +16990,7 @@ $$Y = (\overline{AB})(\overline{A}+B)(A+\overline{B})$$
 5.  Apply De Morgan's law backwards to reach the final form:
     $$\overline{A}\overline{B} = \overline{A + B}$$
 This exactly matches option (C)[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 27,
@@ -17018,7 +17018,7 @@ Therefore, $d\xi d\eta = 13 dxdy$.
 Rearranging to solve for $dxdy$:
 $$dxdy = \frac{1}{13} d\xi d\eta$$
 This corresponds to option (A)[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 28,
@@ -17050,7 +17050,7 @@ $$c_1^* c_2 + c_2^* c_1 = \left(\frac{1}{\sqrt{3}}\right)\left(i\sqrt{\frac{2}{3
 Since the complex coefficients perfectly cancel out the cross terms, we are left with:
 $$\langle x \rangle = |c_1|^2 (L/2) + |c_2|^2 (L/2) = (1/3 + 2/3)(L/2) = L/2$$
 Matching these derived values points directly to option (A)[cite: 5, 6].`,
-    "correctAnswers": [0]
+    correctAnswer: 0
   },
   {
     "id": 29,
@@ -17079,7 +17079,7 @@ Analyzing the limits of this velocity function:
 1.  For small times ($\lambda t \ll 1$), $e^{-\lambda t} \approx 1 - \lambda t$, so $v(t) \approx \frac{g}{\lambda}(\lambda t) = gt$. The speed increases linearly.
 2.  For large times ($\lambda t \gg 1$), the exponential term $e^{-\lambda t}$ approaches $0$. The velocity asymptotically approaches a constant terminal value $v_t = \frac{g}{\lambda}$.
 Statement (C) correctly describes this asymptotic approach to a constant value[cite: 5, 6].`,
-    "correctAnswers": [2]
+    correctAnswer: 2
   },
   {
     "id": 30,
@@ -17107,7 +17107,7 @@ Let's analyze the components of motion:
     $$m\ddot{z} = -kz \implies \ddot{z} + \frac{k}{m}z = 0$$
     This differential equation defines Simple Harmonic Motion (SHM) along the $z$-axis with angular frequency $\omega = \sqrt{k/m}$.
 The motion along the z-direction is definitively simple harmonic. This correctly matches option (B)[cite: 5, 6].`,
-    "correctAnswers": [1]
+    correctAnswer: 1
   },
   {
     "id": 31,
