@@ -106,13 +106,6 @@ export default function UserMenu() {
           </div>
           <div className="py-2">
             <Link
-              href="/saved"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
-            >
-              Saved Questions
-            </Link>
-            <Link
               href="/profile"
               onClick={() => setIsOpen(false)}
               className="block px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
