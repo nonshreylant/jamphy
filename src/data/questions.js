@@ -3203,8 +3203,7 @@ Given the options and the correct answer being \(P=1, Q=1\), we can deduce the g
 For example, if the circuit consists of a NAND gate, the output is 0 only when all inputs are 1.
 Regardless of the exact internal diagram, evaluating the truth table for the given logic gates will show that \(P=1\) and \(Q=1\) results in a LOW (0) output.
 Thus, the correct combination is \(P=1, Q=1\).`,
-
-    correctAnswer: [3],
+    correctAnswers: [3],
   },
 
   {
@@ -3243,8 +3242,7 @@ By equating the gravitational force to the centripetal force:
 \(\frac{G m_1 m_2}{(r_1+r_2)^2} = m_1 \omega^2 r_1\)
 Using \(r_1 = \frac{m_2}{m_1+m_2}(r_1+r_2)\), we get Kepler's Third Law:
 \(\omega^2 = \frac{G(m_1+m_2)}{(r_1+r_2)^3} \Rightarrow \omega = \sqrt{\frac{G(m_1+m_2)}{(r_1+r_2)^3}}\) (Option C is correct)`,
-
-    correctAnswer: [0, 1, 2],
+    correctAnswers: [0, 1, 2],
   },
 
   {
@@ -3277,8 +3275,7 @@ Option C: \((110)\) and \((010)\)
 
 Option D: \((112)\) and \((220)\)
 \(1(2) + 1(2) + 2(0) = 4 \neq 0\). (Not perpendicular)`,
-
-    correctAnswer: [0, 1],
+    correctAnswers: [0, 1],
   },
 
   {

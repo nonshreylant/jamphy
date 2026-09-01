@@ -563,6 +563,24 @@ export default function IITJamPhysicsHub() {
 
   };
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlQuestionId = params.get('id');
+      if (urlQuestionId && questionsList.length > 0 && !activeQuestion) {
+        const q = questionsList.find(q => `${q.year}-${q.id}` === urlQuestionId);
+        if (q) {
+          setActiveQuestion(q);
+          resetQuestionState();
+          
+          const url = new URL(window.location.href);
+          url.searchParams.delete('id');
+          window.history.replaceState({}, '', url);
+        }
+      }
+    }
+  }, [questionsList, activeQuestion]);
+
   const isNAT =
     activeQuestion?.type === "NAT";
 
