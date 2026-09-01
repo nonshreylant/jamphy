@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import UserMenu from "@/components/UserMenu";
 import InlineLofiPlayer from "@/components/InlineLofiPlayer";
-import MathText from "@/components/MathText";
 
 import EditProfileModal from "@/components/EditProfileModal";
 import { useTransitionContext } from "@/components/TransitionProvider";
@@ -18,45 +17,12 @@ export default function ProfilePage() {
   const router = useRouter();
   const { navigateWithTransition } = useTransitionContext();
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("overview");
-  const [savedQuestions, setSavedQuestions] = useState([]);
-  const [isLoadingVault, setIsLoadingVault] = useState(false);
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: profileData, error, isLoading } = useSWR(
     status === "authenticated" ? "/api/profile/stats" : null,
     fetcher,
     { revalidateOnFocus: true }
   );
-
-  useEffect(() => {
-    if (activeTab === "saved" && savedQuestions.length === 0) {
-      setIsLoadingVault(true);
-      fetch("/api/vault")
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.vaultItems) {
-            import("@/data/questions").then((module) => {
-              const allQuestions = [...module.questions, ...(data.questions || [])];
-              const loaded = data.vaultItems.map(item => {
-                return allQuestions.find(q => {
-                  const qStrId = String(q.id);
-                  const qYearId = `${q.year}-${q.id}`;
-                  return String(item.questionId) === qStrId || String(item.questionId) === qYearId;
-                });
-              }).filter(Boolean);
-              setSavedQuestions(loaded);
-              setIsLoadingVault(false);
-            });
-          } else {
-            setIsLoadingVault(false);
-          }
-        })
-        .catch((err) => {
-          console.error("Error loading saved questions", err);
-          setIsLoadingVault(false);
-        });
-    }
-  }, [activeTab, savedQuestions.length]);
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -140,27 +106,7 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {/* TAB NAVIGATION */}
-        <div className="flex items-center gap-6 border-b border-zinc-800 mb-8">
-          <button
-            onClick={() => setActiveTab("overview")}
-            className={`pb-4 text-sm font-light tracking-widest uppercase transition-colors border-b-2 ${
-              activeTab === "overview" ? "border-white text-white" : "border-transparent text-zinc-500 hover:text-zinc-300"
-            }`}
-          >
-            Overview
-          </button>
-          <button
-            onClick={() => setActiveTab("saved")}
-            className={`pb-4 text-sm font-light tracking-widest uppercase transition-colors border-b-2 ${
-              activeTab === "saved" ? "border-white text-white" : "border-transparent text-zinc-500 hover:text-zinc-300"
-            }`}
-          >
-            Saved Questions
-          </button>
-        </div>
-
-        {activeTab === "overview" && profileData && (
+        {profileData && (
           <>
             {/* STATS ROW */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -282,39 +228,6 @@ export default function ProfilePage() {
               </div>
             </div>
           </>
-        )}
-
-        {activeTab === "saved" && (
-          <div>
-            {isLoadingVault ? (
-              <div className="flex justify-center py-12">
-                <div className="w-8 h-8 border border-white/20 border-t-white rounded-full animate-spin"></div>
-              </div>
-            ) : savedQuestions.length === 0 ? (
-              <div className="text-center py-16 text-zinc-500 italic font-light">
-                No saved questions found.
-              </div>
-            ) : (
-              <div className="grid gap-6">
-                {savedQuestions.map((question) => (
-                  <button
-                    key={`${question.year}-${question.id}`}
-                    onClick={() => router.push(`/questions?id=${question.year}-${question.id}`)}
-                    className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
-                  >
-                    <div className="flex gap-3 mb-5 flex-wrap">
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">{question.year}</span>
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">{question.subject}</span>
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">{question.type}</span>
-                    </div>
-                    <MathText className="question-preview text-lg leading-relaxed text-zinc-200 line-clamp-3 overflow-hidden">
-                      {question.question}
-                    </MathText>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
         )}
       </main>
 
