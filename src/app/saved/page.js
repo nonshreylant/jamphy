@@ -152,12 +152,12 @@ export default function IITJamPhysicsHub() {
   };
 
   useEffect(() => {
-    fetch("/api/vault")
+    fetch("/api/bookmarks")
       .then((res) => res.json())
       .then((data) => {
-        if (data.vaultItems) {
-          const allQuestions = [...staticQuestions, ...(data.questions || [])];
-          const loaded = data.vaultItems.map(item => {
+        if (data.bookmarks) {
+          const allQuestions = [...staticQuestions];
+          const loaded = data.bookmarks.map(item => {
             return allQuestions.find(q => {
               const qStrId = String(q.id);
               const qYearId = `${q.year}-${q.id}`;
@@ -165,13 +165,15 @@ export default function IITJamPhysicsHub() {
             });
           }).filter(Boolean);
           setQuestionsList(loaded);
+          setVaultItems(new Set(data.bookmarks.map(b => b.questionId)));
         }
         setIsLoadingSaved(false);
       })
       .catch(err => {
         console.error(err);
         setIsLoadingSaved(false);
-      });  }, []);
+      });
+  }, []);
 
   const handleSaveGoal = (newTarget) => {
     setIsGoalModalOpen(false);
@@ -379,46 +381,36 @@ export default function IITJamPhysicsHub() {
     }
   };
 
-  useEffect(() => {
-    if (status === "authenticated") {
-      fetch("/api/vault")
-        .then(res => res.json())
-        .then(data => {
-          if (data.vaultItems) {
-            setVaultItems(new Set(data.vaultItems.map(v => v.questionId)));
-          }
-        })
-        .catch(console.error);
-    }
-  }, [status]);
-
   const toggleVault = async () => {
-    if (status !== "authenticated") return alert("Please sign in to save to vault.");
-    const qid = String(activeQuestion.id);
-    const currentlyInVault = vaultItems.has(qid);
+    if (status !== "authenticated") return alert("Please sign in to save questions.");
+    const qid = `${activeQuestion.year}-${activeQuestion.id}`;
+    const legacyQid = String(activeQuestion.id);
+    const currentlySaved = vaultItems.has(qid) || vaultItems.has(legacyQid);
 
-    if (currentlyInVault) {
-      if (!confirm("Remove this question from the Mistakes Vault?")) return;
+    if (currentlySaved) {
       try {
-        await fetch(`/api/vault?questionId=${qid}`, { method: "DELETE" });
+        await fetch(`/api/bookmarks?questionId=${qid}`, { method: "DELETE" });
+        await fetch(`/api/bookmarks?questionId=${legacyQid}`, { method: "DELETE" }).catch(() => {});
         setVaultItems(prev => {
           const next = new Set(prev);
           next.delete(qid);
+          next.delete(legacyQid);
           return next;
         });
-        setToastMessage("Removed from Mistakes Vault");
+        setQuestionsList(prev => prev.filter(q => `${q.year}-${q.id}` !== qid && String(q.id) !== legacyQid));
+        setToastMessage("Removed from Saved Questions");
       } catch (e) {
         console.error(e);
       }
     } else {
       try {
-        await fetch("/api/vault", {
+        await fetch("/api/bookmarks", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ questionId: qid, isCorrect: false })
+          body: JSON.stringify({ questionId: qid })
         });
         setVaultItems(prev => new Set(prev).add(qid));
-        setToastMessage("Added to Mistakes Vault");
+        setToastMessage("Added to Saved Questions");
       } catch (e) {
         console.error(e);
       }
@@ -1045,7 +1037,19 @@ export default function IITJamPhysicsHub() {
 
               </div>
 
-              <div className="grid gap-6">
+              {isLoadingSaved ? (
+                <div className="py-20 flex justify-center">
+                  <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                </div>
+              ) : filteredQuestions.length === 0 ? (
+                <div className="rounded-3xl border border-zinc-800/80 bg-zinc-950/40 p-16 text-center text-zinc-500 max-w-xl mx-auto">
+                  <p className="text-xl font-medium text-zinc-400 mb-2">No saved questions found</p>
+                  <p className="text-sm text-zinc-500">
+                    Click the bookmark icon on any question in practice mode to save it here for quick access.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid gap-6">
 
                 {filteredQuestions.map((question) => (
 
@@ -1083,6 +1087,7 @@ export default function IITJamPhysicsHub() {
                 ))}
 
               </div>
+              )}
 
             </motion.section>
 
@@ -1425,13 +1430,13 @@ export default function IITJamPhysicsHub() {
                     <button
                       onClick={toggleVault}
                       className={`flex items-center justify-center w-16 h-[60px] rounded-2xl border transition-all ${
-                        vaultItems.has(String(activeQuestion.id))
+                        vaultItems.has(`${activeQuestion.year}-${activeQuestion.id}`) || vaultItems.has(String(activeQuestion.id))
                           ? "bg-amber-500/20 border-amber-500 text-amber-500 hover:bg-amber-500/30"
                           : "bg-zinc-900 border-zinc-700 text-zinc-400 hover:bg-zinc-800 hover:text-white"
                       }`}
-                      title="Toggle Mistakes Vault"
+                      title="Save Question"
                     >
-                      {vaultItems.has(String(activeQuestion.id)) ? (
+                      {vaultItems.has(`${activeQuestion.year}-${activeQuestion.id}`) || vaultItems.has(String(activeQuestion.id)) ? (
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                           <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
                         </svg>
