@@ -42,7 +42,6 @@ export default function IITJamPhysicsHub() {
   const { data: session, status, update } = useSession();
   const { navigateWithTransition } = useTransitionContext();
   const cursorRef = useRef(null);
-
   const [mounted, setMounted] = useState(false);
   const [goalData, setGoalData] = useState({ target: 20, completed: 0, percentage: 0 });
   const [searchQuery, setSearchQuery] = useState("");
@@ -52,47 +51,157 @@ export default function IITJamPhysicsHub() {
   const [myFollows, setMyFollows] = useState(new Set());
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false);
   const [questionsList, setQuestionsList] = useState(staticQuestions);
-  const [testActive, setTestActive] = useState(false);
-  const [liveRoomActive, setLiveRoomActive] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
+  const [isCopyingLink, setIsCopyingLink] = useState(false);
+  const captureRef = useRef(null);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const handleCopyLink = async () => {
+    if (!captureRef.current) return;
+    try {
+      setIsCopyingLink(true);
+      
+      const shareId = crypto.randomUUID();
+      const shareUrl = `${window.location.origin}/share/${shareId}`;
+      
+      const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at ${shareUrl}`;
+      await navigator.clipboard.writeText(textMessage);
+      alert("Link copied! Preview is generating in the background...");
+
+      await new Promise(r => setTimeout(r, 100));
+      
+      const dataBlob = await htmlToImage.toBlob(captureRef.current, {
+        quality: 1,
+        backgroundColor: '#09090b',
+        pixelRatio: 2,
+      });
+
+      const reader = new FileReader();
+      reader.readAsDataURL(dataBlob);
+      reader.onloadend = async () => {
+        try {
+          await fetch('/api/share', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: shareId, imageData: reader.result })
+          });
+        } catch (err) {
+          console.error("Failed to upload share image", err);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to copy link", error);
+    } finally {
+      setIsCopyingLink(false);
+    }
+  };
+
+  const handleShareQuestion = async () => {
+    if (!captureRef.current) return;
+    try {
+      setIsSharing(true);
+      // Brief delay to let the UI update and fonts load in the hidden div
+      await new Promise(r => setTimeout(r, 100));
+      
+      const dataUrl = await htmlToImage.toBlob(captureRef.current, {
+        quality: 1,
+        backgroundColor: '#09090b', // zinc-950
+        pixelRatio: 2, // High res for retina
+      });
+      
+      if (dataUrl) {
+        const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`;
+        
+        // Use Web Share API if supported (Works on mobile, Safari, macOS Chrome)
+        // This flawlessly passes both the image AND text directly to WhatsApp/other apps.
+        if (navigator.canShare) {
+          const file = new File([dataUrl], 'jamphy-question.png', { type: 'image/png' });
+          if (navigator.canShare({ files: [file], text: textMessage })) {
+            try {
+              await navigator.share({
+                title: 'Jamphy Question',
+                text: textMessage,
+                files: [file]
+              });
+              return; // Shared successfully via share sheet
+            } catch (err) {
+              if (err.name === 'AbortError') return; // User cancelled, do nothing
+              console.error("Web Share failed, falling back to clipboard", err);
+            }
+          }
+        }
+
+        // Fallback: Clipboard API
+        const textBlob = new Blob([textMessage], { type: 'text/plain' });
+        const htmlBlob = new Blob([`<p>${textMessage}</p>`], { type: 'text/html' });
+        
+        await navigator.clipboard.write([
+          new ClipboardItem({ 
+            'image/png': dataUrl,
+            'text/plain': textBlob,
+            'text/html': htmlBlob
+          })
+        ]);
+        alert("Image and link copied to clipboard! You may need to paste twice depending on the app.");
+      }
+    } catch (error) {
+      console.error("Failed to share question", error);
+      alert("Failed to share question. Please try again.");
+    } finally {
+      setIsSharing(false);
+    }
+  };
 
   useEffect(() => {
     fetch("/api/questions")
       .then(res => res.json())
       .then(data => {
         if (data.questions && data.questions.length > 0) {
-          const merged = [...staticQuestions];
-          data.questions.forEach(dq => {
-            if (!merged.some(q => q.id === dq.id && q.year === dq.year)) {
-              merged.push(dq);
-            }
+          setQuestionsList(prev => {
+            const existingKeys = new Set(prev.map(q => `${q.year}-${q.id}`));
+            const uniqueDbQuestions = data.questions.filter(
+              q => !existingKeys.has(`${q.year}-${q.id}`)
+            );
+            return [...prev, ...uniqueDbQuestions];
           });
-          setQuestionsList(merged);
         }
       })
       .catch(console.error);
   }, []);
 
-  const fetchGoalData = () => {
-    fetch('/api/goals/today')
-      .then(res => res.json())
-      .then(data => {
-        if (data.target) setGoalData(data);
-      })
-      .catch(console.error);
+  const handleSaveGoal = (newTarget) => {
+    setIsGoalModalOpen(false);
+    setGoalData(prev => ({
+      ...prev,
+      target: newTarget,
+      percentage: prev.completed > 0 ? (prev.completed / newTarget) * 100 : 0
+    }));
   };
+
+  const fetchGoalData = () => {
+    if (status === "authenticated") {
+      fetch("/api/goals/today")
+        .then(res => res.json())
+        .then(data => {
+          if (!data.error) {
+            setGoalData(data);
+          }
+        })
+        .catch(console.error);
+    }
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (status === "authenticated") {
       fetchGoalData();
-      fetch('/api/friends/list')
+      fetch("/api/friends/list")
         .then(res => res.json())
         .then(data => {
-          if (data.following) {
-            setMyFollows(new Set(data.following.map(u => u.id)));
+          if (data.friends) {
+            setMyFollows(new Set(data.friends.map(f => f.id)));
           }
         })
         .catch(console.error);
@@ -105,30 +214,29 @@ export default function IITJamPhysicsHub() {
       const timer = setTimeout(async () => {
         try {
           const res = await fetch(`/api/users/search?q=${searchQuery}`);
-          if (res.ok) {
-            const data = await res.json();
-            setSearchResults(data.users || []);
-          }
+          const data = await res.json();
+          setSearchResults(data.users || []);
+          setShowSearchDropdown(true);
         } catch (e) {
           console.error(e);
         } finally {
           setIsSearching(false);
         }
-      }, 500);
+      }, 300);
       return () => clearTimeout(timer);
     } else {
       setSearchResults([]);
+      setShowSearchDropdown(false);
     }
   }, [searchQuery]);
 
   const toggleFollow = async (targetUserId) => {
+    const isFollowing = myFollows.has(targetUserId);
     try {
-      const isFollowing = myFollows.has(targetUserId);
-      const method = isFollowing ? 'DELETE' : 'POST';
-      const res = await fetch('/api/friends/follow', {
-        method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ targetUserId })
+      const res = await fetch("/api/friends/follow", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ targetUserId, action: isFollowing ? "unfollow" : "follow" })
       });
       if (res.ok) {
         setMyFollows(prev => {
@@ -143,16 +251,536 @@ export default function IITJamPhysicsHub() {
     }
   };
 
-  const handleSaveGoal = (target) => {
-    fetch('/api/goals/today', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ target })
-    }).then(() => {
-      fetchGoalData();
-      setIsGoalModalOpen(false);
-    });
+  const [testActive, setTestActive] = useState(false);
+  const [liveRoomActive, setLiveRoomActive] = useState(false);
+
+  const [browseMode, setBrowseMode] = useState("subject");
+  const [selectedBrowseYear, setSelectedBrowseYear] = useState(null);
+  const [selectedSubjectFilter, setSelectedSubjectFilter] = useState("All");
+
+  const [selectedSubject, setSelectedSubject] =
+    useState(null);
+
+  const [selectedYear, setSelectedYear] =
+    useState("All");
+
+  const [selectedSubtopic, setSelectedSubtopic] =
+    useState("All");
+
+  const [selectedType, setSelectedType] =
+    useState("All");
+
+
+
+
+  const [activeQuestion, setActiveQuestion] =
+    useState(null);
+
+  const [selectedAnswer, setSelectedAnswer] =
+    useState(null);
+
+  const [isCorrect, setIsCorrect] =
+    useState(null);
+
+  const [natAnswer, setNatAnswer] =
+    useState("");
+
+  const [showSolution, setShowSolution] =
+    useState(false);
+
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
+  const [reportDescription, setReportDescription] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [vaultItems, setVaultItems] = useState(new Set());
+  const [toastMessage, setToastMessage] = useState("");
+  
+  const [showDiscussion, setShowDiscussion] = useState(false);
+  const [newComment, setNewComment] = useState("");
+  const [isSubmittingComment, setIsSubmittingComment] = useState(false);
+  const [editingCommentId, setEditingCommentId] = useState(null);
+  const [editingCommentText, setEditingCommentText] = useState("");
+  const [isUpdatingComment, setIsUpdatingComment] = useState(false);
+
+  const fetcher = (url) => fetch(url).then(r => r.json());
+  const { data: commentsData, mutate: mutateComments } = useSWR(
+    activeQuestion ? `/api/comments?questionId=${activeQuestion.year}-${activeQuestion.id}` : null,
+    fetcher
+  );
+
+  const handlePostComment = async () => {
+    if (!newComment.trim()) return;
+    setIsSubmittingComment(true);
+    try {
+      const res = await fetch("/api/comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          questionId: `${activeQuestion.year}-${activeQuestion.id}`,
+          text: newComment
+        })
+      });
+      if (res.ok) {
+        setNewComment("");
+        mutateComments();
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsSubmittingComment(false);
+    }
   };
+
+  const handleUpdateComment = async (commentId) => {
+    if (!editingCommentText.trim()) return;
+    setIsUpdatingComment(true);
+    try {
+      const res = await fetch("/api/comments", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          commentId,
+          text: editingCommentText
+        })
+      });
+      if (res.ok) {
+        setEditingCommentId(null);
+        setEditingCommentText("");
+        mutateComments();
+      } else {
+        const errData = await res.json();
+        alert(errData.error || "Failed to update comment");
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsUpdatingComment(false);
+    }
+  };
+
+  const handleDeleteComment = async (commentId) => {
+    if (!window.confirm("Are you sure you want to delete this comment?")) return;
+    try {
+      const res = await fetch(`/api/comments?id=${commentId}`, {
+        method: "DELETE"
+      });
+      if (res.ok) {
+        mutateComments();
+      } else {
+        const errData = await res.json();
+        alert(errData.error || "Failed to delete comment");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      fetch("/api/vault")
+        .then(res => res.json())
+        .then(data => {
+          if (data.vaultItems) {
+            setVaultItems(new Set(data.vaultItems.map(v => v.questionId)));
+          }
+        })
+        .catch(console.error);
+    }
+  }, [status]);
+
+  const toggleVault = async () => {
+    if (status !== "authenticated") return alert("Please sign in to save to vault.");
+    const qid = String(activeQuestion.id);
+    const currentlyInVault = vaultItems.has(qid);
+
+    if (currentlyInVault) {
+      if (!confirm("Remove this question from the Mistakes Vault?")) return;
+      try {
+        await fetch(`/api/vault?questionId=${qid}`, { method: "DELETE" });
+        setVaultItems(prev => {
+          const next = new Set(prev);
+          next.delete(qid);
+          return next;
+        });
+        setToastMessage("Removed from Mistakes Vault");
+      } catch (e) {
+        console.error(e);
+      }
+    } else {
+      try {
+        await fetch("/api/vault", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ questionId: qid, isCorrect: false })
+        });
+        setVaultItems(prev => new Set(prev).add(qid));
+        setToastMessage("Added to Mistakes Vault");
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    setTimeout(() => setToastMessage(""), 3000);
+  };
+
+  const questionLoadTime = useRef(0);
+
+  const handleReportQuestion = async () => {
+    if (!reportDescription.trim()) return;
+    setIsReporting(true);
+    try {
+      const res = await fetch("/api/reports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          questionId: `${activeQuestion.year}-${activeQuestion.id}`,
+          description: reportDescription,
+        }),
+      });
+      if (res.ok) {
+        setIsReportModalOpen(false);
+        setReportDescription("");
+        alert("Report submitted successfully. Thank you!");
+      } else {
+        alert("Failed to submit report. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting report:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsReporting(false);
+    }
+  };
+
+  const availableYears = useMemo(() => {
+    return [...new Set(questionsList.map((q) => q.year))].sort((a, b) => b - a);
+  }, [questionsList]);
+
+  const filteredQuestions = useMemo(() => {
+
+    return questionsList.filter((q) => {
+
+      const subjectMatch = selectedSubject
+        ? selectedSubject.subtopics.includes(q.subject)
+        : true;
+
+      const browseYearMatch = selectedBrowseYear
+        ? q.year === selectedBrowseYear
+        : true;
+
+      const yearFilterMatch =
+        selectedYear === "All"
+          ? true
+          : q.year === Number(selectedYear);
+
+      const subtopicMatch =
+        selectedSubtopic === "All"
+          ? true
+          : q.subject === selectedSubtopic;
+
+      const subjectFilterMatch =
+        selectedSubjectFilter === "All"
+          ? true
+          : syllabus.find(s => s.id === selectedSubjectFilter)?.subtopics.includes(q.subject);
+
+      const typeMatch =
+        selectedType === "All"
+          ? true
+          : q.type === selectedType;
+
+      return (
+        subjectMatch &&
+        browseYearMatch &&
+        yearFilterMatch &&
+        subtopicMatch &&
+        subjectFilterMatch &&
+        typeMatch
+      );
+
+    });
+
+  }, [
+    selectedSubject,
+    selectedBrowseYear,
+    selectedYear,
+    selectedSubtopic,
+    selectedSubjectFilter,
+    selectedType,
+    questionsList,
+  ]);
+
+  const currentQuestionIndex =
+    activeQuestion
+      ? filteredQuestions.findIndex(
+        (q) =>
+          q.id === activeQuestion.id &&
+          q.year === activeQuestion.year
+      )
+      : -1;
+
+  useEffect(() => {
+    questionLoadTime.current = Date.now();
+  }, [currentQuestionIndex]);
+
+  const hasPreviousQuestion =
+    currentQuestionIndex > 0;
+
+  const hasNextQuestion =
+    currentQuestionIndex <
+    filteredQuestions.length - 1;
+
+  const resetQuestionState = () => {
+
+    setSelectedAnswer(null);
+
+    setIsCorrect(null);
+
+    setNatAnswer("");
+
+    setShowSolution(false);
+
+    questionLoadTime.current = Date.now();
+  };
+
+  const goToQuestion = (index) => {
+
+    if (
+      index < 0 ||
+      index >= filteredQuestions.length
+    ) {
+
+      return;
+
+    }
+
+    setActiveQuestion(
+      filteredQuestions[index]
+    );
+
+    resetQuestionState();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlQuestionId = params.get('id');
+      if (urlQuestionId && questionsList.length > 0 && !activeQuestion) {
+        const q = questionsList.find(q => `${q.year}-${q.id}` === urlQuestionId);
+        if (q) {
+          setActiveQuestion(q);
+          resetQuestionState();
+          
+          const url = new URL(window.location.href);
+          url.searchParams.delete('id');
+          window.history.replaceState({}, '', url);
+        }
+      }
+    }
+  }, [questionsList, activeQuestion]);
+
+  const isNAT =
+    activeQuestion?.type === "NAT";
+
+  const isMSQ =
+    activeQuestion?.type === "MSQ";
+
+  const getCorrectOptions = (question) => {
+
+    if (question.type === "NAT") {
+
+      return [String(question.correctAnswer)];
+
+    }
+
+    // MSQ
+    if (Array.isArray(question.correctAnswers)) {
+
+      return question.correctAnswers;
+
+    }
+
+    // MCQ
+    if (
+      typeof question.correctAnswer === "number"
+    ) {
+
+      return [question.correctAnswer];
+
+    }
+
+    return [];
+
+  };
+
+  const arraysMatch = (first, second) => {
+
+    if (first.length !== second.length) {
+
+      return false;
+
+    }
+
+    const firstSet = new Set(first);
+
+    return second.every((value) =>
+      firstSet.has(value)
+    );
+
+  };
+
+  const handleSingleAnswer = (index) => {
+    if (isCorrect !== null) return;
+    setSelectedAnswer(index);
+  };
+
+  const submitSingleAnswer = () => {
+    if (selectedAnswer === null) return;
+    const [correctOptionIndex] = getCorrectOptions(activeQuestion);
+    const correct = selectedAnswer === correctOptionIndex;
+    setIsCorrect(correct);
+    
+    const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
+    
+    if (session?.user) {
+      const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
+      fetch('/api/vault', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct })
+      }).catch(err => console.error(err));
+      
+      fetch('/api/attempts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct, timeTaken, subject: activeQuestion.subject, selectedAnswer: String(selectedAnswer + 1) })
+      }).catch(err => console.error(err));
+    }
+  };
+
+  const handleMultipleAnswer = (index) => {
+
+    if (isCorrect !== null) {
+
+      return;
+
+    }
+
+    setSelectedAnswer((current) => {
+
+      const currentAnswers = Array.isArray(current)
+        ? current
+        : [];
+
+      if (currentAnswers.includes(index)) {
+
+        return currentAnswers.filter(
+          (answer) => answer !== index
+        );
+
+      }
+
+      return [...currentAnswers, index];
+
+    });
+
+  };
+
+  const submitMultipleAnswer = () => {
+
+    const answers = Array.isArray(selectedAnswer)
+      ? selectedAnswer
+      : [];
+
+    if (answers.length === 0) {
+
+      return;
+
+    }
+
+    const correct = arraysMatch(
+      answers,
+      getCorrectOptions(activeQuestion)
+    );
+    setIsCorrect(correct);
+    
+    const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
+    
+    if (session?.user) {
+      const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
+      fetch('/api/vault', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct })
+      }).catch(err => console.error(err));
+      
+      fetch('/api/attempts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct, timeTaken, subject: activeQuestion.subject, selectedAnswer: answers.map(a => a + 1).sort().join(',') })
+      }).catch(err => console.error(err));
+    }
+  };
+
+  const submitNATAnswer = () => {
+
+    const enteredAnswer = Number(
+      String(natAnswer).trim()
+    );
+
+    if (isNaN(enteredAnswer)) {
+      return;
+    }
+    
+    let correct = false;
+
+    if (
+      activeQuestion.correctAnswerMin !== undefined &&
+      activeQuestion.correctAnswerMax !== undefined
+    ) {
+
+      correct = enteredAnswer >= activeQuestion.correctAnswerMin &&
+        enteredAnswer <= activeQuestion.correctAnswerMax;
+
+    } else {
+      const correctAnswer = Number(
+        activeQuestion.correctAnswer
+      );
+      correct = enteredAnswer === correctAnswer;
+    }
+    
+    setIsCorrect(correct);
+    
+    const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
+    
+    if (session?.user) {
+      const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
+      fetch('/api/vault', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct })
+      }).catch(err => console.error(err));
+      
+      fetch('/api/attempts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId, isCorrect: correct, timeTaken, subject: activeQuestion.subject, selectedAnswer: String(enteredAnswer) })
+      })
+      .then(() => fetchGoalData())
+      .catch(err => console.error(err));
+    }
+  };
+
+  if (status === "loading" || !mounted) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="w-10 h-10 border border-white/20 border-t-white rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen text-white overflow-x-hidden relative z-0">
@@ -386,37 +1014,49 @@ export default function IITJamPhysicsHub() {
 
       )}
 
-
-
-      {testActive && (
-        <TestManager
-          allQuestions={questionsList}
-          onClose={() => setTestActive(false)}
+      {isReportModalOpen && (
+        <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-lg w-full">
+            <h3 className="text-2xl font-bold text-white mb-4">Report Question Error</h3>
+            <p className="text-zinc-400 mb-6">
+              Found a mistake in the question, options, or answer? Let us know and we&apos;ll fix it.
+            </p>
+            <textarea
+              value={reportDescription}
+              onChange={(e) => setReportDescription(e.target.value)}
+              placeholder="Describe the error..."
+              className="w-full h-32 bg-black border border-zinc-700 rounded-2xl p-4 text-white outline-none mb-6 resize-none focus:border-zinc-500 transition"
+            />
+            <div className="flex gap-4 justify-end">
+              <button
+                onClick={() => setIsReportModalOpen(false)}
+                className="px-6 py-3 rounded-2xl border border-zinc-700 text-white hover:bg-zinc-800 transition"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleReportQuestion}
+                disabled={isReporting || !reportDescription.trim()}
+                className="px-6 py-2 bg-red-600/20 text-red-400 font-bold rounded-xl border border-red-500/30 hover:bg-red-600/40 transition disabled:opacity-50"
+              >
+                {isReporting ? "Submitting..." : "Submit Report"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {isGoalModalOpen && (
+        <GoalSettingsModal
+          currentTarget={goalData.target}
+          onClose={() => setIsGoalModalOpen(false)}
+          onSave={handleSaveGoal}
         />
       )}
-
-      {liveRoomActive && (
-        <TestModal 
-          title="Create Live Room"
-          onClose={() => setLiveRoomActive(false)}
-          onGenerate={async (config) => {
-            try {
-              const res = await fetch('/api/room/create', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(config)
-              });
-              const data = await res.json();
-              if (res.ok) {
-                window.location.href = `/room/${data.roomId}`;
-              } else {
-                alert(data.error || "Failed to create Live Room");
-              }
-            } catch (err) {
-              alert("An error occurred");
-            }
-          }}
-        />
+      {/* Toast Notification */}
+      {toastMessage && (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-zinc-900 border border-zinc-700 text-white px-6 py-3 rounded-full font-medium shadow-2xl z-[99999] animate-in fade-in slide-in-from-bottom-4">
+          {toastMessage}
+        </div>
       )}
     </div>
   );
