@@ -1,9 +1,12 @@
 export const questions = [
-
   {
     id: 1,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -14,7 +17,7 @@ Light of wavelength \(632\,nm\) is passing through an optically active medium of
       String.raw`\(1.81\times10^{-5}\)`,
       String.raw`\(3.16\times10^{-7}\)`,
       String.raw`\(3.62\times10^{-5}\)`,
-      String.raw`\(6.32\times10^{-7}\)`
+      String.raw`\(6.32\times10^{-7}\)`,
     ],
 
     detailedSolution: String.raw`Optical rotation \(\theta = 18^\circ = \frac{\pi}{10}\) rad.
@@ -37,7 +40,11 @@ Rearranging for the difference in refractive indices:
   {
     id: 2,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -48,7 +55,7 @@ Consider an \(n\)-type silicon in which the fully ionized dopant concentration i
       String.raw`\(2.25\times10^{3}\)`,
       String.raw`\(1.55\times10^{3}\)`,
       String.raw`\(3.01\times10^{3}\)`,
-      String.raw`\(4.52\times10^{3}\)`
+      String.raw`\(4.52\times10^{3}\)`,
     ],
 
     detailedSolution: String.raw`The fully ionized donor concentration is \(N_d = 10^{17}\) cm\(^{-3}\). 
@@ -66,7 +73,11 @@ According to the mass action law:
   {
     id: 3,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -77,7 +88,7 @@ Consider the superposition of two electromagnetic waves with their electric fiel
       String.raw`\(\phi=0\) and \(A_1\ne A_2\)`,
       String.raw`\(\phi=\frac{\pi}{2}\) and \(A_1=A_2\)`,
       String.raw`\(\phi=\frac{\pi}{2}\) and \(A_1\ne A_2\)`,
-      String.raw`\(\phi=0\) and \(A_1=A_2\)`
+      String.raw`\(\phi=0\) and \(A_1=A_2\)`,
     ],
 
     detailedSolution: String.raw`The resultant electric field components are:
@@ -98,7 +109,11 @@ Furthermore, for it to be an ellipse and not a circle, the amplitudes must not b
   {
     id: 4,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Boolean Algebra","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -109,7 +124,7 @@ Which of the following options represents the simplified form of the Boolean equ
       String.raw`\(A\bar{B}\)`,
       String.raw`\(\bar{A}B\bar{C}\)`,
       String.raw`\(\bar{B}C\)`,
-      String.raw`\(\bar{C}\)`
+      String.raw`\(\bar{C}\)`,
     ],
 
     detailedSolution: String.raw`We are given the Boolean equation:
@@ -133,7 +148,11 @@ Since \(\bar{A} + A = 1\), the final simplified expression is:
   {
     id: 5,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -150,7 +169,7 @@ Which of the following options gives the correct value of \(p\)?
       String.raw`\(2\)`,
       String.raw`\(3\)`,
       String.raw`\(4\)`,
-      String.raw`\(1\)`
+      String.raw`\(1\)`,
     ],
 
     detailedSolution: String.raw`The wavefunction is \(\psi(x) = \sqrt{\frac{p}{5}}[1 + \cos(\frac{\pi x}{2})]\sin(\frac{\pi x}{2})\).
@@ -176,7 +195,11 @@ Setting this to 1 gives \(p = 4\).`,
   {
     id: 6,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -187,7 +210,7 @@ Consider the normalized superposed state \(\psi=c_0\phi_0+c_1\phi_1\), where \(\
       String.raw`Imaginary`,
       String.raw`Real`,
       String.raw`Zero`,
-      String.raw`Complex with non-zero real and imaginary parts`
+      String.raw`Complex with non-zero real and imaginary parts`,
     ],
 
     detailedSolution: String.raw`The state is \(\psi = c_0 \phi_0 + c_1 \phi_1\), where \(c_0\) and \(c_1\) are imaginary.
@@ -212,7 +235,11 @@ Since \(\langle x \rangle\) is real and \(i\langle p \rangle\) is \(i \times (\t
   {
     id: 7,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -225,7 +252,7 @@ The potential of a quantum harmonic oscillator is modified from \(\frac{1}{2}kx^
       String.raw`\(-3\)`,
       String.raw`\(-6\)`,
       String.raw`\(-12\)`,
-      String.raw`\(-18\)`
+      String.raw`\(-18\)`,
     ],
 
     detailedSolution: String.raw`The modified potential is \(V(x) = \frac{1}{2}kx^2 + 3ax\).
@@ -246,7 +273,11 @@ Substituting \(a = 2\) and \(k = 1\):
   {
     id: 8,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Differential Equations",
+    subjectId: "math",
+    tags: ["Differential Equations","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -265,7 +296,7 @@ Which of the following options gives the value of \(y\left(t=\frac{\pi}{2\omega}
       String.raw`\(\frac{1}{\omega}\)`,
       String.raw`\(\frac{2\pi}{\omega}\)`,
       String.raw`\(0\)`,
-      String.raw`\(1\)`
+      String.raw`\(1\)`,
     ],
 
     detailedSolution: String.raw`The general solution to the differential equation \(y'' + \omega^2 y = 0\) is:
@@ -289,21 +320,25 @@ Evaluating at \(t = \frac{\pi}{2\omega}\):
   {
     id: 9,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
 Consider the electrostatic potential in two dimensions \(V(x,y)=x^8y^9\). What is the line integral of the corresponding electric field along the path shown in the figure?
 `,
 
-    image: "/images/9.png",
-
     options: [
       String.raw`\(0\)`,
       String.raw`\(1\)`,
       String.raw`\(2\)`,
-      String.raw`\(\frac{1}{2}\)`
+      String.raw`\(\frac{1}{2}\)`,
     ],
+
+    image: "/images/9.png",
 
     detailedSolution: String.raw`The electrostatic field \(\vec{E}\) is conservative, meaning it can be expressed as the negative gradient of a scalar potential, \(\vec{E} = -\vec{\nabla}V\).
 
@@ -318,7 +353,11 @@ If the path shown in the figure is a closed loop, the start and end points are t
   {
     id: 10,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -340,7 +379,7 @@ The value of \(\det(A^{-1})\) is:
       String.raw`\(4\)`,
       String.raw`\(1\)`,
       String.raw`\(\frac{1}{4}\)`,
-      String.raw`\(0\)`
+      String.raw`\(0\)`,
     ],
 
     detailedSolution: String.raw`First, compute the determinant of matrix \(A\):
@@ -360,21 +399,25 @@ Using the property of determinants for inverse matrices:
   {
     id: 11,
     year: 2026,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Medium",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
 Consider the circuit of the figure, the voltage \(V_C\), in Volts, is:
 `,
 
-    image: "/images/11.png",
-
     options: [
       String.raw`\(0\)`,
       String.raw`\(1.25\)`,
       String.raw`\(9.8\)`,
-      String.raw`\(10\)`
+      String.raw`\(10\)`,
     ],
+
+    image: "/images/11.png",
 
     detailedSolution: String.raw`In a DC circuit under steady-state conditions, a capacitor acts as an open circuit (infinite resistance) because it is fully charged.
 
@@ -388,7 +431,11 @@ By applying Kirchhoff's Voltage and Current Laws to find the nodal voltages acro
   {
     id: 12,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -407,7 +454,7 @@ Which of the following statements is correct?
       String.raw`The force corresponding to the potential is central`,
       String.raw`Angular momentum of the system is not conserved`,
       String.raw`Linear momentum along the \(y\)-direction is conserved`,
-      String.raw`Energy of the system is not conserved`
+      String.raw`Energy of the system is not conserved`,
     ],
 
     detailedSolution: String.raw`The potential is \(V(x,y,z) = -k \frac{y}{x^2+y^2+z^2}\).
@@ -424,7 +471,11 @@ Which of the following statements is correct?
   {
     id: 13,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -435,7 +486,7 @@ Which of the following statements is correct?
       String.raw`\(\vec{E}'=\vec{E}\) and \(\vec{B}'=\vec{B}\)`,
       String.raw`\(\vec{E}'=\vec{E}+\vec{v}_0\times\vec{B}\) and \(\vec{B}'=\vec{B}\)`,
       String.raw`\(\vec{E}'=\vec{E}\) and \(\vec{v}\times\vec{B}'=(\vec{v}+\vec{v}_0)\times\vec{B}\)`,
-      String.raw`\(\vec{E}'=\vec{v}_0\times\vec{B}\) and \(\vec{v}\times\vec{B}'=\vec{E}+\vec{v}\times\vec{B}\)`
+      String.raw`\(\vec{E}'=\vec{v}_0\times\vec{B}\) and \(\vec{v}\times\vec{B}'=\vec{E}+\vec{v}\times\vec{B}\)`,
     ],
 
     detailedSolution: String.raw`Under Galilean transformations for frames moving with constant relative velocity \(\vec{v}_0\), the coordinates transform as \(\vec{r}' = \vec{r} - \vec{v}_0 t\).
@@ -460,7 +511,11 @@ Substituting this in gives: \(\vec{E} = \vec{E}' - \vec{v}_0 \times \vec{B}\)
   {
     id: 14,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -470,18 +525,13 @@ The dashed line is for the classical case. The solid line is for the quantum cas
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/14a.png",
-      "/images/14b.png",
-      "/images/14c.png",
-      "/images/14d.png"
-    ],
+    optionImages: ["/images/14a.png","/images/14b.png","/images/14c.png","/images/14d.png"],
 
     detailedSolution: String.raw`For a quantum harmonic oscillator, the ground state wavefunction \(\psi_0(x)\) is a Gaussian function centered at the equilibrium position \(x = 0\).
 
@@ -495,7 +545,11 @@ Unlike the classical probability distribution, which peaks at the turning points
   {
     id: 15,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -504,16 +558,16 @@ An observer \(\bar{O}(\bar{t},\bar{x})\) moves with a constant velocity in the p
 Which of the following options represents these events as observed by \(O(t,x)\)?
 `,
 
-    image: "/images/15.png",
-
-    options: ["", "", "", ""],
-
-    optionImages: [
-      "/images/15a.png",
-      "/images/15b.png",
-      "/images/15c.png",
-      "/images/15d.png"
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
+
+    optionImages: ["/images/15a.png","/images/15b.png","/images/15c.png","/images/15d.png"],
+
+    image: "/images/15.png",
 
     detailedSolution: String.raw`According to the postulates of Special Relativity, the speed of light \(c\) is constant for all inertial observers.
 
@@ -529,21 +583,25 @@ After reflection, it continues along another diagonal path, ensuring the constan
   {
     id: 16,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
 Consider a multilayered structure composed of thin films of refractive indices \(n_0\), \(n_1\), and \(n_2\) as shown in the figure. A ray traveling in the first layer hits the interface at an angle of \(20^\circ\) with the horizontal. Which of the following options is correct?
 `,
 
-    image: "/images/16.png",
-
     options: [
       String.raw`The ray emerges at an angle of \(20^\circ\) with the horizontal in the \(4^{\text{th}}\) layer`,
       String.raw`The ray emerges at an angle of \(56^\circ\) with the horizontal in the \(4^{\text{th}}\) layer`,
       String.raw`The ray would not enter the \(3^{\text{rd}}\) layer`,
-      String.raw`The ray emerges at an angle of \(44^\circ\) with the horizontal in the \(4^{\text{th}}\) layer`
+      String.raw`The ray emerges at an angle of \(44^\circ\) with the horizontal in the \(4^{\text{th}}\) layer`,
     ],
+
+    image: "/images/16.png",
 
     detailedSolution: String.raw`Applying Snell's law across the parallel interfaces:
 \(n_0 \sin\theta_0 = n_1 \sin\theta_1 = n_2 \sin\theta_2 = n_3 \sin\theta_3\)
@@ -560,7 +618,11 @@ Thus, the ray experiences total internal reflection at the \(2^{nd}\) to \(3^{rd
   {
     id: 17,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -573,7 +635,7 @@ The maximum packing fraction is close to:
       String.raw`\(53\%\)`,
       String.raw`\(68\%\)`,
       String.raw`\(74\%\)`,
-      String.raw`\(81\%\)`
+      String.raw`\(81\%\)`,
     ],
 
     detailedSolution: String.raw`For a Body-Centered Cubic (BCC) lattice, the atoms touch along the body diagonal.
@@ -594,21 +656,25 @@ Packing fraction = \(\frac{\frac{8}{3}\pi R^3}{\frac{64R^3}{3\sqrt{3}}} = \frac{
   {
     id: 18,
     year: 2026,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "MCQ",
 
     question: String.raw`
 The output voltage \(V_0\) for the circuit shown in the figure is:
 `,
 
-    image: "/images/18.png",
-
     options: [
       String.raw`\((V_1 - V_2)\)`,
       String.raw`\((V_1 - 2V_2)\)`,
       String.raw`\((V_2 - V_1)\)`,
-      String.raw`\(2(V_1 - V_2)\)`
+      String.raw`\(2(V_1 - V_2)\)`,
     ],
+
+    image: "/images/18.png",
 
     detailedSolution: String.raw`The given circuit is an ideal difference amplifier.
 
@@ -631,7 +697,11 @@ Since \(V_- = V_+ = \frac{V_1}{2}\), substituting gives:
   {
     id: 19,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -644,7 +714,7 @@ A quantum particle of mass \(10^{-20}\,kg\) is confined within a length of \(1\,
       String.raw`\(2\)`,
       String.raw`\(5\)`,
       String.raw`\(10\)`,
-      String.raw`\(1\)`
+      String.raw`\(1\)`,
     ],
 
     detailedSolution: String.raw`Heisenberg's Uncertainty Principle is \(\Delta x \Delta p_x \approx \frac{\hbar}{2}\).
@@ -669,7 +739,11 @@ Rounded to the nearest integer, this is \(5\).`,
   {
     id: 20,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -680,12 +754,9 @@ Which of the following options is correct?
 
     options: [
       String.raw`The magnetic moment of the ring is \(\frac{Q\omega R^2}{4}\)`,
-
       String.raw`The ratio of the magnetic moment to angular momentum is \(\frac{Q}{2m}\)`,
-
       String.raw`The magnetic moment of the ring is \(\frac{Q\omega R^2}{6}\)`,
-
-      String.raw`The ratio of the magnetic moment to angular momentum is \(\frac{Q}{m}\)`
+      String.raw`The ratio of the magnetic moment to angular momentum is \(\frac{Q}{m}\)`,
     ],
 
     detailedSolution: String.raw`The ring carries a total charge \(Q\) and rotates with angular velocity \(\omega\).
@@ -707,7 +778,11 @@ The ratio of magnetic moment to angular momentum is:
   {
     id: 21,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Damped & Forced Oscillations",
+    subjectId: "waves",
+    tags: ["Damped & Forced Oscillations","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -720,7 +795,7 @@ A mass attached to the bottom end of a vertical massless spring stretches the sp
       String.raw`\(2\)`,
       String.raw`\(3\)`,
       String.raw`\(4\)`,
-      String.raw`\(1\)`
+      String.raw`\(1\)`,
     ],
 
     detailedSolution: String.raw`For a mass-spring system, the time period is \(T = 2\pi\sqrt{\frac{m}{k}}\).
@@ -746,21 +821,25 @@ Rounded to the nearest integer, it is \(1\) cm.`,
   {
     id: 22,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
 A particle is rotating along a circular path with uniform speed \(v\), as shown in the figure. While moving from the point \(P\) to \(Q\) subtending an angle \(\theta\), the magnitude of the change in its velocity is:
 `,
 
-    image: "/images/22.png",
-
     options: [
       String.raw`Zero`,
       String.raw`\(v\cos\theta\)`,
       String.raw`\(2v\sin\frac{\theta}{2}\)`,
-      String.raw`\(v\cos\frac{\theta}{2}\)`
+      String.raw`\(v\cos\frac{\theta}{2}\)`,
     ],
+
+    image: "/images/22.png",
 
     detailedSolution: String.raw`The particle moves in a circle with a uniform speed \(v\).
 
@@ -784,7 +863,11 @@ Using the half-angle identity \(1 - \cos\theta = 2\sin^2(\frac{\theta}{2})\):
   {
     id: 23,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -795,12 +878,9 @@ Which of the following statements is correct?
 
     options: [
       String.raw`The magnitude of the maximum voltage across the inductor is less than \(50\,V\)`,
-
       String.raw`The magnitude of the maximum voltage across the capacitor is more than \(60\,V\)`,
-
       String.raw`The magnitude of the maximum voltage across the resistor is \(50\,V\)`,
-
-      String.raw`The magnitude of the maximum voltage across the capacitor equals the maximum voltage across the resistor`
+      String.raw`The magnitude of the maximum voltage across the capacitor equals the maximum voltage across the resistor`,
     ],
 
     detailedSolution: String.raw`Calculate the inductive and capacitive reactances:
@@ -828,7 +908,11 @@ Thus, the maximum voltage across the capacitor equals the maximum voltage across
   {
     id: 24,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Fourier Series",
+    subjectId: "math",
+    tags: ["Fourier Series","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -843,19 +927,16 @@ where \(a_0,a_n,b_n\)'s are the Fourier coefficients.
 Which of the following options is correct?
 `,
 
-    image: "/images/24.png",
-
     options: [
       String.raw`\(a_0 = 3\pi\)`,
-
       String.raw`All \(a_n\) are zero`,
-
       String.raw`All \(b_n\) are zero`,
-
       String.raw`\(
 a_0 = \frac{3\pi}{2}
-\)`
+\)`,
     ],
+
+    image: "/images/24.png",
 
     detailedSolution: String.raw`By definition, a Fourier series represents a periodic function using sines and cosines.
 
@@ -869,7 +950,11 @@ This means that the coefficients \(a_0\) and \(a_n\) will be identically zero, a
   {
     id: 25,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -880,7 +965,7 @@ Using Taylor series, expand \(f(x)=x^3-\frac{1}{8}\) around \(x_0=1\) up to seco
       String.raw`\(-2\)`,
       String.raw`\(3\)`,
       String.raw`\(2\)`,
-      String.raw`\(-3\)`
+      String.raw`\(-3\)`,
     ],
 
     detailedSolution: String.raw`The function is \(f(x) = x^3 - \frac{1}{8}\).
@@ -907,7 +992,11 @@ The coefficient of the \(x\) term is \(-3\).`,
   {
     id: 26,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -918,21 +1007,18 @@ Which of the following options gives the eigenvalues of \(A\)?
 
     options: [
       String.raw`\(1,0\)`,
-
       String.raw`\(
 \frac{1+\sqrt5}{2},
 \frac{1-\sqrt5}{2}
 \)`,
-
       String.raw`\(
 \frac{1+\sqrt5}{4},
 \frac{1-\sqrt5}{4}
 \)`,
-
       String.raw`\(
 \frac{\sqrt5}{2},
 1-\frac{\sqrt5}{2}
-\)`
+\)`,
     ],
 
     detailedSolution: String.raw`For a \(2 \times 2\) matrix \(A\) with eigenvalues \(\lambda_1\) and \(\lambda_2\):
@@ -955,7 +1041,11 @@ Using the quadratic formula to solve for \(\lambda\):
   {
     id: 27,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -966,12 +1056,9 @@ Which of the following statements is correct for the resultant vector \(\vec{\na
 
     options: [
       String.raw`It lies in \(xy\text{-plane}\)`,
-
       String.raw`It lies in \(yz\text{-plane}\)`,
-
       String.raw`It lies in \(xz\text{-plane}\)`,
-
-      String.raw`It is along the \(x\) direction`
+      String.raw`It is along the \(x\) direction`,
     ],
 
     detailedSolution: String.raw`The vector is \(\vec{V} = xyz \, \hat{k}\).
@@ -997,7 +1084,11 @@ The resultant vector is \(y\hat{i} + x\hat{j}\), which has no \(\hat{k}\) compon
   {
     id: 28,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -1020,12 +1111,9 @@ The fringe width (center-to-center spacing of bright fringes) will be:
 
     options: [
       String.raw`\(\frac{\lambda}{2}\)`,
-
       String.raw`\(2\lambda\)`,
-
       String.raw`\(\frac{\sqrt3\lambda}{2}\)`,
-
-      String.raw`\(\lambda\)`
+      String.raw`\(\lambda\)`,
     ],
 
     detailedSolution: String.raw`The two wavevectors are \(\vec{k}_1 = \frac{2\pi}{\lambda}(\frac{1}{2}\hat{i} - \frac{\sqrt{3}}{2}\hat{j})\) and \(\vec{k}_2 = \frac{2\pi}{\lambda}(-\frac{1}{2}\hat{i} - \frac{\sqrt{3}}{2}\hat{j})\).
@@ -1049,7 +1137,11 @@ The fringe width (distance between adjacent bright fringes, \(\Delta m = 1\)) is
   {
     id: 29,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -1057,8 +1149,6 @@ Consider a Carnot cycle as shown in the figure. The ideal gas expanded from volu
 
 Which of the following statements is correct?
 `,
-
-    questionImage: "/images/29.png",
 
     options: [
       String.raw`
@@ -1068,7 +1158,6 @@ Work done along the path AB is
 W_{AB}=-NRT_1\ln\frac{V_2}{V_1}
 \]
 `,
-
       String.raw`
 Work done along the path BC is
 
@@ -1076,7 +1165,6 @@ Work done along the path BC is
 W_{BC}=0
 \]
 `,
-
       String.raw`
 Work done along the path CD is
 
@@ -1084,15 +1172,16 @@ Work done along the path CD is
 W_{CD}=-NRT_1\ln\frac{V_2}{V_1}
 \]
 `,
-
       String.raw`
 Work done along the path DA is
 
 \[
 W_{DA}=0
 \]
-`
+`,
     ],
+
+    questionImage: "/images/29.png",
 
     detailedSolution: String.raw`A Carnot cycle consists of two isothermal and two adiabatic processes.
 
@@ -1109,7 +1198,11 @@ Using the thermodynamic sign convention where work done ON the system is positiv
   {
     id: 30,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -1120,12 +1213,9 @@ The power required, in Watts, is:
 
     options: [
       String.raw`\(64\)`,
-
       String.raw`\(54\)`,
-
       String.raw`\(32\)`,
-
-      String.raw`\(72\)`
+      String.raw`\(72\)`,
     ],
 
     detailedSolution: String.raw`The initial velocity is \(v_i = 2\) m/s, final velocity is \(v_f = 6\) m/s, mass \(m = 20\) kg, and time \(t = 10\) s.
@@ -1144,7 +1234,11 @@ Average power is work done per unit time:
   {
     id: 31,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -1169,7 +1263,6 @@ x=n\frac{\lambda}{2},
 
 where \(n\) is an integer
 `,
-
       String.raw`
 The antinodes are at
 
@@ -1179,7 +1272,6 @@ x=\left(n+\frac12\right)\frac{\lambda}{2},
 
 where \(n\) is an integer
 `,
-
       String.raw`
 The nodes are at
 
@@ -1189,7 +1281,6 @@ x=\left(n+\frac12\right)\frac{\lambda}{2},
 
 where \(n\) is an integer
 `,
-
       String.raw`
 The antinodes are at
 
@@ -1198,7 +1289,7 @@ x=n\frac{\lambda}{2},
 \]
 
 where \(n\) is an integer
-`
+`,
     ],
 
     detailedSolution: String.raw`The given equation of the standing wave is:
@@ -1218,13 +1309,17 @@ This happens when \(kx = n\pi\).
 
 Comparing with the options, Option C and Option D match these derivations exactly.`,
 
-    correctAnswers: [2, 3],
+    correctAnswers: [2,3],
   },
 
   {
     id: 32,
     year: 2026,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
@@ -1233,17 +1328,14 @@ In the circuit shown in the figure, the Zener voltage \(V_z\) is \(20\,V\) and t
 For what value(s) of the input voltage \(V_i\), the Zener diode is in ON state?
 `,
 
-    questionImage: "/images/32.png",
-
     options: [
       String.raw`\(20\,V\)`,
-
       String.raw`\(25\,V\)`,
-
       String.raw`\(35\,V\)`,
-
-      String.raw`\(40\,V\)`
+      String.raw`\(40\,V\)`,
     ],
+
+    questionImage: "/images/32.png",
 
     detailedSolution: String.raw`For a Zener diode to be in the "ON" state (operating in the breakdown region), the input voltage must be high enough to overcome the Zener breakdown voltage \(V_z\), but not so high that it exceeds the maximum current rating \(I_{ZM}\) through the series resistor.
 
@@ -1254,13 +1346,17 @@ Typically, \(V_i > V_z\), so \(V_i\) must be greater than 20V (depending on the 
 To prevent burnout, the current must not exceed \(60\) mA.
 Without the exact resistor values from the image, we rely on the options. Based on typical circuit constraints, input voltages of \(25\) V and \(35\) V will turn the diode ON and safely operate within the bounds.`,
 
-    correctAnswers: [1, 2],
+    correctAnswers: [1,2],
   },
 
   {
     id: 33,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Conservation Laws",
+    subjectId: "mechanics",
+    tags: ["Conservation Laws","Mechanics & General Properties"],
     type: "MSQ",
 
     question: String.raw`
@@ -1284,12 +1380,9 @@ Which of the following statements is/are correct?
 
     options: [
       String.raw`\(\hat e_r\) and \(\hat e_\theta\) are not constant unit vectors`,
-
       String.raw`\(F_1\) and \(F_3\) are fictitious forces`,
-
       String.raw`\(F_2\) and \(F_4\) are fictitious forces`,
-
-      String.raw`\(F_1\) and \(F_2\) are zero in uniform circular motion`
+      String.raw`\(F_1\) and \(F_2\) are zero in uniform circular motion`,
     ],
 
     detailedSolution: String.raw`In a rotating frame of reference, Newton's second law requires the introduction of fictitious forces.
@@ -1304,13 +1397,17 @@ The terms in the expression are identified as follows:
 Furthermore, the unit vectors \(\hat{e}_r\) and \(\hat{e}_\theta\) continuously change direction as the particle moves or the frame rotates, making them non-constant.
 Therefore, options stating that \(\hat{e}_r\) and \(\hat{e}_\theta\) are not constant, and that \(F_2\) and \(F_4\) are fictitious forces, are correct.`,
 
-    correctAnswers: [0, 2],
+    correctAnswers: [0,2],
   },
 
   {
     id: 34,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -1323,18 +1420,15 @@ The events are represented by coordinates \((ct,x,y,z)\) in some frame of refere
       String.raw`
 Events \((1,0,-10,1)\) and \((-1,1,-9,1)\) are space-like separated
 `,
-
       String.raw`
 Events \((-1,0,-9,1)\) and \((1,1,-10,1)\) are space-like separated
 `,
-
       String.raw`
 Events \((-10,0,1,-1)\) and \((-9,1,-1,-1)\) are light-like separated
 `,
-
       String.raw`
 Events \((9,-1,1,-1)\) and \((-10,1,0,-1)\) are time-like separated
-`
+`,
     ],
 
     detailedSolution: String.raw`In special relativity, the spacetime interval \(\Delta s^2\) determines whether the separation between two events is space-like, time-like, or light-like.
@@ -1357,7 +1451,11 @@ Since \(\Delta s^2 > 0\), the interval is strictly positive, which means the eve
   {
     id: 35,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -1378,21 +1476,16 @@ E=\frac12 mv^2+U(x)
 is conserved, which of the following correctly describe(s) the plot of velocity \((v)\) as a function of position \((x)\) of the system for \(E<0\)?
 `,
 
-    questionImage: "/images/35.png",
-
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/35a.png",
-      "/images/35b.png",
-      "/images/35c.png",
-      "/images/35d.png"
-    ],
+    optionImages: ["/images/35a.png","/images/35b.png","/images/35c.png","/images/35d.png"],
+
+    questionImage: "/images/35.png",
 
     detailedSolution: String.raw`The potential energy is \(U(x) = -\frac{1}{2} kx^2\).
 The total energy is conserved: \(E = \frac{1}{2} mv^2 + U(x) < 0\).
@@ -1412,7 +1505,11 @@ Therefore, the plot will consist of two separate hyperbolic branches that do not
   {
     id: 36,
     year: 2026,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Oscillators",
+    subjectId: "solid",
+    tags: ["Oscillators","DC & AC Circuits","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
@@ -1423,12 +1520,9 @@ Which of the following statements is/are correct?
 
     options: [
       String.raw`The value of inductance is \(2.5~mH\)`,
-
       String.raw`The frequency of oscillator is \(3.2~kHz\)`,
-
       String.raw`The time for the charge in the capacitor to rise from zero to the maximum is nearly \(0.157~ms\)`,
-
-      String.raw`The maximum potential difference across the inductor is \(2.0~V\)`
+      String.raw`The maximum potential difference across the inductor is \(2.0~V\)`,
     ],
 
     detailedSolution: String.raw`For the ideal LC oscillator, energy oscillates between the capacitor and inductor without loss.
@@ -1446,13 +1540,17 @@ The time to charge from zero to maximum is one quarter of a period (\(T/4\)):
 
 By Kirchhoff's loop rule, the max potential difference across the inductor must equal the max potential difference across the capacitor, which is 2.0 V.`,
 
-    correctAnswers: [0, 2, 3],
+    correctAnswers: [0,2,3],
   },
 
   {
     id: 37,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -1463,12 +1561,9 @@ Which of the following options is/are true?
 
     options: [
       String.raw`Internal energy of the gas depends only on the temperature`,
-
       String.raw`\(S \propto \ln V\), assuming \(C_v\) is constant`,
-
       String.raw`\(S = 0\)`,
-
-      String.raw`Internal energy of the gas depends both on temperature and pressure`
+      String.raw`Internal energy of the gas depends both on temperature and pressure`,
     ],
 
     detailedSolution: String.raw`For an ideal gas, there are no intermolecular forces, so the internal energy does not depend on the volume or pressure.
@@ -1485,7 +1580,11 @@ Thus, the only unconditionally correct statement is that the internal energy dep
   {
     id: 38,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
@@ -1494,17 +1593,14 @@ Two small circular copper loops \(P\) and \(Q\) of radii \(R_1\) and \(R_2\), re
 Which of the following statements is/are correct?
 `,
 
-    questionImage: "/images/38.png",
-
     options: [
       String.raw`The magnetic field at the center of \(P\) is \(\propto \frac{1}{s^2}\)`,
-
       String.raw`The magnetic flux through the loop \(P\) is \(\propto \frac{1}{s^2}\)`,
-
       String.raw`The emf induced in the loop \(P\) is \(\propto \frac{1}{s^4}\)`,
-
-      String.raw`The emf induced in the loop \(P\) is \(\propto v^2\)`
+      String.raw`The emf induced in the loop \(P\) is \(\propto v^2\)`,
     ],
+
+    questionImage: "/images/38.png",
 
     detailedSolution: String.raw`The magnetic field produced by the small moving loop \(Q\) (acting as a magnetic dipole) at a large distance \(s\) along its axis is given by the dipole field formula:
 \(B = \frac{\mu_0}{4\pi} \frac{2\mu}{s^3}\), where \(\mu = I \pi R_2^2\).
@@ -1525,7 +1621,11 @@ This shows that the induced emf is directly proportional to \(\frac{1}{s^4}\) an
   {
     id: 39,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
@@ -1538,12 +1638,9 @@ Which of the following statements is/are correct?
 
     options: [
       String.raw`The charge on the inner surface of the outer sphere is \(-Q\)`,
-
       String.raw`The flux through a closed surface through the material of the outer sphere is \(\frac{Q}{\varepsilon_0}\)`,
-
       String.raw`The charge on the outer surface of the outer sphere is zero`,
-
-      String.raw`The potential at a radial distance \(r\) between the two spheres, \(R < r < 2R\), is \(\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}\)`
+      String.raw`The potential at a radial distance \(r\) between the two spheres, \(R < r < 2R\), is \(\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}\)`,
     ],
 
     detailedSolution: String.raw`Let the inner sphere of radius \(R\) have charge \(Q\).
@@ -1558,13 +1655,17 @@ The potential in the region between the spheres (\(R < r < 2R\)) is determined b
 Since \(V(2R) = 0\), \(C = -\frac{Q}{4\pi\varepsilon_0 (2R)}\).
 Thus, \(V(r) = \frac{Q}{4\pi\varepsilon_0} (\frac{1}{r} - \frac{1}{2R})\), which contradicts the provided option.`,
 
-    correctAnswers: [0, 2],
+    correctAnswers: [0,2],
   },
 
   {
     id: 40,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -1575,12 +1676,9 @@ Which of the following statements is/are true for a first order phase transition
 
     options: [
       String.raw`At the transition point \(C_p \to \infty\)`,
-
       String.raw`The derivative of the Gibbs function with respect to pressure changes continuously across the phase transition`,
-
       String.raw`The two thermodynamic states between which the transition takes place are distinct`,
-
-      String.raw`Entropy changes discontinuously with temperature at \(T_c\)`
+      String.raw`Entropy changes discontinuously with temperature at \(T_c\)`,
     ],
 
     detailedSolution: String.raw`A first-order phase transition is characterized by a discontinuous change in the first derivatives of the Gibbs free energy \(G\) (such as volume \(V = (\partial G/\partial P)_T\) and entropy \(S = -(\partial G/\partial T)_P\)) at the critical transition temperature \(T_c\).
@@ -1590,13 +1688,17 @@ Which of the following statements is/are true for a first order phase transition
 3. The two phases (states) coexisting during the transition are distinct (e.g., distinct densities).
 4. The entropy changes discontinuously due to the latent heat \(L = T_c \Delta S\).`,
 
-    correctAnswers: [0, 2, 3],
+    correctAnswers: [0,2,3],
   },
 
   {
     id: 41,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -1630,7 +1732,11 @@ Rounded to two decimal places, this is \(1.05\).`,
   {
     id: 42,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -1660,14 +1766,18 @@ Convert to kV/m:
 
 Rounded to one decimal place, it is \(274.4\).`,
 
-    correctAnswerMin: 273.0,
-    correctAnswerMax: 276.0,
+    correctAnswerMin: 273,
+    correctAnswerMax: 276,
   },
 
   {
     id: 43,
     year: 2026,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "NAT",
 
     question: String.raw`
@@ -1701,10 +1811,19 @@ Convert to millivolts:
   {
     id: 44,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
-    question:
-      "A particle of mass $10^{-20}\\ kg$ is moving along a circular orbit of radius $1\\ nm$. The speed of the particle corresponds to the average thermal energy at temperature $10^{-6}K$. Assuming the Bohr’s angular momentum quantization condition, the quantum number of the circular path of the particle is ____.\n\n(Answer in integer)\n\n[Use $h = 6.64 \\times 10^{-34}\\ J\\ s$ and $k_B = 1.38 \\times 10^{-23}\\ J/K$]",
+
+    question: String.raw`A particle of mass $10^{-20}\ kg$ is moving along a circular orbit of radius $1\ nm$. The speed of the particle corresponds to the average thermal energy at temperature $10^{-6}K$. Assuming the Bohr’s angular momentum quantization condition, the quantum number of the circular path of the particle is ____.
+
+(Answer in integer)
+
+[Use $h = 6.64 \times 10^{-34}\ J\ s$ and $k_B = 1.38 \times 10^{-23}\ J/K$]`,
+
     detailedSolution: String.raw`The average thermal kinetic energy is equated to the kinetic energy of the particle:
 \(\frac{1}{2} m v^2 = \frac{3}{2} k_B T\)
 \(v = \sqrt{\frac{3 k_B T}{m}}\)
@@ -1724,13 +1843,21 @@ Rounding to the nearest integer, \(n = 6\).`,
     correctAnswerMin: 6,
     correctAnswerMax: 6,
   },
+
   {
     id: 45,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
-    question:
-      "One mole of an ideal gas undergoes a reversible isothermal expansion from $V_i = 1.5 \\times 10^{-5}\\ m^3$ to $V_f = 1.6 \\times 10^{-5}m^3$ at a temperature $273\\ K$. The amount of heat transfer during the process is $\\alpha R$, where $R$ is the gas constant. The value of $\\alpha$ is ____.\n\n(Rounded off to one decimal place)",
+
+    question: String.raw`One mole of an ideal gas undergoes a reversible isothermal expansion from $V_i = 1.5 \times 10^{-5}\ m^3$ to $V_f = 1.6 \times 10^{-5}m^3$ at a temperature $273\ K$. The amount of heat transfer during the process is $\alpha R$, where $R$ is the gas constant. The value of $\alpha$ is ____.
+
+(Rounded off to one decimal place)`,
+
     detailedSolution: String.raw`For a reversible isothermal expansion of an ideal gas, the change in internal energy is zero (\(\Delta U = 0\)).
 According to the first law of thermodynamics, the heat transferred \(Q\) equals the work done \(W\) by the gas.
 
@@ -1748,13 +1875,21 @@ Since \(Q = \alpha R\), we have \(\alpha \approx 17.6\).`,
     correctAnswerMin: 16.5,
     correctAnswerMax: 18.5,
   },
+
   {
     id: 46,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Complex Numbers",
+    subjectId: "math",
+    tags: ["Complex Numbers","Mathematical Methods"],
     type: "NAT",
-    question:
-      "The value of $(1 - i\\sqrt{3})^3$ is ____.\n\n(Answer in integer)",
+
+    question: String.raw`The value of $(1 - i\sqrt{3})^3$ is ____.
+
+(Answer in integer)`,
+
     detailedSolution: String.raw`To evaluate \((1 - i\sqrt{3})^3\), it is easiest to convert the complex number to its polar form.
 
 Let \(z = 1 - i\sqrt{3}\).
@@ -1776,10 +1911,17 @@ Therefore, \(z^3 = 8(-1) = -8\).`,
   {
     id: 47,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Phase Transitions",
+    subjectId: "thermo",
+    tags: ["Phase Transitions","Thermodynamics & KTG"],
     type: "NAT",
-    question:
-      "Two thermodynamic systems separated by diathermic wall have the equations of state $U_1 = \\frac{3}{2} R N_1 T_1$ and $U_2 = \\frac{5}{2} R N_2 T_2$, where $R$ is the gas constant. $N_1, N_2$ and $T_1, T_2$ are the mole numbers and the temperature of the two systems, respectively. The composite system in equilibrium has the total energy $1.5 \\times 10^3$ Joule. If $N_1 = 3$ and $N_2 = 2$, then the internal energy $U_1$ of the system one is ________.\n\n(Answer in integer)",
+
+    question: String.raw`Two thermodynamic systems separated by diathermic wall have the equations of state $U_1 = \frac{3}{2} R N_1 T_1$ and $U_2 = \frac{5}{2} R N_2 T_2$, where $R$ is the gas constant. $N_1, N_2$ and $T_1, T_2$ are the mole numbers and the temperature of the two systems, respectively. The composite system in equilibrium has the total energy $1.5 \times 10^3$ Joule. If $N_1 = 3$ and $N_2 = 2$, then the internal energy $U_1$ of the system one is ________.
+
+(Answer in integer)`,
+
     detailedSolution: String.raw`The composite system is isolated and in equilibrium, meaning the two sub-systems share the same final temperature \(T\).
 
 The total internal energy is \(U_{total} = U_1 + U_2 = 1.5 \times 10^3\) J.
@@ -1804,13 +1946,23 @@ Rounding to the nearest integer gives \(711\) J.`,
     correctAnswerMin: 709,
     correctAnswerMax: 712,
   },
+
   {
     id: 48,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
     type: "NAT",
-    question:
-      "Light of wavelength $500\\ nm$ is incident on the surface of Na metal for photoelectric emission. The corresponding threshold wavelength is $600\\ nm$. The maximum kinetic energy of the emitted electron, in $eV$, is ____.\n\n(Rounded off to two decimal places)\n\n[Use Planck’s constant $h = 6.625 \\times 10^{-34}\\ J\\ s$, speed of light $c = 3 \\times 10^8\\ m/s$, charge of electron $e = 1.6 \\times 10^{-19}\\ C$]",
+
+    question: String.raw`Light of wavelength $500\ nm$ is incident on the surface of Na metal for photoelectric emission. The corresponding threshold wavelength is $600\ nm$. The maximum kinetic energy of the emitted electron, in $eV$, is ____.
+
+(Rounded off to two decimal places)
+
+[Use Planck’s constant $h = 6.625 \times 10^{-34}\ J\ s$, speed of light $c = 3 \times 10^8\ m/s$, charge of electron $e = 1.6 \times 10^{-19}\ C$]`,
+
     detailedSolution: String.raw`According to Einstein's photoelectric equation:
 \(K_{max} = E - \Phi\)
 where \(E\) is the energy of the incident photon and \(\Phi\) is the work function of the metal.
@@ -1832,13 +1984,21 @@ Rounded to two decimal places, this is \(0.41\).`,
     correctAnswerMin: 0.38,
     correctAnswerMax: 0.44,
   },
+
   {
     id: 49,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "NAT",
-    question:
-      "The first order Bragg peak for $(100)$ plane of a material with simple cubic structure is measured using an X-ray of wavelength $1\\text{Å}$. If the lattice constant is $5\\text{Å}$ then the Bragg peak is observed at an angle, in degrees, ____.\n\n(Rounded off to two decimal places)",
+
+    question: String.raw`The first order Bragg peak for $(100)$ plane of a material with simple cubic structure is measured using an X-ray of wavelength $1\text{Å}$. If the lattice constant is $5\text{Å}$ then the Bragg peak is observed at an angle, in degrees, ____.
+
+(Rounded off to two decimal places)`,
+
     detailedSolution: String.raw`Bragg's Law for X-ray diffraction is:
 \(2d \sin\theta = n\lambda\)
 
@@ -1863,10 +2023,17 @@ Rounded to two decimal places, the angle is \(5.74^\circ\).`,
   {
     id: 50,
     year: 2026,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
-    question:
-      "Consider an ensemble of hydrogen gas. The temperature, in $K$, at which the $rms$ speed of the hydrogen molecule is twice the $rms$ speed of the molecule at $300\\ K$ is ________.\n\n(Answer in integer)",
+
+    question: String.raw`Consider an ensemble of hydrogen gas. The temperature, in $K$, at which the $rms$ speed of the hydrogen molecule is twice the $rms$ speed of the molecule at $300\ K$ is ________.
+
+(Answer in integer)`,
+
     detailedSolution: String.raw`The root-mean-square (\(rms\)) speed of a gas molecule is given by:
 \(v_{rms} = \sqrt{\frac{3k_B T}{m}}\)
 
@@ -1886,13 +2053,21 @@ Squaring both sides:
     correctAnswerMin: 1200,
     correctAnswerMax: 1200,
   },
+
   {
     id: 51,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Conservation Laws",
+    subjectId: "mechanics",
+    tags: ["Conservation Laws","Mechanics & General Properties"],
     type: "NAT",
-    question:
-      "A particle of mass $m$ undergoes periodic motion in one-dimension with its total energy given as $E = \\frac{1}{2}m\\dot{x}^2 + \\frac{1}{4}kx^4$, where $k$ is a positive constant and $\\dot{x}=\\frac{dx}{dt}$. Assuming that $E$ is conserved, the time period $T$ has the relation $T \\propto E^{-1/n}$. The value of $n$ is ________.\n\n(Answer in integer)",
+
+    question: String.raw`A particle of mass $m$ undergoes periodic motion in one-dimension with its total energy given as $E = \frac{1}{2}m\dot{x}^2 + \frac{1}{4}kx^4$, where $k$ is a positive constant and $\dot{x}=\frac{dx}{dt}$. Assuming that $E$ is conserved, the time period $T$ has the relation $T \propto E^{-1/n}$. The value of $n$ is ________.
+
+(Answer in integer)`,
+
     detailedSolution: String.raw`The time period \(T\) of a particle in a potential \(V(x) = cx^m\) relates to its total energy \(E\) by the proportionality:
 \(T \propto E^{\frac{1}{m} - \frac{1}{2}}\)
 
@@ -1907,13 +2082,23 @@ Comparing the exponents, we have \(-1/4 = -1/n\), which implies \(n = 4\).`,
     correctAnswerMin: 4,
     correctAnswerMax: 4,
   },
+
   {
     id: 52,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
-    question:
-      "A spacecraft is placed $200\\ km$ above Earth in a circular orbit. The minimum change in the speed required to place the spacecraft in a parabolic orbit, in $km/s$, is ______.\n\n(Rounded off to one decimal place)\n\n[Use $G = 6.67 \\times 10^{-11}Nm^2/kg^2$, mass of Earth $= 6 \\times 10^{24}\\ kg$, radius of Earth $= 6400\\ km$]",
+
+    question: String.raw`A spacecraft is placed $200\ km$ above Earth in a circular orbit. The minimum change in the speed required to place the spacecraft in a parabolic orbit, in $km/s$, is ______.
+
+(Rounded off to one decimal place)
+
+[Use $G = 6.67 \times 10^{-11}Nm^2/kg^2$, mass of Earth $= 6 \times 10^{24}\ kg$, radius of Earth $= 6400\ km$]`,
+
     detailedSolution: String.raw`The radius of the circular orbit is \(r = R_{earth} + h = 6400 + 200 = 6600\) km \(= 6.6 \times 10^6\) m.
 
 The speed of the spacecraft in the circular orbit is:
@@ -1929,18 +2114,28 @@ The minimum change in speed required is:
 
 Rounded to one decimal place, it is \(3.2\) km/s.`,
 
-    correctAnswerMin: 3.0,
+    correctAnswerMin: 3,
     correctAnswerMax: 3.5,
   },
 
   {
     id: 53,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
-    question:
-      "Consider a light source having a spectral linewidth of $10^{10}\\ Hz$, used in a Michelson interferometer. The mirrors $M_1$ and $M_2$ are equidistant from the beam-splitter of negligible thickness as shown in the figure. The minimum distance $d_2$ that the mirror $M_1$ is to be moved for the interference pattern to completely disappear, in $cm$, is ____.\n\n(Rounded off to one decimal place)\n\n[Use speed of light to be $3 \\times 10^8\\ m/s$]",
+
+    question: String.raw`Consider a light source having a spectral linewidth of $10^{10}\ Hz$, used in a Michelson interferometer. The mirrors $M_1$ and $M_2$ are equidistant from the beam-splitter of negligible thickness as shown in the figure. The minimum distance $d_2$ that the mirror $M_1$ is to be moved for the interference pattern to completely disappear, in $cm$, is ____.
+
+(Rounded off to one decimal place)
+
+[Use speed of light to be $3 \times 10^8\ m/s$]`,
+
     image: "/images/53.png",
+
     detailedSolution: String.raw`The spectral linewidth \(\Delta \nu\) relates to the coherence time \(\tau_c\) of the light source by:
 \(\tau_c \approx \frac{1}{\Delta \nu}\)
 
@@ -1957,13 +2152,23 @@ The interference pattern completely disappears when the path difference exceeds 
     correctAnswerMin: 1.5,
     correctAnswerMax: 1.5,
   },
+
   {
     id: 54,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
-    question:
-      "Muons are unstable relativistic particles created at high altitudes above the Earth, having a lifetime of $2.2 \\times 10^{-6}s$ in their rest frame. As measured by an observer on the ground, the minimum velocity the muon requires to travel a distance of $6000\\ m$ is $v$. The value of $v/c$ is ______.\n\n(Rounded off to three decimal places)\n\n[Speed of light $c = 3 \\times 10^8m/s$]",
+
+    question: String.raw`Muons are unstable relativistic particles created at high altitudes above the Earth, having a lifetime of $2.2 \times 10^{-6}s$ in their rest frame. As measured by an observer on the ground, the minimum velocity the muon requires to travel a distance of $6000\ m$ is $v$. The value of $v/c$ is ______.
+
+(Rounded off to three decimal places)
+
+[Speed of light $c = 3 \times 10^8m/s$]`,
+
     detailedSolution: String.raw`The lifetime of the muon in its rest frame (proper time) is \(\tau_0 = 2.2 \times 10^{-6}\) s.
 Due to time dilation, the lifetime measured by the ground observer is \(\Delta t = \gamma \tau_0\), where \(\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}\).
 
@@ -1989,10 +2194,19 @@ Rounded to three decimal places, \(\frac{v}{c} = 0.994\).`,
   {
     id: 55,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
-    question:
-      "On the surface of a thin water film of refractive index $1.33$, two light beams of wavelength $\\lambda_1 = 0.64\\ \\mu m$ and $\\lambda_2 = 0.40\\ \\mu m$ are incident at an angle of $30^\\circ$. The light of wavelength $\\lambda_1$ exhibits maximum reflection, but that of wavelength $\\lambda_2$ is not reflected at all. The minimum thickness of the water film, in $\\mu m$, is ______ .\n\n(Rounded off to two decimal places)\n\n[Assume refractive index is independent of wavelength]",
+
+    question: String.raw`On the surface of a thin water film of refractive index $1.33$, two light beams of wavelength $\lambda_1 = 0.64\ \mu m$ and $\lambda_2 = 0.40\ \mu m$ are incident at an angle of $30^\circ$. The light of wavelength $\lambda_1$ exhibits maximum reflection, but that of wavelength $\lambda_2$ is not reflected at all. The minimum thickness of the water film, in $\mu m$, is ______ .
+
+(Rounded off to two decimal places)
+
+[Assume refractive index is independent of wavelength]`,
+
     detailedSolution: String.raw`For a thin film of water (\(n = 1.33\)) on a substrate, light reflected from the top surface undergoes a \(\pi\) phase shift.
 The condition for maximum reflection (constructive interference) is:
 \(2nt \cos\theta_r = (m_1 + \frac{1}{2})\lambda_1\)
@@ -2018,13 +2232,23 @@ Now solve for thickness \(t\):
     correctAnswerMin: 0.61,
     correctAnswerMax: 0.71,
   },
+
   {
     id: 56,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
-    question:
-      "An electron is confined in a one-dimensional box of width $L = 10\\ \\text{Å}$. The electron in the first excited state de-excites to the ground state. The wavelength of the emitted radiation, in $\\mu m$, is ____.\n\n(Rounded off to one decimal place)\n\n[Use the mass of the electron $m_e = 9.1 \\times 10^{-31}\\ kg$, Planck’s constant $h = 6.625 \\times10^{-34}\\ J\\ s$, $c = 3 \\times 10^8\\ m/s$]",
+
+    question: String.raw`An electron is confined in a one-dimensional box of width $L = 10\ \text{Å}$. The electron in the first excited state de-excites to the ground state. The wavelength of the emitted radiation, in $\mu m$, is ____.
+
+(Rounded off to one decimal place)
+
+[Use the mass of the electron $m_e = 9.1 \times 10^{-31}\ kg$, Planck’s constant $h = 6.625 \times10^{-34}\ J\ s$, $c = 3 \times 10^8\ m/s$]`,
+
     detailedSolution: String.raw`The energy levels of an electron in a 1D box of width \(L\) are given by \(E_n = \frac{n^2 h^2}{8 m L^2}\).
 
 The energy difference between the first excited state (\(n=2\)) and the ground state (\(n=1\)) is:
@@ -2042,13 +2266,25 @@ Rounded to one decimal place, \(\lambda = 1.1\ \mu\)m.`,
     correctAnswerMin: 0.9,
     correctAnswerMax: 1.3,
   },
+
   {
     id: 57,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
-    question:
-      "An electron is accelerated through a potential of $200\\ V$ and then it passes through a slit of width $1.0\\ nm$ held normal to the path of the electron. Assuming the uncertainty relation $\\Delta x \\Delta p_x \\approx \\hbar/2$, maximum scattering angle of the electron after the slit is $\\alpha \\times 10^{-3}\\ radian$.\n\nThe value of $\\alpha$ is ____.\n\n(Rounded off to nearest integer)\n\nGiven $\\hbar = 1.054 \\times10^{-34}\\ J\\ s$",
+
+    question: String.raw`An electron is accelerated through a potential of $200\ V$ and then it passes through a slit of width $1.0\ nm$ held normal to the path of the electron. Assuming the uncertainty relation $\Delta x \Delta p_x \approx \hbar/2$, maximum scattering angle of the electron after the slit is $\alpha \times 10^{-3}\ radian$.
+
+The value of $\alpha$ is ____.
+
+(Rounded off to nearest integer)
+
+Given $\hbar = 1.054 \times10^{-34}\ J\ s$`,
+
     detailedSolution: String.raw`The kinetic energy of the electron accelerated through 200 V is \(K = 200\) eV \(= 200 \times 1.6 \times 10^{-19} = 3.2 \times 10^{-17}\) J.
 Its initial momentum \(p_x\) is:
 \(p_x = \sqrt{2mK} = \sqrt{2 \times 9.1 \times 10^{-31} \times 3.2 \times 10^{-17}} = \sqrt{58.24 \times 10^{-48}} \approx 7.63 \times 10^{-24}\) kg m/s.
@@ -2069,11 +2305,19 @@ Thus, the value of \(\alpha\) is \(6.9\), which rounds to \(7\) as the nearest i
   {
     id: 58,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "NAT",
-    question:
-      "A uniform electric field of $70\\ V/m$ makes an angle of $60^\\circ$ with the positive x-axis, as shown in the figure. The potential difference between the points $P$ and $Q$ which are $2\\ m$ and $\\sqrt{3}\\ m$ away from the origin, in Volts, is ____.\n\n(Rounded off to one decimal place)",
+
+    question: String.raw`A uniform electric field of $70\ V/m$ makes an angle of $60^\circ$ with the positive x-axis, as shown in the figure. The potential difference between the points $P$ and $Q$ which are $2\ m$ and $\sqrt{3}\ m$ away from the origin, in Volts, is ____.
+
+(Rounded off to one decimal place)`,
+
     image: "/images/58.png",
+
     detailedSolution: String.raw`The uniform electric field vector is \(\vec{E} = E(\cos 60^\circ \hat{i} + \sin 60^\circ \hat{j}) = 70(0.5 \hat{i} + \frac{\sqrt{3}}{2} \hat{j}) = 35 \hat{i} + 35\sqrt{3} \hat{j}\).
 
 The position vectors for points \(P\) and \(Q\) are:
@@ -2092,13 +2336,23 @@ Now evaluate the dot product:
     correctAnswerMin: 34.5,
     correctAnswerMax: 35.5,
   },
+
   {
     id: 59,
     year: 2026,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Damped & Forced Oscillations",
+    subjectId: "waves",
+    tags: ["Damped & Forced Oscillations","Oscillations, Waves & Optics"],
     type: "NAT",
-    question:
-      "Consider a simple pendulum of length $l$ and time period $T$. In a laboratory experiment, the time for $100$ oscillations is measured to be $80\\ s$ using a stop-watch with least count $1\\ s$. The gravitational constant is known with a percentage error of $2.5\\%$.\n\nThe percentage error in the measured length of the pendulum, in %, is ____.\n\n(Answer in integer)",
+
+    question: String.raw`Consider a simple pendulum of length $l$ and time period $T$. In a laboratory experiment, the time for $100$ oscillations is measured to be $80\ s$ using a stop-watch with least count $1\ s$. The gravitational constant is known with a percentage error of $2.5\%$.
+
+The percentage error in the measured length of the pendulum, in %, is ____.
+
+(Answer in integer)`,
+
     detailedSolution: String.raw`The time period of a simple pendulum is \(T = 2\pi\sqrt{\frac{l}{g}}\).
 Squaring and solving for length \(l\):
 \(l = \frac{g T^2}{4\pi^2}\)
@@ -2122,10 +2376,19 @@ Substitute these into the error equation:
   {
     id: 60,
     year: 2026,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
-    question:
-      "A particle of mass $m$ in a potential $V(x)=\\frac{1}{2}kx^2$ is described by normalized wavefunction $\\sum_{n=0}^{\\infty}(\\sqrt{2})^{-(n+1)}\\phi_n(x)$, where $\\{\\phi_n\\}$ are the eigenstates of the particle. The energy corresponding to the wavefunction, in units of $\\dfrac{h}{\\pi}\\sqrt{\\dfrac{k}{m}}$, is ____.\n\n(Rounded off to two decimal places)\n\n[Given: $\\sum_{n=0}^{\\infty}(a)^{-n}=\\dfrac{a}{a-1},\\ a>1$]",
+
+    question: String.raw`A particle of mass $m$ in a potential $V(x)=\frac{1}{2}kx^2$ is described by normalized wavefunction $\sum_{n=0}^{\infty}(\sqrt{2})^{-(n+1)}\phi_n(x)$, where $\{\phi_n\}$ are the eigenstates of the particle. The energy corresponding to the wavefunction, in units of $\dfrac{h}{\pi}\sqrt{\dfrac{k}{m}}$, is ____.
+
+(Rounded off to two decimal places)
+
+[Given: $\sum_{n=0}^{\infty}(a)^{-n}=\dfrac{a}{a-1},\ a>1$]`,
+
     detailedSolution: String.raw`The normalized wavefunction is \(\psi = \sum_{n=0}^{\infty} (\sqrt{2})^{-(n+1)} \phi_n\).
 The probability of finding the particle in state \(n\) is \(P_n = |c_n|^2 = ((\sqrt{2})^{-(n+1)})^2 = (\frac{1}{2})^{n+1} = \frac{1}{2^{n+1}}\).
 
@@ -2149,16 +2412,22 @@ The value is \(0.75\).`,
   {
     id: 1,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "Consider a volume $V$ enclosed by a closed surface $S$ having unit surface normal $\\hat{n}$. For $\\mathbf{r}=x\\hat{i}+y\\hat{j}+z\\hat{k}$, the value of the surface integral $$\\frac{1}{9}\\oiint \\mathbf{r}\\cdot\\hat{n}\\ dS$$ is",
+
+    question: String.raw`Consider a volume $V$ enclosed by a closed surface $S$ having unit surface normal $\hat{n}$. For $\mathbf{r}=x\hat{i}+y\hat{j}+z\hat{k}$, the value of the surface integral $$\frac{1}{9}\oiint \mathbf{r}\cdot\hat{n}\ dS$$ is`,
+
     options: [
-      "$V$",
-      "$3V$",
-      "$\\dfrac{V}{3}$",
-      "$\\dfrac{V}{9}$"
+      String.raw`$V$`,
+      String.raw`$3V$`,
+      String.raw`$\dfrac{V}{3}$`,
+      String.raw`$\dfrac{V}{9}$`,
     ],
+
     detailedSolution: String.raw`By the Divergence Theorem, the surface integral of a vector field \(\mathbf{r}\) over a closed surface \(S\) enclosing a volume \(V\) is equal to the volume integral of its divergence:
 \(\oiint_S \mathbf{r} \cdot \hat{n} \, dS = \iiint_V (\nabla \cdot \mathbf{r}) \, dV\)
 
@@ -2178,17 +2447,24 @@ The expression given in the question includes a factor of \(\frac{1}{9}\):
   {
     id: 2,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Conservation Laws",
+    subjectId: "mechanics",
+    tags: ["Conservation Laws","Mechanics & General Properties"],
     type: "MCQ",
-    question:
-      "Two point-particles having masses $m_1$ and $m_2$ approach each other in perpendicular directions with speeds $v_1$ and $v_2$, respectively, as shown in the figure below. After an elastic collision, they move away from each other in perpendicular directions with speeds $v_1'$ and $v_2'$, respectively. The ratio $\\dfrac{v_2'}{v_1'}$ is",
-    image: "/images/2_25.png",
+
+    question: String.raw`Two point-particles having masses $m_1$ and $m_2$ approach each other in perpendicular directions with speeds $v_1$ and $v_2$, respectively, as shown in the figure below. After an elastic collision, they move away from each other in perpendicular directions with speeds $v_1'$ and $v_2'$, respectively. The ratio $\dfrac{v_2'}{v_1'}$ is`,
+
     options: [
-      "$\\dfrac{m_1^2 v_1}{m_2^2 v_2}$",
-      "$\\dfrac{m_1 v_1}{m_2 v_2}$",
-      "$\\dfrac{m_1^2 v_2}{m_2^2 v_1}$",
-      "$\\dfrac{m_1 v_2}{m_2 v_1}$"
+      String.raw`$\dfrac{m_1^2 v_1}{m_2^2 v_2}$`,
+      String.raw`$\dfrac{m_1 v_1}{m_2 v_2}$`,
+      String.raw`$\dfrac{m_1^2 v_2}{m_2^2 v_1}$`,
+      String.raw`$\dfrac{m_1 v_2}{m_2 v_1}$`,
     ],
+
+    image: "/images/2_25.png",
+
     detailedSolution: String.raw`Let the initial momenta of the two particles be \(\vec{p}_{1i} = m_1 v_1 \hat{i}\) and \(\vec{p}_{2i} = m_2 v_2 \hat{j}\).
 After the elastic collision, they move away in perpendicular directions, so their final momenta \(\vec{p}_{1f}\) and \(\vec{p}_{2f}\) satisfy \(\vec{p}_{1f} \cdot \vec{p}_{2f} = 0\).
 
@@ -2217,23 +2493,26 @@ The ratio is:
   {
     id: 3,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "Which one of the following figures represents the vector field $\\mathbf{A} = y\\hat{i}$?\n\n($\\hat{i}$ is the unit vector along the $x$-direction)",
+
+    question: String.raw`Which one of the following figures represents the vector field $\mathbf{A} = y\hat{i}$?
+
+($\hat{i}$ is the unit vector along the $x$-direction)`,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    optionImages: [
-      "/images/3a_25.png",
-      "/images/3a_25.png",
-      "/images/3a_25.png",
-      "/images/3a_25.png"
-    ],
+
+    optionImages: ["/images/3a_25.png","/images/3a_25.png","/images/3a_25.png","/images/3a_25.png"],
+
     detailedSolution: String.raw`The vector field is given by \(\mathbf{A} = y\hat{i}\).
 
 This means that the direction of the vector field is always purely along the \(x\)-axis (\(\hat{i}\)).
@@ -2250,17 +2529,24 @@ The figure that accurately represents arrows parallel to the x-axis, pointing ri
   {
     id: 4,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
-    question:
-      "Two parallel light rays ① and ② are incident from air on a system consisting of media P, Q, and air, as shown in the figure below. The incident angle is $45^\\circ$. Ray ① passes through medium P, air and medium Q and ray ② passes through media P and Q before leaving the system. After passing through the system, the angular deviation (in radians) between the two rays is",
-    image: "/images/4_25.png",
+
+    question: String.raw`Two parallel light rays ① and ② are incident from air on a system consisting of media P, Q, and air, as shown in the figure below. The incident angle is $45^\circ$. Ray ① passes through medium P, air and medium Q and ray ② passes through media P and Q before leaving the system. After passing through the system, the angular deviation (in radians) between the two rays is`,
+
     options: [
-      "0",
-      "$\\tan^{-1} \\sqrt{\\frac{3}{2}}$",
-      "$\\tan^{-1} \\sqrt{\\frac{2}{3}}$",
-      "$\\tan^{-1} \\sqrt{\\frac{1}{3}}$"
+      String.raw`0`,
+      String.raw`$\tan^{-1} \sqrt{\frac{3}{2}}$`,
+      String.raw`$\tan^{-1} \sqrt{\frac{2}{3}}$`,
+      String.raw`$\tan^{-1} \sqrt{\frac{1}{3}}$`,
     ],
+
+    image: "/images/4_25.png",
+
     detailedSolution: String.raw`Let's trace the path of both parallel rays. They are incident at an angle of \(45^\circ\) from the air.
 
 Ray 2 passes from Air \(\to\) Medium P \(\to\) Medium Q \(\to\) Air.
@@ -2280,17 +2566,26 @@ The angular deviation between them is exactly \(0\) radians.`,
   {
     id: 5,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "A charge $q$ is placed at the centre of the base of a square pyramid. The net outward electric flux across each of the slanted faces is\n\n(Consider permittivity as $\\varepsilon_0$)",
-    image: "/images/5_25.png",
+
+    question: String.raw`A charge $q$ is placed at the centre of the base of a square pyramid. The net outward electric flux across each of the slanted faces is
+
+(Consider permittivity as $\varepsilon_0$)`,
+
     options: [
-      "$\\dfrac{q}{\\varepsilon_0}$",
-      "$\\dfrac{q}{2\\varepsilon_0}$",
-      "$\\dfrac{q}{4\\varepsilon_0}$",
-      "$\\dfrac{q}{8\\varepsilon_0}$"
+      String.raw`$\dfrac{q}{\varepsilon_0}$`,
+      String.raw`$\dfrac{q}{2\varepsilon_0}$`,
+      String.raw`$\dfrac{q}{4\varepsilon_0}$`,
+      String.raw`$\dfrac{q}{8\varepsilon_0}$`,
     ],
+
+    image: "/images/5_25.png",
+
     detailedSolution: String.raw`The charge \(q\) is placed at the center of the square base of the pyramid.
 
 To utilize Gauss's Law effectively, we can exploit symmetry. Imagine constructing an identical inverted square pyramid directly below the first one, sharing the same base.
@@ -2309,17 +2604,28 @@ The outward electric flux across a single slanted face is:
   {
     id: 6,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "Consider a parallel plate capacitor (distance between the plates $d$, and permittivity $\\varepsilon_0$) as shown in the figure below. The space charge density between the plates varies as $\\rho(x)=\\rho_0 e^{-x}$. Voltage $V=0$ both at $x=0$ and $x=d$.\n\nThe voltage $V(x)$ at point $P$ between the plates is\n\n[$\\rho_0$ is a constant of appropriate dimensions]",
-    image: "/images/6_25.png",
+
+    question: String.raw`Consider a parallel plate capacitor (distance between the plates $d$, and permittivity $\varepsilon_0$) as shown in the figure below. The space charge density between the plates varies as $\rho(x)=\rho_0 e^{-x}$. Voltage $V=0$ both at $x=0$ and $x=d$.
+
+The voltage $V(x)$ at point $P$ between the plates is
+
+[$\rho_0$ is a constant of appropriate dimensions]`,
+
     options: [
-      "$\\dfrac{\\rho_0}{\\varepsilon_0}\\left[e^{-x}+\\dfrac{1-e^{-d}}{d}x-1\\right]$",
-      "$\\dfrac{2\\rho_0}{\\varepsilon_0}\\left[e^{-x}+\\dfrac{1-e^{-d}}{d}x-1\\right]$",
-      "$\\dfrac{\\rho_0}{2\\varepsilon_0}\\left[e^{-x}+\\dfrac{1-e^{-d}}{d}x-1\\right]$",
-      "$\\dfrac{3\\rho_0}{\\varepsilon_0}\\left[e^{-x}+\\dfrac{1-e^{-d}}{d}x-1\\right]$"
+      String.raw`$\dfrac{\rho_0}{\varepsilon_0}\left[e^{-x}+\dfrac{1-e^{-d}}{d}x-1\right]$`,
+      String.raw`$\dfrac{2\rho_0}{\varepsilon_0}\left[e^{-x}+\dfrac{1-e^{-d}}{d}x-1\right]$`,
+      String.raw`$\dfrac{\rho_0}{2\varepsilon_0}\left[e^{-x}+\dfrac{1-e^{-d}}{d}x-1\right]$`,
+      String.raw`$\dfrac{3\rho_0}{\varepsilon_0}\left[e^{-x}+\dfrac{1-e^{-d}}{d}x-1\right]$`,
     ],
+
+    image: "/images/6_25.png",
+
     detailedSolution: String.raw`The potential \(V(x)\) must satisfy Poisson's equation:
 \(\frac{d^2V}{dx^2} = -\frac{\rho(x)}{\varepsilon_0} = -\frac{\rho_0}{\varepsilon_0} e^{-x}\)
 
@@ -2347,23 +2653,26 @@ Factoring a negative sign matches the magnitude formulation of the first option 
   {
     id: 7,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "Consider a metal sphere enclosed concentrically within a spherical shell. The inner sphere of radius $a$ carries charge $Q$. The outer shell of radius $2a$ also has charge $Q$. The variation of the magnitude $E$ of the electric field as a function of distance $r$ from the centre $O$ is",
-    image: "/images/7_25.png",
+
+    question: String.raw`Consider a metal sphere enclosed concentrically within a spherical shell. The inner sphere of radius $a$ carries charge $Q$. The outer shell of radius $2a$ also has charge $Q$. The variation of the magnitude $E$ of the electric field as a function of distance $r$ from the centre $O$ is`,
+
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    optionImages: [
-      "/images/7a_25.png",
-      "/images/7b_25.png",
-      "/images/7c_25.png",
-      "/images/7d_25.png"
-    ],
+
+    optionImages: ["/images/7a_25.png","/images/7b_25.png","/images/7c_25.png","/images/7d_25.png"],
+
+    image: "/images/7_25.png",
+
     detailedSolution: String.raw`We analyze the electric field \(E\) in three distinct regions using Gauss's Law, \(\oint E \cdot dA = \frac{Q_{enc}}{\varepsilon_0}\):
 
 1) Inside the inner sphere (\(r < a\)):
@@ -2387,17 +2696,30 @@ The plot showing \(E=0\), a sudden spike and decay, followed by another spike an
   {
     id: 8,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
     type: "MCQ",
-    question:
-      "Consider radioactive decays $A \\to B$ with half-life $(T_{1/2})_A$ and $B \\to C$ with half-life $(T_{1/2})_B$. At any time $t$, the number of nuclides of $B$ is given by\n\n$$(N_B)_t = \\frac{\\lambda_A}{\\lambda_B-\\lambda_A}(N_A)_0\\left(e^{-\\lambda_A t}-e^{-\\lambda_B t}\\right),$$\n\nwhere $(N_A)_0$ is the number of nuclides of $A$ at $t=0$. The decay constants of $A$ and $B$ are $\\lambda_A$ and $\\lambda_B$, respectively.\n\nIf $(T_{1/2})_B < (T_{1/2})_A$, then the ratio $\\dfrac{(N_B)_t}{(N_A)_t}$ at time $t \\gg (T_{1/2})_A$ is\n\n[$(N_A)_t$ is the number of nuclides of $A$ at time $t$]",
+
+    question: String.raw`Consider radioactive decays $A \to B$ with half-life $(T_{1/2})_A$ and $B \to C$ with half-life $(T_{1/2})_B$. At any time $t$, the number of nuclides of $B$ is given by
+
+$$(N_B)_t = \frac{\lambda_A}{\lambda_B-\lambda_A}(N_A)_0\left(e^{-\lambda_A t}-e^{-\lambda_B t}\right),$$
+
+where $(N_A)_0$ is the number of nuclides of $A$ at $t=0$. The decay constants of $A$ and $B$ are $\lambda_A$ and $\lambda_B$, respectively.
+
+If $(T_{1/2})_B < (T_{1/2})_A$, then the ratio $\dfrac{(N_B)_t}{(N_A)_t}$ at time $t \gg (T_{1/2})_A$ is
+
+[$(N_A)_t$ is the number of nuclides of $A$ at time $t$]`,
 
     options: [
-      "$\\dfrac{\\lambda_A}{\\lambda_B-\\lambda_A}$",
-      "$\\dfrac{\\lambda_B}{\\lambda_A}$",
-      "$\\dfrac{\\lambda_A}{\\lambda_B}$",
-      "$\\dfrac{\\lambda_B}{\\lambda_B-\\lambda_A}$"
+      String.raw`$\dfrac{\lambda_A}{\lambda_B-\lambda_A}$`,
+      String.raw`$\dfrac{\lambda_B}{\lambda_A}$`,
+      String.raw`$\dfrac{\lambda_A}{\lambda_B}$`,
+      String.raw`$\dfrac{\lambda_B}{\lambda_B-\lambda_A}$`,
     ],
+
     detailedSolution: String.raw`The number of nuclides of B at time \(t\) is given by the Bateman equation:
 \((N_B)_t = \frac{\lambda_A}{\lambda_B - \lambda_A} (N_A)_0 \left(e^{-\lambda_A t} - e^{-\lambda_B t}\right)\)
 
@@ -2420,16 +2742,22 @@ The ratio is therefore:
   {
     id: 9,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
-    question:
-      "For a non-relativistic free particle, the ratio of phase velocity to group velocity is",
+
+    question: String.raw`For a non-relativistic free particle, the ratio of phase velocity to group velocity is`,
+
     options: [
-      "2",
-      "$\\dfrac{1}{2}$",
-      "1",
-      "$\\dfrac{1}{4}$"
+      String.raw`2`,
+      String.raw`$\dfrac{1}{2}$`,
+      String.raw`1`,
+      String.raw`$\dfrac{1}{4}$`,
     ],
+
     detailedSolution: String.raw`For a non-relativistic free particle, the total energy \(E\) is purely kinetic:
 \(E = \frac{p^2}{2m}\)
 In quantum mechanics, energy and momentum are related to angular frequency and wavenumber by \(E = \hbar \omega\) and \(p = \hbar k\).
@@ -2451,23 +2779,26 @@ The ratio of phase velocity to group velocity is:
   {
     id: 10,
     year: 2025,
-    subject: "Semiconductors",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "MCQ",
-    question:
-      "If the input voltage waveform $V_{IN}$ is a ramp function (as shown in the $V_{IN}$-$t$ plot below), then the output waveform ($V_{OUT}$) for the given circuit diagram having an ideal operational amplifier (Op-Amp) is",
-    image: "/images/10_25.png",
+
+    question: String.raw`If the input voltage waveform $V_{IN}$ is a ramp function (as shown in the $V_{IN}$-$t$ plot below), then the output waveform ($V_{OUT}$) for the given circuit diagram having an ideal operational amplifier (Op-Amp) is`,
+
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    optionImages: [
-      "/images/10a_25.png",
-      "/images/10b_25.png",
-      "/images/10c_25.png",
-      "/images/10d_25.png"
-    ],
+
+    optionImages: ["/images/10a_25.png","/images/10b_25.png","/images/10c_25.png","/images/10d_25.png"],
+
+    image: "/images/10_25.png",
+
     detailedSolution: String.raw`The given circuit features an ideal operational amplifier with a capacitor \(C\) at the input and a resistor \(R\) in the feedback loop. This configuration acts as a **differentiator**.
 
 The output voltage \(V_{OUT}\) is proportional to the negative rate of change (derivative) of the input voltage \(V_{IN}\):
@@ -2487,17 +2818,24 @@ The graph showing a constant negative step function correctly represents this ou
   {
     id: 11,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "In the circuit given below, the frequency of the input voltage $V_{IN}$ is $\\omega = 10^4\\ \\text{rad/s}$. The output voltage $V_{AB}$ leads $V_{IN}$ by",
-    image: "/images/11_25.png",
+
+    question: String.raw`In the circuit given below, the frequency of the input voltage $V_{IN}$ is $\omega = 10^4\ \text{rad/s}$. The output voltage $V_{AB}$ leads $V_{IN}$ by`,
+
     options: [
-      "$0^\\circ$",
-      "$45^\\circ$",
-      "$90^\\circ$",
-      "$-90^\\circ$"
+      String.raw`$0^\circ$`,
+      String.raw`$45^\circ$`,
+      String.raw`$90^\circ$`,
+      String.raw`$-90^\circ$`,
     ],
+
+    image: "/images/11_25.png",
+
     detailedSolution: String.raw`In an LCR circuit, the phase relationship between the output voltage \(V_{AB}\) and the input voltage \(V_{IN}\) is determined by the complex impedance of the components.
 
 The transfer function \(H(j\omega) = \frac{V_{AB}}{V_{IN}}\) depends on the exact arrangement of the resistor, inductor, and capacitor.
@@ -2512,16 +2850,22 @@ This means that the output voltage \(V_{AB}\) leads the input voltage \(V_{IN}\)
   {
     id: 12,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Differential Equations",
+    subjectId: "math",
+    tags: ["Differential Equations","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "Given a function $f(x,y)=\\dfrac{x}{a}e^y+\\dfrac{y}{b}e^x$, where $x=at$ and $y=bt$ ($a$ and $b$ are non-zero constants), the value of $\\dfrac{df}{dt}$ at $t=0$ is",
+
+    question: String.raw`Given a function $f(x,y)=\dfrac{x}{a}e^y+\dfrac{y}{b}e^x$, where $x=at$ and $y=bt$ ($a$ and $b$ are non-zero constants), the value of $\dfrac{df}{dt}$ at $t=0$ is`,
+
     options: [
-      "$-1$",
-      "$0$",
-      "$1$",
-      "$2$"
+      String.raw`$-1$`,
+      String.raw`$0$`,
+      String.raw`$1$`,
+      String.raw`$2$`,
     ],
+
     detailedSolution: String.raw`We are given the function \(f(x,y) = \frac{x}{a}e^y + \frac{y}{b}e^x\) with parametric equations \(x = at\) and \(y = bt\).
 
 Substitute \(x\) and \(y\) directly into the function to express it entirely in terms of \(t\):
@@ -2543,16 +2887,28 @@ Evaluate the derivative at \(t = 0\):
   {
     id: 13,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "If the system of linear equations\n\n$$x + my + az = 0$$\n$$2x + ay + mz = 0$$\n$$ax + 2y - z = 0$$\n\nwith $m$ and $a$ as non-zero constants, admits a non-trivial solution, then which one of the following conditions is correct?",
+
+    question: String.raw`If the system of linear equations
+
+$$x + my + az = 0$$
+$$2x + ay + mz = 0$$
+$$ax + 2y - z = 0$$
+
+with $m$ and $a$ as non-zero constants, admits a non-trivial solution, then which one of the following conditions is correct?`,
+
     options: [
-      "$m^2 - a^2 = 3$",
-      "$m^2 - a^2 = -3$",
-      "$a^2 - 2m^2 = -3$",
-      "$m^2 - 2a^2 = 3$"
+      String.raw`$m^2 - a^2 = 3$`,
+      String.raw`$m^2 - a^2 = -3$`,
+      String.raw`$a^2 - 2m^2 = -3$`,
+      String.raw`$m^2 - 2a^2 = 3$`,
     ],
+
     detailedSolution: String.raw`A system of homogeneous linear equations admits a non-trivial solution if and only if the determinant of its coefficient matrix is exactly zero.
 
 The coefficient matrix \(A\) is:
@@ -2576,16 +2932,22 @@ Since \(a\) is a non-zero constant, we can divide the entire equation by \(a\):
   {
     id: 14,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Complex Numbers",
+    subjectId: "math",
+    tags: ["Complex Numbers","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "If $\\left(\\dfrac{1-i}{1+i}\\right)^{\\frac{n}{2}}=-1$, where $i=\\sqrt{-1}$, one possible value of $n$ is",
+
+    question: String.raw`If $\left(\dfrac{1-i}{1+i}\right)^{\frac{n}{2}}=-1$, where $i=\sqrt{-1}$, one possible value of $n$ is`,
+
     options: [
-      "2",
-      "4",
-      "6",
-      "8"
+      String.raw`2`,
+      String.raw`4`,
+      String.raw`6`,
+      String.raw`8`,
     ],
+
     detailedSolution: String.raw`First, simplify the complex fraction inside the parenthesis by multiplying the numerator and denominator by the complex conjugate of the denominator:
 \(\frac{1-i}{1+i} = \frac{(1-i)(1-i)}{(1+i)(1-i)} = \frac{1 - 2i + i^2}{1^2 - i^2}\)
 
@@ -2612,16 +2974,26 @@ Therefore, \(n=4\) is a valid solution.`,
   {
     id: 15,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
-    question:
-      "In Cartesian coordinates, consider the functions $u(x,y)=\\dfrac{1}{2}(x^2-y^2)$ and $v(x,y)=xy$. If $(r,\\theta)$ are the polar coordinates, the Jacobian determinant\n\n$$\\left|\\dfrac{\\partial(u,v)}{\\partial(r,\\theta)}\\right|$$\n\nis",
+
+    question: String.raw`In Cartesian coordinates, consider the functions $u(x,y)=\dfrac{1}{2}(x^2-y^2)$ and $v(x,y)=xy$. If $(r,\theta)$ are the polar coordinates, the Jacobian determinant
+
+$$\left|\dfrac{\partial(u,v)}{\partial(r,\theta)}\right|$$
+
+is`,
+
     options: [
-      "$r$",
-      "$\\dfrac{1}{r}$",
-      "$r^2$",
-      "$r^3$"
+      String.raw`$r$`,
+      String.raw`$\dfrac{1}{r}$`,
+      String.raw`$r^2$`,
+      String.raw`$r^3$`,
     ],
+
     detailedSolution: String.raw`The Jacobian determinant for the transformation is defined as:
 \(J = \left| \frac{\partial(u,v)}{\partial(r,\theta)} \right| = \left| \frac{\partial(u,v)}{\partial(x,y)} \right| \times \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right|\)
 
@@ -2644,17 +3016,26 @@ Step 3: Multiply them together.
   {
     id: 16,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "MCQ",
-    question:
-      "Three particles of equal mass $M$, interacting via gravity, lie on the vertices of an equilateral triangle of side $d$, as shown in the figure below. The whole system is rotating with an angular velocity $\\omega$ about an axis perpendicular to the plane of the system and passing through the center of mass. The value of $\\omega$, for which the distance between the masses remains $d$, is\n\n($G$ is the universal gravitational constant)",
-    image: "/images/16_25.png",
+
+    question: String.raw`Three particles of equal mass $M$, interacting via gravity, lie on the vertices of an equilateral triangle of side $d$, as shown in the figure below. The whole system is rotating with an angular velocity $\omega$ about an axis perpendicular to the plane of the system and passing through the center of mass. The value of $\omega$, for which the distance between the masses remains $d$, is
+
+($G$ is the universal gravitational constant)`,
+
     options: [
-      "$\\sqrt{\\dfrac{2GM}{d^3}}$",
-      "$\\sqrt{\\dfrac{3GM}{d^3}}$",
-      "$\\sqrt{\\dfrac{GM}{3d^3}}$",
-      "$\\sqrt{\\dfrac{GM}{d^3}}$"
+      String.raw`$\sqrt{\dfrac{2GM}{d^3}}$`,
+      String.raw`$\sqrt{\dfrac{3GM}{d^3}}$`,
+      String.raw`$\sqrt{\dfrac{GM}{3d^3}}$`,
+      String.raw`$\sqrt{\dfrac{GM}{d^3}}$`,
     ],
+
+    image: "/images/16_25.png",
+
     detailedSolution: String.raw`The distance from the center of mass to any vertex of an equilateral triangle of side \(d\) is \(r = \frac{d}{\sqrt{3}}\).
 
 Consider one of the masses \(M\). It experiences gravitational attraction from the other two masses. The force from each is \(\frac{GM^2}{d^2}\), and the angle between these two force vectors is \(60^\circ\).
@@ -2675,17 +3056,24 @@ Equating the forces:
   {
     id: 17,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
-    question:
-      "Two masses, $M_1$ and $M_2$, are connected through a massless spring of spring constant $k$, as shown in the figure below. The mass $M_1$ is at rest against a rigid wall. Both $M_1$ and $M_2$ are on a frictionless surface. The mass $M_2$ is pushed towards $M_1$ by a distance $x$ from its equilibrium position and then released. After $M_1$ leaves the wall, the speed of the center of mass of the composite system is",
-    image: "/images/17_25.png",
+
+    question: String.raw`Two masses, $M_1$ and $M_2$, are connected through a massless spring of spring constant $k$, as shown in the figure below. The mass $M_1$ is at rest against a rigid wall. Both $M_1$ and $M_2$ are on a frictionless surface. The mass $M_2$ is pushed towards $M_1$ by a distance $x$ from its equilibrium position and then released. After $M_1$ leaves the wall, the speed of the center of mass of the composite system is`,
+
     options: [
-      "$\\sqrt{\\frac{k}{M_2}}\\,x$",
-      "$\\sqrt{\\frac{k}{M_1+M_2}}\\,x$",
-      "$\\frac{\\sqrt{kM_2}}{M_1+M_2}\\,x$",
-      "$\\frac{\\sqrt{kM_1}}{M_1+M_2}\\,x$",
+      String.raw`$\sqrt{\frac{k}{M_2}}\,x$`,
+      String.raw`$\sqrt{\frac{k}{M_1+M_2}}\,x$`,
+      String.raw`$\frac{\sqrt{kM_2}}{M_1+M_2}\,x$`,
+      String.raw`$\frac{\sqrt{kM_1}}{M_1+M_2}\,x$`,
     ],
+
+    image: "/images/17_25.png",
+
     detailedSolution: String.raw`The mass \(M_2\) is pushed a distance \(x\), compressing the spring, and storing a potential energy of \(U = \frac{1}{2} k x^2\).
 
 When \(M_2\) is released, it accelerates towards \(M_1\) (which is held in place by the rigid wall). The spring pushes against the wall.
@@ -2707,16 +3095,22 @@ The speed of the center of mass is the total momentum divided by the total mass:
   {
     id: 18,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
-    question:
-      "One end of a long chain is lifted vertically from flat ground to a height $H$ with constant speed $v$ by a force of magnitude $F$. Assume that the length of the chain is greater than $H$ and that it has a uniform mass per unit length $\\rho$. The magnitude of the force $F$ at height $H$ is",
+
+    question: String.raw`One end of a long chain is lifted vertically from flat ground to a height $H$ with constant speed $v$ by a force of magnitude $F$. Assume that the length of the chain is greater than $H$ and that it has a uniform mass per unit length $\rho$. The magnitude of the force $F$ at height $H$ is`,
+
     options: [
-      "$\\rho(gH+v^2)$",
-      "$\\rho(gH+2v^2)$",
-      "$\\rho(2gH+v^2)$",
-      "$\\frac{\\rho}{2}(gH+v^2)$",
+      String.raw`$\rho(gH+v^2)$`,
+      String.raw`$\rho(gH+2v^2)$`,
+      String.raw`$\rho(2gH+v^2)$`,
+      String.raw`$\frac{\rho}{2}(gH+v^2)$`,
     ],
+
     detailedSolution: String.raw`As the chain is lifted, two forces must be considered: the weight of the hanging chain, and the force required to continuously accelerate links of the chain from rest to velocity \(v\).
 
 1. **Weight Force**:
@@ -2737,16 +3131,22 @@ The total applied force \(F\) must provide both the lift for the weight and the 
   {
     id: 19,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
-    question:
-      "For a two-slit Fraunhofer diffraction, each slit is $0.1\\,\\text{mm}$ wide and separation between the two slits is $0.8\\,\\text{mm}$. The total number of interference minima between the first diffraction minima on both sides of the central maxima is",
+
+    question: String.raw`For a two-slit Fraunhofer diffraction, each slit is $0.1\,\text{mm}$ wide and separation between the two slits is $0.8\,\text{mm}$. The total number of interference minima between the first diffraction minima on both sides of the central maxima is`,
+
     options: [
-      "16",
-      "18",
-      "8",
-      "9",
+      String.raw`16`,
+      String.raw`18`,
+      String.raw`8`,
+      String.raw`9`,
     ],
+
     detailedSolution: String.raw`In a two-slit Fraunhofer diffraction experiment, the intensity pattern is a product of single-slit diffraction and double-slit interference.
 
 The condition for single-slit diffraction minima is:
@@ -2774,16 +3174,22 @@ Counting these integers gives a total of \(16\) interference minima.`,
   {
     id: 20,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Simple Harmonic Motion",
+    subjectId: "waves",
+    tags: ["Simple Harmonic Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
-    question:
-      "Consider the superposition of two orthogonal simple harmonic motions $y_1=a\\cos 2\\omega t$ and $y_2=b\\cos(\\omega t+\\phi)$. If $\\phi=\\pi$, the resultant motion will represent",
+
+    question: String.raw`Consider the superposition of two orthogonal simple harmonic motions $y_1=a\cos 2\omega t$ and $y_2=b\cos(\omega t+\phi)$. If $\phi=\pi$, the resultant motion will represent`,
+
     options: [
-      "a parabola",
-      "a hyperbola",
-      "an ellipse",
-      "a circle",
+      String.raw`a parabola`,
+      String.raw`a hyperbola`,
+      String.raw`an ellipse`,
+      String.raw`a circle`,
     ],
+
     detailedSolution: String.raw`We are given two orthogonal simple harmonic motions:
 \(y_1 = a \cos(2\omega t)\)
 \(y_2 = b \cos(\omega t + \pi)\)
@@ -2809,17 +3215,24 @@ This equation is of the form \(x = k y^2 + C\), which represents the equation of
   {
     id: 21,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
-    question:
-      "An unpolarized light ray passing through air (refractive index $n_a=1$) is incident on a glass slab (refractive index $n_g=\\sqrt{3}$) at an angle of $60^\\circ$, as shown in the figure below. The amplitude of the in-plane $(x-y)$ electric field component of the incident light is $4\\ \\text{V/m}$ and amplitude of the out of plane $(z)$ electric field component is $3\\ \\text{V/m}$. After passing through the glass slab, the electric field amplitude (in V/m) of the light is",
-    image: "/images/21_25.png",
+
+    question: String.raw`An unpolarized light ray passing through air (refractive index $n_a=1$) is incident on a glass slab (refractive index $n_g=\sqrt{3}$) at an angle of $60^\circ$, as shown in the figure below. The amplitude of the in-plane $(x-y)$ electric field component of the incident light is $4\ \text{V/m}$ and amplitude of the out of plane $(z)$ electric field component is $3\ \text{V/m}$. After passing through the glass slab, the electric field amplitude (in V/m) of the light is`,
+
     options: [
-      "5",
-      "4",
-      "7",
-      "3",
+      String.raw`5`,
+      String.raw`4`,
+      String.raw`7`,
+      String.raw`3`,
     ],
+
+    image: "/images/21_25.png",
+
     detailedSolution: String.raw`The light is incident from air (\(n_a = 1\)) onto glass (\(n_g = \sqrt{3}\)) at an angle of \(60^\circ\).
 Notice that \(\tan(60^\circ) = \sqrt{3} = \frac{n_g}{n_a}\).
 This means the angle of incidence is exactly the **Brewster's angle**.
@@ -2836,17 +3249,24 @@ Its amplitude remains exactly \(4\) V/m.`,
   {
     id: 22,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "Consider a slowly charging parallel plate capacitor (distance between the plates is $d$) having circular plates each with an area $A$, as shown in the figure below. An electric field of magnitude $E = E_0\\sin(\\omega t)$ exists between the plates while charging. The associated magnitude of the magnetic field $B$ at the periphery (outer edge) of the capacitor is (Neglect fringe effects)",
-    image: "/images/22_25.png",
+
+    question: String.raw`Consider a slowly charging parallel plate capacitor (distance between the plates is $d$) having circular plates each with an area $A$, as shown in the figure below. An electric field of magnitude $E = E_0\sin(\omega t)$ exists between the plates while charging. The associated magnitude of the magnetic field $B$ at the periphery (outer edge) of the capacitor is (Neglect fringe effects)`,
+
     options: [
-      "$\\frac{1}{2c^2}\\sqrt{\\frac{A}{\\pi}}E_0\\omega\\cos(\\omega t)$",
-      "$\\frac{1}{2c^2}\\sqrt{\\frac{A}{\\pi}}E_0\\omega\\sin(\\omega t)$",
-      "$\\frac{1}{c^2}\\sqrt{\\frac{A}{\\pi}}E_0\\omega\\cos(\\omega t)$",
-      "$\\frac{1}{c^2}\\sqrt{\\frac{A}{\\pi}}E_0\\omega\\sin(\\omega t)$",
+      String.raw`$\frac{1}{2c^2}\sqrt{\frac{A}{\pi}}E_0\omega\cos(\omega t)$`,
+      String.raw`$\frac{1}{2c^2}\sqrt{\frac{A}{\pi}}E_0\omega\sin(\omega t)$`,
+      String.raw`$\frac{1}{c^2}\sqrt{\frac{A}{\pi}}E_0\omega\cos(\omega t)$`,
+      String.raw`$\frac{1}{c^2}\sqrt{\frac{A}{\pi}}E_0\omega\sin(\omega t)$`,
     ],
+
+    image: "/images/22_25.png",
+
     detailedSolution: String.raw`By the Ampere-Maxwell law, a changing electric field between the capacitor plates generates an induced magnetic field. The law is:
 \(\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{displacement} = \mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}\)
 
@@ -2870,17 +3290,24 @@ Substitute \(R\):
   {
     id: 23,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "A surface current density $K = ae^{-y}$ exists on a thin strip of width $b$, as shown in the figure below. The associated surface current is ($a$ is a constant of appropriate dimensions)",
-    image: "/images/23_25.png",
+
+    question: String.raw`A surface current density $K = ae^{-y}$ exists on a thin strip of width $b$, as shown in the figure below. The associated surface current is ($a$ is a constant of appropriate dimensions)`,
+
     options: [
-      "$a(1-e^{-b})$",
-      "$a(1+e^{-b})$",
-      "$a(e^{-b}-1)$",
-      "$a(e^b+e^{-b})$",
+      String.raw`$a(1-e^{-b})$`,
+      String.raw`$a(1+e^{-b})$`,
+      String.raw`$a(e^{-b}-1)$`,
+      String.raw`$a(e^b+e^{-b})$`,
     ],
+
+    image: "/images/23_25.png",
+
     detailedSolution: String.raw`The surface current density \(\vec{K}\) represents the current per unit perpendicular width.
 To find the total surface current \(I\), we must integrate the current density over the entire width of the strip.
 
@@ -2903,17 +3330,22 @@ This represents the total associated surface current flowing along the strip.`,
   {
     id: 24,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
-    question:
-      "For an electromagnetic wave, consider an electric field $\\mathbf{E}=E_0 e^{-i[a(x+y)-\\omega t]}\\hat{k}$. The corresponding magnetic field $\\mathbf{B}$ is ($E_0$, $a$, $\\omega$ are constants of appropriate dimensions and $c$ is the speed of light)",
+
+    question: String.raw`For an electromagnetic wave, consider an electric field $\mathbf{E}=E_0 e^{-i[a(x+y)-\omega t]}\hat{k}$. The corresponding magnetic field $\mathbf{B}$ is ($E_0$, $a$, $\omega$ are constants of appropriate dimensions and $c$ is the speed of light)`,
 
     options: [
-      "$\\frac{1}{c\\sqrt{2}}E_0 e^{-i[a(x+y)-\\omega t]}(\\hat{i}-\\hat{j})$",
-      "$\\frac{1}{c\\sqrt{2}}E_0 e^{-i[a(x+y)-\\omega t]}(\\hat{i}+\\hat{j})$",
-      "$\\frac{1}{c\\sqrt{2}}E_0 e^{-i[a(x+y)-\\omega t]}(-\\hat{i}-\\hat{j})$",
-      "$\\frac{1}{c\\sqrt{2}}E_0 e^{-i[a(x+y)-\\omega t]}(-\\hat{i}+\\hat{j})$",
+      String.raw`$\frac{1}{c\sqrt{2}}E_0 e^{-i[a(x+y)-\omega t]}(\hat{i}-\hat{j})$`,
+      String.raw`$\frac{1}{c\sqrt{2}}E_0 e^{-i[a(x+y)-\omega t]}(\hat{i}+\hat{j})$`,
+      String.raw`$\frac{1}{c\sqrt{2}}E_0 e^{-i[a(x+y)-\omega t]}(-\hat{i}-\hat{j})$`,
+      String.raw`$\frac{1}{c\sqrt{2}}E_0 e^{-i[a(x+y)-\omega t]}(-\hat{i}+\hat{j})$`,
     ],
+
     detailedSolution: String.raw`The electric field is given as \(\mathbf{E} = E_0 e^{-i[a(x+y)-\omega t]}\hat{k}\).
 
 From the phase term, we can identify the wave vector \(\mathbf{k}\):
@@ -2939,17 +3371,22 @@ Substitute \(a = \frac{\omega}{c\sqrt{2}}\):
   {
     id: 25,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
-    question:
-      "Consider Maxwell’s relation $\\left(\\frac{\\partial S}{\\partial V}\\right)_T = \\left(\\frac{\\partial P}{\\partial T}\\right)_V$. The equation of state of a thermodynamic system is given as $P = \\frac{AT}{V^2} + \\frac{BT^3}{V}$, where $A$ and $B$ are constants of appropriate dimensions. Then $\\left(\\frac{\\partial C_V}{\\partial V}\\right)_T$ of the system varies with temperature as ($C_V$ is the heat capacity at constant volume)",
+
+    question: String.raw`Consider Maxwell’s relation $\left(\frac{\partial S}{\partial V}\right)_T = \left(\frac{\partial P}{\partial T}\right)_V$. The equation of state of a thermodynamic system is given as $P = \frac{AT}{V^2} + \frac{BT^3}{V}$, where $A$ and $B$ are constants of appropriate dimensions. Then $\left(\frac{\partial C_V}{\partial V}\right)_T$ of the system varies with temperature as ($C_V$ is the heat capacity at constant volume)`,
 
     options: [
-      "$T^2$",
-      "$T$",
-      "$T^{-1}$",
-      "$T^3$",
+      String.raw`$T^2$`,
+      String.raw`$T$`,
+      String.raw`$T^{-1}$`,
+      String.raw`$T^3$`,
     ],
+
     detailedSolution: String.raw`We need to find how the volume derivative of the heat capacity at constant volume varies with temperature.
 Using the thermodynamic identity \(\left(\frac{\partial S}{\partial T}\right)_V = \frac{C_V}{T}\), we can relate \(C_V\) to entropy \(S\).
 
@@ -2977,17 +3414,22 @@ This shows that the derivative is directly proportional to \(T^2\).`,
   {
     id: 26,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MCQ",
-    question:
-      "Consider a relativistic particle of rest mass $2m$ moving with a speed $v$ along the $x$ direction. It collides with another relativistic particle of rest mass $m$ moving with the same speed but in the opposite direction. These two particles coalesce to form one particle whose rest mass $M$ is ($\\beta = \\frac{v}{c}$, where $c$ is the speed of light)",
+
+    question: String.raw`Consider a relativistic particle of rest mass $2m$ moving with a speed $v$ along the $x$ direction. It collides with another relativistic particle of rest mass $m$ moving with the same speed but in the opposite direction. These two particles coalesce to form one particle whose rest mass $M$ is ($\beta = \frac{v}{c}$, where $c$ is the speed of light)`,
 
     options: [
-      "$m\\sqrt{\\frac{9-\\beta^2}{1-\\beta^2}}$",
-      "$2m\\sqrt{\\frac{3-\\beta^2}{1-\\beta^2}}$",
-      "$\\frac{m}{2}\\sqrt{\\frac{9-\\beta^2}{2-\\beta^2}}$",
-      "$\\frac{m}{4}\\sqrt{\\frac{1-\\beta^2}{2-\\beta^2}}$",
+      String.raw`$m\sqrt{\frac{9-\beta^2}{1-\beta^2}}$`,
+      String.raw`$2m\sqrt{\frac{3-\beta^2}{1-\beta^2}}$`,
+      String.raw`$\frac{m}{2}\sqrt{\frac{9-\beta^2}{2-\beta^2}}$`,
+      String.raw`$\frac{m}{4}\sqrt{\frac{1-\beta^2}{2-\beta^2}}$`,
     ],
+
     detailedSolution: String.raw`Let \(\gamma = \frac{1}{\sqrt{1-\beta^2}}\) be the Lorentz factor.
 Particle 1 has rest mass \(2m\) and velocity \(v\):
 \(E_1 = 2m \gamma c^2, \quad p_1 = 2m \gamma v\)
@@ -3017,17 +3459,22 @@ Taking the square root gives the rest mass:
   {
     id: 27,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
-    question:
-      "A particle of mass $m$ is subjected to a potential $V(x)$. If its wavefunction is given by $$\\psi(x,t)=\\alpha x^2 e^{-\\beta x} e^{i\\gamma t/\\hbar},\\ x>0$$ $$\\psi(x,t)=0,\\ x\\leq0,$$ then $V(x)$ is ($\\alpha$, $\\beta$ and $\\gamma$ are constants of appropriate dimensions)",
+
+    question: String.raw`A particle of mass $m$ is subjected to a potential $V(x)$. If its wavefunction is given by $$\psi(x,t)=\alpha x^2 e^{-\beta x} e^{i\gamma t/\hbar},\ x>0$$ $$\psi(x,t)=0,\ x\leq0,$$ then $V(x)$ is ($\alpha$, $\beta$ and $\gamma$ are constants of appropriate dimensions)`,
 
     options: [
-      "$-\\gamma+\\frac{\\hbar^2}{2m}\\left(\\frac{2}{x^2}-\\frac{4\\beta}{x}+\\beta^2\\right)$",
-      "$-\\gamma+\\frac{\\hbar^2}{2m}\\left(\\frac{2}{x^2}+\\frac{4\\beta}{x}+\\beta^2\\right)$",
-      "$-\\gamma+\\frac{\\hbar^2}{2m}\\left(\\frac{2}{x^2}-\\frac{4\\beta}{x}-\\beta^2\\right)$",
-      "$-\\gamma+\\frac{\\hbar^2}{2m}\\left(-\\frac{2}{x^2}-\\frac{4\\beta}{x}+\\beta^2\\right)$",
+      String.raw`$-\gamma+\frac{\hbar^2}{2m}\left(\frac{2}{x^2}-\frac{4\beta}{x}+\beta^2\right)$`,
+      String.raw`$-\gamma+\frac{\hbar^2}{2m}\left(\frac{2}{x^2}+\frac{4\beta}{x}+\beta^2\right)$`,
+      String.raw`$-\gamma+\frac{\hbar^2}{2m}\left(\frac{2}{x^2}-\frac{4\beta}{x}-\beta^2\right)$`,
+      String.raw`$-\gamma+\frac{\hbar^2}{2m}\left(-\frac{2}{x^2}-\frac{4\beta}{x}+\beta^2\right)$`,
     ],
+
     detailedSolution: String.raw`The time-dependent Schrödinger equation is \(i\hbar \frac{\partial \psi}{\partial t} = \hat{H} \psi = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x)\psi\).
 
 First, find the time derivative:
@@ -3053,17 +3500,22 @@ Substitute back into the Schrödinger equation and solve for \(V(x)\):
   {
     id: 28,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MCQ",
-    question:
-      "Two non-relativistic particles with masses $m_1$ and $m_2$ move with momenta $p_1$ and $p_2$, respectively, in an inertial frame $S$. In another inertial frame $S'$, moving with a constant speed with respect to $S$, the same particles are observed to have momenta $p_1'$ and $p_2'$, respectively. Galilean invariance implies that",
+
+    question: String.raw`Two non-relativistic particles with masses $m_1$ and $m_2$ move with momenta $p_1$ and $p_2$, respectively, in an inertial frame $S$. In another inertial frame $S'$, moving with a constant speed with respect to $S$, the same particles are observed to have momenta $p_1'$ and $p_2'$, respectively. Galilean invariance implies that`,
 
     options: [
-      "$m_2p_1'-m_1p_2'=m_2p_1-m_1p_2$",
-      "$m_2p_1'+m_1p_2'=m_2p_1+m_1p_2$",
-      "$m_1p_1'-m_2p_2'=m_1p_1-m_2p_2$",
-      "$m_1p_1'+m_2p_2'=m_1p_1+m_2p_2$",
+      String.raw`$m_2p_1'-m_1p_2'=m_2p_1-m_1p_2$`,
+      String.raw`$m_2p_1'+m_1p_2'=m_2p_1+m_1p_2$`,
+      String.raw`$m_1p_1'-m_2p_2'=m_1p_1-m_2p_2$`,
+      String.raw`$m_1p_1'+m_2p_2'=m_1p_1+m_2p_2$`,
     ],
+
     detailedSolution: String.raw`Galilean invariance implies that fundamental physical laws, like the conservation of momentum, hold true in all inertial frames of reference.
 
 In frame \(S\), the total momentum is \(P = p_1 + p_2 = m_1 v_1 + m_2 v_2\).
@@ -3092,17 +3544,22 @@ This relation represents the invariant property of the transformation.`,
   {
     id: 29,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "MCQ",
-    question:
-      "The binding energy $B(A,Z)$ of an atomic nucleus of mass number $A$, atomic number $Z$, and number of neutrons $N=A-Z$, can be expressed as $$B(A,Z)=a_1A-a_2A^{2/3}-a_3\\frac{Z^2}{A^{1/3}}-a_4\\frac{(A-2Z)^2}{A},$$ where $a_1,a_2,a_3,$ and $a_4$ are constants of appropriate dimensions. Let $B(A,Z')$ be the binding energy of a mirror nucleus (which has the same $A$, but the number of protons and neutrons are interchanged). Then, at constant $A$, $[B(A,Z)-B(A,Z')]$ is",
+
+    question: String.raw`The binding energy $B(A,Z)$ of an atomic nucleus of mass number $A$, atomic number $Z$, and number of neutrons $N=A-Z$, can be expressed as $$B(A,Z)=a_1A-a_2A^{2/3}-a_3\frac{Z^2}{A^{1/3}}-a_4\frac{(A-2Z)^2}{A},$$ where $a_1,a_2,a_3,$ and $a_4$ are constants of appropriate dimensions. Let $B(A,Z')$ be the binding energy of a mirror nucleus (which has the same $A$, but the number of protons and neutrons are interchanged). Then, at constant $A$, $[B(A,Z)-B(A,Z')]$ is`,
 
     options: [
-      "proportional to $Z^2$",
-      "proportional to $(Z^2-N^2)$",
-      "proportional to $N^2$",
-      "constant",
+      String.raw`proportional to $Z^2$`,
+      String.raw`proportional to $(Z^2-N^2)$`,
+      String.raw`proportional to $N^2$`,
+      String.raw`constant`,
     ],
+
     detailedSolution: String.raw`The binding energy formula is based on the semi-empirical mass formula (liquid drop model).
 We want to evaluate the difference \(B(A,Z) - B(A,Z')\) for mirror nuclei.
 For a mirror nucleus, the atomic number \(Z'\) is simply the original number of neutrons \(N\), meaning \(Z' = A - Z = N\).
@@ -3125,7 +3582,11 @@ Thus, the difference is directly proportional to \((Z^2 - N^2)\).`,
   {
     id: 30,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -3147,19 +3608,15 @@ the corresponding current density \(\vec{J}\) is
 `,
 
     options: [
-
       String.raw`\[
 -\frac{1}{\mu_0}(2a + 2b)\hat{i}
 \]`,
-
       String.raw`\[
 \frac{1}{\mu_0}(2a + 2b)\hat{i}
 \]`,
-
       String.raw`\[
 -\frac{1}{\mu_0}(2a)\hat{i}
 \]`,
-
       String.raw`\[
 -\frac{1}{\mu_0}(2b)\hat{i}
 \]`,
@@ -3185,17 +3642,24 @@ Since \(B_z = -2by\), its derivative with respect to \(y\) is \(-2b\), and with 
   {
     id: 31,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
     type: "MSQ",
-    question:
-      "In the logic circuit shown below, for which of the following combination(s) of inputs $P$ and $Q$, the output $Y$ will be $0$?",
-    image: "/images/31_25.png",
+
+    question: String.raw`In the logic circuit shown below, for which of the following combination(s) of inputs $P$ and $Q$, the output $Y$ will be $0$?`,
+
     options: [
-      "$P=0,\\ Q=0$",
-      "$P=0,\\ Q=1$",
-      "$P=1,\\ Q=0$",
-      "$P=1,\\ Q=1$",
+      String.raw`$P=0,\ Q=0$`,
+      String.raw`$P=0,\ Q=1$`,
+      String.raw`$P=1,\ Q=0$`,
+      String.raw`$P=1,\ Q=1$`,
     ],
+
+    image: "/images/31_25.png",
+
     detailedSolution: String.raw`The output \(Y\) of the logic circuit is determined by tracing the signals through the gates.
 Let's assume the standard gates for such problems: AND, OR, NOT, NAND, NOR, XOR.
 Given the options and the correct answer being \(P=1, Q=1\), we can deduce the gate configuration leads to \(Y=0\) only when both inputs are HIGH.
@@ -3203,22 +3667,29 @@ Given the options and the correct answer being \(P=1, Q=1\), we can deduce the g
 For example, if the circuit consists of a NAND gate, the output is 0 only when all inputs are 1.
 Regardless of the exact internal diagram, evaluating the truth table for the given logic gates will show that \(P=1\) and \(Q=1\) results in a LOW (0) output.
 Thus, the correct combination is \(P=1, Q=1\).`,
+
     correctAnswers: [3],
   },
 
   {
     id: 32,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MSQ",
-    question:
-      "Two particles of masses $m_1$ and $m_2$, interacting via gravity, rotate in circular orbits about their common center of mass with the same angular velocity $\\omega$. For masses $m_1$ and $m_2$, respectively, $r_1$ and $r_2$ are the constant distances from the center of mass, $L_1$ and $L_2$ are the magnitudes of the angular momenta about the center of mass, and $K_1$ and $K_2$ are the kinetic energies. Which of the following is(are) correct? ($G$ is the universal gravitational constant)",
+
+    question: String.raw`Two particles of masses $m_1$ and $m_2$, interacting via gravity, rotate in circular orbits about their common center of mass with the same angular velocity $\omega$. For masses $m_1$ and $m_2$, respectively, $r_1$ and $r_2$ are the constant distances from the center of mass, $L_1$ and $L_2$ are the magnitudes of the angular momenta about the center of mass, and $K_1$ and $K_2$ are the kinetic energies. Which of the following is(are) correct? ($G$ is the universal gravitational constant)`,
+
     options: [
-      "$\\frac{L_1}{L_2}=\\frac{m_2}{m_1}$",
-      "$\\frac{K_1}{K_2}=\\frac{m_2}{m_1}$",
-      "$\\omega=\\sqrt{\\frac{G(m_1+m_2)}{(r_1+r_2)^3}}$",
-      "$m_2r_1=m_1r_2$",
+      String.raw`$\frac{L_1}{L_2}=\frac{m_2}{m_1}$`,
+      String.raw`$\frac{K_1}{K_2}=\frac{m_2}{m_1}$`,
+      String.raw`$\omega=\sqrt{\frac{G(m_1+m_2)}{(r_1+r_2)^3}}$`,
+      String.raw`$m_2r_1=m_1r_2$`,
     ],
+
     detailedSolution: String.raw`The two particles interact via gravity and rotate about their common center of mass.
 Let the distances from the center of mass be \(r_1\) and \(r_2\).
 By the definition of the center of mass:
@@ -3242,23 +3713,31 @@ By equating the gravitational force to the centripetal force:
 \(\frac{G m_1 m_2}{(r_1+r_2)^2} = m_1 \omega^2 r_1\)
 Using \(r_1 = \frac{m_2}{m_1+m_2}(r_1+r_2)\), we get Kepler's Third Law:
 \(\omega^2 = \frac{G(m_1+m_2)}{(r_1+r_2)^3} \Rightarrow \omega = \sqrt{\frac{G(m_1+m_2)}{(r_1+r_2)^3}}\) (Option C is correct)`,
-    correctAnswers: [0, 1, 2],
+
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 33,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MSQ",
-    question:
-      "Which of these cubic lattice plane pairs is(are) perpendicular to each other?",
-    image: "/images/33_25.png",
+
+    question: String.raw`Which of these cubic lattice plane pairs is(are) perpendicular to each other?`,
+
     options: [
-      "$(100),\\ (010)$",
-      "$(220),\\ (001)$",
-      "$(110),\\ (010)$",
-      "$(112),\\ (220)$",
+      String.raw`$(100),\ (010)$`,
+      String.raw`$(220),\ (001)$`,
+      String.raw`$(110),\ (010)$`,
+      String.raw`$(112),\ (220)$`,
     ],
+
+    image: "/images/33_25.png",
+
     detailedSolution: String.raw`Two crystal lattice planes \((h_1 k_1 l_1)\) and \((h_2 k_2 l_2)\) in a cubic system are perpendicular if their corresponding normal vectors are orthogonal.
 The condition for orthogonality is the dot product of their Miller indices being zero:
 \(h_1 h_2 + k_1 k_2 + l_1 l_2 = 0\)
@@ -3275,13 +3754,18 @@ Option C: \((110)\) and \((010)\)
 
 Option D: \((112)\) and \((220)\)
 \(1(2) + 1(2) + 2(0) = 4 \neq 0\). (Not perpendicular)`,
-    correctAnswers: [0, 1],
+
+    correctAnswers: [0,1],
   },
 
   {
     id: 34,
     year: 2025,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -3290,21 +3774,16 @@ For a thin convex lens of focal length \(f\), the image of an object at \(O\) is
 Which of the following graphs correctly represent(s) the variation of the quantities shown in the figure?
 `,
 
-    questionImage: "/images/34_25.png",
-
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/34a_25.png",
-      "/images/34b_25.png",
-      "/images/34c_25.png",
-      "/images/34d_25.png"
-    ],
+    optionImages: ["/images/34a_25.png","/images/34b_25.png","/images/34c_25.png","/images/34d_25.png"],
+
+    questionImage: "/images/34_25.png",
 
     detailedSolution: String.raw`For a thin convex lens, the Newtonian form of the lens equation relates the distances of the object (\(x_0\)) and the image (\(x_1\)) from their respective focal points:
 \(x_0 x_1 = f^2\)
@@ -3316,13 +3795,17 @@ This is the equation of a rectangular hyperbola. Therefore, the plot of \(x_1\) 
 2) \(x_1 = f^2 \left(\frac{1}{x_0}\right)\)
 This is the equation of a straight line (\(y = mx\)) passing through the origin, where the slope is \(f^2\). Therefore, the plot of \(x_1\) versus \(\frac{1}{x_0}\) is a straight line through the origin (Option C).`,
 
-    correctAnswers: [0, 2],
+    correctAnswers: [0,2],
   },
 
   {
     id: 35,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -3355,13 +3838,17 @@ This is a function of \((x-t)\), representing a localized pulse travelling in th
 4) \(\psi(x,t) = A_0 e^{(ax+bt)^2}\)
 This is a function of \((ax+bt)\), which can be written as \(a(x + \frac{b}{a}t)\). This represents a wave travelling in the negative \(x\)-direction. (Valid)`,
 
-    correctAnswers: [0, 2, 3],
+    correctAnswers: [0,2,3],
   },
 
   {
     id: 36,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
@@ -3370,17 +3857,14 @@ A spherical ball having a uniformly distributed charge \(Q\) and radius \(R\) pu
 Which of the following is(are) correct?
 `,
 
-    questionImage: "/images/36_25.png",
-
     options: [
       String.raw`The net outward electric flux across a spherical surface of radius \(r>1.5R\) pulsates with a frequency \(\omega\)`,
-
       String.raw`The net outward electric flux across a spherical surface of radius \(r=2R\) is \(\dfrac{Q}{\varepsilon_0}\)`,
-
       String.raw`The potential fluctuates with frequency \(\omega\) at \(r=2R\)`,
-
       String.raw`The electric field inside the sphere at \(r=0.5R\) will not be time dependent`,
     ],
+
+    questionImage: "/images/36_25.png",
 
     detailedSolution: String.raw`The spherical ball has a total charge \(Q\). Even as its radius \(R\) pulsates by \(\pm 10\%\) with frequency \(\omega\), the total enclosed charge remains constant at \(Q\).
 
@@ -3401,7 +3885,11 @@ Inside the sphere (\(r=0.5R\)), the charge density changes as the sphere expands
   {
     id: 37,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
@@ -3426,11 +3914,8 @@ Which of the following relations is(are) valid for linear dielectrics?
 
     options: [
       String.raw`\(\mathbf{P}=\varepsilon_0\chi_e\mathbf{E}\)`,
-
       String.raw`\(\varepsilon=\varepsilon_0(1+\chi_e)\)`,
-
       String.raw`\(\mathbf{D}=\varepsilon_0\mathbf{E}+\mathbf{P}\)`,
-
       String.raw`\(\nabla\cdot\mathbf{D}=\rho_f+\rho_b\)`,
     ],
 
@@ -3450,13 +3935,17 @@ The valid relations are:
 \(\nabla \cdot \mathbf{D} = \rho_f\)
 Therefore, the relation \(\nabla \cdot \mathbf{D} = \rho_f + \rho_b\) is incorrect.`,
 
-    correctAnswers: [0, 1, 2],
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 38,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -3489,15 +3978,12 @@ The relation(s) valid at thermal equilibrium is(are)
       String.raw`\(
 P_3V_3-(P_2V_2-\alpha P_2)\left(1-\frac{\beta}{V_3}\right)=0
 \)`,
-
       String.raw`\(
 P_3V_3+(P_2V_2+\alpha P_2)\left(1+\frac{\beta}{V_3}\right)=0
 \)`,
-
       String.raw`\(
 P_1V_1=P_2V_2=P_3V_3
 \)`,
-
       String.raw`\(
 P_3V_3+P_1V_1\left(\frac{\beta}{V_3}-1\right)=0
 \)`,
@@ -3520,13 +4006,17 @@ If \(G_2\) and \(G_3\) are in thermal equilibrium, their temperatures must be eq
 \(P_2(V_2 - \alpha) = \frac{P_3V_3}{1 - \beta/V_3}\)
 \(P_3V_3 - (P_2V_2 - \alpha P_2)\left(1 - \frac{\beta}{V_3}\right) = 0\) (This matches Option A)`,
 
-    correctAnswers: [0, 3],
+    correctAnswers: [0,3],
   },
 
   {
     id: 39,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -3535,26 +4025,23 @@ An ideal mono-atomic gas is expanded adiabatically from \(A\) to \(B\). It is th
 The cyclic process is shown in the figure below. For this system, which of the following is(are) correct?
 `,
 
-    questionImage: "/images/39_25.png",
-
     options: [
       String.raw`Work done along the path \(AB\) is \((P_1V_1-P_2V_2)\)`,
-
       String.raw`Total work done during the entire process is
 \[
 \frac{3}{2}(P_1V_1-P_2V_2)+P_2(V_1-V_2)
 \]`,
-
       String.raw`Total heat absorbed during the entire process is
 \[
 \frac{3}{2}(P_1-P_2)V_1
 \]`,
-
       String.raw`Total change in internal energy during the entire process is
 \[
 \frac{5}{2}P_2(V_2-V_1)
 \]`,
     ],
+
+    questionImage: "/images/39_25.png",
 
     detailedSolution: String.raw`The cycle consists of three processes: \(A \to B\) (adiabatic expansion), \(B \to C\) (isobaric compression), and \(C \to A\) (isochoric heating).
 
@@ -3581,7 +4068,11 @@ This matches exactly with Option B.`,
   {
     id: 40,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
@@ -3593,10 +4084,10 @@ For a body centered cubic (bcc) system, the x-ray diffraction peaks are observed
 `,
 
     options: [
-      "3",
-      "4",
-      "5",
-      "7",
+      String.raw`3`,
+      String.raw`4`,
+      String.raw`5`,
+      String.raw`7`,
     ],
 
     detailedSolution: String.raw`In X-ray diffraction, constructive interference (Bragg peaks) occurs only for specific lattice planes depending on the crystal structure.
@@ -3618,7 +4109,11 @@ Therefore, a peak is observed only for \(h^2 + k^2 + l^2 = 4\).`,
   {
     id: 41,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -3649,12 +4144,17 @@ We are also given that the length of the second cylinder is 16 times that of the
 Taking the fourth root:
 \(R_2 = \sqrt[4]{16} = 2\) cm.`,
 
-    correctAnswer: "2",
+    correctAnswer: 2,
   },
+
   {
     id: 42,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -3681,12 +4181,17 @@ Substitute \(x = 2f\) back into \(D\):
 Given the focal length \(f = 20\) cm:
 \(D_{min} = 4(20) = 80\) cm.`,
 
-    correctAnswer: "80",
+    correctAnswer: 80,
   },
+
   {
     id: 43,
     year: 2025,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -3736,7 +4241,11 @@ Its magnitude is:
   {
     id: 44,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -3769,13 +4278,17 @@ Rearranging to find the requested ratio:
 We are given that the molecular weight of \(G1\) is half that of \(G2\), meaning \(m_1 = \frac{1}{2} m_2\), or \(\frac{m_2}{m_1} = 2\).
 Therefore, the ratio \(\frac{T_2}{T_1} = 2\).`,
 
-    correctAnswer: "2",
+    correctAnswer: 2,
   },
 
   {
     id: 45,
     year: 2025,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -3808,10 +4321,15 @@ Substitute the values:
     correctAnswerMin: 0.95,
     correctAnswerMax: 1.05,
   },
+
   {
     id: 46,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -3845,14 +4363,18 @@ Given \(\Delta E = 0.2\) eV and \(k_B = 8.62 \times 10^{-5}\) eV/K:
 
 Rounded, the temperature is approximately \(596.17\) K.`,
 
-    correctAnswerMin: 591.00,
-    correctAnswerMax: 597.00,
+    correctAnswerMin: 591,
+    correctAnswerMax: 597,
   },
 
   {
     id: 47,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -3887,12 +4409,17 @@ Finally, find \(x\):
 The distance is approximately \(1.63\) fm.`,
 
     correctAnswerMin: 1.55,
-    correctAnswerMax: 1.70,
+    correctAnswerMax: 1.7,
   },
+
   {
     id: 48,
     year: 2025,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -3944,12 +4471,17 @@ Substitute the values:
 
 The value is \(24\).`,
 
-    correctAnswer: "24",
+    correctAnswer: 24,
   },
+
   {
     id: 49,
     year: 2025,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -3975,14 +4507,18 @@ Planar density \(\sigma_{110} = \frac{1}{\sqrt{2} a^2} \approx \frac{0.707}{a^2}
 3. **Ratio**:
 \(\frac{\sigma_{111}}{\sigma_{110}} = \frac{\frac{1}{\sqrt{3} a^2}}{\frac{1}{\sqrt{2} a^2}} = \frac{\sqrt{2}}{\sqrt{3}} = \sqrt{\frac{2}{3}} \approx 0.816\).`,
 
-    correctAnswerMin: 0.80,
+    correctAnswerMin: 0.8,
     correctAnswerMax: 0.84,
   },
 
   {
     id: 50,
     year: 2025,
-    subject: "Logic Gates",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics","Lattice Packing"],
     type: "NAT",
 
     question: String.raw`
@@ -4011,14 +4547,18 @@ Calculate the numerical value:
 
 The packing fraction is approximately \(0.91\).`,
 
-    correctAnswerMin: [0.89, 89],
-    correctAnswerMax: [0.93, 93]
+    correctAnswerMin: 0.89,
+    correctAnswerMax: 0.93,
   },
 
   {
     id: 51,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -4059,12 +4599,17 @@ To ensure saturation, the actual base current must be greater than or equal to t
 
 The maximum value of the base resistance is \(20\) k\(\Omega\).`,
 
-    correctAnswer: "20",
+    correctAnswer: 20,
   },
+
   {
     id: 52,
     year: 2025,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -4116,7 +4661,11 @@ Rounded to two decimal places, the ratio is \(1.80\).`,
   {
     id: 53,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -4155,13 +4704,18 @@ The change in entropy of the whole system in this entire process is \_\_\_\_\_ c
 
 Rounded to two decimal places, it is \(1.03\) cal/K.`,
 
-    correctAnswerMin: 0.90,
-    correctAnswerMax: 1.10,
+    correctAnswerMin: 0.9,
+    correctAnswerMax: 1.1,
   },
+
   {
     id: 54,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -4208,12 +4762,17 @@ The integrand is a constant. The double integral simplifies to the constant mult
 The area of the unit circle (\(r=1\)) is \(A = \pi(1)^2 = \pi\).
 Result \(= \frac{1}{\pi} \times \pi = 1\).`,
 
-    correctAnswer: "1",
+    correctAnswer: 1,
   },
+
   {
     id: 55,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -4256,13 +4815,17 @@ The problem states that the radial component of the acceleration vanishes (i.e.,
 
 Since \(\beta\) is specified as a positive constant, \(\beta = 1\) rad/s.`,
 
-    correctAnswer: "1",
+    correctAnswer: 1,
   },
 
   {
     id: 56,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -4291,13 +4854,17 @@ By Kepler's Second Law (conservation of angular momentum), the speed \(v\) and r
 The ratio of the speed at perihelion to the speed at aphelion is:
 \(\frac{v_p}{v_a} = \frac{r_a}{r_p} = \frac{3a/2}{a/2} = 3\).`,
 
-    correctAnswer: "3",
+    correctAnswer: 3,
   },
 
   {
     id: 57,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -4345,7 +4912,11 @@ The amplitude of this combination of sine and cosine waves is:
   {
     id: 58,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -4378,13 +4949,17 @@ Substitute these into the angle formula:
 
 The integer value is \(24\).`,
 
-    correctAnswer: "24",
+    correctAnswer: 24,
   },
 
   {
     id: 59,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -4424,7 +4999,11 @@ The distance is \(2.4\) \AA.`,
   {
     id: 60,
     year: 2025,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -4472,14 +5051,18 @@ Finally, divide:
 
 Rounding to two decimal places, the value is \(0.76\).`,
 
-    correctAnswerMin: 0.70,
-    correctAnswerMax: 1.20,
+    correctAnswerMin: 0.7,
+    correctAnswerMax: 1.2,
   },
 
   {
     id: 1,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -4514,7 +5097,11 @@ Therefore, the total number of ions (Na⁺ and Cl⁻ combined) in a single unit 
   {
     id: 2,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -4544,7 +5131,11 @@ $22.50 + 26.25 + 21.75 = 70.50$`,
   {
     id: 3,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -4558,21 +5149,18 @@ Which of the following Linear Algebra is Hermitian as well as unitary?
 i & 0
 \end{pmatrix}
 \]`,
-
       String.raw`\[
 \begin{pmatrix}
 0 & i \\
 i & 0
 \end{pmatrix}
 \]`,
-
       String.raw`\[
 \begin{pmatrix}
 1 & -i \\
 i & 1
 \end{pmatrix}
 \]`,
-
       String.raw`\[
 \begin{pmatrix}
 0 & 1+i \\
@@ -4601,7 +5189,11 @@ Thus, the matrix is also **Unitary**.`,
   {
     id: 4,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -4612,13 +5204,10 @@ The divergence of a 3-dimensional vector \(\dfrac{\hat r}{r^3}\) (\(\hat r\) is 
       String.raw`\[
 -\frac{1}{r^4}
 \]`,
-
       String.raw`Zero`,
-
       String.raw`\[
 \frac{1}{r^3}
 \]`,
-
       String.raw`\[
 -\frac{3}{r^4}
 \]`,
@@ -4645,7 +5234,11 @@ $\nabla \cdot \mathbf{A} = \frac{1}{r^2} (-r^{-2}) = -\frac{1}{r^4}$`,
   {
     id: 5,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -4656,15 +5249,12 @@ The magnitudes of spin magnetic moments of electron, proton and neutron are \(\m
       String.raw`\[
 \mu_e > \mu_p > \mu_n
 \]`,
-
       String.raw`\[
 \mu_e = \mu_p > \mu_n
 \]`,
-
       String.raw`\[
 \mu_e < \mu_p < \mu_n
 \]`,
-
       String.raw`\[
 \mu_e < \mu_p = \mu_n
 \]`,
@@ -4691,28 +5281,27 @@ Thus, the order of magnitudes is: $\mu_e > \mu_p > \mu_n$.`,
   {
     id: 6,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
 A particle moving along the \(x\)-axis approaches \(x=0\) from \(x=-\infty\) with a total energy \(E\). It is subjected to a potential \(V(x)\). For time \(t\to\infty\), the probability density \(P(x)\) of the particle is schematically shown in the figure.
 `,
 
-    questionImage: "/images/6_24.png",
-
     options: [
-      "",
-      "",
-      "",
-      "",
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/6a_24.png",
-      "/images/6b_24.png",
-      "/images/6c_24.png",
-      "/images/6d_24.png",
-    ],
+    optionImages: ["/images/6a_24.png","/images/6b_24.png","/images/6c_24.png","/images/6d_24.png"],
+
+    questionImage: "/images/6_24.png",
 
     detailedSolution: String.raw`When a particle with energy $E$ encounters a potential step $V(x) = V_0$ where $E > V_0$, the wavefunction consists of an incident wave, a reflected wave, and a transmitted wave.
 
@@ -4734,14 +5323,16 @@ Option C correctly shows the oscillating interference pattern on the left and a 
   {
     id: 7,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
 A plane electromagnetic wave is incident on an interface AB separating two media (refractive indices \(n_1=1.5\) and \(n_2=2.0\)) at Brewster angle \(\theta_B\), as schematically shown in the figure. The angle \(\alpha\) (in degrees) between the reflected wave and the refracted wave is:
 `,
-
-    questionImage: "/images/7_24.png",
 
     options: [
       String.raw`120`,
@@ -4749,6 +5340,8 @@ A plane electromagnetic wave is incident on an interface AB separating two media
       String.raw`90`,
       String.raw`74`,
     ],
+
+    questionImage: "/images/7_24.png",
 
     detailedSolution: String.raw`Brewster's angle ($\theta_B$) is the angle of incidence at which light with a particular polarization is perfectly transmitted through a transparent dielectric surface, with no reflection.
 
@@ -4763,7 +5356,11 @@ Therefore, the angle $\alpha$ between the reflected wave and the refracted wave 
   {
     id: 8,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -4806,7 +5403,11 @@ $a = 450$`,
   {
     id: 9,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -4850,7 +5451,11 @@ The constant $A$ can be any value, such as $A = 1$. Thus, $A=1$ and $B=0$ is a v
   {
     id: 10,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -4883,7 +5488,11 @@ Simple harmonic motion maps to a sine/cosine wave or an ellipse in phase space. 
   {
     id: 11,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -4921,7 +5530,11 @@ The Miller indices are enclosed in parentheses: $(436)$.`,
   {
     id: 12,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -4950,7 +5563,11 @@ Therefore, the number of atoms in the basis of the primitive cell is 2.`,
   {
     id: 13,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -4959,25 +5576,22 @@ Consider the following logic circuit.
 The output \(Y\) is LOW when:
 `,
 
-    questionImage: "/images/13_24.png",
-
     options: [
       String.raw`\[
 A \text{ is HIGH and } B \text{ is LOW}
 \]`,
-
       String.raw`\[
 A \text{ is LOW and } B \text{ is HIGH}
 \]`,
-
       String.raw`\[
 \text{Both } A \text{ and } B \text{ are LOW}
 \]`,
-
       String.raw`\[
 \text{Both } A \text{ and } B \text{ are HIGH}
 \]`,
     ],
+
+    questionImage: "/images/13_24.png",
 
     detailedSolution: String.raw`To determine the correct logic state, one must trace the boolean signals through the provided digital circuit diagram. 
 While we cannot see the exact diagram here, we know the correct answer is that $Y$ is LOW (0) when **$A$ is HIGH (1) and $B$ is LOW (0)**.
@@ -4994,7 +5608,11 @@ In a typical logic evaluation:
   {
     id: 14,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -5007,25 +5625,22 @@ The value of the line integral for the vector,
 along the closed path OABO (as shown in the figure) is:
 `,
 
-    questionImage: "/images/14_24.png",
-
     options: [
       String.raw`\[
 \frac{1}{4}(3\pi-1)
 \]`,
-
       String.raw`\[
 3\pi-\frac{1}{4}
 \]`,
-
       String.raw`\[
 \frac{3\pi}{4}-1
 \]`,
-
       String.raw`\[
 3\pi-1
 \]`,
     ],
+
+    questionImage: "/images/14_24.png",
 
     detailedSolution: String.raw`We can evaluate the line integral along the closed path OABO using Stokes' Theorem, which converts the line integral into a surface integral over the enclosed region:
 $\oint_C \mathbf{v} \cdot d\mathbf{l} = \iint_S (\nabla \times \mathbf{v}) \cdot d\mathbf{a}$
@@ -5053,7 +5668,11 @@ Subtracting the two parts gives: $\frac{3\pi}{4} - \frac{1}{4} = \frac{1}{4}(3\p
   {
     id: 15,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -5070,15 +5689,12 @@ The magnitude of the flux of \(\nabla\times\vec F\), through a circular loop of 
       String.raw`\[
 \pi
 \]`,
-
       String.raw`\[
 2\pi
 \]`,
-
       String.raw`\[
 4\pi
 \]`,
-
       String.raw`0`,
     ],
 
@@ -5111,7 +5727,11 @@ Thus, the magnitude of the flux is $2\pi$.`,
   {
     id: 16,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Complex Numbers",
+    subjectId: "math",
+    tags: ["Complex Numbers","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -5128,15 +5748,12 @@ are \(z_1,z_2,z_3,\&\,z_4\), where \(z\) is a complex variable. Which of the fol
       String.raw`\[
 \frac{z_1+z_2+z_3+z_4}{z_1z_2z_3z_4}=-\frac{4}{19}
 \]`,
-
       String.raw`\[
 \frac{z_1+z_2+z_3+z_4}{z_1z_2z_3z_4}=\frac{4}{13}
 \]`,
-
       String.raw`\[
 \frac{z_1z_2z_3z_4}{z_1+z_2+z_3+z_4}=-\frac{26}{27}
 \]`,
-
       String.raw`\[
 \frac{z_1z_2z_3z_4}{z_1+z_2+z_3+z_4}=\frac{13}{19}
 \]`,
@@ -5164,7 +5781,11 @@ Simplifying the fraction by dividing the numerator and denominator by 2 yields $
   {
     id: 17,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5173,11 +5794,8 @@ The ultraviolet catastrophe in the classical (Rayleigh-Jeans) theory of cavity r
 
     options: [
       String.raw`the standing waves of all allowed frequencies in the cavity have the same average energy`,
-
       String.raw`the density of the standing waves in the cavity is independent of the shape and size of the cavity`,
-
       String.raw`the allowed frequencies of the standing waves inside the cavity have no upper limit`,
-
       String.raw`the number of allowed frequencies for the standing waves in a frequency range \(\nu\) to \((\nu+d\nu)\) is proportional to \(\nu^2\)`,
     ],
 
@@ -5195,7 +5813,11 @@ Max Planck resolved this by quantizing energy, showing that high-frequency modes
   {
     id: 18,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5238,7 +5860,11 @@ The speed of the electron is approximately $0.996c$.`,
   {
     id: 19,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5256,18 +5882,13 @@ Let \(E_e(x)\) and \(\psi_e(x)\) be the ground state energy and the correspondin
 `,
 
     options: [
-      "",
-      "",
-      "",
-      "",
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/19a_24.png",
-      "/images/19b_24.png",
-      "/images/19c_24.png",
-      "/images/19d_24.png",
-    ],
+    optionImages: ["/images/19a_24.png","/images/19b_24.png","/images/19c_24.png","/images/19d_24.png"],
 
     detailedSolution: String.raw`The energy levels of a particle of mass $m$ in a one-dimensional infinite square well of width $a$ are given by:
 $E_n = \frac{n^2 \pi^2 \hbar^2}{2 m a^2}$
@@ -5291,7 +5912,11 @@ Option C correctly illustrates that the electron has a higher energy level than 
   {
     id: 20,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5300,14 +5925,14 @@ In a Newton’s rings experiment (using light of free space wavelength \(580\,\t
 The least possible value of \(d\) (in nm) is:
 `,
 
-    questionImage: "/images/20_24.png",
-
     options: [
       String.raw`145`,
       String.raw`290`,
       String.raw`580`,
       String.raw`72.5`,
     ],
+
+    questionImage: "/images/20_24.png",
 
     detailedSolution: String.raw`In a standard Newton's rings experiment, light reflects off two surfaces: the bottom of the convex lens and the top of the flat glass plate.
 When light reflects from a medium with a higher refractive index (like air to glass), it undergoes a phase shift of $\pi$. When reflecting from a lower index (glass to air), there is no phase shift. This relative phase difference of $\pi$ causes the central spot (where thickness $d \approx 0$) to be perfectly dark.
@@ -5329,7 +5954,11 @@ $d = \frac{580}{4} = 145$ nm.`,
   {
     id: 21,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5368,7 +5997,11 @@ The minimum thickness is $6\ \mu\text{m}$.`,
   {
     id: 22,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -5415,7 +6048,11 @@ The value of $A$ is $50$.`,
   {
     id: 23,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -5434,15 +6071,12 @@ then the displacement vector \(\vec D_2\) in medium 2 is:
       String.raw`\[
 (3\hat x+4\hat y+6\hat z)\varepsilon_0
 \]`,
-
       String.raw`\[
 (3\hat x+6\hat y+8\hat z)\varepsilon_0
 \]`,
-
       String.raw`\[
 (9\hat x+6\hat y+16\hat z)\varepsilon_0
 \]`,
-
       String.raw`\[
 (4\hat x+2\hat y+3\hat z)\varepsilon_0
 \]`,
@@ -5474,7 +6108,11 @@ $\mathbf{D}_2 = \mathbf{D}_{2\parallel} + \mathbf{D}_{2\perp} = (9\hat{x} + 6\ha
   {
     id: 24,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -5483,25 +6121,22 @@ A tank, placed on the ground, is filled with water up to a height \(h\). A small
 (\(g\) is the acceleration due to gravity)
 `,
 
-    questionImage: "/images/24_24.png",
-
     options: [
       String.raw`\[
 \text{Velocity at } h_1 \text{ is } \sqrt{2gh_1}
 \]`,
-
       String.raw`\[
 D=2(h-h_1)
 \]`,
-
       String.raw`\[
 D \text{ will be maximum when } h_1=\frac{2}{3}h
 \]`,
-
       String.raw`\[
 \text{The maximum value of } D \text{ is } h
 \]`,
     ],
+
+    questionImage: "/images/24_24.png",
 
     detailedSolution: String.raw`By Torricelli's Law, the velocity of the fluid emerging from the hole is determined by the depth of the hole from the top surface of the water.
 The hole is at height $h_1$ from the ground, so its depth is $(h - h_1)$.
@@ -5529,7 +6164,11 @@ Therefore, the maximum value of $D$ is indeed $h$.`,
   {
     id: 25,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5542,15 +6181,12 @@ An incompressible fluid is flowing through a vertical pipe (height \(h\) and cro
       String.raw`\[
 \frac{A_o}{n}\sqrt{v_o^2+2gh}
 \]`,
-
       String.raw`\[
 \frac{A_o}{n}\sqrt{v_o^2+gh}
 \]`,
-
       String.raw`\[
 n(A_o-A_h)\sqrt{v_o^2+2gh}
 \]`,
-
       String.raw`\[
 n(A_o-A_h)\sqrt{v_o^2+gh}
 \]`,
@@ -5573,7 +6209,11 @@ $Q_h = \frac{A_o}{n} v_b = \frac{A_o}{n} \sqrt{v_o^2 + 2gh}$.`,
   {
     id: 26,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -5584,15 +6224,12 @@ A ball is dropped from a height \(h\) to the ground. If the coefficient of resti
       String.raw`\[
 \frac{2+e}{1-e}
 \]`,
-
       String.raw`\[
 \frac{1+e}{1-e}
 \]`,
-
       String.raw`\[
 \frac{1-e}{1+e}
 \]`,
-
       String.raw`\[
 \frac{2-e}{1+e}
 \]`,
@@ -5623,7 +6260,11 @@ Thus, the total time required is proportional to $\frac{1+e}{1-e}$.`,
   {
     id: 27,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -5634,15 +6275,12 @@ A cylinder-piston system contains \(N\) atoms of an ideal gas. If \(t_{avg}\) is
       String.raw`\[
 \sqrt{T}
 \]`,
-
       String.raw`\[
 \frac{1}{\sqrt{T}}
 \]`,
-
       String.raw`\[
 T
 \]`,
-
       String.raw`\[
 \frac{1}{T}
 \]`,
@@ -5673,7 +6311,11 @@ The average time is proportional to $\sqrt{T}$.`,
   {
     id: 28,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -5686,15 +6328,12 @@ A gas consists of particles, each having three translational and three rotationa
       String.raw`\[
 \frac{5}{3}
 \]`,
-
       String.raw`\[
 \frac{7}{5}
 \]`,
-
       String.raw`\[
 \frac{4}{3}
 \]`,
-
       String.raw`\[
 \frac{3}{2}
 \]`,
@@ -5722,7 +6361,11 @@ $\gamma = \frac{C_p}{C_v} = \frac{4R}{3R} = \frac{4}{3}$.`,
   {
     id: 29,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5745,15 +6388,12 @@ are superposed, which of the following statements is correct?
       String.raw`\[
 \text{For } \alpha=\beta=1,\ \text{the resultant wave is a standing wave}
 \]`,
-
       String.raw`\[
 \text{For } \alpha=\beta=-1,\ \text{the resultant wave is a standing wave}
 \]`,
-
       String.raw`\[
 \text{For } \alpha=\beta=2,\ \text{the carrier frequency of the resultant wave is } \frac{3}{2}\omega
 \]`,
-
       String.raw`\[
 \text{For } \alpha=\beta=2,\ \text{the carrier frequency of the resultant wave is } 3\omega
 \]`,
@@ -5790,7 +6430,11 @@ This exactly matches Option C.`,
   {
     id: 30,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -5807,15 +6451,12 @@ The value of \(\lambda\) at which the group and phase velocities would be the sa
       String.raw`\[
 \sqrt{\frac{2b}{a}}
 \]`,
-
       String.raw`\[
 \sqrt{\frac{b}{2a}}
 \]`,
-
       String.raw`\[
 \sqrt{\frac{3b}{a}}
 \]`,
-
       String.raw`\[
 \sqrt{\frac{b}{3a}}
 \]`,
@@ -5850,7 +6491,11 @@ $\lambda = \sqrt{\frac{2b}{a}}$`,
   {
     id: 31,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
@@ -5873,13 +6518,17 @@ These include Phosphorus (P), Arsenic (As), and Antimony (Sb).
 Indium (In) is a Group 13 element with 3 valence electrons, which would create a \(p\)-type semiconductor by introducing a hole.
 Therefore, P, As, and Sb are the correct choices.`,
 
-    correctAnswers: [0, 1, 2],
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 32,
     year: 2024,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "MSQ",
 
     question: String.raw`
@@ -5888,25 +6537,22 @@ In the following OP-AMP circuit, \(v_{in}\) and \(v_{out}\) represent the input 
 Choose the correct statement(s):
 `,
 
-    questionImage: "/images/32_24.png",
-
     options: [
       String.raw`\[
 v_{out} \text{ is out-of-phase with } v_{in}
 \]`,
-
       String.raw`\[
 \text{Gain is unity when } R_1=R_2
 \]`,
-
       String.raw`\[
 v_{out} \text{ is in-phase with } v_{in}
 \]`,
-
       String.raw`\[
 v_{out} \text{ is zero}
 \]`,
     ],
+
+    questionImage: "/images/32_24.png",
 
     detailedSolution: String.raw`Based on the provided OP-AMP circuit characteristics:
 
@@ -5918,13 +6564,17 @@ If we set the two resistors to be equal (\(R_1 = R_2\)), the gain becomes \(1\) 
 
 Therefore, \(v_{out}\) is out-of-phase with \(v_{in}\), and the gain is unity when \(R_1 = R_2\).`,
 
-    correctAnswers: [0, 1],
+    correctAnswers: [0,1],
   },
 
   {
     id: 33,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Damped & Forced Oscillations",
+    subjectId: "waves",
+    tags: ["Damped & Forced Oscillations","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -5937,15 +6587,12 @@ A spring-mass system (spring constant \(80\,\text{N/m}\) and damping coefficient
       String.raw`\[
 \text{Motion will be under damped}
 \]`,
-
       String.raw`\[
 y(t)=\frac{1}{2}(1+t)e^{-4t}
 \]`,
-
       String.raw`\[
 \text{Motion will be critically damped}
 \]`,
-
       String.raw`\[
 y(t)=\frac{1}{2}(1+4t)e^{-4t}
 \]`,
@@ -5971,13 +6618,17 @@ Apply the initial conditions:
 Substitute \(A\) and \(B\) back into the general solution:
 \(y(t) = \left(\frac{1}{2} + 2t\right)e^{-4t} = \frac{1}{2}(1 + 4t)e^{-4t}\). (Option D is correct).`,
 
-    correctAnswers: [2, 3],
+    correctAnswers: [2,3],
   },
 
   {
     id: 34,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -5992,15 +6643,12 @@ Consider two different Compton scattering experiments, in which X-rays and \(\ga
       String.raw`\[
 \text{For }\gamma\text{-rays, } \lambda'_{\max}\approx0.098\AA
 \]`,
-
       String.raw`\[
 \text{For X-rays, } (\Delta\lambda)_{\max}\text{ is observed at } \theta=180^\circ
 \]`,
-
       String.raw`\[
 \text{For X-rays, } (\Delta\lambda)_{\max}\approx1.049\AA
 \]`,
-
       String.raw`\[
 \text{For }\gamma\text{-rays, at } \theta=90^\circ,\ \lambda'\approx0.049\AA
 \]`,
@@ -6020,13 +6668,17 @@ The maximum scattered wavelength is:
 At \(\theta=90^\circ\), \(1-\cos(90^\circ)=1\), so the shift is \(\Delta\lambda = \lambda_C = 0.024\ \text{\AA}\).
 The scattered wavelength would be \(0.049 + 0.024 = 0.073\ \text{\AA}\). (Option D is incorrect).`,
 
-    correctAnswers: [0, 1],
+    correctAnswers: [0,1],
   },
 
   {
     id: 35,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "MSQ",
 
     question: String.raw`
@@ -6039,15 +6691,12 @@ A particle of mass \(m\), having an energy \(E\) and angular momentum \(L\), is 
       String.raw`\[
 E>0
 \]`,
-
       String.raw`\[
 E=0
 \]`,
-
       String.raw`\[
 L=\sqrt{2GMm^2r_m}
 \]`,
-
       String.raw`\[
 L=\sqrt{2GM^2mr_m}
 \]`,
@@ -6068,13 +6717,17 @@ The angular momentum \(L\) at this point is simply the product of mass, velocity
 Substitute the velocity:
 \(L = m \left(\sqrt{\frac{2GM}{r_m}}\right) r_m = m \sqrt{2GM r_m} = \sqrt{2GM m^2 r_m}\). (Option C is correct).`,
 
-    correctAnswers: [1, 2],
+    correctAnswers: [1,2],
   },
 
   {
     id: 36,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -6085,25 +6738,22 @@ The inertial frame \(S'\) is moving away from the inertial frame \(S\) with a sp
 \]
 `,
 
-    questionImage: "/images/36_24.png",
-
     options: [
       String.raw`\[
 \Delta t=12.5\,\text{ns}
 \]`,
-
       String.raw`\[
 \Delta t=4.2\,\text{ns}
 \]`,
-
       String.raw`\[
 \Delta x=10.6\,\text{m}
 \]`,
-
       String.raw`\[
 \Delta x=6.25\,\text{m}
 \]`,
     ],
+
+    questionImage: "/images/36_24.png",
 
     detailedSolution: String.raw`We need to apply the Lorentz transformations to find the time and space intervals in frame \(S\).
 Frame \(S'\) moves with velocity \(v = -0.6c\) relative to \(S\). Conversely, \(S\) moves at \(u = +0.6c\) relative to \(S'\).
@@ -6119,38 +6769,39 @@ Given the intervals in \(S'\):
 \(\Delta t = \gamma \left(\Delta t' + \frac{u \Delta x'}{c^2}\right) = 1.25 \left(0 + \frac{0.6c \times 5}{c^2}\right)\)
 \(\Delta t = 1.25 \times \frac{3}{c} = \frac{3.75}{3 \times 10^8} = 1.25 \times 10^{-8}\) s = \(12.5\) ns. (Option A is correct).`,
 
-    correctAnswers: [0, 3],
+    correctAnswers: [0,3],
   },
 
   {
     id: 37,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
 For the LCR AC-circuit (resonance frequency \(\omega_0\)) shown in the figure below, choose the correct statement(s).
 `,
 
-    questionImage: "/images/37_24.png",
-
     options: [
       String.raw`\[
 \omega_0 \text{ depends on the values of } L,C,\text{ and } R
 \]`,
-
       String.raw`\[
 \text{At } \omega=\omega_0,\ \text{voltage } V_R \text{ and current } I \text{ are in-phase}
 \]`,
-
       String.raw`\[
 \text{The amplitude of } V_R \text{ at } \omega=\omega_0/2 \text{ is independent of } R
 \]`,
-
       String.raw`\[
 \text{The amplitude of } V_R \text{ at } \omega=\omega_0 \text{ is independent of } L \text{ and } C
 \]`,
     ],
+
+    questionImage: "/images/37_24.png",
 
     detailedSolution: String.raw`For a series LCR AC-circuit:
 
@@ -6162,13 +6813,17 @@ For the LCR AC-circuit (resonance frequency \(\omega_0\)) shown in the figure be
 
 At \(\omega = \omega_0 / 2\), the circuit is not at resonance, and the current depends on \(R, L,\) and \(C\). Thus, \(V_R\) depends on \(R\). (Option C is false).`,
 
-    correctAnswers: [1, 3],
+    correctAnswers: [1,3],
   },
 
   {
     id: 38,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -6179,26 +6834,23 @@ Identify the correct statement(s).
 [\(\gamma\) is the ratio of specific heats \(C_p\) (at constant \(P\)) and \(C_v\) (at constant \(V\))]
 `,
 
-    questionImage: "/images/38_24.png",
-
     options: [
       String.raw`\[
 T_1T_3=T_2T_4
 \]`,
-
       String.raw`\[
 \text{The efficiency of the engine is }
 1-\left(\frac{P_1}{P_2}\right)^{\frac{\gamma-1}{\gamma}}
 \]`,
-
       String.raw`\[
 \text{The change in entropy for the entire cycle is zero}
 \]`,
-
       String.raw`\[
 T_1T_2=T_3T_4
 \]`,
     ],
+
+    questionImage: "/images/38_24.png",
 
     detailedSolution: String.raw`The described cycle is the classic Otto cycle: \(1\to2\) and \(3\to4\) are adiabatic, while \(2\to3\) and \(4\to1\) are isochoric (constant volume). Thus \(V_1 = V_4\) and \(V_2 = V_3\).
 
@@ -6216,13 +6868,17 @@ Using the adiabatic relation \(T_1 P_1^{\frac{1-\gamma}{\gamma}} = T_2 P_2^{\fra
 3. **Entropy**:
 Entropy is a state function. For any closed, reversible thermodynamic cycle, the net change in entropy after returning to the initial state is identically zero. (Option C is correct).`,
 
-    correctAnswers: [0, 1, 2],
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 39,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -6243,25 +6899,22 @@ respectively. An observer \(P\) is located on the \(y\)-axis at a distance \(L\)
 (Here \(a\) and \(v_0\) are constants)
 `,
 
-    questionImage: "/images/39_24.png",
-
     options: [
       String.raw`\[
 v_{PS}(t)=\frac{1}{2}\frac{av_0}{\sqrt{a^2\sin^2\omega t+L^2}}\sin(2\omega t)
 \]`,
-
       String.raw`\[
 \text{The observed frequency will be } f \text{ when the source is at } x=0 \text{ and } x=\pm a
 \]`,
-
       String.raw`\[
 \text{The observed frequency will be } f \text{ when the source is at position } x=\pm\frac{a}{2}
 \]`,
-
       String.raw`\[
 v_{PS}(t)=\frac{1}{2}\frac{av_0}{\sqrt{a^2+L^2}}\sin(2\omega t)
 \]`,
     ],
+
+    questionImage: "/images/39_24.png",
 
     detailedSolution: String.raw`The position of the source is \(x(t) = a\sin(\omega t)\), and its velocity is \(v(t) = v_0\cos(\omega t)\) along the x-axis.
 The observer P is on the y-axis at distance \(L\).
@@ -6282,13 +6935,17 @@ By the Doppler effect, the observed frequency shifts from \(f\) only when there 
 - At \(x=\pm a\), the oscillator is at its amplitude extreme, so its instantaneous velocity \(v(t) = 0 \Rightarrow v_{PS} = 0\). Observed frequency is \(f\).
 Therefore, the observed frequency is \(f\) exactly when the source is at \(x=0\) and \(x=\pm a\). (Option B is correct).`,
 
-    correctAnswers: [0, 1],
+    correctAnswers: [0,1],
   },
 
   {
     id: 40,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -6298,7 +6955,6 @@ One mole of an ideal monoatomic gas, initially at temperature \(T_0\) is expande
 `,
 
     options: [
-
       String.raw`
 \[
 \begin{aligned}
@@ -6307,7 +6963,6 @@ One mole of an ideal monoatomic gas, initially at temperature \(T_0\) is expande
 \end{aligned}
 \]
 `,
-
       String.raw`
 \[
 \begin{aligned}
@@ -6316,7 +6971,6 @@ One mole of an ideal monoatomic gas, initially at temperature \(T_0\) is expande
 \end{aligned}
 \]
 `,
-
       String.raw`
 \[
 \begin{aligned}
@@ -6325,7 +6979,6 @@ One mole of an ideal monoatomic gas, initially at temperature \(T_0\) is expande
 \end{aligned}
 \]
 `,
-
       String.raw`
 \[
 \begin{aligned}
@@ -6334,7 +6987,6 @@ One mole of an ideal monoatomic gas, initially at temperature \(T_0\) is expande
 \end{aligned}
 \]
 `,
-
     ],
 
     detailedSolution: String.raw`We have 1 mole of an ideal monoatomic gas (\(C_v = \frac{3}{2}R\)). The volume expands from \(V_0\) to \(2.5 V_0\).
@@ -6351,13 +7003,17 @@ The work done is \(W = P \Delta V = P(2.5V_0 - V_0) = 1.5 PV_0\). By the ideal g
 
 The change in internal energy is \(\Delta U = n C_v \Delta T = 1 \times \frac{3}{2}R \times (2.5 T_0 - T_0) = \frac{3}{2}R \times 1.5 T_0 = \frac{9}{4} RT_0\), not \(\frac{9}{2} RT_0\).`,
 
-    correctAnswers: [1, 2],
+    correctAnswers: [1,2],
   },
 
   {
     id: 41,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -6384,10 +7040,15 @@ The depletion width on the n-side is \(1.6\ \mu\text{m}\).`,
     correctAnswerMin: 1.6,
     correctAnswerMax: 1.6,
   },
+
   {
     id: 42,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -6407,7 +7068,6 @@ w = x + y
 
 The Jacobian of the above transformation is __________.
 `,
-
 
     detailedSolution: String.raw`The Jacobian of the transformation from \((x,y,z)\) to \((u,v,w)\) is given by the determinant of the Jacobian matrix, which contains the first-order partial derivatives of the functions.
 
@@ -6430,10 +7090,15 @@ Evaluate the determinant by expanding along the third row:
     correctAnswerMin: -8,
     correctAnswerMax: -8,
   },
+
   {
     id: 43,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -6449,7 +7114,6 @@ Two sides of a triangle OAB are given by:
 
 The area of the triangle is __________. (Rounded off to one decimal place)
 `,
-
 
     detailedSolution: String.raw`The area of a triangle formed by two vectors \(\overrightarrow{OA}\) and \(\overrightarrow{OB}\) originating from the same point is given by half the magnitude of their cross product:
 \(\text{Area} = \frac{1}{2} |\overrightarrow{OA} \times \overrightarrow{OB}|\)
@@ -6475,10 +7139,15 @@ Rounded to one decimal place, the area is \(4.3\).`,
     correctAnswerMin: 4.2,
     correctAnswerMax: 4.4,
   },
+
   {
     id: 44,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -6511,10 +7180,15 @@ Rounded to the nearest integer, the torque is \(87\) N-m.`,
     correctAnswerMin: 85,
     correctAnswerMax: 88,
   },
+
   {
     id: 45,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -6544,12 +7218,17 @@ This immediately means \(x^2 = d_{cm}^2\), so the distance from the CM must be e
 Rounded to two decimal places, the distance is \(0.38 R\).`,
 
     correctAnswerMin: 0.36,
-    correctAnswerMax: 0.40,
+    correctAnswerMax: 0.4,
   },
+
   {
     id: 46,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -6570,13 +7249,18 @@ The intensity of the reflected light is:
 
 Rounded to two decimal places, the intensity is \(0.11 I_0\).`,
 
-    correctAnswerMin: 0.10,
+    correctAnswerMin: 0.1,
     correctAnswerMax: 0.12,
   },
+
   {
     id: 47,
     year: 2024,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -6603,13 +7287,18 @@ Given \(\varepsilon_r = 9\) and \(q = -9\) C:
 
 The total induced charge is \(8.00\) C.`,
 
-    correctAnswerMin: 7.90,
-    correctAnswerMax: 8.10,
+    correctAnswerMin: 7.9,
+    correctAnswerMax: 8.1,
   },
+
   {
     id: 48,
     year: 2024,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -6632,10 +7321,15 @@ The calculated voltage drop is \(6.2\) V.`,
     correctAnswerMin: 6.2,
     correctAnswerMax: 6.2,
   },
+
   {
     id: 49,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -6643,7 +7337,6 @@ The Fermi energy of a system is \(5.5\,\text{eV}\). At \(500\,\text{K}\), the en
 
 (Boltzmann constant \(k_B = 8.62 \times 10^{-5}\,\text{eV/K}\))
 `,
-
 
     detailedSolution: String.raw`The probability \(f(E)\) that an energy level \(E\) is occupied by an electron is given by the Fermi-Dirac distribution:
 \(f(E) = \frac{1}{e^{(E - E_F)/k_B T} + 1}\)
@@ -6672,10 +7365,15 @@ Rounded to two decimal places, the energy is \(5.56\) eV.`,
     correctAnswerMin: 5.55,
     correctAnswerMax: 5.57,
   },
+
   {
     id: 50,
     year: 2024,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -6707,10 +7405,15 @@ Rounded to two decimal places, the net change in entropy is \(0.47 R\).`,
     correctAnswerMin: 0.44,
     correctAnswerMax: 0.48,
   },
+
   {
     id: 51,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -6736,10 +7439,15 @@ The smallest spacing is \(1.32\ \text{\AA}\).`,
     correctAnswerMin: 1.32,
     correctAnswerMax: 1.32,
   },
+
   {
     id: 52,
     year: 2024,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics","Transistors"],
     type: "NAT",
 
     question: String.raw`
@@ -6759,13 +7467,18 @@ Substituting \(\beta = 100\) and \(V_{BE} = 0.7\) V into the loop equation isola
 Once \(I_B\) is found, the collector current is easily determined by \(I_C = 100 I_B\).
 Evaluating the specific resistor and voltage values shown in the schematic diagram yields \(I_C \approx 1.12\) mA.`,
 
-    correctAnswerMin: 1.10,
+    correctAnswerMin: 1.1,
     correctAnswerMax: 1.15,
   },
+
   {
     id: 53,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -6802,10 +7515,15 @@ Rounded to three decimal places, it is \(-0.033\).`,
     correctAnswerMin: -0.034,
     correctAnswerMax: -0.032,
   },
+
   {
     id: 54,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -6852,10 +7570,15 @@ Rounding to one decimal place, the kinetic energy of Oxygen is \(0.4\) MeV.`,
     correctAnswerMin: 0.4,
     correctAnswerMax: 0.4,
   },
+
   {
     id: 55,
     year: 2024,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -6880,10 +7603,15 @@ Therefore, the total energy is:
     correctAnswerMin: -200,
     correctAnswerMax: -200,
   },
+
   {
     id: 56,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -6911,10 +7639,15 @@ Substitute \(n\) and \(N\) into the resolving power equation:
     correctAnswerMin: 246,
     correctAnswerMax: 246,
   },
+
   {
     id: 57,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -6936,12 +7669,17 @@ A point object is placed at point \(A\) on the axis (\(OA = 60\,\text{cm}\)) as 
 Executing these optical matrix steps with the provided values (\(R_1 = 30\), \(R_2 = 20\), \(t=4\), \(n=1.5\)) yields the final image distance \(d \approx 3.73\) cm.`,
 
     correctAnswerMin: 3.55,
-    correctAnswerMax: 3.90,
+    correctAnswerMax: 3.9,
   },
+
   {
     id: 58,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -6969,10 +7707,15 @@ Rounded to the nearest integer, the distance is \(2993\) m.`,
     correctAnswerMin: 2992,
     correctAnswerMax: 2994,
   },
+
   {
     id: 59,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -7005,10 +7748,15 @@ Since the potentials are equal, the potential difference is zero:
     correctAnswerMin: 0,
     correctAnswerMax: 0,
   },
+
   {
     id: 60,
     year: 2024,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Electromagnetic Induction",
+    subjectId: "em",
+    tags: ["Electromagnetic Induction","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -7046,7 +7794,11 @@ Substitute the given values (\(R = 0.05\), \(B_0 = 0.98\), \(\omega = 100\), \(r
   {
     id: 1,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7054,30 +7806,29 @@ For a cubic unit cell, the dashed arrow in which of the following figures repres
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/1a_23.png",
-      "/images/1b_23.png",
-      "/images/1c_23.png",
-      "/images/1d_23.png"
-    ],
+    optionImages: ["/images/1a_23.png","/images/1b_23.png","/images/1c_23.png","/images/1d_23.png"],
 
     detailedSolution: String.raw`The direction [220] in a cubic unit cell corresponds to a vector pointing from the origin $(0,0,0)$ to the point $(2,2,0)$. Because direction indices only denote the vector's orientation, we can reduce the indices to their smallest integer ratio, giving the equivalent direction [110]. 
 
 A vector pointing in the [110] direction has equal positive components along the X and Y axes, and a zero component along the Z axis. Therefore, the arrow representing this direction must lie entirely within the X-Y plane (the base of the cube) and point diagonally across it.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 2,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -7088,7 +7839,7 @@ Which of the following fields has non-zero curl?
       String.raw`$x\hat{i}+y\hat{j}+z\hat{k}$`,
       String.raw`$(y+z)\hat{i}+(x+z)\hat{j}+(x+y)\hat{k}$`,
       String.raw`$y^{2}\hat{i}+(2xy+z^{2})\hat{j}+2yz\hat{k}$`,
-      String.raw`$xy\hat{i}+2yz\hat{j}+3xz\hat{k}$`
+      String.raw`$xy\hat{i}+2yz\hat{j}+3xz\hat{k}$`,
     ],
 
     detailedSolution: String.raw`To determine which field has a non-zero curl, we calculate $\nabla \times \mathbf{F}$ for each option:
@@ -7107,13 +7858,17 @@ $\nabla \times \mathbf{F} = (0 - 2y)\hat{i} - (3z - 0)\hat{j} + (0 - x)\hat{k} =
 
 Therefore, the field in option (D) is the only one with a non-zero curl.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 3,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -7124,7 +7879,7 @@ Which of the following statements about the viscosity of a dilute gas is correct
       String.raw`It increases with increasing pressure at fixed temperature`,
       String.raw`It is independent of pressure at fixed temperature`,
       String.raw`It decreases with increasing temperature`,
-      String.raw`It is independent of temperature`
+      String.raw`It is independent of temperature`,
     ],
 
     detailedSolution: String.raw`According to the kinetic theory of gases, the dynamic viscosity ($\eta$) of a dilute, ideal gas is given by the expression:
@@ -7141,13 +7896,17 @@ $\eta = \frac{1}{3} (mn) \bar{v} \left(\frac{1}{\sqrt{2}\pi d^2 n}\right) = \fra
 Notice that the number density '$n$' cancels out. Since pressure $P = n k_B T$, changes in pressure at a fixed temperature only change '$n$'. Because '$n$' cancels out in the viscosity formula, the viscosity of a dilute gas is **independent of pressure** at a fixed temperature. 
 (It does depend on temperature since $\bar{v} \propto \sqrt{T}$, making $\eta \propto \sqrt{T}$).`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 4,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -7155,18 +7914,13 @@ The plot of the function $f(x) = ||x| - 1|$ is
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/4a_23.png",
-      "/images/4b_23.png",
-      "/images/4c_23.png",
-      "/images/4d_23.png"
-    ],
+    optionImages: ["/images/4a_23.png","/images/4b_23.png","/images/4c_23.png","/images/4d_23.png"],
 
     detailedSolution: String.raw`To sketch the function $f(x) = ||x| - 1|$, we can build it step-by-step:
 1. Start with the standard absolute value graph $y = |x|$, which is a "V" shape with its vertex at the origin $(0,0)$.
@@ -7175,13 +7929,17 @@ The plot of the function $f(x) = ||x| - 1|$ is
 
 The segment from $x = -1$ to $x = 1$, which was previously below the x-axis dipping down to $-1$, flips upwards to form a peak at $(0, 1)$. The rest of the graph remains a "V" shape extending outwards from $x = -1$ and $x = 1$. This yields a 'W' shaped curve.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 5,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -7192,7 +7950,7 @@ A system has N spins, where each spin is capable of existing in 4 possible state
       String.raw`$2(N-1)k_B\ln 2$`,
       String.raw`$(N-1)k_B\ln 2$`,
       String.raw`$4k_B\ln N$`,
-      String.raw`$Nk_B\ln 2$`
+      String.raw`$Nk_B\ln 2$`,
     ],
 
     detailedSolution: String.raw`In statistical mechanics, the entropy $S$ is related to the number of accessible microstates $\Omega$ by Boltzmann's entropy formula:
@@ -7215,13 +7973,17 @@ $\Delta S = S_{\text{disordered}} - S_{\text{ordered}}$
 $\Delta S = 2N k_B \ln(2) - 2 k_B \ln(2)$
 $\Delta S = 2(N-1) k_B \ln(2)$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 6,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7229,18 +7991,13 @@ Temperature (T) dependence of the total specific heat $(C_v)$ for a two dimensio
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/6a_23.png",
-      "/images/6b_23.png",
-      "/images/6c_23.png",
-      "/images/6d_23.png"
-    ],
+    optionImages: ["/images/6a_23.png","/images/6b_23.png","/images/6c_23.png","/images/6d_23.png"],
 
     detailedSolution: String.raw`The total specific heat $C_v$ of a metallic solid at low temperatures consists of two contributions: the electronic specific heat ($C_{el}$) and the phonon/lattice specific heat ($C_{ph}$).
 $C_v = C_{el} + C_{ph}$
@@ -7260,13 +8017,17 @@ $\frac{C_v}{T} = \gamma + \beta T$
 
 This represents a straight line equation ($y = mx + c$) where the independent variable is $T$, the slope is $\beta$ (positive), and the y-intercept is $\gamma$ (positive). The plot that shows a straight line with a positive y-intercept and positive slope corresponds to this derived relationship.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 7,
     year: 2023,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Medium",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7274,21 +8035,16 @@ For the following circuit, choose the correct waveform corresponding to the outp
 Given $V_{in} = 5 \sin(200\pi t)$ V, forward bias voltage of the diodes (D and Z) = $0.7$ V and reverse Zener voltage = $3$ V.
 `,
 
-    questionImage: "/images/7_23.png",
-
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/7a_23.png",
-      "/images/7b_23.png",
-      "/images/7c_23.png",
-      "/images/7d_23.png"
-    ],
+    optionImages: ["/images/7a_23.png","/images/7b_23.png","/images/7c_23.png","/images/7d_23.png"],
+
+    questionImage: "/images/7_23.png",
 
     detailedSolution: String.raw`The given circuit has two parallel branches connected across the output $V_{out}$:
 1. A standard diode D in series with a DC battery of $2\text{ V}$ (with positive terminal facing D's cathode).
@@ -7308,13 +8064,17 @@ Let's analyze the clamping levels during the positive and negative half cycles o
 
 **Conclusion:** The output waveform is clipped at $+3\text{ V}$ on the positive side and $-0.7\text{ V}$ on the negative side.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 8,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7325,7 +8085,7 @@ If the ground state energy of a particle in an infinite potential well of width 
       String.raw`$1$`,
       String.raw`$1/3$`,
       String.raw`$1/\sqrt{3}$`,
-      String.raw`$1/9$`
+      String.raw`$1/9$`,
     ],
 
     detailedSolution: String.raw`The energy levels of a particle of mass $m$ in a 1D infinite potential well of width $L$ are given by:
@@ -7347,27 +8107,31 @@ $\left(\frac{L_1}{L_2}\right)^2 = \frac{1}{9}$
 Taking the positive square root (since width must be positive):
 $\frac{L_1}{L_2} = \frac{1}{3}$`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 9,
     year: 2023,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "MCQ",
 
     question: String.raw`
 In the given circuit, with an ideal op-amp for what value of $\frac{R_1}{R_2}$ the output of the amplifier $V_{out} = V_2 - V_1$?
 `,
 
-    questionImage: "/images/9_23.png",
-
     options: [
       String.raw`$1$`,
       String.raw`$1/2$`,
       String.raw`$2$`,
-      String.raw`$3/2$`
+      String.raw`$3/2$`,
     ],
+
+    questionImage: "/images/9_23.png",
 
     detailedSolution: String.raw`This circuit is a standard Difference Amplifier using an ideal op-amp. 
 Let the non-inverting terminal voltage be $V_+$ and the inverting terminal voltage be $V_-$.
@@ -7394,13 +8158,17 @@ $\frac{2R_2}{R_1 + R_2} = 1 \implies 2R_2 = R_1 + R_2 \implies R_2 = R_1$
 
 Therefore, the ratio $\frac{R_1}{R_2} = 1$.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 10,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -7411,7 +8179,7 @@ A projectile of mass m is moving in the vertical x-y plane with the origin on th
       String.raw`$\frac{m}{2}\dot{r}^2 + mgr\sin\theta$`,
       String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\cos\theta$`,
       String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
-      String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) - mgr\cos\theta$`
+      String.raw`$\frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) - mgr\cos\theta$`,
     ],
 
     detailedSolution: String.raw`The total energy ($E$) of a system is the sum of its kinetic energy ($T$) and potential energy ($V$).
@@ -7439,13 +8207,17 @@ $V = mg(r\sin\theta) = mgr\sin\theta$
 Adding $T$ and $V$:
 $E = \frac{m}{2}(\dot{r}^2 + r^2\dot{\theta}^2) + mgr\sin\theta$`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 11,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -7453,18 +8225,13 @@ A small bar magnet is dropped through different hollow copper tubes with same le
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/11a_23.png",
-      "/images/11b_23.png",
-      "/images/11c_23.png",
-      "/images/11d_23.png"
-    ],
+    optionImages: ["/images/11a_23.png","/images/11b_23.png","/images/11c_23.png","/images/11d_23.png"],
 
     detailedSolution: String.raw`As the magnet falls through the copper tube, the changing magnetic flux induces an electromotive force (EMF) which generates eddy currents in the tube. According to Lenz's Law, these currents produce a magnetic field that opposes the motion of the falling magnet, leading to a terminal velocity.
 
@@ -7476,27 +8243,31 @@ A small bar magnet is dropped through different hollow copper tubes with same le
 
 The graph representing an initial increase that eventually saturates corresponds to Option A.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 12,
     year: 2023,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
 Two digital inputs A and B are given to the following circuit. For $A = 1$, $B = 0$, the values of X and Y are:
 `,
 
-    questionImage: "/images/12_23.png",
-
     options: [
       String.raw`$X=0, Y=0$`,
       String.raw`$X=1, Y=0$`,
       String.raw`$X=0, Y=1$`,
-      String.raw`$X=1, Y=1$`
+      String.raw`$X=1, Y=1$`,
     ],
+
+    questionImage: "/images/12_23.png",
 
     detailedSolution: String.raw`Let's trace the logic states through the circuit layer by layer with inputs $A=1$ and $B=0$.
 
@@ -7514,27 +8285,31 @@ Two digital inputs A and B are given to the following circuit. For $A = 1$, $B =
 
 Thus, the final output states are $X = 1$ and $Y = 0$.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 13,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
 The Jacobian matrix for transforming from (x, y) to another orthogonal coordinates system (u, v) as shown in the figure is
 `,
 
-    questionImage: "/images/13_23.png",
-
     options: [
       String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&1\\ 1&-1\end{bmatrix}$`,
       String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&1\\ -1&1\end{bmatrix}$`,
       String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&-1\\ 1&-1\end{bmatrix}$`,
-      String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&-1\\ 1&1\end{bmatrix}$`
+      String.raw`$\frac{1}{\sqrt{2}}\begin{bmatrix}1&-1\\ 1&1\end{bmatrix}$`,
     ],
+
+    questionImage: "/images/13_23.png",
 
     detailedSolution: String.raw`Based on the provided figure, the new coordinate axes $(u, v)$ are rotated with respect to $(x,y)$.
 The $v$-axis is at an angle of $+45^\circ$ from the $x$-axis.
@@ -7558,13 +8333,17 @@ $\frac{\partial v}{\partial x} = \frac{1}{\sqrt{2}}$, $\frac{\partial v}{\partia
 Substitute these into the matrix:
 $J = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}$`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 14,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -7572,18 +8351,13 @@ A rotating disc is held in front of a plane mirror in two different orientations
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/14a_23.png",
-      "/images/14b_23.png",
-      "/images/14c_23.png",
-      "/images/14d_23.png"
-    ],
+    optionImages: ["/images/14a_23.png","/images/14b_23.png","/images/14c_23.png","/images/14d_23.png"],
 
     detailedSolution: String.raw`Angular momentum $\mathbf{L} = \mathbf{r} \times \mathbf{p}$ is a pseudovector (or axial vector). 
 Under a mirror reflection, pseudovectors behave differently than ordinary polar vectors (like displacement or velocity). If the mirror lies in the $x-y$ plane, the reflection transformation is $(x, y, z) \to (x, y, -z)$.
@@ -7598,13 +8372,17 @@ Let's apply this to the two cases:
 
 Option A correctly illustrates these pseudovector reflection rules.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 15,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -7615,7 +8393,7 @@ Inverse of the matrix $A = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 1 
       String.raw`$\begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
       String.raw`$\begin{bmatrix} 3 & -1 & 0 \\ -3 & 1 & 0 \\ -3 & 1 & 1 \end{bmatrix}$`,
       String.raw`$\begin{bmatrix} 1 & 1 & 0 \\ 2 & 3 & 0 \\ 1 & 0 & 1 \end{bmatrix}$`,
-      String.raw`$\begin{bmatrix} 1 & 2 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`
+      String.raw`$\begin{bmatrix} 1 & 2 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
     ],
 
     detailedSolution: String.raw`We want to find the inverse of the upper triangular matrix $A = \begin{bmatrix} 1 & -2 & 1 \\ 0 & 3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$. 
@@ -7633,13 +8411,17 @@ Multiplying the matrices out gives us the following equations for the elements:
 Reconstructing the inverse matrix with these values:
 $A^{-1} = \begin{bmatrix} 1 & 2/3 & -1 \\ 0 & 1/3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 16,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -7650,7 +8432,7 @@ Suppose the divergence of magnetic field $\vec{B}$ is nonzero and is given as $\
       String.raw`$\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
       String.raw`$\mu_0\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
       String.raw`$-\mu_0\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
-      String.raw`$-\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`
+      String.raw`$-\vec{J}_m - \frac{\partial\vec{B}}{\partial t}$`,
     ],
 
     detailedSolution: String.raw`If magnetic monopoles existed, Maxwell's equations would become symmetric. The presence of magnetic charge density ($\rho_m$) and magnetic current density ($\mathbf{J}_m$) requires modifying Faraday's Law.
@@ -7675,13 +8457,17 @@ For this to hold true, the constant $k$ must be equal to $\mu_0$.
 Therefore, the modified Faraday's law is:
 $\nabla \times \mathbf{E} = -\mu_0 \mathbf{J}_m - \frac{\partial\mathbf{B}}{\partial t}$`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 17,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -7692,7 +8478,7 @@ For a thermodynamic system, the coefficient of volume expansion $\beta = \frac{1
       String.raw`$\left(\frac{\partial\beta}{\partial P}\right)_T = \left(\frac{\partial\kappa}{\partial T}\right)_P$`,
       String.raw`$\left(\frac{\partial\beta}{\partial T}\right)_P = -\left(\frac{\partial\kappa}{\partial P}\right)_T$`,
       String.raw`$\left(\frac{\partial\beta}{\partial T}\right)_P = \left(\frac{\partial\kappa}{\partial P}\right)_T$`,
-      String.raw`$\left(\frac{\partial\beta}{\partial P}\right)_T = -\left(\frac{\partial\kappa}{\partial T}\right)_P$`
+      String.raw`$\left(\frac{\partial\beta}{\partial P}\right)_T = -\left(\frac{\partial\kappa}{\partial T}\right)_P$`,
     ],
 
     detailedSolution: String.raw`The differential of volume $V(T, P)$ can be written in terms of partial derivatives:
@@ -7713,13 +8499,17 @@ Applying this to our equation where $x=T$, $y=P$, $M=\beta$, and $N=-\kappa$:
 $\left(\frac{\partial \beta}{\partial P}\right)_T = \left(\frac{\partial (-\kappa)}{\partial T}\right)_P$
 $\left(\frac{\partial \beta}{\partial P}\right)_T = -\left(\frac{\partial \kappa}{\partial T}\right)_P$`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 18,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7730,7 +8520,7 @@ A linearly polarized light of wavelength 590 nm is incident normally on the surf
       String.raw`$0.62$ and linear`,
       String.raw`$0.62$ and elliptical`,
       String.raw`$-0.38$ and elliptic`,
-      String.raw`$0.5$ and circular`
+      String.raw`$0.5$ and circular`,
     ],
 
     detailedSolution: String.raw`**1. Calculate Phase Difference ($f$):**
@@ -7753,13 +8543,17 @@ $f \approx 0.62$
 * The angle of incidence relative to the optic axis is $30^\circ$, meaning the amplitudes of the ordinary and extraordinary components are proportional to $\cos(30^\circ)$ and $\sin(30^\circ)$. Since $30^\circ \neq 45^\circ$, the amplitudes are unequal.
 * An arbitrary phase difference with unequal orthogonal amplitudes results in **elliptical polarization**.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 19,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7770,7 +8564,7 @@ The phase velocity $v_p$ of transverse waves on a one-dimensional crystal of ato
       String.raw`$C\left[\cos(kd/2) - \frac{\sin(kd/2)}{(kd/2)}\right]$`,
       String.raw`$C\cos(kd/2)$`,
       String.raw`$C\left[\cos(kd/2) + \frac{\sin(kd/2)}{(kd/2)}\right]$`,
-      String.raw`$C\frac{\sin(kd/2)}{(kd/2)}$`
+      String.raw`$C\frac{\sin(kd/2)}{(kd/2)}$`,
     ],
 
     detailedSolution: String.raw`The relationship between angular frequency ($\omega$), wavevector ($k$), and phase velocity ($v_p$) is:
@@ -7791,13 +8585,17 @@ Using the chain rule:
 $v_g = \frac{2C}{d} \cos\left(\frac{kd}{2}\right) \cdot \frac{d}{2}$
 $v_g = C \cos\left(\frac{kd}{2}\right)$`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 20,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -7808,7 +8606,7 @@ In a dielectric medium of relative permittivity 5, the amplitudes of the displac
       String.raw`$2.78\times 10^{-4}$`,
       String.raw`$2.44\times 10^{-4}$`,
       String.raw`$2.78\times 10^{-3}$`,
-      String.raw`$2.44\times 10^{-3}$`
+      String.raw`$2.44\times 10^{-3}$`,
     ],
 
     detailedSolution: String.raw`For an applied sinusoidal electric field $\mathbf{E} = \mathbf{E}_0 e^{j\omega t}$, there are two types of current densities in the medium:
@@ -7835,26 +8633,31 @@ $\sigma \approx 31.4159 \times 8.854 \times 10^{-6}$
 $\sigma \approx 278.15 \times 10^{-6} \text{ } \Omega^{-1}\text{m}^{-1}$
 $\sigma \approx 2.78 \times 10^{-4} \text{ } \Omega^{-1}\text{m}^{-1}$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
+
   {
     id: 21,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
 For a given vector $\vec{F}=-y\hat{i}+z\hat{j}+x^{2}\hat{k}$, the surface integral $\int_{S}(\vec{\nabla}\times\vec{F})\cdot\hat{n}dS$ over the surface S of a hemisphere of radius R with the centre of the base at the origin is
 `,
 
-    questionImage: "/images/21_23.png",
-
     options: [
       String.raw`$\pi R^{2}$`,
       String.raw`$2\pi R^{2}$`,
       String.raw`$-\pi R^{2}$`,
-      String.raw`$-\frac{2\pi R^{2}}{3}$`
+      String.raw`$-\frac{2\pi R^{2}}{3}$`,
     ],
+
+    questionImage: "/images/21_23.png",
 
     detailedSolution: String.raw`By Stokes' Theorem, the surface integral of the curl of a vector field over an open surface $S$ is equal to the line integral of the vector field around the closed boundary curve $C$ of that surface:
 $\int_S (\nabla \times \mathbf{F}) \cdot \hat{n} \, dS = \oint_C \mathbf{F} \cdot d\mathbf{r}$
@@ -7880,13 +8683,17 @@ $\mathbf{F} \cdot d\mathbf{r} = (-R\sin\theta)(-R\sin\theta \, d\theta) + (0)(R\
 Evaluate the line integral from $0$ to $2\pi$:
 $\oint_C \mathbf{F} \cdot d\mathbf{r} = \int_{0}^{2\pi} R^2 \sin^2\theta \, d\theta = R^2 \int_{0}^{2\pi} \frac{1 - \cos(2\theta)}{2} \, d\theta = R^2 \left[ \frac{\theta}{2} - \frac{\sin(2\theta)}{4} \right]_0^{2\pi} = R^2 (\pi) = \pi R^2$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 22,
     year: 2023,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics","Transistors"],
     type: "MCQ",
 
     question: String.raw`
@@ -7895,14 +8702,14 @@ In the circuit shown, assuming the current gain $\beta=100$ and $V_{BE}=0.7~V$, 
 Given: $V_{CC}=15~V$, $R_{1}=100~k\Omega$, $R_{2}=50~k\Omega$, $R_{C}=4.7k\Omega$, and $R_{E}=3.3~k\Omega$
 `,
 
-    questionImage: "/images/22_23.png",
-
     options: [
       String.raw`8.9`,
       String.raw`4.3`,
       String.raw`3.2`,
-      String.raw`5.0`
+      String.raw`5.0`,
     ],
+
+    questionImage: "/images/22_23.png",
 
     detailedSolution: String.raw`To find the collector voltage $V_C$, we first need to determine the base voltage $V_B$ and the emitter current $I_E$.
 
@@ -7938,13 +8745,17 @@ Assume $I_C \approx I_E = 1.303 \text{ mA}$.
 $V_C = 15 - I_C R_C = 15 - (1.303 \text{ mA})(4.7 \text{ k}\Omega) = 15 - 6.124 = 8.876 \text{ V} \approx 8.9 \text{ V}$.
 This perfectly matches option A.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 23,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -7955,7 +8766,7 @@ A uniform stick of length l and mass m pivoted at its top end is oscillating wit
       String.raw`$\sqrt{3}$`,
       String.raw`$\sqrt{\frac{3}{2}}$`,
       String.raw`$\sqrt{2}$`,
-      String.raw`$\frac{1}{\sqrt{3}}$`
+      String.raw`$\frac{1}{\sqrt{3}}$`,
     ],
 
     detailedSolution: String.raw`1. **Angular frequency of a Physical Pendulum (the stick):**
@@ -7974,13 +8785,17 @@ $\omega_s = \sqrt{\frac{g}{l}}$
 3. **Calculate the ratio:**
 $\frac{\omega_r}{\omega_s} = \frac{\sqrt{\frac{3g}{2l}}}{\sqrt{\frac{g}{l}}} = \sqrt{\frac{3}{2}}$`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 24,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -7993,7 +8808,7 @@ Given the refractive index of oil $=1.47$
       String.raw`Red (~650 nm)`,
       String.raw`Blue (~450 nm)`,
       String.raw`Green (~500 nm)`,
-      String.raw`Yellow (~560nm)`
+      String.raw`Yellow (~560nm)`,
     ],
 
     detailedSolution: String.raw`For thin film interference in reflected light, we must consider phase shifts upon reflection.
@@ -8019,13 +8834,17 @@ Now, find the wavelength $\lambda$ for different integer values of $m$:
 
 The wavelength of $499.8 \text{ nm}$ closely matches Green light ($\sim 500 \text{ nm}$). Thus, green will be predominantly visible.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 25,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Conservation Laws",
+    subjectId: "mechanics",
+    tags: ["Conservation Laws","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -8038,7 +8857,7 @@ Given: acceleration due to gravity $=9.8~ms^{-2}$ and density of water $=1000~kg
       String.raw`13.5`,
       String.raw`27.0`,
       String.raw`17.6`,
-      String.raw`6.8`
+      String.raw`6.8`,
     ],
 
     detailedSolution: String.raw`When the water falls, its velocity increases due to gravity. We can find the velocity of the water just before it hits the flat surface using the kinematic equation:
@@ -8063,13 +8882,17 @@ $P = 13.48 \text{ kNm}^{-2}$
 
 The closest value among the options is $13.5$.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 26,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -8080,7 +8903,7 @@ At the planar interface of two dielectrics, which of the following statements re
       String.raw`Normal component of both $\vec{D}$ and $\vec{P}$ are continuous`,
       String.raw`Normal component of both $\vec{D}$ and $\vec{E}$ are discontinuous`,
       String.raw`Normal component of $\vec{D}$ is continuous and that of $\vec{P}$ is discontinuous`,
-      String.raw`Normal component of both $\vec{E}$ and $\vec{P}$ are continuous`
+      String.raw`Normal component of both $\vec{E}$ and $\vec{P}$ are continuous`,
     ],
 
     detailedSolution: String.raw`The boundary conditions for electric fields at the interface between two ideal dielectric media (assuming no free surface charge $\sigma_f = 0$) are:
@@ -8096,13 +8919,17 @@ At the planar interface of two dielectrics, which of the following statements re
 
 Therefore, the normal component of $\vec{D}$ is continuous, and that of $\vec{P}$ is discontinuous.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 27,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -8115,7 +8942,7 @@ Given: Boltzmann constant $k_{B}=0.086$ meVK$^{-1}$
       String.raw`0.12`,
       String.raw`0.97`,
       String.raw`1.32`,
-      String.raw`1.82`
+      String.raw`1.82`,
     ],
 
     detailedSolution: String.raw`First, let's calculate the thermal energy $k_B T$:
@@ -8137,13 +8964,17 @@ $\langle E \rangle = \frac{0 + 0.9619 + 2(0.9254)}{2.8873} = \frac{0.9619 + 1.85
 
 The mean energy is closest to 0.97 meV.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 28,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -8154,7 +8985,7 @@ For the Maxwell-Boltzmann speed distribution, the ratio of the root-mean-square 
       String.raw`$\sqrt{\frac{3}{2}}$`,
       String.raw`$\frac{4}{\pi}$`,
       String.raw`$\frac{2}{3}$`,
-      String.raw`$\frac{3}{2}$`
+      String.raw`$\frac{3}{2}$`,
     ],
 
     detailedSolution: String.raw`According to the Maxwell-Boltzmann speed distribution for an ideal gas, the specific characteristic speeds are given by:
@@ -8168,13 +8999,17 @@ For the Maxwell-Boltzmann speed distribution, the ratio of the root-mean-square 
 We are asked for the ratio of $v_{rms}$ to $v_{mp}$:
 $\text{Ratio} = \frac{v_{rms}}{v_{mp}} = \frac{\sqrt{\frac{3k_BT}{m}}}{\sqrt{\frac{2k_BT}{m}}} = \sqrt{\frac{3}{2}}$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 29,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -8182,18 +9017,13 @@ In an extrinsic p-type semiconductor, which of the following schematic diagram d
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/29a_23.png",
-      "/images/29b_23.png",
-      "/images/29c_23.png",
-      "/images/29d_23.png"
-    ],
+    optionImages: ["/images/29a_23.png","/images/29b_23.png","/images/29c_23.png","/images/29d_23.png"],
 
     detailedSolution: String.raw`In a p-type semiconductor, acceptor impurities are added, which introduce an acceptor energy level ($E_A$) just above the valence band edge ($E_V$).
 
@@ -8205,13 +9035,17 @@ In an extrinsic p-type semiconductor, which of the following schematic diagram d
 
 Therefore, the graph should show $E_F$ starting close to $E_V$ at $T=0$, and rising to stabilize in the middle of the bandgap as $T$ becomes large. This matches Option A.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 30,
     year: 2023,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -8222,7 +9056,7 @@ A container is occupied by a fixed number of non-interacting particles. If they 
       String.raw`$P_{FD}>P_{MB}>P_{BE}$`,
       String.raw`$P_{FD}>P_{MB}=P_{BE}$`,
       String.raw`$P_{FD}>P_{BE}>P_{MB}$`,
-      String.raw`$P_{FD}=P_{MB}=P_{BE}$`
+      String.raw`$P_{FD}=P_{MB}=P_{BE}$`,
     ],
 
     detailedSolution: String.raw`The pressure exerted by an ideal gas depends on the quantum statistics governing its particles.
@@ -8235,22 +9069,29 @@ A container is occupied by a fixed number of non-interacting particles. If they 
 
 Therefore, the correct relationship for the pressures is $P_{FD} > P_{MB} > P_{BE}$.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
-    "id": 31,
-    "year": 2023,
-    "subject": "Quantum Phenomena",
-    "type": "MSQ",
-    "question": String.raw`The spectral energy density $u_T(\lambda)$ vs wavelength ($\lambda$) curve of a black body shows a peak at $\lambda = \lambda_{\max}$. If the temperature of the black body is doubled, then`,
-    "options": [
+    id: 31,
+    year: 2023,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`The spectral energy density $u_T(\lambda)$ vs wavelength ($\lambda$) curve of a black body shows a peak at $\lambda = \lambda_{\max}$. If the temperature of the black body is doubled, then`,
+
+    options: [
       String.raw`the maximum of $u_T(\lambda)$ shifts to $\lambda_{\max}/2$`,
       String.raw`the maximum of $u_T(\lambda)$ shifts to $2\lambda_{\max}$`,
       String.raw`the area under the curve becomes $16$ times the original area`,
-      String.raw`the area under the curve becomes $8$ times the original area`
+      String.raw`the area under the curve becomes $8$ times the original area`,
     ],
-    "detailedSolution": String.raw`Let's analyze the properties of black body radiation using standard laws.
+
+    detailedSolution: String.raw`Let's analyze the properties of black body radiation using standard laws.
 1.  **Wien's Displacement Law:** The wavelength corresponding to the maximum spectral energy density ($\lambda_{\max}$) is inversely proportional to the absolute temperature ($T$) of the black body:
     $$\lambda_{\max} T = b \text{ (Wien's constant)}$$
     Let the initial temperature be $T$. If the temperature is doubled, the new temperature is $T' = 2T$.
@@ -8266,21 +9107,30 @@ Therefore, the correct relationship for the pressures is $P_{FD} > P_{MB} > P_{B
     Therefore, the area under the curve becomes 16 times the original area. Option (C) is correct, and (D) is incorrect.
 
 Thus, the correct statements are (A) and (C).`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 32,
-    "year": 2023,
-    "subject": "Fourier Series",
-    "type": "MSQ",
-    "question": String.raw`A periodic function $f(x) = x^2$ for $-\pi < x < \pi$ is expanded in a Fourier series. Which of the following statement(s) is/are correct?`,
-    "options": [
+    id: 32,
+    year: 2023,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Fourier Series",
+    subjectId: "math",
+    tags: ["Fourier Series","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`A periodic function $f(x) = x^2$ for $-\pi < x < \pi$ is expanded in a Fourier series. Which of the following statement(s) is/are correct?`,
+
+    options: [
       String.raw`Coefficients of all the sine terms are zero`,
       String.raw`The first term in the series is $\frac{\pi^2}{3}$`,
       String.raw`The second term in the series is $-4\cos x$`,
-      String.raw`Coefficients of all the cosine terms are zero`
+      String.raw`Coefficients of all the cosine terms are zero`,
     ],
-    "detailedSolution": String.raw`The Fourier series expansion of a periodic function $f(x)$ on the interval $[-\pi, \pi]$ is given by:
+
+    detailedSolution: String.raw`The Fourier series expansion of a periodic function $f(x)$ on the interval $[-\pi, \pi]$ is given by:
 $$f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) + \sum_{n=1}^{\infty} b_n \sin(nx)$$
 where the coefficients are:
 $$a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) dx$$
@@ -8313,13 +9163,18 @@ Given $f(x) = x^2$. Let's analyze the properties:
     The second term in the series corresponds to $n=1$, which is $a_1 \cos(x) = -4 \cos x$. Option (C) is correct.
 
 Therefore, the correct statements are (A), (B), and (C).`,
-    "correctAnswers": [0, 1, 2]
+
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 33,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -8330,7 +9185,7 @@ The state of a harmonic oscillator is given as $\Psi=\frac{1}{\sqrt{3}}\psi_{0}-
       String.raw`A measurement of the energy of the system yields $E=\frac{1}{2}\hbar\omega$ with non-zero probability`,
       String.raw`A measurement of the energy of the system yields $E=\frac{5}{3}\hbar\omega$ with non-zero probability`,
       String.raw`Expectation value of the energy of the system $\langle E\rangle = \frac{5}{3}\hbar\omega$`,
-      String.raw`Expectation value of the energy of the system $\langle E\rangle = \frac{7}{6}\hbar\omega$`
+      String.raw`Expectation value of the energy of the system $\langle E\rangle = \frac{7}{6}\hbar\omega$`,
     ],
 
     detailedSolution: String.raw`The energy eigenvalues of a 1D quantum harmonic oscillator are given by $E_n = (n + \frac{1}{2})\hbar\omega$.
@@ -8351,27 +9206,31 @@ First, let's verify normalization: $|c_0|^2 + |c_1|^2 + |c_2|^2 = (\frac{1}{\sqr
   $\langle E \rangle = \left( \frac{1}{6} + \frac{3}{12} + \frac{5}{4} \right)\hbar\omega = \left( \frac{2}{12} + \frac{3}{12} + \frac{15}{12} \right)\hbar\omega = \frac{20}{12}\hbar\omega = \frac{5}{3}\hbar\omega$
   Therefore, Option C is **True** and Option D is **False**.`,
 
-    correctAnswers: [0, 2]
+    correctAnswers: [0,2],
   },
 
   {
     id: 34,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MSQ",
 
     question: String.raw`
 A rod of mass M, length L and non-uniform mass per unit length $\lambda(x)=\frac{3Mx^{2}}{L^{3}}$, is held horizontally by a pivot, as shown in the figure, and is free to move in the plane of the figure. For this rod, which of the following statements are true?
 `,
 
-    questionImage: "/images/34_23.png",
-
     options: [
       String.raw`Moment of inertia of the rod about an axis passing through the pivot is $\frac{3}{5}ML^2$`,
       String.raw`Moment of inertia of the rod about an axis passing through the pivot is $\frac{1}{3}ML^2$`,
       String.raw`Torque on the rod about the pivot is $\frac{3}{4}MgL$`,
-      String.raw`If the rod is released, the point at a distance $\frac{2L}{3}$ from the pivot will fall with acceleration g.`
+      String.raw`If the rod is released, the point at a distance $\frac{2L}{3}$ from the pivot will fall with acceleration g.`,
     ],
+
+    questionImage: "/images/34_23.png",
 
     detailedSolution: String.raw`Let's analyze the properties of the non-uniform rod using integration. A small mass element is $dm = \lambda(x) dx = \frac{3Mx^2}{L^3} dx$.
 
@@ -8394,13 +9253,17 @@ We want to find if the point at $x = \frac{2L}{3}$ has acceleration $g$.
 $a\left(\frac{2L}{3}\right) = \alpha \left(\frac{2L}{3}\right) = \left(\frac{5g}{4L}\right)\left(\frac{2L}{3}\right) = \frac{10}{12}g = \frac{5}{6}g$
 Since $\frac{5}{6}g \neq g$, Option D is **False**. (The point falling with acceleration $g$ is at $x = \frac{g}{\alpha} = \frac{g}{5g/4L} = \frac{4L}{5}$).`,
 
-    correctAnswers: [0, 2]
+    correctAnswers: [0,2],
   },
 
   {
     id: 35,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
@@ -8408,18 +9271,13 @@ Which of the following schematic plots correctly represent(s) a first order phas
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/35a_23.png",
-      "/images/35b_23.png",
-      "/images/35c_23.png",
-      "/images/35d_23.png"
-    ],
+    optionImages: ["/images/35a_23.png","/images/35b_23.png","/images/35c_23.png","/images/35d_23.png"],
 
     detailedSolution: String.raw`A first-order phase transition is characterized by:
 1. **Gibbs Free Energy ($g$):** The specific Gibbs free energy must be continuous across the phase transition boundary at $T_c$ to maintain phase equilibrium. However, its slope with respect to temperature will change abruptly. $\left(\frac{\partial g}{\partial T}\right)_P = -s$. Since entropy $s$ is always positive, the slope of $g$ vs $T$ is always negative. When moving to a higher temperature phase (e.g., solid to liquid), entropy increases, so the slope becomes more negative (steeper downward curve). The plot in option (A) shows $g$ is continuous but has a "kink" (discontinuous slope) at $T_c$, which is correct.
@@ -8429,13 +9287,17 @@ Which of the following schematic plots correctly represent(s) a first order phas
 
 Therefore, plots A, B, and C correctly represent a first-order phase transition.`,
 
-    correctAnswers: [0, 1, 2]
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 36,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Conservation Laws",
+    subjectId: "mechanics",
+    tags: ["Conservation Laws","Mechanics & General Properties"],
     type: "MSQ",
 
     question: String.raw`
@@ -8446,7 +9308,7 @@ A particle $(p_{1})$ of mass m moving with speed v collides with a stationary id
       String.raw`Speed of $p_{1}$ is $\frac{\sqrt{3}}{2}v$`,
       String.raw`Kinetic energy of $p_{2}$ is 25% of the total energy`,
       String.raw`Angle between the directions of motion of the two particles is $90^\circ$`,
-      String.raw`The kinetic energy of the centre of mass of $p_{1}$ and $p_{2}$ decreases`
+      String.raw`The kinetic energy of the centre of mass of $p_{1}$ and $p_{2}$ decreases`,
     ],
 
     detailedSolution: String.raw`1. **Scattering Angle (Option C):** In a non-collinear perfectly elastic collision between two identical masses where one is initially at rest, the angle between their velocity vectors after the collision is exactly $90^\circ$. Let $\theta_1$ and $\theta_2$ be the scattering angles of $p_1$ and $p_2$. We have $\theta_1 + \theta_2 = 90^\circ$. So, Option C is **True**.
@@ -8473,13 +9335,17 @@ So, $p_2$ has 25% of the total energy. Option B is **True**.
 There are no external forces acting on the system, so the total momentum $\mathbf{P}_{cm}$ is conserved. Therefore, the velocity of the center of mass $\mathbf{v}_{cm}$ is constant.
 The kinetic energy of the center of mass is $\frac{1}{2} (2m) v_{cm}^2$, which remains strictly constant. Option D is **False**.`,
 
-    correctAnswers: [0, 1, 2]
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 37,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -8490,7 +9356,7 @@ A wave travelling along the x-axis with y representing its displacement is descr
       String.raw`$\frac{\partial y}{\partial x}+\frac{1}{v}\frac{\partial y}{\partial t}=0$`,
       String.raw`$\frac{\partial y}{\partial x}-\frac{1}{v}\frac{\partial y}{\partial t}=0$`,
       String.raw`$\frac{\partial^{2}y}{\partial x^{2}}+\frac{1}{v^{2}}\frac{\partial^{2}y}{\partial t^{2}}=0$`,
-      String.raw`$\frac{\partial^{2}y}{\partial x^{2}}-\frac{1}{v^{2}}\frac{\partial^{2}y}{\partial t^{2}}=0$`
+      String.raw`$\frac{\partial^{2}y}{\partial x^{2}}-\frac{1}{v^{2}}\frac{\partial^{2}y}{\partial t^{2}}=0$`,
     ],
 
     detailedSolution: String.raw`A wave travelling along the spatial coordinate (the x-axis) must obey the classical wave equation, which is a second-order linear partial differential equation:
@@ -8509,27 +9375,31 @@ The general solution to this wave equation is D'Alembert's solution: $y(x,t) = f
 
 Because the question states "A wave travelling along the x-axis" (without specifying positive or negative direction), the first-order differential equations in A and B are valid descriptions for specific unidirectional waves, and D is the general wave equation. Therefore A, B, and D are all correct descriptions.`,
 
-    correctAnswers: [0, 1, 3]
+    correctAnswers: [0,1,3],
   },
 
   {
     id: 38,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
 An objective lens with half angular aperture $\alpha$ is illuminated with light of wavelength $\lambda$. The refractive index of the medium between the sample and the objective is n. The lateral resolving power of the optical system can be increased by
 `,
 
-    questionImage: "/images/38_23.png",
-
     options: [
       String.raw`decreasing both $\lambda$ and $\alpha$`,
       String.raw`decreasing $\lambda$ and increasing $\alpha$`,
       String.raw`increasing both $\alpha$ and n`,
-      String.raw`decreasing $\lambda$ and increasing n`
+      String.raw`decreasing $\lambda$ and increasing n`,
     ],
+
+    questionImage: "/images/38_23.png",
 
     detailedSolution: String.raw`The lateral resolving power (RP) of a microscope objective is the inverse of the limit of resolution ($d$). According to the Abbe criterion, the limit of resolution is:
 $d = \frac{1.22 \lambda}{2 n \sin \alpha}$
@@ -8553,13 +9423,17 @@ Evaluating the options based on these rules:
 * (C) increasing $\alpha$ (helps) and increasing $n$ (helps) $\implies$ Correct.
 * (D) decreasing $\lambda$ (helps) and increasing $n$ (helps) $\implies$ Correct.`,
 
-    correctAnswers: [1, 2, 3]
+    correctAnswers: [1,2,3],
   },
 
   {
     id: 39,
     year: 2023,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
     type: "MSQ",
 
     question: String.raw`
@@ -8570,7 +9444,7 @@ Which of the following statement(s) is/are true for a LC circuit with $L=25~mH$ 
       String.raw`Resonance frequency is close to 503 Hz`,
       String.raw`The impedance at 1 kHz is 15 $\Omega$`,
       String.raw`At a frequency of 200 Hz, the voltage lags the current in the circuit`,
-      String.raw`At a frequency of 700 Hz, the voltage lags the current in the circuit`
+      String.raw`At a frequency of 700 Hz, the voltage lags the current in the circuit`,
     ],
 
     detailedSolution: String.raw`Given: Inductance $L = 25 \times 10^{-3} \text{ H}$ and Capacitance $C = 4 \times 10^{-6} \text{ F}$.
@@ -8592,13 +9466,17 @@ This is not $15\ \Omega$. Option B is **False**.
 * At $f = 200 \text{ Hz}$ ($f < f_r$): The frequency is below resonance. Capacitive reactance is inversely proportional to frequency, so $X_C > X_L$. The circuit is highly capacitive. In a purely capacitive circuit, the current leads the voltage by $90^\circ$ (meaning voltage lags current). Option C is **True**.
 * At $f = 700 \text{ Hz}$ ($f > f_r$): The frequency is above resonance. Inductive reactance is directly proportional to frequency, so $X_L > X_C$. The circuit is predominantly inductive. In a predominantly inductive circuit, the voltage leads the current (meaning voltage does *not* lag current). Option D is **False**.`,
 
-    correctAnswers: [0, 2]
+    correctAnswers: [0,2],
   },
 
   {
     id: 40,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MSQ",
 
     question: String.raw`
@@ -8609,7 +9487,7 @@ For a particle moving in a general central force field, which of the following s
       String.raw`The angular momentum is a constant of motion`,
       String.raw`Kepler's second law is valid`,
       String.raw`The motion is confined to a plane`,
-      String.raw`Kepler's third law is valid`
+      String.raw`Kepler's third law is valid`,
     ],
 
     detailedSolution: String.raw`A central force is a force that points along the radial direction towards or away from a fixed origin. Mathematically, $\mathbf{F}(\mathbf{r}) = f(r)\hat{r}$.
@@ -8622,12 +9500,17 @@ For a particle moving in a general central force field, which of the following s
 
 4. **Kepler's Third Law (Option D):** Kepler's third law ($T^2 \propto a^3$) relates the orbital period to the semi-major axis. This relationship relies specifically on the force being an inverse-square law ($\mathbf{F} \propto -1/r^2 \hat{r}$). It is not a general property of all central force fields (for example, for a 3D harmonic oscillator where $F \propto -r$, the period $T$ is independent of the amplitude). Option D is **False**.`,
 
-    correctAnswers: [0, 1, 2]
+    correctAnswers: [0,1,2],
   },
+
   {
     id: 41,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -8654,14 +9537,18 @@ $a = (47.368)^{1/3} \times 10^{-8} \text{ cm} \approx 3.618 \times 10^{-8} \text
 
 Since $1 \text{ \AA} = 10^{-8} \text{ cm}$, the lattice constant is $3.62 \text{ \AA}$.`,
 
-    correctAnswerMin: 3.60,
-    correctAnswerMax: 3.63
+    correctAnswerMin: 3.6,
+    correctAnswerMax: 3.63,
   },
 
   {
     id: 42,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -8683,14 +9570,18 @@ Assuming the two diodes are in parallel branches, each connected in series with 
 4. The total current drawn from the battery is the sum of the branch currents by Kirchhoff's Current Law:
    $I_{total} = I_1 + I_2$`,
 
-    correctAnswerMin: 0.00,
-    correctAnswerMax: 1.00
+    correctAnswerMin: 0,
+    correctAnswerMax: 1,
   },
 
   {
     id: 43,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -8716,13 +9607,17 @@ $\text{Absolute Error} = |0.866025 - 0.855630| = 0.010395$
 Rounding to three decimal places gives $0.010$.`,
 
     correctAnswerMin: 0.009,
-    correctAnswerMax: 0.011
+    correctAnswerMax: 0.011,
   },
 
   {
     id: 44,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -8750,13 +9645,17 @@ $\sqrt{1.2} = \sqrt{\frac{6}{5}} \approx 1.0954$
 Rounding off to two decimal places gives $1.10$.`,
 
     correctAnswerMin: 1.08,
-    correctAnswerMax: 1.12
+    correctAnswerMax: 1.12,
   },
 
   {
     id: 45,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -8788,13 +9687,17 @@ $f = \frac{\sqrt{3}}{2} \approx 0.866$
 Rounding off to two decimal places gives $0.87$.`,
 
     correctAnswerMin: 0.85,
-    correctAnswerMax: 0.89
+    correctAnswerMax: 0.89,
   },
 
   {
     id: 46,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -8824,13 +9727,17 @@ $\text{Sum} = -0.8191 - (-0.5736) = -0.8191 + 0.5736 = -0.2455$
 Rounding to two decimal places gives $-0.25$.`,
 
     correctAnswerMin: -0.27,
-    correctAnswerMax: -0.23
+    correctAnswerMax: -0.23,
   },
 
   {
     id: 47,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -8860,14 +9767,18 @@ The initial mass of the system is $m_{\text{initial}} = 0.5 \text{ kg}$.
 The additional mass required is:
 $\Delta m = m_{\text{total}} - m_{\text{initial}} = 1.125 - 0.5 = 0.625 \text{ kg}$.`,
 
-    correctAnswerMin: 0.620,
-    correctAnswerMax: 0.630
+    correctAnswerMin: 0.62,
+    correctAnswerMax: 0.63,
   },
 
   {
     id: 48,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -8901,13 +9812,17 @@ We are asked to find the ratio $\mu_1/\mu_2$:
 $\frac{\mu_1}{\mu_2} = \frac{49}{25} = 1.96$`,
 
     correctAnswerMin: 1.94,
-    correctAnswerMax: 1.98
+    correctAnswerMax: 1.98,
   },
 
   {
     id: 49,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -8934,13 +9849,17 @@ The magnitude $|b| = 4/9 \approx 0.444$.
 Rounding off to two decimal places yields $0.44$.`,
 
     correctAnswerMin: 0.43,
-    correctAnswerMax: 0.45
+    correctAnswerMax: 0.45,
   },
 
   {
     id: 50,
     year: 2023,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -8970,13 +9889,17 @@ The problem states the distance is $f \times 10^{-14} \text{ m}$.
 Comparing the expressions, $f = 4.8$.`,
 
     correctAnswerMin: 4.7,
-    correctAnswerMax: 4.9
+    correctAnswerMax: 4.9,
   },
 
   {
     id: 51,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9012,13 +9935,17 @@ $\text{Ratio} = \frac{4.195 \times 10^7}{3 \times 10^8} \approx 0.1398$
 Rounding to two decimal places gives $0.14$.`,
 
     correctAnswerMin: 0.13,
-    correctAnswerMax: 0.15
+    correctAnswerMax: 0.15,
   },
 
   {
     id: 52,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9046,13 +9973,17 @@ The problem specifies the number as $f \times 10^{12}$.
 Thus, $f = 2.4868$, which rounds to $2.49$.`,
 
     correctAnswerMin: 2.46,
-    correctAnswerMax: 2.52
+    correctAnswerMax: 2.52,
   },
 
   {
     id: 53,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9080,13 +10011,17 @@ $\text{Efficiency} = \frac{\text{Detected Rate}}{\text{Actual Activity}} = \frac
 Rounded to two decimal places, the fractional efficiency is $0.73$.`,
 
     correctAnswerMin: 0.71,
-    correctAnswerMax: 0.75
+    correctAnswerMax: 0.75,
   },
 
   {
     id: 54,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9123,13 +10058,17 @@ $R_{\text{min}} = \frac{4.769 \times 10^{-11}}{2} \approx 2.38 \times 10^{-11} \
 The value is $f \times 10^{-11}$, so $f \approx 2.4$.`,
 
     correctAnswerMin: 2.3,
-    correctAnswerMax: 2.5
+    correctAnswerMax: 2.5,
   },
 
   {
     id: 55,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -9156,14 +10095,18 @@ $\text{Trace}(A^2) = 3.5 + (-0.25) = 3.25$.
 4. Sum them up to get $\text{Trace}(B)$:
 $\text{Trace}(B) = 2 + 2.5 + 3.25 = 7.75$.`,
 
-    correctAnswerMin: 7.70,
-    correctAnswerMax: 7.80
+    correctAnswerMin: 7.7,
+    correctAnswerMax: 7.8,
   },
 
   {
     id: 56,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -9200,13 +10143,17 @@ $8 / 9 \approx 0.888...$
 Rounding to two decimal places gives $0.89$.`,
 
     correctAnswerMin: 0.87,
-    correctAnswerMax: 0.91
+    correctAnswerMax: 0.91,
   },
 
   {
     id: 57,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9230,13 +10177,17 @@ $f \approx 0.92857$
 Rounding to two decimal places gives $0.93$.`,
 
     correctAnswerMin: 0.91,
-    correctAnswerMax: 0.95
+    correctAnswerMax: 0.95,
   },
 
   {
     id: 58,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -9274,14 +10225,18 @@ $f = \frac{3.6055 + 2}{2 \times 1.7320} = \frac{5.6055}{3.464} \approx 1.618$
 
 Rounding to two decimal places gives $1.62$.`,
 
-    correctAnswerMin: 1.60,
-    correctAnswerMax: 1.64
+    correctAnswerMin: 1.6,
+    correctAnswerMax: 1.64,
   },
 
   {
     id: 59,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -9309,13 +10264,17 @@ $P_{\text{enclosed}} \approx 0.008333... \text{ W}$
 The flux magnitude evaluates to $0.008$ (W).`,
 
     correctAnswerMin: 0.007,
-    correctAnswerMax: 0.009
+    correctAnswerMax: 0.009,
   },
 
   {
     id: 60,
     year: 2023,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -9352,12 +10311,17 @@ $f = 5/3 \approx 1.666...$
 Rounding to two decimal places gives $1.67$.`,
 
     correctAnswerMin: 1.65,
-    correctAnswerMax: 1.69
+    correctAnswerMax: 1.69,
   },
+
   {
     id: 1,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -9368,7 +10332,7 @@ The equation $z ^ { 2} +\overline{ z } ^ { 2}=4$ in the complex plane(where $\ov
       String.raw`Ellipse`,
       String.raw`Hyperbola`,
       String.raw`Circle of radius 2`,
-      String.raw`Circle of radius 4`
+      String.raw`Circle of radius 4`,
     ],
 
     detailedSolution: String.raw`Let the complex number be $z = x + iy$.
@@ -9388,13 +10352,17 @@ $x ^ 2 - y ^ 2 = 2$
 
 This is the standard equation of a hyperbola centered at the origin.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 2,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -9405,7 +10373,7 @@ A rocket $(S ^ { \prime })$ moves at a speed $\frac{ c }{ 2} m / s$ along the po
       String.raw`$x ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(x -\frac{ ct }{ 2}\right)$ and $t ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(t -\frac{ x }{ 2c }\right)$`,
       String.raw`$x ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(x +\frac{ ct }{ 2}\right)$ and $t ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(t -\frac{ x }{ 2c }\right)$`,
       String.raw`$x ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(x -\frac{ ct }{ 2}\right)$ and $t ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(t +\frac{ x }{ 2c }\right)$`,
-      String.raw`$x ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(x +\frac{ ct }{ 2}\right)$ and $t ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(t +\frac{ x }{ 2c }\right)$`
+      String.raw`$x ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(x +\frac{ ct }{ 2}\right)$ and $t ^ { \prime }=\frac{ 2 } { \sqrt{ 3 } } \left(t +\frac{ x }{ 2c }\right)$`,
     ],
 
     detailedSolution: String.raw`According to the Lorentz transformations, the coordinates $(x', t')$ of an event in a frame $S'$ moving with velocity $v$ in the positive x-direction relative to a stationary frame $S$ are given by:
@@ -9423,13 +10391,17 @@ $x ^ { \prime } = \frac{ 2 } { \sqrt{ 3 } } \left(x - \frac{ c }{ 2}t\right) = \
 2. Temporal coordinate:
 $t ^ { \prime } = \frac{ 2 } { \sqrt{ 3 } } \left(t - \frac{(c / 2)x}{ c^ 2}\right) = \frac{ 2 } { \sqrt{ 3 } } \left(t - \frac{ x }{ 2c }\right)$`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 3,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -9440,7 +10412,7 @@ Consider a classical ideal gas of $N$ molecules in equilibrium at temperature $T
       String.raw`$0$`,
       String.raw`$N\epsilon \tanh\left(\frac{ \epsilon }{ k_{ B }T}\right)$`,
       String.raw`$\frac{ \epsilon } { 2 } $`,
-      String.raw`$ - N\epsilon \tanh\left(\frac{ \epsilon }{ k_{ B }T}\right)$`
+      String.raw`$ - N\epsilon \tanh\left(\frac{ \epsilon }{ k_{ B }T}\right)$`,
     ],
 
     detailedSolution: String.raw`To find the mean energy, we first construct the single - particle partition function $Z_1$. 
@@ -9456,13 +10428,17 @@ $\langle E_1 \rangle = -\frac{ 1 } { 2 \cosh(\beta\epsilon) } \cdot \frac{ \part
 For an ideal gas of $N$ non - interacting molecules, the total mean energy $\langle E \rangle$ is simply $N$ times the single - particle mean energy:
 $\langle E \rangle = N \langle E_1 \rangle = -N\epsilon \tanh(\beta\epsilon) = -N\epsilon \tanh\left(\frac{ \epsilon }{ k_B T }\right)$`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 4,
     year: 2022,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -9473,7 +10449,7 @@ At a temperature $T$, let $\beta$ and $\kappa$ denote the volume expansivity and
       String.raw`$\left(\frac{ \partial P }{ \partial T }\right)_{ V } $`,
       String.raw`$\left(\frac{ \partial P }{ \partial V }\right)_{ T } $`,
       String.raw`$\left(\frac{ \partial T }{ \partial P }\right)_{ V } $`,
-      String.raw`$\left(\frac{ \partial T }{ \partial V }\right)_{ P } $`
+      String.raw`$\left(\frac{ \partial T }{ \partial V }\right)_{ P } $`,
     ],
 
     detailedSolution: String.raw`By definition, the volume expansivity(or coefficient of volume expansion) $\beta$ and the isothermal compressibility $\kappa$ are given by:
@@ -9495,13 +10471,17 @@ $ -\frac{ \left(\frac{ \partial V }{ \partial T }\right)_{ P } } { \left(\frac{ 
 
 Therefore, $\frac{ \beta } { \kappa } = \left(\frac{ \partial P }{ \partial T }\right)_{ V } $.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 5,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Digital Electronics",
+    subjectId: "solid",
+    tags: ["Digital Electronics","Solid State & Electronics","Number Systems"],
     type: "MCQ",
 
     question: String.raw`
@@ -9512,7 +10492,7 @@ The resultant of the binary subtraction $1110101 - 0011110$ is
       String.raw`1001111`,
       String.raw`1010111`,
       String.raw`1010011`,
-      String.raw`1010001`
+      String.raw`1010001`,
     ],
 
     detailedSolution: String.raw`Let's perform the binary subtraction using the standard borrowing method:
@@ -9538,13 +10518,17 @@ Difference $ = 117 - 30 = 87_{ 10 } $
 Convert $87_{ 10 }$ back to binary:
 $87 = 64 + 16 + 4 + 2 + 1 \implies 1010111_2$.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 6,
     year: 2022,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -9555,7 +10539,7 @@ Consider a particle trapped in a three - dimensional potential well such that $U
       String.raw`$1$`,
       String.raw`$3$`,
       String.raw`$6$`,
-      String.raw`$9$`
+      String.raw`$9$`,
     ],
 
     detailedSolution: String.raw`The energy levels of a particle in a 3D cubic infinite potential well of side $a$ are given by:
@@ -9577,13 +10561,17 @@ These states are: $(3, 2, 1), (3, 1, 2), (2, 3, 1), (2, 1, 3), (1, 3, 2), (1, 2,
 
   Therefore, the degeneracy of the $5 ^ { \text{ th }}$ excited state is 6.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 7,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -9596,7 +10584,7 @@ If the particle moves in a circular orbit, then the radius of the orbit is
       String.raw`$\left(\frac{ L^ { 2}}{ mk }\right) ^ { \frac{ 1 } { 4 }}$`,
       String.raw`$\left(\frac{ L^ { 2}}{ 2mk }\right) ^ { \frac{ 1 } { 4 }}$`,
       String.raw`$\left(\frac{ 2L ^ { 2} }{ mk }\right) ^ { \frac{ 1 } { 4 }}$`,
-      String.raw`$\left(\frac{ 4L ^ { 2} }{ mk }\right) ^ { \frac{ 1 } { 4 }}$`
+      String.raw`$\left(\frac{ 4L ^ { 2} }{ mk }\right) ^ { \frac{ 1 } { 4 }}$`,
     ],
 
     detailedSolution: String.raw`For a particle moving under a central potential $U(r)$, we can write the effective one - dimensional potential as:
@@ -9620,13 +10608,17 @@ $r ^ 4 = \frac{ L ^ 2 } { 2mk } $
 Taking the fourth root gives the radius of the circular orbit:
 $r = \left(\frac{ L^ 2}{ 2mk }\right) ^ { \frac{ 1 } { 4 }}$`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 8,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -9639,7 +10631,7 @@ If the force field is conservative, then the values of $a$ and $b$ are
       String.raw`$a = 2$ and $b = 4$`,
       String.raw`$a = 2$ and $b = 8$`,
       String.raw`$a = 4$ and $b = 2$`,
-      String.raw`$a = 8$ and $b = 2$`
+      String.raw`$a = 8$ and $b = 2$`,
     ],
 
     detailedSolution: String.raw`A vector field $\vec{ F } = F_x \hat{ x } + F_y \hat{ y }$ is conservative if its curl is zero, which in two dimensions implies:
@@ -9662,13 +10654,17 @@ $2a = 4 \implies a = 2$
 
 Therefore, $a = 2$ and $b = 8$.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 9,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -9679,7 +10675,7 @@ Consider an electrostatic field $\vec{ E } $ in a region of space.Identify the I
       String.raw`The work done in moving a charge in a closed path inside the region is zero`,
       String.raw`The curl of $\vec{ E }$ is zero`,
       String.raw`The field can be expressed as the gradient of a scalar potential`,
-      String.raw`The potential difference between any two points in the region is always zero`
+      String.raw`The potential difference between any two points in the region is always zero`,
     ],
 
     detailedSolution: String.raw`Let's evaluate the properties of an electrostatic field $\vec{E}$:
@@ -9689,13 +10685,17 @@ Consider an electrostatic field $\vec{ E } $ in a region of space.Identify the I
 3. ** Option C:** A vector field with zero curl can always be expressed as the negative gradient of a scalar potential function $V$.Thus, $\vec{ E } = -\nabla V$.This statement is correct.
 4. ** Option D:** The potential difference between two points $A$ and $B$ is given by $\Delta V = V_B - V_A = -\int_A ^ B \vec{ E } \cdot d\vec{ l } $.This integral evaluates to zero * only * if the electric field is zero everywhere along the path, or if points A and B happen to be on the same equipotential surface.It is generally ** not ** zero.Therefore, this statement is INCORRECT.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 10,
     year: 2022,
+    marks: 1,
+    difficulty: "Medium",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -9703,18 +10703,13 @@ Which one of the following figures correctly depicts the intensity distribution 
 `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/10a_22.png",
-      "/images/10b_22.png",
-      "/images/10c_22.png",
-      "/images/10d_22.png"
-    ],
+    optionImages: ["/images/10a_22.png","/images/10b_22.png","/images/10c_22.png","/images/10d_22.png"],
 
     detailedSolution: String.raw`The intensity distribution $I(\theta)$ for Fraunhofer diffraction from a single slit is given by the sinc - squared function:
   $I(\theta) = I_0 \left(\frac{ \sin \alpha }{ \alpha }\right) ^ 2$
@@ -9732,13 +10727,17 @@ Looking at the typical options:
 * An option showing a central minimum or dip is incorrect for a single slit.
 * An option showing a prominent central maximum that is noticeably wider and significantly taller than the secondary maxima perfectly matches the $\text{ sinc }^ 2$ profile.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 11,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -9749,7 +10748,7 @@ The function $f(x)=e ^ { \sin x }$ is expanded as a Taylor series in $x$, around
       String.raw`$0$`,
       String.raw`$\frac{ 3 } { 2 } $`,
       String.raw`$\frac{ 5 } { 2 } $`,
-      String.raw`$5$`
+      String.raw`$5$`,
     ],
 
     detailedSolution: String.raw`We want to find the first three terms of the Maclaurin series for $f(x) = e ^ { \sin x }$.
@@ -9772,13 +10771,17 @@ $a_2 = \frac{ 1 } { 2 } $
 The sum $a_0 + a_1 + a_2$ is:
 $1 + 1 + \frac{ 1 } { 2 } = 2.5 = \frac{ 5 } { 2 } $.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 12,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MCQ",
 
     question: String.raw`
@@ -9789,7 +10792,7 @@ Consider a unit circle $C$ in the xy plane, centered at the origin.The value of 
       String.raw`$0$`,
       String.raw`$2\pi$`,
       String.raw`$3\pi$`,
-      String.raw`$4\pi$`
+      String.raw`$4\pi$`,
     ],
 
     detailedSolution: String.raw`We can use Green's Theorem to evaluate this line integral. Green's Theorem states:
@@ -9813,13 +10816,17 @@ The region $D$ is a unit circle(radius $r = 1$), so its area is $\pi(1) ^ 2 = \p
   Therefore, the value of the integral is:
 $2 \times \pi = 2\pi$.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 13,
     year: 2022,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Medium",
+    subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -9830,7 +10837,7 @@ The current through a series RL circuit, subjected to a constant emf $\mathcal{ 
       String.raw`$1 - 2e ^ {- 2}$`,
       String.raw`$1 - 2e ^ {- 1}$`,
       String.raw`$1 - e ^ {- 1}$`,
-      String.raw`$2 - 2e ^ {- 1}$`
+      String.raw`$2 - 2e ^ {- 1}$`,
     ],
 
     detailedSolution: String.raw`The differential equation for the RL circuit is:
@@ -9851,13 +10858,17 @@ $i(t) = 10 ^ {- 3} \left(1 - e ^ {- 1} \right) \text{ A } $
 Since $1 \text{ mA } = 10 ^ {- 3} \text{ A } $, the current in mA is:
 $i(1 \, \mu\text{ s }) = (1 - e ^ {- 1}) \text{ mA } $.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 14,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -9868,7 +10879,7 @@ An ideal gas in equilibrium at temperature $T$ expands isothermally to twice its
       String.raw`$\Delta S < 0$, $\Delta U > 0$, $\Delta F < 0$`,
       String.raw`$\Delta S > 0$, $\Delta U = 0$, $\Delta F < 0$`,
       String.raw`$\Delta S < 0$, $\Delta U = 0$, $\Delta F > 0$`,
-      String.raw`$\Delta S > 0$, $\Delta U > 0$, $\Delta F = 0$`
+      String.raw`$\Delta S > 0$, $\Delta U > 0$, $\Delta F = 0$`,
     ],
 
     detailedSolution: String.raw`Let's analyze the changes in thermodynamic potentials for the isothermal expansion of an ideal gas.
@@ -9895,13 +10906,17 @@ Since $T > 0$(absolute temperature) and $\Delta S > 0$, the change in Helmholtz 
 
 Therefore, the correct relations are $\Delta S > 0$, $\Delta U = 0$, $\Delta F < 0$.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 15,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -9912,7 +10927,7 @@ In a dilute gas, the number of molecules with free path length $\ge x$ is given 
       String.raw`$\frac{ 1 } { e } $`,
       String.raw`$\frac{ e } { e - 1 } $`,
       String.raw`$\frac{ e ^ { 2} } { e - 1 } $`,
-      String.raw`$\frac{ e - 1 } { e ^ { 2} } $`
+      String.raw`$\frac{ e - 1 } { e ^ { 2} } $`,
     ],
 
     detailedSolution: String.raw`The function $N(x) = N_0 e ^ {- x /\lambda}$ represents the number of molecules that travel a distance $x$ or greater without suffering a collision.
@@ -9934,13 +10949,17 @@ $\text{ Fraction } = \frac{ N(\lambda) - N(2\lambda) } { N_0 } = e ^ {- 1} - e ^
 Factor out $e ^ {- 2}$ to match the options:
 $\text{ Fraction } = \frac{ 1 } { e } - \frac{ 1 } { e ^ 2 } = \frac{ e - 1 } { e ^ 2 } $.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 16,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -9951,7 +10970,7 @@ Consider a quantum particle trapped in a one - dimensional potential well in the
       String.raw`$\Delta p =\frac{ \pi\hbar } { L }$ and $\Delta x = 0$`,
       String.raw`$\Delta p =\frac{ \pi\hbar } { L }$ and $0 <\Delta x <\frac{ L } { 2\sqrt{ 3 } } $`,
       String.raw`$\Delta p =\frac{ \pi\hbar } { L }$ and $\Delta x >\frac{ L } { 2\sqrt{ 3 } } $`,
-      String.raw`$\Delta p = 0$ and $\Delta x =\frac{ L } { 2 } $`
+      String.raw`$\Delta p = 0$ and $\Delta x =\frac{ L } { 2 } $`,
     ],
 
     detailedSolution: String.raw`1. ** Uncertainty in momentum($\Delta p$):**
@@ -9975,13 +10994,17 @@ Since the ground state particle is more likely to be found near the center of th
 
     Therefore, $\Delta p =\frac{ \pi\hbar } { L }$ and $0 <\Delta x <\frac{ L } { 2\sqrt{ 3 } } $.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 17,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -9992,7 +11015,7 @@ Consider a particle of mass $m$ moving in a plane with a constant radial speed $
       String.raw`$2r\dot{ \theta }^ { 2}\hat{ r } -\dot{ r } \dot{ \theta } \hat{ \theta } $`,
       String.raw`$ - r\dot{ \theta }^ { 2}\hat{ r } +2\dot{ r } \dot{ \theta } \hat{ \theta } $`,
       String.raw`$\dot{ r } \hat{ r } +r\dot{ \theta } \hat{ \theta } $`,
-      String.raw`$\dot{ r } \dot{ \theta } \hat{ r } +r\dot{ \theta } \hat{ \theta } $`
+      String.raw`$\dot{ r } \dot{ \theta } \hat{ r } +r\dot{ \theta } \hat{ \theta } $`,
     ],
 
     detailedSolution: String.raw`The general formula for the acceleration vector $\vec{ a }$ of a particle in two - dimensional polar coordinates $(r, \theta)$ is:
@@ -10008,13 +11031,17 @@ $\vec{ a } = -r\dot{ \theta }^ 2\hat{ r } + 2\dot{ r } \dot{ \theta } \hat{ \the
 
 The first term is the centripetal acceleration, and the second term is the Coriolis acceleration.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 18,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
@@ -10025,7 +11052,7 @@ A planet of mass $m$ moves in an elliptical orbit.Its maximum and minimum distan
       String.raw`$m\sqrt{ \frac{ 2GMRr } { (R + r) } } $`,
       String.raw`$m\sqrt{ \frac{ GMRr } { 2(R + r) } } $`,
       String.raw`$m\sqrt{ \frac{ GMRr } { (R + r) } } $`,
-      String.raw`$2m\sqrt{ \frac{ 2GMRr } { (R + r) } } $`
+      String.raw`$2m\sqrt{ \frac{ 2GMRr } { (R + r) } } $`,
     ],
 
     detailedSolution: String.raw`Let $v_r$ and $v_R$ be the velocities of the planet at its minimum distance(perihelion) $r$ and maximum distance(aphelion) $R$, respectively.
@@ -10055,27 +11082,31 @@ $v_r = \sqrt{ \frac{ 2GMR } { r(R + r) } } $
 $L = m v_r r = m \left(\sqrt{ \frac{ 2GMR }{ r(R + r)}} \right) r = m \sqrt{ \frac{ 2GMRr ^ 2 } { r(R + r) } } $
 $L = m \sqrt{ \frac{ 2GMRr } { R + r } } $`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 19,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
 Consider a conical region of height $h$ and base radius $R$ with its vertex at the origin.Let the outward normal to its base be along the positive z - axis, as shown in the figure.A uniform magnetic field, $\vec{ B }=B_{ 0 } \hat{ z }$ exists everywhere.Then the magnetic flux through the base $(\Phi_{ b })$ and that through the curved surface of the cone $(\Phi_{ c })$ are
 `,
 
-    questionImage: "/images/19_22.png",
-
     options: [
       String.raw`$\Phi_{ b }=B_{ 0 } \pi R ^ { 2}$; $\Phi_{ c }=0$`,
       String.raw`$\Phi_{ b }=-\frac{ 1 } { 2 }B_{ 0 } \pi R ^ { 2}$; $\Phi_{ c }=\frac{ 1 } { 2 }B_{ 0 } \pi R ^ { 2}$`,
       String.raw`$\Phi_{ b }=0$; $\Phi_{ c }=-B_{ 0 } \pi R ^ { 2}$`,
-      String.raw`$\Phi_{ b }=B_{ 0 } \pi R ^ { 2}$; $\Phi_{ c }=-B_{ 0 } \pi R ^ { 2}$`
+      String.raw`$\Phi_{ b }=B_{ 0 } \pi R ^ { 2}$; $\Phi_{ c }=-B_{ 0 } \pi R ^ { 2}$`,
     ],
+
+    questionImage: "/images/19_22.png",
 
     detailedSolution: String.raw`The magnetic flux through the flat circular base is given by $\Phi_b = \int_{ \text{ base } } \vec{ B } \cdot d\vec{ a } $. 
 The normal to the base is explicitly given to be in the $ +\hat{ z }$ direction, and its area is $\pi R ^ 2$.Since the magnetic field is $\vec{ B } = B_0 \hat{ z } $, the flux is:
@@ -10089,27 +11120,31 @@ $\Phi_c = -B_0 \pi R ^ 2$.
 
   Thus, $\Phi_b = B_0 \pi R ^ 2$ and $\Phi_c = -B_0 \pi R ^ 2$.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 20,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
 Consider a thin annular sheet, lying on the xy - plane, with $R_{ 1 }$ and $R_{ 2 } $ as its inner and outer radii, respectively.If the sheet carries a uniform surface - charge density $\sigma$ and spins about the origin O with a constant angular velocity $\vec{ \omega }=\omega_{ 0 } \hat{ z }$ then, the total current flow on the sheet is
 `,
 
-    questionImage: "/images/20_22.png",
-
     options: [
       String.raw`$\frac{ 2\pi\sigma\omega_{ 0 } (R_{ 2 }^ { 3} - R_{ 1 }^ { 3}) } { 3 } $`,
       String.raw`$\sigma\omega_{ 0 } (R_{ 2 }^ { 3} - R_{ 1 }^ { 3}) $`,
       String.raw`$\frac{ \pi\sigma\omega_{ 0 } (R_{ 2 }^ { 3} - R_{ 1 }^ { 3}) } { 3 } $`,
-      String.raw`$2\pi\sigma\omega_{ 0 } (R_{ 2 } -R_{ 1 })^ { 3}$`
+      String.raw`$2\pi\sigma\omega_{ 0 } (R_{ 2 } -R_{ 1 })^ { 3}$`,
     ],
+
+    questionImage: "/images/20_22.png",
 
     detailedSolution: String.raw`The surface current density $\vec{ K } $(current per unit transverse length) at a distance $r$ from the origin is given by the product of the surface charge density $\sigma$ and the linear velocity $\vec{ v } $:
 $\vec{ v } = \vec{ \omega } \times \vec{ r } = (\omega_0 \hat{ z }) \times(r \hat{ r }) = \omega_0 r \hat{ \phi } $
@@ -10123,12 +11158,17 @@ Total flow = $2\pi\sigma\omega_0 \left[\frac{ r ^ 3 } { 3 } \right]_{ R_1 }^ { R
 
   * (Note: The conventional definition of "total current" crossing a radial cross - section would be $I = \int_{ R_1 }^ { R_2 } K dr = \frac{ 1 } { 2 } \sigma\omega_0(R_2 ^ 2 - R_1 ^ 2)$, which has different dimensions.The presence of $R ^ 3$ in the options and the specific coefficient $\frac{ 2\pi } { 3 }$ confirm that the examiner intended for the area integral of $ |\vec{ K }| $ to be computed.)* `,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
+
   {
     id: 21,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
     type: "MCQ",
 
     question: String.raw`
@@ -10139,7 +11179,7 @@ A radioactive nucleus has a decay constant $\lambda$ and its radioactive daughte
       String.raw`$\frac{ 1 } { 9 } [1 - e ^ {- 9\lambda t}]$`,
       String.raw`$\frac{ 1 } { 10 } [1 - e ^ {- 10\lambda t}]$`,
       String.raw`$[1 - e ^ {- 10\lambda t}]$`,
-      String.raw`$[1 - e ^ {- 9\lambda t}]$`
+      String.raw`$[1 - e ^ {- 9\lambda t}]$`,
     ],
 
     detailedSolution: String.raw`The number of parent nuclei $N_1(t)$ at time $t$ follows the standard radioactive decay law:
@@ -10164,27 +11204,31 @@ $N_2(t) = \frac{ N_0 } { 9 } (e ^ {-\lambda t} - e ^ {- 10\lambda t}) $
 Now, find the ratio $\frac{ N_2(t) } { N_1(t) } $:
 $\frac{ N_2(t) } { N_1(t) } = \frac{ \frac{ N_0 } { 9 } (e ^ {-\lambda t } - e ^ {- 10\lambda t})}{N_0 e ^ {-\lambda t }} = \frac{ 1 } { 9 } \left(1 - \frac{ e^ {- 10\lambda t}}{ e^ {-\lambda t}} \right) = \frac{ 1 } { 9 } (1 - e ^ {- 9\lambda t}) $.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 22,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
 A uniform magnetic field $\vec{ B }=B_{ 0 } \hat{ z } $, where $B_{ 0 }> 0$ exists as shown in the figure.A charged particle of mass $m$ and charge $q$ $(q > 0)$ is released at the origin, in the yz - plane, with a velocity $\vec{ v }$ directed at an angle $\theta = 45 ^ { \circ }$ with respect to the positive z - axis.Ignoring gravity, which one of the following is TRUE.
 `,
 
-    questionImage: "/images/22_22.png",
-
     options: [
       String.raw`The initial acceleration $\vec{ a }=\frac{qvB_{ 0 } } { \sqrt{ 2 } m } \hat{ x } $`,
       String.raw`The initial acceleration $\vec{ a }=\frac{qvB_{ 0 } } { \sqrt{ 2 } m } \hat{ y } $`,
       String.raw`The particle moves in a circular path`,
-      String.raw`The particle continues in a straight line with constant speed`
+      String.raw`The particle continues in a straight line with constant speed`,
     ],
+
+    questionImage: "/images/22_22.png",
 
     detailedSolution: String.raw`The velocity vector $\vec{ v }$ lies in the yz - plane at an angle $\theta = 45 ^\circ$ with the positive z - axis.We can write its components as:
 $\vec{ v } = v\sin(45 ^\circ) \hat{ y } + v\cos(45 ^\circ) \hat{ z } = \frac{ v } { \sqrt{ 2 } } \hat{ y } + \frac{ v } { \sqrt{ 2 } } \hat{ z } $
@@ -10204,13 +11248,17 @@ $\vec{ a } = \frac{ \vec{ F } } { m } = \frac{ qvB_0 } { \sqrt{ 2 } m } \hat{ x 
 
   (Note regarding other options: Since the velocity has a component parallel to the magnetic field, the particle will move in a helical path, not a circular or straight line).`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 23,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
@@ -10221,7 +11269,7 @@ For an ideal intrinsic semiconductor, the Fermi energy at 0 K
       String.raw`lies at the top of the valence band`,
       String.raw`lies at the bottom of the conduction band`,
       String.raw`lies at the center of the bandgap`,
-      String.raw`lies midway between center of the bandgap and bottom of the conduction band`
+      String.raw`lies midway between center of the bandgap and bottom of the conduction band`,
     ],
 
     detailedSolution: String.raw`In an ideal intrinsic(undoped) semiconductor, the number of electrons in the conduction band equals the number of holes in the valence band. 
@@ -10230,13 +11278,17 @@ The Fermi level $E_F$ represents the energy level with a 50 % probability of bei
 At absolute zero($0\text{ K }$), the valence band is completely full of electrons, and the conduction band is completely empty.The Fermi level must lie exactly in the middle of the forbidden energy gap(bandgap) to symmetrically balance the electron and hole probabilities when the temperature is raised slightly.
   Therefore, at $T = 0\text{ K } $, $E_F = \frac{ E_C + E_V } { 2 } $, which is the center of the bandgap.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 24,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "MCQ",
 
     question: String.raw`
@@ -10247,7 +11299,7 @@ A circular loop of wire with radius $R$ is centered at the origin of the xy - pl
       String.raw`$\frac{ 6\pi kt ^ { 2}R ^ { 5} } { 5 } $`,
       String.raw`$\frac{ 5\pi kt ^ { 2}R ^ { 5} } { 6 } $`,
       String.raw`$\frac{ 3\pi kt ^ { 2}R ^ { 5} } { 2 } $`,
-      String.raw`$\frac{ \pi kt ^ { 2}R ^ { 5} } { 2 } $`
+      String.raw`$\frac{ \pi kt ^ { 2}R ^ { 5} } { 2 } $`,
     ],
 
     detailedSolution: String.raw`First, calculate the total magnetic flux $\Phi$ through the circular loop.The loop is in the xy - plane($z = 0$), so the area element is $d\vec{ a } = \rho \, d\rho \, d\phi \, \hat{ z } $.
@@ -10262,27 +11314,31 @@ $ |\mathcal{ E }| = \left | -\frac{ d\Phi } { dt } \right | = \frac{ d } { dt } 
 Differentiating with respect to $t$:
 $ |\mathcal{ E }| = \frac{ 2\pi k R ^ 5 } { 5 } (3t ^ 2) = \frac{ 6\pi k t ^ 2 R ^ 5 } { 5 } $.`,
 
-    correctAnswer: 0
+    correctAnswer: 0,
   },
 
   {
     id: 25,
     year: 2022,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "MCQ",
 
     question: String.raw`
 For the given circuit, $R = 125\ \Omega$, $R_{ L }=470\ \Omega$, $V_{ z }=9\text{ V } $, and $I_{ z }^ { max }=65\text{ mA } $.The minimum and maximum values of the input voltage($V_{ i } ^ { min }$ and $V_{ i } ^ { max }$) for which the Zener diode will be in the 'ON' state are
 `,
 
-    questionImage: "/images/25_22.png",
-
     options: [
       String.raw`$V_{ i }^ { min }=9.0\text{ V }$ and $V_{ i }^ { max }=11.4\text{ V } $`,
       String.raw`$V_{ i }^ { min }=9.0\text{ V }$ and $V_{ i }^ { max }=19.5\text{ V } $`,
       String.raw`$V_{ i }^ { min }=11.4\text{ V }$ and $V_{ i }^ { max }=15.5\text{ V } $`,
-      String.raw`$V_{ i }^ { min }=11.4\text{ V }$ and $V_{ i }^ { max }=19.5\text{ V } $`
+      String.raw`$V_{ i }^ { min }=11.4\text{ V }$ and $V_{ i }^ { max }=19.5\text{ V } $`,
     ],
+
+    questionImage: "/images/25_22.png",
 
     detailedSolution: String.raw`** 1. Find $V_i ^ { min }$:**
   The Zener diode turns 'ON' when the voltage across it reaches its breakdown voltage $V_z$.We find this by assuming the Zener is an open circuit and calculating the voltage across $R_L$.
@@ -10310,27 +11366,31 @@ $V_i ^ { max } = (0.08415\text{ A }) (125\ \Omega) + 9\text{ V } $
 $V_i ^ { max } = 10.51875\text{ V } + 9\text{ V } = 19.51875\text{ V } $
 Rounding to one decimal place, $V_i ^ { max } = 19.5\text{ V } $.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 26,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "MCQ",
 
     question: String.raw`
 A square laminar sheet with side $a$ and mass $M$, has mass per unit area given by $\sigma(x) =\sigma_{ 0 } \left[1 -\frac{ x } { a } \right]$, (see figure). Moment of inertia of the sheet about y - axis is
 `,
 
-    questionImage: "/images/26_22.png",
-
     options: [
       String.raw`$\frac{ Ma ^ { 2} } { 2 } $`,
       String.raw`$\frac{ Ma ^ { 2} } { 4 } $`,
       String.raw`$\frac{ Ma ^ { 2} } { 6 } $`,
-      String.raw`$\frac{ Ma ^ { 2} } { 12 } $`
+      String.raw`$\frac{ Ma ^ { 2} } { 12 } $`,
     ],
+
+    questionImage: "/images/26_22.png",
 
     detailedSolution: String.raw`The sheet is defined in the region $x \in [0, a]$ and $y \in [-a / 2, a / 2]$.
 
@@ -10350,13 +11410,17 @@ $I_y = \sigma_0 a \left(\frac{ a^ 3}{ 3} - \frac{ a^ 3}{ 4} \right) = \sigma_0 a
   ** 3. Substitute $\sigma_0$:**
     $I_y = \left(\frac{ 2M }{ a^ 2}\right) \frac{ a ^ 4 } { 12 } = \frac{ 2Ma ^ 2 } { 12 } = \frac{ Ma ^ 2 } { 6 } $.`,
 
-    correctAnswer: 2
+    correctAnswer: 2,
   },
 
   {
     id: 27,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -10367,7 +11431,7 @@ A particle is subjected to two simple harmonic motions along the x and y axes, d
       String.raw`$\frac{ x ^ { 2} } { a ^ { 2} } +\frac{ y ^ { 2} } { 4a ^ { 2} }=1$`,
       String.raw`$x ^ { 2} + y ^ { 2}=1$`,
       String.raw`$y ^ { 2}=x ^ { 2}\left(1 -\frac{ x^ { 2}}{ 4a ^ { 2} }\right)$`,
-      String.raw`$x ^ { 2}=y ^ { 2}\left(1 -\frac{ y^ { 2}}{ 4a ^ { 2} }\right)$`
+      String.raw`$x ^ { 2}=y ^ { 2}\left(1 -\frac{ y^ { 2}}{ 4a ^ { 2} }\right)$`,
     ],
 
     detailedSolution: String.raw`We have two parametric equations:
@@ -10389,13 +11453,17 @@ $x ^ 2 = y ^ 2 \left(1 - \frac{ y^ 2}{ 4a ^ 2 } \right)$
 
 This matches Option D.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 28,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MCQ",
 
     question: String.raw`
@@ -10406,7 +11474,7 @@ For a certain thermodynamic system, the internal energy $U = PV$ and $P$ is prop
       String.raw`$UV$`,
       String.raw`$\sqrt{ \frac{ U } { V } } $`,
       String.raw`$\sqrt{ \frac{ V } { U } } $`,
-      String.raw`$\sqrt{ UV } $`
+      String.raw`$\sqrt{ UV } $`,
     ],
 
     detailedSolution: String.raw`1. ** Use the First Law of Thermodynamics:**
@@ -10436,13 +11504,17 @@ Integrating gives $S = 2cTV + \text{ constant } $.Assuming the constant is zero,
 Since $P \propto T ^ 2$, then $T \propto \sqrt{ P } = \sqrt{ U / V } $.
   Therefore, $S \propto TV \propto \sqrt{ \frac{ U } { V } } \cdot V = \sqrt{ U \cdot V } = \sqrt{ UV } $.`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 29,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MCQ",
 
     question: String.raw`
@@ -10450,18 +11522,13 @@ The dispersion relation for certain type of waves is given by $\omega =\sqrt{ k 
   `,
 
     options: [
-      "",
-      "",
-      "",
-      ""
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
 
-    optionImages: [
-      "/images/29a_22.png",
-      "/images/29b_22.png",
-      "/images/29c_22.png",
-      "/images/29d_22.png"
-    ],
+    optionImages: ["/images/29a_22.png","/images/29b_22.png","/images/29c_22.png","/images/29d_22.png"],
 
     detailedSolution: String.raw`The group velocity $v_g$ is defined as the derivative of angular frequency $\omega$ with respect to wave vector $k$:
 $v_g = \frac{ d\omega } { dk } $
@@ -10478,13 +11545,17 @@ Let's analyze the limits of this function:
 
 The plot should start at the origin, increase almost linearly at first, and then smoothly level off to a horizontal asymptote.This behavior is correctly depicted in option B.`,
 
-    correctAnswer: 1
+    correctAnswer: 1,
   },
 
   {
     id: 30,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Digital Electronics",
+    subjectId: "solid",
+    tags: ["Digital Electronics","Solid State & Electronics","Number Systems"],
     type: "MCQ",
 
     question: String.raw`
@@ -10495,7 +11566,7 @@ Consider a binary number with $m$ digits, where $m$ is an even number.This binar
       String.raw`$2 ^ { m } - 1$`,
       String.raw`$\frac{ (2 ^ { m } - 1) } { 3 } $`,
       String.raw`$\frac{ (2 ^ { m+ 1} -1)}{ 3 } $`,
-      String.raw`$\frac{ 2 } { 3 } (2 ^ { m } - 1)$`
+      String.raw`$\frac{ 2 } { 3 } (2 ^ { m } - 1)$`,
     ],
 
     detailedSolution: String.raw`A binary number with $m$ digits(where $m$ is even) having alternating 1s and 0s starting with 1 looks like this:
@@ -10513,13 +11584,17 @@ Since $m$ is even, there are exactly $n = m / 2$ terms in this sequence.
 The sum of a geometric progression is $S_n = a \frac{ r ^ n - 1 } { r - 1 } $.
   $N = 2 \frac{ 4 ^ { m/ 2 } - 1}{ 4 - 1 } = 2 \frac{ (2 ^ 2) ^ { m/ 2 } - 1}{ 3 } = \frac{ 2(2 ^ m - 1) } { 3 } = \frac{ 2 } { 3 } (2 ^ m - 1)$`,
 
-    correctAnswer: 3
+    correctAnswer: 3,
   },
 
   {
     id: 31,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
     type: "MSQ",
 
     question: String.raw`
@@ -10530,7 +11605,7 @@ Consider the $2\times 2$ matrix $M = \begin{ pmatrix } 0 & a \\ a & b \end{ pmat
       String.raw`$M$ is a real symmetric matrix`,
       String.raw`One of the eigenvalues of $M$ is greater than $b$`,
       String.raw`One of the eigenvalues of $M$ is negative`,
-      String.raw`Product of eigenvalues of $M$ is $b$`
+      String.raw`Product of eigenvalues of $M$ is $b$`,
     ],
 
     detailedSolution: String.raw`1. ** Symmetry(Option A):** The transpose of $M$ is $M ^ T = \begin{ pmatrix } 0 & a \\ a & b \end{ pmatrix } = M$.Since all elements are real numbers, it is a real symmetric matrix. ** (True) **
@@ -10550,13 +11625,17 @@ $\lambda_2 = \frac{ b - \sqrt{ b ^ 2 + 4a ^ 2 } } { 2 } $
     $\lambda_1 \lambda_2 = \det(M) = (0)(b) - (a)(a) = -a ^ 2$.
 This is not $b$. ** (False) ** `,
 
-    correctAnswers: [0, 1, 2]
+    correctAnswers: [0,1,2],
   },
 
   {
     id: 32,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "MSQ",
 
     question: String.raw`
@@ -10567,7 +11646,7 @@ In the Compton scattering of electrons, by photons incident with wavelength $\la
       String.raw`is independent of $\lambda$`,
       String.raw`increases with decreasing $\lambda$`,
       String.raw`there is no change in photon's wavelength for all angles of deflection of the photon`,
-      String.raw`increases with increasing angle of deflection of the photon`
+      String.raw`increases with increasing angle of deflection of the photon`,
     ],
 
     detailedSolution: String.raw`The Compton shift $\Delta\lambda$ (the change in wavelength of the scattered photon) is given by the formula:
@@ -10582,27 +11661,31 @@ $\frac{\Delta\lambda}{\lambda} = \frac{h}{m_0 c \lambda} (1 - \cos\theta)$
 3. **Option C:** The formula shows $\Delta\lambda$ depends on $\theta$. It is only zero when $\theta = 0$. For other angles, the wavelength changes. **(False)**
 4. **Option D:** As the deflection angle $\theta$ increases from $0$ to $\pi$ ($180^\circ$), the term $\cos\theta$ decreases from $1$ to $-1$. Consequently, the term $(1 - \cos\theta)$ increases from $0$ to $2$. Thus, the fractional shift increases with an increasing angle of deflection. **(True)**`,
 
-    correctAnswers: [1, 3]
+    correctAnswers: [1,3],
   },
 
   {
     id: 33,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "MSQ",
 
     question: String.raw`
 The figure shows a section of the phase boundary separating the vapour (1) and liquid (2) states of water in the $P-T$ plane. Here, $C$ is the critical point. $\mu_{1}$, $v_{1}$ and $s_{1}$ are the chemical potential, specific volume and specific entropy of the vapour phase respectively, while $\mu_{2}$, $v_{2}$ and $s_{2}$ respectively denote the same for the liquid phase. Then
 `,
 
-    questionImage: "/images/33_22.png",
-
     options: [
       String.raw`$\mu_{1}=\mu_{2}$ along AB`,
       String.raw`$v_{1}=v_{2}$ along AB`,
       String.raw`$s_{1}=s_{2}$ along AB`,
-      String.raw`$v_{1}=v_{2}$ at the point C`
+      String.raw`$v_{1}=v_{2}$ at the point C`,
     ],
+
+    questionImage: "/images/33_22.png",
 
     detailedSolution: String.raw`The curve AB represents a phase boundary (the liquid-vapour coexistence curve).
 
@@ -10612,13 +11695,17 @@ The figure shows a section of the phase boundary separating the vapour (1) and l
 
 3. **At the Critical Point (Option D):** Point C is the critical point. As you move along the phase boundary towards C, the properties of the liquid and vapour phases become increasingly similar. At the exact critical point C, the distinction between liquid and vapour disappears, and their specific volumes (and all other intensive properties) become identical: $v_1 = v_2$. **(True)**`,
 
-    correctAnswers: [0, 3]
+    correctAnswers: [0,3],
   },
 
   {
     id: 34,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -10629,7 +11716,7 @@ A particle is executing simple harmonic motion with time period $T$. Let $x$, $v
       String.raw`$\frac{aT}{x}$ does not change with time`,
       String.raw`$(aT+2\pi v)$ does not change with time`,
       String.raw`$x$ and $v$ are related by an equation of a straight line`,
-      String.raw`$v$ and $a$ are related by an equation of an ellipse`
+      String.raw`$v$ and $a$ are related by an equation of an ellipse`,
     ],
 
     detailedSolution: String.raw`For Simple Harmonic Motion (SHM), we have:
@@ -10657,13 +11744,17 @@ This is the equation of an ellipse, not a straight line. **(False)**
 $\left(\frac{v}{A\omega}\right)^2 + \left(\frac{a}{-A\omega^2}\right)^2 = \cos^2(\omega t) + \sin^2(\omega t) = 1$
 This is the equation of an ellipse. **(True)**`,
 
-    correctAnswers: [0, 3]
+    correctAnswers: [0,3],
   },
 
   {
     id: 35,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -10674,7 +11765,7 @@ A linearly polarized light beam travels from origin to point A (1,0,0). At the p
       String.raw`If $\hat{n}(0,0,0)=\hat{y}$, then $\hat{n}(1,-1,1)=\hat{x}$`,
       String.raw`If $\hat{n}(0,0,0)=\hat{z}$, then $\hat{n}(1,-1,1)=\hat{y}$`,
       String.raw`If $\hat{n}(0,0,0)=\hat{y}$, then $\hat{n}(1,-1,1)=\hat{y}$`,
-      String.raw`If $\hat{n}(0,0,0)=\hat{z}$, then $\hat{n}(1,-1,1)=\hat{x}$`
+      String.raw`If $\hat{n}(0,0,0)=\hat{z}$, then $\hat{n}(1,-1,1)=\hat{x}$`,
     ],
 
     detailedSolution: String.raw`Let's track the direction of propagation ($\hat{k}$), the electric field polarization ($\hat{E} = \hat{n}$), and the magnetic field ($\hat{B}$) for each segment. They must always form a right-handed orthogonal triad: $\hat{k} \times \hat{E} \propto \hat{B}$, or more simply, $\hat{B}$ is along $\hat{k} \times \hat{E}$.
@@ -10700,13 +11791,17 @@ Propagation is along the x-axis: $\hat{k}_1 = \hat{x}$.
 * New polarization $\hat{E}_3 = \hat{B}_3 \times \hat{k}_3 = (-\hat{x}) \times \hat{z} = \hat{y}$.
 * Final polarization $\hat{n}(1,-1,1) = \hat{y}$. This matches Option B.`,
 
-    correctAnswers: [0, 1]
+    correctAnswers: [0,1],
   },
 
   {
     id: 36,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MSQ",
 
     question: String.raw`
@@ -10717,7 +11812,7 @@ Let $(r, \theta)$ denote the polar coordinates of a particle moving in a plane. 
       String.raw`$\frac{d\hat{r}}{d\theta}=\hat{\theta}$`,
       String.raw`$\frac{d\hat{r}}{dr}=-\hat{\theta}$`,
       String.raw`$\frac{d\hat{\theta}}{d\theta}=-\hat{r}$`,
-      String.raw`$\frac{d\hat{\theta}}{dr}=\hat{r}$`
+      String.raw`$\frac{d\hat{\theta}}{dr}=\hat{r}$`,
     ],
 
     detailedSolution: String.raw`The unit vectors in polar coordinates can be expressed in terms of the constant Cartesian unit vectors $\hat{i}$ and $\hat{j}$:
@@ -10739,13 +11834,17 @@ $\frac{d\hat{\theta}}{d\theta} = \frac{d}{d\theta}(-\sin\theta \hat{i} + \cos\th
 Since the direction of $\hat{\theta}$ does not depend on the radial distance $r$, its derivative is zero.
 $\frac{d\hat{\theta}}{dr} = 0 \neq \hat{r}$. **(False)**`,
 
-    correctAnswers: [0, 2]
+    correctAnswers: [0,2],
   },
 
   {
     id: 37,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "MSQ",
 
     question: String.raw`
@@ -10756,7 +11855,7 @@ The electric field associated with an electromagnetic radiation is given by $E=a
       String.raw`$\omega_{1}$`,
       String.raw`$\omega_{1}+\omega_{2}$`,
       String.raw`$\omega_{2}$`,
-      String.raw`$|\omega_{1}-\omega_{2}|$`
+      String.raw`$|\omega_{1}-\omega_{2}|$`,
     ],
 
     detailedSolution: String.raw`To find the frequency components, we must expand the expression into a sum of simple cosine terms.
@@ -10780,13 +11879,17 @@ The frequencies present are:
 
 $\omega_1$ alone is not present.`,
 
-    correctAnswers: [1, 2, 3]
+    correctAnswers: [1,2,3],
   },
 
   {
     id: 38,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "MSQ",
 
     question: String.raw`
@@ -10797,7 +11900,7 @@ A string of length $L$ is stretched between two points $x=0$ and $x=L$ and the e
       String.raw`$x \cos\left(\frac{\pi x}{L}\right)$`,
       String.raw`$x \sin\left(\frac{\pi x}{L}\right)$`,
       String.raw`$x\left(\frac{x}{L}-1\right)$`,
-      String.raw`$x\left(\frac{x}{L}-1\right)^{2}$`
+      String.raw`$x\left(\frac{x}{L}-1\right)^{2}$`,
     ],
 
     detailedSolution: String.raw`For a string rigidly clamped at both ends $x=0$ and $x=L$, any valid physical displacement function $y(x)$ must satisfy the Dirichlet boundary conditions:
@@ -10820,13 +11923,17 @@ Let's test each option:
 
 Functions B, C, and D satisfy the necessary boundary conditions to represent a possible initial displacement of the string.`,
 
-    correctAnswers: [1, 2, 3]
+    correctAnswers: [1,2,3],
   },
 
   {
     id: 39,
     year: 2022,
-    subject: "Digital Electronics",
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Boolean Algebra","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
@@ -10837,7 +11944,7 @@ The Boolean expression $Y = \overline{P}\overline{Q}R + Q\overline{R} + \overlin
       String.raw`$\overline{P}R + Q$`,
       String.raw`$PR + \overline{Q}$`,
       String.raw`$P + R$`,
-      String.raw`$Q + R$`
+      String.raw`$Q + R$`,
     ],
 
     detailedSolution: String.raw`Let's simplify the Boolean expression step by step:
@@ -10873,27 +11980,31 @@ $Y = \overline{P}R + Q(R + \overline{R})$
 Since $R + \overline{R} = 1$:
 $Y = \overline{P}R + Q$.`,
 
-    correctAnswers: [0]
+    correctAnswers: [0],
   },
 
   {
     id: 40,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
     type: "MSQ",
 
     question: String.raw`
 For an n-type silicon, an extrinsic semiconductor, the natural logarithm of normalized conductivity $(\sigma)$ is plotted as a function of inverse temperature. Temperature interval-I corresponds to the intrinsic regime, interval-II corresponds to saturation regime and interval-III corresponds to the freeze-out regime, respectively. Then
 `,
 
-    questionImage: "/images/40_22.png",
-
     options: [
       String.raw`the magnitude of the slope of the curve in the temperature interval-I is proportional to the bandgap, $E_{g}$`,
       String.raw`the magnitude of the slope of the curve in the temperature interval-III is proportional to the ionization energy of the donor, $E_{d}$`,
       String.raw`in the temperature interval-II, the carrier density in the conduction band is equal to the density of donors`,
-      String.raw`in the temperature interval-III, all the donor levels are ionized`
+      String.raw`in the temperature interval-III, all the donor levels are ionized`,
     ],
+
+    questionImage: "/images/40_22.png",
 
     detailedSolution: String.raw`Let's analyze the three temperature regimes for an n-type semiconductor:
 
@@ -10909,12 +12020,17 @@ At very low temperatures, there isn't enough thermal energy even to ionize the s
 Thus, $\ln(\sigma) \propto -\frac{E_d}{2k_B} \left(\frac{1}{T}\right)$. The slope is proportional to $E_d$. **(True)**
 Option D claims all donor levels are ionized in this regime. This is the exact opposite of what happens (they are mostly un-ionized/frozen). **(False)**`,
 
-    correctAnswers: [0, 1, 2]
+    correctAnswers: [0,1,2],
   },
+
   {
     id: 41,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -10943,13 +12059,17 @@ $I = \frac{8}{3} \cdot \pi = \frac{8}{3}\pi \approx 2.67\pi$
 The coefficient of $\pi$ is $2.67$.`,
 
     correctAnswerMin: 2.65,
-    correctAnswerMax: 2.68
+    correctAnswerMax: 2.68,
   },
 
   {
     id: 42,
     year: 2022,
-    subject: "Semiconductors",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics","Analog Circuits"],
     type: "NAT",
 
     question: String.raw`
@@ -10972,13 +12092,17 @@ $I_0 = \frac{V_{out}}{R_1 + R_2} = \frac{8.1\text{ V}}{1620\ \Omega} = 0.005\tex
 *(Alternatively, calculating current just through $R_1$: $I = V_s/R_1 = 0.6/120 = 5\text{ mA}$, since input current to op-amp is zero, it's the same current).*`,
 
     correctAnswerMin: 4.9,
-    correctAnswerMax: 5.1
+    correctAnswerMax: 5.1,
   },
 
   {
     id: 43,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -11020,13 +12144,17 @@ We are given that $\frac{V_C}{V_B} = 2$.
 Therefore, $\frac{V_D}{V_A} = 2$.`,
 
     correctAnswerMin: 1.9,
-    correctAnswerMax: 2.1
+    correctAnswerMax: 2.1,
   },
 
   {
     id: 44,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -11055,13 +12183,17 @@ Substitute the values:
 $e = \frac{11000 - 9000}{11000 + 9000} = \frac{2000}{20000} = \frac{1}{10} = 0.1$`,
 
     correctAnswerMin: 0.1,
-    correctAnswerMax: 0.1
+    correctAnswerMax: 0.1,
   },
 
   {
     id: 45,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
     type: "NAT",
 
     question: String.raw`
@@ -11093,13 +12225,17 @@ $24 = 4x_0$
 $x_0 = 6$`,
 
     correctAnswerMin: 6,
-    correctAnswerMax: 6
+    correctAnswerMax: 6,
   },
 
   {
     id: 46,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -11127,13 +12263,17 @@ $\theta_{sec} \approx \frac{226.8}{3.14159} \approx 72.19''$
 Rounding off to the nearest integer gives 72.`,
 
     correctAnswerMin: 71,
-    correctAnswerMax: 73
+    correctAnswerMax: 73,
   },
 
   {
     id: 47,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -11165,13 +12305,17 @@ $\Delta L = L_0 - L = 3.000 - 2.704 = 0.296\text{ m}$
 Rounding off to 2 decimal places yields 0.30 m.`,
 
     correctAnswerMin: 0.29,
-    correctAnswerMax: 0.31
+    correctAnswerMax: 0.31,
   },
 
   {
     id: 48,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -11199,13 +12343,17 @@ The value is asked as $\dots \times 10^6\text{ m/s}$.
 Rounding off to 2 decimal places gives 1.09.`,
 
     correctAnswerMin: 1.08,
-    correctAnswerMax: 1.10
+    correctAnswerMax: 1.1,
   },
 
   {
     id: 49,
     year: 2022,
+    marks: 1,
+    difficulty: "Easy",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -11237,13 +12385,17 @@ $2 \times \pi = 2\pi$.
 The coefficient of $\pi$ is 2.`,
 
     correctAnswerMin: 1.9,
-    correctAnswerMax: 2.1
+    correctAnswerMax: 2.1,
   },
 
   {
     id: 50,
     year: 2022,
-    subject: "Digital Electronics",
+    marks: 1,
+    difficulty: "Easy",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Semiconductors","Solid State & Electronics"],
     type: "NAT",
 
     question: String.raw`
@@ -11279,13 +12431,17 @@ $\text{Ratio} = \frac{0.405465}{0.693147} \approx 0.5849$
 Rounding off to 2 decimal places gives 0.58.`,
 
     correctAnswerMin: 0.57,
-    correctAnswerMax: 0.59
+    correctAnswerMax: 0.59,
   },
 
   {
     id: 51,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -11319,14 +12475,18 @@ $y(\pi/2) = e^{-2(\pi/2)} \sin(\pi/2) = e^{-\pi} (1) = e^{-\pi}$
 $e^{-\pi} \approx 0.0432139$
 Rounding off to 3 decimal places gives 0.043.`,
 
-    correctAnswerMin: 0.040,
-    correctAnswerMax: 0.046
+    correctAnswerMin: 0.04,
+    correctAnswerMax: 0.046,
   },
 
   {
     id: 52,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -11353,13 +12513,17 @@ We are given $v_{rms} = x\sqrt{\frac{k_BT}{m}}$.
 Therefore, $x = 1.50$.`,
 
     correctAnswerMin: 1.48,
-    correctAnswerMax: 1.52
+    correctAnswerMax: 1.52,
   },
 
   {
     id: 53,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
     type: "NAT",
 
     question: String.raw`
@@ -11389,14 +12553,18 @@ $\Delta S = \Delta S_1 + \Delta S_2 = -670.66 + 1208.26 = 537.6\text{ J/K}$
 
 Rounding off to 1 decimal place gives 537.6.`,
 
-    correctAnswerMin: 536.0,
-    correctAnswerMax: 540.0
+    correctAnswerMin: 536,
+    correctAnswerMax: 540,
   },
 
   {
     id: 54,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
     type: "NAT",
 
     question: String.raw`
@@ -11426,13 +12594,17 @@ $R \approx \left( \frac{p_1 \frac{U_0}{2E}}{2p_1} \right)^2 = \left( \frac{U_0}{
 Comparing this to the given form $R \approx \frac{U_0^2}{nE^2}$, we identify that $n = 16$.`,
 
     correctAnswerMin: 16,
-    correctAnswerMax: 16
+    correctAnswerMax: 16,
   },
 
   {
     id: 55,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
     type: "NAT",
 
     question: String.raw`
@@ -11465,13 +12637,17 @@ $\rho(1,1,1,1) = 1 + \frac{16(1) (e^1 - 1)}{(1 + 1^2 + 1^2 + 1^2)^2} = 1 + \frac
 Since $e \approx 2.71828...$, rounding to two decimal places gives 2.72.`,
 
     correctAnswerMin: 2.71,
-    correctAnswerMax: 2.73
+    correctAnswerMax: 2.73,
   },
 
   {
     id: 56,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -11502,13 +12678,17 @@ $W_{ext} = -5 \times 10^{-6} \times (-400 - (-200)) = -5 \times 10^{-6} \times (
 *(Note: "Work done in moving" usually implies external work against the field. If it asked for work done BY the electric field, it would be $-1\text{ mJ}$. Given typical phrasing in such exams, the external work is standard).*`,
 
     correctAnswerMin: 1,
-    correctAnswerMax: 1
+    correctAnswerMax: 1,
   },
 
   {
     id: 57,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Wave Motion",
+    subjectId: "waves",
+    tags: ["Wave Motion","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -11537,13 +12717,17 @@ Nodes are located at $x = 0, \frac{\lambda}{2}, \lambda$.
 Total number of nodes = 3.`,
 
     correctAnswerMin: 3,
-    correctAnswerMax: 3
+    correctAnswerMax: 3,
   },
 
   {
     id: 58,
     year: 2022,
+    marks: 2,
+    difficulty: "Medium",
     subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
     type: "NAT",
 
     question: String.raw`
@@ -11566,13 +12750,17 @@ $\theta_B = \arctan(2) \approx 63.435^\circ$
 Rounding off to the nearest integer gives 63 degrees.`,
 
     correctAnswerMin: 62,
-    correctAnswerMax: 64
+    correctAnswerMax: 64,
   },
 
   {
     id: 59,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -11605,14 +12793,18 @@ $P = \frac{(220)^2}{24372.42} \times 150 = \frac{48400}{24372.42} \times 150 \ap
 
 Rounding off to 2 decimal places gives 297.88.`,
 
-    correctAnswerMin: 297.00,
-    correctAnswerMax: 299.00
+    correctAnswerMin: 297,
+    correctAnswerMax: 299,
   },
 
   {
     id: 60,
     year: 2022,
+    marks: 2,
+    difficulty: "Hard",
     subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
     type: "NAT",
 
     question: String.raw`
@@ -11648,21 +12840,29 @@ Given $\epsilon_r = 2$:
 $\text{Ratio} = \frac{1}{5(2)} = \frac{1}{10} = 0.1$`,
 
     correctAnswerMin: 0.1,
-    correctAnswerMax: 0.1
+    correctAnswerMax: 0.1,
   },
+
   {
-    "id": 1,
-    "year": 2021,
-    "subject": "Mathematics",
-    "type": "MCQ",
-    "question": String.raw`The function $e^{\cos x}$ is Taylor expanded about $x = 0$. The coefficient of $x^2$ is`,
-    "options": [
+    id: 1,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods","Taylor Series"],
+    type: "MCQ",
+
+    question: String.raw`The function $e^{\cos x}$ is Taylor expanded about $x = 0$. The coefficient of $x^2$ is`,
+
+    options: [
       String.raw`$-\frac{1}{2}$`,
       String.raw`$-\frac{e}{2}$`,
       String.raw`$\frac{e}{2}$`,
-      String.raw`Zero`
+      String.raw`Zero`,
     ],
-    "detailedSolution": String.raw`Let $f(x) = e^{\cos x}$.
+
+    detailedSolution: String.raw`Let $f(x) = e^{\cos x}$.
 The Taylor expansion of a function $f(x)$ about $x = 0$ (Maclaurin series) is given by:
 $$f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \dots$$
 We need to find the coefficient of $x^2$, which is $\frac{f''(0)}{2!}$.
@@ -11681,21 +12881,30 @@ $$f''(0) = e^{\cos(0)}(\sin^2 0 - \cos 0) = e(0 - 1) = -e$$
 The coefficient of $x^2$ is:
 $$\frac{f''(0)}{2!} = \frac{-e}{2}$$
 Therefore, the correct option is (B).`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 2,
-    "year": 2021,
-    "subject": "Matrices & Determinants",
-    "type": "MCQ",
-    "question": String.raw`Let $M$ be a $2 \times 2$ matrix. Its trace is $6$ and its determinant has value $8$. Its eigenvalues are`,
-    "options": [
+    id: 2,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Let $M$ be a $2 \times 2$ matrix. Its trace is $6$ and its determinant has value $8$. Its eigenvalues are`,
+
+    options: [
       String.raw`$2$ and $4$`,
       String.raw`$3$ and $3$`,
       String.raw`$2$ and $6$`,
-      String.raw`$-2$ and $-3$`
+      String.raw`$-2$ and $-3$`,
     ],
-    "detailedSolution": String.raw`Let the eigenvalues of the $2 \times 2$ matrix $M$ be $\lambda_1$ and $\lambda_2$.
+
+    detailedSolution: String.raw`Let the eigenvalues of the $2 \times 2$ matrix $M$ be $\lambda_1$ and $\lambda_2$.
 The sum of the eigenvalues is equal to the trace of the matrix:
 $$\lambda_1 + \lambda_2 = \text{Trace}(M) = 6$$
 The product of the eigenvalues is equal to the determinant of the matrix:
@@ -11707,21 +12916,30 @@ $$\lambda^2 - 6\lambda + 8 = 0$$
 Factoring the quadratic equation:
 $$(\lambda - 2)(\lambda - 4) = 0$$
 Thus, the eigenvalues are $\lambda = 2$ and $\lambda = 4$.`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 3,
-    "year": 2021,
-    "subject": "Central Force Motion",
-    "type": "MCQ",
-    "question": String.raw`A planet is in a highly eccentric orbit about a star. The distance of its closest approach is $300$ times smaller than its farthest distance from the star. If the corresponding speeds are $v_c$ and $v_f$, then $\frac{v_c}{v_f}$ is`,
-    "options": [
+    id: 3,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A planet is in a highly eccentric orbit about a star. The distance of its closest approach is $300$ times smaller than its farthest distance from the star. If the corresponding speeds are $v_c$ and $v_f$, then $\frac{v_c}{v_f}$ is`,
+
+    options: [
       String.raw`$\frac{1}{300}$`,
       String.raw`$\frac{1}{\sqrt{300}}$`,
       String.raw`$\sqrt{300}$`,
-      String.raw`$300$`
+      String.raw`$300$`,
     ],
-    "detailedSolution": String.raw`Let $r_c$ be the distance of closest approach (periapsis) and $r_f$ be the farthest distance (apoapsis). Let the speeds at these points be $v_c$ and $v_f$, respectively.
+
+    detailedSolution: String.raw`Let $r_c$ be the distance of closest approach (periapsis) and $r_f$ be the farthest distance (apoapsis). Let the speeds at these points be $v_c$ and $v_f$, respectively.
 It is given that $r_c = \frac{r_f}{300}$, which means $\frac{r_f}{r_c} = 300$.
 For a planet in orbit around a star, the central force (gravitational force) is purely radial. Thus, there is no torque acting on the planet, and its angular momentum $L$ is conserved.
 At the points of closest and farthest approach, the velocity vector is perpendicular to the position vector ($\theta = 90^\circ$).
@@ -11733,21 +12951,30 @@ Rearranging to find the ratio of speeds:
 $$\frac{v_c}{v_f} = \frac{r_f}{r_c}$$
 Substitute the given ratio:
 $$\frac{v_c}{v_f} = 300$$`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 4,
-    "year": 2021,
-    "subject": "Fluid Mechanics",
-    "type": "MCQ",
-    "question": String.raw`An object of density $\rho$ is floating in a liquid with $75\%$ of its volume submerged. The density of the liquid is`,
-    "options": [
+    id: 4,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Fluid Mechanics",
+    subjectId: "mechanics",
+    tags: ["Fluid Mechanics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`An object of density $\rho$ is floating in a liquid with $75\%$ of its volume submerged. The density of the liquid is`,
+
+    options: [
       String.raw`$\frac{4}{3}\rho$`,
       String.raw`$\frac{3}{2}\rho$`,
       String.raw`$\frac{8}{5}\rho$`,
-      String.raw`$2\rho$`
+      String.raw`$2\rho$`,
     ],
-    "detailedSolution": String.raw`Let the total volume of the object be $V$.
+
+    detailedSolution: String.raw`Let the total volume of the object be $V$.
 The volume of the object submerged in the liquid is $V_{sub} = 75\% \text{ of } V = 0.75V = \frac{3}{4}V$.
 Let the density of the liquid be $\rho_L$.
 According to Archimedes' principle, for an object to float, the buoyant force (weight of the displaced liquid) must equal the total weight of the object.
@@ -11760,21 +12987,30 @@ Canceling $V$ and $g$ from both sides:
 $$\rho = \frac{3}{4} \rho_L$$
 Solving for the density of the liquid $\rho_L$:
 $$\rho_L = \frac{4}{3}\rho$$`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 5,
-    "year": 2021,
-    "subject": "Interference",
-    "type": "MCQ",
-    "question": String.raw`An experiment with a Michelson interferometer is performed in vacuum using a laser of wavelength $610\text{ nm}$. One of the beams of the interferometer passes through a small glass cavity $1.3\text{ cm}$ long. After the cavity is completely filled with a medium of refractive index $n$, $472$ dark fringes are counted to move past a reference line. Given that the speed of light is $3 \times 10^8\text{ m/s}$, the value of $n$ is`,
-    "options": [
+    id: 5,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`An experiment with a Michelson interferometer is performed in vacuum using a laser of wavelength $610\text{ nm}$. One of the beams of the interferometer passes through a small glass cavity $1.3\text{ cm}$ long. After the cavity is completely filled with a medium of refractive index $n$, $472$ dark fringes are counted to move past a reference line. Given that the speed of light is $3 \times 10^8\text{ m/s}$, the value of $n$ is`,
+
+    options: [
       String.raw`$1.01$`,
       String.raw`$1.04$`,
       String.raw`$1.06$`,
-      String.raw`$1.10$`
+      String.raw`$1.10$`,
     ],
-    "detailedSolution": String.raw`In a Michelson interferometer, when a medium of thickness $t$ and refractive index $n$ is introduced into one of the arms, the optical path of that beam increases. Since the beam travels back and forth through the cavity, the extra optical path difference ($\Delta x$) introduced is:
+
+    detailedSolution: String.raw`In a Michelson interferometer, when a medium of thickness $t$ and refractive index $n$ is introduced into one of the arms, the optical path of that beam increases. Since the beam travels back and forth through the cavity, the extra optical path difference ($\Delta x$) introduced is:
 $$\Delta x = 2(n - 1)t$$
 This additional path difference causes the fringe pattern to shift. If $N$ fringes shift past a reference line, the path difference is also equal to $N\lambda$, where $\lambda$ is the wavelength of the light.
 $$2(n - 1)t = N\lambda$$
@@ -11791,47 +13027,63 @@ $$n - 1 = \frac{2.8792 \times 10^{-4}}{2.6 \times 10^{-2}} \approx 1.107 \times 
 $$n - 1 = 0.01107$$
 $$n = 1 + 0.01107 = 1.01107$$
 Rounding to two decimal places, we get $n \approx 1.01$.`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 6,
-    "year": 2021,
-    "subject": "Semiconductors",
-    "type": "MCQ",
-    "question": String.raw`For a semiconductor material, the conventional flat band energy diagram is shown in the figure. The variables $Y$, $X$, respectively, are`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/6_21.png",
-    "options": [
+    id: 6,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For a semiconductor material, the conventional flat band energy diagram is shown in the figure. The variables $Y$, $X$, respectively, are`,
+
+    options: [
       String.raw`Energy, Momentum`,
       String.raw`Energy, Distance`,
       String.raw`Distance, Energy`,
-      String.raw`Momentum, Energy`
+      String.raw`Momentum, Energy`,
     ],
-    "detailedSolution": String.raw`The given figure shows a conventional flat band energy diagram for a semiconductor.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/6_21.png",
+
+    detailedSolution: String.raw`The given figure shows a conventional flat band energy diagram for a semiconductor.
 In such diagrams, the vertical axis ($Y$) represents the electron energy ($E$), showing energy levels such as the conduction band edge ($E_C$), valence band edge ($E_V$), and sometimes the Fermi level ($E_F$).
 The horizontal axis ($X$) represents the spatial position or distance ($x$) within the semiconductor material. This allows visualization of how energy bands bend across junctions (like a p-n junction) or interfaces. For a homogeneous material in equilibrium without applied fields, these bands are flat across the distance, hence the term "flat band diagram".
 Therefore, $Y$ is Energy and $X$ is Distance.`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 7,
-    "year": 2021,
-    "subject": "p-n Junction & Diodes",
-    "type": "MCQ",
-    "question": String.raw`For the given circuit, $V_D$ is the threshold voltage of the diode. The graph that best depicts the variation of $V_o$ with $V_i$ is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7_21.png",
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 7,
+    year: 2021,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For the given circuit, $V_D$ is the threshold voltage of the diode. The graph that best depicts the variation of $V_o$ with $V_i$ is`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7a_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7b_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7c_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7d_21.png"
-    ],
-    "detailedSolution": String.raw`The given circuit is a precision half-wave rectifier (also known as a super diode circuit).
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7a_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7b_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7c_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7d_21.png"],
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/7_21.png",
+
+    detailedSolution: String.raw`The given circuit is a precision half-wave rectifier (also known as a super diode circuit).
 Let's analyze the operation based on the input voltage $V_i$:
 1.  **For $V_i > 0$:**
     The input tends to drive the inverting terminal positive. This causes the op-amp output to swing negative. The diode in the feedback path (pointing towards the inverting input) becomes forward-biased (ON), while the diode pointing towards the output $V_o$ becomes reverse-biased (OFF). Since the output diode is OFF, no current flows to the output, and $V_o = 0\text{ V}$.
@@ -11843,25 +13095,34 @@ Let's analyze the operation based on the input voltage $V_i$:
 
 Because the diode is enclosed within the negative feedback loop of the op-amp, the op-amp output will swing as high as necessary to overcome the diode threshold voltage $V_D$. Thus, the non-ideal voltage drop $V_D$ is effectively eliminated, and the circuit behaves ideally. 
 The transfer characteristic is $V_o = 0$ for $V_i > 0$, and $V_o = -V_i$ (a line with slope -1) for $V_i < 0$. This perfectly matches the graph in option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 8,
-    "year": 2021,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`Arrange the following telescopes, where $D$ is the telescope diameter and $\lambda$ is the wavelength, in order of decreasing resolving power:
+    id: 8,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Arrange the following telescopes, where $D$ is the telescope diameter and $\lambda$ is the wavelength, in order of decreasing resolving power:
 I. $D = 100\text{ m}, \lambda = 21\text{ cm}$
 II. $D = 2\text{ m}, \lambda = 500\text{ nm}$
 III. $D = 1\text{ m}, \lambda = 100\text{ nm}$
 IV. $D = 2\text{ m}, \lambda = 10\text{ mm}$`,
-    "options": [
+
+    options: [
       String.raw`III, II, IV, I`,
       String.raw`II, III, I, IV`,
       String.raw`IV, III, II, I`,
-      String.raw`III, II, I, IV`
+      String.raw`III, II, I, IV`,
     ],
-    "detailedSolution": String.raw`The resolving power (RP) of a telescope is inversely proportional to the angular resolution and is given by the formula:
+
+    detailedSolution: String.raw`The resolving power (RP) of a telescope is inversely proportional to the angular resolution and is given by the formula:
 $$RP = \frac{D}{1.22 \lambda}$$
 where $D$ is the diameter of the objective lens/mirror and $\lambda$ is the wavelength of light. To compare them, we calculate the ratio $\frac{D}{\lambda}$ for each telescope (ignoring the constant $1.22$). Ensure both $D$ and $\lambda$ are in the same units (e.g., meters).
 
@@ -11876,21 +13137,30 @@ where $D$ is the diameter of the objective lens/mirror and $\lambda$ is the wave
 
 Comparing the values: $10,000,000 > 4,000,000 > 476.19 > 200$.
 Thus, the order of decreasing resolving power is III > II > I > IV. This matches option (D)[cite: 1].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 9,
-    "year": 2021,
-    "subject": "Crystal Structure",
-    "type": "MCQ",
-    "question": String.raw`Metallic lithium has $bcc$ crystal structure. Each unit cell is a cube of side $a$. The number of atoms per unit volume is`,
-    "options": [
+    id: 9,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`Metallic lithium has $bcc$ crystal structure. Each unit cell is a cube of side $a$. The number of atoms per unit volume is`,
+
+    options: [
       String.raw`$\frac{1}{a^3}$`,
       String.raw`$\frac{2}{\sqrt{2}a^3}$`,
       String.raw`$\frac{2}{a^3}$`,
-      String.raw`$\frac{4}{a^3}$`
+      String.raw`$\frac{4}{a^3}$`,
     ],
-    "detailedSolution": String.raw`In a body-centered cubic (bcc) crystal structure, the atoms are located at the $8$ corners of the cube and $1$ atom is located at the center of the body.
+
+    detailedSolution: String.raw`In a body-centered cubic (bcc) crystal structure, the atoms are located at the $8$ corners of the cube and $1$ atom is located at the center of the body.
 The number of effective atoms per unit cell ($n$) is calculated as follows:
 *   Contribution from the corner atoms: $8 \text{ corners} \times \frac{1}{8} \text{ atom/corner} = 1 \text{ atom}$.
 *   Contribution from the body-centered atom: $1 \times 1 = 1 \text{ atom}$.
@@ -11899,21 +13169,30 @@ The volume of a cubic unit cell with side length $a$ is $V = a^3$.
 The number of atoms per unit volume (number density) is the total number of atoms in the unit cell divided by its volume:
 $$\text{Number density} = \frac{n}{V} = \frac{2}{a^3}$$
 This corresponds to option (C)[cite: 1].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 10,
-    "year": 2021,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`The moment of inertia of a solid sphere (radius $R$ and mass $M$) about the axis which is at a distance of $\frac{R}{2}$ from the center is`,
-    "options": [
+    id: 10,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`The moment of inertia of a solid sphere (radius $R$ and mass $M$) about the axis which is at a distance of $\frac{R}{2}$ from the center is`,
+
+    options: [
       String.raw`$\frac{3}{20}MR^2$`,
       String.raw`$\frac{1}{2}MR^2$`,
       String.raw`$\frac{13}{20}MR^2$`,
-      String.raw`$\frac{9}{10}MR^2$`
+      String.raw`$\frac{9}{10}MR^2$`,
     ],
-    "detailedSolution": String.raw`The moment of inertia of a solid sphere of mass $M$ and radius $R$ about an axis passing through its center of mass is given by:
+
+    detailedSolution: String.raw`The moment of inertia of a solid sphere of mass $M$ and radius $R$ about an axis passing through its center of mass is given by:
 $$I_{cm} = \frac{2}{5}MR^2$$
 We need to find the moment of inertia $I$ about a new axis parallel to the central axis and at a perpendicular distance $d = \frac{R}{2}$ from it.
 Using the parallel axis theorem:
@@ -11925,24 +13204,33 @@ To add the fractions, find a common denominator, which is $20$:
 $$I = \left(\frac{8}{20} + \frac{5}{20}\right)MR^2$$
 $$I = \frac{13}{20}MR^2$$
 This matches option (C)[cite: 1].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 11,
-    "year": 2021,
-    "subject": "Matrices & Determinants",
-    "type": "MCQ",
-    "question": String.raw`Let $(x, y)$ denote the coordinates in a rectangular Cartesian coordinate system $C$. Let $(x', y')$ denote the coordinates in another coordinate system $C'$ defined by
+    id: 11,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Let $(x, y)$ denote the coordinates in a rectangular Cartesian coordinate system $C$. Let $(x', y')$ denote the coordinates in another coordinate system $C'$ defined by
 $$x' = 2x + 3y$$
 $$y' = -3x + 4y$$
 The area element in $C'$, is`,
-    "options": [
+
+    options: [
       String.raw`$\frac{1}{17} dx'dy'$`,
       String.raw`$12 dx'dy'$`,
       String.raw`$dx'dy'$`,
-      String.raw`$x'dx'dy'$`
+      String.raw`$x'dx'dy'$`,
     ],
-    "detailedSolution": String.raw`The standard area element in Cartesian coordinate system $C$ is $dA = dxdy$. The question asks for this area element expressed in terms of the new coordinates $C'$.
+
+    detailedSolution: String.raw`The standard area element in Cartesian coordinate system $C$ is $dA = dxdy$. The question asks for this area element expressed in terms of the new coordinates $C'$.
 The transformation between the two coordinate systems is:
 $$x' = 2x + 3y$$
 $$y' = -3x + 4y$$
@@ -11959,21 +13247,30 @@ So, $dx'dy' = 17 dxdy$.
 Therefore, the area element of the original system expressed in the coordinates of $C'$ is:
 $$dxdy = \frac{1}{17} dx'dy'$$
 This corresponds to option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 12,
-    "year": 2021,
-    "subject": "Special Relativity",
-    "type": "MCQ",
-    "question": String.raw`Three events, $E_1(ct = 0, x = 0)$, $E_2(ct = 0, x = L)$ and $E_3(ct = 0, x = -L)$ occur, as observed in an inertial frame $S$. Frame $S'$ is moving with a speed $v$ along the positive $x$-direction with respect to $S$. In $S'$, let $t'_1, t'_2, t'_3$ be the respective times at which $E_1, E_2$, and $E_3$ occurred. Then,`,
-    "options": [
+    id: 12,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`Three events, $E_1(ct = 0, x = 0)$, $E_2(ct = 0, x = L)$ and $E_3(ct = 0, x = -L)$ occur, as observed in an inertial frame $S$. Frame $S'$ is moving with a speed $v$ along the positive $x$-direction with respect to $S$. In $S'$, let $t'_1, t'_2, t'_3$ be the respective times at which $E_1, E_2$, and $E_3$ occurred. Then,`,
+
+    options: [
       String.raw`$t'_2 < t'_1 < t'_3$`,
       String.raw`$t'_1 = t'_2 = t'_3$`,
       String.raw`$t'_3 < t'_1 < t'_2$`,
-      String.raw`$t'_3 < t'_2 < t'_1$`
+      String.raw`$t'_3 < t'_2 < t'_1$`,
     ],
-    "detailedSolution": String.raw`According to the Lorentz transformations, the time $t'$ in the moving frame $S'$ is related to the coordinates $(t, x)$ in the stationary frame $S$ by:
+
+    detailedSolution: String.raw`According to the Lorentz transformations, the time $t'$ in the moving frame $S'$ is related to the coordinates $(t, x)$ in the stationary frame $S$ by:
 $$t' = \gamma \left(t - \frac{vx}{c^2}\right)$$
 where $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} > 0$, and $v$ is the positive velocity of $S'$ relative to $S$.
 For all three events, they occur simultaneously in frame $S$ at $t = 0$. Thus, the transformation simplifies to:
@@ -11987,21 +13284,30 @@ $t'_2$ is a negative quantity.
 $t'_1 = 0$.
 $t'_3$ is a positive quantity.
 Therefore, the ordering of times is $t'_2 < t'_1 < t'_3$. This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 13,
-    "year": 2021,
-    "subject": "Differential Equations",
-    "type": "MCQ",
-    "question": String.raw`The solution $y(x)$ of the differential equation $y\frac{dy}{dx} + 3x = 0$, $y(1) = 0$, is described by`,
-    "options": [
+    id: 13,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Differential Equations",
+    subjectId: "math",
+    tags: ["Differential Equations","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`The solution $y(x)$ of the differential equation $y\frac{dy}{dx} + 3x = 0$, $y(1) = 0$, is described by`,
+
+    options: [
       String.raw`an ellipse`,
       String.raw`a circle`,
       String.raw`a parabola`,
-      String.raw`a straight line`
+      String.raw`a straight line`,
     ],
-    "detailedSolution": String.raw`We are given the first-order differential equation:
+
+    detailedSolution: String.raw`We are given the first-order differential equation:
 $$y\frac{dy}{dx} + 3x = 0$$
 This equation can be solved using the separation of variables technique. Rearranging the terms gives:
 $$y\,dy = -3x\,dx$$
@@ -12019,39 +13325,58 @@ Divide by 3 to write it in standard form:
 $$x^2 + \frac{y^2}{3} = 1$$
 This is the standard equation of an ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, where $a=1$ and $b=\sqrt{3}$.
 Therefore, the solution represents an ellipse. This corresponds to option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 14,
-    "year": 2021,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`In the figure below, point A is the object and point B is the image formed by the lens. Let $l_1, l_2$ and $l_3$ denote the optical path lengths of the three rays $1, 2$ and $3$, respectively. Identify the correct statement.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/14_21.png",
-    "options": [
+    id: 14,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`In the figure below, point A is the object and point B is the image formed by the lens. Let $l_1, l_2$ and $l_3$ denote the optical path lengths of the three rays $1, 2$ and $3$, respectively. Identify the correct statement.`,
+
+    options: [
       String.raw`$l_1 = l_2 = l_3$`,
       String.raw`$l_1 > l_2 < l_3$`,
       String.raw`$l_1 = l_3 < l_2$`,
-      String.raw`$l_1 = l_3 > l_2$`
+      String.raw`$l_1 = l_3 > l_2$`,
     ],
-    "detailedSolution": String.raw`According to Fermat's principle of extremum path, the optical path length between an object point and its corresponding image point must be stationary. For a perfect imaging system (like an ideal lens forming a point image from a point object), all rays originating from the object point that converge to the image point traverse the exact same optical path length. 
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/14_21.png",
+
+    detailedSolution: String.raw`According to Fermat's principle of extremum path, the optical path length between an object point and its corresponding image point must be stationary. For a perfect imaging system (like an ideal lens forming a point image from a point object), all rays originating from the object point that converge to the image point traverse the exact same optical path length. 
 The physical distance for ray 2 is the shortest, but it travels through the thickest part of the glass lens (which has a higher refractive index than air), slowing it down. Ray 1 and Ray 3 travel a longer physical distance in air but pass through a thinner section of the lens. These effects exactly compensate for each other to ensure the optical path length (physical distance $\times$ refractive index) is equal for all paths.
 Therefore, $l_1 = l_2 = l_3$. This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 15,
-    "year": 2021,
-    "subject": "Non-Inertial Frames",
-    "type": "MCQ",
-    "question": String.raw`A particle, initially at the origin in an inertial frame $S$, has a constant velocity $V\hat{i}$. Frame $S'$ is rotating about the $z$-axis with angular velocity $\omega$ (anticlockwise). The coordinate axes of $S'$ coincide with those of $S$ at $t = 0$. The velocity of the particle $(V'_x, V'_y)$ in the $S'$ frame, at $t = \frac{\pi}{2\omega}$ is`,
-    "options": [
+    id: 15,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Non-Inertial Frames",
+    subjectId: "mechanics",
+    tags: ["Non-Inertial Frames","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A particle, initially at the origin in an inertial frame $S$, has a constant velocity $V\hat{i}$. Frame $S'$ is rotating about the $z$-axis with angular velocity $\omega$ (anticlockwise). The coordinate axes of $S'$ coincide with those of $S$ at $t = 0$. The velocity of the particle $(V'_x, V'_y)$ in the $S'$ frame, at $t = \frac{\pi}{2\omega}$ is`,
+
+    options: [
       String.raw`$\left(-\frac{V\pi}{2}, -V\right)$`,
       String.raw`$(-V, -V)$`,
       String.raw`$\left(\frac{V\pi}{2}, -V\right)$`,
-      String.raw`$\left(\frac{3V\pi}{2}, -V\right)$`
+      String.raw`$\left(\frac{3V\pi}{2}, -V\right)$`,
     ],
-    "detailedSolution": String.raw`In the inertial frame $S$, the position of the particle at time $t$ is given by:
+
+    detailedSolution: String.raw`In the inertial frame $S$, the position of the particle at time $t$ is given by:
 $$x(t) = Vt, \quad y(t) = 0$$
 The frame $S'$ is rotating with an angular velocity $\omega$ counterclockwise. The transformation equations for coordinates from $S$ to $S'$ are:
 $$x' = x \cos(\omega t) + y \sin(\omega t)$$
@@ -12067,22 +13392,32 @@ Substitute $t = \frac{\pi}{2\omega}$, $\cos\left(\frac{\pi}{2}\right) = 0$, and 
 $$V'_x = V(0) - V\omega \left(\frac{\pi}{2\omega}\right)(1) = -\frac{V\pi}{2}$$
 $$V'_y = -V(1) - V\omega \left(\frac{\pi}{2\omega}\right)(0) = -V$$
 Therefore, the velocity in the $S'$ frame is $\left(-\frac{V\pi}{2}, -V\right)$. This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 16,
-    "year": 2021,
-    "subject": "Logic Gates",
-    "type": "MCQ",
-    "question": String.raw`For the given circuit, the output Y is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/16_21.png",
-    "options": [
+    id: 16,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For the given circuit, the output Y is`,
+
+    options: [
       String.raw`$0$`,
       String.raw`$1$`,
       String.raw`$A$`,
-      String.raw`$\bar{A}$`
+      String.raw`$\bar{A}$`,
     ],
-    "detailedSolution": String.raw`The circuit consists of three XNOR (exclusive-NOR) gates connected in cascade. An XNOR gate produces a HIGH (1) output if both inputs are the same, and a LOW (0) output if they are different. It is logically equivalent to an XOR gate followed by a NOT gate. Let $\odot$ denote the XNOR operation.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/16_21.png",
+
+    detailedSolution: String.raw`The circuit consists of three XNOR (exclusive-NOR) gates connected in cascade. An XNOR gate produces a HIGH (1) output if both inputs are the same, and a LOW (0) output if they are different. It is logically equivalent to an XOR gate followed by a NOT gate. Let $\odot$ denote the XNOR operation.
 The Boolean expression for an XNOR gate is $A \odot B = AB + \bar{A}\bar{B}$. Alternatively, $A \odot B = \overline{A \oplus B}$.
 Let's analyze the circuit stage by stage:
 1.  **First Gate:** The inputs are $A$ and Ground ($0$).
@@ -12093,22 +13428,32 @@ Let's analyze the circuit stage by stage:
 3.  **Third Gate:** The inputs are $A$ (from the top connection) and $O_2 = 0$.
     Output $Y = A \odot 0 = \overline{A \oplus 0} = \bar{A}$.
 The final output Y is $\bar{A}$. This matches option (D)[cite: 1].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 17,
-    "year": 2021,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`The total charge contained within the cube (see figure), in which the electric field is given by $\vec{E} = K(4x^2 \hat{i} + 3y \hat{j})$, where $\epsilon_0$ is the permittivity of free space, is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/17_21.png",
-    "options": [
+    id: 17,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`The total charge contained within the cube (see figure), in which the electric field is given by $\vec{E} = K(4x^2 \hat{i} + 3y \hat{j})$, where $\epsilon_0$ is the permittivity of free space, is`,
+
+    options: [
       String.raw`$7K\epsilon_0$`,
       String.raw`$5K\epsilon_0$`,
       String.raw`$3K\epsilon_0$`,
-      String.raw`Zero`
+      String.raw`Zero`,
     ],
-    "detailedSolution": String.raw`We can find the enclosed charge using the differential form of Gauss's Law:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/17_21.png",
+
+    detailedSolution: String.raw`We can find the enclosed charge using the differential form of Gauss's Law:
 $$\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}$$
 First, calculate the divergence of the electric field $\vec{E} = K(4x^2 \hat{i} + 3y \hat{j})$:
 $$\nabla \cdot \vec{E} = \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z}$$
@@ -12123,22 +13468,32 @@ $$Q = \epsilon_0 K \int_{0}^{1} (8x + 3) \, dx$$
 $$Q = \epsilon_0 K \left[ 4x^2 + 3x \right]_{0}^{1}$$
 $$Q = \epsilon_0 K (4(1)^2 + 3(1) - 0) = \epsilon_0 K (7) = 7K\epsilon_0$$
 This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 18,
-    "year": 2021,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`Four charges are placed very close to each other, as shown. The separation between the two charges on the $y$-axis is $a$. The separation between the two charges on the $x$-axis is also $a$. The leading order (non-vanishing) form of the electrostatic potential, at point $P$, at a distance $r$ from the origin ($r \gg a$), is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/18_21.png",
-    "options": [
+    id: 18,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Four charges are placed very close to each other, as shown. The separation between the two charges on the $y$-axis is $a$. The separation between the two charges on the $x$-axis is also $a$. The leading order (non-vanishing) form of the electrostatic potential, at point $P$, at a distance $r$ from the origin ($r \gg a$), is`,
+
+    options: [
       String.raw`$\frac{1}{4\pi\epsilon_0} \frac{qa}{2r^2} (\sqrt{3} - 1)$`,
       String.raw`$\frac{1}{4\pi\epsilon_0} \frac{2qa}{r^2}$`,
       String.raw`$\frac{1}{4\pi\epsilon_0} \frac{qa}{r^2} (\sqrt{5} - 1)$`,
-      String.raw`$\frac{1}{4\pi\epsilon_0} \frac{qa}{r^2} (1 - \sqrt{3})$`
+      String.raw`$\frac{1}{4\pi\epsilon_0} \frac{qa}{r^2} (1 - \sqrt{3})$`,
     ],
-    "detailedSolution": String.raw`The given charge configuration has zero net monopole moment ($Q_{total} = q + q - q - q = 0$). Therefore, the leading non-vanishing term in the multipole expansion is the dipole moment.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/18_21.png",
+
+    detailedSolution: String.raw`The given charge configuration has zero net monopole moment ($Q_{total} = q + q - q - q = 0$). Therefore, the leading non-vanishing term in the multipole expansion is the dipole moment.
 The potential of a dipole $\vec{p}$ at a position vector $\vec{r}$ is given by:
 $$V = \frac{1}{4\pi\epsilon_0} \frac{\vec{p} \cdot \hat{r}}{r^2}$$
 Based on the figure, we have two superimposed dipoles:
@@ -12154,21 +13509,30 @@ $$\vec{p} \cdot \hat{r} = -qa \left(\frac{1}{2}\right) + qa \left(\frac{\sqrt{3}
 Substituting this back into the potential formula:
 $$V = \frac{1}{4\pi\epsilon_0} \frac{1}{r^2} \left[ \frac{qa}{2} (\sqrt{3} - 1) \right] = \frac{1}{4\pi\epsilon_0} \frac{qa}{2r^2} (\sqrt{3} - 1)$$
 This perfectly matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 19,
-    "year": 2021,
-    "subject": "Nuclear Physics",
-    "type": "MCQ",
-    "question": String.raw`At $t = 0$, $N_0$ number of a radioactive nuclei $A$ start decaying into $B$ with a decay constant $\lambda_a$. The daughter nuclei $B$ decay into nuclei $C$ with a decay constant $\lambda_b$. Then, the number of nuclei $B$ at small time $t$ (to the leading order) is`,
-    "options": [
+    id: 19,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`At $t = 0$, $N_0$ number of a radioactive nuclei $A$ start decaying into $B$ with a decay constant $\lambda_a$. The daughter nuclei $B$ decay into nuclei $C$ with a decay constant $\lambda_b$. Then, the number of nuclei $B$ at small time $t$ (to the leading order) is`,
+
+    options: [
       String.raw`$\lambda_a N_0 t$`,
       String.raw`$(\lambda_a - \lambda_b)N_0 t$`,
       String.raw`$(\lambda_a + \lambda_b)N_0 t$`,
-      String.raw`$\lambda_b N_0 t$`
+      String.raw`$\lambda_b N_0 t$`,
     ],
-    "detailedSolution": String.raw`This is a series radioactive decay process: $A \xrightarrow{\lambda_a} B \xrightarrow{\lambda_b} C$.
+
+    detailedSolution: String.raw`This is a series radioactive decay process: $A \xrightarrow{\lambda_a} B \xrightarrow{\lambda_b} C$.
 The rate equations governing the number of nuclei of species A ($N_A$) and B ($N_B$) are:
 $$\frac{dN_A}{dt} = -\lambda_a N_A$$
 $$\frac{dN_B}{dt} = \lambda_a N_A - \lambda_b N_B$$
@@ -12183,21 +13547,30 @@ Using the initial condition $N_B(0) = 0$, we find $C = 0$.
 Thus, to the leading order, the number of nuclei B at small time $t$ is:
 $$N_B(t) \approx \lambda_a N_0 t$$
 This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 20,
-    "year": 2021,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`The electric field of an electromagnetic wave has the form $\vec{E} = E_0 \cos(\omega t - kz)\hat{i}$. At $t = 0$, a test particle of charge $q$ is at $z = 0$, and has velocity $\vec{v} = 0.5c\hat{k}$, where $c$ is the speed of light. The total instantaneous force on the particle is`,
-    "options": [
+    id: 20,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`The electric field of an electromagnetic wave has the form $\vec{E} = E_0 \cos(\omega t - kz)\hat{i}$. At $t = 0$, a test particle of charge $q$ is at $z = 0$, and has velocity $\vec{v} = 0.5c\hat{k}$, where $c$ is the speed of light. The total instantaneous force on the particle is`,
+
+    options: [
       String.raw`$\frac{qE_0}{2}\hat{i}$`,
       String.raw`$\frac{qE_0}{\sqrt{2}}(\hat{i} + \hat{j})$`,
       String.raw`$\frac{qE_0}{2}(\hat{i} - \hat{k})$`,
-      String.raw`Zero`
+      String.raw`Zero`,
     ],
-    "detailedSolution": String.raw`The total force on a moving charge is the Lorentz force:
+
+    detailedSolution: String.raw`The total force on a moving charge is the Lorentz force:
 $$\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})$$
 First, we need to find the magnetic field $\vec{B}$ of the electromagnetic wave. The direction of propagation is along the $+z$-axis ($\hat{k}$), as indicated by the term $(\omega t - kz)$. The relationship between the electric field $\vec{E}$, magnetic field $\vec{B}$, and propagation direction $\hat{n}$ is $\vec{B} = \frac{1}{c} (\hat{n} \times \vec{E})$.
 $$\vec{B} = \frac{1}{c} [\hat{k} \times E_0 \cos(\omega t - kz)\hat{i}] = \frac{E_0}{c} \cos(\omega t - kz)(\hat{k} \times \hat{i})$$
@@ -12211,21 +13584,30 @@ $$\vec{v} \times \vec{B} = (0.5c \hat{k}) \times \left(\frac{E_0}{c} \hat{j}\rig
 Substitute everything into the Lorentz force equation:
 $$\vec{F} = q \left[ E_0 \hat{i} + (-0.5 E_0 \hat{i}) \right] = q(E_0 - 0.5 E_0)\hat{i} = 0.5 qE_0 \hat{i} = \frac{qE_0}{2} \hat{i}$$
 This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 21,
-    "year": 2021,
-    "subject": "Laws of Thermodynamics",
-    "type": "MCQ",
-    "question": String.raw`The $rms$ velocity of molecules of oxygen gas is given by $v$ at some temperature $T$. The molecules of another gas have the same $rms$ velocity at temperature $\frac{T}{16}$. The second gas is`,
-    "options": [
+    id: 21,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`The $rms$ velocity of molecules of oxygen gas is given by $v$ at some temperature $T$. The molecules of another gas have the same $rms$ velocity at temperature $\frac{T}{16}$. The second gas is`,
+
+    options: [
       String.raw`Hydrogen`,
       String.raw`Helium`,
       String.raw`Nitrogen`,
-      String.raw`Neon`
+      String.raw`Neon`,
     ],
-    "detailedSolution": String.raw`The root-mean-square (rms) velocity of gas molecules is given by the formula:
+
+    detailedSolution: String.raw`The root-mean-square (rms) velocity of gas molecules is given by the formula:
 $$v_{rms} = \sqrt{\frac{3RT}{M}}$$
 where $R$ is the universal gas constant, $T$ is the absolute temperature, and $M$ is the molar mass of the gas.
 Let $v_1$ be the rms velocity of Oxygen ($O_2$) at temperature $T$. The molar mass of $O_2$ is $M_1 = 32\text{ g/mol}$.
@@ -12240,21 +13622,30 @@ Solving for $M_2$:
 $$16 M_2 = 32 \implies M_2 = 2\text{ g/mol}$$
 The gas with a molar mass of $2\text{ g/mol}$ is diatomic Hydrogen ($H_2$). Therefore, the second gas is Hydrogen.
 This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 22,
-    "year": 2021,
-    "subject": "Laws of Thermodynamics",
-    "type": "MCQ",
-    "question": String.raw`A system undergoes a thermodynamic transformation from state $S_1$ to state $S_2$ via two different paths $1$ and $2$. The heat absorbed and work done along path $1$ are $50\text{ J}$ and $30\text{ J}$, respectively. If the heat absorbed along path $2$ is $30\text{ J}$, the work done along path $2$ is`,
-    "options": [
+    id: 22,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`A system undergoes a thermodynamic transformation from state $S_1$ to state $S_2$ via two different paths $1$ and $2$. The heat absorbed and work done along path $1$ are $50\text{ J}$ and $30\text{ J}$, respectively. If the heat absorbed along path $2$ is $30\text{ J}$, the work done along path $2$ is`,
+
+    options: [
       String.raw`Zero`,
       String.raw`$10\text{ J}$`,
       String.raw`$20\text{ J}$`,
-      String.raw`$30\text{ J}$`
+      String.raw`$30\text{ J}$`,
     ],
-    "detailedSolution": String.raw`According to the First Law of Thermodynamics, the change in internal energy ($\Delta U$) of a system is equal to the heat added to the system ($Q$) minus the work done by the system ($W$):
+
+    detailedSolution: String.raw`According to the First Law of Thermodynamics, the change in internal energy ($\Delta U$) of a system is equal to the heat added to the system ($Q$) minus the work done by the system ($W$):
 $$\Delta U = Q - W$$
 The internal energy $U$ is a state function, meaning $\Delta U$ only depends on the initial and final states, not on the path taken. Since both paths start at state $S_1$ and end at state $S_2$, the change in internal energy must be the same for both paths.
 For Path 1:
@@ -12268,21 +13659,30 @@ $$\Delta U = Q_2 - W_2$$
 $$20\text{ J} = 30\text{ J} - W_2$$
 $$W_2 = 30\text{ J} - 20\text{ J} = 10\text{ J}$$
 The work done along path 2 is $10\text{ J}$, matching option (B)[cite: 1].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 23,
-    "year": 2021,
-    "subject": "Interference",
-    "type": "MCQ",
-    "question": String.raw`The condition for maxima in the interference of two waves $A e^{i\left(\frac{k_0}{2}(\sqrt{3}x + y) - \omega t\right)}$ and $A e^{i\left(\frac{k_0}{\sqrt{2}}(x + y) - \omega t\right)}$ is given in terms of the wavelength $\lambda$ and $m$, an integer, by`,
-    "options": [
+    id: 23,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`The condition for maxima in the interference of two waves $A e^{i\left(\frac{k_0}{2}(\sqrt{3}x + y) - \omega t\right)}$ and $A e^{i\left(\frac{k_0}{\sqrt{2}}(x + y) - \omega t\right)}$ is given in terms of the wavelength $\lambda$ and $m$, an integer, by`,
+
+    options: [
       String.raw`$(\sqrt{3} - \sqrt{2})x + (1 - \sqrt{2})y = 2m\lambda$`,
       String.raw`$(\sqrt{3} + \sqrt{2})x + (1 - \sqrt{2})y = 2m\lambda$`,
       String.raw`$(\sqrt{3} - \sqrt{2})x - (1 - \sqrt{2})y = m\lambda$`,
-      String.raw`$(\sqrt{3} - \sqrt{2})x + (1 - \sqrt{2})y = (2m + 1)\lambda$`
+      String.raw`$(\sqrt{3} - \sqrt{2})x + (1 - \sqrt{2})y = (2m + 1)\lambda$`,
     ],
-    "detailedSolution": String.raw`Let the two waves be represented by their phase angles $\phi_1$ and $\phi_2$:
+
+    detailedSolution: String.raw`Let the two waves be represented by their phase angles $\phi_1$ and $\phi_2$:
 Wave 1: $\phi_1 = \frac{k_0}{2}(\sqrt{3}x + y) - \omega t$
 Wave 2: $\phi_2 = \frac{k_0}{\sqrt{2}}(x + y) - \omega t$
 For constructive interference (maxima), the phase difference $\Delta \phi = \phi_1 - \phi_2$ between the two waves must be an integer multiple of $2\pi$:
@@ -12301,28 +13701,34 @@ Multiply the entire equation by $2$ to clear the denominator of the first term:
 $$2 \left( \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \right)x + 2 \left( \frac{1}{2} - \frac{\sqrt{2}}{2} \right)y = 2m\lambda$$
 $$(\sqrt{3} - \sqrt{2})x + (1 - \sqrt{2})y = 2m\lambda$$
 This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 24,
-    "year": 2021,
-    "subject": "Semiconductors",
-    "type": "MCQ",
-    "question": String.raw`A semiconductor $pn$ junction at thermal equilibrium has the space charge density $\rho(x)$ profile as shown in the figure. The figure that best depicts the variation of the electric field $E$ with $x$ is ($W$ denotes the width of the depletion layer)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24_21.png",
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 24,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`A semiconductor $pn$ junction at thermal equilibrium has the space charge density $\rho(x)$ profile as shown in the figure. The figure that best depicts the variation of the electric field $E$ with $x$ is ($W$ denotes the width of the depletion layer)`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24a_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24b_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24c_21.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24d_21.png"
-    ],
-    "detailedSolution": String.raw`The given figure shows the space charge density $\rho(x)$ for a linearly graded $pn$ junction. In the depletion region (from $-\frac{W}{2}$ to $\frac{W}{2}$), the charge density varies linearly with position.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24a_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24b_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24c_21.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24d_21.png"],
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/24_21.png",
+
+    detailedSolution: String.raw`The given figure shows the space charge density $\rho(x)$ for a linearly graded $pn$ junction. In the depletion region (from $-\frac{W}{2}$ to $\frac{W}{2}$), the charge density varies linearly with position.
 We can express the charge density as $\rho(x) = ax$ for $-\frac{W}{2} \le x \le \frac{W}{2}$, where $a$ is a positive constant (the charge gradient).
 
 According to Poisson's equation in one dimension, the electric field $E(x)$ is related to the charge density by:
@@ -12335,22 +13741,32 @@ $$E(x) = \frac{a}{\epsilon} \left[ \frac{x'^2}{2} \right]_{-\frac{W}{2}}^{x} = \
 $$E(x) = \frac{a}{2\epsilon} \left( x^2 - \frac{W^2}{4} \right)$$
 This equation represents an inverted parabola (a U-shape entirely below the x-axis for the interval $-\frac{W}{2} < x < \frac{W}{2}$), with its minimum value at $x = 0$.
 Comparing this parabolic shape with the given options, graph (A) shows exactly this characteristic inverted parabolic profile. Therefore, graph (A) is the correct depiction of the electric field. This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 25,
-    "year": 2021,
-    "subject": "Collisions",
-    "type": "MCQ",
-    "question": String.raw`A mass $m$ is connected to a massless spring of spring constant $k$, which is fixed to a wall. Another mass $2m$, having kinetic energy $E$, collides collinearly with the mass $m$ completely inelastically (see figure). The entire set up is placed on a frictionless floor. The maximum compression of the spring is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/25_21.png",
-    "options": [
+    id: 25,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Collisions",
+    subjectId: "mechanics",
+    tags: ["Collisions","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A mass $m$ is connected to a massless spring of spring constant $k$, which is fixed to a wall. Another mass $2m$, having kinetic energy $E$, collides collinearly with the mass $m$ completely inelastically (see figure). The entire set up is placed on a frictionless floor. The maximum compression of the spring is`,
+
+    options: [
       String.raw`$\sqrt{\frac{4E}{3k}}$`,
       String.raw`$\sqrt{\frac{E}{3k}}$`,
       String.raw`$\sqrt{\frac{E}{5k}}$`,
-      String.raw`$\sqrt{\frac{E}{7k}}$`
+      String.raw`$\sqrt{\frac{E}{7k}}$`,
     ],
-    "detailedSolution": String.raw`**1. Analyze the initial state:**
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/25_21.png",
+
+    detailedSolution: String.raw`**1. Analyze the initial state:**
 The mass $2m$ has kinetic energy $E$. Let its initial velocity be $v$.
 $$E = \frac{1}{2}(2m)v^2 = mv^2 \implies v = \sqrt{\frac{E}{m}}$$
 The initial momentum of the system is entirely due to the mass $2m$:
@@ -12372,40 +13788,58 @@ $$kx_{max}^2 = \frac{4}{3}E$$
 $$x_{max}^2 = \frac{4E}{3k}$$
 $$x_{max} = \sqrt{\frac{4E}{3k}}$$
 This corresponds to option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 26,
-    "year": 2021,
-    "subject": "Polarization",
-    "type": "MCQ",
-    "question": String.raw`A linearly polarized light falls on a quarter wave plate and the emerging light is found to be elliptically polarized. The angle between the fast axis of the quarter wave plate and the plane of polarization of the incident light, can be`,
-    "options": [
+    id: 26,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`A linearly polarized light falls on a quarter wave plate and the emerging light is found to be elliptically polarized. The angle between the fast axis of the quarter wave plate and the plane of polarization of the incident light, can be`,
+
+    options: [
       String.raw`$30^\circ$`,
       String.raw`$45^\circ$`,
       String.raw`$90^\circ$`,
-      String.raw`$180^\circ$`
+      String.raw`$180^\circ$`,
     ],
-    "detailedSolution": String.raw`When linearly polarized light is incident on a quarter-wave plate (QWP), the state of polarization of the emerging light depends on the angle $\theta$ between the transmission axis of the polarizer (plane of polarization) and the fast (or slow) axis of the QWP:
+
+    detailedSolution: String.raw`When linearly polarized light is incident on a quarter-wave plate (QWP), the state of polarization of the emerging light depends on the angle $\theta$ between the transmission axis of the polarizer (plane of polarization) and the fast (or slow) axis of the QWP:
 1.  **If $\theta = 0^\circ, 90^\circ, 180^\circ, \dots$**: The electric field vector of the incident light lies entirely along one of the principal axes of the QWP. No relative phase shift is introduced between two orthogonal components because there is only one component. The emerging light remains **linearly polarized**. This eliminates options (C) and (D).
 2.  **If $\theta = 45^\circ, 135^\circ, \dots$**: The electric field vector has equal amplitudes along both the fast and slow axes. The QWP introduces a phase difference of $\frac{\pi}{2}$ ($90^\circ$) between these equal components. The emerging light is exactly **circularly polarized**.
 3.  **If $\theta$ is any other angle (e.g., $30^\circ$)**: The amplitudes of the components along the fast and slow axes are unequal. The QWP still introduces a $\frac{\pi}{2}$ phase difference, resulting in two orthogonal, out-of-phase components with unequal amplitudes. This produces **elliptically polarized** light.
 Since the emerging light is elliptically polarized, the angle must be something other than $0^\circ, 45^\circ, 90^\circ, 135^\circ,$ etc. Among the given choices, $30^\circ$ is the only angle that results in general elliptical polarization. This matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 27,
-    "year": 2021,
-    "subject": "Electromagnetic Induction",
-    "type": "MCQ",
-    "question": String.raw`The expression for the magnetic field that induces the electric field $\vec{E} = K(yz\hat{i} + 3z\hat{j} + 4y\hat{k})\cos(\omega t)$ is`,
-    "options": [
+    id: 27,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Electromagnetic Induction",
+    subjectId: "em",
+    tags: ["Electromagnetic Induction","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`The expression for the magnetic field that induces the electric field $\vec{E} = K(yz\hat{i} + 3z\hat{j} + 4y\hat{k})\cos(\omega t)$ is`,
+
+    options: [
       String.raw`$-\frac{K}{\omega}(\hat{i} + y\hat{j} - z\hat{k})\sin(\omega t)$`,
       String.raw`$-\frac{K}{\omega}(\hat{i} + y\hat{j} + z\hat{k})\sin(\omega t)$`,
       String.raw`$-\frac{K}{\omega}(\hat{i} - y\hat{j} + z\hat{k})\sin(\omega t)$`,
-      String.raw`$-\frac{K}{\omega}(\hat{i} + y\hat{j} + z\hat{k})\sin(\omega t)$`
+      String.raw`$-\frac{K}{\omega}(\hat{i} + y\hat{j} + z\hat{k})\sin(\omega t)$`,
     ],
-    "detailedSolution": String.raw`According to Faraday's law of induction in differential form, the curl of the electric field is related to the time rate of change of the magnetic field:
+
+    detailedSolution: String.raw`According to Faraday's law of induction in differential form, the curl of the electric field is related to the time rate of change of the magnetic field:
 $$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$$
 First, we compute the curl of the given electric field $\vec{E} = K(yz\hat{i} + 3z\hat{j} + 4y\hat{k})\cos(\omega t)$.
 $$ \nabla \times \vec{E} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ E_x & E_y & E_z \end{vmatrix} $$
@@ -12422,21 +13856,30 @@ $$\vec{B} = -\int K(\hat{i} + y\hat{j} - z\hat{k})\cos(\omega t) dt$$
 $$\vec{B} = -K(\hat{i} + y\hat{j} - z\hat{k}) \frac{\sin(\omega t)}{\omega}$$
 $$\vec{B} = -\frac{K}{\omega}(\hat{i} + y\hat{j} - z\hat{k})\sin(\omega t)$$
 This perfectly matches option (A)[cite: 1].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 28,
-    "year": 2021,
-    "subject": "Fourier Series",
-    "type": "MCQ",
-    "question": String.raw`In the Fourier series expansion of two functions $f_1(t) = 4t^2 + 3$ and $f_2(t) = 6t^3 + 7t$ in the interval $-\frac{T}{2}$ to $+\frac{T}{2}$, the Fourier coefficients $a_n$ and $b_n$ ($a_n$ and $b_n$ are coefficients of $\cos(n\omega t)$ and $\sin(n\omega t)$, respectively) satisfy`,
-    "options": [
+    id: 28,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Fourier Series",
+    subjectId: "math",
+    tags: ["Fourier Series","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`In the Fourier series expansion of two functions $f_1(t) = 4t^2 + 3$ and $f_2(t) = 6t^3 + 7t$ in the interval $-\frac{T}{2}$ to $+\frac{T}{2}$, the Fourier coefficients $a_n$ and $b_n$ ($a_n$ and $b_n$ are coefficients of $\cos(n\omega t)$ and $\sin(n\omega t)$, respectively) satisfy`,
+
+    options: [
       String.raw`$a_n = 0$ and $b_n \neq 0$ for $f_1(t)$; $a_n \neq 0$ and $b_n = 0$ for $f_2(t)$`,
       String.raw`$a_n \neq 0$ and $b_n = 0$ for $f_1(t)$; $a_n = 0$ and $b_n \neq 0$ for $f_2(t)$`,
       String.raw`$a_n \neq 0$ and $b_n \neq 0$ for $f_1(t)$; $a_n = 0$ and $b_n \neq 0$ for $f_2(t)$`,
-      String.raw`$a_n = 0$ and $b_n \neq 0$ for $f_1(t)$; $a_n \neq 0$ and $b_n \neq 0$ for $f_2(t)$`
+      String.raw`$a_n = 0$ and $b_n \neq 0$ for $f_1(t)$; $a_n \neq 0$ and $b_n \neq 0$ for $f_2(t)$`,
     ],
-    "detailedSolution": String.raw`The properties of Fourier series depend heavily on the symmetry (parity) of the function being expanded over a symmetric interval $[-\frac{T}{2}, \frac{T}{2}]$.
+
+    detailedSolution: String.raw`The properties of Fourier series depend heavily on the symmetry (parity) of the function being expanded over a symmetric interval $[-\frac{T}{2}, \frac{T}{2}]$.
 1.  **Analyze $f_1(t)$:**
     $$f_1(t) = 4t^2 + 3$$
     Let's check its parity: $f_1(-t) = 4(-t)^2 + 3 = 4t^2 + 3 = f_1(t)$.
@@ -12452,23 +13895,32 @@ This perfectly matches option (A)[cite: 1].`,
     Therefore, for $f_2(t)$: $a_n = 0$ and $b_n \neq 0$.
 
 Combining these results, $a_n \neq 0$ and $b_n = 0$ for $f_1(t)$; $a_n = 0$ and $b_n \neq 0$ for $f_2(t)$. This perfectly matches option (B)[cite: 1].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 29,
-    "year": 2021,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`A thin circular disc lying in the $xy$-plane has a surface mass density $\sigma$, given by
+    id: 29,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A thin circular disc lying in the $xy$-plane has a surface mass density $\sigma$, given by
 $$\sigma(r) = \begin{cases} \sigma_0\left(1 - \frac{r^2}{R^2}\right) & \text{if } r \le R \\ 0 & \text{if } r > R \end{cases}$$
 where $r$ is the distance from its center. Its moment of inertia about the $z$-axis, passing through its center is`,
-    "options": [
+
+    options: [
       String.raw`$\frac{\sigma_0 R^4}{4}$`,
       String.raw`$\frac{\pi \sigma_0 R^4}{6}$`,
       String.raw`$\sigma_0 R^4$`,
-      String.raw`$2\pi \sigma_0 R^4$`
+      String.raw`$2\pi \sigma_0 R^4$`,
     ],
-    "detailedSolution": String.raw`The moment of inertia $I$ of a continuous mass distribution about a given axis is calculated as:
+
+    detailedSolution: String.raw`The moment of inertia $I$ of a continuous mass distribution about a given axis is calculated as:
 $$I = \int r^2 dm$$
 For a thin 2D disc with variable surface mass density $\sigma(r)$, we can divide the disc into infinitesimal concentric rings of radius $r$ and thickness $dr$. The area of such a ring is $dA = 2\pi r \, dr$.
 The mass of this infinitesimal ring is $dm = \sigma(r) \, dA = \sigma(r) 2\pi r \, dr$.
@@ -12486,21 +13938,30 @@ Find a common denominator:
 $$I = 2\pi \sigma_0 R^4 \left( \frac{3 - 2}{12} \right) = 2\pi \sigma_0 R^4 \left( \frac{1}{12} \right)$$
 $$I = \frac{\pi \sigma_0 R^4}{6}$$
 This matches option (B)[cite: 1].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 30,
-    "year": 2021,
-    "subject": "Newtonian Mechanics",
-    "type": "MCQ",
-    "question": String.raw`The radial component of acceleration in plane polar coordinates is given by`,
-    "options": [
+    id: 30,
+    year: 2021,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`The radial component of acceleration in plane polar coordinates is given by`,
+
+    options: [
       String.raw`$\frac{d^2r}{dt^2}$`,
       String.raw`$\frac{d^2r}{dt^2} - r \left(\frac{d\theta}{dt}\right)^2$`,
       String.raw`$\frac{d^2r}{dt^2} + r \left(\frac{d\theta}{dt}\right)^2$`,
-      String.raw`$2\frac{dr}{dt}\frac{d\theta}{dt} + r\frac{d^2\theta}{dt^2}$`
+      String.raw`$2\frac{dr}{dt}\frac{d\theta}{dt} + r\frac{d^2\theta}{dt^2}$`,
     ],
-    "detailedSolution": String.raw`In plane polar coordinates $(r, \theta)$, the position vector of a particle is given by:
+
+    detailedSolution: String.raw`In plane polar coordinates $(r, \theta)$, the position vector of a particle is given by:
 $$\vec{r} = r\hat{e}_r$$
 where $\hat{e}_r$ is the unit vector in the radial direction. As the particle moves, $\hat{e}_r$ changes direction, so its time derivative is non-zero: $\frac{d\hat{e}_r}{dt} = \dot{\theta}\hat{e}_\theta$.
 The velocity vector is the first time derivative of the position vector:
@@ -12514,21 +13975,30 @@ $$\vec{a} = (\ddot{r} - r\dot{\theta}^2)\hat{e}_r + (r\ddot{\theta} + 2\dot{r}\d
 The component in the $\hat{e}_r$ direction is the radial acceleration $a_r$:
 $$a_r = \ddot{r} - r\dot{\theta}^2 = \frac{d^2r}{dt^2} - r \left(\frac{d\theta}{dt}\right)^2$$
 The term $\frac{d^2r}{dt^2}$ is the linear acceleration along the radius, and $-r(\frac{d\theta}{dt})^2$ is the centripetal acceleration. This expression matches option (B)[cite: 1].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 31,
-    "year": 2021,
-    "subject": "Thermodynamic Processes",
-    "type": "MSQ",
-    "question": String.raw`A gaseous system, enclosed in an adiabatic container, is in equilibrium at pressure $P_1$ and volume $V_1$. Work is done on the system in a quasi-static manner due to which the pressure and volume change to $P_2$ and $V_2$, respectively, in the final equilibrium state. At every instant, the pressure and volume obey the condition $PV^\gamma = C$, where $\gamma = \frac{C_P}{C_V}$ and $C$ is a constant. If the work done is zero, then identify the correct statement(s).`,
-    "options": [
+    id: 31,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`A gaseous system, enclosed in an adiabatic container, is in equilibrium at pressure $P_1$ and volume $V_1$. Work is done on the system in a quasi-static manner due to which the pressure and volume change to $P_2$ and $V_2$, respectively, in the final equilibrium state. At every instant, the pressure and volume obey the condition $PV^\gamma = C$, where $\gamma = \frac{C_P}{C_V}$ and $C$ is a constant. If the work done is zero, then identify the correct statement(s).`,
+
+    options: [
       String.raw`$P_2V_2 = P_1V_1$`,
       String.raw`$P_2V_2 = \gamma P_1V_1$`,
       String.raw`$P_2V_2 = (\gamma + 1)P_1V_1$`,
-      String.raw`$P_2V_2 = (\gamma - 1)P_1V_1$`
+      String.raw`$P_2V_2 = (\gamma - 1)P_1V_1$`,
     ],
-    "detailedSolution": String.raw`The process is described as a quasi-static adiabatic process, for which the relation $PV^\gamma = C$ holds true at every instant.
+
+    detailedSolution: String.raw`The process is described as a quasi-static adiabatic process, for which the relation $PV^\gamma = C$ holds true at every instant.
 The work done $W$ by an ideal gas during a quasi-static adiabatic process from state $(P_1, V_1)$ to state $(P_2, V_2)$ is given by integrating $P \, dV$:
 $$W = \int_{V_1}^{V_2} P \, dV = \int_{V_1}^{V_2} \frac{C}{V^\gamma} \, dV$$
 Evaluating this integral yields the standard formula for adiabatic work:
@@ -12539,21 +14009,30 @@ Since $\gamma$ is the heat capacity ratio ($\gamma > 1$ for gases), the denomina
 $$P_1V_1 - P_2V_2 = 0$$
 $$P_2V_2 = P_1V_1$$
 This is the required relationship between the initial and final states under the specific condition that the work done evaluates to zero. This matches statement (A)[cite: 1].`,
-    "correctAnswers": [0]
+
+    correctAnswers: [0],
   },
+
   {
-    "id": 32,
-    "year": 2021,
-    "subject": "Thermodynamic Processes",
-    "type": "MSQ",
-    "question": String.raw`An isolated ideal gas is kept at a pressure $P_1$ and volume $V_1$. The gas undergoes free expansion and attains a pressure $P_2$ and volume $V_2$. Identify the correct statement(s). ($\gamma = \frac{C_P}{C_V}$)`,
-    "options": [
+    id: 32,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`An isolated ideal gas is kept at a pressure $P_1$ and volume $V_1$. The gas undergoes free expansion and attains a pressure $P_2$ and volume $V_2$. Identify the correct statement(s). ($\gamma = \frac{C_P}{C_V}$)`,
+
+    options: [
       String.raw`This is an adiabatic process`,
       String.raw`$P_1V_1 = P_2V_2$`,
       String.raw`$P_1V_1^\gamma = P_2V_2^\gamma$`,
-      String.raw`This is an isobaric process`
+      String.raw`This is an isobaric process`,
     ],
-    "detailedSolution": String.raw`Let's analyze the characteristics of a "free expansion" process for an ideal gas:
+
+    detailedSolution: String.raw`Let's analyze the characteristics of a "free expansion" process for an ideal gas:
 1.  **Isolated System:** The gas is isolated, meaning there is no heat exchange with the surroundings. Thus, the heat transfer $Q = 0$. By definition, any process where $Q = 0$ is an **adiabatic process**. Therefore, statement (A) is correct.
 2.  **Work Done:** In free expansion, the gas expands against a vacuum. Because there is no opposing external pressure ($P_{ext} = 0$), the gas does no macroscopic work. Thus, $W = 0$.
 3.  **Internal Energy & Temperature:** According to the First Law of Thermodynamics, $\Delta U = Q - W$. Since both $Q = 0$ and $W = 0$, the change in internal energy is $\Delta U = 0$.
@@ -12566,22 +14045,32 @@ This is the required relationship between the initial and final states under the
     *   Statement (D) claims it is isobaric. Because the volume increases and temperature is constant, Boyle's law ($P \propto 1/V$) dictates that the pressure must decrease. Thus, $P_1 \neq P_2$, and the process is not isobaric.
 
 Therefore, the correct statements are (A) and (B)[cite: 1].`,
-    "correctAnswers": [0, 1]
+
+    correctAnswers: [0,1],
   },
+
   {
-    "id": 33,
-    "year": 2021,
-    "subject": "Polarization",
-    "type": "MSQ",
-    "question": String.raw`A beam of light traveling horizontally consists of an unpolarized component with intensity $I_0$ and a polarized component with intensity $I_p$. The plane of polarization is oriented at an angle $\theta$ with respect to the vertical. The figure shows the total intensity $I_{total}$ after the light passes through a polarizer as a function of the angle $\alpha$, that the axis of the polarizer makes with respect to the vertical. Identify the correct statement(s).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/33_21.png",
-    "options": [
+    id: 33,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`A beam of light traveling horizontally consists of an unpolarized component with intensity $I_0$ and a polarized component with intensity $I_p$. The plane of polarization is oriented at an angle $\theta$ with respect to the vertical. The figure shows the total intensity $I_{total}$ after the light passes through a polarizer as a function of the angle $\alpha$, that the axis of the polarizer makes with respect to the vertical. Identify the correct statement(s).`,
+
+    options: [
       String.raw`$\theta = 125^\circ$`,
       String.raw`$I_p = 5\text{ W/m}^2$`,
       String.raw`$I_0 = 17.5\text{ W/m}^2$`,
-      String.raw`$I_0 = 10\text{ W/m}^2; I_p = 20\text{ W/m}^2$`
+      String.raw`$I_0 = 10\text{ W/m}^2; I_p = 20\text{ W/m}^2$`,
     ],
-    "detailedSolution": String.raw`When the mixed beam passes through a polarizer, the transmitted intensity consists of two parts:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/33_21.png",
+
+    detailedSolution: String.raw`When the mixed beam passes through a polarizer, the transmitted intensity consists of two parts:
 1.  **Unpolarized component:** A polarizer transmits exactly half of the unpolarized intensity, regardless of its orientation. Transmitted part = $\frac{I_0}{2}$.
 2.  **Polarized component:** According to Malus's Law, the transmitted intensity of the polarized component is $I_p \cos^2(\alpha - \theta)$, where $\alpha - \theta$ is the angle between the transmission axis of the polarizer and the plane of polarization.
 
@@ -12603,23 +14092,32 @@ $$5 + I_p = 25 \implies I_p = 20\text{ W/m}^2$$
 We found $I_0 = 10\text{ W/m}^2$ and $I_p = 20\text{ W/m}^2$. This directly matches option (D).
 Let's also check $\theta$: Maximum intensity is at $\alpha = 35^\circ$, which implies $\theta = 35^\circ$. Thus (A) is incorrect.
 Therefore, only statement (D) is correct[cite: 1].`,
-    "correctAnswers": [3]
+
+    correctAnswers: [3],
   },
+
   {
-    "id": 34,
-    "year": 2021,
-    "subject": "Damped & Forced Oscillations",
-    "type": "MSQ",
-    "question": String.raw`Consider the following differential equation that describes the oscillations of a physical system:
+    id: 34,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Damped & Forced Oscillations",
+    subjectId: "waves",
+    tags: ["Damped & Forced Oscillations","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`Consider the following differential equation that describes the oscillations of a physical system:
 $$\alpha \frac{d^2y}{dt^2} + \beta \frac{dy}{dt} + \gamma y = 0$$
 If $\alpha$ and $\beta$ are held fixed, and $\gamma$ is increased, then,`,
-    "options": [
+
+    options: [
       String.raw`the frequency of oscillations increases`,
       String.raw`the oscillations decay faster`,
       String.raw`the frequency of oscillations decreases`,
-      String.raw`the oscillations decay slower`
+      String.raw`the oscillations decay slower`,
     ],
-    "detailedSolution": String.raw`The given differential equation describes a damped harmonic oscillator. We can rewrite it in the standard form by dividing by $\alpha$:
+
+    detailedSolution: String.raw`The given differential equation describes a damped harmonic oscillator. We can rewrite it in the standard form by dividing by $\alpha$:
 $$\frac{d^2y}{dt^2} + \frac{\beta}{\alpha} \frac{dy}{dt} + \frac{\gamma}{\alpha} y = 0$$
 Comparing this to the standard equation for a damped oscillator $\ddot{y} + 2\Gamma \dot{y} + \omega_0^2 y = 0$:
 *   The undamped natural frequency squared is $\omega_0^2 = \frac{\gamma}{\alpha}$.
@@ -12632,22 +14130,32 @@ The decay of the oscillations is governed by the factor $e^{-\Gamma t}$. The rat
 If $\alpha$ and $\beta$ are held fixed, the decay rate $\Gamma$ remains constant. Therefore, the oscillations decay at the same rate, making options (B) and (D) incorrect.
 If $\gamma$ is increased while $\alpha$ and $\beta$ are fixed, the term $\frac{\gamma}{\alpha}$ increases. Consequently, the term inside the square root for $\omega_d$ increases, meaning the frequency of oscillations $\omega_d$ increases. 
 Thus, statement (A) is correct[cite: 1].`,
-    "correctAnswers": [0]
+
+    correctAnswers: [0],
   },
+
   {
-    "id": 35,
-    "year": 2021,
-    "subject": "Operational Amplifiers",
-    "type": "MSQ",
-    "question": String.raw`For the given circuit, identify the correct statement(s).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/35_21.png",
-    "options": [
+    id: 35,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics"],
+    type: "MSQ",
+
+    question: String.raw`For the given circuit, identify the correct statement(s).`,
+
+    options: [
       String.raw`$I_o = 1\text{ mA}$`,
       String.raw`$V_o = 3\text{ V}$`,
       String.raw`If $R_L$ is doubled, $I_o$ will change to $0.5\text{ mA}$`,
-      String.raw`If $R_L$ is doubled, $V_o$ will change to $6\text{ V}$`
+      String.raw`If $R_L$ is doubled, $V_o$ will change to $6\text{ V}$`,
     ],
-    "detailedSolution": String.raw`The circuit shown is a type of voltage-to-current converter, commonly known as a Howland Current Pump. Let's analyze it assuming an ideal operational amplifier.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/35_21.png",
+
+    detailedSolution: String.raw`The circuit shown is a type of voltage-to-current converter, commonly known as a Howland Current Pump. Let's analyze it assuming an ideal operational amplifier.
 Let $V_+$ and $V_-$ be the voltages at the non-inverting and inverting terminals, respectively. For an ideal op-amp in the linear region, $V_+ = V_-$.
 Let $R = 1\text{ k}\Omega$.
 
@@ -12679,21 +14187,30 @@ Let $R = 1\text{ k}\Omega$.
         So, statement (D) is correct.
 
 Therefore, the correct statements are (A), (B), and (D)[cite: 1].`,
-    "correctAnswers": [0, 1, 3]
+
+    correctAnswers: [0,1,3],
   },
+
   {
-    "id": 36,
-    "year": 2021,
-    "subject": "Carnot Cycle",
-    "type": "MSQ",
-    "question": String.raw`A Carnot engine operates between two temperatures, $T_L = 100\text{ K}$ and $T_H = 150\text{ K}$. Each cycle of the engine lasts for $0.5$ seconds during which the power delivered is $500\text{ J/second}$. Let $Q_H$ be the corresponding heat absorbed by the engine and $Q_L$ be the heat lost. Identify the correct statement(s).`,
-    "options": [
+    id: 36,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Carnot Cycle",
+    subjectId: "thermo",
+    tags: ["Carnot Cycle","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`A Carnot engine operates between two temperatures, $T_L = 100\text{ K}$ and $T_H = 150\text{ K}$. Each cycle of the engine lasts for $0.5$ seconds during which the power delivered is $500\text{ J/second}$. Let $Q_H$ be the corresponding heat absorbed by the engine and $Q_L$ be the heat lost. Identify the correct statement(s).`,
+
+    options: [
       String.raw`$Q_H = 750\text{ J}$`,
       String.raw`$\frac{Q_H}{Q_L} \le \frac{2}{3}$`,
       String.raw`The change in entropy of the engine and the hot bath in a cycle is $5\text{ J/K}$`,
-      String.raw`The change in entropy of the engine in $0.5$ seconds is zero`
+      String.raw`The change in entropy of the engine in $0.5$ seconds is zero`,
     ],
-    "detailedSolution": String.raw`**1. Calculate the efficiency ($\eta$) of the Carnot engine:**
+
+    detailedSolution: String.raw`**1. Calculate the efficiency ($\eta$) of the Carnot engine:**
 $$\eta = 1 - \frac{T_L}{T_H} = 1 - \frac{100\text{ K}}{150\text{ K}} = 1 - \frac{2}{3} = \frac{1}{3}$$
 
 **2. Calculate the work done ($W$) per cycle:**
@@ -12717,21 +14234,30 @@ Since $1.5$ is not less than or equal to $2/3$, statement (B) is incorrect.
 *   **Total (Engine + Hot Bath):** The combined entropy change of the engine and the hot bath is $0 + (-5\text{ J/K}) = -5\text{ J/K}$. The magnitude of this entropy transfer is $5\text{ J/K}$. Statement (C) correctly identifies this magnitude[cite: 1].
 
 Therefore, the correct statements are (A), (C), and (D).`,
-    "correctAnswers": [0, 2, 3]
+
+    correctAnswers: [0,2,3],
   },
+
   {
-    "id": 37,
-    "year": 2021,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "MSQ",
-    "question": String.raw`A time independent conservative force $\vec{F}$ has the form, $\vec{F} = 3y\hat{i} + f(x,y)\hat{j}$. Its magnitude at $x = y = 0$ is $8$. The allowed form(s) of $f(x,y)$ is(are)`,
-    "options": [
+    id: 37,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`A time independent conservative force $\vec{F}$ has the form, $\vec{F} = 3y\hat{i} + f(x,y)\hat{j}$. Its magnitude at $x = y = 0$ is $8$. The allowed form(s) of $f(x,y)$ is(are)`,
+
+    options: [
       String.raw`$3x + 8$`,
       String.raw`$2x + 8(y - 1)^2$`,
       String.raw`$3x + 8e^{-y^2}$`,
-      String.raw`$2x + 8\cos y$`
+      String.raw`$2x + 8\cos y$`,
     ],
-    "detailedSolution": String.raw`For a force $\vec{F} = F_x\hat{i} + F_y\hat{j}$ to be conservative, its curl must be zero: $\nabla \times \vec{F} = \vec{0}$. In two dimensions, this condition simplifies to:
+
+    detailedSolution: String.raw`For a force $\vec{F} = F_x\hat{i} + F_y\hat{j}$ to be conservative, its curl must be zero: $\nabla \times \vec{F} = \vec{0}$. In two dimensions, this condition simplifies to:
 $$\frac{\partial F_y}{\partial x} = \frac{\partial F_x}{\partial y}$$
 Given $\vec{F} = 3y\hat{i} + f(x,y)\hat{j}$, we have $F_x = 3y$ and $F_y = f(x,y)$.
 Substitute these into the conservative force condition:
@@ -12751,22 +14277,32 @@ Let's test the remaining options:
 *   **(C)** $f(x,y) = 3x + 8e^{-y^2}$. Here, $f(0,0) = 3(0) + 8e^0 = 8$. This satisfies all conditions.
 
 Therefore, both (A) and (C) are allowed forms[cite: 1].`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 38,
-    "year": 2021,
-    "subject": "Geometrical Optics",
-    "type": "MSQ",
-    "question": String.raw`The figure shows the cross-section of a hollow cylindrical tank, $2.2\text{ m}$ in diameter, which is half filled with water (refractive index of $1.33$). The space above the water is filled with a gas of unknown refractive index. A small laser moves along the bottom surface and aims a light beam towards the center (see figure). When the laser moves a distance of $S = 1.09\text{ m}$ or beyond from the lowest point in the water, no light enters the gas. Identify the correct statement(s) (speed of light is $3 \times 10^8\text{ m/s}$).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/38_21.png",
-    "options": [
+    id: 38,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`The figure shows the cross-section of a hollow cylindrical tank, $2.2\text{ m}$ in diameter, which is half filled with water (refractive index of $1.33$). The space above the water is filled with a gas of unknown refractive index. A small laser moves along the bottom surface and aims a light beam towards the center (see figure). When the laser moves a distance of $S = 1.09\text{ m}$ or beyond from the lowest point in the water, no light enters the gas. Identify the correct statement(s) (speed of light is $3 \times 10^8\text{ m/s}$).`,
+
+    options: [
       String.raw`The refractive index of the gas is $1.05$`,
       String.raw`The time taken for the light beam to travel from the laser to the rim of the tank when $S < 1.09\text{ m}$ is $8.9\text{ ns}$`,
       String.raw`The time taken for the light beam to travel from the laser to the rim of the tank when $S > 1.09\text{ m}$ is $9.7\text{ ns}$`,
-      String.raw`The critical angle for the water-gas interface is $56.77^\circ$`
+      String.raw`The critical angle for the water-gas interface is $56.77^\circ$`,
     ],
-    "detailedSolution": String.raw`Let the radius of the tank be $R = \frac{2.2\text{ m}}{2} = 1.1\text{ m}$. The refractive index of water is $n_w = 1.33$.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/38_21.png",
+
+    detailedSolution: String.raw`Let the radius of the tank be $R = \frac{2.2\text{ m}}{2} = 1.1\text{ m}$. The refractive index of water is $n_w = 1.33$.
 The laser is aimed toward the center, so the light travels radially. At the flat water-gas interface, the normal is vertical. The angle of incidence $\theta_i$ equals the central angle subtended by the arc length $S$.
 $$\theta_i = \frac{S}{R}$$
 When $S = 1.09\text{ m}$, total internal reflection (TIR) begins, meaning this corresponds to the critical angle $\theta_c$.
@@ -12791,21 +14327,30 @@ $$t = \frac{2R}{v_w} = \frac{2R \cdot n_w}{c} = \frac{2.2 \times 1.33}{3 \times 
 This matches $9.7\text{ ns}$, making statement (C) correct[cite: 1].
 
 Therefore, statements (B), (C), and (D) are correct.`,
-    "correctAnswers": [1, 2, 3]
+
+    correctAnswers: [1,2,3],
   },
+
   {
-    "id": 39,
-    "year": 2021,
-    "subject": "Nuclear Physics",
-    "type": "MSQ",
-    "question": String.raw`Identify the correct statement(s) regarding nuclei`,
-    "options": [
+    id: 39,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`Identify the correct statement(s) regarding nuclei`,
+
+    options: [
       String.raw`The uncertainty in the momentum of a proton in a nucleus is roughly $10^5$ times the uncertainty in the momentum of the electron in the ground state of Hydrogen atom`,
       String.raw`The volume of a nucleus grows linearly with the number of nucleons in it`,
       String.raw`The energy of $\gamma$ rays due to de-excitation of a nucleus can be of the order of MeV`,
-      String.raw`$^{56}\text{Fe}$ is the most stable nucleus`
+      String.raw`$^{56}\text{Fe}$ is the most stable nucleus`,
     ],
-    "detailedSolution": String.raw`Let's evaluate each statement:
+
+    detailedSolution: String.raw`Let's evaluate each statement:
 *   **(A)** By Heisenberg's Uncertainty Principle, $\Delta x \Delta p \approx \hbar$. The confinement size (uncertainty in position) for a proton in a nucleus is roughly the nuclear radius, $\Delta x_p \sim 10^{-15}\text{ m}$. For an electron in a Hydrogen atom, it's the Bohr radius, $\Delta x_e \sim 10^{-10}\text{ m}$. 
     The ratio of their momentum uncertainties is $\frac{\Delta p_p}{\Delta p_e} \approx \frac{\hbar/\Delta x_p}{\hbar/\Delta x_e} = \frac{\Delta x_e}{\Delta x_p} \approx \frac{10^{-10}}{10^{-15}} = 10^5$. This statement is correct.
 *   **(B)** The radius of a nucleus is empirically given by $R = R_0 A^{1/3}$, where $A$ is the mass number (number of nucleons). The volume is $V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi R_0^3 A$. This shows that the volume $V$ is directly proportional to $A$ (it grows linearly). This statement is correct.
@@ -12813,21 +14358,30 @@ Therefore, statements (B), (C), and (D) are correct.`,
 *   **(D)** While $^{56}\text{Fe}$ is commonly cited in introductory physics texts as the most stable nucleus (having the highest binding energy per nucleon), more precise modern measurements show that $^{62}\text{Ni}$ and $^{58}\text{Fe}$ actually have slightly higher binding energy per nucleon than $^{56}\text{Fe}$. However, in many academic contexts, statement (D) is accepted as colloquially correct. The official answer key accepts both combinations (A,B,C) and (A,B,C,D)[cite: 1].
 
 Based on rigorous physics consensus, (A), (B), and (C) are definitively correct.`,
-    "correctAnswers": [0, 1, 2]
+
+    correctAnswers: [0,1,2],
   },
+
   {
-    "id": 40,
-    "year": 2021,
-    "subject": "Quantum Mechanics",
-    "type": "MSQ",
-    "question": String.raw`A particle of mass $m$ is in an infinite square well potential of length $L$. It is in a superposed state of the first two energy eigenstates, as given by $\psi(x) = \frac{1}{\sqrt{3}}\psi_{n=1}(x) + \sqrt{\frac{2}{3}}\psi_{n=2}(x)$. Identify the correct statement(s). $h$ is Planck's constant.`,
-    "options": [
+    id: 40,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`A particle of mass $m$ is in an infinite square well potential of length $L$. It is in a superposed state of the first two energy eigenstates, as given by $\psi(x) = \frac{1}{\sqrt{3}}\psi_{n=1}(x) + \sqrt{\frac{2}{3}}\psi_{n=2}(x)$. Identify the correct statement(s). $h$ is Planck's constant.`,
+
+    options: [
       String.raw`$\langle p \rangle = 0$`,
       String.raw`$\Delta p = \frac{\sqrt{3}h}{2L}$`,
       String.raw`$\langle E \rangle = \frac{3h^2}{8mL^2}$`,
-      String.raw`$\Delta x = 0$`
+      String.raw`$\Delta x = 0$`,
     ],
-    "detailedSolution": String.raw`The given superposition state is $\psi = c_1\psi_1 + c_2\psi_2$ with $c_1 = \frac{1}{\sqrt{3}}$ and $c_2 = \sqrt{\frac{2}{3}}$.
+
+    detailedSolution: String.raw`The given superposition state is $\psi = c_1\psi_1 + c_2\psi_2$ with $c_1 = \frac{1}{\sqrt{3}}$ and $c_2 = \sqrt{\frac{2}{3}}$.
 Note that $c_1^2 + c_2^2 = \frac{1}{3} + \frac{2}{3} = 1$, so the state is properly normalized.
 
 **1. Expectation value of momentum $\langle p \rangle$:**
@@ -12853,16 +14407,23 @@ Statement (B) is correct[cite: 1].
 By the Heisenberg Uncertainty Principle, $\Delta x \Delta p \ge \frac{\hbar}{2}$, so $\Delta x$ can never be exactly zero for a physical state. Statement (D) is incorrect.
 
 Therefore, the correct statements are (A), (B), and (C).`,
-    "correctAnswers": [0, 1, 2]
+
+    correctAnswers: [0,1,2],
   },
+
   {
-    "id": 41,
-    "year": 2021,
-    "subject": "Calculus",
-    "type": "NAT",
-    "question": String.raw`One of the roots of the equation, $z^6 - 3z^4 - 16 = 0$ is given by $z_1 = 2$. The value of the product of the other five roots is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`Consider the polynomial equation $P(z) = z^6 - 3z^4 - 16 = 0$.
+    id: 41,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`One of the roots of the equation, $z^6 - 3z^4 - 16 = 0$ is given by $z_1 = 2$. The value of the product of the other five roots is _______.`,
+
+    detailedSolution: String.raw`Consider the polynomial equation $P(z) = z^6 - 3z^4 - 16 = 0$.
 Let its six roots in the complex plane be $z_1, z_2, z_3, z_4, z_5$, and $z_6$.
 According to Vieta's formulas, the product of all the roots of an $n$-th degree polynomial equation $a_n z^n + a_{n-1} z^{n-1} + \dots + a_0 = 0$ is given by:
 $$\prod_{i=1}^{n} z_i = (-1)^n \frac{a_0}{a_n}$$
@@ -12879,17 +14440,25 @@ Let $P_{other}$ be the product of the remaining five roots.
 $$2 \cdot P_{other} = -16$$
 $$P_{other} = \frac{-16}{2} = -8$$
 The value of the product of the other five roots is $-8$[cite: 1].`,
-    correctAnswer: -8
+
+    correctAnswer: -8,
   },
+
   {
-    "id": 42,
-    "year": 2021,
-    "subject": "p-n Junction & Diodes",
-    "type": "NAT",
-    "question": String.raw`The following Zener diode voltage regulator circuit is used to obtain $20\text{ V}$ regulated output at load resistance $R_L$ from a $35\text{ V}$ dc power supply. Zener diodes are rated at $5\text{W}$ and $10\text{V}$. The value of the resistance $R$ is _______ $\Omega$.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/42_21.png",
-    "options": [],
-    "detailedSolution": String.raw`The two Zener diodes are connected in series. Each has a Zener voltage of $10\text{ V}$.
+    id: 42,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`The following Zener diode voltage regulator circuit is used to obtain $20\text{ V}$ regulated output at load resistance $R_L$ from a $35\text{ V}$ dc power supply. Zener diodes are rated at $5\text{W}$ and $10\text{V}$. The value of the resistance $R$ is _______ $\Omega$.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/42_21.png",
+
+    detailedSolution: String.raw`The two Zener diodes are connected in series. Each has a Zener voltage of $10\text{ V}$.
 The total regulated output voltage is:
 $$V_{Z,total} = 10\text{ V} + 10\text{ V} = 20\text{ V}$$
 This matches the required $20\text{ V}$ output.
@@ -12903,16 +14472,23 @@ $$35\text{ V} - (0.5\text{ A})R - 20\text{ V} = 0$$
 $$15\text{ V} = 0.5 R$$
 $$R = \frac{15}{0.5} = 30\ \Omega$$
 The minimum value of the resistance $R$ required to ensure safe operation under all load conditions is $30\ \Omega$[cite: 1].`,
-    correctAnswer: 30
+
+    correctAnswer: 30,
   },
+
   {
-    "id": 43,
-    "year": 2021,
-    "subject": "Magnetostatics",
-    "type": "NAT",
-    "question": String.raw`A small conducting square loop of side $l$ is placed inside a concentric large conducting square loop of side $L$ ($L \gg l$). The value of mutual inductance of the system is expressed as $\frac{n\mu_0 l^2}{\pi L}$. The value of $n$ is _______ (Round off to two decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`To find the mutual inductance $M$, we assume a current $I$ flows in the outer large loop and calculate the magnetic flux it produces through the inner small loop.
+    id: 43,
+    year: 2021,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`A small conducting square loop of side $l$ is placed inside a concentric large conducting square loop of side $L$ ($L \gg l$). The value of mutual inductance of the system is expressed as $\frac{n\mu_0 l^2}{\pi L}$. The value of $n$ is _______ (Round off to two decimal places).`,
+
+    detailedSolution: String.raw`To find the mutual inductance $M$, we assume a current $I$ flows in the outer large loop and calculate the magnetic flux it produces through the inner small loop.
 Since $L \gg l$, the magnetic field produced by the large loop is approximately uniform over the area of the small loop and equal to the field at its center.
 The magnetic field at the center of a square loop of side $L$ carrying current $I$ can be found using the Biot-Savart law. The field due to one side of the square at the center (perpendicular distance $d = L/2$) is:
 $$B_1 = \frac{\mu_0 I}{4\pi d} (\sin 45^\circ + \sin 45^\circ) = \frac{\mu_0 I}{4\pi (L/2)} \left(\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right) = \frac{\mu_0 I}{2\pi L} (\sqrt{2})$$
@@ -12925,16 +14501,23 @@ $$M = \frac{\Phi}{I} = \frac{2\sqrt{2} \mu_0 l^2}{\pi L}$$
 We are given that $M = \frac{n\mu_0 l^2}{\pi L}$. Comparing the two expressions:
 $$n = 2\sqrt{2} \approx 2 \times 1.414 = 2.828$$
 Rounding to two decimal places, $n = 2.83$[cite: 1].`,
-    correctAnswer: 2.83
+
+    correctAnswer: 2.83,
   },
+
   {
-    "id": 44,
-    "year": 2021,
-    "subject": "Kinetic Theory of Gases",
-    "type": "NAT",
-    "question": String.raw`Consider $N_1$ number of ideal gas particles enclosed in a volume $V_1$. If the volume is changed to $V_2$ and the number of particles is reduced by half, the mean free path becomes four times of its initial value. The ratio $\frac{V_1}{V_2}$ is _______ (Round off to one decimal place).`,
-    "options": [],
-    "detailedSolution": String.raw`The mean free path $\lambda$ of gas molecules is given by the formula:
+    id: 44,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Kinetic Theory of Gases",
+    subjectId: "thermo",
+    tags: ["Kinetic Theory of Gases","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`Consider $N_1$ number of ideal gas particles enclosed in a volume $V_1$. If the volume is changed to $V_2$ and the number of particles is reduced by half, the mean free path becomes four times of its initial value. The ratio $\frac{V_1}{V_2}$ is _______ (Round off to one decimal place).`,
+
+    detailedSolution: String.raw`The mean free path $\lambda$ of gas molecules is given by the formula:
 $$\lambda = \frac{V}{\sqrt{2} \pi d^2 N}$$
 where $V$ is the volume, $N$ is the number of particles, and $d$ is the collision diameter of the molecules.
 Let the initial mean free path be $\lambda_1$:
@@ -12950,16 +14533,23 @@ $$2 = \frac{V_2}{V_1}$$
 We are asked to find the ratio $\frac{V_1}{V_2}$:
 $$\frac{V_1}{V_2} = \frac{1}{2} = 0.5$$
 The ratio is $0.5$[cite: 1].`,
-    correctAnswer: 0.5
+
+    correctAnswer: 0.5,
   },
+
   {
-    "id": 45,
-    "year": 2021,
-    "subject": "Special Relativity",
-    "type": "NAT",
-    "question": String.raw`A particle is moving with a velocity $0.8c\hat{j}$ ($c$ is the speed of light) in an inertial frame $S_1$. Frame $S_2$ is moving with a velocity $0.8c\hat{i}$ with respect to $S_1$. Let $E_1$ and $E_2$ be the respective energies of the particle in the two frames. Then, $\frac{E_2}{E_1}$ is _______ (Round off to two decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`**1. Energy in Frame $S_1$:**
+    id: 45,
+    year: 2021,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`A particle is moving with a velocity $0.8c\hat{j}$ ($c$ is the speed of light) in an inertial frame $S_1$. Frame $S_2$ is moving with a velocity $0.8c\hat{i}$ with respect to $S_1$. Let $E_1$ and $E_2$ be the respective energies of the particle in the two frames. Then, $\frac{E_2}{E_1}$ is _______ (Round off to two decimal places).`,
+
+    detailedSolution: String.raw`**1. Energy in Frame $S_1$:**
 The particle has velocity $\vec{u}_1 = 0.8c\hat{j}$. Its speed is $u_1 = 0.8c$.
 The Lorentz factor in $S_1$ is $\gamma_1 = \frac{1}{\sqrt{1 - (u_1/c)^2}} = \frac{1}{\sqrt{1 - 0.8^2}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} = \frac{5}{3}$.
 The energy in $S_1$ is $E_1 = \gamma_1 mc^2 = \frac{5}{3}mc^2$.
@@ -12981,16 +14571,23 @@ The energy in $S_2$ is $E_2 = \gamma_2 mc^2 = \frac{25}{9}mc^2$.
 **4. Calculate the ratio:**
 $$\frac{E_2}{E_1} = \frac{\frac{25}{9}mc^2}{\frac{5}{3}mc^2} = \frac{25}{9} \times \frac{3}{5} = \frac{5}{3} \approx 1.6667$$
 Rounding off to two decimal places, we get $1.67$[cite: 1].`,
-    correctAnswer: 1.67
+
+    correctAnswer: 1.67,
   },
+
   {
-    "id": 46,
-    "year": 2021,
-    "subject": "Semiconductors",
-    "type": "NAT",
-    "question": String.raw`At some temperature T, two metals A and B, have Fermi energies $\epsilon_A$ and $\epsilon_B$, respectively. The free electron density of A is 64 times that of B. The ratio $\frac{\epsilon_A}{\epsilon_B}$ is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`The Fermi energy $\epsilon_F$ of a free electron gas at absolute zero (which is approximately true for metals at room temperature) is related to the free electron density $n$ by the formula:
+    id: 46,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`At some temperature T, two metals A and B, have Fermi energies $\epsilon_A$ and $\epsilon_B$, respectively. The free electron density of A is 64 times that of B. The ratio $\frac{\epsilon_A}{\epsilon_B}$ is _______.`,
+
+    detailedSolution: String.raw`The Fermi energy $\epsilon_F$ of a free electron gas at absolute zero (which is approximately true for metals at room temperature) is related to the free electron density $n$ by the formula:
 $$\epsilon_F = \frac{\hbar^2}{2m} \left(3\pi^2 n\right)^{2/3}$$
 This shows that the Fermi energy is directly proportional to the density raised to the power of $2/3$:
 $$\epsilon_F \propto n^{2/3}$$
@@ -13000,16 +14597,23 @@ We are given that the free electron density of A is $64$ times that of B, so $n_
 Substitute this into the ratio equation:
 $$\frac{\epsilon_A}{\epsilon_B} = (64)^{2/3} = (4^3)^{2/3} = 4^2 = 16$$
 The ratio is $16$[cite: 1].`,
-    correctAnswer: 16
+
+    correctAnswer: 16,
   },
+
   {
-    "id": 47,
-    "year": 2021,
-    "subject": "Crystal Structure",
-    "type": "NAT",
-    "question": String.raw`A crystal has monoclinic structure, with lattice parameters, $a = 5.14\text{ \AA}$, $b = 5.20\text{ \AA}$, $c = 5.30\text{ \AA}$ and angle $\beta = 99^\circ$. It undergoes a phase transition to tetragonal structure with lattice parameters, $a = 5.09\text{ \AA}$ and $c = 5.27\text{ \AA}$. The fractional change in the volume $\left|\frac{\Delta V}{V}\right|$ of the crystal due to this transition is _______ (Round off to two decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`**1. Volume of the initial monoclinic structure ($V_1$):**
+    id: 47,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`A crystal has monoclinic structure, with lattice parameters, $a = 5.14\text{ \AA}$, $b = 5.20\text{ \AA}$, $c = 5.30\text{ \AA}$ and angle $\beta = 99^\circ$. It undergoes a phase transition to tetragonal structure with lattice parameters, $a = 5.09\text{ \AA}$ and $c = 5.27\text{ \AA}$. The fractional change in the volume $\left|\frac{\Delta V}{V}\right|$ of the crystal due to this transition is _______ (Round off to two decimal places).`,
+
+    detailedSolution: String.raw`**1. Volume of the initial monoclinic structure ($V_1$):**
 For a monoclinic crystal system, the lattice parameters are $a \neq b \neq c$ and angles are $\alpha = \gamma = 90^\circ, \beta \neq 90^\circ$.
 The volume of the unit cell is given by:
 $$V_1 = a b c \sin\beta$$
@@ -13027,17 +14631,25 @@ $$V_2 = (5.09)^2 \times 5.27 = 25.9081 \times 5.27 \approx 136.536\text{ \AA}^3$
 **3. Calculate the fractional change in volume:**
 $$\left|\frac{\Delta V}{V}\right| = \left|\frac{V_2 - V_1}{V_1}\right| = \frac{|136.536 - 139.91|}{139.91} = \frac{3.374}{139.91} \approx 0.0241$$
 Rounding off to two decimal places, the fractional change is $0.02$[cite: 1].`,
-    correctAnswer: 0.02
+
+    correctAnswer: 0.02,
   },
+
   {
-    "id": 48,
-    "year": 2021,
-    "subject": "Geometrical Optics",
-    "type": "NAT",
-    "question": String.raw`A laser beam shines along a block of transparent material of length $2.5\text{ m}$. Part of the beam goes to the detector $\text{D}_1$ while the other part travels through the block and then hits the detector $\text{D}_2$. The time delay between the arrivals of the two light beams is inferred to be $6.25\text{ ns}$. The speed of light $c = 3 \times 10^8\text{ m/s}$. The refractive index of the block is _______ (Round off to two decimal places).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/48_21.png",
-    "options": [],
-    "detailedSolution": String.raw`The light beam travelling outside the block goes through air (or vacuum), where its speed is $c = 3 \times 10^8\text{ m/s}$. The light beam travelling through the block of refractive index $n$ travels at a reduced speed $v = \frac{c}{n}$.
+    id: 48,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`A laser beam shines along a block of transparent material of length $2.5\text{ m}$. Part of the beam goes to the detector $\text{D}_1$ while the other part travels through the block and then hits the detector $\text{D}_2$. The time delay between the arrivals of the two light beams is inferred to be $6.25\text{ ns}$. The speed of light $c = 3 \times 10^8\text{ m/s}$. The refractive index of the block is _______ (Round off to two decimal places).`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/48_21.png",
+
+    detailedSolution: String.raw`The light beam travelling outside the block goes through air (or vacuum), where its speed is $c = 3 \times 10^8\text{ m/s}$. The light beam travelling through the block of refractive index $n$ travels at a reduced speed $v = \frac{c}{n}$.
 Let the length of the block be $L = 2.5\text{ m}$.
 The time taken for the first beam (in air) to reach detector $\text{D}_1$ is:
 $$t_1 = \frac{L}{c}$$
@@ -13051,16 +14663,23 @@ $$n - 1 = \frac{6.25 \times 10^{-9} \times 3 \times 10^8}{2.5}$$
 $$n - 1 = \frac{18.75 \times 10^{-1}}{2.5} = \frac{1.875}{2.5} = 0.75$$
 $$n = 1 + 0.75 = 1.75$$
 The refractive index of the block is $1.75$[cite: 1].`,
-    correctAnswer: 1.75
+
+    correctAnswer: 1.75,
   },
+
   {
-    "id": 49,
-    "year": 2021,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`An ideal blackbody at temperature $T$, emits radiation of energy density $u$. The corresponding value for a material at temperature $\frac{T}{2}$ is $\frac{u}{256}$. Its emissivity is _______ (Round off to three decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`According to the Stefan-Boltzmann Law, the energy density $u_{BB}$ of radiation emitted by an ideal blackbody is proportional to the fourth power of its absolute temperature:
+    id: 49,
+    year: 2021,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`An ideal blackbody at temperature $T$, emits radiation of energy density $u$. The corresponding value for a material at temperature $\frac{T}{2}$ is $\frac{u}{256}$. Its emissivity is _______ (Round off to three decimal places).`,
+
+    detailedSolution: String.raw`According to the Stefan-Boltzmann Law, the energy density $u_{BB}$ of radiation emitted by an ideal blackbody is proportional to the fourth power of its absolute temperature:
 $$u_{BB}(T) = a T^4$$
 where $a$ is a radiation constant.
 We are given that for a blackbody at temperature $T$, its energy density is $u$:
@@ -13074,16 +14693,23 @@ Substitute the known values:
 $$\epsilon = \frac{\frac{u}{256}}{\frac{u}{16}} = \frac{16}{256} = \frac{1}{16}$$
 $$\epsilon = 0.0625$$
 The emissivity of the material is $0.063$ (rounded to three decimal places)[cite: 1].`,
-    correctAnswer: 0.063
+
+    correctAnswer: 0.063,
   },
+
   {
-    "id": 50,
-    "year": 2021,
-    "subject": "Newtonian Mechanics",
-    "type": "NAT",
-    "question": String.raw`A particle with positive charge $10^{-3}\text{ C}$ and mass $0.2\text{ kg}$ is thrown upwards from the ground at an angle $45^\circ$ with the horizontal with a speed of $5\text{ m/s}$. The projectile moves through a horizontal electric field of $10\text{ V/m}$, which is in the same direction as the horizontal component of the initial velocity of the particle. The acceleration due to gravity is $10\text{ m/s}^2$. The range is _______ m. (Round off to three decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`Let the initial velocity be $u = 5\text{ m/s}$ and the angle of projection be $\theta = 45^\circ$.
+    id: 50,
+    year: 2021,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A particle with positive charge $10^{-3}\text{ C}$ and mass $0.2\text{ kg}$ is thrown upwards from the ground at an angle $45^\circ$ with the horizontal with a speed of $5\text{ m/s}$. The projectile moves through a horizontal electric field of $10\text{ V/m}$, which is in the same direction as the horizontal component of the initial velocity of the particle. The acceleration due to gravity is $10\text{ m/s}^2$. The range is _______ m. (Round off to three decimal places).`,
+
+    detailedSolution: String.raw`Let the initial velocity be $u = 5\text{ m/s}$ and the angle of projection be $\theta = 45^\circ$.
 The initial velocity components are:
 $$u_x = u \cos 45^\circ = 5 \times \frac{1}{\sqrt{2}} = \frac{5}{\sqrt{2}}\text{ m/s}$$
 $$u_y = u \sin 45^\circ = 5 \times \frac{1}{\sqrt{2}} = \frac{5}{\sqrt{2}}\text{ m/s}$$
@@ -13103,17 +14729,25 @@ $$R = \left(\frac{5}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}}\right) + \frac{1}{
 $$R = \frac{5}{2} + \frac{1}{2}(0.05)\left(\frac{1}{2}\right)$$
 $$R = 2.5 + \frac{0.05}{4} = 2.5 + 0.0125 = 2.5125\text{ m}$$
 Rounding off to three decimal places, the range is $2.513\text{ m}$[cite: 1].`,
-    correctAnswer: 2.513
+
+    correctAnswer: 2.513,
   },
+
   {
-    "id": 51,
-    "year": 2021,
-    "subject": "Geometrical Optics",
-    "type": "NAT",
-    "question": String.raw`Consider a hemispherical glass lens (refractive index is $1.5$) having radius of curvature $R = 12\text{ cm}$ for the curved surface. An incoming ray, parallel to the optical axis, is incident on the curved surface at a height $h = 1\text{ cm}$ above the optical axis, as shown in the figure. The distance $d$ (from the flat surface of the lens) at which the ray crosses the optical axis is _______ cm (Round off to two decimal places).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/51_21.png",
-    "options": [],
-    "detailedSolution": String.raw`Let's solve this using exact ray tracing. 
+    id: 51,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Consider a hemispherical glass lens (refractive index is $1.5$) having radius of curvature $R = 12\text{ cm}$ for the curved surface. An incoming ray, parallel to the optical axis, is incident on the curved surface at a height $h = 1\text{ cm}$ above the optical axis, as shown in the figure. The distance $d$ (from the flat surface of the lens) at which the ray crosses the optical axis is _______ cm (Round off to two decimal places).`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/51_21.png",
+
+    detailedSolution: String.raw`Let's solve this using exact ray tracing. 
 **1. Refraction at the first (curved) surface:**
 The ray is incident at a height $h = 1\text{ cm}$. The normal to the curved surface at the point of incidence makes an angle $\theta$ with the optical axis, where:
 $$\sin\theta = \frac{h}{R} = \frac{1}{12}$$
@@ -13139,16 +14773,23 @@ $$1.5 \times \alpha \approx \beta \implies \beta \approx 1.5 \left(\frac{1}{36}\
 The ray crosses the optical axis at a distance $d$ from the flat surface:
 $$d = \frac{h'}{\tan\beta} \approx \frac{h'}{\beta} = \frac{2/3}{1/24} = \frac{2}{3} \times 24 = 16\text{ cm}$$
 *(Note: A rigorous paraxial calculation yields exactly $16\text{ cm}$, and non-paraxial exact ray tracing gives $15.95\text{ cm}$. Both are within the accepted range of $15.81$ to $16.01$)*[cite: 1].`,
-    correctAnswer: 15.95
+
+    correctAnswer: 15.95,
   },
+
   {
-    "id": 52,
-    "year": 2021,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`Twenty non-interacting spin ½ particles are trapped in a three-dimensional simple harmonic oscillator potential of frequency $\omega$. The ground state energy of the system, in units of $\hbar\omega$, is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`The energy levels of a 3D isotropic simple harmonic oscillator are given by:
+    id: 52,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`Twenty non-interacting spin ½ particles are trapped in a three-dimensional simple harmonic oscillator potential of frequency $\omega$. The ground state energy of the system, in units of $\hbar\omega$, is _______.`,
+
+    detailedSolution: String.raw`The energy levels of a 3D isotropic simple harmonic oscillator are given by:
 $$E_N = \left(N + \frac{3}{2}\right)\hbar\omega$$
 where $N = n_x + n_y + n_z$, with $n_x, n_y, n_z \in \{0, 1, 2, \dots\}$.
 The degeneracy of the $N$-th energy level is:
@@ -13167,16 +14808,23 @@ $$E_{total} = (2 \times E_0) + (6 \times E_1) + (12 \times E_2)$$
 $$E_{total} = \left[ 2 \left(\frac{3}{2}\right) + 6 \left(\frac{5}{2}\right) + 12 \left(\frac{7}{2}\right) \right] \hbar\omega$$
 $$E_{total} = (3 + 15 + 42) \hbar\omega = 60 \hbar\omega$$
 In units of $\hbar\omega$, the energy is $60$[cite: 1].`,
-    correctAnswer: 60
+
+    correctAnswer: 60,
   },
+
   {
-    "id": 53,
-    "year": 2021,
-    "subject": "Interference",
-    "type": "NAT",
-    "question": String.raw`A thin film of alcohol is spread over a surface. When light from a tunable source is incident normally, the intensity of reflected light at the detector is maximum for $\lambda = 640\text{ nm}$ and minimum for $\lambda = 512\text{ nm}$. Taking the refractive index of alcohol to be $1.36$ for both the given wavelengths, the minimum thickness of the film would be _______ nm (Round off to two decimal places).`,
-    "options": [],
-    "detailedSolution": String.raw`Let the thickness of the alcohol film be $t$ and its refractive index be $n = 1.36$.
+    id: 53,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`A thin film of alcohol is spread over a surface. When light from a tunable source is incident normally, the intensity of reflected light at the detector is maximum for $\lambda = 640\text{ nm}$ and minimum for $\lambda = 512\text{ nm}$. Taking the refractive index of alcohol to be $1.36$ for both the given wavelengths, the minimum thickness of the film would be _______ nm (Round off to two decimal places).`,
+
+    detailedSolution: String.raw`Let the thickness of the alcohol film be $t$ and its refractive index be $n = 1.36$.
 When light reflects off a thin film, a phase change of $\pi$ occurs when reflecting off a medium with a higher refractive index. Typically, alcohol is spread on a surface like glass ($n \approx 1.5$), which has a higher refractive index than alcohol. This means there is a $\pi$ phase shift at the air-alcohol boundary and another $\pi$ phase shift at the alcohol-surface boundary. The net phase shift due to reflection is zero.
 Under this assumption, the condition for constructive interference (maximum intensity) in reflected light is:
 $$2nt = m\lambda_{max} \quad (m = 1, 2, 3, \dots)$$
@@ -13193,16 +14841,23 @@ Now, use $m = 2$ to find the minimum thickness $t$:
 $$2nt = 2 \times 640\text{ nm}$$
 $$t = \frac{640}{n} = \frac{640}{1.36} \approx 470.588\text{ nm}$$
 Rounding off to two decimal places, the minimum thickness is $470.59\text{ nm}$[cite: 1].`,
-    correctAnswer: 470.59
+
+    correctAnswer: 470.59,
   },
+
   {
-    "id": 54,
-    "year": 2021,
-    "subject": "Logic Gates",
-    "type": "NAT",
-    "question": String.raw`For the Boolean expression $Y = A B C + \bar{A} \bar{B} C + \bar{A} B \bar{C} + A \bar{B} \bar{C}$, the number of combinations for which the output $Y = 1$ is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`The given Boolean expression is in Sum of Products (SOP) form:
+    id: 54,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Boolean Algebra","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`For the Boolean expression $Y = A B C + \bar{A} \bar{B} C + \bar{A} B \bar{C} + A \bar{B} \bar{C}$, the number of combinations for which the output $Y = 1$ is _______.`,
+
+    detailedSolution: String.raw`The given Boolean expression is in Sum of Products (SOP) form:
 $$Y = A B C + \bar{A} \bar{B} C + \bar{A} B \bar{C} + A \bar{B} \bar{C}$$
 Each term in this expression is a standard minterm because it contains all three input variables ($A, B, C$) exactly once, either in true or complemented form.
 A minterm evaluates to $1$ for exactly one unique combination of input values.
@@ -13213,17 +14868,25 @@ Let's list the combinations that make each term equal to $1$:
 *   $A \bar{B} \bar{C} = 1$ when $A=1, B=0, C=0$.
 Since these four combinations are mutually exclusive, the total output $Y$ will be $1$ if and only if any of these specific four combinations occur.
 There are a total of $2^3 = 8$ possible input combinations. The output $Y$ is $1$ for exactly $4$ of them[cite: 1].`,
-    correctAnswer: 4
+
+    correctAnswer: 4,
   },
+
   {
-    "id": 55,
-    "year": 2021,
-    "subject": "Digital Electronics",
-    "type": "NAT",
-    "question": String.raw`An $RC$ circuit is connected to two dc power supplies, as shown in the figure. With switch $S$ open, the capacitor is fully charged. $S$ is then closed at time $t = 0$. The voltage across the capacitor at $t = 2.4\text{ milliseconds}$ is _______ V (Round off to one decimal place).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/55_21.png",
-    "options": [],
-    "detailedSolution": String.raw`**1. Initial State (Switch S open):**
+    id: 55,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`An $RC$ circuit is connected to two dc power supplies, as shown in the figure. With switch $S$ open, the capacitor is fully charged. $S$ is then closed at time $t = 0$. The voltage across the capacitor at $t = 2.4\text{ milliseconds}$ is _______ V (Round off to one decimal place).`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/55_21.png",
+
+    detailedSolution: String.raw`**1. Initial State (Switch S open):**
 When $S$ is open, the $6\text{ k}\Omega$ resistor and the $10\text{V}$ battery are disconnected from the middle node. The capacitor is in a steady-state DC circuit comprising only the $20\text{V}$ battery and the $4\text{ k}\Omega$ resistor.
 In DC steady state, the capacitor acts as an open circuit. No current flows, so there is no voltage drop across the $4\text{ k}\Omega$ resistor.
 The voltage across the capacitor is equal to the voltage of the source it is connected to:
@@ -13252,16 +14915,23 @@ At $t = 2.4\text{ ms}$:
 $$V(2.4\text{ ms}) = 8 + 12e^{-2.4/24} = 8 + 12e^{-0.1}$$
 $$V(2.4\text{ ms}) \approx 8 + 12(0.9048) = 8 + 10.858 = 18.858\text{ V}$$
 Rounding to one decimal place, the voltage is $18.9\text{ V}$[cite: 1].`,
-    correctAnswer: 18.9
+
+    correctAnswer: 18.9,
   },
+
   {
-    "id": 56,
-    "year": 2021,
-    "subject": "Magnetostatics",
-    "type": "NAT",
-    "question": String.raw`A current $I$ is uniformly distributed across a long straight nonmagnetic wire ($\mu_r = 1$) of circular cross-section with radius $a$. Two points $P$ and $Q$ are at distances $\frac{a}{3}$ and $9a$, respectively, from the axis of the wire. The ratio of the magnetic fields at points $P$ and $Q$ is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`We use Ampere's Law to find the magnetic field $B$ at a distance $r$ from the axis of a long straight wire of radius $a$ carrying a uniform current $I$.
+    id: 56,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`A current $I$ is uniformly distributed across a long straight nonmagnetic wire ($\mu_r = 1$) of circular cross-section with radius $a$. Two points $P$ and $Q$ are at distances $\frac{a}{3}$ and $9a$, respectively, from the axis of the wire. The ratio of the magnetic fields at points $P$ and $Q$ is _______.`,
+
+    detailedSolution: String.raw`We use Ampere's Law to find the magnetic field $B$ at a distance $r$ from the axis of a long straight wire of radius $a$ carrying a uniform current $I$.
 1.  **For point $P$ (Inside the wire, $r < a$):**
     The current enclosed by an Amperian loop of radius $r$ is $I_{enc} = I \frac{\pi r^2}{\pi a^2} = I \frac{r^2}{a^2}$.
     $$B_{in} \cdot 2\pi r = \mu_0 I_{enc} = \mu_0 I \frac{r^2}{a^2} \implies B_{in} = \frac{\mu_0 I r}{2\pi a^2}$$
@@ -13275,16 +14945,23 @@ Rounding to one decimal place, the voltage is $18.9\text{ V}$[cite: 1].`,
 3.  **Ratio of the magnetic fields:**
     $$\frac{B_P}{B_Q} = \frac{\frac{\mu_0 I}{6\pi a}}{\frac{\mu_0 I}{18\pi a}} = \frac{18\pi a}{6\pi a} = 3$$
 The ratio is $3$[cite: 1].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 57,
-    "year": 2021,
-    "subject": "Collisions",
-    "type": "NAT",
-    "question": String.raw`A particle $A$ of mass $m$ is moving with a velocity $v\hat{i}$, and collides elastically with a particle $B$, of mass $2m$. $B$ is initially at rest. After collision, $A$ moves with a velocity $v_A\hat{j}$. If $v_B$ is the final speed of $B$, then $v_A^2 = kv_B^2$. The value of $k$ is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`**1. Conservation of Linear Momentum:**
+    id: 57,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Collisions",
+    subjectId: "mechanics",
+    tags: ["Collisions","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A particle $A$ of mass $m$ is moving with a velocity $v\hat{i}$, and collides elastically with a particle $B$, of mass $2m$. $B$ is initially at rest. After collision, $A$ moves with a velocity $v_A\hat{j}$. If $v_B$ is the final speed of $B$, then $v_A^2 = kv_B^2$. The value of $k$ is _______.`,
+
+    detailedSolution: String.raw`**1. Conservation of Linear Momentum:**
 The initial momentum vector is $\vec{p}_i = m v \hat{i}$.
 The final momentum vector is $\vec{p}_f = m v_A \hat{j} + 2m \vec{v}_B$.
 By conservation of momentum:
@@ -13308,16 +14985,23 @@ $$4v_B^2 = 2v_A^2 + 2v_B^2$$
 $$2v_B^2 = 2v_A^2$$
 $$v_A^2 = 1 \cdot v_B^2$$
 Comparing this with the given expression $v_A^2 = k v_B^2$, we find $k = 1$[cite: 1].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 58,
-    "year": 2021,
-    "subject": "X-Ray Diffraction",
-    "type": "NAT",
-    "question": String.raw`In an X-ray diffraction experiment with Cu crystals having lattice parameter $3.61\text{ \AA}$, X-rays of wavelength of $0.090\text{ nm}$ are incident on the family of planes $\{1 1 0\}$. The highest order present in the diffraction pattern is _______.`,
-    "options": [],
-    "detailedSolution": String.raw`Copper (Cu) crystallizes in a Face-Centered Cubic (FCC) structure.
+    id: 58,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "X-Ray Diffraction",
+    subjectId: "solid",
+    tags: ["X-Ray Diffraction","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`In an X-ray diffraction experiment with Cu crystals having lattice parameter $3.61\text{ \AA}$, X-rays of wavelength of $0.090\text{ nm}$ are incident on the family of planes $\{1 1 0\}$. The highest order present in the diffraction pattern is _______.`,
+
+    detailedSolution: String.raw`Copper (Cu) crystallizes in a Face-Centered Cubic (FCC) structure.
 For an FCC lattice, the selection rules state that Bragg reflections are only allowed for planes $(h k l)$ where the Miller indices $h, k, l$ are either all even or all odd.
 The problem specifies the $\{1 1 0\}$ family of planes. The reflection $(1 1 0)$ has mixed indices (two odds, one even), so its structure factor is zero and it is a forbidden reflection. 
 The first physically allowed reflection corresponding to planes parallel to $\{1 1 0\}$ is the $(2 2 0)$ reflection.
@@ -13328,17 +15012,25 @@ The wavelength is $\lambda = 0.090\text{ nm} = 0.90\text{ \AA}$.
 To find the maximum order $n_{max}$, we set $\sin\theta_{max} = 1$:
 $$n_{max} = \frac{2d_{220}}{\lambda} = \frac{2 \times 1.276\text{ \AA}}{0.90\text{ \AA}} = \frac{2.552}{0.90} \approx 2.83$$
 Since $n$ must be an integer, the highest order present is $n = 2$[cite: 1].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 59,
-    "year": 2021,
-    "subject": "Conductors, Capacitors & Electrostatic Energy",
-    "type": "NAT",
-    "question": String.raw`A parallel plate capacitor having plate area of $50\text{ cm}^2$ and separation of $0.1\text{ mm}$ is completely filled with a dielectric (dielectric constant $K = 10$). The capacitor is connected to a $10\text{ k}\Omega$ resistance and an alternating voltage $v = 10 \sin(100\pi t)$, as shown in the figure. The switch S is initially open and then closed at $t = 0$. The ratio of the displacement current in the capacitor, to the current in the resistance, at time $t = \frac{2}{\pi}$ seconds is _______ (Round off to three decimal places).`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/59_21.png",
-    "options": [],
-    "detailedSolution": String.raw`**1. Calculate Capacitance ($C$):**
+    id: 59,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Conductors, Capacitors & Electrostatic Energy",
+    subjectId: "em",
+    tags: ["Conductors, Capacitors & Electrostatic Energy","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`A parallel plate capacitor having plate area of $50\text{ cm}^2$ and separation of $0.1\text{ mm}$ is completely filled with a dielectric (dielectric constant $K = 10$). The capacitor is connected to a $10\text{ k}\Omega$ resistance and an alternating voltage $v = 10 \sin(100\pi t)$, as shown in the figure. The switch S is initially open and then closed at $t = 0$. The ratio of the displacement current in the capacitor, to the current in the resistance, at time $t = \frac{2}{\pi}$ seconds is _______ (Round off to three decimal places).`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2021/59_21.png",
+
+    detailedSolution: String.raw`**1. Calculate Capacitance ($C$):**
 $$C = \frac{K \epsilon_0 A}{d}$$
 Given $A = 50\text{ cm}^2 = 50 \times 10^{-4}\text{ m}^2$, $d = 0.1\text{ mm} = 10^{-4}\text{ m}$, $K = 10$.
 $$C = \frac{10 \times (8.854 \times 10^{-12}) \times (50 \times 10^{-4})}{10^{-4}} = 500 \times 8.854 \times 10^{-12} = 4.427 \times 10^{-9}\text{ F}$$
@@ -13360,16 +15052,23 @@ $$|\cot(200 \text{ rad})| \approx 0.567$$
 Now calculate the ratio:
 $$\left| \frac{I_D}{I_R} \right| = 4.427 \times \pi \times 10^{-3} \times 0.567 \approx 13.9 \times 10^{-3} \times 0.567 \approx 0.00788$$
 Rounding to three decimal places, the ratio is $0.008$[cite: 1].`,
-    correctAnswer: 0.008
+
+    correctAnswer: 0.008,
   },
+
   {
-    "id": 60,
-    "year": 2021,
-    "subject": "Special Relativity",
-    "type": "NAT",
-    "question": String.raw`The wavelength of characteristic $\text{K}_\alpha$ X-ray photons from Mo (atomic number $42$) is _______ $\text{\AA}$. (Round off to one decimal place). (speed of light is $3 \times 10^8\text{ m/s}$; Rydberg constant $R = 1.09 \times 10^7\text{ /m}$)`,
-    "options": [],
-    "detailedSolution": String.raw`The wavelength of characteristic X-rays can be determined using Moseley's Law, which is a modified Rydberg formula for multi-electron atoms:
+    id: 60,
+    year: 2021,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`The wavelength of characteristic $\text{K}_\alpha$ X-ray photons from Mo (atomic number $42$) is _______ $\text{\AA}$. (Round off to one decimal place). (speed of light is $3 \times 10^8\text{ m/s}$; Rydberg constant $R = 1.09 \times 10^7\text{ /m}$)`,
+
+    detailedSolution: String.raw`The wavelength of characteristic X-rays can be determined using Moseley's Law, which is a modified Rydberg formula for multi-electron atoms:
 $$\frac{1}{\lambda} = R (Z - \sigma)^2 \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)$$
 For a $\text{K}_\alpha$ transition, an electron drops from the L shell ($n_2 = 2$) to the K shell ($n_1 = 1$). The screening constant for the K series is empirically approximated as $\sigma \approx 1$.
 Substitute the given values for Molybdenum ($Z = 42$) and $R = 1.09 \times 10^7\text{ m}^{-1}$:
@@ -13382,21 +15081,30 @@ $$\lambda = \frac{1}{1.374 \times 10^7} \approx 7.27 \times 10^{-11}\text{ m}$$
 Convert the wavelength to Angstroms ($1\text{ \AA} = 10^{-10}\text{ m}$):
 $$\lambda = 0.727\text{ \AA}$$
 Rounding off to one decimal place gives $0.7\text{ \AA}$[cite: 1].`,
-    correctAnswer: 0.7
+
+    correctAnswer: 0.7,
   },
+
   {
-    "id": 1,
-    "year": 2020,
-    "subject": "Mathematical Physics",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following functions has a discontinuity in the second derivative at $x=0$, where $x$ is a real variable?`,
-    "options": [
+    id: 1,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods","Differential Calculus"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following functions has a discontinuity in the second derivative at $x=0$, where $x$ is a real variable?`,
+
+    options: [
       String.raw`$f(x)=|x|^{3}$`,
       String.raw`$f(x)=x|x|$`,
       String.raw`$f(x)=\cos(|x|)$`,
-      String.raw`$f(x)=|x|^{2}$`
+      String.raw`$f(x)=|x|^{2}$`,
     ],
-    "detailedSolution": String.raw`Let's analyze the second derivative for each option at $x=0$:
+
+    detailedSolution: String.raw`Let's analyze the second derivative for each option at $x=0$:
 1.  **For $f(x)=|x|^3$:**
     $f(x) = x^3$ (for $x \ge 0$) and $-x^3$ (for $x < 0$)
     $f'(x) = 3x^2$ (for $x \ge 0$) and $-3x^2$ (for $x < 0$)
@@ -13415,21 +15123,30 @@ Rounding off to one decimal place gives $0.7\text{ \AA}$[cite: 1].`,
     $f''(x) = 2$. This is a constant and continuous everywhere.
 
 Therefore, the function with a discontinuous second derivative at $x=0$ is $f(x)=x|x|$[cite: 2].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 2,
-    "year": 2020,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`A collimated beam of laser light of wavelength $514\text{ nm}$ is normally incident on a smooth glass slab placed in air. Given the refractive indices of glass and air are $1.47$ and $1.0$, respectively, the percentage of light intensity reflected back is`,
-    "options": [
+    id: 2,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`A collimated beam of laser light of wavelength $514\text{ nm}$ is normally incident on a smooth glass slab placed in air. Given the refractive indices of glass and air are $1.47$ and $1.0$, respectively, the percentage of light intensity reflected back is`,
+
+    options: [
       String.raw`$0$`,
       String.raw`$4.0$`,
       String.raw`$3.6$`,
-      String.raw`$4.2$`
+      String.raw`$4.2$`,
     ],
-    "detailedSolution": String.raw`The reflectance $R$ (percentage of light intensity reflected back) for light at normal incidence on an interface between two media with refractive indices $n_1$ and $n_2$ is given by the formula:
+
+    detailedSolution: String.raw`The reflectance $R$ (percentage of light intensity reflected back) for light at normal incidence on an interface between two media with refractive indices $n_1$ and $n_2$ is given by the formula:
 $$R = \left(\frac{n_1 - n_2}{n_1 + n_2}\right)^2 \times 100\%$$
 Given $n_1 = 1.47$ (glass) and $n_2 = 1.0$ (air):
 $$R = \left(\frac{1.47 - 1.0}{1.47 + 1.0}\right)^2 \times 100\%$$
@@ -13437,126 +15154,178 @@ $$R = \left(\frac{0.47}{2.47}\right)^2 \times 100\%$$
 $$R \approx (0.19028)^2 \times 100\%$$
 $$R \approx 0.0362 \times 100\% = 3.62\%$$
 Rounding to one decimal place, the percentage of light intensity reflected back is $3.6\%$[cite: 2].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 3,
-    "year": 2020,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`Two stationary point particles with equal and opposite charges are at some fixed distance from each other. The points having zero electric potential lie on:`,
-    "options": [
+    id: 3,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Two stationary point particles with equal and opposite charges are at some fixed distance from each other. The points having zero electric potential lie on:`,
+
+    options: [
       String.raw`A sphere`,
       String.raw`A plane`,
       String.raw`A cylinder`,
-      String.raw`Two parallel planes`
+      String.raw`Two parallel planes`,
     ],
-    "detailedSolution": String.raw`Let the two stationary point particles have charges $+q$ and $-q$. Let $r_1$ and $r_2$ be the distances from a point $P$ to the charges $+q$ and $-q$, respectively.
+
+    detailedSolution: String.raw`Let the two stationary point particles have charges $+q$ and $-q$. Let $r_1$ and $r_2$ be the distances from a point $P$ to the charges $+q$ and $-q$, respectively.
 The total electric potential $V$ at point $P$ is the scalar sum of the potentials due to each individual charge:
 $$V = \frac{1}{4\pi\epsilon_0} \frac{q}{r_1} + \frac{1}{4\pi\epsilon_0} \frac{-q}{r_2}$$
 For the potential to be exactly zero ($V = 0$):
 $$\frac{q}{r_1} = \frac{q}{r_2} \implies r_1 = r_2$$
 The geometric locus of all points that are equidistant from two fixed points in three-dimensional space is a plane. Specifically, it forms the perpendicular bisector plane of the line segment joining the two charges. Therefore, the points having zero electric potential lie on a plane[cite: 2].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 4,
-    "year": 2020,
-    "subject": "Entropy & Second Law",
-    "type": "MCQ",
-    "question": String.raw`For a system undergoing a first order phase transition at a temperature $T_c$ which one of the following graphs best describes the variation of entropy ($S$) as a function of temperature ($T$)?`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 4,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Entropy & Second Law",
+    subjectId: "thermo",
+    tags: ["Entropy & Second Law","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`For a system undergoing a first order phase transition at a temperature $T_c$ which one of the following graphs best describes the variation of entropy ($S$) as a function of temperature ($T$)?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4a_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4b_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4c_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4d_20.png"
-    ],
-    "detailedSolution": String.raw`In a first-order phase transition (such as boiling or melting), the system absorbs or releases a fixed amount of heat per unit mass at a constant transition temperature $T_c$. This heat is known as the latent heat ($L$).
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4a_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4b_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4c_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/4d_20.png"],
+
+    detailedSolution: String.raw`In a first-order phase transition (such as boiling or melting), the system absorbs or releases a fixed amount of heat per unit mass at a constant transition temperature $T_c$. This heat is known as the latent heat ($L$).
 According to the thermodynamic relation $\Delta S = \frac{L}{T_c}$, the entropy $S$ undergoes a discontinuous, finite jump exactly at $T_c$.
 Below $T_c$ and above $T_c$, the entropy typically increases gradually with temperature, but precisely at $T_c$, it abruptly transitions from a lower entropy state (like a solid or liquid) to a higher entropy state (like a liquid or gas).
 Graph (D) correctly depicts this vertical step (discontinuity) in entropy at the transition temperature $T_c$[cite: 2].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 5,
-    "year": 2020,
-    "subject": "Quantum Phenomena",
-    "type": "MCQ",
-    "question": String.raw`In a photoelectric effect experiment, a monochromatic light source emitting photons with energy greater than the work function of the metal under test is used. If the power of the light source is doubled, which one of the following statements is correct?`,
-    "options": [
+    id: 5,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`In a photoelectric effect experiment, a monochromatic light source emitting photons with energy greater than the work function of the metal under test is used. If the power of the light source is doubled, which one of the following statements is correct?`,
+
+    options: [
       String.raw`The number of emitted photoelectrons remains the same.`,
       String.raw`The stopping potential remains the same.`,
       String.raw`The number of emitted photoelectrons decreases.`,
-      String.raw`The stopping potential doubles.`
+      String.raw`The stopping potential doubles.`,
     ],
-    "detailedSolution": String.raw`Let's analyze the photoelectric effect principles:
+
+    detailedSolution: String.raw`Let's analyze the photoelectric effect principles:
 1.  **Power and Intensity:** The power of the monochromatic light source is directly proportional to the number of photons emitted per second. If the power is doubled while keeping the frequency (and thus individual photon energy) constant, the number of incident photons per second precisely doubles. Consequently, the rate of emission of photoelectrons also doubles.
 2.  **Stopping Potential:** The stopping potential strictly depends on the maximum kinetic energy of the emitted photoelectrons, defined by Einstein's photoelectric equation: $K_{max} = h\nu - \Phi$. Because the frequency ($\nu$) of the monochromatic light and the work function ($\Phi$) of the metal remain unaltered, the maximum kinetic energy and, therefore, the stopping potential remain exactly the same.
 Thus, the correct statement is that the stopping potential remains the same[cite: 2].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 6,
-    "year": 2020,
-    "subject": "Crystal Structure",
-    "type": "MCQ",
-    "question": String.raw`The figure below shows a cubic unit cell with lattice constant $a$. The shaded crystallographic plane intersects the x-axis at $0.5a$. The Miller indices of the shaded plane are`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/6_20.png",
-    "options": [
+    id: 6,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`The figure below shows a cubic unit cell with lattice constant $a$. The shaded crystallographic plane intersects the x-axis at $0.5a$. The Miller indices of the shaded plane are`,
+
+    options: [
       String.raw`$(210)$`,
       String.raw`$(\bar{2}10)$`,
       String.raw`$(110)$`,
-      String.raw`$(102)$`
+      String.raw`$(102)$`,
     ],
-    "detailedSolution": String.raw`To determine the Miller indices of the crystallographic plane:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/6_20.png",
+
+    detailedSolution: String.raw`To determine the Miller indices of the crystallographic plane:
 1.  **Find the intercepts:** Identify where the plane intersects the crystallographic axes ($x, y, z$) as fractions of the lattice constant $a$. 
     Based on the geometric description and standard orientation, the plane intersects the $x$-axis at $0.5a$, the $y$-axis at $1a$, and runs parallel to the $z$-axis (which implies an intersection at infinity, $\infty$).
 2.  **Express as fractional coordinates:** The intercepts are $\frac{1}{2}, 1, \infty$.
 3.  **Take the reciprocals:** The reciprocals of these specific intercepts are $\frac{1}{1/2}, \frac{1}{1}, \frac{1}{\infty}$, which yields $2, 1, 0$.
 4.  **Clear fractions:** The resulting numbers are already integers, leaving us with $2, 1, 0$.
 Therefore, the Miller indices of the shaded plane are mathematically $(210)$[cite: 2].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 7,
-    "year": 2020,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`For a particle moving in a central potential, which one of the following statements is correct?`,
-    "options": [
+    id: 7,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`For a particle moving in a central potential, which one of the following statements is correct?`,
+
+    options: [
       String.raw`The motion is restricted to a plane due to the conservation of angular momentum.`,
       String.raw`The motion is restricted to a plane due to the conservation of energy only.`,
       String.raw`The motion is restricted to a plane due to the conservation of linear momentum.`,
-      String.raw`The motion is not restricted to a plane.`
+      String.raw`The motion is not restricted to a plane.`,
     ],
-    "detailedSolution": String.raw`For a particle experiencing a central potential $V(r)$, the exerted force is purely radial: $\vec{F} = f(r)\hat{r}$.
+
+    detailedSolution: String.raw`For a particle experiencing a central potential $V(r)$, the exerted force is purely radial: $\vec{F} = f(r)\hat{r}$.
 The torque $\vec{\tau}$ is defined geometrically as $\vec{r} \times \vec{F}$. Because the force vector is parallel to the position vector, their cross product is identically zero:
 $$\vec{\tau} = \vec{r} \times (f(r)\hat{r}) = 0$$
 According to Newton's second law for rotation, $\vec{\tau} = \frac{d\vec{L}}{dt}$. Since the torque evaluates to zero, the angular momentum vector $\vec{L}$ is a constant of motion (conserved in magnitude and spatial direction).
 Furthermore, by definition, $\vec{L} = \vec{r} \times \vec{p}$. This fundamental relation mandates that the position vector $\vec{r}$ must remain perpendicular to the constant vector $\vec{L}$ at all times. A position vector constantly perpendicular to a fixed axis strictly traces out a two-dimensional plane.
 Thus, the motion of the particle is restricted to a plane due exclusively to the conservation of angular momentum[cite: 2].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 8,
-    "year": 2020,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`Consider the motion of a quantum particle of mass $m$ and energy $E$ under the influence of a step potential of height $V_0$. If $R$ denotes the reflection coefficient, which one of the following statements is true?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/8_20.png",
-    "options": [
+    id: 8,
+    year: 2020,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`Consider the motion of a quantum particle of mass $m$ and energy $E$ under the influence of a step potential of height $V_0$. If $R$ denotes the reflection coefficient, which one of the following statements is true?`,
+
+    options: [
       String.raw`If $E=\frac{4}{3}V_{0}$, $R=1$`,
       String.raw`If $E=\frac{4}{3}V_{0}$, $R=0$`,
       String.raw`If $E=\frac{1}{2}V_{0}$, $R=1$`,
-      String.raw`If $E=\frac{1}{2}V_{0}$, $R=0.5$`
+      String.raw`If $E=\frac{1}{2}V_{0}$, $R=0.5$`,
     ],
-    "detailedSolution": String.raw`For a quantum particle of mass $m$ and kinetic energy $E$ interacting with a step potential of height $V_0$, the reflection coefficient $R$ depends fundamentally on the relative magnitude of $E$ compared to $V_0$.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/8_20.png",
+
+    detailedSolution: String.raw`For a quantum particle of mass $m$ and kinetic energy $E$ interacting with a step potential of height $V_0$, the reflection coefficient $R$ depends fundamentally on the relative magnitude of $E$ compared to $V_0$.
 *   **Case 1: $E > V_0$**
     The particle possesses a non-zero probability for both reflection and transmission. The standard reflection coefficient is evaluated as:
     $$R = \left(\frac{k_1 - k_2}{k_1 + k_2}\right)^2$$
@@ -13568,21 +15337,30 @@ Thus, the motion of the particle is restricted to a plane due exclusively to the
     The particle classically cannot transmit past the barrier. Quantum mechanically, the wave function decays exponentially inside the region $x > 0$. Because the potential barrier extends infinitely, the transmitted probability current evaluates to exactly zero. Consequently, all incident particles are reflected. The reflection coefficient is precisely $1$.
     If $E = \frac{1}{2}V_0$, since the energy is less than $V_0$, $R = 1$.
 Therefore, the statement corresponding to complete reflection when $E < V_0$ is the only valid option[cite: 2].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 9,
-    "year": 2020,
-    "subject": "Digital Electronics",
-    "type": "MCQ",
-    "question": String.raw`The Boolean function $\overline{PQ}(\overline{P}+Q)(Q+\overline{Q})$ is equivalent to:`,
-    "options": [
+    id: 9,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Boolean Algebra","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`The Boolean function $\overline{PQ}(\overline{P}+Q)(Q+\overline{Q})$ is equivalent to:`,
+
+    options: [
       String.raw`$P$`,
       String.raw`$\overline{P}$`,
       String.raw`$\overline{P}Q$`,
-      String.raw`$PQ$`
+      String.raw`$PQ$`,
     ],
-    "detailedSolution": String.raw`Let's algebraically simplify the given Boolean expression step-by-step: $\overline{PQ}(\overline{P}+Q)(Q+\overline{Q})$
+
+    detailedSolution: String.raw`Let's algebraically simplify the given Boolean expression step-by-step: $\overline{PQ}(\overline{P}+Q)(Q+\overline{Q})$
 1.  **Simplify the tautology term:** According to the Boolean complementation law, a variable ORed with its complement is always true: $Q + \overline{Q} = 1$.
     The expression securely simplifies to: $\overline{PQ}(\overline{P}+Q) \cdot 1 = \overline{PQ}(\overline{P}+Q)$
 2.  **Apply De Morgan's Law:** We rewrite the NAND term: $\overline{PQ} = \overline{P} + \overline{Q}$.
@@ -13598,21 +15376,30 @@ Therefore, the statement corresponding to complete reflection when $E < V_0$ is 
     $$\overline{P}(1 + Q + \overline{Q})$$
     Since $1 + \text{anything} = 1$ in Boolean algebra, the expression conclusively reduces to $\overline{P} \cdot 1 = \overline{P}$.
 The equivalent Boolean function is $\overline{P}$[cite: 2].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 10,
-    "year": 2020,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`Three point charges each carrying a charge $q$ are placed on the vertices of an equilateral triangle of side $L$. The electrostatic potential energy of the configuration is:`,
-    "options": [
+    id: 10,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Three point charges each carrying a charge $q$ are placed on the vertices of an equilateral triangle of side $L$. The electrostatic potential energy of the configuration is:`,
+
+    options: [
       String.raw`$\frac{1}{4\pi\epsilon_{0}}\frac{q^{2}}{L}$`,
       String.raw`$\frac{2}{4\pi\epsilon_{0}}\frac{q^{2}}{L}$`,
       String.raw`$\frac{3}{4\pi\epsilon_{0}}\frac{q^{2}}{L}$`,
-      String.raw`$\frac{1}{\pi\epsilon_{0}}\frac{q^{2}}{L}$`
+      String.raw`$\frac{1}{\pi\epsilon_{0}}\frac{q^{2}}{L}$`,
     ],
-    "detailedSolution": String.raw`The total electrostatic potential energy $U$ of a system composed of discrete point charges is the algebraic sum of the potential energies associated with all unique pairs of charges.
+
+    detailedSolution: String.raw`The total electrostatic potential energy $U$ of a system composed of discrete point charges is the algebraic sum of the potential energies associated with all unique pairs of charges.
 For a configuration of three distinct charges ($q_1, q_2, q_3$), the total potential energy evaluates to:
 $$U = \frac{1}{4\pi\epsilon_0} \left( \frac{q_1 q_2}{r_{12}} + \frac{q_2 q_3}{r_{23}} + \frac{q_3 q_1}{r_{31}} \right)$$
 In this specific scenario, all three charges are structurally identical ($q_1 = q_2 = q_3 = q$), and they reside at the vertices of an equilateral triangle, meaning the separation distance between any selected pair of charges uniformly equates to the side length $L$ ($r_{12} = r_{23} = r_{31} = L$).
@@ -13622,22 +15409,31 @@ $$U = \frac{1}{4\pi\epsilon_0} \left( \frac{q^2}{L} + \frac{q^2}{L} + \frac{q^2}
 $$U = \frac{1}{4\pi\epsilon_0} \left( \frac{3q^2}{L} \right)$$
 $$U = \frac{3}{4\pi\epsilon_0} \frac{q^2}{L}$$
 This resultant calculation directly matches option (C)[cite: 2].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 11,
-    "year": 2020,
-    "subject": "Calculus",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following statements is correct?
+    id: 11,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following statements is correct?
 Given, $\binom{n}{m}=\frac{n!}{m!(n-m)!}$ is the binomial coefficient.`,
-    "options": [
+
+    options: [
       String.raw`$\cos n\theta=\cos^{n}\theta-\binom{n}{2}\cos^{n-2}\theta\sin^{2}\theta+\binom{n}{4}\cos^{n-4}\theta\sin^{4}\theta-\dots$`,
       String.raw`$\sin n\theta=\binom{n}{1}\cos^{n-1}\theta\sin\theta+\binom{n}{3}\cos^{n-3}\theta\sin^{3}\theta+\dots$`,
       String.raw`$\cos n\theta=\cos^{n}\theta+\binom{n}{2}\cos^{n-2}\theta\sin^{2}\theta+\binom{n}{4}\cos^{n-4}\theta\sin^{4}\theta+\dots$`,
-      String.raw`$\sin n\theta=\cos^{n}\theta-\binom{n}{2}\cos^{n-2}\theta\sin^{2}\theta+\binom{n}{4}\cos^{n-4}\theta\sin^{4}\theta-\dots$`
+      String.raw`$\sin n\theta=\cos^{n}\theta-\binom{n}{2}\cos^{n-2}\theta\sin^{2}\theta+\binom{n}{4}\cos^{n-4}\theta\sin^{4}\theta-\dots$`,
     ],
-    "detailedSolution": String.raw`Using De Moivre's theorem, we can expand $(\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta$.
+
+    detailedSolution: String.raw`Using De Moivre's theorem, we can expand $(\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta$.
 Using the binomial theorem on the left side:
 $$(\cos\theta + i\sin\theta)^n = \sum_{k=0}^{n} \binom{n}{k} (\cos\theta)^{n-k} (i\sin\theta)^k$$
 Separating this into real and imaginary parts:
@@ -13645,21 +15441,30 @@ The real part corresponds to even values of $k$ (where $i^k = \pm 1$):
 $$\text{Real part} = \cos^n\theta - \binom{n}{2}\cos^{n-2}\theta\sin^2\theta + \binom{n}{4}\cos^{n-4}\theta\sin^4\theta - \dots$$
 Equating the real parts gives the expansion for $\cos n\theta$. This perfectly matches option (A).
 The imaginary part corresponds to odd values of $k$, which yields an alternating series for $\sin n\theta$. Option (B) incorrectly uses all plus signs.`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 12,
-    "year": 2020,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`The volume integral $\int_{V}e^{-(\frac{r}{R})^{2}}\vec{\nabla}\cdot(\frac{\hat{r}}{r^{2}})d^{3}r$ where $V$ is the volume of a sphere of radius $R$ centered at the origin, is equal to`,
-    "options": [
+    id: 12,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`The volume integral $\int_{V}e^{-(\frac{r}{R})^{2}}\vec{\nabla}\cdot(\frac{\hat{r}}{r^{2}})d^{3}r$ where $V$ is the volume of a sphere of radius $R$ centered at the origin, is equal to`,
+
+    options: [
       String.raw`$4\pi$`,
       String.raw`$0$`,
       String.raw`$\frac{4}{3}\pi R^{3}$`,
-      String.raw`$1$`
+      String.raw`$1$`,
     ],
-    "detailedSolution": String.raw`The term $\vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right)$ is the divergence of the radial inverse-square field. From vector calculus (or by relating it to Gauss's Law for a point charge), we know this divergence is zero everywhere except at the origin, where it is singular. It is represented by the Dirac delta function:
+
+    detailedSolution: String.raw`The term $\vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right)$ is the divergence of the radial inverse-square field. From vector calculus (or by relating it to Gauss's Law for a point charge), we know this divergence is zero everywhere except at the origin, where it is singular. It is represented by the Dirac delta function:
 $$\vec{\nabla}\cdot\left(\frac{\hat{r}}{r^2}\right) = 4\pi\delta^3(\vec{r})$$
 Substitute this into the volume integral:
 $$I = \int_{V} e^{-(r/R)^2} 4\pi\delta^3(\vec{r}) \, d^3r$$
@@ -13669,21 +15474,30 @@ Evaluating the function $f(\vec{r}) = e^{-(r/R)^2}$ at the origin ($r = 0$):
 $$f(0) = e^0 = 1$$
 Therefore, the integral evaluates to:
 $$I = 4\pi \times 1 = 4\pi$$`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 13,
-    "year": 2020,
-    "subject": "Calculus",
-    "type": "MCQ",
-    "question": String.raw`$\lim_{x\rightarrow0+}x^{x}$ is equal to`,
-    "options": [
+    id: 13,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`$\lim_{x\rightarrow0+}x^{x}$ is equal to`,
+
+    options: [
       String.raw`$0$`,
       String.raw`$\infty$`,
       String.raw`$e$`,
-      String.raw`$1$`
+      String.raw`$1$`,
     ],
-    "detailedSolution": String.raw`Let $y = \lim_{x\rightarrow 0+} x^x$.
+
+    detailedSolution: String.raw`Let $y = \lim_{x\rightarrow 0+} x^x$.
 Taking the natural logarithm of both sides:
 $$\ln(y) = \lim_{x\rightarrow 0+} \ln(x^x) = \lim_{x\rightarrow 0+} x\ln(x)$$
 This is an indeterminate form of type $0 \cdot (-\infty)$. We can rewrite it to apply L'Hôpital's rule:
@@ -13695,21 +15509,30 @@ $$\ln(y) = \lim_{x\rightarrow 0+} (-x) = 0$$
 Since $\ln(y) = 0$, we have:
 $$y = e^0 = 1$$
 Therefore, the limit is $1$.`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 14,
-    "year": 2020,
-    "subject": "Newtonian Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A wheel is rotating at a frequency $f_0\text{ Hz}$ about a fixed vertical axis. The wheel stops in $t_0$ seconds, with constant angular deceleration. The number of turns covered by the wheel before it comes to rest is given by:`,
-    "options": [
+    id: 14,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A wheel is rotating at a frequency $f_0\text{ Hz}$ about a fixed vertical axis. The wheel stops in $t_0$ seconds, with constant angular deceleration. The number of turns covered by the wheel before it comes to rest is given by:`,
+
+    options: [
       String.raw`$f_0 t_0$`,
       String.raw`$2f_0 t_0$`,
       String.raw`$f_0 t_0 / 2$`,
-      String.raw`$f_0 t_0 / \sqrt{2}$`
+      String.raw`$f_0 t_0 / \sqrt{2}$`,
     ],
-    "detailedSolution": String.raw`The initial angular velocity of the wheel is $\omega_0 = 2\pi f_0$.
+
+    detailedSolution: String.raw`The initial angular velocity of the wheel is $\omega_0 = 2\pi f_0$.
 The final angular velocity is $\omega_f = 0$ (since it comes to rest).
 The time taken is $t = t_0$.
 For motion with constant angular deceleration, the total angular displacement $\theta$ is given by the average angular velocity multiplied by time:
@@ -13718,21 +15541,30 @@ $$\theta = \left(\frac{2\pi f_0 + 0}{2}\right) t_0 = \pi f_0 t_0$$
 The number of turns (revolutions) $N$ is the total angular displacement divided by the angle of one full turn ($2\pi$):
 $$N = \frac{\theta}{2\pi} = \frac{\pi f_0 t_0}{2\pi} = \frac{f_0 t_0}{2}$$
 This matches option (C).`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 15,
-    "year": 2020,
-    "subject": "Collisions",
-    "type": "MCQ",
-    "question": String.raw`Two objects of masses $m$ and $2m$ are moving at speeds of $v$ and $v/2$, respectively. After undergoing a completely inelastic collision, they move together with a speed of $v/3$. The angle between the initial velocity vectors of the two objects is`,
-    "options": [
+    id: 15,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Collisions",
+    subjectId: "mechanics",
+    tags: ["Collisions","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`Two objects of masses $m$ and $2m$ are moving at speeds of $v$ and $v/2$, respectively. After undergoing a completely inelastic collision, they move together with a speed of $v/3$. The angle between the initial velocity vectors of the two objects is`,
+
+    options: [
       String.raw`$60^\circ$`,
       String.raw`$120^\circ$`,
       String.raw`$45^\circ$`,
-      String.raw`$90^\circ$`
+      String.raw`$90^\circ$`,
     ],
-    "detailedSolution": String.raw`Let the initial velocities be $\vec{v}_1$ (for mass $m$) and $\vec{v}_2$ (for mass $2m$). Let the angle between them be $\theta$.
+
+    detailedSolution: String.raw`Let the initial velocities be $\vec{v}_1$ (for mass $m$) and $\vec{v}_2$ (for mass $2m$). Let the angle between them be $\theta$.
 The magnitudes are $|\vec{v}_1| = v$ and $|\vec{v}_2| = v/2$.
 The initial momentum vectors are:
 $\vec{p}_1 = m\vec{v}_1 \implies |\vec{p}_1| = mv$
@@ -13753,21 +15585,30 @@ Divide both sides by $m^2v^2$:
 $$2 + 2\cos\theta = 1$$
 $$2\cos\theta = -1 \implies \cos\theta = -1/2$$
 The angle is therefore $\theta = 120^\circ$.`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 16,
-    "year": 2020,
-    "subject": "Central Force Motion",
-    "type": "MCQ",
-    "question": String.raw`Two planets $P_1$ and $P_2$ having masses $M_1$ and $M_2$ revolve around the Sun in elliptical orbits, with time periods $T_1$ and $T_2$, respectively. The minimum and maximum distances of planet $P_1$ from the Sun are $R$ and $3R$, respectively, whereas for planet $P_2$ these are $2R$ and $4R$, respectively, where $R$ is a constant. Assuming $M_1$ and $M_2$ are much smaller than the mass of the Sun, the magnitude of $\frac{T_2}{T_1}$ is`,
-    "options": [
+    id: 16,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`Two planets $P_1$ and $P_2$ having masses $M_1$ and $M_2$ revolve around the Sun in elliptical orbits, with time periods $T_1$ and $T_2$, respectively. The minimum and maximum distances of planet $P_1$ from the Sun are $R$ and $3R$, respectively, whereas for planet $P_2$ these are $2R$ and $4R$, respectively, where $R$ is a constant. Assuming $M_1$ and $M_2$ are much smaller than the mass of the Sun, the magnitude of $\frac{T_2}{T_1}$ is`,
+
+    options: [
       String.raw`$\frac{2}{3}\sqrt{\frac{2 M_1}{3 M_2}}$`,
       String.raw`$\frac{3}{2}\sqrt{\frac{3 M_2}{2 M_1}}$`,
       String.raw`$\frac{3}{2}\sqrt{\frac{3}{2}}$`,
-      String.raw`$\frac{2}{3}\sqrt{\frac{2}{3}}$`
+      String.raw`$\frac{2}{3}\sqrt{\frac{2}{3}}$`,
     ],
-    "detailedSolution": String.raw`According to Kepler's Third Law, the square of the orbital time period ($T$) of a planet is directly proportional to the cube of the semi-major axis ($a$) of its elliptical orbit:
+
+    detailedSolution: String.raw`According to Kepler's Third Law, the square of the orbital time period ($T$) of a planet is directly proportional to the cube of the semi-major axis ($a$) of its elliptical orbit:
 $$T^2 \propto a^3 \implies T \propto a^{3/2}$$
 This relationship is independent of the planet's mass (as long as $M_{planet} \ll M_{Sun}$).
 The semi-major axis $a$ is the average of the minimum distance (perihelion, $r_{min}$) and maximum distance (aphelion, $r_{max}$):
@@ -13780,21 +15621,30 @@ $r_{min,2} = 2R$ and $r_{max,2} = 4R$
 $$a_2 = \frac{2R + 4R}{2} = 3R$$
 Now, take the ratio of their time periods:
 $$\frac{T_2}{T_1} = \left(\frac{a_2}{a_1}\right)^{3/2} = \left(\frac{3R}{2R}\right)^{3/2} = \left(\frac{3}{2}\right)^{3/2} = \frac{3}{2}\sqrt{\frac{3}{2}}$$`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 17,
-    "year": 2020,
-    "subject": "Interference",
-    "type": "MCQ",
-    "question": String.raw`The intensity of the primary maximum in a two-slit interference pattern is given by $I_2$ and the intensity of the primary maximum in a three-slit interference pattern is given by $I_3$. Assuming the far-field approximation, same slit parameters and intensity of the incident light in both the cases, $I_2$ and $I_3$ are related as`,
-    "options": [
+    id: 17,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`The intensity of the primary maximum in a two-slit interference pattern is given by $I_2$ and the intensity of the primary maximum in a three-slit interference pattern is given by $I_3$. Assuming the far-field approximation, same slit parameters and intensity of the incident light in both the cases, $I_2$ and $I_3$ are related as`,
+
+    options: [
       String.raw`$I_2 = \frac{3}{2}I_3$`,
       String.raw`$I_2 = \frac{9}{4}I_3$`,
       String.raw`$I_2 = \frac{2}{3}I_3$`,
-      String.raw`$I_2 = \frac{4}{9}I_3$`
+      String.raw`$I_2 = \frac{4}{9}I_3$`,
     ],
-    "detailedSolution": String.raw`In an $N$-slit interference pattern (diffraction grating), the principal maxima occur where the waves from all $N$ slits arrive completely in phase.
+
+    detailedSolution: String.raw`In an $N$-slit interference pattern (diffraction grating), the principal maxima occur where the waves from all $N$ slits arrive completely in phase.
 Let $A_0$ be the amplitude of the wave from a single slit. At a principal maximum, the total amplitude is the constructive sum of the amplitudes from all $N$ slits:
 $$A_{total} = N \cdot A_0$$
 The intensity $I$ is proportional to the square of the total amplitude:
@@ -13808,21 +15658,30 @@ $$I_3 = 3^2 I_0 = 9 I_0$$
 Taking the ratio of the two intensities:
 $$\frac{I_2}{I_3} = \frac{4 I_0}{9 I_0} = \frac{4}{9}$$
 Therefore, $I_2 = \frac{4}{9} I_3$.`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 18,
-    "year": 2020,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`A short rod of length $L$ and negligible diameter lies along the optical axis of a concave mirror at a distance of $3\text{ m}$. The focal length of the mirror is $1\text{ m}$ and $L \ll 1\text{ m}$. If $L'$ is the length of image of the object in the mirror, then`,
-    "options": [
+    id: 18,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`A short rod of length $L$ and negligible diameter lies along the optical axis of a concave mirror at a distance of $3\text{ m}$. The focal length of the mirror is $1\text{ m}$ and $L \ll 1\text{ m}$. If $L'$ is the length of image of the object in the mirror, then`,
+
+    options: [
       String.raw`$\frac{L'}{L} = 4$`,
       String.raw`$\frac{L'}{L} = 2$`,
       String.raw`$\frac{L'}{L} = \frac{1}{16}$`,
-      String.raw`$\frac{L'}{L} = \frac{1}{4}$`
+      String.raw`$\frac{L'}{L} = \frac{1}{4}$`,
     ],
-    "detailedSolution": String.raw`For a short object of length $L$ lying exactly along the optical axis, the length of its image $L'$ is governed by the longitudinal magnification $m_L$.
+
+    detailedSolution: String.raw`For a short object of length $L$ lying exactly along the optical axis, the length of its image $L'$ is governed by the longitudinal magnification $m_L$.
 For small lengths ($L \ll u$), the longitudinal magnification is the derivative of the image distance $v$ with respect to the object distance $u$:
 $$m_L = \frac{dv}{du} = -m^2$$
 where $m = -\frac{v}{u}$ is the standard transverse (lateral) magnification.
@@ -13838,21 +15697,30 @@ The longitudinal magnification $m_L$ is:
 $$m_L = -m^2 = -\left(-\frac{1}{2}\right)^2 = -\frac{1}{4}$$
 The negative sign indicates the image is inverted longitudinally, but we only need the magnitude for the length $L'$:
 $$\frac{L'}{L} = |m_L| = \frac{1}{4}$$`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 19,
-    "year": 2020,
-    "subject": "Polarization",
-    "type": "MCQ",
-    "question": String.raw`A beam of unpolarized light of intensity $I_0$ falls on a system of four identical linear polarizers placed in a line as shown in the figure. The transmission axes of any two successive polarizers make an angle of $30^\circ$ with each other. If the transmitted light has intensity $I$, the ratio $\frac{I}{I_0}$ is`,
-    "options": [
+    id: 19,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`A beam of unpolarized light of intensity $I_0$ falls on a system of four identical linear polarizers placed in a line as shown in the figure. The transmission axes of any two successive polarizers make an angle of $30^\circ$ with each other. If the transmitted light has intensity $I$, the ratio $\frac{I}{I_0}$ is`,
+
+    options: [
       String.raw`$\frac{81}{256}$`,
       String.raw`$\frac{9}{16}$`,
       String.raw`$\frac{27}{64}$`,
-      String.raw`$\frac{27}{128}$`
+      String.raw`$\frac{27}{128}$`,
     ],
-    "detailedSolution": String.raw`Let's trace the light intensity through the four polarizers step-by-step.
+
+    detailedSolution: String.raw`Let's trace the light intensity through the four polarizers step-by-step.
 1.  **First Polarizer:** Unpolarized light of intensity $I_0$ passes through the first polarizer. The transmitted light becomes linearly polarized, and its intensity is reduced by exactly half.
     $$I_1 = \frac{I_0}{2}$$
 2.  **Second Polarizer:** The linearly polarized light from the first polarizer passes through the second. The angle between their transmission axes is $\theta = 30^\circ$. According to Malus's Law, $I = I_{initial} \cos^2\theta$.
@@ -13864,21 +15732,30 @@ $$\frac{L'}{L} = |m_L| = \frac{1}{4}$$`,
 Finally, calculate the final intensity $I = I_4$:
 $$I = \frac{I_0}{2} \left(\frac{27}{64}\right) = \frac{27 I_0}{128}$$
 Thus, the ratio $\frac{I}{I_0}$ is $\frac{27}{128}$.`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 20,
-    "year": 2020,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`Consider an annular region in free space containing a uniform magnetic field in the z-direction, schematically represented by the shaded region in the figure. A particle having charge $Q$ and mass $M$ starts off from point $P(a,0,0)$ in the $+x$-direction with constant speed $v$. If the radii of inner and outer circles are $a$ and $b$, respectively, the minimum magnetic field required so that the particle returns to the inner circle is`,
-    "options": [
+    id: 20,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Consider an annular region in free space containing a uniform magnetic field in the z-direction, schematically represented by the shaded region in the figure. A particle having charge $Q$ and mass $M$ starts off from point $P(a,0,0)$ in the $+x$-direction with constant speed $v$. If the radii of inner and outer circles are $a$ and $b$, respectively, the minimum magnetic field required so that the particle returns to the inner circle is`,
+
+    options: [
       String.raw`$\frac{Mv}{Q}\left(\frac{b^{2}-a^{2}}{b}\right)^{-1}$`,
       String.raw`$\frac{Mv}{Q}\left(\frac{b^{2}-a^{2}}{2b}\right)^{-1}$`,
       String.raw`$\frac{Mv}{Q}\left(\frac{b^{2}-a^{2}}{3b}\right)^{-1}$`,
-      String.raw`$\frac{Mv}{Q}\left(\frac{b^{2}-a^{2}}{4b}\right)^{-1}$`
+      String.raw`$\frac{Mv}{Q}\left(\frac{b^{2}-a^{2}}{4b}\right)^{-1}$`,
     ],
-    "detailedSolution": String.raw`The particle enters the magnetic field at point $P(a,0,0)$ with velocity $\vec{v} = v\hat{i}$. The uniform magnetic field $\vec{B} = B\hat{k}$ causes the particle to undergo circular motion. The magnetic force provides the centripetal acceleration:
+
+    detailedSolution: String.raw`The particle enters the magnetic field at point $P(a,0,0)$ with velocity $\vec{v} = v\hat{i}$. The uniform magnetic field $\vec{B} = B\hat{k}$ causes the particle to undergo circular motion. The magnetic force provides the centripetal acceleration:
 $$QvB = \frac{Mv^2}{R_c} \implies R_c = \frac{Mv}{QB}$$
 where $R_c$ is the radius of the circular trajectory.
 Because the initial velocity is purely in the $+x$ direction (radially outward from the origin), the center of the circular trajectory must lie on the $y$-axis to ensure the velocity vector at $(a,0)$ is tangent to the path. Let the center be at $(a, R_c)$ or $(a, -R_c)$ depending on the sign of $Q$ and $B$. Assume it curves up, the center is $C(a, R_c)$.
@@ -13899,21 +15776,30 @@ Substitute $R_c = \frac{Mv}{QB}$:
 $$\frac{Mv}{QB} \le \frac{b^2 - a^2}{2b}$$
 Solving for $B$, we find the minimum magnetic field:
 $$B \ge \frac{Mv}{Q} \left(\frac{2b}{b^2 - a^2}\right) = \frac{Mv}{Q} \left(\frac{b^2 - a^2}{2b}\right)^{-1}$$`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 21,
-    "year": 2020,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`A thin conducting square loop of side $L$ is placed in the first quadrant of the $xy$-plane with one of the vertices at the origin. If a changing magnetic field $\vec{B}(t)=\beta_0(5zyt\hat{x}+zxt\hat{y}+3y^2t\hat{z})$ is applied, where $\beta_0$ is a constant, then the magnitude of the induced electromotive force in the loop is`,
-    "options": [
+    id: 21,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`A thin conducting square loop of side $L$ is placed in the first quadrant of the $xy$-plane with one of the vertices at the origin. If a changing magnetic field $\vec{B}(t)=\beta_0(5zyt\hat{x}+zxt\hat{y}+3y^2t\hat{z})$ is applied, where $\beta_0$ is a constant, then the magnitude of the induced electromotive force in the loop is`,
+
+    options: [
       String.raw`$4\beta_0 L^4$`,
       String.raw`$3\beta_0 L^4$`,
       String.raw`$2\beta_0 L^4$`,
-      String.raw`$\beta_0 L^4$`
+      String.raw`$\beta_0 L^4$`,
     ],
-    "detailedSolution": String.raw`The square loop is placed in the $xy$-plane ($z=0$) in the first quadrant. Its area $S$ is bounded by $x \in [0, L]$ and $y \in [0, L]$. The normal to the surface is $\hat{n} = \hat{z}$.
+
+    detailedSolution: String.raw`The square loop is placed in the $xy$-plane ($z=0$) in the first quadrant. Its area $S$ is bounded by $x \in [0, L]$ and $y \in [0, L]$. The normal to the surface is $\hat{n} = \hat{z}$.
 The magnetic flux $\Phi$ through the loop is given by the surface integral of the magnetic field:
 $$\Phi = \iint_S \vec{B} \cdot d\vec{S} = \iint_S \vec{B} \cdot (\hat{z} \, dx \, dy)$$
 Since $z=0$ everywhere on the loop, the $z$-component of the magnetic field simplifies to:
@@ -13926,21 +15812,30 @@ Evaluate the integral over $y$:
 $$\Phi = \beta_0 t L \left[ y^3 \right]_{0}^{L} = \beta_0 t L (L^3) = \beta_0 L^4 t$$
 According to Faraday's law of induction, the magnitude of the induced electromotive force (EMF) is the rate of change of magnetic flux:
 $$|EMF| = \left| \frac{d\Phi}{dt} \right| = \frac{d}{dt}(\beta_0 L^4 t) = \beta_0 L^4$$`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 22,
-    "year": 2020,
-    "subject": "Thermodynamic Relations & Potentials",
-    "type": "MCQ",
-    "question": String.raw`In which one of the following limits the Fermi-Dirac distribution $n_{F}(\epsilon,T)=(e^{\frac{\epsilon-\mu}{k_{B}T}}+1)^{-1}$ and Bose-Einstein distribution $n_{B}(\epsilon,T)=(e^{\frac{\epsilon-\mu}{k_{B}T}}-1)^{-1}$ reduce to Maxwell-Boltzmann distribution? (Here $\epsilon$ is the energy of the state, $\mu$ is the chemical potential, $k_{B}$ is the Boltzmann constant and $T$ is the temperature).`,
-    "options": [
+    id: 22,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Thermodynamic Relations & Potentials",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Relations & Potentials","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`In which one of the following limits the Fermi-Dirac distribution $n_{F}(\epsilon,T)=(e^{\frac{\epsilon-\mu}{k_{B}T}}+1)^{-1}$ and Bose-Einstein distribution $n_{B}(\epsilon,T)=(e^{\frac{\epsilon-\mu}{k_{B}T}}-1)^{-1}$ reduce to Maxwell-Boltzmann distribution? (Here $\epsilon$ is the energy of the state, $\mu$ is the chemical potential, $k_{B}$ is the Boltzmann constant and $T$ is the temperature).`,
+
+    options: [
       String.raw`$\mu=0$`,
       String.raw`$(\epsilon-\mu)\ll k_{B}T$`,
       String.raw`$(\epsilon-\mu)\gg k_{B}T$`,
-      String.raw`$\mu\gg k_{B}T$`
+      String.raw`$\mu\gg k_{B}T$`,
     ],
-    "detailedSolution": String.raw`The Maxwell-Boltzmann distribution function represents classical statistics and is given by $n_{MB}(\epsilon, T) = e^{-\frac{\epsilon-\mu}{k_BT}}$.
+
+    detailedSolution: String.raw`The Maxwell-Boltzmann distribution function represents classical statistics and is given by $n_{MB}(\epsilon, T) = e^{-\frac{\epsilon-\mu}{k_BT}}$.
 The quantum distributions are:
 Fermi-Dirac: $n_F(\epsilon, T) = \frac{1}{e^{(\epsilon-\mu)/k_BT} + 1}$
 Bose-Einstein: $n_B(\epsilon, T) = \frac{1}{e^{(\epsilon-\mu)/k_BT} - 1}$
@@ -13952,21 +15847,30 @@ $$\frac{\epsilon-\mu}{k_BT} \gg 1 \implies (\epsilon-\mu) \gg k_B T$$
 Under this condition, the $\pm 1$ in the denominators of the quantum distributions becomes negligible compared to the large exponential term, simplifying both distributions to:
 $$n(\epsilon, T) \approx \frac{1}{e^{(\epsilon-\mu)/k_BT}} = e^{-\frac{\epsilon-\mu}{k_BT}}$$
 which is the Maxwell-Boltzmann distribution.`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 23,
-    "year": 2020,
-    "subject": "Laws of Thermodynamics",
-    "type": "MCQ",
-    "question": String.raw`Consider $N$ classical particles at temperature $T$, each of which can have two possible energies $0$ and $\epsilon$. The number of particles in the lower energy level $(N_{0})$ and higher energy level $(N_{\epsilon})$ levels are related by ($k_B$ is the Boltzmann constant)`,
-    "options": [
+    id: 23,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`Consider $N$ classical particles at temperature $T$, each of which can have two possible energies $0$ and $\epsilon$. The number of particles in the lower energy level $(N_{0})$ and higher energy level $(N_{\epsilon})$ levels are related by ($k_B$ is the Boltzmann constant)`,
+
+    options: [
       String.raw`$\frac{N_{o}}{N_{\epsilon}}=e^{\frac{-\epsilon}{k_{B}T}}$`,
       String.raw`$\frac{N_{o}}{N_{\epsilon}}=e^{\frac{\epsilon}{k_{B}T}}$`,
       String.raw`$\frac{N_{o}}{N_{\epsilon}}=1+e^{\frac{\epsilon}{k_{B}T}}$`,
-      String.raw`$\frac{N_{o}}{N_{\epsilon}}=1-e^{\frac{-\epsilon}{k_{B}T}}$`
+      String.raw`$\frac{N_{o}}{N_{\epsilon}}=1-e^{\frac{-\epsilon}{k_{B}T}}$`,
     ],
-    "detailedSolution": String.raw`For a system of classical particles in thermal equilibrium at temperature $T$, the population of an energy state $E$ is governed by the Boltzmann distribution. The number of particles $N_i$ in a state with energy $E_i$ is proportional to the Boltzmann factor $e^{-E_i / k_B T}$.
+
+    detailedSolution: String.raw`For a system of classical particles in thermal equilibrium at temperature $T$, the population of an energy state $E$ is governed by the Boltzmann distribution. The number of particles $N_i$ in a state with energy $E_i$ is proportional to the Boltzmann factor $e^{-E_i / k_B T}$.
 $$N_i \propto e^{-\frac{E_i}{k_B T}}$$
 For the lower energy level $E_0 = 0$, the number of particles $N_0$ is:
 $$N_0 \propto e^{-\frac{0}{k_B T}} = e^0 = 1$$
@@ -13974,21 +15878,30 @@ For the higher energy level $E_1 = \epsilon$, the number of particles $N_\epsilo
 $$N_\epsilon \propto e^{-\frac{\epsilon}{k_B T}}$$
 The ratio of the number of particles in the lower state to the number in the higher state is:
 $$\frac{N_0}{N_\epsilon} = \frac{e^0}{e^{-\frac{\epsilon}{k_B T}}} = \frac{1}{e^{-\frac{\epsilon}{k_B T}}} = e^{\frac{\epsilon}{k_B T}}$$`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 24,
-    "year": 2020,
-    "subject": "Laws of Thermodynamics",
-    "type": "MCQ",
-    "question": String.raw`The root mean square (rms) speeds of Hydrogen atoms at $500\text{ K}$, $V_H$, and Helium atoms at $2000\text{ K}$, $V_{He}$, are related as`,
-    "options": [
+    id: 24,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`The root mean square (rms) speeds of Hydrogen atoms at $500\text{ K}$, $V_H$, and Helium atoms at $2000\text{ K}$, $V_{He}$, are related as`,
+
+    options: [
       String.raw`$V_H > V_{He}$`,
       String.raw`$V_H < V_{He}$`,
       String.raw`$V_H = V_{He}$`,
-      String.raw`$V_H \gg V_{He}$`
+      String.raw`$V_H \gg V_{He}$`,
     ],
-    "detailedSolution": String.raw`The root-mean-square (rms) speed of an ideal gas is given by the formula:
+
+    detailedSolution: String.raw`The root-mean-square (rms) speed of an ideal gas is given by the formula:
 $$V_{rms} = \sqrt{\frac{3RT}{M}}$$
 where $R$ is the universal gas constant, $T$ is the absolute temperature, and $M$ is the molar mass of the gas.
 Note that the question specifies "Hydrogen atoms" and "Helium atoms".
@@ -13997,21 +15910,30 @@ $$V_H = \sqrt{\frac{3R(500)}{1}} = \sqrt{1500R}$$
 For Helium atoms (He), the molar mass $M_{He} \approx 4\text{ g/mol}$. The temperature is $T_{He} = 2000\text{ K}$.
 $$V_{He} = \sqrt{\frac{3R(2000)}{4}} = \sqrt{\frac{6000R}{4}} = \sqrt{1500R}$$
 Comparing the two values, we see that $V_H = V_{He}$.`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 25,
-    "year": 2020,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`The normalized ground-state wave function of a one-dimensional quantum harmonic oscillator with force constant $K$ and mass $m$ is $\psi_{0}(x)=\left(\frac{\alpha}{\pi}\right)^{1/4}e^{-\alpha x^{2}/2}$ where $\alpha=m\omega_{0}/\hbar$ and $\omega_{0}^{2}=K/m$. Which one of the following is the probability of finding the particle outside the classically allowed region? (The classically allowed region is where the total energy is greater than the potential energy)`,
-    "options": [
+    id: 25,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`The normalized ground-state wave function of a one-dimensional quantum harmonic oscillator with force constant $K$ and mass $m$ is $\psi_{0}(x)=\left(\frac{\alpha}{\pi}\right)^{1/4}e^{-\alpha x^{2}/2}$ where $\alpha=m\omega_{0}/\hbar$ and $\omega_{0}^{2}=K/m$. Which one of the following is the probability of finding the particle outside the classically allowed region? (The classically allowed region is where the total energy is greater than the potential energy)`,
+
+    options: [
       String.raw`$\frac{2}{\sqrt{\pi}}\int_{1}^{\infty}y^{2}e^{-y^{2}}dy$`,
       String.raw`$\frac{2}{\sqrt{\pi}}\int_{1}^{\infty}e^{-y^{2}}dy$`,
       String.raw`$0.5$`,
-      String.raw`$0$`
+      String.raw`$0$`,
     ],
-    "detailedSolution": String.raw`**1. Determine the classically allowed region:**
+
+    detailedSolution: String.raw`**1. Determine the classically allowed region:**
 The classically allowed region is defined by points where the total energy $E$ is greater than or equal to the potential energy $V(x)$.
 For the ground state of the quantum harmonic oscillator, the total energy is $E_0 = \frac{1}{2}\hbar\omega_0$.
 The potential energy is $V(x) = \frac{1}{2}Kx^2 = \frac{1}{2}m\omega_0^2 x^2$.
@@ -14032,23 +15954,32 @@ Let's apply a substitution: $y = \sqrt{\alpha} x$. Then $dy = \sqrt{\alpha} dx$,
 When $x = \frac{1}{\sqrt{\alpha}}$, the lower limit changes to $y = 1$. As $x \to \infty$, $y \to \infty$.
 Substitute into the integral:
 $$P = \frac{2\sqrt{\alpha}}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^2} \frac{dy}{\sqrt{\alpha}} = \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^2} dy$$`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 26,
-    "year": 2020,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A linear operator $\hat{O}$ acts on two orthonormal states of a system $\psi_1$ and $\psi_2$ as per following:
+    id: 26,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`A linear operator $\hat{O}$ acts on two orthonormal states of a system $\psi_1$ and $\psi_2$ as per following:
 $\hat{O}\psi_{1}=\psi_{2}$, $\hat{O}\psi_{2}=\frac{1}{\sqrt{2}}(\psi_{1}+\psi_{2})$
 The system is in a superposed state defined by $\psi=\frac{1}{\sqrt{2}}\psi_{1}+\frac{i}{\sqrt{2}}\psi_{2}$. The expectation value of $\hat{O}$ in the state $\psi$ is`,
-    "options": [
+
+    options: [
       String.raw`$\frac{1}{2\sqrt{2}}(1+i(\sqrt{2}+1))$`,
       String.raw`$\frac{1}{2\sqrt{2}}(1-i(\sqrt{2}+1))$`,
       String.raw`$\frac{1}{2\sqrt{2}}(1+i(\sqrt{2}-1))$`,
-      String.raw`$\frac{1}{2\sqrt{2}}(1-i(\sqrt{2}-1))$`
+      String.raw`$\frac{1}{2\sqrt{2}}(1-i(\sqrt{2}-1))$`,
     ],
-    "detailedSolution": String.raw`The expectation value is $\langle \hat{O} \rangle = \langle \psi | \hat{O} | \psi \rangle$.
+
+    detailedSolution: String.raw`The expectation value is $\langle \hat{O} \rangle = \langle \psi | \hat{O} | \psi \rangle$.
 The state vector is $|\psi\rangle = \frac{1}{\sqrt{2}}|\psi_1\rangle + \frac{i}{\sqrt{2}}|\psi_2\rangle$.
 First, calculate the action of the operator $\hat{O}$ on the state $|\psi\rangle$:
 $$\hat{O}|\psi\rangle = \hat{O}\left( \frac{1}{\sqrt{2}}|\psi_1\rangle + \frac{i}{\sqrt{2}}|\psi_2\rangle \right) = \frac{1}{\sqrt{2}}\hat{O}|\psi_1\rangle + \frac{i}{\sqrt{2}}\hat{O}|\psi_2\rangle$$
@@ -14064,21 +15995,30 @@ $$\langle \psi | \hat{O} | \psi \rangle = \left(\frac{1}{\sqrt{2}}\right)\left(\
 $$\langle \psi | \hat{O} | \psi \rangle = \frac{i}{2\sqrt{2}} - \frac{i}{2} - \frac{i^2}{2\sqrt{2}} = \frac{i}{2\sqrt{2}} - \frac{i}{2} + \frac{1}{2\sqrt{2}}$$
 Find a common denominator of $2\sqrt{2}$:
 $$\langle \psi | \hat{O} | \psi \rangle = \frac{i - i\sqrt{2} + 1}{2\sqrt{2}} = \frac{1 - i(\sqrt{2} - 1)}{2\sqrt{2}}$$`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 27,
-    "year": 2020,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`Consider a one-dimensional infinite potential well of width $a$. This system contains five non-interacting electrons, each of mass $m$, at temperature $T=0\text{ K}$. The energy of the highest occupied state is`,
-    "options": [
+    id: 27,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`Consider a one-dimensional infinite potential well of width $a$. This system contains five non-interacting electrons, each of mass $m$, at temperature $T=0\text{ K}$. The energy of the highest occupied state is`,
+
+    options: [
       String.raw`$\frac{25\pi^{2}\hbar^{2}}{2ma^{2}}$`,
       String.raw`$\frac{10\pi^{2}\hbar^{2}}{2ma^{2}}$`,
       String.raw`$\frac{5\pi^{2}\hbar^{2}}{2ma^{2}}$`,
-      String.raw`$\frac{9\pi^{2}\hbar^{2}}{2ma^{2}}$`
+      String.raw`$\frac{9\pi^{2}\hbar^{2}}{2ma^{2}}$`,
     ],
-    "detailedSolution": String.raw`The energy levels for a particle in a 1D infinite potential well of width $a$ are given by:
+
+    detailedSolution: String.raw`The energy levels for a particle in a 1D infinite potential well of width $a$ are given by:
 $$E_n = \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
 where $n = 1, 2, 3, \dots$ represents the principal quantum number defining the spatial state.
 Electrons are fermions with spin $s = 1/2$. Due to the Pauli Exclusion Principle, each spatial energy state $n$ can be occupied by at most two electrons (one spin up, one spin down).
@@ -14089,67 +16029,92 @@ We need to accommodate 5 non-interacting electrons into the lowest available ene
 The 5th electron occupies the $n = 3$ state. Thus, the highest occupied state corresponds to $n = 3$.
 The energy of this highest occupied state is:
 $$E_3 = \frac{3^2 \pi^2 \hbar^2}{2ma^2} = \frac{9\pi^2 \hbar^2}{2ma^2}$$`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 28,
-    "year": 2020,
-    "subject": "Crystal Structure",
-    "type": "MCQ",
-    "question": String.raw`Consider the crystal structure shown in the figure, where black and grey spheres represent atoms of two different elements and $a$ denotes the lattice constant. The Bravais lattice for this structure is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/28_20.png",
-    "options": [
+    id: 28,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`Consider the crystal structure shown in the figure, where black and grey spheres represent atoms of two different elements and $a$ denotes the lattice constant. The Bravais lattice for this structure is`,
+
+    options: [
       String.raw`Simple cubic`,
       String.raw`Face-centered cubic`,
       String.raw`Body-centered cubic`,
-      String.raw`Triclinic`
+      String.raw`Triclinic`,
     ],
-    "detailedSolution": String.raw`The given figure shows a cubic structure where one type of atom (grey spheres) occupies the corners of the cubic cells, and the other type of atom (black spheres) occupies the center of each cubic cell.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/28_20.png",
+
+    detailedSolution: String.raw`The given figure shows a cubic structure where one type of atom (grey spheres) occupies the corners of the cubic cells, and the other type of atom (black spheres) occupies the center of each cubic cell.
 This arrangement is characteristic of the Cesium Chloride (CsCl) crystal structure. It is essential to distinguish between a crystal structure (Bravais lattice + basis) and just the Bravais lattice itself.
 Even though it visually resembles a body-centered cubic (bcc) setup, the corner atoms and the center atom are of *different* elements. A Bravais lattice must be a mathematical array of identical, indistinguishable points. 
 To construct this structure using identical lattice points, we must define the Bravais lattice as a **Simple Cubic (sc)** lattice, where each lattice point is associated with a 2-atom basis consisting of one grey atom at $(0, 0, 0)$ and one black atom at $(\frac{a}{2}, \frac{a}{2}, \frac{a}{2})$.
 Therefore, the underlying Bravais lattice is Simple cubic.`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 29,
-    "year": 2020,
-    "subject": "Semiconductors",
-    "type": "MCQ",
-    "question": String.raw`For an unbiased Silicon n-p-n transistor in thermal equilibrium, which one of the following electronic energy band diagrams is correct? ($E_c = $ conduction band minimum, $E_v = $ valence band maximum, $E_F = $ Fermi level).`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 29,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For an unbiased Silicon n-p-n transistor in thermal equilibrium, which one of the following electronic energy band diagrams is correct? ($E_c = $ conduction band minimum, $E_v = $ valence band maximum, $E_F = $ Fermi level).`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29a_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29b_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29c_20.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29d_20.png"
-    ],
-    "detailedSolution": String.raw`In thermal equilibrium (no applied external bias), a fundamental rule of semiconductor physics is that the Fermi level $E_F$ must remain constant and completely flat across the entire device structure.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29a_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29b_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29c_20.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/29d_20.png"],
+
+    detailedSolution: String.raw`In thermal equilibrium (no applied external bias), a fundamental rule of semiconductor physics is that the Fermi level $E_F$ must remain constant and completely flat across the entire device structure.
 Let's analyze the properties of the individual regions in an n-p-n transistor relative to this constant $E_F$:
 1.  **n-type emitter and collector regions:** These are doped with donor impurities, meaning the majority carriers are electrons. Consequently, the Fermi level $E_F$ is situated close to the conduction band edge $E_c$. This forces the $E_c$ and $E_v$ lines to be relatively low in these outer regions.
 2.  **p-type base region (the middle):** This region is doped with acceptor impurities, making holes the majority carriers. Here, the Fermi level $E_F$ must be close to the valence band edge $E_v$. To achieve this while $E_F$ remains globally flat, the $E_c$ and $E_v$ energy bands must bend upwards in the p-type region.
 The resulting diagram will show a flat horizontal $E_F$ line, with $E_c$ and $E_v$ forming a "hill" or potential barrier in the central base region. This matches diagram (B)[cite: 2].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 30,
-    "year": 2020,
-    "subject": "Operational Amplifiers",
-    "type": "MCQ",
-    "question": String.raw`In the circuit shown in the figure, both OPAMPs are ideal. The output for the circuit $V_{out}$ is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/30_20.png",
-    "options": [
+    id: 30,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`In the circuit shown in the figure, both OPAMPs are ideal. The output for the circuit $V_{out}$ is`,
+
+    options: [
       String.raw`$20V_1 + 10V_2$`,
       String.raw`$-20V_1 + 10V_2$`,
       String.raw`$10V_1 - 20V_2$`,
-      String.raw`$20V_1 - 10V_2$`
+      String.raw`$20V_1 - 10V_2$`,
     ],
-    "detailedSolution": String.raw`Let's analyze the circuit in two stages for the two ideal OPAMPs.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/30_20.png",
+
+    detailedSolution: String.raw`Let's analyze the circuit in two stages for the two ideal OPAMPs.
 
 **Stage 1: First OPAMP**
 The first OPAMP is configured as an inverting amplifier. The input voltage $V_1$ is connected to the inverting terminal via resistor $R$. The feedback resistor is $10R$. The non-inverting terminal is directly grounded ($0\text{ V}$).
@@ -14169,22 +16134,31 @@ Substitute $V_A = -10V_1$ into the equation:
 $$V_{out} = -2(-10V_1) - 10V_2$$
 $$V_{out} = 20V_1 - 10V_2$$
 This result precisely matches option (D).`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 31,
-    "year": 2020,
-    "subject": "Calculus",
-    "type": "MSQ",
-    "question": String.raw`If $P$ and $Q$ are Hermitian matrices, which of the following is/are true?
+    id: 31,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods","Linear Algebra"],
+    type: "MSQ",
+
+    question: String.raw`If $P$ and $Q$ are Hermitian matrices, which of the following is/are true?
 (A matrix $P$ is Hermitian if $P = P^{\dagger}$, where the elements $P_{ij}^{\dagger} = P_{ji}^{*}$)`,
-    "options": [
+
+    options: [
       String.raw`$PQ+QP$ is always Hermitian`,
       String.raw`$i(PQ-QP)$ is always Hermitian`,
       String.raw`$PQ$ is always Hermitian`,
-      String.raw`$PQ-QP$ is always Hermitian`
+      String.raw`$PQ-QP$ is always Hermitian`,
     ],
-    "detailedSolution": String.raw`Given $P = P^\dagger$ and $Q = Q^\dagger$. We test each property by taking the Hermitian conjugate ($^\dagger$) of the composite expression. Recall that $(AB)^\dagger = B^\dagger A^\dagger$ and $(A+B)^\dagger = A^\dagger + B^\dagger$.
+
+    detailedSolution: String.raw`Given $P = P^\dagger$ and $Q = Q^\dagger$. We test each property by taking the Hermitian conjugate ($^\dagger$) of the composite expression. Recall that $(AB)^\dagger = B^\dagger A^\dagger$ and $(A+B)^\dagger = A^\dagger + B^\dagger$.
 *   **(A) Test $PQ+QP$:**
     $$(PQ+QP)^\dagger = (PQ)^\dagger + (QP)^\dagger = Q^\dagger P^\dagger + P^\dagger Q^\dagger$$
     Substitute $P^\dagger = P$ and $Q^\dagger = Q$:
@@ -14200,41 +16174,59 @@ This result precisely matches option (D).`,
 *   **(D) Test $PQ-QP$:**
     $$(PQ-QP)^\dagger = Q^\dagger P^\dagger - P^\dagger Q^\dagger = QP - PQ = -(PQ-QP)$$
     This structure demonstrates that $PQ-QP$ is anti-Hermitian, not Hermitian.`,
-    "correctAnswers": [0, 1]
+
+    correctAnswers: [0,1],
   },
+
   {
-    "id": 32,
-    "year": 2020,
-    "subject": "Matrices & Determinants",
-    "type": "MSQ",
-    "question": String.raw`Consider a vector function $\vec{u}(\vec{r})$ and two scalar functions $\psi(\vec{r})$ and $\phi(\vec{r})$. The unit vector $\hat{n}$ is normal to the elementary surface $dS$, $dV$ is an infinitesimal volume, $dl$ is an infinitesimal line element, and $\partial/\partial n$ denotes the partial derivative along $\hat{n}$. Which of the following identities is/are correct?`,
-    "options": [
+    id: 32,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`Consider a vector function $\vec{u}(\vec{r})$ and two scalar functions $\psi(\vec{r})$ and $\phi(\vec{r})$. The unit vector $\hat{n}$ is normal to the elementary surface $dS$, $dV$ is an infinitesimal volume, $dl$ is an infinitesimal line element, and $\partial/\partial n$ denotes the partial derivative along $\hat{n}$. Which of the following identities is/are correct?`,
+
+    options: [
       String.raw`$\int_{V}\vec{\nabla}\cdot\vec{u}dV=\oint_{S}\vec{u}\cdot\hat{n}dS$, where surface S bounds the volume V.`,
       String.raw`$\int_V [\psi \nabla^2 \phi - \phi \nabla^2 \psi] dV=\oint_{S}\left[\psi\frac{\partial\phi}{\partial n}-\phi\frac{\partial\psi}{\partial n}\right]dS$, where surface S bounds the volume V.`,
       String.raw`$\int_V [\psi \nabla^2 \phi + \nabla \psi \cdot \nabla \phi] dV=\oint_{S}\left[\psi\frac{\partial\phi}{\partial n}+\phi\frac{\partial\psi}{\partial n}\right]dS$, where surface S bounds the volume V.`,
-      String.raw`$\oint_{c}\vec{u}\cdot\vec{dl}=\iint_{S}(\vec{\nabla}\times\vec{u})\cdot\hat{n}dS$ where C is the boundary of surface S.`
+      String.raw`$\oint_{c}\vec{u}\cdot\vec{dl}=\iint_{S}(\vec{\nabla}\times\vec{u})\cdot\hat{n}dS$ where C is the boundary of surface S.`,
     ],
-    "detailedSolution": String.raw`Let's evaluate these fundamental theorems of vector calculus:
+
+    detailedSolution: String.raw`Let's evaluate these fundamental theorems of vector calculus:
 *   **(A)** This is the standard mathematical statement of the Divergence Theorem (Gauss's Theorem), which equates the volume integral of the divergence of a vector field to the surface integral of the vector field over the enclosing boundary. This identity is correct.
 *   **(B)** This is the formulation for Green's Second Identity. It defines a relationship involving two scalar fields $\psi$ and $\phi$. Note that $\frac{\partial\phi}{\partial n} = \vec{\nabla}\phi \cdot \hat{n}$. This identity is rigorously derived from the Divergence Theorem and is perfectly correct.
 *   **(C)** This attempts to state Green's First Identity. The correct form of Green's First Identity is $\int_V (\psi \nabla^2 \phi + \vec{\nabla}\psi \cdot \vec{\nabla}\phi) dV = \oint_{S} \psi \frac{\partial\phi}{\partial n} dS$. The provided identity adds extra, incorrect terms to the right-hand side. Therefore, it is incorrect.
 *   **(D)** This is the standard statement of Stokes' Theorem, relating the line integral of a vector field around a closed curve to the surface integral of the curl of that field over any surface bounded by the curve. This identity is correct.`,
-    "correctAnswers": [0, 1, 3]
+
+    correctAnswers: [0,1,3],
   },
+
   {
-    "id": 33,
-    "year": 2020,
-    "subject": "Rigid Body Dynamics",
-    "type": "MSQ",
-    "question": String.raw`A thin rod of uniform density and length $2\sqrt{3}\text{ m}$ is undergoing small oscillations about a pivot point. The time period of oscillation $(T_m)$ is minimum when the distance of the pivot point from the center-of-mass of the rod is $x_m$. Which of the following is/are correct?
+    id: 33,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MSQ",
+
+    question: String.raw`A thin rod of uniform density and length $2\sqrt{3}\text{ m}$ is undergoing small oscillations about a pivot point. The time period of oscillation $(T_m)$ is minimum when the distance of the pivot point from the center-of-mass of the rod is $x_m$. Which of the following is/are correct?
 (Assume acceleration due to gravity $g=10\text{ m/s}^2$)`,
-    "options": [
+
+    options: [
       String.raw`$x_m = 1\text{ m}$`,
       String.raw`$x_m = \frac{\sqrt{3}}{2}\text{ m}$`,
       String.raw`$T_m = \frac{2\pi}{\sqrt{3}}\text{ s}$`,
-      String.raw`$T_m = \frac{2\pi}{\sqrt{5}}\text{ s}$`
+      String.raw`$T_m = \frac{2\pi}{\sqrt{5}}\text{ s}$`,
     ],
-    "detailedSolution": String.raw`The physical pendulum executes small oscillations with a time period $T$ given by:
+
+    detailedSolution: String.raw`The physical pendulum executes small oscillations with a time period $T$ given by:
 $$T = 2\pi\sqrt{\frac{I}{mgx}}$$
 where $I$ is the moment of inertia about the pivot, $m$ is the mass, and $x$ is the distance from the pivot to the center of mass.
 Using the parallel axis theorem, the moment of inertia about the pivot is $I = I_{cm} + mx^2$.
@@ -14249,21 +16241,30 @@ This means statement (A) is correct.
 Now, calculate the minimum time period $T_m$ by substituting $x = 1\text{ m}$ back into the time period equation:
 $$T_m = 2\pi\sqrt{\frac{\frac{(2\sqrt{3})^2}{12(1)} + 1}{10}} = 2\pi\sqrt{\frac{\frac{12}{12} + 1}{10}} = 2\pi\sqrt{\frac{1 + 1}{10}} = 2\pi\sqrt{\frac{2}{10}} = \frac{2\pi}{\sqrt{5}}\text{ s}$$
 This means statement (D) is correct.`,
-    "correctAnswers": [0, 3]
+
+    correctAnswers: [0,3],
   },
+
   {
-    "id": 34,
-    "year": 2020,
-    "subject": "Superposition of Oscillations",
-    "type": "MSQ",
-    "question": String.raw`Three sinusoidal waves of the same frequency travel with the same speed along the positive x-direction. The amplitudes of the waves are $a$, $a/2$, and $a/3$, and the phase constants of the waves are $\pi/2$, $\pi$, and $3\pi/2$, respectively. If $A_m$ and $\varphi_m$ are the amplitude and phase constant of the wave resulting from the superposition of the three waves, which of the following is/are correct?`,
-    "options": [
+    id: 34,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Superposition of Oscillations",
+    subjectId: "waves",
+    tags: ["Superposition of Oscillations","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`Three sinusoidal waves of the same frequency travel with the same speed along the positive x-direction. The amplitudes of the waves are $a$, $a/2$, and $a/3$, and the phase constants of the waves are $\pi/2$, $\pi$, and $3\pi/2$, respectively. If $A_m$ and $\varphi_m$ are the amplitude and phase constant of the wave resulting from the superposition of the three waves, which of the following is/are correct?`,
+
+    options: [
       String.raw`$A_{m}=\frac{5}{6}a$`,
       String.raw`$\varphi_{m}=\frac{\pi}{2}+\tan^{-1}\left(\frac{3}{4}\right)$`,
       String.raw`$A_{m}=\frac{7}{6}a$`,
-      String.raw`$\varphi_{m}=\tan^{-1}\left(\frac{2}{3}\right)$`
+      String.raw`$\varphi_{m}=\tan^{-1}\left(\frac{2}{3}\right)$`,
     ],
-    "detailedSolution": String.raw`We can analyze the superposition using phasors (vectors in the complex plane). A wave $A \sin(kx - \omega t + \phi)$ is represented by a phasor of length $A$ at angle $\phi$.
+
+    detailedSolution: String.raw`We can analyze the superposition using phasors (vectors in the complex plane). A wave $A \sin(kx - \omega t + \phi)$ is represented by a phasor of length $A$ at angle $\phi$.
 The three waves correspond to phasors:
 1.  $\vec{A}_1 = a$ at angle $90^\circ$ ($\pi/2$). In Cartesian components: $(0, a)$.
 2.  $\vec{A}_2 = \frac{a}{2}$ at angle $180^\circ$ ($\pi$). In Cartesian components: $(-\frac{a}{2}, 0)$.
@@ -14280,21 +16281,30 @@ Using the trigonometric identity $\tan\left(\frac{\pi}{2} + \theta\right) = -\co
 Let $\theta = \tan^{-1}\left(\frac{3}{4}\right)$. Then $\cot\theta = \frac{4}{3}$.
 $$\tan\left(\frac{\pi}{2} + \tan^{-1}\left(\frac{3}{4}\right)\right) = -\cot\left(\tan^{-1}\left(\frac{3}{4}\right)\right) = -\frac{4}{3}$$
 Therefore, $\varphi_m = \frac{\pi}{2} + \tan^{-1}\left(\frac{3}{4}\right)$ perfectly describes the phase angle. Statement (B) is correct.`,
-    "correctAnswers": [0, 1]
+
+    correctAnswers: [0,1],
   },
+
   {
-    "id": 35,
-    "year": 2020,
-    "subject": "Simple Harmonic Motion",
-    "type": "MSQ",
-    "question": String.raw`An object executes simple harmonic motion along the x-direction with angular frequency $\omega$ and amplitude $a$. The speed of the object is $4\text{ cm/s}$ and $2\text{ cm/s}$, when it is at distances $2\text{ cm}$ and $6\text{ cm}$, respectively from the equilibrium position. Which of the following is/are correct?`,
-    "options": [
+    id: 35,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Simple Harmonic Motion",
+    subjectId: "waves",
+    tags: ["Simple Harmonic Motion","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`An object executes simple harmonic motion along the x-direction with angular frequency $\omega$ and amplitude $a$. The speed of the object is $4\text{ cm/s}$ and $2\text{ cm/s}$, when it is at distances $2\text{ cm}$ and $6\text{ cm}$, respectively from the equilibrium position. Which of the following is/are correct?`,
+
+    options: [
       String.raw`$\omega=\sqrt{\frac{3}{8}}\text{ rad/s}$`,
       String.raw`$\omega=\sqrt{\frac{5}{6}}\text{ rad/s}$`,
       String.raw`$a=\sqrt{\frac{140}{3}}\text{ cm}$`,
-      String.raw`$a=\sqrt{\frac{175}{6}}\text{ cm}$`
+      String.raw`$a=\sqrt{\frac{175}{6}}\text{ cm}$`,
     ],
-    "detailedSolution": String.raw`In simple harmonic motion (SHM), the speed $v$ of an object at a displacement $x$ from the equilibrium position is given by the relation:
+
+    detailedSolution: String.raw`In simple harmonic motion (SHM), the speed $v$ of an object at a displacement $x$ from the equilibrium position is given by the relation:
 $$v = \omega\sqrt{a^2 - x^2}$$
 Squaring this equation yields $v^2 = \omega^2(a^2 - x^2)$.
 We are given two sets of conditions:
@@ -14314,40 +16324,58 @@ $$4 = \omega^2 \left( \frac{140}{3} - 36 \right) = \omega^2 \left( \frac{140}{3}
 $$4 = \omega^2 \left( \frac{32}{3} \right)$$
 $$\omega^2 = \frac{12}{32} = \frac{3}{8} \implies \omega = \sqrt{\frac{3}{8}}\text{ rad/s}$$
 This matches option (A).`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 36,
-    "year": 2020,
-    "subject": "Magnetostatics",
-    "type": "MSQ",
-    "question": String.raw`For electric and magnetic fields, $\vec{E}$ and $\vec{B}$ due to a charge density $\rho(\vec{r},t)$ and a current density $\vec{J}(\vec{r},t)$, which of the following relations is/are always correct?`,
-    "options": [
+    id: 36,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MSQ",
+
+    question: String.raw`For electric and magnetic fields, $\vec{E}$ and $\vec{B}$ due to a charge density $\rho(\vec{r},t)$ and a current density $\vec{J}(\vec{r},t)$, which of the following relations is/are always correct?`,
+
+    options: [
       String.raw`$\vec{\nabla}\times\vec{E}=0$`,
       String.raw`$\vec{\nabla}\cdot\vec{B}=0$`,
       String.raw`$\vec{\nabla}\cdot\vec{J}-\frac{\partial\rho}{\partial t}=0$`,
-      String.raw`$\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})$, where $\vec{F}$ is the force on a particle with charge $q$ moving with velocity $\vec{v}$`
+      String.raw`$\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})$, where $\vec{F}$ is the force on a particle with charge $q$ moving with velocity $\vec{v}$`,
     ],
-    "detailedSolution": String.raw`Let's evaluate each statement based on Maxwell's equations and classical electromagnetism:
+
+    detailedSolution: String.raw`Let's evaluate each statement based on Maxwell's equations and classical electromagnetism:
 *   **(A)** $\vec{\nabla}\times\vec{E} = 0$ is only true for statics. Faraday's law of induction states that $\vec{\nabla}\times\vec{E} = -\frac{\partial\vec{B}}{\partial t}$, so this is not always correct.
 *   **(B)** $\vec{\nabla}\cdot\vec{B} = 0$ is Gauss's law for magnetism, stating there are no magnetic monopoles. This is a fundamental postulate of classical electromagnetism and is always correct[cite: 2].
 *   **(C)** The continuity equation, which represents the conservation of local charge, is $\vec{\nabla}\cdot\vec{J} + \frac{\partial\rho}{\partial t} = 0$. The given expression has a minus sign, making it incorrect.
 *   **(D)** $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$ is the Lorentz force law, which defines the total electromagnetic force on a moving point charge. This is always correct[cite: 2].`,
-    "correctAnswers": [1, 3]
+
+    correctAnswers: [1,3],
   },
+
   {
-    "id": 37,
-    "year": 2020,
-    "subject": "Conductors, Capacitors & Electrostatic Energy",
-    "type": "MSQ",
-    "question": String.raw`A spherical dielectric shell with inner radius $a$ and outer radius $b$, has polarization $\vec{P}=\frac{k}{r^{2}}\hat{r}$ where $k$ is a constant and $\hat{r}$ is the unit vector along the radial direction. Which of the following statements is/are correct?`,
-    "options": [
+    id: 37,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Conductors, Capacitors & Electrostatic Energy",
+    subjectId: "em",
+    tags: ["Conductors, Capacitors & Electrostatic Energy","Electricity & Magnetism"],
+    type: "MSQ",
+
+    question: String.raw`A spherical dielectric shell with inner radius $a$ and outer radius $b$, has polarization $\vec{P}=\frac{k}{r^{2}}\hat{r}$ where $k$ is a constant and $\hat{r}$ is the unit vector along the radial direction. Which of the following statements is/are correct?`,
+
+    options: [
       String.raw`The surface density of bound charges on the inner and outer surfaces are $-k$ and $+k$, respectively. The volume density of bound charges inside the dielectric is zero.`,
       String.raw`The surface density of bound charges is zero on both the inner and outer surfaces. The volume density of bound charges inside the dielectric is $+k$.`,
       String.raw`The surface density of bound charges on the inner and outer surfaces are $\frac{-k}{a^2}$ and $\frac{k}{b^2}$ respectively. The volume density of bound charges inside the dielectric is zero.`,
-      String.raw`The surface density of bound charges is zero on both the inner and outer surfaces. The volume density of bound charges inside the dielectric is $\frac{3k}{4\pi(b^{3}-a^{3})}$`
+      String.raw`The surface density of bound charges is zero on both the inner and outer surfaces. The volume density of bound charges inside the dielectric is $\frac{3k}{4\pi(b^{3}-a^{3})}$`,
     ],
-    "detailedSolution": String.raw`The bound volume charge density $\rho_b$ is defined by the negative divergence of the polarization vector:
+
+    detailedSolution: String.raw`The bound volume charge density $\rho_b$ is defined by the negative divergence of the polarization vector:
 $$\rho_b = -\vec{\nabla} \cdot \vec{P}$$
 For a purely radial vector field $\vec{P} = P_r\hat{r}$, the divergence in spherical coordinates is $\vec{\nabla} \cdot \vec{P} = \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 P_r)$.
 Substituting the given polarization $\vec{P} = \frac{k}{r^2}\hat{r}$:
@@ -14361,21 +16389,30 @@ $$\sigma_b = \vec{P} \cdot \hat{n}$$
 *   At the **outer surface** ($r = b$), the outward normal points radially away from the origin, so $\hat{n} = \hat{r}$.
     $$\sigma_{b}(b) = \left(\frac{k}{b^2}\hat{r}\right) \cdot (\hat{r}) = \frac{k}{b^2}$$
 Comparing these derived values to the options, statement (C) is the only correct one[cite: 2].`,
-    "correctAnswers": [2]
+
+    correctAnswers: [2],
   },
+
   {
-    "id": 38,
-    "year": 2020,
-    "subject": "Laws of Thermodynamics",
-    "type": "MSQ",
-    "question": String.raw`One mole of an ideal gas having specific heat ratio $(\gamma)$ of $1.6$ is mixed with one mole of another ideal gas having specific heat ratio of $1.4$. If $C_{V}$ and $C_{P}$ are the molar specific heat capacities of the gas mixture at constant volume and pressure, respectively, which of the following is/are correct? (R denotes the universal gas constant).`,
-    "options": [
+    id: 38,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`One mole of an ideal gas having specific heat ratio $(\gamma)$ of $1.6$ is mixed with one mole of another ideal gas having specific heat ratio of $1.4$. If $C_{V}$ and $C_{P}$ are the molar specific heat capacities of the gas mixture at constant volume and pressure, respectively, which of the following is/are correct? (R denotes the universal gas constant).`,
+
+    options: [
       String.raw`$C_{v}=2.08\ R$`,
       String.raw`$C_{P}=2.9\ R$`,
       String.raw`$C_{P}=1.48\ C_{V}$`,
-      String.raw`$C_{P}=1.52\ C_{V}$`
+      String.raw`$C_{P}=1.52\ C_{V}$`,
     ],
-    "detailedSolution": String.raw`Let Gas 1 have $\gamma_1 = 1.6$ and $n_1 = 1$ mole.
+
+    detailedSolution: String.raw`Let Gas 1 have $\gamma_1 = 1.6$ and $n_1 = 1$ mole.
 Its molar heat capacity at constant volume is $C_{V1} = \frac{R}{\gamma_1 - 1} = \frac{R}{1.6 - 1} = \frac{R}{0.6} = \frac{5}{3}R \approx 1.667R$.
 
 Let Gas 2 have $\gamma_2 = 1.4$ and $n_2 = 1$ mole.
@@ -14393,52 +16430,78 @@ This renders option (B) incorrect (it claims $2.9 R$).
 Now, check the ratio $C_P / C_V$ for the mixture:
 $$\gamma_{mix} = \frac{C_P}{C_V} = \frac{\frac{37}{12}R}{\frac{25}{12}R} = \frac{37}{25} = 1.48$$
 Therefore, $C_P = 1.48 C_V$, which precisely matches option (C)[cite: 2].`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 39,
-    "year": 2020,
-    "subject": "Special Relativity",
-    "type": "MSQ",
-    "question": String.raw`Two relativistic particles with opposite velocities collide head-on and come to rest by sticking with each other. Which of the following quantities is/are conserved in the collision?`,
-    "options": [
+    id: 39,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`Two relativistic particles with opposite velocities collide head-on and come to rest by sticking with each other. Which of the following quantities is/are conserved in the collision?`,
+
+    options: [
       String.raw`Total momentum`,
       String.raw`Total energy`,
       String.raw`Total kinetic energy`,
-      String.raw`Total rest mass`
+      String.raw`Total rest mass`,
     ],
-    "detailedSolution": String.raw`This is a completely inelastic relativistic collision.
+
+    detailedSolution: String.raw`This is a completely inelastic relativistic collision.
 *   **Total momentum:** In any isolated collision, linear momentum is conserved. Initially, the momenta are equal and opposite (since they come to rest), yielding a total momentum of zero. Finally, they are at rest, so the momentum remains zero. This is conserved[cite: 2].
 *   **Total energy:** The conservation of total relativistic energy ($E = \gamma mc^2$) is a fundamental law for isolated systems. The initial kinetic energy is converted into the internal energy (and thus additional rest mass) of the combined stationary particle. Total energy is strictly conserved[cite: 2].
 *   **Total kinetic energy:** In a completely inelastic collision, the macroscopic kinetic energy is transformed into other forms of energy (internal heat/mass). The particles had kinetic energy initially but none finally, so it is definitively not conserved.
 *   **Total rest mass:** In relativity, rest mass is not a conserved quantity in inelastic collisions. The initial total energy ($2\gamma mc^2$) equates to the final rest mass energy ($M c^2$). Thus $M = 2\gamma m$. Since $\gamma > 1$, the final rest mass $M$ is strictly greater than the sum of the initial rest masses ($2m$). Therefore, rest mass is not conserved.`,
-    "correctAnswers": [0, 1]
+
+    correctAnswers: [0,1],
   },
+
   {
-    "id": 40,
-    "year": 2020,
-    "subject": "Digital Electronics",
-    "type": "MSQ",
-    "question": String.raw`Figure shows a circuit diagram comprising Boolean logic gates and the corresponding timing diagrams show the digital signals at various points in the circuit. Which of the following is/are true?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/40_20.png",
-    "options": [
+    id: 40,
+    year: 2020,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
+    type: "MSQ",
+
+    question: String.raw`Figure shows a circuit diagram comprising Boolean logic gates and the corresponding timing diagrams show the digital signals at various points in the circuit. Which of the following is/are true?`,
+
+    options: [
       String.raw`Points 3 and 7 are shorted.`,
       String.raw`The NOT gate on the right is faulty.`,
       String.raw`The AND gate is faulty and acts like a NOR gate.`,
-      String.raw`The AND gate is faulty and acts like an OR gate.`
+      String.raw`The AND gate is faulty and acts like an OR gate.`,
     ],
-    "detailedSolution": String.raw`*Note: This problem requires careful tracing of the input signals across the logic gates based on the provided timing diagram in the original paper.*
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/40_20.png",
+
+    detailedSolution: String.raw`*Note: This problem requires careful tracing of the input signals across the logic gates based on the provided timing diagram in the original paper.*
 Without visual access to the timing states (high/low transitions at nodes 1 through 7), we conceptually evaluate the structure. In the standard evaluation of this specific problem from the 2020 JAM paper, node 3 and node 7 exhibit identical logic states simultaneously across all timing intervals, behaving as if they are physically shorted. Furthermore, observing the outputs of the AND gate in the given trace reveals its behavior exactly mirrors that of a logical OR operation for the applied inputs, indicating a specific fault mode[cite: 2].`,
-    "correctAnswers": [0, 3]
+
+    correctAnswers: [0,3],
   },
+
   {
-    "id": 41,
-    "year": 2020,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "NAT",
-    "question": String.raw`The line integral of the vector function $u(x,y)=2y\hat{i}+x\hat{j}$ along the straight line from $(0, 0)$ to $(2, 4)$ is _______`,
-    "options": [],
-    "detailedSolution": String.raw`The straight line path from $(0, 0)$ to $(2, 4)$ can be parameterized. The slope of this line is $m = \frac{4 - 0}{2 - 0} = 2$.
+    id: 41,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`The line integral of the vector function $u(x,y)=2y\hat{i}+x\hat{j}$ along the straight line from $(0, 0)$ to $(2, 4)$ is _______`,
+
+    detailedSolution: String.raw`The straight line path from $(0, 0)$ to $(2, 4)$ can be parameterized. The slope of this line is $m = \frac{4 - 0}{2 - 0} = 2$.
 Thus, the equation of the line is $y = 2x$.
 The differential path element is $d\vec{r} = dx \hat{i} + dy \hat{j}$. Since $y = 2x$, we have $dy = 2dx$.
 The line integral is given by:
@@ -14449,16 +16512,23 @@ $$I = \int_{0}^{2} (4x\,dx + 2x\,dx) = \int_{0}^{2} 6x\,dx$$
 Evaluate the integral:
 $$I = \left[ 3x^2 \right]_{0}^{2} = 3(2)^2 - 3(0)^2 = 3(4) = 12$$
 The value of the line integral is $12$[cite: 2].`,
-    correctAnswer: 12
+
+    correctAnswer: 12,
   },
+
   {
-    "id": 42,
-    "year": 2020,
-    "subject": "Geometrical Optics",
-    "type": "NAT",
-    "question": String.raw`Consider a thin bi-convex lens of relative refractive index $n=1.5$. The radius of curvature of one surface of the lens is twice that of the other. The magnitude of larger radius of curvature in units of the focal length of the lens is _______ (Round off to 1 decimal place).`,
-    "options": [],
-    "detailedSolution": String.raw`Let the radius of curvature of the first surface be $R_1 = R$. For a bi-convex lens, the second surface bows in the opposite direction, so by standard Cartesian sign convention, $R_2$ is negative.
+    id: 42,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Consider a thin bi-convex lens of relative refractive index $n=1.5$. The radius of curvature of one surface of the lens is twice that of the other. The magnitude of larger radius of curvature in units of the focal length of the lens is _______ (Round off to 1 decimal place).`,
+
+    detailedSolution: String.raw`Let the radius of curvature of the first surface be $R_1 = R$. For a bi-convex lens, the second surface bows in the opposite direction, so by standard Cartesian sign convention, $R_2$ is negative.
 The problem states the magnitude of one is twice the other. Let's set $R_2 = -2R$.
 We use the Lens Maker's Formula:
 $$\frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$$
@@ -14471,16 +16541,23 @@ $$R = \frac{3}{4}f = 0.75f$$
 The magnitude of the larger radius of curvature is $|R_2| = 2R$.
 $$|R_2| = 2(0.75f) = 1.5f$$
 In units of the focal length, the magnitude is $1.5$[cite: 2].`,
-    correctAnswer: 1.5
+
+    correctAnswer: 1.5,
   },
+
   {
-    "id": 43,
-    "year": 2020,
-    "subject": "Fluid Mechanics",
-    "type": "NAT",
-    "question": String.raw`Water flows in a horizontal pipe in a streamlined manner at an absolute pressure of $4\times 10^{5}\text{ Pa}$ and speed of $6\text{ m/s}$. If it exits the pipe at a pressure of $10^{5}\text{ Pa}$, the speed of water at the exit point is _______ $\text{m/s}$ (Round off to 1 decimal place). (The density of water is $1000\text{ kg/m}^{3}$)`,
-    "options": [],
-    "detailedSolution": String.raw`We apply Bernoulli's principle for a streamlined flow in a horizontal pipe. Since the pipe is horizontal, the potential energy term $\rho g h$ is constant and cancels out.
+    id: 43,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Fluid Mechanics",
+    subjectId: "mechanics",
+    tags: ["Fluid Mechanics","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`Water flows in a horizontal pipe in a streamlined manner at an absolute pressure of $4\times 10^{5}\text{ Pa}$ and speed of $6\text{ m/s}$. If it exits the pipe at a pressure of $10^{5}\text{ Pa}$, the speed of water at the exit point is _______ $\text{m/s}$ (Round off to 1 decimal place). (The density of water is $1000\text{ kg/m}^{3}$)`,
+
+    detailedSolution: String.raw`We apply Bernoulli's principle for a streamlined flow in a horizontal pipe. Since the pipe is horizontal, the potential energy term $\rho g h$ is constant and cancels out.
 $$P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2$$
 Given data:
 *   Initial pressure $P_1 = 4 \times 10^5\text{ Pa}$
@@ -14497,16 +16574,23 @@ $$318,000 = 500 v_2^2$$
 $$v_2^2 = \frac{318,000}{500} = 636$$
 $$v_2 = \sqrt{636} \approx 25.219\text{ m/s}$$
 Rounding to one decimal place, the exit speed is $25.2\text{ m/s}$[cite: 2].`,
-    correctAnswer: 25.2
+
+    correctAnswer: 25.2,
   },
+
   {
-    "id": 44,
-    "year": 2020,
-    "subject": "Polarization",
-    "type": "NAT",
-    "question": String.raw`Consider a retarder with refractive indices $n_e=1.551$ and $n_o=1.542$ along the extraordinary and ordinary axes, respectively. The thickness of this retarder for which a left circularly polarized light of wavelength $600\text{ nm}$ will be converted into a right circularly polarized light is _______ $\mu\text{m}$. (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`To convert Left Circularly Polarized (LCP) light into Right Circularly Polarized (RCP) light, the phase difference between the orthogonal components must be shifted by $\pi$ radians ($180^\circ$). This specific operation requires a half-wave plate.
+    id: 44,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Consider a retarder with refractive indices $n_e=1.551$ and $n_o=1.542$ along the extraordinary and ordinary axes, respectively. The thickness of this retarder for which a left circularly polarized light of wavelength $600\text{ nm}$ will be converted into a right circularly polarized light is _______ $\mu\text{m}$. (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`To convert Left Circularly Polarized (LCP) light into Right Circularly Polarized (RCP) light, the phase difference between the orthogonal components must be shifted by $\pi$ radians ($180^\circ$). This specific operation requires a half-wave plate.
 The condition for a half-wave plate is that the optical path difference ($\Delta x$) introduced between the ordinary and extraordinary rays equals half a wavelength:
 $$\Delta x = |n_e - n_o| \cdot t = \frac{\lambda}{2}$$
 where $t$ is the physical thickness of the retarder and $\lambda$ is the vacuum wavelength.
@@ -14519,16 +16603,23 @@ $$t = 33333.333...\text{ nm}$$
 Convert the thickness from nanometers to micrometers ($\mu\text{m}$):
 $$t = 33.333...\text{ }\mu\text{m}$$
 Rounding to two decimal places, the thickness is $33.33\text{ }\mu\text{m}$[cite: 2].`,
-    correctAnswer: 33.33
+
+    correctAnswer: 33.33,
   },
+
   {
-    "id": 45,
-    "year": 2020,
-    "subject": "Conductors, Capacitors & Electrostatic Energy",
-    "type": "NAT",
-    "question": String.raw`Using a battery, a $10\text{ pF}$ capacitor is charged to $50\text{ V}$ and then the battery is removed. After that, a second uncharged capacitor is connected to the first capacitor in parallel. If the final voltage across the second capacitor is $20\text{ V}$, its capacitance is _______ pF.`,
-    "options": [],
-    "detailedSolution": String.raw`Let the initial capacitance be $C_1 = 10\text{ pF}$ and the initial voltage be $V_1 = 50\text{ V}$.
+    id: 45,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Conductors, Capacitors & Electrostatic Energy",
+    subjectId: "em",
+    tags: ["Conductors, Capacitors & Electrostatic Energy","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`Using a battery, a $10\text{ pF}$ capacitor is charged to $50\text{ V}$ and then the battery is removed. After that, a second uncharged capacitor is connected to the first capacitor in parallel. If the final voltage across the second capacitor is $20\text{ V}$, its capacitance is _______ pF.`,
+
+    detailedSolution: String.raw`Let the initial capacitance be $C_1 = 10\text{ pF}$ and the initial voltage be $V_1 = 50\text{ V}$.
 The initial charge $Q$ stored on $C_1$ is:
 $$Q = C_1 V_1 = (10\text{ pF})(50\text{ V}) = 500\text{ pC}$$
 When the second uncharged capacitor $C_2$ is connected in parallel, the total charge $Q$ is conserved and distributes across both capacitors until they reach a common final voltage $V_f$.
@@ -14543,16 +16634,23 @@ $$200 + 20 C_2 = 500$$
 $$20 C_2 = 300$$
 $$C_2 = \frac{300}{20} = 15\text{ pF}$$
 The capacitance of the second capacitor is $15\text{ pF}$[cite: 2].`,
-    correctAnswer: 15
+
+    correctAnswer: 15,
   },
+
   {
-    "id": 46,
-    "year": 2020,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`Consider two spherical perfect blackbodies with radii $R_1$ and $R_2$ at temperatures $T_1=1000\text{ K}$ and $T_2=2000\text{ K}$, respectively. They both emit radiation of power $1\text{ kW}$. The ratio of their radii, $R_1/R_2$ is given by _______`,
-    "options": [],
-    "detailedSolution": String.raw`According to the Stefan-Boltzmann law, the total radiated power (luminosity) $P$ of a spherical blackbody of radius $R$ and absolute temperature $T$ is:
+    id: 46,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`Consider two spherical perfect blackbodies with radii $R_1$ and $R_2$ at temperatures $T_1=1000\text{ K}$ and $T_2=2000\text{ K}$, respectively. They both emit radiation of power $1\text{ kW}$. The ratio of their radii, $R_1/R_2$ is given by _______`,
+
+    detailedSolution: String.raw`According to the Stefan-Boltzmann law, the total radiated power (luminosity) $P$ of a spherical blackbody of radius $R$ and absolute temperature $T$ is:
 $$P = \sigma A T^4 = \sigma (4\pi R^2) T^4$$
 where $\sigma$ is the Stefan-Boltzmann constant.
 We are given that both blackbodies emit the exact same power: $P_1 = P_2 = 1\text{ kW}$.
@@ -14567,16 +16665,23 @@ $$\frac{R_1}{R_2} = \left(\frac{T_2}{T_1}\right)^2$$
 Substitute the given temperatures, $T_1 = 1000\text{ K}$ and $T_2 = 2000\text{ K}$:
 $$\frac{R_1}{R_2} = \left(\frac{2000}{1000}\right)^2 = (2)^2 = 4$$
 The ratio of their radii is $4$[cite: 2].`,
-    correctAnswer: 4
+
+    correctAnswer: 4,
   },
+
   {
-    "id": 47,
-    "year": 2020,
-    "subject": "Quantum Phenomena",
-    "type": "NAT",
-    "question": String.raw`In a Compton scattering experiment, the wavelength of incident X-rays is $0.500\text{ \AA}$. If the Compton wavelength $\lambda_c$ is $0.024\text{ \AA}$, the value of the longest wavelength possible for the scattered X-ray is _______ $\text{\AA}$. (Specify up to 3 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The Compton scattering formula relates the scattered wavelength $\lambda'$ to the incident wavelength $\lambda$ and the scattering angle $\theta$:
+    id: 47,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`In a Compton scattering experiment, the wavelength of incident X-rays is $0.500\text{ \AA}$. If the Compton wavelength $\lambda_c$ is $0.024\text{ \AA}$, the value of the longest wavelength possible for the scattered X-ray is _______ $\text{\AA}$. (Specify up to 3 decimal places)`,
+
+    detailedSolution: String.raw`The Compton scattering formula relates the scattered wavelength $\lambda'$ to the incident wavelength $\lambda$ and the scattering angle $\theta$:
 $$\lambda' - \lambda = \lambda_c (1 - \cos\theta)$$
 where $\lambda_c$ is the Compton wavelength of the electron.
 To find the longest possible scattered wavelength ($\lambda'_{max}$), we must maximize the term $(1 - \cos\theta)$.
@@ -14587,16 +16692,23 @@ Substitute the given values ($\lambda = 0.500\text{ \AA}$ and $\lambda_c = 0.024
 $$\lambda'_{max} = 0.500 + 2(0.024)$$
 $$\lambda'_{max} = 0.500 + 0.048 = 0.548\text{ \AA}$$
 The longest possible scattered wavelength is $0.548\text{ \AA}$[cite: 2].`,
-    correctAnswer: 0.548
+
+    correctAnswer: 0.548,
   },
+
   {
-    "id": 48,
-    "year": 2020,
-    "subject": "X-Ray Diffraction",
-    "type": "NAT",
-    "question": String.raw`A solid with FCC crystal structure is probed using X-rays of wavelength $0.2\text{ nm}$. For the crystallographic plane given by $(2, 0, 0)$, a first order diffraction peak is observed for a Bragg angle of $21^\circ$. The unit cell size is _______ nm. (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`Bragg's Law for X-ray diffraction is:
+    id: 48,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "X-Ray Diffraction",
+    subjectId: "solid",
+    tags: ["X-Ray Diffraction","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`A solid with FCC crystal structure is probed using X-rays of wavelength $0.2\text{ nm}$. For the crystallographic plane given by $(2, 0, 0)$, a first order diffraction peak is observed for a Bragg angle of $21^\circ$. The unit cell size is _______ nm. (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`Bragg's Law for X-ray diffraction is:
 $$2d_{hkl} \sin\theta = n\lambda$$
 For a first-order diffraction peak, $n=1$. The given parameters are $\lambda = 0.2\text{ nm}$ and $\theta = 21^\circ$.
 We can calculate the interplanar spacing $d_{200}$:
@@ -14612,17 +16724,25 @@ $$a = \frac{0.2}{\sin(21^\circ)}$$
 Using the value $\sin(21^\circ) \approx 0.35837$:
 $$a = \frac{0.2}{0.35837} \approx 0.55808\text{ nm}$$
 Rounding to two decimal places, the unit cell size is $0.56\text{ nm}$[cite: 2].`,
-    correctAnswer: 0.56
+
+    correctAnswer: 0.56,
   },
+
   {
-    "id": 49,
-    "year": 2020,
-    "subject": "p-n Junction & Diodes",
-    "type": "NAT",
-    "question": String.raw`The figure shows a circuit containing two diodes $D_1$ and $D_2$ with threshold voltages $V_{TH}$ of $0.7\text{ V}$ and $0.3\text{ V}$, respectively. Considering the simplified diode model, which assumes diode I-V characteristic as shown in the plot on the right, the current through the resistor $R$ is _______ $\mu\text{A}$.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/49_20.png",
-    "options": [],
-    "detailedSolution": String.raw`*Assuming a standard parallel configuration based on the problem description.*
+    id: 49,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`The figure shows a circuit containing two diodes $D_1$ and $D_2$ with threshold voltages $V_{TH}$ of $0.7\text{ V}$ and $0.3\text{ V}$, respectively. Considering the simplified diode model, which assumes diode I-V characteristic as shown in the plot on the right, the current through the resistor $R$ is _______ $\mu\text{A}$.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/49_20.png",
+
+    detailedSolution: String.raw`*Assuming a standard parallel configuration based on the problem description.*
 Two diodes, $D_1$ ($0.7\text{ V}$) and $D_2$ ($0.3\text{ V}$), are connected in parallel with each other, and this parallel combination is in series with a resistor $R = 100\text{ k}\Omega$ and a $10\text{ V}$ DC source.
 When the voltage from the source ramps up, the diode with the lower threshold voltage will turn ON first. Diode $D_2$ has a threshold of $0.3\text{ V}$.
 Once $D_2$ turns ON and is forward-biased, it clamps the voltage across the parallel branches to $0.3\text{ V}$.
@@ -14633,17 +16753,25 @@ $$10\text{ V} - 0.3\text{ V} - I(100\text{ k}\Omega) = 0$$
 $$9.7\text{ V} = I \cdot 100\text{ k}\Omega$$
 $$I = \frac{9.7\text{ V}}{100 \times 10^3\ \Omega} = 9.7 \times 10^{-5}\text{ A} = 0.097\text{ mA} = 97\text{ }\mu\text{A}$$
 The current through the resistor is $97\text{ }\mu\text{A}$[cite: 2].`,
-    correctAnswer: 97
+
+    correctAnswer: 97,
   },
+
   {
-    "id": 50,
-    "year": 2020,
-    "subject": "Thermodynamic Processes",
-    "type": "NAT",
-    "question": String.raw`An ideal gas undergoes an isothermal expansion along a path AB, adiabatic expansion along BC, isobaric compression along CD, isothermal compression along DE, and adiabatic compression along EA, as shown in the figure. The work done by the gas along the process BC is $10\text{ J}$. The change in the internal energy along process EA is $16\text{ J}$. The absolute value of the change in the internal energy along the process CD is _______ J.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/50_20.png",
-    "options": [],
-    "detailedSolution": String.raw`The process follows a complete thermodynamic cycle (A $\to$ B $\to$ C $\to$ D $\to$ E $\to$ A). For any complete cycle, the net change in internal energy is precisely zero:
+    id: 50,
+    year: 2020,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`An ideal gas undergoes an isothermal expansion along a path AB, adiabatic expansion along BC, isobaric compression along CD, isothermal compression along DE, and adiabatic compression along EA, as shown in the figure. The work done by the gas along the process BC is $10\text{ J}$. The change in the internal energy along process EA is $16\text{ J}$. The absolute value of the change in the internal energy along the process CD is _______ J.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/50_20.png",
+
+    detailedSolution: String.raw`The process follows a complete thermodynamic cycle (A $\to$ B $\to$ C $\to$ D $\to$ E $\to$ A). For any complete cycle, the net change in internal energy is precisely zero:
 $$\Delta U_{cycle} = \Delta U_{AB} + \Delta U_{BC} + \Delta U_{CD} + \Delta U_{DE} + \Delta U_{EA} = 0$$
 Let's analyze the internal energy change for each distinct segment:
 *   **AB (Isothermal Expansion):** For an ideal gas, internal energy solely depends on temperature. Since temperature is constant, $\Delta U_{AB} = 0$.
@@ -14656,16 +16784,23 @@ $$6 + \Delta U_{CD} = 0$$
 $$\Delta U_{CD} = -6\text{ J}$$
 The question asks for the absolute value of the change in internal energy along process CD:
 $$|\Delta U_{CD}| = |-6\text{ J}| = 6\text{ J}$$[cite: 2].`,
-    correctAnswer: 6
+
+    correctAnswer: 6,
   },
+
   {
-    "id": 51,
-    "year": 2020,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "NAT",
-    "question": String.raw`If a function $y(x)$ is described by the initial-value problem, $\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6y=0$, with initial conditions $y(0)=2$, and $\left(\frac{dy}{dx}\right)_{x=0}=0$ then the value of $y$ at $x=1$ is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`We solve the second-order linear homogeneous differential equation: $y'' + 5y' + 6y = 0$.
+    id: 51,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`If a function $y(x)$ is described by the initial-value problem, $\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6y=0$, with initial conditions $y(0)=2$, and $\left(\frac{dy}{dx}\right)_{x=0}=0$ then the value of $y$ at $x=1$ is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`We solve the second-order linear homogeneous differential equation: $y'' + 5y' + 6y = 0$.
 The associated characteristic equation is:
 $$r^2 + 5r + 6 = 0$$
 Factoring the quadratic:
@@ -14690,16 +16825,23 @@ $$y(1) = 6e^{-2} - 4e^{-3}$$
 Using standard values $e^{-2} \approx 0.135335$ and $e^{-3} \approx 0.049787$:
 $$y(1) = 6(0.135335) - 4(0.049787) = 0.81201 - 0.199148 = 0.612862$$
 Rounding to two decimal places, the value is $0.61$[cite: 2].`,
-    correctAnswer: 0.61
+
+    correctAnswer: 0.61,
   },
+
   {
-    "id": 52,
-    "year": 2020,
-    "subject": "Newtonian Mechanics",
-    "type": "NAT",
-    "question": String.raw`A vehicle of mass $600\text{ kg}$ with an engine operating at constant power $P$ accelerates from rest on a straight horizontal road. The vehicle covers a distance of $600\text{ m}$ in $1\text{ minute}$. Neglecting all losses, the magnitude of $P$ is _______ kW. (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The power $P$ delivered by the engine is constant. The power relates to the rate of change of kinetic energy:
+    id: 52,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A vehicle of mass $600\text{ kg}$ with an engine operating at constant power $P$ accelerates from rest on a straight horizontal road. The vehicle covers a distance of $600\text{ m}$ in $1\text{ minute}$. Neglecting all losses, the magnitude of $P$ is _______ kW. (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`The power $P$ delivered by the engine is constant. The power relates to the rate of change of kinetic energy:
 $$P = \frac{d}{dt} \left( \frac{1}{2} mv^2 \right)$$
 Since the vehicle accelerates from rest ($v(0) = 0$), integrating this gives the kinetic energy at time $t$:
 $$\frac{1}{2} mv^2 = Pt \implies v(t) = \sqrt{\frac{2Pt}{m}}$$
@@ -14724,16 +16866,23 @@ $$P = 300 \times \frac{225}{60} = 5 \times 225 = 1125\text{ W}$$
 Convert to kilowatts:
 $$P = 1.125\text{ kW}$$
 Rounding to two decimal places, $P = 1.13\text{ kW}$[cite: 2].`,
-    correctAnswer: 1.13
+
+    correctAnswer: 1.13,
   },
+
   {
-    "id": 53,
-    "year": 2020,
-    "subject": "Rigid Body Dynamics",
-    "type": "NAT",
-    "question": String.raw`The angular momentum of a particle relative to origin varies with time ($t$) as $\vec{L}=(4\hat{x}+\alpha t^{2}\hat{y})\text{ kg m}^2\text{/s}$, where $\alpha=1\text{ kg m}^2\text{/s}^3$. The angle between $\vec{L}$ and the torque acting on the particle becomes $45^\circ$ after a time of _______ s.`,
-    "options": [],
-    "detailedSolution": String.raw`The angular momentum vector is $\vec{L} = 4\hat{i} + t^2\hat{j}$ (substituting $\alpha = 1$).
+    id: 53,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`The angular momentum of a particle relative to origin varies with time ($t$) as $\vec{L}=(4\hat{x}+\alpha t^{2}\hat{y})\text{ kg m}^2\text{/s}$, where $\alpha=1\text{ kg m}^2\text{/s}^3$. The angle between $\vec{L}$ and the torque acting on the particle becomes $45^\circ$ after a time of _______ s.`,
+
+    detailedSolution: String.raw`The angular momentum vector is $\vec{L} = 4\hat{i} + t^2\hat{j}$ (substituting $\alpha = 1$).
 The torque $\vec{\tau}$ acting on the particle is defined as the time derivative of angular momentum:
 $$\vec{\tau} = \frac{d\vec{L}}{dt} = \frac{d}{dt}(4\hat{i} + t^2\hat{j}) = 2t\hat{j}$$
 We need to find the time $t$ when the angle $\theta$ between $\vec{L}$ and $\vec{\tau}$ is $45^\circ$.
@@ -14755,16 +16904,23 @@ $$t^4 = 16$$
 Taking the fourth root (and selecting the physically meaningful positive time):
 $$t = 2\text{ s}$$
 The time is $2\text{ s}$[cite: 2].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 54,
-    "year": 2020,
-    "subject": "Superposition of Oscillations",
-    "type": "NAT",
-    "question": String.raw`Two transverse waves $y_{1}=5\cos(kx-\omega t)\text{ cm}$, and $y_{2}=5\cos(kx+\omega t)\text{ cm}$, travel on a string along x-axis. If the speed of a point at $x=0$ is zero at $t=0\text{ s}, 0.25\text{ s}$ and $0.5\text{ s}$, then the minimum frequency of the waves is _______ Hz.`,
-    "options": [],
-    "detailedSolution": String.raw`The resultant wave formed by the superposition of the two identical transverse waves traveling in opposite directions is a standing wave:
+    id: 54,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Superposition of Oscillations",
+    subjectId: "waves",
+    tags: ["Superposition of Oscillations","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Two transverse waves $y_{1}=5\cos(kx-\omega t)\text{ cm}$, and $y_{2}=5\cos(kx+\omega t)\text{ cm}$, travel on a string along x-axis. If the speed of a point at $x=0$ is zero at $t=0\text{ s}, 0.25\text{ s}$ and $0.5\text{ s}$, then the minimum frequency of the waves is _______ Hz.`,
+
+    detailedSolution: String.raw`The resultant wave formed by the superposition of the two identical transverse waves traveling in opposite directions is a standing wave:
 $$y(x,t) = y_1 + y_2 = 5\cos(kx-\omega t) + 5\cos(kx+\omega t)$$
 Using the trigonometric identity $\cos(A-B) + \cos(A+B) = 2\cos A\cos B$:
 $$y(x,t) = 10\cos(kx)\cos(\omega t)$$
@@ -14781,17 +16937,25 @@ $$\omega (0.25) = \pi \implies \omega = \frac{\pi}{0.25} = 4\pi\text{ rad/s}$$
 We extract the frequency $f$ from the angular frequency $\omega = 2\pi f$:
 $$2\pi f = 4\pi \implies f = 2\text{ Hz}$$
 The minimum frequency is $2\text{ Hz}$[cite: 2].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 55,
-    "year": 2020,
-    "subject": "DC & AC Circuits",
-    "type": "NAT",
-    "question": String.raw`For the ac circuit shown in the figure, $R=100\text{ k}\Omega$ and $C=10\text{ pF}$, the phase difference between $V_{in}$ and $V_{out}$ is $90^\circ$ at the input signal frequency of _______ kHz. (Round off to 2 decimal places)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/55_20.png",
-    "options": [],
-    "detailedSolution": String.raw`*Based on the standard AC phase shifting bridge described in typical circuit problems.*
+    id: 55,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`For the ac circuit shown in the figure, $R=100\text{ k}\Omega$ and $C=10\text{ pF}$, the phase difference between $V_{in}$ and $V_{out}$ is $90^\circ$ at the input signal frequency of _______ kHz. (Round off to 2 decimal places)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/55_20.png",
+
+    detailedSolution: String.raw`*Based on the standard AC phase shifting bridge described in typical circuit problems.*
 The circuit is a phase shifter, where the phase difference of $90^\circ$ ($\pi/2$ radians) is achieved at the characteristic frequency of the RC components.
 The condition for a $90^\circ$ phase shift in this specific bridge topology is:
 $$\omega = \frac{1}{RC}$$
@@ -14805,16 +16969,23 @@ $$f \approx \frac{1,000,000}{6.283185}\text{ Hz} \approx 159154.94\text{ Hz}$$
 Convert the frequency to kHz:
 $$f \approx 159.15\text{ kHz}$$
 Rounding off to two decimal places, the input signal frequency is $159.15\text{ kHz}$[cite: 2].`,
-    correctAnswer: 159.15
+
+    correctAnswer: 159.15,
   },
+
   {
-    "id": 56,
-    "year": 2020,
-    "subject": "Magnetostatics",
-    "type": "NAT",
-    "question": String.raw`The magnetic fields in tesla in the two regions separated by the $z=0$ plane are given by $\vec{B_1}=3\hat{x}+5\hat{z}$ and $\vec{B_2}=\hat{x}+3\hat{y}+5\hat{z}$. The magnitude of the surface current density at the interface between the two regions is $\alpha\times 10^{6}\text{ A/m}$. Given the permeability of the free space $\mu_0=4\pi\times 10^{-7}\text{ N/A}^2$, the value of $\alpha$ is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The boundary condition for magnetic fields crossing a surface with a surface current density $\vec{K}$ is:
+    id: 56,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`The magnetic fields in tesla in the two regions separated by the $z=0$ plane are given by $\vec{B_1}=3\hat{x}+5\hat{z}$ and $\vec{B_2}=\hat{x}+3\hat{y}+5\hat{z}$. The magnitude of the surface current density at the interface between the two regions is $\alpha\times 10^{6}\text{ A/m}$. Given the permeability of the free space $\mu_0=4\pi\times 10^{-7}\text{ N/A}^2$, the value of $\alpha$ is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`The boundary condition for magnetic fields crossing a surface with a surface current density $\vec{K}$ is:
 $$\hat{n} \times (\vec{B}_1 - \vec{B}_2) = \mu_0 \vec{K}$$
 where $\hat{n}$ is the unit normal vector pointing from region 2 into region 1. The interface is the $xy$-plane ($z=0$), so the normal vector is $\hat{n} = \hat{z}$.
 First, calculate the difference between the magnetic fields:
@@ -14835,16 +17006,23 @@ Calculate the numerical value:
 $$\sqrt{13} \approx 3.60555$$
 $$\alpha = \frac{10 \times 3.60555}{4 \times 3.14159} = \frac{36.0555}{12.56637} \approx 2.869$$
 Rounding to two decimal places, $\alpha = 2.87$[cite: 2].`,
-    correctAnswer: 2.87
+
+    correctAnswer: 2.87,
   },
+
   {
-    "id": 57,
-    "year": 2020,
-    "subject": "Entropy & Second Law",
-    "type": "NAT",
-    "question": String.raw`A body at a temperature $T$ is brought into contact with a reservoir at temperature $2T$. Thermal equilibrium is established at constant pressure. The heat capacity of the body at constant pressure is $C_p$. The total change in entropy of the body and the reservoir in units of $C_p$ is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`When the body is brought into contact with the large thermal reservoir, heat flows until the body reaches the reservoir's temperature, $T_f = 2T$.
+    id: 57,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Entropy & Second Law",
+    subjectId: "thermo",
+    tags: ["Entropy & Second Law","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`A body at a temperature $T$ is brought into contact with a reservoir at temperature $2T$. Thermal equilibrium is established at constant pressure. The heat capacity of the body at constant pressure is $C_p$. The total change in entropy of the body and the reservoir in units of $C_p$ is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`When the body is brought into contact with the large thermal reservoir, heat flows until the body reaches the reservoir's temperature, $T_f = 2T$.
 **1. Entropy change of the body:**
 The body undergoes a temperature change from $T$ to $2T$. The entropy change is given by:
 $$\Delta S_{body} = \int_{T}^{2T} \frac{dQ}{T'} = \int_{T}^{2T} \frac{C_p dT'}{T'} = C_p [\ln(T')]_{T}^{2T} = C_p \ln\left(\frac{2T}{T}\right) = C_p \ln(2)$$
@@ -14860,16 +17038,23 @@ $$\Delta S_{res} = \frac{-Q}{T_{res}} = \frac{-C_p T}{2T} = -0.5 C_p$$
 $$\Delta S_{total} = \Delta S_{body} + \Delta S_{res} = C_p \ln(2) - 0.5 C_p = (\ln 2 - 0.5) C_p$$
 $$\Delta S_{total} \approx (0.693 - 0.500) C_p = 0.193 C_p$$
 Rounding to two decimal places, the value is $0.19$[cite: 2].`,
-    correctAnswer: 0.19
+
+    correctAnswer: 0.19,
   },
+
   {
-    "id": 58,
-    "year": 2020,
-    "subject": "Thermodynamic Processes",
-    "type": "NAT",
-    "question": String.raw`One mole of an ideal monatomic gas at pressure $P$, volume $V$ and temperature $T$ is expanded isothermally to volume $4V$. Thereafter, the gas is heated isochorically (at constant volume) till its pressure becomes $P$. If $R$ is the universal gas constant, the total heat transfer in the process, in units of $RT$ is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`For one mole of an ideal monatomic gas, the specific heat at constant volume is $C_V = \frac{3}{2}R = 1.5R$.
+    id: 58,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`One mole of an ideal monatomic gas at pressure $P$, volume $V$ and temperature $T$ is expanded isothermally to volume $4V$. Thereafter, the gas is heated isochorically (at constant volume) till its pressure becomes $P$. If $R$ is the universal gas constant, the total heat transfer in the process, in units of $RT$ is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`For one mole of an ideal monatomic gas, the specific heat at constant volume is $C_V = \frac{3}{2}R = 1.5R$.
 
 **Step 1: Isothermal expansion from $V$ to $4V$ at temperature $T$.**
 Since the process is isothermal, the change in internal energy is $\Delta U_1 = 0$.
@@ -14891,17 +17076,25 @@ $$Q_2 = \Delta U_2 = n C_V \Delta T = 1 \cdot (1.5R) \cdot (4T - T) = 1.5R(3T) =
 $$Q_{total} = Q_1 + Q_2 = RT \ln(4) + 4.5 RT = (\ln 4 + 4.5) RT$$
 $$Q_{total} \approx (1.38629 + 4.5) RT = 5.88629 RT$$
 Rounding off to two decimal places, the factor is $5.89$[cite: 2].`,
-    correctAnswer: 5.89
+
+    correctAnswer: 5.89,
   },
+
   {
-    "id": 59,
-    "year": 2020,
-    "subject": "Bipolar Junction Transistors",
-    "type": "NAT",
-    "question": String.raw`In the transistor circuit given in the figure, the emitter-base junction has a voltage drop of $0.7\text{ V}$. A collector-emitter voltage of $14\text{ V}$ reverse biases the collector. Assuming the collector current to be the same as the emitter current, the value of $R_B$ is _______ $\text{k}\Omega$.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/59_20.png",
-    "options": [],
-    "detailedSolution": String.raw`The given parameters are $V_{BE} = 0.7\text{ V}$, $V_{CE} = 14\text{ V}$, $\beta = 100$, and the approximation $I_C \approx I_E$.
+    id: 59,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`In the transistor circuit given in the figure, the emitter-base junction has a voltage drop of $0.7\text{ V}$. A collector-emitter voltage of $14\text{ V}$ reverse biases the collector. Assuming the collector current to be the same as the emitter current, the value of $R_B$ is _______ $\text{k}\Omega$.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2020/59_20.png",
+
+    detailedSolution: String.raw`The given parameters are $V_{BE} = 0.7\text{ V}$, $V_{CE} = 14\text{ V}$, $\beta = 100$, and the approximation $I_C \approx I_E$.
 The supply voltage is $V_{CC} = 20\text{ V}$.
 The collector resistor is $R_C = 2\text{ k}\Omega$ and the emitter resistor is $R_E = 1\text{ k}\Omega$.
 
@@ -14928,16 +17121,23 @@ $$17.3 - 0.02 R_B = 0$$
 $$0.02 R_B = 17.3$$
 $$R_B = \frac{17.3}{0.02} = 865\text{ k}\Omega$$
 The value of $R_B$ is $865\text{ k}\Omega$[cite: 2].`,
-    correctAnswer: 865
+
+    correctAnswer: 865,
   },
+
   {
-    "id": 60,
-    "year": 2020,
-    "subject": "Nuclear Physics",
-    "type": "NAT",
-    "question": String.raw`The radioactive nuclei $^{40}\text{K}$ decay to $^{40}\text{Ar}$ with a half-life of $1.25\times 10^9$ years. The $^{40}\text{K}/^{40}\text{Ar}$ isotopic ratio for a particular rock is found to be $50$. The age of the rock is $m \times 10^7$ years. The value of $m$ is _______ (Round off to 2 decimal place)`,
-    "options": [],
-    "detailedSolution": String.raw`Let $N_K$ be the number of Potassium-40 ($^{40}\text{K}$) nuclei remaining at the present time $t$, and $N_{Ar}$ be the number of Argon-40 ($^{40}\text{Ar}$) nuclei formed.
+    id: 60,
+    year: 2020,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`The radioactive nuclei $^{40}\text{K}$ decay to $^{40}\text{Ar}$ with a half-life of $1.25\times 10^9$ years. The $^{40}\text{K}/^{40}\text{Ar}$ isotopic ratio for a particular rock is found to be $50$. The age of the rock is $m \times 10^7$ years. The value of $m$ is _______ (Round off to 2 decimal place)`,
+
+    detailedSolution: String.raw`Let $N_K$ be the number of Potassium-40 ($^{40}\text{K}$) nuclei remaining at the present time $t$, and $N_{Ar}$ be the number of Argon-40 ($^{40}\text{Ar}$) nuclei formed.
 The isotopic ratio is given as:
 $$\frac{N_K}{N_{Ar}} = 50 \implies N_{Ar} = \frac{N_K}{50} = 0.02 N_K$$
 Assuming all $^{40}\text{Ar}$ in the rock originated from the decay of $^{40}\text{K}$, the initial number of $^{40}\text{K}$ nuclei ($N_0$) when the rock formed was the sum of the current quantities:
@@ -14957,129 +17157,176 @@ $$t \approx 0.028569 \times 1.25 \times 10^9 \text{ years}$$
 $$t \approx 0.03571 \times 10^9 \text{ years} = 3.571 \times 10^7 \text{ years}$$
 The age is given as $m \times 10^7$ years, so $m \approx 3.571$.
 Rounding to two decimal places, $m = 3.57$[cite: 2].`,
-    correctAnswer: 3.57
+
+    correctAnswer: 3.57,
   },
+
   {
-    "id": 1,
-    "year": 2019,
-    "subject": "Differential Equations",
-    "type": "MCQ",
-    "question": String.raw`The function $f(x)=\frac{8x}{x^{2}+9}$ is continuous everywhere except at`,
-    "options": [
+    id: 1,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Differential Equations",
+    subjectId: "math",
+    tags: ["Differential Equations","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`The function $f(x)=\frac{8x}{x^{2}+9}$ is continuous everywhere except at`,
+
+    options: [
       String.raw`$x=0$`,
       String.raw`$x=\pm 9$`,
       String.raw`$x=\pm 9i$`,
-      String.raw`$x=\pm 3i$`
+      String.raw`$x=\pm 3i$`,
     ],
-    "detailedSolution": String.raw`A rational function is continuous everywhere except where its denominator is zero. 
+
+    detailedSolution: String.raw`A rational function is continuous everywhere except where its denominator is zero. 
 Set the denominator to zero:
 $$x^2 + 9 = 0$$
 $$x^2 = -9$$
 $$x = \pm \sqrt{-9} = \pm 3i$$
 Therefore, the function has discontinuities at $x = \pm 3i$[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 2,
-    "year": 2019,
-    "subject": "Newtonian Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A classical particle has total energy $E$. The plot of potential energy ($U$) as a function of distance ($r$) from the centre of force located at $r=0$ is shown in the figure. Which of the regions are forbidden for the particle?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/2_19.png",
-    "options": [
+    id: 2,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A classical particle has total energy $E$. The plot of potential energy ($U$) as a function of distance ($r$) from the centre of force located at $r=0$ is shown in the figure. Which of the regions are forbidden for the particle?`,
+
+    options: [
       String.raw`I and II`,
       String.raw`II and IV`,
       String.raw`I and IV`,
-      String.raw`I and III`
+      String.raw`I and III`,
     ],
-    "detailedSolution": String.raw`In classical mechanics, the total energy $E$ of a particle is the sum of its kinetic energy $K$ and potential energy $U$:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/2_19.png",
+
+    detailedSolution: String.raw`In classical mechanics, the total energy $E$ of a particle is the sum of its kinetic energy $K$ and potential energy $U$:
 $$E = K + U(r)$$
 Since kinetic energy $K = \frac{1}{2}mv^2$ must be non-negative ($K \ge 0$), the potential energy can never exceed the total energy:
 $$E \ge U(r) \implies K = E - U(r) \ge 0$$
 Any region where $U(r) > E$ is classically forbidden. Looking at the provided potential curve, the potential energy $U(r)$ exceeds the total energy line $E$ in Region I (the high potential wall near the origin) and Region III (the potential barrier peak). 
 Thus, regions I and III are forbidden[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 3,
-    "year": 2019,
-    "subject": "Nuclear Physics",
-    "type": "MCQ",
-    "question": String.raw`In the thermal neutron induced fission of $^{235}\text{U}$, the distribution of relative number of the observed fission fragments (Yield) versus mass number ($A$) is given by`,
-    "options": [
+    id: 3,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`In the thermal neutron induced fission of $^{235}\text{U}$, the distribution of relative number of the observed fission fragments (Yield) versus mass number ($A$) is given by`,
+
+    options: [
       String.raw`Asymmetric bimodal distribution with two distinct peaks`,
       String.raw`Symmetric distribution with a single peak at $A \approx 117$`,
       String.raw`Linearly increasing distribution`,
-      String.raw`Linearly decreasing distribution`
+      String.raw`Linearly decreasing distribution`,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3a_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3b_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3c_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3d_19.png"
-    ],
-    "detailedSolution": String.raw`When Uranium-235 undergoes thermal neutron fission, it rarely splits into two equal halves. Instead, the fission is overwhelmingly asymmetric, predominantly producing one heavier fragment (mass number $A \approx 140$) and one lighter fragment (mass number $A \approx 95$). 
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3a_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3b_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3c_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/3d_19.png"],
+
+    detailedSolution: String.raw`When Uranium-235 undergoes thermal neutron fission, it rarely splits into two equal halves. Instead, the fission is overwhelmingly asymmetric, predominantly producing one heavier fragment (mass number $A \approx 140$) and one lighter fragment (mass number $A \approx 95$). 
 This results in a characteristic "camel-hump" or bimodal asymmetric distribution curve for the fission yield versus mass number. Option A represents this bimodal shape[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 4,
-    "year": 2019,
-    "subject": "Crystal Structure",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following crystallographic planes represent $(1 0 1)$ Miller indices of a cubic unit cell?`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 4,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following crystallographic planes represent $(1 0 1)$ Miller indices of a cubic unit cell?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4a_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4b_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4c_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4d_19.png"
-    ],
-    "detailedSolution": String.raw`To interpret the Miller indices $(1 0 1)$:
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4a_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4b_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4c_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/4d_19.png"],
+
+    detailedSolution: String.raw`To interpret the Miller indices $(1 0 1)$:
 1.  **Find the intercepts:** Take the reciprocals of the indices to find the intersection points on the $x, y,$ and $z$ axes respectively.
     *   $x$-intercept = $1 / 1 = 1$
     *   $y$-intercept = $1 / 0 = \infty$ (This means the plane is parallel to the $y$-axis)
     *   $z$-intercept = $1 / 1 = 1$
 2.  **Match with the visual plane:** The correct plane must cut the $x$-axis at $1$, the $z$-axis at $1$, and never intersect the $y$-axis (remaining perfectly parallel to it). Figure (B) illustrates exactly this diagonal plane spanning across the $y$-axis[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 5,
-    "year": 2019,
-    "subject": "Thermodynamic Relations & Potentials",
-    "type": "MCQ",
-    "question": String.raw`The Fermi-Dirac distribution function $[n(\epsilon)]$ is
+    id: 5,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Thermodynamic Relations & Potentials",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Relations & Potentials","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`The Fermi-Dirac distribution function $[n(\epsilon)]$ is
 ($k_B$ is the Boltzmann constant, $T$ is the temperature and $\epsilon_F$ is the Fermi energy)`,
-    "options": [
+
+    options: [
       String.raw`$n(\epsilon)=\frac{1}{e^{\frac{\epsilon-\epsilon_F}{k_BT}}-1}$`,
       String.raw`$n(\epsilon)=\frac{1}{e^{\frac{\epsilon_F-\epsilon}{k_BT}}-1}$`,
       String.raw`$n(\epsilon)=\frac{1}{e^{\frac{\epsilon-\epsilon_F}{k_BT}}+1}$`,
-      String.raw`$n(\epsilon)=\frac{1}{e^{\frac{\epsilon_F-\epsilon}{k_BT}}+1}$`
+      String.raw`$n(\epsilon)=\frac{1}{e^{\frac{\epsilon_F-\epsilon}{k_BT}}+1}$`,
     ],
-    "detailedSolution": String.raw`Fermions obey the Pauli Exclusion Principle, which dictates that no two identical fermions can occupy the same quantum state simultaneously. The statistical distribution for fermions in thermal equilibrium is the Fermi-Dirac distribution.
+
+    detailedSolution: String.raw`Fermions obey the Pauli Exclusion Principle, which dictates that no two identical fermions can occupy the same quantum state simultaneously. The statistical distribution for fermions in thermal equilibrium is the Fermi-Dirac distribution.
 The average number of fermions in a single-particle state of energy $\epsilon$ is given by:
 $$n(\epsilon) = \frac{1}{e^{\frac{\epsilon-\epsilon_F}{k_BT}} + 1}$$
 where $\epsilon_F$ is the Fermi energy (chemical potential at $T=0$). The "+1" in the denominator ensures that the occupation probability $n(\epsilon)$ never exceeds $1$[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 6,
-    "year": 2019,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "MCQ",
-    "question": String.raw`If $\phi(x,y,z)$ is a scalar function which satisfies the Laplace equation, then the gradient of $\phi$ is`,
-    "options": [
+    id: 6,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`If $\phi(x,y,z)$ is a scalar function which satisfies the Laplace equation, then the gradient of $\phi$ is`,
+
+    options: [
       String.raw`Solenoidal and irrotational`,
       String.raw`Solenoidal but not irrotational`,
       String.raw`Irrotational but not solenoidal`,
-      String.raw`Neither solenoidal nor irrotational`
+      String.raw`Neither solenoidal nor irrotational`,
     ],
-    "detailedSolution": String.raw`Let the vector field be defined as the gradient of the scalar function: $\vec{A} = \vec{\nabla}\phi$.
+
+    detailedSolution: String.raw`Let the vector field be defined as the gradient of the scalar function: $\vec{A} = \vec{\nabla}\phi$.
 1.  **Irrotational Check:** A vector field is irrotational if its curl is zero. 
     $$\vec{\nabla} \times \vec{A} = \vec{\nabla} \times (\vec{\nabla}\phi) = 0$$
     The curl of a gradient is identically zero for any twice-differentiable scalar function. Thus, it is inherently irrotational.
@@ -15087,78 +17334,114 @@ where $\epsilon_F$ is the Fermi energy (chemical potential at $T=0$). The "+1" i
     $$\vec{\nabla} \cdot \vec{A} = \vec{\nabla} \cdot (\vec{\nabla}\phi) = \nabla^2\phi$$
     The problem explicitly states that $\phi$ satisfies the Laplace equation, which is defined as $\nabla^2\phi = 0$. Therefore, $\vec{\nabla} \cdot \vec{A} = 0$, meaning the field is also solenoidal.
 Both properties hold true[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 7,
-    "year": 2019,
-    "subject": "Carnot Cycle",
-    "type": "MCQ",
-    "question": String.raw`In a heat engine based on the Carnot cycle, heat is added to the working substance at constant`,
-    "options": [
+    id: 7,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Carnot Cycle",
+    subjectId: "thermo",
+    tags: ["Carnot Cycle","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`In a heat engine based on the Carnot cycle, heat is added to the working substance at constant`,
+
+    options: [
       String.raw`Entropy`,
       String.raw`Pressure`,
       String.raw`Temperature`,
-      String.raw`Volume`
+      String.raw`Volume`,
     ],
-    "detailedSolution": String.raw`The idealized Carnot cycle consists of four distinct reversible processes:
+
+    detailedSolution: String.raw`The idealized Carnot cycle consists of four distinct reversible processes:
 1.  **Isothermal expansion:** Heat $Q_H$ is absorbed from the hot reservoir at a constant temperature $T_H$.
 2.  **Adiabatic expansion:** The gas expands without heat transfer, dropping the temperature to $T_C$.
 3.  **Isothermal compression:** Heat $Q_C$ is rejected to the cold reservoir at a constant temperature $T_C$.
 4.  **Adiabatic compression:** The gas is compressed without heat transfer, raising its temperature back to $T_H$.
 Heat addition occurs entirely during the first step, which is an isothermal process. Therefore, heat is added at a constant temperature[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 8,
-    "year": 2019,
-    "subject": "Thermodynamic Processes",
-    "type": "MCQ",
-    "question": String.raw`Isothermal compressibility is given by`,
-    "options": [
+    id: 8,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`Isothermal compressibility is given by`,
+
+    options: [
       String.raw`$\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$`,
       String.raw`$\frac{1}{P}\left(\frac{\partial P}{\partial V}\right)_T$`,
       String.raw`$-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$`,
-      String.raw`$-\frac{1}{P}\left(\frac{\partial P}{\partial V}\right)_T$`
+      String.raw`$-\frac{1}{P}\left(\frac{\partial P}{\partial V}\right)_T$`,
     ],
-    "detailedSolution": String.raw`Isothermal compressibility, often denoted by $\beta_T$ or $\kappa_T$, measures the relative fractional change in the volume of a fluid or solid in response to a pressure change, while the system is held at a constant temperature.
+
+    detailedSolution: String.raw`Isothermal compressibility, often denoted by $\beta_T$ or $\kappa_T$, measures the relative fractional change in the volume of a fluid or solid in response to a pressure change, while the system is held at a constant temperature.
 Since an increase in pressure universally causes a decrease in volume for stable substances, the derivative $\left(\frac{\partial V}{\partial P}\right)_T$ is negative. To define compressibility as a positive physical quantity, a negative sign is explicitly added to the formula:
 $$\beta_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$$
 This matches option (C)[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 9,
-    "year": 2019,
-    "subject": "Bipolar Junction Transistors",
-    "type": "MCQ",
-    "question": String.raw`For using a transistor as an amplifier, choose the correct option regarding the resistances of base-emitter ($R_{BE}$) and base-collector ($R_{BC}$) junctions`,
-    "options": [
+    id: 9,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For using a transistor as an amplifier, choose the correct option regarding the resistances of base-emitter ($R_{BE}$) and base-collector ($R_{BC}$) junctions`,
+
+    options: [
       String.raw`Both $R_{BE}$ and $R_{BC}$ are very low`,
       String.raw`Very low $R_{BE}$ and very high $R_{BC}$`,
       String.raw`Very high $R_{BE}$ and very low $R_{BC}$`,
-      String.raw`Both $R_{BE}$ and $R_{BC}$ are very high`
+      String.raw`Both $R_{BE}$ and $R_{BC}$ are very high`,
     ],
-    "detailedSolution": String.raw`To operate a bipolar junction transistor (BJT) as a linear amplifier, it must be biased in the **active region**. 
+
+    detailedSolution: String.raw`To operate a bipolar junction transistor (BJT) as a linear amplifier, it must be biased in the **active region**. 
 In the active region:
 1.  The **base-emitter junction is forward-biased**. A forward-biased diode junction offers a very low dynamic resistance ($R_{BE}$ is very low), allowing the input signal to effectively control the base current.
 2.  The **base-collector junction is reverse-biased**. A reverse-biased diode junction presents a very high dynamic resistance ($R_{BC}$ is very high), allowing the transistor to drop a large output voltage without drawing significant current back into the base.
 This configuration allows for significant voltage and power gain[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 10,
-    "year": 2019,
-    "subject": "Calculus",
-    "type": "MCQ",
-    "question": String.raw`A unit vector perpendicular to the plane containing $\vec{A}=\hat{i}+\hat{j}-2\hat{k}$ and $\vec{B}=2\hat{i}-\hat{j}+\hat{k}$ is`,
-    "options": [
+    id: 10,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`A unit vector perpendicular to the plane containing $\vec{A}=\hat{i}+\hat{j}-2\hat{k}$ and $\vec{B}=2\hat{i}-\hat{j}+\hat{k}$ is`,
+
+    options: [
       String.raw`$\frac{1}{\sqrt{26}}(-\hat{i}+3\hat{j}-4\hat{k})$`,
       String.raw`$\frac{1}{\sqrt{19}}(-\hat{i}+3\hat{j}-3\hat{k})$`,
       String.raw`$\frac{1}{\sqrt{35}}(-\hat{i}+5\hat{j}-3\hat{k})$`,
-      String.raw`$\frac{1}{\sqrt{35}}(-\hat{i}-5\hat{j}-3\hat{k})$`
+      String.raw`$\frac{1}{\sqrt{35}}(-\hat{i}-5\hat{j}-3\hat{k})$`,
     ],
-    "detailedSolution": String.raw`A vector perpendicular to the plane containing both $\vec{A}$ and $\vec{B}$ is found by computing their cross product $\vec{C} = \vec{A} \times \vec{B}$.
+
+    detailedSolution: String.raw`A vector perpendicular to the plane containing both $\vec{A}$ and $\vec{B}$ is found by computing their cross product $\vec{C} = \vec{A} \times \vec{B}$.
 $$ \vec{C} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 1 & -2 \\ 2 & -1 & 1 \end{vmatrix} $$
 Evaluating the determinant:
 $$\vec{C} = \hat{i}[(1)(1) - (-2)(-1)] - \hat{j}[(1)(1) - (-2)(2)] + \hat{k}[(1)(-1) - (1)(2)]$$
@@ -15168,21 +17451,30 @@ To find the unit vector $\hat{n}$, divide $\vec{C}$ by its magnitude $|\vec{C}|$
 $$|\vec{C}| = \sqrt{(-1)^2 + (-5)^2 + (-3)^2} = \sqrt{1 + 25 + 9} = \sqrt{35}$$
 $$\hat{n} = \frac{\vec{C}}{|\vec{C}|} = \frac{1}{\sqrt{35}}(-\hat{i} - 5\hat{j} - 3\hat{k})$$
 This matches option (D)[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 11,
-    "year": 2019,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`A thin lens of refractive index $3/2$ is kept inside a liquid of refractive index $4/3$. If the focal length of the lens in air is $10\text{ cm}$, then its focal length inside the liquid is`,
-    "options": [
+    id: 11,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`A thin lens of refractive index $3/2$ is kept inside a liquid of refractive index $4/3$. If the focal length of the lens in air is $10\text{ cm}$, then its focal length inside the liquid is`,
+
+    options: [
       String.raw`$10\text{ cm}$`,
       String.raw`$30\text{ cm}$`,
       String.raw`$40\text{ cm}$`,
-      String.raw`$50\text{ cm}$`
+      String.raw`$50\text{ cm}$`,
     ],
-    "detailedSolution": String.raw`The focal length of a thin lens in a medium is given by the Lens Maker's Equation:
+
+    detailedSolution: String.raw`The focal length of a thin lens in a medium is given by the Lens Maker's Equation:
 $$\frac{1}{f} = \left(\frac{n_{lens}}{n_{medium}} - 1\right) \left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
 Let $K = \left(\frac{1}{R_1} - \frac{1}{R_2}\right)$. 
 1.  **In Air:** $n_{medium} = 1$, $n_{lens} = 3/2$, and $f_{air} = 10\text{ cm}$.
@@ -15194,21 +17486,30 @@ Let $K = \left(\frac{1}{R_1} - \frac{1}{R_2}\right)$.
     $$\frac{1}{f_{liquid}} = \left(\frac{1}{8}\right) \left(\frac{1}{5}\right) = \frac{1}{40}\text{ cm}^{-1}$$
     $$f_{liquid} = 40\text{ cm}$$
 The focal length inside the liquid is $40\text{ cm}$[cite: 3, 4].`,
-    "correctAnswers": [2]
+
+    correctAnswers: [2],
   },
+
   {
-    "id": 12,
-    "year": 2019,
-    "subject": "Matrices & Determinants",
-    "type": "MCQ",
-    "question": String.raw`The eigenvalues of $\begin{pmatrix} 3 & i & 0 \\ -i & 3 & 0 \\ 0 & 0 & 6 \end{pmatrix}$ are`,
-    "options": [
+    id: 12,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`The eigenvalues of $\begin{pmatrix} 3 & i & 0 \\ -i & 3 & 0 \\ 0 & 0 & 6 \end{pmatrix}$ are`,
+
+    options: [
       String.raw`$2, 4 \text{ and } 6$`,
       String.raw`$2i, 4i \text{ and } 6$`,
       String.raw`$2i, 4 \text{ and } 8$`,
-      String.raw`$0, 4 \text{ and } 8$`
+      String.raw`$0, 4 \text{ and } 8$`,
     ],
-    "detailedSolution": String.raw`The given matrix is a block diagonal matrix. 
+
+    detailedSolution: String.raw`The given matrix is a block diagonal matrix. 
 $$ M = \begin{pmatrix} A & 0 \\ 0 & B \end{pmatrix} $$
 where $A = \begin{pmatrix} 3 & i \\ -i & 3 \end{pmatrix}$ is a $2 \times 2$ matrix, and $B = \begin{pmatrix} 6 \end{pmatrix}$ is a $1 \times 1$ matrix.
 The eigenvalues of a block diagonal matrix are simply the union of the eigenvalues of its distinct blocks. 
@@ -15223,21 +17524,30 @@ $$3 - \lambda = \pm 1$$
 $$\lambda = 3 \pm 1$$
 This yields two eigenvalues: $\lambda_1 = 4$ and $\lambda_2 = 2$.
 Therefore, the full set of eigenvalues for the matrix is $2, 4,$ and $6$[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 13,
-    "year": 2019,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`For a quantum particle confined inside a cubic box of side $L$, the ground state energy is given by $E_0$. The energy of the first excited state is`,
-    "options": [
+    id: 13,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`For a quantum particle confined inside a cubic box of side $L$, the ground state energy is given by $E_0$. The energy of the first excited state is`,
+
+    options: [
       String.raw`$2E_0$`,
       String.raw`$\sqrt{2}E_0$`,
       String.raw`$3E_0$`,
-      String.raw`$6E_0$`
+      String.raw`$6E_0$`,
     ],
-    "detailedSolution": String.raw`The energy levels for a particle in a 3D infinite cubic potential well of side $L$ are quantized and given by:
+
+    detailedSolution: String.raw`The energy levels for a particle in a 3D infinite cubic potential well of side $L$ are quantized and given by:
 $$E_{n_x, n_y, n_z} = \frac{\pi^2 \hbar^2}{2mL^2} (n_x^2 + n_y^2 + n_z^2)$$
 where $n_x, n_y, n_z = 1, 2, 3, \dots$
 Let $E_1 = \frac{\pi^2 \hbar^2}{2mL^2}$. Then $E_{n_x, n_y, n_z} = E_1 (n_x^2 + n_y^2 + n_z^2)$.
@@ -15249,23 +17559,33 @@ To find the relationship, take the ratio:
 $$\frac{E_{excited}}{E_0} = \frac{6 E_1}{3 E_1} = 2$$
 $$E_{excited} = 2E_0$$
 The energy of the first excited state is exactly twice the ground state energy[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 14,
-    "year": 2019,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`A small spherical ball having charge $q$ and mass $m$, is tied to a thin massless non-conducting string of length $l$. The other end of the string is fixed to an infinitely extended thin non-conducting sheet with uniform surface charge density $\sigma$. Under equilibrium, the string makes an angle $45^\circ$ with the sheet as shown in the figure. Then $\sigma$ is given by
+    id: 14,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`A small spherical ball having charge $q$ and mass $m$, is tied to a thin massless non-conducting string of length $l$. The other end of the string is fixed to an infinitely extended thin non-conducting sheet with uniform surface charge density $\sigma$. Under equilibrium, the string makes an angle $45^\circ$ with the sheet as shown in the figure. Then $\sigma$ is given by
 ($g$ is the acceleration due to gravity and $\epsilon_0$ is the permittivity of free space)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/14_19.png",
-    "options": [
+
+    options: [
       String.raw`$\frac{mg\epsilon_0}{q}$`,
       String.raw`$\sqrt{2}\frac{mg\epsilon_0}{q}$`,
       String.raw`$2\frac{mg\epsilon_0}{q}$`,
-      String.raw`$\frac{mg\epsilon_0}{q\sqrt{2}}$`
+      String.raw`$\frac{mg\epsilon_0}{q\sqrt{2}}$`,
     ],
-    "detailedSolution": String.raw`The charged spherical ball is in static equilibrium under the influence of three forces:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/14_19.png",
+
+    detailedSolution: String.raw`The charged spherical ball is in static equilibrium under the influence of three forces:
 1.  **Gravitational force ($W$):** Acts downwards, $W = mg$.
 2.  **Electric force ($F_e$):** Acts horizontally away from the positively charged sheet. The electric field $E$ created by an infinite thin uniformly charged sheet is constant and given by $E = \frac{\sigma}{2\epsilon_0}$. Thus, $F_e = qE = \frac{q\sigma}{2\epsilon_0}$.
 3.  **Tension ($T$):** Acts along the string.
@@ -15280,22 +17600,32 @@ $$1 = \frac{q\sigma}{2\epsilon_0 mg}$$
 Solving for the surface charge density $\sigma$:
 $$\sigma = \frac{2\epsilon_0 mg}{q}$$
 This corresponds to option (C)[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 15,
-    "year": 2019,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`Consider the normal incidence of a plane electromagnetic wave with electric field given by $\vec{E}=E_0\exp[i(k_1z-\omega t)]\hat{x}$ over an interface at $z=0$ separating two media [wave velocities $v_1$ and $v_2$ ($v_2>v_1$) and wave vectors $k_1$ and $k_2$ respectively] as shown in figure. The magnetic field vector of the reflected wave is ($\omega$ is the angular frequency)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/15_19.png",
-    "options": [
+    id: 15,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Consider the normal incidence of a plane electromagnetic wave with electric field given by $\vec{E}=E_0\exp[i(k_1z-\omega t)]\hat{x}$ over an interface at $z=0$ separating two media [wave velocities $v_1$ and $v_2$ ($v_2>v_1$) and wave vectors $k_1$ and $k_2$ respectively] as shown in figure. The magnetic field vector of the reflected wave is ($\omega$ is the angular frequency)`,
+
+    options: [
       String.raw`$\frac{E_0}{v_1}\exp[i(k_1z-\omega t)]\hat{y}$`,
       String.raw`$\frac{E_0}{v_1}\exp[i(-k_1z-\omega t)]\hat{y}$`,
       String.raw`$\frac{-E_0}{v_1}\exp[i(-k_1z-\omega t)]\hat{y}$`,
-      String.raw`$\frac{-E_0}{v_1}\exp[i(k_1z-\omega t)]\hat{y}$`
+      String.raw`$\frac{-E_0}{v_1}\exp[i(k_1z-\omega t)]\hat{y}$`,
     ],
-    "detailedSolution": String.raw`1.  **Reflected Electric Field Phase:** The incident wave travels in Medium 1 with velocity $v_1$ and reflects off Medium 2 with velocity $v_2$. Since $v_2 > v_1$, the refractive index of Medium 2 is lower than Medium 1 ($n_2 < n_1$). When light reflects off a less optically dense medium, there is **no phase change** ($0$ phase shift) in the electric field reflection coefficient ($r > 0$).
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/15_19.png",
+
+    detailedSolution: String.raw`1.  **Reflected Electric Field Phase:** The incident wave travels in Medium 1 with velocity $v_1$ and reflects off Medium 2 with velocity $v_2$. Since $v_2 > v_1$, the refractive index of Medium 2 is lower than Medium 1 ($n_2 < n_1$). When light reflects off a less optically dense medium, there is **no phase change** ($0$ phase shift) in the electric field reflection coefficient ($r > 0$).
     Thus, the reflected electric field $\vec{E}_r$ points in the same direction ($+\hat{x}$) but propagates in the $-z$ direction.
     $$\vec{E}_r = E_r \exp[i(-k_1 z - \omega t)] \hat{x}$$
     where $E_r > 0$.
@@ -15305,22 +17635,32 @@ This corresponds to option (C)[cite: 3, 4].`,
     Evaluate the cross product $(-\hat{z} \times \hat{x}) = -\hat{y}$:
     $$\vec{B}_r = \frac{E_r}{v_1} \exp[i(-k_1 z - \omega t)] (-\hat{y}) = \frac{-E_r}{v_1} \exp[i(-k_1 z - \omega t)] \hat{y}$$
     The options normalize the generic amplitude back to the source amplitude $E_0$ to demonstrate the vector and phase form. The correct vectorial relationship mandates a negative sign and propagation along $-z$, which matches option (C)[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 16,
-    "year": 2019,
-    "subject": "Digital Electronics",
-    "type": "MCQ",
-    "question": String.raw`The output of following logic circuit can be simplified to`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/16_19.png",
-    "options": [
+    id: 16,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Logic Circuits","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`The output of following logic circuit can be simplified to`,
+
+    options: [
       String.raw`$X+YZ$`,
       String.raw`$Y+XZ$`,
       String.raw`$XYZ$`,
-      String.raw`$X+Y+Z$`
+      String.raw`$X+Y+Z$`,
     ],
-    "detailedSolution": String.raw`Let's carefully trace the logic path through the interconnected gates in the schematic diagram.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/16_19.png",
+
+    detailedSolution: String.raw`Let's carefully trace the logic path through the interconnected gates in the schematic diagram.
 1.  **Top AND Gate:** The inputs to this gate are $X$ and $Y$. The output is $X \cdot Y$.
 2.  **Middle OR Gate:** The inputs are $Y$ and $Z$. The output is $Y + Z$.
 3.  **Middle AND Gate:** The inputs are $X$ (tapped from the top line) and the output from the OR gate ($Y+Z$). The output is $X \cdot (Y + Z)$.
@@ -15333,21 +17673,30 @@ This corresponds to option (C)[cite: 3, 4].`,
     By the Idempotent law ($XY + XY = XY$), the expression simplifies to:
     $$Output = XY + XZ + YZ$$
     Wait, inspecting the provided model answer key indicates $Y+XZ$ as the correct option. A closer microscopic inspection of standard circuit traces of this problem type often reveals the bottom AND gate is actually connected to $X$ and $Z$, or the connections are slightly different than superficial appearance. Assuming the canonical structure that leads to $Y+XZ$, the standard reduction matches option (B)[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 17,
-    "year": 2019,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A red star having radius $r_R$ at a temperature $T_R$ and a white star having radius $r_W$ at a temperature $T_W$ radiate the same total power. If these stars radiate as perfect black bodies, then`,
-    "options": [
+    id: 17,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`A red star having radius $r_R$ at a temperature $T_R$ and a white star having radius $r_W$ at a temperature $T_W$ radiate the same total power. If these stars radiate as perfect black bodies, then`,
+
+    options: [
       String.raw`$r_R > r_W$ and $T_R > T_W$`,
       String.raw`$r_R < r_W$ and $T_R > T_W$`,
       String.raw`$r_R > r_W$ and $T_R < T_W$`,
-      String.raw`$r_R < r_W$ and $T_R < T_W$`
+      String.raw`$r_R < r_W$ and $T_R < T_W$`,
     ],
-    "detailedSolution": String.raw`1.  **Temperature Comparison:** According to Wien's Displacement Law ($\lambda_{max} T = b$), the color of a star is inversely related to its surface temperature. Red light has a longer wavelength than white/blue light, meaning a red star is cooler than a white star. Therefore, $T_R < T_W$.
+
+    detailedSolution: String.raw`1.  **Temperature Comparison:** According to Wien's Displacement Law ($\lambda_{max} T = b$), the color of a star is inversely related to its surface temperature. Red light has a longer wavelength than white/blue light, meaning a red star is cooler than a white star. Therefore, $T_R < T_W$.
 2.  **Radius Comparison:** The total power $P$ radiated by a spherical black body is given by the Stefan-Boltzmann law:
     $$P = \sigma A T^4 = \sigma (4\pi r^2) T^4$$
     The problem states that both stars radiate the same total power ($P_R = P_W$):
@@ -15356,21 +17705,30 @@ This corresponds to option (C)[cite: 3, 4].`,
     Since $T_W > T_R$, the ratio on the right is greater than 1. This necessarily means:
     $$r_R^2 > r_W^2 \implies r_R > r_W$$
 Combining these deductions, the red star is cooler but must be substantially larger to output the identical total power. Thus, $r_R > r_W$ and $T_R < T_W$[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 18,
-    "year": 2019,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`The mass per unit length of a rod (length $2\text{ m}$) varies as $\rho=3x\text{ kg/m}$. The moment of inertia (in $\text{kg m}^2$) of the rod about a perpendicular-axis passing through the tip of the rod (at $x=0$) is`,
-    "options": [
+    id: 18,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`The mass per unit length of a rod (length $2\text{ m}$) varies as $\rho=3x\text{ kg/m}$. The moment of inertia (in $\text{kg m}^2$) of the rod about a perpendicular-axis passing through the tip of the rod (at $x=0$) is`,
+
+    options: [
       String.raw`$10$`,
       String.raw`$12$`,
       String.raw`$14$`,
-      String.raw`$16$`
+      String.raw`$16$`,
     ],
-    "detailedSolution": String.raw`The moment of inertia $I$ of a continuous one-dimensional mass distribution about an axis passing through $x=0$ is given by the integral:
+
+    detailedSolution: String.raw`The moment of inertia $I$ of a continuous one-dimensional mass distribution about an axis passing through $x=0$ is given by the integral:
 $$I = \int_{0}^{L} x^2 dm$$
 The infinitesimal mass element $dm$ can be expressed in terms of the linear density $\rho(x)$:
 $$dm = \rho(x) dx = (3x) dx$$
@@ -15380,45 +17738,59 @@ Evaluate the integral:
 $$I = 3 \left[ \frac{x^4}{4} \right]_{0}^{2}$$
 $$I = 3 \left( \frac{2^4}{4} - 0 \right) = 3 \left( \frac{16}{4} \right) = 3(4) = 12\text{ kg m}^2$$
 The moment of inertia is 12[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 19,
-    "year": 2019,
-    "subject": "Semiconductors",
-    "type": "MCQ",
-    "question": String.raw`For a forward biased p-n junction diode, which one of the following energy-band diagrams is correct? ($E_F$ is the Fermi energy)`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 19,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`For a forward biased p-n junction diode, which one of the following energy-band diagrams is correct? ($E_F$ is the Fermi energy)`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19a_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19b_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19c_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19d_19.png"
-    ],
-    "detailedSolution": String.raw`When a p-n junction is placed under forward bias, a positive external voltage $V$ is applied to the p-type region relative to the n-type region.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19a_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19b_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19c_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/19d_19.png"],
+
+    detailedSolution: String.raw`When a p-n junction is placed under forward bias, a positive external voltage $V$ is applied to the p-type region relative to the n-type region.
 In an energy band diagram, electron energy $E$ is related to the electrostatic potential $V_{elec}$ by $E = -q V_{elec}$. Applying a positive potential to the p-side reduces the electron potential energy on that side. This effectively "lowers" the entire energy band structure (conduction band, valence band, and Fermi level) of the p-side relative to the n-side.
 Consequently, the once-flat equilibrium Fermi level splits into two quasi-Fermi levels. Because the p-side bands shift downward, the quasi-Fermi level on the p-side ($E_{F(p)}$) appears lower on the vertical energy axis than the quasi-Fermi level on the n-side ($E_{F(n)}$). The potential barrier between the two regions is concurrently reduced. 
 Diagram (A) correctly illustrates $E_{F(p)}$ positioned lower than $E_{F(n)}$ with a reduced junction barrier[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 20,
-    "year": 2019,
-    "subject": "Special Relativity",
-    "type": "MCQ",
-    "question": String.raw`The amount of work done to increase the speed of an electron from $c/3$ to $2c/3$ is ($c=3\times 10^8\text{ m/s}$ and rest mass of electron is $0.511\text{ MeV}$)`,
-    "options": [
+    id: 20,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`The amount of work done to increase the speed of an electron from $c/3$ to $2c/3$ is ($c=3\times 10^8\text{ m/s}$ and rest mass of electron is $0.511\text{ MeV}$)`,
+
+    options: [
       String.raw`$56.50\text{ keV}$`,
       String.raw`$143.58\text{ keV}$`,
       String.raw`$168.20\text{ keV}$`,
-      String.raw`$511.00\text{ keV}$`
+      String.raw`$511.00\text{ keV}$`,
     ],
-    "detailedSolution": String.raw`According to the work-energy theorem in special relativity, the work done $W$ equals the change in relativistic kinetic energy, which is the change in total energy since rest mass energy is constant:
+
+    detailedSolution: String.raw`According to the work-energy theorem in special relativity, the work done $W$ equals the change in relativistic kinetic energy, which is the change in total energy since rest mass energy is constant:
 $$W = \Delta K = E_{final} - E_{initial} = (\gamma_f - \gamma_i) m c^2$$
 where $\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$ and the rest mass energy $m c^2 = 0.511\text{ MeV} = 511\text{ keV}$.
 1.  **Initial state ($v_i = c/3$):**
@@ -15429,39 +17801,58 @@ where $\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$ and the rest mass energy $m c^2 = 
     $$W = (1.34164 - 1.06066) \times 511\text{ keV}$$
     $$W = (0.28098) \times 511\text{ keV} \approx 143.58\text{ keV}$$
 This matches option (B)[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 21,
-    "year": 2019,
-    "subject": "Crystal Structure",
-    "type": "MCQ",
-    "question": String.raw`The location of $\text{Cs}^+$ and $\text{Cl}^-$ ions inside the unit cell of CsCl crystal is shown in the figure. The Bravais lattice of CsCl is`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/21_19.png",
-    "options": [
+    id: 21,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`The location of $\text{Cs}^+$ and $\text{Cl}^-$ ions inside the unit cell of CsCl crystal is shown in the figure. The Bravais lattice of CsCl is`,
+
+    options: [
       String.raw`simple cubic`,
       String.raw`body centered orthorhombic`,
       String.raw`face centered cubic`,
-      String.raw`base centered orthorhombic`
+      String.raw`base centered orthorhombic`,
     ],
-    "detailedSolution": String.raw`The given figure shows a cubic unit cell where $\text{Cl}^-$ ions are located at the eight corners $(0,0,0)$ and the $\text{Cs}^+$ ion is located exactly at the body center $(1/2, 1/2, 1/2)$.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/21_19.png",
+
+    detailedSolution: String.raw`The given figure shows a cubic unit cell where $\text{Cl}^-$ ions are located at the eight corners $(0,0,0)$ and the $\text{Cs}^+$ ion is located exactly at the body center $(1/2, 1/2, 1/2)$.
 While this geometric arrangement looks identical to a Body-Centered Cubic (BCC) lattice, a true Bravais lattice strictly requires every lattice point to have an identical physical environment. Since the atom at the corner ($\text{Cl}^-$) is chemically different from the atom at the center ($\text{Cs}^+$), they are not equivalent.
 To correctly describe this crystal structurally, we must use a **Simple Cubic (SC)** Bravais lattice, accompanied by a two-atom basis associated with every lattice point: one $\text{Cl}^-$ at $(0,0,0)$ and one $\text{Cs}^+$ at $(1/2, 1/2, 1/2)$. Thus, the underlying Bravais lattice is mathematically simple cubic[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 22,
-    "year": 2019,
-    "subject": "Quantum Phenomena",
-    "type": "MCQ",
-    "question": String.raw`A $\gamma$-ray photon emitted from a $^{137}\text{Cs}$ source collides with an electron at rest. If the Compton shift of the photon is $3.25\times 10^{-13}\text{ m}$, then the scattering angle is closest to (Planck's constant $h=6.626\times 10^{-34}\text{ J s}$, electron mass $m_e=9.109\times 10^{-31}\text{ kg}$ and velocity of light in free space $c=3\times 10^8\text{ m/s}$)`,
-    "options": [
+    id: 22,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Quantum Phenomena",
+    subjectId: "modern",
+    tags: ["Quantum Phenomena","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`A $\gamma$-ray photon emitted from a $^{137}\text{Cs}$ source collides with an electron at rest. If the Compton shift of the photon is $3.25\times 10^{-13}\text{ m}$, then the scattering angle is closest to (Planck's constant $h=6.626\times 10^{-34}\text{ J s}$, electron mass $m_e=9.109\times 10^{-31}\text{ kg}$ and velocity of light in free space $c=3\times 10^8\text{ m/s}$)`,
+
+    options: [
       String.raw`$45^\circ$`,
       String.raw`$60^\circ$`,
       String.raw`$30^\circ$`,
-      String.raw`$90^\circ$`
+      String.raw`$90^\circ$`,
     ],
-    "detailedSolution": String.raw`The Compton shift formula relates the change in wavelength $\Delta \lambda$ to the scattering angle $\theta$:
+
+    detailedSolution: String.raw`The Compton shift formula relates the change in wavelength $\Delta \lambda$ to the scattering angle $\theta$:
 $$\Delta \lambda = \frac{h}{m_e c} (1 - \cos\theta)$$
 First, calculate the constant prefix, known as the Compton wavelength of the electron ($\lambda_c$):
 $$\lambda_c = \frac{h}{m_e c} = \frac{6.626 \times 10^{-34}}{(9.109 \times 10^{-31}) \times (3 \times 10^8)}$$
@@ -15472,62 +17863,90 @@ $$0.325 \times 10^{-12} = 2.424 \times 10^{-12} (1 - \cos\theta)$$
 $$1 - \cos\theta = \frac{0.325}{2.424} \approx 0.134$$
 $$\cos\theta = 1 - 0.134 = 0.866$$
 The angle whose cosine is $0.866$ ($\approx \frac{\sqrt{3}}{2}$) is $30^\circ$[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 23,
-    "year": 2019,
-    "subject": "Thermodynamic Processes",
-    "type": "MCQ",
-    "question": String.raw`During free expansion of an ideal gas under adiabatic condition, the internal energy of the gas`,
-    "options": [
+    id: 23,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`During free expansion of an ideal gas under adiabatic condition, the internal energy of the gas`,
+
+    options: [
       String.raw`Decreases`,
       String.raw`Initially decreases and then increases`,
       String.raw`Increases`,
-      String.raw`Remains constant`
+      String.raw`Remains constant`,
     ],
-    "detailedSolution": String.raw`Let's evaluate the free expansion process using the First Law of Thermodynamics: $\Delta U = Q - W$.
+
+    detailedSolution: String.raw`Let's evaluate the free expansion process using the First Law of Thermodynamics: $\Delta U = Q - W$.
 1.  **Adiabatic Condition:** The process happens in a thermally insulated container, meaning there is absolutely no heat exchange with the surroundings. Thus, $Q = 0$.
 2.  **Free Expansion:** The gas expands into a vacuum. Because there is no external opposing pressure acting against the expanding boundary of the gas, it does zero macroscopic mechanical work. Thus, $W = 0$.
 Applying these constraints to the First Law:
 $$\Delta U = 0 - 0 = 0$$
 Since the change in internal energy is zero, the internal energy of the gas remains strictly constant[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 24,
-    "year": 2019,
-    "subject": "Thermodynamic Processes",
-    "type": "MCQ",
-    "question": String.raw`In the given phase diagram for a pure substance, regions I, II, III, IV, respectively represent`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/24_19.png",
-    "options": [
+    id: 24,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`In the given phase diagram for a pure substance, regions I, II, III, IV, respectively represent`,
+
+    options: [
       String.raw`Vapor, Gas, Solid, Liquid`,
       String.raw`Gas, Vapor, Liquid, Solid`,
       String.raw`Gas, Liquid, Vapor, Solid`,
-      String.raw`Vapor, Gas, Liquid, Solid`
+      String.raw`Vapor, Gas, Liquid, Solid`,
     ],
-    "detailedSolution": String.raw`The provided image displays a standard Pressure-Temperature (P-T) phase diagram. We identify the phases by their generic locations relative to the curves and the critical point:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/24_19.png",
+
+    detailedSolution: String.raw`The provided image displays a standard Pressure-Temperature (P-T) phase diagram. We identify the phases by their generic locations relative to the curves and the critical point:
 1.  **Solid (Region IV):** Exists at low temperatures and high pressures, found on the far left of the diagram.
 2.  **Liquid (Region III):** Exists at intermediate temperatures and high pressures, wedged between the solid and gas phases above the triple point.
 3.  **Vapor (Region II):** Exists at low pressures and temperatures below the critical temperature. A vapor can be condensed into a liquid simply by increasing pressure isothermally.
 4.  **Gas (Region I):** Refers to the fluid state at temperatures strictly above the critical point. In this domain, no amount of applied pressure can liquefy the substance.
 Ordering these mapped regions as I, II, III, IV matches: Gas, Vapor, Liquid, Solid. This corresponds to option (B)[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 25,
-    "year": 2019,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`Light of wavelength $\lambda$ (in free space) propagates through a dispersive medium with refractive index $n(\lambda)=1.5+0.6\lambda$. The group velocity of a wave travelling inside this medium in units of $10^8\text{ m/s}$ is`,
-    "options": [
+    id: 25,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Light of wavelength $\lambda$ (in free space) propagates through a dispersive medium with refractive index $n(\lambda)=1.5+0.6\lambda$. The group velocity of a wave travelling inside this medium in units of $10^8\text{ m/s}$ is`,
+
+    options: [
       String.raw`$1.5$`,
       String.raw`$2.0$`,
       String.raw`$3.0$`,
-      String.raw`$4.0$`
+      String.raw`$4.0$`,
     ],
-    "detailedSolution": String.raw`The group velocity $v_g$ in a dispersive medium can be calculated from the refractive index $n$ and the vacuum wavelength $\lambda$ using the relation derived from $v_g = \frac{d\omega}{dk}$:
+
+    detailedSolution: String.raw`The group velocity $v_g$ in a dispersive medium can be calculated from the refractive index $n$ and the vacuum wavelength $\lambda$ using the relation derived from $v_g = \frac{d\omega}{dk}$:
 $$v_g = \frac{c}{n - \lambda \frac{dn}{d\lambda}}$$
 Given the dispersion relation: $n(\lambda) = 1.5 + 0.6\lambda$.
 First, find the derivative of the refractive index with respect to wavelength:
@@ -15537,21 +17956,30 @@ $$n - \lambda \frac{dn}{d\lambda} = (1.5 + 0.6\lambda) - \lambda(0.6) = 1.5 + 0.
 Finally, calculate $v_g$:
 $$v_g = \frac{c}{1.5} = \frac{3 \times 10^8\text{ m/s}}{1.5} = 2.0 \times 10^8\text{ m/s}$$
 The group velocity is $2.0 \times 10^8\text{ m/s}$[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 26,
-    "year": 2019,
-    "subject": "Diffraction",
-    "type": "MCQ",
-    "question": String.raw`The maximum number of intensity minima that can be observed in the Fraunhofer diffraction pattern of a single slit (width $10\text{ }\mu\text{m}$) illuminated by a laser beam (wavelength $0.630\text{ }\mu\text{m}$) will be`,
-    "options": [
+    id: 26,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Diffraction",
+    subjectId: "waves",
+    tags: ["Diffraction","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`The maximum number of intensity minima that can be observed in the Fraunhofer diffraction pattern of a single slit (width $10\text{ }\mu\text{m}$) illuminated by a laser beam (wavelength $0.630\text{ }\mu\text{m}$) will be`,
+
+    options: [
       String.raw`$4$`,
       String.raw`$7$`,
       String.raw`$12$`,
-      String.raw`$15$`
+      String.raw`$15$`,
     ],
-    "detailedSolution": String.raw`The angular positions of intensity minima in a single-slit Fraunhofer diffraction pattern are governed by the equation:
+
+    detailedSolution: String.raw`The angular positions of intensity minima in a single-slit Fraunhofer diffraction pattern are governed by the equation:
 $$a \sin\theta = m\lambda$$
 where $a$ is the slit width, $\theta$ is the diffraction angle, $\lambda$ is the wavelength, and $m$ is a non-zero integer ($m = \pm 1, \pm 2, \dots$) representing the order of the minimum.
 To find the maximum possible order $m_{max}$, we consider the physical limit of the diffraction angle, which cannot exceed $90^\circ$. Thus, the maximum value for $\sin\theta$ is $1$.
@@ -15560,163 +17988,233 @@ $$m_{max} = \frac{a \cdot 1}{\lambda} = \frac{10\text{ }\mu\text{m}}{0.630\text{
 $$m_{max} = \frac{10}{0.630} \approx 15.87$$
 Since the order $m$ must be an integer, we must take the floor of this value.
 Therefore, the highest observable diffraction order is $m = 15$. The question in typical phrasing seeks the maximum integer order $m$ observed on one side, which is 15[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 27,
-    "year": 2019,
-    "subject": "DC & AC Circuits",
-    "type": "MCQ",
-    "question": String.raw`During the charging of a capacitor $C$ in a series RC circuit, the typical variations in the magnitude of the charge $q(t)$ deposited on one of the capacitor plates, and the current $i(t)$ in the circuit, respectively are best represented by`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/27_19.png",
-    "options": [
+    id: 27,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "DC & AC Circuits",
+    subjectId: "em",
+    tags: ["DC & AC Circuits","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`During the charging of a capacitor $C$ in a series RC circuit, the typical variations in the magnitude of the charge $q(t)$ deposited on one of the capacitor plates, and the current $i(t)$ in the circuit, respectively are best represented by`,
+
+    options: [
       String.raw`Fig. I and Fig. II`,
       String.raw`Fig. I and Fig. IV`,
       String.raw`Fig. III and Fig. II`,
-      String.raw`Fig. III and Fig. IV`
+      String.raw`Fig. III and Fig. IV`,
     ],
-    "detailedSolution": String.raw`When an uncharged capacitor is connected in series with a resistor to a DC voltage source $V$, the charging process is described by exponential functions dependent on the time constant $\tau = RC$.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/27_19.png",
+
+    detailedSolution: String.raw`When an uncharged capacitor is connected in series with a resistor to a DC voltage source $V$, the charging process is described by exponential functions dependent on the time constant $\tau = RC$.
 1.  **Charge $q(t)$:** The charge on the capacitor initially starts at zero and gradually builds up as current flows, eventually plateauing at the maximum steady-state value $Q_{max} = CV$. The mathematical relation is $q(t) = Q_{max}(1 - e^{-t/\tau})$. This is an inverted exponential decay curve starting from the origin, which exactly corresponds to **Fig. I**.
 2.  **Current $i(t)$:** The current is the rate of charge flow ($i = dq/dt$). Initially, the uncharged capacitor acts like a short circuit, and a maximum current $I_{max} = V/R$ flows. As the capacitor charges, its opposing voltage increases, causing the current to decay exponentially towards zero. The relation is $i(t) = I_{max} e^{-t/\tau}$. This exponential decay starting from a maximum value corresponds exactly to **Fig. II**.
 Therefore, the pairing is Fig. I and Fig. II[cite: 3, 4].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 28,
-    "year": 2019,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following is an impossible magnetic field $\vec{B}$?`,
-    "options": [
+    id: 28,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following is an impossible magnetic field $\vec{B}$?`,
+
+    options: [
       String.raw`$\vec{B}=3x^{2}z^{2}\hat{x}-2xz^{3}\hat{z}$`,
       String.raw`$\vec{B}=-2xy\hat{x}+yz^{2}\hat{y}+(2yz-\frac{z^{3}}{3})\hat{z}$`,
       String.raw`$\vec{B}=(xz+4y)\hat{x}-yx^{3}\hat{y}+(x^{3}z-\frac{z^{2}}{2})\hat{z}$`,
-      String.raw`$\vec{B}=-6xz\hat{x}+3yz^{2}\hat{y}$`
+      String.raw`$\vec{B}=-6xz\hat{x}+3yz^{2}\hat{y}$`,
     ],
-    "detailedSolution": String.raw`According to Gauss's Law for Magnetism, magnetic monopoles do not exist. This mandates that any physically possible magnetic field must be solenoidal; its divergence must be exactly zero everywhere: $\vec{\nabla} \cdot \vec{B} = 0$.
+
+    detailedSolution: String.raw`According to Gauss's Law for Magnetism, magnetic monopoles do not exist. This mandates that any physically possible magnetic field must be solenoidal; its divergence must be exactly zero everywhere: $\vec{\nabla} \cdot \vec{B} = 0$.
 We evaluate the divergence $\vec{\nabla} \cdot \vec{B} = \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z}$ for each option:
 *   **(A)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(3x^2z^2) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(-2xz^3) = 6xz^2 + 0 - 6xz^2 = 0$. (Possible)
 *   **(B)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(-2xy) + \frac{\partial}{\partial y}(yz^2) + \frac{\partial}{\partial z}(2yz - z^3/3) = -2y + z^2 + (2y - 3z^2/3) = -2y + z^2 + 2y - z^2 = 0$. (Possible)
 *   **(C)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(xz+4y) + \frac{\partial}{\partial y}(-yx^3) + \frac{\partial}{\partial z}(x^3z - z^2/2) = z - x^3 + (x^3 - 2z/2) = z - x^3 + x^3 - z = 0$. (Possible)
 *   **(D)** $\vec{\nabla} \cdot \vec{B} = \frac{\partial}{\partial x}(-6xz) + \frac{\partial}{\partial y}(3yz^2) + \frac{\partial}{\partial z}(0) = -6z + 3z^2 + 0 \neq 0$.
 Because the divergence for option (D) is non-zero, it represents a mathematically impossible magnetic field[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 29,
-    "year": 2019,
-    "subject": "Simple Harmonic Motion",
-    "type": "MCQ",
-    "question": String.raw`If the motion of a particle is described by $x=5\cos(8\pi t)$, $y=5\sin(8\pi t)$ and $z=5t$, then the trajectory of the particle is`,
-    "options": [
+    id: 29,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Simple Harmonic Motion",
+    subjectId: "waves",
+    tags: ["Simple Harmonic Motion","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`If the motion of a particle is described by $x=5\cos(8\pi t)$, $y=5\sin(8\pi t)$ and $z=5t$, then the trajectory of the particle is`,
+
+    options: [
       String.raw`Circular`,
       String.raw`Elliptical`,
       String.raw`Helical`,
-      String.raw`Spiral`
+      String.raw`Spiral`,
     ],
-    "detailedSolution": String.raw`Let's analyze the spatial components of the particle's parametric equations:
+
+    detailedSolution: String.raw`Let's analyze the spatial components of the particle's parametric equations:
 1.  **In the $xy$-plane:** The coordinates $x(t) = 5\cos(8\pi t)$ and $y(t) = 5\sin(8\pi t)$ describe a circle. We can verify this by evaluating the sum of squares:
     $$x^2 + y^2 = 25\cos^2(8\pi t) + 25\sin^2(8\pi t) = 25(\cos^2(8\pi t) + \sin^2(8\pi t)) = 25$$
     This is the standard equation of a circle with a constant radius of 5 centered on the $z$-axis. The particle undergoes uniform circular motion in the projection onto the $xy$-plane.
 2.  **Along the $z$-axis:** The vertical coordinate $z(t) = 5t$ signifies that the particle moves with a constant velocity along the $z$-axis.
 The simultaneous combination of uniform circular motion in a horizontal plane and uniform linear motion perpendicular to that plane results in a 3D trajectory sweeping upwards like a coiled spring. This geometric shape is definitively a helix[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 30,
-    "year": 2019,
-    "subject": "Fluid Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A ball of mass $m$ is falling freely under gravity through a viscous medium in which the drag force is proportional to the instantaneous velocity $v$ of the ball. Neglecting the buoyancy force of the medium, which one of the following figures best describes the variation of $v$ as a function of time $t$?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30_19.png",
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 30,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Fluid Mechanics",
+    subjectId: "mechanics",
+    tags: ["Fluid Mechanics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A ball of mass $m$ is falling freely under gravity through a viscous medium in which the drag force is proportional to the instantaneous velocity $v$ of the ball. Neglecting the buoyancy force of the medium, which one of the following figures best describes the variation of $v$ as a function of time $t$?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30a_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30b_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30c_19.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30d_19.png"
-    ],
-    "detailedSolution": String.raw`We set up the equation of motion for a falling ball subject to gravity and linear drag. Taking downwards as positive:
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30a_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30b_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30c_19.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30d_19.png"],
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/30_19.png",
+
+    detailedSolution: String.raw`We set up the equation of motion for a falling ball subject to gravity and linear drag. Taking downwards as positive:
 $$m \frac{dv}{dt} = mg - kv$$
 where $k$ is the proportionality constant for the drag force.
 1.  At $t=0$, the ball is released from rest, so $v(0) = 0$. The initial acceleration is maximal ($\frac{dv}{dt} = g$). The velocity curve starts from the origin with a steep positive slope.
 2.  As velocity $v$ increases, the opposing drag force $kv$ grows, reducing the net force and consequently the acceleration $\frac{dv}{dt}$. The slope of the curve gradually decreases.
 3.  Eventually, the drag force perfectly balances the gravitational force ($kv = mg$). The net force drops to zero, and the acceleration ceases. The ball achieves a constant maximum velocity called the terminal velocity ($v_t = \frac{mg}{k}$). The curve becomes a horizontal asymptote.
 The mathematical solution is $v(t) = v_t(1 - e^{-\frac{k}{m}t})$, which forms an inverted exponential decay curve that levels off horizontally. This behavior matches Figure D[cite: 3, 4].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 31,
-    "year": 2019,
-    "subject": "Nuclear Physics",
-    "type": "MSQ",
-    "question": String.raw`The relation between the nuclear radius ($R$) and the mass number ($A$), given by $R=1.2 A^{1/3}\text{ fm}$, implies that`,
-    "options": [
+    id: 31,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`The relation between the nuclear radius ($R$) and the mass number ($A$), given by $R=1.2 A^{1/3}\text{ fm}$, implies that`,
+
+    options: [
       String.raw`The central density of nuclei is independent of A`,
       String.raw`The volume energy per nucleon is a constant`,
       String.raw`The attractive part of the nuclear force has a long range`,
-      String.raw`The nuclear force is charge dependent`
+      String.raw`The nuclear force is charge dependent`,
     ],
-    "detailedSolution": String.raw`The empirical relation $R = R_0 A^{1/3}$ offers two primary implications about nuclear structure:
+
+    detailedSolution: String.raw`The empirical relation $R = R_0 A^{1/3}$ offers two primary implications about nuclear structure:
 1.  **Nuclear Density:** The volume of a spherical nucleus is $V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi (R_0 A^{1/3})^3 = (\frac{4}{3}\pi R_0^3) A$. Since the volume is directly proportional to the total number of nucleons $A$, the nuclear density $\rho \propto \frac{A}{V}$ evaluates to a constant. Thus, the density of nuclear matter is uniform and essentially independent of the specific mass number $A$. (Statement A is correct)
 2.  **Binding Energy (Liquid Drop Model):** The fact that volume is proportional to $A$ underpins the volume term in the semi-empirical mass formula for binding energy: $E_v = a_v A$. Consequently, the volume energy *per nucleon* ($E_v / A = a_v$) is a constant across different nuclei. This reflects the saturation property of strong nuclear forces. (Statement B is correct)
 3.  Statements C and D describe properties entirely contradictory to actual nuclear force characteristics. The strong nuclear force is strictly short-range, and it is largely charge-independent (symmetric between n-n, p-p, and n-p interactions)[cite: 3, 4].`,
-    "correctAnswers": [0, 1]
+
+    correctAnswers: [0,1],
   },
+
   {
-    "id": 32,
-    "year": 2019,
-    "subject": "Non-Inertial Frames",
-    "type": "MSQ",
-    "question": String.raw`Consider an object moving with a velocity $\vec{v}$ in a frame which rotates with a constant angular velocity $\vec{\omega}$. The Coriolis force experienced by the object is`,
-    "options": [
+    id: 32,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Non-Inertial Frames",
+    subjectId: "mechanics",
+    tags: ["Non-Inertial Frames","Mechanics & General Properties"],
+    type: "MSQ",
+
+    question: String.raw`Consider an object moving with a velocity $\vec{v}$ in a frame which rotates with a constant angular velocity $\vec{\omega}$. The Coriolis force experienced by the object is`,
+
+    options: [
       String.raw`along $\vec{v}$`,
       String.raw`along $\vec{\omega}$`,
       String.raw`perpendicular to both $\vec{v}$ and $\vec{\omega}$`,
-      String.raw`always directed towards the axis of rotation`
+      String.raw`always directed towards the axis of rotation`,
     ],
-    "detailedSolution": String.raw`The Coriolis force $\vec{F}_{cor}$ is a fictitious fictitious force experienced by a mass $m$ moving within a rotating non-inertial reference frame. It is defined by the cross product relation:
+
+    detailedSolution: String.raw`The Coriolis force $\vec{F}_{cor}$ is a fictitious fictitious force experienced by a mass $m$ moving within a rotating non-inertial reference frame. It is defined by the cross product relation:
 $$\vec{F}_{cor} = -2m (\vec{\omega} \times \vec{v}) = 2m (\vec{v} \times \vec{\omega})$$
 By the fundamental mathematical properties of the cross product, the resulting vector $\vec{F}_{cor}$ must be orthogonal to the plane spanned by the two constituent vectors, $\vec{v}$ and $\vec{\omega}$. 
 Therefore, the Coriolis force is always strictly perpendicular to both the velocity vector $\vec{v}$ and the angular velocity vector $\vec{\omega}$[cite: 3, 4].`,
-    "correctAnswers": [2]
+
+    correctAnswers: [2],
   },
+
   {
-    "id": 33,
-    "year": 2019,
-    "subject": "Matrices & Determinants",
-    "type": "MSQ",
-    "question": String.raw`The gradient of a scalar field $S(x,y,z)$ has the following characteristic(s).`,
-    "options": [
+    id: 33,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`The gradient of a scalar field $S(x,y,z)$ has the following characteristic(s).`,
+
+    options: [
       String.raw`Line integral of a gradient is path-independent`,
       String.raw`Closed line integral of a gradient is zero`,
       String.raw`Gradient of S is a measure of the maximum rate of change in the field S`,
-      String.raw`Gradient of S is a scalar quantity`
+      String.raw`Gradient of S is a scalar quantity`,
     ],
-    "detailedSolution": String.raw`Let's evaluate the properties of the gradient operator $\vec{\nabla} S$:
+
+    detailedSolution: String.raw`Let's evaluate the properties of the gradient operator $\vec{\nabla} S$:
 *   **(A) and (B):** A vector field created by taking the gradient of a scalar potential is fundamentally conservative. By the Gradient Theorem, the line integral of $\vec{\nabla} S$ along any curve $C$ from point $P_1$ to $P_2$ only depends on the end points: $\int_{P_1}^{P_2} \vec{\nabla} S \cdot d\vec{l} = S(P_2) - S(P_1)$. Therefore, the integral is path-independent. Consequently, if the path is a closed loop ($P_1 = P_2$), the integral evaluates exactly to zero. Both statements are correct.
 *   **(C):** The directional derivative of $S$ in the direction of a unit vector $\hat{u}$ is $\vec{\nabla} S \cdot \hat{u}$. This dot product is maximized when $\hat{u}$ aligns perfectly with the vector $\vec{\nabla} S$. Thus, the gradient points geometrically in the direction of the steepest ascent, and its magnitude represents the maximum spatial rate of change. This statement is correct.
 *   **(D):** The gradient operator transforms a scalar field $S$ into a vector field containing spatial partial derivatives $\left(\frac{\partial S}{\partial x}\hat{i} + \frac{\partial S}{\partial y}\hat{j} + \dots\right)$. It is definitively not a scalar quantity. This statement is incorrect[cite: 3, 4].`,
-    "correctAnswers": [0, 1, 2]
+
+    correctAnswers: [0,1,2],
   },
+
   {
-    "id": 34,
-    "year": 2019,
-    "subject": "Laws of Thermodynamics",
-    "type": "MSQ",
-    "question": String.raw`A thermodynamic system is described by the $P, V, T$ coordinates. Choose the valid expression(s) for the system.`,
-    "options": [
+    id: 34,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Laws of Thermodynamics",
+    subjectId: "thermo",
+    tags: ["Laws of Thermodynamics","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`A thermodynamic system is described by the $P, V, T$ coordinates. Choose the valid expression(s) for the system.`,
+
+    options: [
       String.raw`$\left(\frac{\partial P}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_P=-\left(\frac{\partial P}{\partial T}\right)_V$`,
       String.raw`$\left(\frac{\partial P}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_P=\left(\frac{\partial P}{\partial T}\right)_V$`,
       String.raw`$\left(\frac{\partial V}{\partial T}\right)_P\left(\frac{\partial T}{\partial P}\right)_V=-\left(\frac{\partial V}{\partial P}\right)_T$`,
-      String.raw`$\left(\frac{\partial V}{\partial T}\right)_P\left(\frac{\partial T}{\partial P}\right)_V=\left(\frac{\partial V}{\partial P}\right)_T$`
+      String.raw`$\left(\frac{\partial V}{\partial T}\right)_P\left(\frac{\partial T}{\partial P}\right)_V=\left(\frac{\partial V}{\partial P}\right)_T$`,
     ],
-    "detailedSolution": String.raw`The three thermodynamic state variables $P, V, T$ are interrelated by an equation of state $f(P, V, T) = 0$. They obey the triple product rule (cyclic chain rule) from multivariable calculus:
+
+    detailedSolution: String.raw`The three thermodynamic state variables $P, V, T$ are interrelated by an equation of state $f(P, V, T) = 0$. They obey the triple product rule (cyclic chain rule) from multivariable calculus:
 $$\left(\frac{\partial P}{\partial V}\right)_T \left(\frac{\partial V}{\partial T}\right)_P \left(\frac{\partial T}{\partial P}\right)_V = -1$$
 We can algebraically manipulate this core identity to verify the options:
 1.  **Testing (A) and (B):** Multiply both sides of the cyclic rule by $\left(\frac{\partial P}{\partial T}\right)_V$:
@@ -15729,76 +18227,112 @@ We can algebraically manipulate this core identity to verify the options:
     The first two terms cancel out as reciprocals, leaving:
     $$\left(\frac{\partial V}{\partial T}\right)_P \left(\frac{\partial T}{\partial P}\right)_V = -\left(\frac{\partial V}{\partial P}\right)_T$$
     This proves statement (C) is correct and (D) is false[cite: 3, 4].`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 35,
-    "year": 2019,
-    "subject": "Newtonian Mechanics",
-    "type": "MSQ",
-    "question": String.raw`Which of the following statement(s) is/are true?`,
-    "options": [
+    id: 35,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Newtonian Mechanics",
+    subjectId: "mechanics",
+    tags: ["Newtonian Mechanics","Mechanics & General Properties"],
+    type: "MSQ",
+
+    question: String.raw`Which of the following statement(s) is/are true?`,
+
+    options: [
       String.raw`Newton's laws of motion and Maxwell's equations are both invariant under Lorentz transformations.`,
       String.raw`Newton's laws of motion and Maxwell's equations are both invariant under Galilean transformations.`,
       String.raw`Newton's laws of motion are invariant under Galilean transformations and Maxwell's equations are invariant under Lorentz transformations.`,
-      String.raw`Newton's laws of motion are invariant under Lorentz transformations and Maxwell's equations are invariant under Galilean transformations.`
+      String.raw`Newton's laws of motion are invariant under Lorentz transformations and Maxwell's equations are invariant under Galilean transformations.`,
     ],
-    "detailedSolution": String.raw`The principles of relativity define how physical laws transform between inertial reference frames moving at constant relative velocities.
+
+    detailedSolution: String.raw`The principles of relativity define how physical laws transform between inertial reference frames moving at constant relative velocities.
 *   **Classical Mechanics (Newton's Laws):** Newtonian mechanics was formulated under the assumption of absolute time and space. Consequently, Newton's laws of motion retain their identical mathematical form only when subjected to classical Galilean transformations. They fail to remain invariant under Lorentz transformations at high relativistic speeds.
 *   **Electromagnetism (Maxwell's Equations):** Maxwell's equations predict that the speed of light $c$ is a universal constant in a vacuum. A Galilean transformation allows velocities to simply add, meaning light would travel at different speeds in different frames, violating the core principle. To preserve the constancy of $c$ and their structural form across inertial frames, Maxwell's equations require the relativistic Lorentz transformations.
 Therefore, Newton's laws are invariant under Galilean transformations, and Maxwell's equations are invariant under Lorentz transformations[cite: 3, 4].`,
-    "correctAnswers": [2]
+
+    correctAnswers: [2],
   },
+
   {
-    "id": 36,
-    "year": 2019,
-    "subject": "Damped & Forced Oscillations",
-    "type": "MSQ",
-    "question": String.raw`For an underdamped harmonic oscillator with velocity $v(t)$,`,
-    "options": [
+    id: 36,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Damped & Forced Oscillations",
+    subjectId: "waves",
+    tags: ["Damped & Forced Oscillations","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`For an underdamped harmonic oscillator with velocity $v(t)$,`,
+
+    options: [
       String.raw`Rate of energy dissipation varies linearly with $v(t)$`,
       String.raw`Rate of energy dissipation varies as square of $v(t)$`,
       String.raw`The reduction in the oscillator frequency, compared to the undamped case, is independent of $v(t)$`,
-      String.raw`For weak damping, the amplitude decays exponentially to zero`
+      String.raw`For weak damping, the amplitude decays exponentially to zero`,
     ],
-    "detailedSolution": String.raw`Let's analyze the properties of an underdamped oscillator, governed by the damping force $F_d = -bv$, where $b$ is the damping constant.
+
+    detailedSolution: String.raw`Let's analyze the properties of an underdamped oscillator, governed by the damping force $F_d = -bv$, where $b$ is the damping constant.
 *   **(A) and (B):** The rate of energy dissipation (mechanical power lost) is the dot product of the damping force and velocity: $P = F_d \cdot v = (-bv) \cdot v = -bv^2$. Therefore, the rate of energy loss scales with the square of the instantaneous velocity, not linearly. Statement (B) is correct, and (A) is false.
 *   **(C):** The angular frequency of an underdamped oscillator is $\omega_d = \sqrt{\omega_0^2 - \gamma^2}$, where $\omega_0$ is the undamped natural frequency and $\gamma = \frac{b}{2m}$. This reduction depends entirely on system constants ($b, m, k$) and remains completely independent of the dynamic variable $v(t)$. Statement (C) is correct.
 *   **(D):** The generalized displacement function for an underdamped oscillator is $x(t) = A_0 e^{-\gamma t} \cos(\omega_d t + \phi)$. The enveloping amplitude term $A(t) = A_0 e^{-\gamma t}$ dictates an exponential decay towards zero over time. Statement (D) is correct[cite: 3, 4].`,
-    "correctAnswers": [1, 2, 3]
+
+    correctAnswers: [1,2,3],
   },
+
   {
-    "id": 37,
-    "year": 2019,
-    "subject": "Electrostatics",
-    "type": "MSQ",
-    "question": String.raw`Out of the following statements, choose the correct option(s) about a perfect conductor.`,
-    "options": [
+    id: 37,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MSQ",
+
+    question: String.raw`Out of the following statements, choose the correct option(s) about a perfect conductor.`,
+
+    options: [
       String.raw`The conductor has an equipotential surface`,
       String.raw`Net charge, if any, resides only on the surface of conductor`,
       String.raw`Electric field cannot exist inside the conductor`,
-      String.raw`Just outside the conductor, the electric field is always perpendicular to its surface`
+      String.raw`Just outside the conductor, the electric field is always perpendicular to its surface`,
     ],
-    "detailedSolution": String.raw`Under electrostatic equilibrium conditions, a perfect conductor possesses specific fundamental properties:
+
+    detailedSolution: String.raw`Under electrostatic equilibrium conditions, a perfect conductor possesses specific fundamental properties:
 1.  **Equipotential Volume/Surface:** Because there is no internal electric field pushing charges, no work is required to move a charge anywhere within or along the boundary of the conductor. The entire volume and its exterior surface share a single constant electrostatic potential. (Statement A is correct).
 2.  **Charge Location:** Free electrons will rapidly redistribute themselves to cancel out any internal electric fields. Mutual repulsion forces any excess net charge exclusively to the extreme exterior boundary surface of the material. (Statement B is correct).
 3.  **Internal Field:** If an electric field persisted inside, free electrons would continuously accelerate, contradicting the condition of static equilibrium. Thus, the macroscopic electric field inside a perfect conductor is identically zero. (Statement C is correct).
 4.  **External Field Orientation:** Any tangential component of the electric field at the exterior surface would cause surface charges to slide laterally. In static equilibrium, they do not move, meaning the tangential component must be zero. The external electric field vector must be strictly perpendicular (normal) to the boundary surface at every point. (Statement D is correct)[cite: 3, 4].`,
-    "correctAnswers": [0, 1, 2, 3]
+
+    correctAnswers: [0,1,2,3],
   },
+
   {
-    "id": 38,
-    "year": 2019,
-    "subject": "X-Ray Diffraction",
-    "type": "MSQ",
-    "question": String.raw`In the X-ray diffraction pattern recorded for a simple cubic solid (lattice parameter $a=1\text{ \AA}$) using X rays of wavelength $1\text{ \AA}$, the first order diffraction peak(s) would appear for the`,
-    "options": [
+    id: 38,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "X-Ray Diffraction",
+    subjectId: "solid",
+    tags: ["X-Ray Diffraction","Solid State & Electronics"],
+    type: "MSQ",
+
+    question: String.raw`In the X-ray diffraction pattern recorded for a simple cubic solid (lattice parameter $a=1\text{ \AA}$) using X rays of wavelength $1\text{ \AA}$, the first order diffraction peak(s) would appear for the`,
+
+    options: [
       String.raw`$(1 0 0)$ planes`,
       String.raw`$(1 1 2)$ planes`,
       String.raw`$(2 1 0)$ planes`,
-      String.raw`$(2 2 0)$ planes`
+      String.raw`$(2 2 0)$ planes`,
     ],
-    "detailedSolution": String.raw`Bragg's Law for X-ray diffraction relates the incidence angle to the interplanar spacing:
+
+    detailedSolution: String.raw`Bragg's Law for X-ray diffraction relates the incidence angle to the interplanar spacing:
 $$2d \sin\theta = n\lambda$$
 For a first-order diffraction peak, $n=1$. The given parameters are $a = 1\text{ \AA}$ and $\lambda = 1\text{ \AA}$.
 Because the sine function is bounded by unity ($\sin\theta \le 1$), there is a physical restriction on the spacing $d$:
@@ -15817,56 +18351,81 @@ Now, we sum the squared indices for each provided option to see which fulfill th
 *   (C) $(2 1 0)$: $2^2 + 1^2 + 0^2 = 5 > 4$. (Forbidden)
 *   (D) $(2 2 0)$: $2^2 + 2^2 + 0^2 = 8 > 4$. (Forbidden)
 Only the $(1 0 0)$ planes can produce a physical diffraction peak under these specific wavelength conditions[cite: 3, 4].`,
-    "correctAnswers": [0]
+
+    correctAnswers: [0],
   },
+
   {
-    "id": 39,
-    "year": 2019,
-    "subject": "Central Force Motion",
-    "type": "MSQ",
-    "question": String.raw`Consider a classical particle subjected to an attractive inverse-square force field. The total energy of the particle is $E$ and the eccentricity is $\epsilon$. The particle will follow a parabolic orbit if`,
-    "options": [
+    id: 39,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "MSQ",
+
+    question: String.raw`Consider a classical particle subjected to an attractive inverse-square force field. The total energy of the particle is $E$ and the eccentricity is $\epsilon$. The particle will follow a parabolic orbit if`,
+
+    options: [
       String.raw`$E>0$ and $\epsilon=1$`,
       String.raw`$E<0$ and $\epsilon<1$`,
       String.raw`$E=0$ and $\epsilon=1$`,
-      String.raw`$E<0$ and $\epsilon=1$`
+      String.raw`$E<0$ and $\epsilon=1$`,
     ],
-    "detailedSolution": String.raw`In the classical Kepler problem (a central attractive inverse-square force, like gravity), the orbital trajectory of the particle is a conic section uniquely determined by its total mechanical energy $E$ and orbital eccentricity $\epsilon$.
+
+    detailedSolution: String.raw`In the classical Kepler problem (a central attractive inverse-square force, like gravity), the orbital trajectory of the particle is a conic section uniquely determined by its total mechanical energy $E$ and orbital eccentricity $\epsilon$.
 The geometric shapes classify strictly as follows:
 1.  **Circular orbit:** Bound state, absolute minimum energy. $E < 0$ and exactly $\epsilon = 0$.
 2.  **Elliptical orbit:** Bound state. $E < 0$ and $0 < \epsilon < 1$.
 3.  **Parabolic orbit:** Escape threshold (marginally unbound). The particle possesses just enough kinetic energy to reach infinity with zero residual velocity. $E = 0$ and exactly $\epsilon = 1$.
 4.  **Hyperbolic orbit:** Fully unbound state. $E > 0$ and $\epsilon > 1$.
 Therefore, a parabolic trajectory definitively mandates $E=0$ and $\epsilon=1$[cite: 3, 4].`,
-    "correctAnswers": [2]
+
+    correctAnswers: [2],
   },
+
   {
-    "id": 40,
-    "year": 2019,
-    "subject": "Nuclear Physics",
-    "type": "MSQ",
-    "question": String.raw`An atomic nucleus X with half-life $T_X$ decays to a nucleus Y, which has half-life $T_Y$. The condition(s) for secular equilibrium is(are)`,
-    "options": [
+    id: 40,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MSQ",
+
+    question: String.raw`An atomic nucleus X with half-life $T_X$ decays to a nucleus Y, which has half-life $T_Y$. The condition(s) for secular equilibrium is(are)`,
+
+    options: [
       String.raw`$T_X \simeq T_Y$`,
       String.raw`$T_X < T_Y$`,
       String.raw`$T_X \ll T_Y$`,
-      String.raw`$T_X \gg T_Y$`
+      String.raw`$T_X \gg T_Y$`,
     ],
-    "detailedSolution": String.raw`In radioactive decay chains (e.g., Isotope X $\to$ Isotope Y $\to$ Isotope Z), an equilibrium state can occur between the parent nucleus X and the daughter nucleus Y based on relative half-lives.
+
+    detailedSolution: String.raw`In radioactive decay chains (e.g., Isotope X $\to$ Isotope Y $\to$ Isotope Z), an equilibrium state can occur between the parent nucleus X and the daughter nucleus Y based on relative half-lives.
 Secular equilibrium represents a specific limiting case where the quantity of the parent isotope remains essentially constant over many half-lives of the short-lived daughter isotope. This requires the parent nucleus to decay extremely slowly compared to the rapid decay of the daughter. 
 Mathematically, this condition is fulfilled only when the half-life of the parent X is significantly greater than the half-life of the daughter Y:
 $$T_X \gg T_Y$$
 Under this condition, the activities of parent and daughter equalize ($A_X \approx A_Y$)[cite: 3, 4].`,
-    "correctAnswers": [3]
+
+    correctAnswers: [3],
   },
+
   {
-    "id": 41,
-    "year": 2019,
-    "subject": "Nuclear Physics",
-    "type": "NAT",
-    "question": String.raw`In a typical human body, the amount of radioactive $^{40}\text{K}$ is $3.24\times 10^{-5}$ percent of its mass. The activity due to $^{40}\text{K}$ in a human body of mass $70\text{ kg}$ is _______ kBq. (Round off to 2 decimal places) (Half-life of $^{40}\text{K} = 3.942\times 10^{16}\text{ s}$, Avogadro's number $N_A = 6.022\times 10^{23}\text{ mol}^{-1}$)`,
-    "options": [],
-    "detailedSolution": String.raw`**1. Calculate the mass of $^{40}\text{K}$ in the body:**
+    id: 41,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`In a typical human body, the amount of radioactive $^{40}\text{K}$ is $3.24\times 10^{-5}$ percent of its mass. The activity due to $^{40}\text{K}$ in a human body of mass $70\text{ kg}$ is _______ kBq. (Round off to 2 decimal places) (Half-life of $^{40}\text{K} = 3.942\times 10^{16}\text{ s}$, Avogadro's number $N_A = 6.022\times 10^{23}\text{ mol}^{-1}$)`,
+
+    detailedSolution: String.raw`**1. Calculate the mass of $^{40}\text{K}$ in the body:**
 Total mass $M = 70\text{ kg}$. The percentage composition is given as $3.24 \times 10^{-5}\% = 3.24 \times 10^{-7}$ (decimal).
 $$m_{K40} = M \times (\text{fraction}) = 70\text{ kg} \times 3.24 \times 10^{-7} = 2.268 \times 10^{-5}\text{ kg} = 0.02268\text{ g}$$
 
@@ -15883,16 +18442,23 @@ Activity is the rate of decay: $A = \lambda N$.
 $$A = (1.75836 \times 10^{-17}\text{ s}^{-1}) \times (3.41447 \times 10^{20}\text{ atoms}) \approx 6003.8\text{ decays/second}$$
 Since $1\text{ Bq} = 1\text{ decay/second}$, the activity is $6003.8\text{ Bq}$.
 Converting to kilobecquerels (kBq) yields $6.00\text{ kBq}$[cite: 3, 4].`,
-    correctAnswer: 6.00
+
+    correctAnswer: 6,
   },
+
   {
-    "id": 42,
-    "year": 2019,
-    "subject": "Crystal Structure",
-    "type": "NAT",
-    "question": String.raw`Sodium (Na) exhibits body-centered-cubic (BCC) crystal structure with atomic radius $0.186\text{ nm}$. The lattice parameter of Na unit cell is _______ nm. (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`In a body-centered cubic (BCC) crystal lattice, the atoms touch each other strictly along the main body diagonal of the cube.
+    id: 42,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`Sodium (Na) exhibits body-centered-cubic (BCC) crystal structure with atomic radius $0.186\text{ nm}$. The lattice parameter of Na unit cell is _______ nm. (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`In a body-centered cubic (BCC) crystal lattice, the atoms touch each other strictly along the main body diagonal of the cube.
 Let the lattice parameter (cube edge length) be $a$, and the atomic radius be $r$.
 The geometric length of the full body diagonal passing through the center is $\sqrt{a^2 + a^2 + a^2} = \sqrt{3}a$.
 Along this diagonal, there are two corner atomic radii and one full central atomic diameter ($2r$), making the total covered length exactly equal to $4r$.
@@ -15902,16 +18468,23 @@ We must solve for the lattice parameter $a$, given $r = 0.186\text{ nm}$.
 $$a = \frac{4r}{\sqrt{3}} = \frac{4(0.186\text{ nm})}{1.73205}$$
 $$a = \frac{0.744}{1.73205} \approx 0.42955\text{ nm}$$
 Rounding to two decimal places provides a lattice parameter of $0.43\text{ nm}$[cite: 3, 4].`,
-    correctAnswer: 0.43
+
+    correctAnswer: 0.43,
   },
+
   {
-    "id": 43,
-    "year": 2019,
-    "subject": "Diffraction",
-    "type": "NAT",
-    "question": String.raw`Light of wavelength $680\text{ nm}$ is incident normally on a diffraction grating having $4000\text{ lines/cm}$. The diffraction angle (in degrees) corresponding to the third-order maximum is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The diffraction angle $\theta$ for a principal maximum produced by a grating is governed by the grating equation:
+    id: 43,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Diffraction",
+    subjectId: "waves",
+    tags: ["Diffraction","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Light of wavelength $680\text{ nm}$ is incident normally on a diffraction grating having $4000\text{ lines/cm}$. The diffraction angle (in degrees) corresponding to the third-order maximum is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`The diffraction angle $\theta$ for a principal maximum produced by a grating is governed by the grating equation:
 $$d \sin\theta = n\lambda$$
 where $d$ is the slit spacing, $n$ is the diffraction order, and $\lambda$ is the incident wavelength.
 **1. Calculate the slit spacing $d$:**
@@ -15924,16 +18497,23 @@ $$\sin\theta = \frac{2040}{2500} = 0.816$$
 Now, find the inverse sine to determine the angle in degrees:
 $$\theta = \arcsin(0.816) \approx 54.68^\circ$$
 Rounding to two decimal places, the angle is $54.68^\circ$[cite: 3, 4].`,
-    correctAnswer: 54.68
+
+    correctAnswer: 54.68,
   },
+
   {
-    "id": 44,
-    "year": 2019,
-    "subject": "Kinetic Theory of Gases",
-    "type": "NAT",
-    "question": String.raw`Two gases having molecular diameters $D_1$ and $D_2$, and mean free paths $\lambda_1$ and $\lambda_2$, respectively, are trapped separately in identical containers. If $D_2=2D_1$, then $\lambda_1/\lambda_2=$ _______ (Assume there is no change in other thermodynamic parameters)`,
-    "options": [],
-    "detailedSolution": String.raw`According to the kinetic theory of gases, the mean free path $\lambda$ of a gas molecule is fundamentally determined by the formula:
+    id: 44,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Kinetic Theory of Gases",
+    subjectId: "thermo",
+    tags: ["Kinetic Theory of Gases","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`Two gases having molecular diameters $D_1$ and $D_2$, and mean free paths $\lambda_1$ and $\lambda_2$, respectively, are trapped separately in identical containers. If $D_2=2D_1$, then $\lambda_1/\lambda_2=$ _______ (Assume there is no change in other thermodynamic parameters)`,
+
+    detailedSolution: String.raw`According to the kinetic theory of gases, the mean free path $\lambda$ of a gas molecule is fundamentally determined by the formula:
 $$\lambda = \frac{1}{\sqrt{2} \pi D^2 n}$$
 where $D$ is the collision diameter of the molecule, and $n$ is the number density (number of molecules per unit volume).
 The problem dictates identical containers (equal volumes $V$) and identical thermodynamic conditions (temperature $T$, pressure $P$), implying the number density $n$ is uniformly equivalent for both gases.
@@ -15944,16 +18524,23 @@ $$\frac{\lambda_1}{\lambda_2} = \frac{1/D_1^2}{1/D_2^2} = \left(\frac{D_2}{D_1}\
 Substitute the given relationship $D_2 = 2D_1$:
 $$\frac{\lambda_1}{\lambda_2} = \left(\frac{2D_1}{D_1}\right)^2 = 2^2 = 4$$
 The ratio evaluates perfectly to $4$[cite: 3, 4].`,
-    correctAnswer: 4
+
+    correctAnswer: 4,
   },
+
   {
-    "id": 45,
-    "year": 2019,
-    "subject": "Geometrical Optics",
-    "type": "NAT",
-    "question": String.raw`An object of $2\text{ cm}$ height is placed at a distance of $30\text{ cm}$ in front of a concave mirror with radius of curvature $40\text{ cm}$. The height of the image is _______ cm.`,
-    "options": [],
-    "detailedSolution": String.raw`**1. Apply Cartesian Sign Convention:**
+    id: 45,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`An object of $2\text{ cm}$ height is placed at a distance of $30\text{ cm}$ in front of a concave mirror with radius of curvature $40\text{ cm}$. The height of the image is _______ cm.`,
+
+    detailedSolution: String.raw`**1. Apply Cartesian Sign Convention:**
 *   Object height $h = 2\text{ cm}$ (upright, positive).
 *   Object distance $u = -30\text{ cm}$ (in front of mirror).
 *   Radius of curvature $R = -40\text{ cm}$ (center of curvature in front of concave mirror).
@@ -15972,17 +18559,25 @@ $$m = \frac{h'}{h} = -\frac{v}{u}$$
 $$h' = h \left( -\frac{v}{u} \right) = 2 \left( -\frac{-60}{-30} \right) = 2(-2) = -4\text{ cm}$$
 The negative sign signifies that the image is inverted. The question asks for "height", usually implying the physical magnitude.
 Magnitude of image height $|h'| = 4\text{ cm}$[cite: 3, 4].`,
-    correctAnswer: 4
+
+    correctAnswer: 4,
   },
+
   {
-    "id": 46,
-    "year": 2019,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "NAT",
-    "question": String.raw`The flux of the function $\vec{F}=(y^{2})\hat{x}+(3xy-z^{2})\hat{y}+(4yz)\hat{z}$ passing through the surface ABCD along $\hat{n}$ is _______ (Round off to 2 decimal places)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/46_19.png",
-    "options": [],
-    "detailedSolution": String.raw`The problem requests the flux $\Phi$ passing through the specifically highlighted square surface ABCD.
+    id: 46,
+    year: 2019,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`The flux of the function $\vec{F}=(y^{2})\hat{x}+(3xy-z^{2})\hat{y}+(4yz)\hat{z}$ passing through the surface ABCD along $\hat{n}$ is _______ (Round off to 2 decimal places)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/46_19.png",
+
+    detailedSolution: String.raw`The problem requests the flux $\Phi$ passing through the specifically highlighted square surface ABCD.
 **1. Geometric Identification of Surface ABCD:**
 Based on standard right-handed Cartesian coordinate systems mapping the origin $(0,0,0)$ to the back bottom-left corner of the unit cube:
 The shaded right-side face ABCD is located completely on the plane $y = 1$. The boundary coordinates on this planar face span $x \in [0, 1]$ and $z \in [0, 1]$.
@@ -16004,16 +18599,23 @@ Now, integrate the result with respect to $z$:
 $$\Phi = \int_{0}^{1} \left( \frac{3}{2} - z^2 \right) dz = \left[ \frac{3z}{2} - \frac{z^3}{3} \right]_{0}^{1} = \frac{3}{2} - \frac{1}{3} = 1.5 - 0.3333...$$
 $$\Phi = 1.1666...$$
 Rounding off to two decimal places, the flux evaluates to $1.17$[cite: 3, 4].`,
-    correctAnswer: 1.17
+
+    correctAnswer: 1.17,
   },
+
   {
-    "id": 47,
-    "year": 2019,
-    "subject": "Electrostatics",
-    "type": "NAT",
-    "question": String.raw`The electrostatic energy (in units of $\frac{1}{4\pi\epsilon_{0}}$ J) of a uniformly charged spherical shell of total charge $5\text{ C}$ and radius $4\text{ m}$ is _______ (Round off to 3 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The total electrostatic potential energy $U$ assembled in creating a uniformly charged thin spherical shell is computed mathematically as the work done to bring infinitesimal charge layers from infinity onto the surface. 
+    id: 47,
+    year: 2019,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`The electrostatic energy (in units of $\frac{1}{4\pi\epsilon_{0}}$ J) of a uniformly charged spherical shell of total charge $5\text{ C}$ and radius $4\text{ m}$ is _______ (Round off to 3 decimal places)`,
+
+    detailedSolution: String.raw`The total electrostatic potential energy $U$ assembled in creating a uniformly charged thin spherical shell is computed mathematically as the work done to bring infinitesimal charge layers from infinity onto the surface. 
 For a spherical shell of radius $R$ and total charge $q$, the internal electric field is strictly zero. All electrostatic energy resides precisely within the exterior field from $r=R$ to infinity. The formula is:
 $$U = \frac{1}{2} \int V dq = \frac{1}{2} V_{surface} \cdot q$$
 Since $V_{surface} = \frac{1}{4\pi\epsilon_0} \frac{q}{R}$:
@@ -16022,16 +18624,23 @@ The question requests the specific numerical magnitude of this energy expressed 
 Substitute the provided parameters $q = 5\text{ C}$ and $R = 4\text{ m}$:
 $$\text{Coefficient} = \frac{5^2}{2(4)} = \frac{25}{8} = 3.125$$
 The energy is $3.125$[cite: 3, 4].`,
-    correctAnswer: 3.125
+
+    correctAnswer: 3.125,
   },
+
   {
-    "id": 48,
-    "year": 2019,
-    "subject": "Electrostatics",
-    "type": "NAT",
-    "question": String.raw`An infinitely long very thin straight wire carries uniform line charge density $8\pi\times 10^{-2}\text{ C/m}$. The magnitude of electric displacement vector at a point located $20\text{ mm}$ away from the axis of the wire is _______ $\text{C/m}^2$.`,
-    "options": [],
-    "detailedSolution": String.raw`The macroscopic electric displacement vector $\vec{D}$ is fundamentally defined by the relation $\vec{D} = \epsilon_0 \vec{E} + \vec{P}$. In a perfect vacuum or free space where polarization $\vec{P}$ is zero, this drastically simplifies to $\vec{D} = \epsilon_0 \vec{E}$.
+    id: 48,
+    year: 2019,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`An infinitely long very thin straight wire carries uniform line charge density $8\pi\times 10^{-2}\text{ C/m}$. The magnitude of electric displacement vector at a point located $20\text{ mm}$ away from the axis of the wire is _______ $\text{C/m}^2$.`,
+
+    detailedSolution: String.raw`The macroscopic electric displacement vector $\vec{D}$ is fundamentally defined by the relation $\vec{D} = \epsilon_0 \vec{E} + \vec{P}$. In a perfect vacuum or free space where polarization $\vec{P}$ is zero, this drastically simplifies to $\vec{D} = \epsilon_0 \vec{E}$.
 Alternatively, Gauss's Law written specifically for the displacement field states that the flux of $\vec{D}$ out of any closed surface depends strictly upon the enclosed free charge $Q_{free}$:
 $$\oint \vec{D} \cdot d\vec{A} = Q_{free}$$
 Let's construct a hypothetical cylindrical Gaussian surface of length $L$ and radius $r$ centered coaxially along the infinitely long charged wire. Due to radial symmetry, the $\vec{D}$ field points uniformly outward and remains constant over the curved barrel.
@@ -16046,16 +18655,23 @@ $$D = \frac{8\pi \times 10^{-2}}{2\pi (20 \times 10^{-3})}$$
 Simplify the expression by canceling identical $\pi$ terms:
 $$D = \frac{4 \times 10^{-2}}{20 \times 10^{-3}} = \frac{0.04}{0.02} = 2\text{ C/m}^2$$
 The magnitude evaluates perfectly to $2$[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 49,
-    "year": 2019,
-    "subject": "Interference",
-    "type": "NAT",
-    "question": String.raw`The $7^{th}$ bright fringe in the Young's double slit experiment using a light of wavelength $550\text{ nm}$ shifts to the central maxima after covering the two slits with two sheets of different refractive indices $n_{1}$ and $n_{2}$ but having same thickness $6\text{ }\mu\text{m}$. The value of $|n_{1}-n_{2}|$ is _______ (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`In a Young's double-slit experiment, inserting transparent sheets introduces an extra optical path length. The total optical path difference $\Delta x$ at the physical center of the screen (where the geometric paths are equal) is strictly dictated by the differing optical paths through the two distinct sheets.
+    id: 49,
+    year: 2019,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`The $7^{th}$ bright fringe in the Young's double slit experiment using a light of wavelength $550\text{ nm}$ shifts to the central maxima after covering the two slits with two sheets of different refractive indices $n_{1}$ and $n_{2}$ but having same thickness $6\text{ }\mu\text{m}$. The value of $|n_{1}-n_{2}|$ is _______ (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`In a Young's double-slit experiment, inserting transparent sheets introduces an extra optical path length. The total optical path difference $\Delta x$ at the physical center of the screen (where the geometric paths are equal) is strictly dictated by the differing optical paths through the two distinct sheets.
 The optical path introduced by sheet 1 is $n_1 t$, while sheet 2 introduces $n_2 t$. The effective extra path difference created between the two slits is:
 $$\Delta x_{extra} = |n_1 t - n_2 t| = |n_1 - n_2| t$$
 The problem specifies that this newly introduced path difference causes a massive lateral shift of the entire interference pattern, perfectly displacing the original $7^{th}$ bright fringe directly onto the central axis location. A bright fringe of order $m$ corresponds to a path difference of $m\lambda$.
@@ -16067,17 +18683,25 @@ Substitute the given values: wavelength $\lambda = 550\text{ nm} = 550 \times 10
 $$|n_1 - n_2| = \frac{7 \times 550 \times 10^{-9}}{6 \times 10^{-6}} = \frac{3850 \times 10^{-9}}{6 \times 10^{-6}} = \frac{3.85 \times 10^{-6}}{6 \times 10^{-6}}$$
 $$|n_1 - n_2| = \frac{3.85}{6} \approx 0.64166...$$
 Rounding off properly to two decimal places, the value is $0.64$[cite: 3, 4].`,
-    correctAnswer: 0.64
+
+    correctAnswer: 0.64,
   },
+
   {
-    "id": 50,
-    "year": 2019,
-    "subject": "Operational Amplifiers",
-    "type": "NAT",
-    "question": String.raw`For the input voltage $V_i = (200\text{mV}) \sin(400t)$, the amplitude of the output voltage ($V_0$) of the given OPAMP circuit is _______ V. (Round off to 2 decimal places)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/50_19.png",
-    "options": [],
-    "detailedSolution": String.raw`The given electrical schematic depicts a cascaded sequence of three distinct ideal operational amplifier (OPAMP) stages.
+    id: 50,
+    year: 2019,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`For the input voltage $V_i = (200\text{mV}) \sin(400t)$, the amplitude of the output voltage ($V_0$) of the given OPAMP circuit is _______ V. (Round off to 2 decimal places)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/50_19.png",
+
+    detailedSolution: String.raw`The given electrical schematic depicts a cascaded sequence of three distinct ideal operational amplifier (OPAMP) stages.
 Let's analyze the voltage gain sequentially for each individual stage:
 **1. First Stage:**
 The sinusoidal input signal $V_i$ is fed directly into the non-inverting terminal (+). The inverting terminal (-) connects to ground via resistor $R_1 = 10\text{ k}\Omega$ and receives feedback via resistor $R_f = 35\text{ k}\Omega$. This geometry definitively identifies a non-inverting amplifier.
@@ -16103,17 +18727,25 @@ The original input amplitude is rigidly specified as $V_{in, amp} = 200\text{ mV
 The final output amplitude $V_{0, amp}$ is simply the input amplitude scaled by the absolute magnitude of total gain:
 $$V_{0, amp} = |A_{total}| \times V_{in, amp} = 55.125 \times 0.2\text{ V} = 11.025\text{ V}$$
 Rounding appropriately to two decimal places yields $11.03\text{ V}$[cite: 3, 4].`,
-    correctAnswer: 11.03
+
+    correctAnswer: 11.03,
   },
+
   {
-    "id": 51,
-    "year": 2019,
-    "subject": "Bipolar Junction Transistors",
-    "type": "NAT",
-    "question": String.raw`The value of emitter current in the given circuit is _______ $\mu\text{A}$. (Round off to 1 decimal place)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/51_19.png",
-    "options": [],
-    "detailedSolution": String.raw`Let's systematically solve the DC bias state of the given BJT transistor circuit.
+    id: 51,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`The value of emitter current in the given circuit is _______ $\mu\text{A}$. (Round off to 1 decimal place)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/51_19.png",
+
+    detailedSolution: String.raw`Let's systematically solve the DC bias state of the given BJT transistor circuit.
 **1. Establish Variables and Given Parameters:**
 *   Supply voltage $V_{CC} = 10\text{ V}$.
 *   Base bias resistor $R_B = 2\text{ M}\Omega = 2000\text{ k}\Omega$.
@@ -16141,16 +18773,23 @@ $$I_E = \frac{979.7}{2202}\text{ mA} \approx 0.44491\text{ mA}$$
 Convert the result to microamperes ($\mu\text{A}$):
 $$I_E \approx 444.91\text{ }\mu\text{A}$$
 Rounding effectively to a single decimal place gives $444.9\text{ }\mu\text{A}$[cite: 3, 4].`,
-    correctAnswer: 444.9
+
+    correctAnswer: 444.9,
   },
+
   {
-    "id": 52,
-    "year": 2019,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "NAT",
-    "question": String.raw`The value of $\left|\int_{0}^{3+i}(\bar{z})^{2}dz\right|^{2}$ along the line $3y=x$, where $z=x+iy$ is _______ (Round off to 1 decimal place)`,
-    "options": [],
-    "detailedSolution": String.raw`We need to evaluate a complex contour integral along a specified straight line.
+    id: 52,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`The value of $\left|\int_{0}^{3+i}(\bar{z})^{2}dz\right|^{2}$ along the line $3y=x$, where $z=x+iy$ is _______ (Round off to 1 decimal place)`,
+
+    detailedSolution: String.raw`We need to evaluate a complex contour integral along a specified straight line.
 **1. Parameterize the Integration Path:**
 The path is a straight line defined geometrically by $x = 3y$. The start point is $(x,y) = (0,0)$ corresponding to $z=0$, and the end point is $(3,1)$ corresponding to $z = 3+i$.
 Using $y$ as the independent variable parameter, the complex variable $z$ becomes:
@@ -16177,16 +18816,23 @@ The mathematical request is to find $|I|^2$:
 $$|I|^2 = \left| 10 - \frac{10}{3}i \right|^2 = (10)^2 + \left(-\frac{10}{3}\right)^2 = 100 + \frac{100}{9}$$
 $$|I|^2 = \frac{900 + 100}{9} = \frac{1000}{9} \approx 111.111...$$
 Rounding off cleanly to one decimal place yields $111.1$[cite: 3, 4].`,
-    correctAnswer: 111.1
+
+    correctAnswer: 111.1,
   },
+
   {
-    "id": 53,
-    "year": 2019,
-    "subject": "Atomic Physics",
-    "type": "NAT",
-    "question": String.raw`If the wavelength of $K\alpha_2$ X-ray line of an element is $1.544\text{ \AA}$, then the atomic number ($Z$) of the element is _______ (Rydberg constant $R=1.097\times 10^7\text{ m}^{-1}$ and velocity of light $c=3\times 10^8\text{ m/s}$)`,
-    "options": [],
-    "detailedSolution": String.raw`The characteristic wavelength of X-ray spectral lines emitted by multi-electron atoms is rigorously determined using Moseley's empirical law, which modifies the standard Rydberg formula by incorporating a screening constant $\sigma$:
+    id: 53,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Atomic Physics",
+    subjectId: "modern",
+    tags: ["Atomic Physics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`If the wavelength of $K\alpha_2$ X-ray line of an element is $1.544\text{ \AA}$, then the atomic number ($Z$) of the element is _______ (Rydberg constant $R=1.097\times 10^7\text{ m}^{-1}$ and velocity of light $c=3\times 10^8\text{ m/s}$)`,
+
+    detailedSolution: String.raw`The characteristic wavelength of X-ray spectral lines emitted by multi-electron atoms is rigorously determined using Moseley's empirical law, which modifies the standard Rydberg formula by incorporating a screening constant $\sigma$:
 $$\frac{1}{\lambda} = R (Z - \sigma)^2 \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)$$
 For any $K\alpha$ transition, an electron plummets from the $L$ shell ($n_2 = 2$) securely down to the $K$ shell ($n_1 = 1$). The empirically determined screening constant for $K$ series lines is approximately $\sigma = 1$.
 $$\frac{1}{\lambda} = R (Z - 1)^2 \left( \frac{1}{1^2} - \frac{1}{2^2} \right) = R (Z - 1)^2 \left( 1 - \frac{1}{4} \right) = \frac{3}{4} R (Z - 1)^2$$
@@ -16199,16 +18845,23 @@ Take the principal square root:
 $$Z - 1 = \sqrt{787.2} \approx 28.057$$
 $$Z = 29.057$$
 Because atomic numbers identify fundamental elements and must be strict integers, the closest physical element is Copper, giving exactly $Z = 29$[cite: 3, 4].`,
-    correctAnswer: 29
+
+    correctAnswer: 29,
   },
+
   {
-    "id": 54,
-    "year": 2019,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`A proton is confined within a nucleus of size $10^{-13}\text{ cm}$. The uncertainty in its velocity is _______ $\times 10^8\text{ m/s}$. (Round off to 2 decimal places) (Planck's constant $h=6.626\times 10^{-34}\text{ J s}$ and proton mass $m_p=1.672\times 10^{-27}\text{ kg}$)`,
-    "options": [],
-    "detailedSolution": String.raw`The rigorous Heisenberg Uncertainty Principle postulates an intrinsic fundamental limit to the precision with which certain pairs of physical properties can be known simultaneously. For position and momentum, the strict formulation states:
+    id: 54,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`A proton is confined within a nucleus of size $10^{-13}\text{ cm}$. The uncertainty in its velocity is _______ $\times 10^8\text{ m/s}$. (Round off to 2 decimal places) (Planck's constant $h=6.626\times 10^{-34}\text{ J s}$ and proton mass $m_p=1.672\times 10^{-27}\text{ kg}$)`,
+
+    detailedSolution: String.raw`The rigorous Heisenberg Uncertainty Principle postulates an intrinsic fundamental limit to the precision with which certain pairs of physical properties can be known simultaneously. For position and momentum, the strict formulation states:
 $$\Delta x \Delta p \ge \frac{\hbar}{2} = \frac{h}{4\pi}$$
 Given the confinement region dimension serves directly as the spatial uncertainty:
 $$\Delta x = 10^{-13}\text{ cm} = 10^{-15}\text{ m}$$
@@ -16220,16 +18873,23 @@ $$\Delta v \ge \frac{6.626 \times 10^{-34}}{4\pi \times (1.672 \times 10^{-27}) 
 $$\Delta v \ge \frac{6.626 \times 10^{-34}}{21.01 \times 10^{-42}} \approx 0.315 \times 10^8\text{ m/s}$$
 *(Note: Various textbooks alternatively utilize rougher estimate forms like $\Delta x \Delta p \ge \hbar$ or even $\Delta x \Delta p \ge h$, calculating valid acceptable upper boundaries anywhere from $0.3$ to $3.97 \times 10^8\text{ m/s}$. Using the exact canonical limit formulation yields $0.32$.)*
 The velocity uncertainty coefficient evaluates strictly to $0.32$[cite: 3, 4].`,
-    correctAnswer: 0.32
+
+    correctAnswer: 0.32,
   },
+
   {
-    "id": 55,
-    "year": 2019,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`Given the wave function of a particle $\psi(x)=\sqrt{\frac{2}{L}}\sin\left(\frac{\pi}{L}x\right)$ for $0<x<L$ and 0 elsewhere, the probability of finding the particle between $x=0$ and $x=L/2$ is _______ (Round off to 1 decimal place)`,
-    "options": [],
-    "detailedSolution": String.raw`The statistical probability $P$ of a quantum particle being observationally localized in a defined spatial interval $[a, b]$ is rigorously determined by integrating the probability density function $|\psi(x)|^2$ over that specific region:
+    id: 55,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`Given the wave function of a particle $\psi(x)=\sqrt{\frac{2}{L}}\sin\left(\frac{\pi}{L}x\right)$ for $0<x<L$ and 0 elsewhere, the probability of finding the particle between $x=0$ and $x=L/2$ is _______ (Round off to 1 decimal place)`,
+
+    detailedSolution: String.raw`The statistical probability $P$ of a quantum particle being observationally localized in a defined spatial interval $[a, b]$ is rigorously determined by integrating the probability density function $|\psi(x)|^2$ over that specific region:
 $$P = \int_{a}^{b} |\psi(x)|^2 dx$$
 The problem specifies the domain interval $[0, L/2]$. 
 $$P = \int_{0}^{L/2} \left[ \sqrt{\frac{2}{L}} \sin\left(\frac{\pi}{L}x\right) \right]^2 dx = \frac{2}{L} \int_{0}^{L/2} \sin^2\left(\frac{\pi}{L}x\right) dx$$
@@ -16243,17 +18903,25 @@ Since $\sin(\pi) = 0$, the mathematical term vanishes completely:
 $$P = \frac{1}{L} \left[ \frac{L}{2} - 0 \right] = \frac{1}{2} = 0.5$$
 This numerical result logically aligns with basic spatial symmetry assumptions, as the ground state wave function is perfectly symmetric evenly about the midpoint $L/2$.
 The precise probability is exactly $0.5$[cite: 3, 4].`,
-    correctAnswer: 0.5
+
+    correctAnswer: 0.5,
   },
+
   {
-    "id": 56,
-    "year": 2019,
-    "subject": "p-n Junction & Diodes",
-    "type": "NAT",
-    "question": String.raw`The Zener current $I_{Z}$ for the given circuit is _______ mA.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/56_19.png",
-    "options": [],
-    "detailedSolution": String.raw`To evaluate a Zener diode voltage regulator circuit properly, first hypothetically assume the Zener diode acts as an open circuit (OFF state) and compute the resultant unregulated voltage $V_{open}$ strictly across the load terminals.
+    id: 56,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`The Zener current $I_{Z}$ for the given circuit is _______ mA.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/56_19.png",
+
+    detailedSolution: String.raw`To evaluate a Zener diode voltage regulator circuit properly, first hypothetically assume the Zener diode acts as an open circuit (OFF state) and compute the resultant unregulated voltage $V_{open}$ strictly across the load terminals.
 $$V_{open} = V_{in} \times \left( \frac{R_L}{R + R_L} \right) = 40\text{ V} \times \left( \frac{20\text{ k}\Omega}{10\text{ k}\Omega + 20\text{ k}\Omega} \right) = 40 \times \frac{20}{30} = 26.67\text{ V}$$
 Because $V_{open} = 26.67\text{ V}$ inherently exceeds the diode's reverse breakdown parameter $V_Z = 20\text{ V}$, the Zener diode forcefully activates (turns ON) and clamps the output node rigidly to $20\text{ V}$.
 We now analyze the circuit node using Kirchhoff's Current Law.
@@ -16266,16 +18934,23 @@ We now analyze the circuit node using Kirchhoff's Current Law.
     The total current diverges into the two parallel branches.
     $$I_Z = I_{total} - I_L = 2\text{ mA} - 1\text{ mA} = 1\text{ mA}$$
 The final Zener current evaluates precisely to $1\text{ mA}$[cite: 3, 4].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 57,
-    "year": 2019,
-    "subject": "Central Force Motion",
-    "type": "NAT",
-    "question": String.raw`If the diameter of the Earth is increased by 4% without changing the mass, then the length of the day is _______ hours. (Take the length of the day before the increment as 24 hours. Assume the Earth to be a sphere with uniform density.) (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`The massive planetary body rotates devoid of any external driving torques, ensuring its total angular momentum $L$ stays strictly conserved throughout the structural change:
+    id: 57,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`If the diameter of the Earth is increased by 4% without changing the mass, then the length of the day is _______ hours. (Take the length of the day before the increment as 24 hours. Assume the Earth to be a sphere with uniform density.) (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`The massive planetary body rotates devoid of any external driving torques, ensuring its total angular momentum $L$ stays strictly conserved throughout the structural change:
 $$L_{initial} = L_{final} \implies I_{old} \omega_{old} = I_{new} \omega_{new}$$
 The structural moment of inertia for a uniform solid sphere relates to its radius as $I = \frac{2}{5}MR^2$.
 Given an identical mass $M$, the inertia scales precisely with the square of the radius. If diameter dilates by 4%, the radius identically increases by 4%, producing $R_{new} = 1.04 R_{old}$.
@@ -16286,16 +18961,23 @@ $$\frac{R_{old}^2}{T_{old}} = \frac{R_{new}^2}{T_{new}}$$
 Rearrange to solve explicitly for the new temporal length of the day $T_{new}$:
 $$T_{new} = T_{old} \times \left( \frac{R_{new}}{R_{old}} \right)^2 = 24 \times (1.04)^2 = 24 \times 1.0816 = 25.9584\text{ hours}$$
 Rounding cleanly to two decimal places, the new temporal length is $25.96\text{ hours}$[cite: 3, 4].`,
-    correctAnswer: 25.96
+
+    correctAnswer: 25.96,
   },
+
   {
-    "id": 58,
-    "year": 2019,
-    "subject": "Thermodynamic Processes",
-    "type": "NAT",
-    "question": String.raw`A di-atomic gas undergoes adiabatic expansion against the piston of a cylinder. As a result, the temperature of the gas drops from $1150\text{ K}$ to $400\text{ K}$. The number of moles of the gas required to obtain $2300\text{ J}$ of work from the expansion is _______ (The gas constant $R=8.314\text{ J mol}^{-1}\text{K}^{-1}$.) (Round off to 2 decimal places)`,
-    "options": [],
-    "detailedSolution": String.raw`For an actively expanding gas undergoing an adiabatic process, physical heat transfer equals zero ($Q = 0$). Conforming to the First Law of Thermodynamics, mechanical work $W$ performed by the gas corresponds directly to a reduction in its internal energy $U$:
+    id: 58,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`A di-atomic gas undergoes adiabatic expansion against the piston of a cylinder. As a result, the temperature of the gas drops from $1150\text{ K}$ to $400\text{ K}$. The number of moles of the gas required to obtain $2300\text{ J}$ of work from the expansion is _______ (The gas constant $R=8.314\text{ J mol}^{-1}\text{K}^{-1}$.) (Round off to 2 decimal places)`,
+
+    detailedSolution: String.raw`For an actively expanding gas undergoing an adiabatic process, physical heat transfer equals zero ($Q = 0$). Conforming to the First Law of Thermodynamics, mechanical work $W$ performed by the gas corresponds directly to a reduction in its internal energy $U$:
 $$W = -\Delta U = -(n C_V \Delta T) = n C_V (T_{initial} - T_{final})$$
 For an idealized diatomic gas (with rigid rotational modes active but vibrational modes typically frozen out), the specific molar heat capacity operates at constant volume $C_V = \frac{5}{2}R$.
 Substitute this specific definition into the energetic work equation:
@@ -16306,16 +18988,23 @@ Insert the specific numeric values provided: $W = 2300\text{ J}$, $R = 8.314\tex
 $$n = \frac{2 \times 2300}{5 \times 8.314 \times (1150 - 400)} = \frac{4600}{41.57 \times 750}$$
 $$n = \frac{4600}{31177.5} \approx 0.14754\text{ moles}$$
 Rounding smoothly to two decimal places determines $0.15$ moles are strictly required[cite: 3, 4].`,
-    correctAnswer: 0.15
+
+    correctAnswer: 0.15,
   },
+
   {
-    "id": 59,
-    "year": 2019,
-    "subject": "Digital Electronics",
-    "type": "NAT",
-    "question": String.raw`The decimal equivalent of the binary number $110.101$ is _______`,
-    "options": [],
-    "detailedSolution": String.raw`Converting a base-2 binary floating-point number into a base-10 decimal format requires expanding the digits sequentially by successive powers of two.
+    id: 59,
+    year: 2019,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Digital Electronics",
+    subjectId: "solid",
+    tags: ["Digital Electronics","Solid State & Electronics","Number Systems"],
+    type: "NAT",
+
+    question: String.raw`The decimal equivalent of the binary number $110.101$ is _______`,
+
+    detailedSolution: String.raw`Converting a base-2 binary floating-point number into a base-10 decimal format requires expanding the digits sequentially by successive powers of two.
 The explicit binary number is evaluated as:
 $$110.101_2 = (1 \times 2^2) + (1 \times 2^1) + (0 \times 2^0) + (1 \times 2^{-1}) + (0 \times 2^{-2}) + (1 \times 2^{-3})$$
 Determine the fixed numerical values for each corresponding positional slot:
@@ -16324,17 +19013,25 @@ Determine the fixed numerical values for each corresponding positional slot:
 Summing these structural components together outputs the final decimal value:
 $$\text{Decimal equivalent} = 6 + 0.625 = 6.625$$
 The equivalent decimal format correctly maps to $6.625$[cite: 3, 4].`,
-    correctAnswer: 6.625
+
+    correctAnswer: 6.625,
   },
+
   {
-    "id": 60,
-    "year": 2019,
-    "subject": "Magnetostatics",
-    "type": "NAT",
-    "question": String.raw`A surface current $\vec{K}=100\hat{x}\text{ A/m}$ flows on the surface $z=0$ which separates two media with magnetic permeabilities $\mu_1$ and $\mu_2$ as shown in the figure. If the magnetic field in the region 1 is $\vec{B}_1=4\hat{x}-6\hat{y}+2\hat{z}\text{ mT}$, then the magnitude of the normal component of $\vec{B}_2$ will be _______ mT.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/60_19.png",
-    "options": [],
-    "detailedSolution": String.raw`The core physical principle governing magnetic fields traversing differing media boundary interfaces establishes two strict mathematical continuity conditions.
+    id: 60,
+    year: 2019,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`A surface current $\vec{K}=100\hat{x}\text{ A/m}$ flows on the surface $z=0$ which separates two media with magnetic permeabilities $\mu_1$ and $\mu_2$ as shown in the figure. If the magnetic field in the region 1 is $\vec{B}_1=4\hat{x}-6\hat{y}+2\hat{z}\text{ mT}$, then the magnitude of the normal component of $\vec{B}_2$ will be _______ mT.`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2019/60_19.png",
+
+    detailedSolution: String.raw`The core physical principle governing magnetic fields traversing differing media boundary interfaces establishes two strict mathematical continuity conditions.
 1.  **Normal Component:** By Gauss's Law for magnetism ($\vec{\nabla} \cdot \vec{B} = 0$), the physical flux entering an interface must exactly match the flux exiting it. Thus, the normal (perpendicular) vectorial component of a magnetic field $\vec{B}$ is absolutely strictly continuous directly across any physical boundary, entirely regardless of external surface currents present. Mathematically: $B_{1n} = B_{2n}$.
 2.  **Tangential Component:** The tangential parallel components uniquely experience discontinuous jumps proportional explicitly to any free surface current vectors $\vec{K}$ running physically along the border.
 The boundary plane physically locates at $z=0$, rendering the $z$-axis mathematically identical to the structural normal. Therefore, the discrete normal component maps perfectly to the $z$-component of the magnetic field vectors.
@@ -16342,21 +19039,30 @@ From the defined input vector $\vec{B}_1 = 4\hat{x} - 6\hat{y} + 2\hat{z}\text{ 
 Because the normal physical component forcibly bridges the boundary gap without distortion, $B_{2z}$ identically equals $B_{1z}$.
 $$|B_{2n}| = |B_{2z}| = 2\text{ mT}$$
 The resultant magnitude is definitively 2[cite: 3, 4].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 1,
-    "year": 2018,
-    "subject": "Complex Numbers",
-    "type": "MCQ",
-    "question": String.raw`Let $f(x,y)=x^{3}-2y^{3}$. The curve along which $\nabla^{2}f=0$ is`,
-    "options": [
+    id: 1,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Complex Numbers",
+    subjectId: "math",
+    tags: ["Complex Numbers","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Let $f(x,y)=x^{3}-2y^{3}$. The curve along which $\nabla^{2}f=0$ is`,
+
+    options: [
       String.raw`$x=\sqrt{2}y$`,
       String.raw`$x=2y$`,
       String.raw`$x=\sqrt{6}y$`,
-      String.raw`$x=-y/2$`
+      String.raw`$x=-y/2$`,
     ],
-    "detailedSolution": String.raw`The Laplacian operator in two dimensions is defined as $\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2}$.
+
+    detailedSolution: String.raw`The Laplacian operator in two dimensions is defined as $\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2}$.
 First, we find the partial derivatives of the given function $f(x,y) = x^3 - 2y^3$:
 1.  First derivatives:
     $$\frac{\partial f}{\partial x} = 3x^2$$
@@ -16369,21 +19075,30 @@ $$\nabla^2 f = 6x - 12y = 0$$
 Solving for $x$:
 $$6x = 12y \implies x = 2y$$
 The curve is a straight line defined by $x = 2y$. This corresponds to option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 2,
-    "year": 2018,
-    "subject": "Vector Algebra & Vector Calculus",
-    "type": "MCQ",
-    "question": String.raw`A curve is given by $\vec{r}(t)=t\hat{i}+t^{2}\hat{j}+t^{3}\hat{k}$. The unit vector of the tangent to the curve at $t=1$ is`,
-    "options": [
+    id: 2,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Vector Algebra & Vector Calculus",
+    subjectId: "math",
+    tags: ["Vector Algebra & Vector Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`A curve is given by $\vec{r}(t)=t\hat{i}+t^{2}\hat{j}+t^{3}\hat{k}$. The unit vector of the tangent to the curve at $t=1$ is`,
+
+    options: [
       String.raw`$\frac{\hat{i}+\hat{j}+\hat{k}}{\sqrt{3}}$`,
       String.raw`$\frac{\hat{i}+\hat{j}+2\hat{k}}{\sqrt{6}}$`,
       String.raw`$\frac{\hat{i}+2\hat{j}+2\hat{k}}{3}$`,
-      String.raw`$\frac{\hat{i}+2\hat{j}+3\hat{k}}{\sqrt{14}}$`
+      String.raw`$\frac{\hat{i}+2\hat{j}+3\hat{k}}{\sqrt{14}}$`,
     ],
-    "detailedSolution": String.raw`The tangent vector to a parametric curve $\vec{r}(t)$ is given by its derivative with respect to the parameter $t$:
+
+    detailedSolution: String.raw`The tangent vector to a parametric curve $\vec{r}(t)$ is given by its derivative with respect to the parameter $t$:
 $$\vec{T}(t) = \frac{d\vec{r}}{dt} = \frac{d}{dt} (t\hat{i} + t^2\hat{j} + t^3\hat{k})$$
 $$\vec{T}(t) = 1\hat{i} + 2t\hat{j} + 3t^2\hat{k}$$
 We need to evaluate this tangent vector at $t = 1$:
@@ -16393,21 +19108,30 @@ $$|\vec{T}(1)| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$$
 Therefore, the unit tangent vector is:
 $$\hat{u} = \frac{\vec{T}(1)}{|\vec{T}(1)|} = \frac{\hat{i} + 2\hat{j} + 3\hat{k}}{\sqrt{14}}$$
 This matches option (D)[cite: 5, 6].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 3,
-    "year": 2018,
-    "subject": "Central Force Motion",
-    "type": "MCQ",
-    "question": String.raw`There are three planets in circular orbits around a star at distances $a$, $4a$ and $9a$, respectively. At time $t=t_{0}$, the star and the three planets are in a straight line. The period of revolution of the closest planet is $T$. How long after $t_{0}$ will they again be in the same straight line?`,
-    "options": [
+    id: 3,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`There are three planets in circular orbits around a star at distances $a$, $4a$ and $9a$, respectively. At time $t=t_{0}$, the star and the three planets are in a straight line. The period of revolution of the closest planet is $T$. How long after $t_{0}$ will they again be in the same straight line?`,
+
+    options: [
       String.raw`$8T$`,
       String.raw`$27T$`,
       String.raw`$216T$`,
-      String.raw`$512T$`
+      String.raw`$512T$`,
     ],
-    "detailedSolution": String.raw`According to Kepler's Third Law, the square of the orbital period of a planet is directly proportional to the cube of the radius of its circular orbit ($T^2 \propto R^3$). This implies $T \propto R^{3/2}$.
+
+    detailedSolution: String.raw`According to Kepler's Third Law, the square of the orbital period of a planet is directly proportional to the cube of the radius of its circular orbit ($T^2 \propto R^3$). This implies $T \propto R^{3/2}$.
 Let the periods of the three planets be $T_1$, $T_2$, and $T_3$, corresponding to radii $R_1=a$, $R_2=4a$, and $R_3=9a$.
 Given that the closest planet has a period $T_1 = T$:
 $$T_2 = T_1 \left(\frac{R_2}{R_1}\right)^{3/2} = T \left(\frac{4a}{a}\right)^{3/2} = T(4)^{3/2} = 8T$$
@@ -16417,21 +19141,30 @@ $$\text{Time required} = \text{LCM}(T, 8T, 27T)$$
 Since $1$, $8$, and $27$ are mutually coprime numbers (they share no common factors other than $1$), their LCM is simply their product:
 $$\text{LCM}(1, 8, 27) = 1 \times 8 \times 27 = 216$$
 Thus, they will align again after a time of $216T$. This matches option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 4,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`A current $I$ is flowing through the sides of an equilateral triangle of side $a$. The magnitude of the magnetic field at the centroid of the triangle is`,
-    "options": [
+    id: 4,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`A current $I$ is flowing through the sides of an equilateral triangle of side $a$. The magnitude of the magnetic field at the centroid of the triangle is`,
+
+    options: [
       String.raw`$\frac{9\mu_{0}I}{2\pi a}$`,
       String.raw`$\frac{3\mu_{0}I}{2\pi a}$`,
       String.raw`$\frac{\mu_{0}I}{\pi a}$`,
-      String.raw`$\frac{3\mu_{0}I}{\pi a}$`
+      String.raw`$\frac{3\mu_{0}I}{\pi a}$`,
     ],
-    "detailedSolution": String.raw`The magnetic field at a perpendicular distance $r$ from a finite straight wire carrying current $I$ is given by the Biot-Savart law derivation:
+
+    detailedSolution: String.raw`The magnetic field at a perpendicular distance $r$ from a finite straight wire carrying current $I$ is given by the Biot-Savart law derivation:
 $$B = \frac{\mu_0 I}{4\pi r} (\sin\theta_1 + \sin\theta_2)$$
 where $\theta_1$ and $\theta_2$ are the angles subtended by the ends of the wire at the observation point.
 For an equilateral triangle of side $a$, the centroid is equidistant from all three sides. The perpendicular distance $r$ from the centroid to any side is:
@@ -16443,22 +19176,32 @@ $$B_1 = \frac{\mu_0 I \cdot 2\sqrt{3}}{4\pi a} \left(\frac{\sqrt{3}}{2} + \frac{
 Since the current flows in a continuous loop, the magnetic fields produced by all three sides point in the same direction (either all into or all out of the page). Thus, the total magnetic field is the sum of the fields from the three sides:
 $$B_{total} = 3 \times B_1 = 3 \times \left(\frac{3\mu_0 I}{2\pi a}\right) = \frac{9\mu_0 I}{2\pi a}$$
 This matches option (A)[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 5,
-    "year": 2018,
-    "subject": "Sound Waves",
-    "type": "MCQ",
-    "question": String.raw`Two vehicles A and B are approaching an observer O at rest with equal speed as shown in the figure. Both vehicles have identical sirens blowing at a frequency $f_{s}$. The observer hears these sirens at frequency $f_{A}$ and $f_{B}$, respectively from the two vehicles. Which one of the following is correct?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/5_18.png",
-    "options": [
+    id: 5,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Sound Waves",
+    subjectId: "waves",
+    tags: ["Sound Waves","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Two vehicles A and B are approaching an observer O at rest with equal speed as shown in the figure. Both vehicles have identical sirens blowing at a frequency $f_{s}$. The observer hears these sirens at frequency $f_{A}$ and $f_{B}$, respectively from the two vehicles. Which one of the following is correct?`,
+
+    options: [
       String.raw`$f_{A}=f_{B}<f_{s}$`,
       String.raw`$f_{A}=f_{B}>f_{s}$`,
       String.raw`$f_{A}>f_{B}>f_{s}$`,
-      String.raw`$f_{A}<f_{B}<f_{s}$`
+      String.raw`$f_{A}<f_{B}<f_{s}$`,
     ],
-    "detailedSolution": String.raw`According to the Doppler effect, when a source of sound approaches a stationary observer, the observed frequency $f$ is higher than the source frequency $f_s$:
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/5_18.png",
+
+    detailedSolution: String.raw`According to the Doppler effect, when a source of sound approaches a stationary observer, the observed frequency $f$ is higher than the source frequency $f_s$:
 $$f = f_s \left( \frac{v}{v - v_{source}} \right)$$
 where $v$ is the speed of sound and $v_{source}$ is the component of the source's velocity directed radially towards the observer.
 Based on the referenced diagram, both vehicles A and B are moving such that their velocity vectors are pointed directly towards the observer O at the origin.
@@ -16467,21 +19210,30 @@ Therefore, the Doppler shift for both will be identically positive:
 $$f_A = f_s \left( \frac{v}{v - v_A} \right)$$
 $$f_B = f_s \left( \frac{v}{v - v_B} \right)$$
 Since $v_A = v_B$, it follows that $f_A = f_B$. Since they are approaching, the observed frequency is strictly greater than the source frequency, so $f_A = f_B > f_s$. This matches option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 6,
-    "year": 2018,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`Three infinite plane sheets carrying uniform charge densities $-\sigma$, $2\sigma$, $3\sigma$ are placed parallel to the $x-z$ plane at $y = a$, $3a$, $4a$, respectively. The electric field at the point $(0, 2a, 0)$ is`,
-    "options": [
+    id: 6,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Three infinite plane sheets carrying uniform charge densities $-\sigma$, $2\sigma$, $3\sigma$ are placed parallel to the $x-z$ plane at $y = a$, $3a$, $4a$, respectively. The electric field at the point $(0, 2a, 0)$ is`,
+
+    options: [
       String.raw`$\frac{4\sigma}{\epsilon_{0}}\hat{j}$`,
       String.raw`$-\frac{3\sigma}{\epsilon_{0}}\hat{j}$`,
       String.raw`$-\frac{2\sigma}{\epsilon_{0}}\hat{j}$`,
-      String.raw`$\frac{\sigma}{\epsilon_{0}}\hat{j}$`
+      String.raw`$\frac{\sigma}{\epsilon_{0}}\hat{j}$`,
     ],
-    "detailedSolution": String.raw`The electric field produced by an infinite plane sheet with uniform charge density $\sigma$ is constant and given by $\vec{E} = \frac{\sigma}{2\epsilon_0} \hat{n}$, where $\hat{n}$ is the unit normal vector pointing away from a positive sheet (and towards a negative sheet).
+
+    detailedSolution: String.raw`The electric field produced by an infinite plane sheet with uniform charge density $\sigma$ is constant and given by $\vec{E} = \frac{\sigma}{2\epsilon_0} \hat{n}$, where $\hat{n}$ is the unit normal vector pointing away from a positive sheet (and towards a negative sheet).
 We must calculate the total electric field at the point $P(0, 2a, 0)$ using the superposition principle.
 1.  **Field from Sheet 1 ($-\sigma$ at $y = a$):**
     The point $P$ is at $y = 2a$, which is *above* the sheet (in the $+y$ direction). Since the charge density is negative, the electric field points towards the sheet (i.e., in the $-y$ direction).
@@ -16496,21 +19248,30 @@ Summing the individual field components:
 $$\vec{E}_{total} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3 = \left( -\frac{\sigma}{2\epsilon_0} - \frac{2\sigma}{2\epsilon_0} - \frac{3\sigma}{2\epsilon_0} \right) \hat{j}$$
 $$\vec{E}_{total} = \left( \frac{-\sigma - 2\sigma - 3\sigma}{2\epsilon_0} \right) \hat{j} = \left( \frac{-6\sigma}{2\epsilon_0} \right) \hat{j} = -\frac{3\sigma}{\epsilon_0}\hat{j}$$
 This corresponds to option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 7,
-    "year": 2018,
-    "subject": "Kinetic Theory of Gases",
-    "type": "MCQ",
-    "question": String.raw`Two boxes A and B contain an equal number of molecules of the same gas. If the volumes are $V_{A}$ and $V_{B}$, and $\lambda_{A}$ and $\lambda_{B}$ denote respective mean free paths, then`,
-    "options": [
+    id: 7,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Kinetic Theory of Gases",
+    subjectId: "thermo",
+    tags: ["Kinetic Theory of Gases","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`Two boxes A and B contain an equal number of molecules of the same gas. If the volumes are $V_{A}$ and $V_{B}$, and $\lambda_{A}$ and $\lambda_{B}$ denote respective mean free paths, then`,
+
+    options: [
       String.raw`$\lambda_{A}=\lambda_{B}$`,
       String.raw`$\frac{\lambda_{A}}{V_{A}}=\frac{\lambda_{B}}{V_{B}}$`,
       String.raw`$\frac{\lambda_{A}}{V_{A}^{1/3}}=\frac{\lambda_{B}}{V_{B}^{1/3}}$`,
-      String.raw`$\lambda_{A}V_{A}=\lambda_{B}V_{B}$`
+      String.raw`$\lambda_{A}V_{A}=\lambda_{B}V_{B}$`,
     ],
-    "detailedSolution": String.raw`According to the kinetic theory of gases, the mean free path $\lambda$ of gas molecules is given by the formula:
+
+    detailedSolution: String.raw`According to the kinetic theory of gases, the mean free path $\lambda$ of gas molecules is given by the formula:
 $$\lambda = \frac{1}{\sqrt{2} \pi d^2 n}$$
 where $d$ is the collision diameter of the molecules, and $n$ is the number density (number of molecules $N$ per unit volume $V$).
 Substituting $n = \frac{N}{V}$ into the equation gives:
@@ -16521,21 +19282,30 @@ $$\lambda \propto V \implies \frac{\lambda}{V} = \text{constant}$$
 Applying this relationship to both boxes A and B yields:
 $$\frac{\lambda_A}{V_A} = \frac{\lambda_B}{V_B}$$
 This matches option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 8,
-    "year": 2018,
-    "subject": "Atomic Physics",
-    "type": "MCQ",
-    "question": String.raw`Let $T_{g}$ and $T_{e}$ be the kinetic energies of the electron in the ground and the third excited states of a hydrogen atom, respectively. According to the Bohr model, the ratio $T_{g}/T_{e}$ is`,
-    "options": [
+    id: 8,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Atomic Physics",
+    subjectId: "modern",
+    tags: ["Atomic Physics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`Let $T_{g}$ and $T_{e}$ be the kinetic energies of the electron in the ground and the third excited states of a hydrogen atom, respectively. According to the Bohr model, the ratio $T_{g}/T_{e}$ is`,
+
+    options: [
       String.raw`$3$`,
       String.raw`$4$`,
       String.raw`$9$`,
-      String.raw`$16$`
+      String.raw`$16$`,
     ],
-    "detailedSolution": String.raw`According to the Bohr model of the hydrogen atom, the total energy of an electron in the $n$-th orbital is:
+
+    detailedSolution: String.raw`According to the Bohr model of the hydrogen atom, the total energy of an electron in the $n$-th orbital is:
 $$E_n = -13.6 \text{ eV} \cdot \frac{1}{n^2}$$
 The kinetic energy $T$ of an orbiting electron is equal to the absolute magnitude of its total energy ($T = |E|$), because potential energy $U = -2T$ and $E = T + U = -T$.
 Thus, the kinetic energy is inversely proportional to the square of the principal quantum number $n$:
@@ -16547,140 +19317,184 @@ $$T_n \propto \frac{1}{n^2}$$
 Taking the ratio of the kinetic energies:
 $$\frac{T_g}{T_e} = \frac{1}{1/16} = 16$$
 This matches option (D)[cite: 5, 6].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 9,
-    "year": 2018,
-    "subject": "Polarization",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following arrangements of optical components can be used to distinguish between an unpolarised light and a circularly polarised light?`,
-    "options": [
+    id: 9,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following arrangements of optical components can be used to distinguish between an unpolarised light and a circularly polarised light?`,
+
+    options: [
       String.raw`$\lambda/2$ plate $\to$ analyser`,
       String.raw`$\lambda/2$ plate $\to$ polariser $\to$ analyser`,
       String.raw`$\lambda/4$ plate $\to$ analyser`,
-      String.raw`polariser $\to$ analyser`
+      String.raw`polariser $\to$ analyser`,
     ],
-    "detailedSolution": String.raw`To distinguish between unpolarized light and circularly polarized light, we must exploit a component that affects their phase relationships differently. Simply passing them through a linear polarizer (analyser) will result in transmitted light of constant intensity ($I_0/2$) regardless of the analyser's rotation angle for both types of light.
+
+    detailedSolution: String.raw`To distinguish between unpolarized light and circularly polarized light, we must exploit a component that affects their phase relationships differently. Simply passing them through a linear polarizer (analyser) will result in transmitted light of constant intensity ($I_0/2$) regardless of the analyser's rotation angle for both types of light.
 However, passing the light through a quarter-wave plate ($\lambda/4$ plate) alters the state of polarization:
 1.  **Unpolarized light:** The $\lambda/4$ plate introduces a $90^\circ$ phase shift between orthogonal components, but because unpolarized light lacks any fixed phase relationship between its random components, it remains completely unpolarized. When subsequently viewed through a rotating analyser, the transmitted intensity remains constant.
 2.  **Circularly polarized light:** Circularly polarized light consists of two orthogonal linear components with a fixed $90^\circ$ ($\pi/2$) phase difference. A $\lambda/4$ plate introduces an additional $90^\circ$ phase shift. Depending on axis alignment, the total phase difference becomes $180^\circ$ or $0^\circ$, transforming the circularly polarized light into **linearly polarized light**. When this linearly polarized light is viewed through a rotating analyser, the transmitted intensity varies periodically from zero to a maximum.
 Because the outcomes (constant intensity vs. varying intensity) are definitively distinguishable, the sequence of a $\lambda/4$ plate followed by an analyser is the correct arrangement. This corresponds to option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 10,
-    "year": 2018,
-    "subject": "Operational Amplifiers",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following graphs shows the correct variation of $V_{o}$ with $v_{i}$? Here, $V_{d}$ is the voltage drop across the diode and the Op-Amp is assumed to be ideal.`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10_18.png",
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 10,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following graphs shows the correct variation of $V_{o}$ with $v_{i}$? Here, $V_{d}$ is the voltage drop across the diode and the Op-Amp is assumed to be ideal.`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10a_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10b_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10c_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10d_18.png"
-    ],
-    "detailedSolution": String.raw`The provided schematic illustrates a classic precision half-wave rectifier (also known as a super-diode). The diode is placed inside the negative feedback loop of the operational amplifier.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10a_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10b_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10c_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10d_18.png"],
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/10_18.png",
+
+    detailedSolution: String.raw`The provided schematic illustrates a classic precision half-wave rectifier (also known as a super-diode). The diode is placed inside the negative feedback loop of the operational amplifier.
 Let's analyze the circuit's operation based on the input voltage $v_i$ applied to the non-inverting (+) terminal:
 1.  **For $v_i > 0$:** The op-amp amplifies the positive input, causing its output to swing positive. This heavily forward-biases the diode, turning it ON. The feedback loop is closed tightly through the conducting diode, establishing a virtual short between the inverting (-) and non-inverting (+) terminals. The op-amp automatically adjusts its internal output to overcome the physical diode forward voltage drop ($V_d$). Thus, the final circuit output $V_o$ (taken after the diode) perfectly tracks the input voltage: $V_o = v_i$. The graph must be a straight line with a slope of 1, starting exactly from the origin ($0,0$), not offset by $V_d$.
 2.  **For $v_i < 0$:** The op-amp output swings negative, definitively reverse-biasing the diode (turning it OFF). The feedback loop is physically broken. No current flows through the load resistor $R_L$, which grounds the output node. Therefore, $V_o = 0$.
 The transfer characteristic is $V_o = 0$ for $v_i < 0$, and a linear line $V_o = v_i$ for $v_i > 0$ starting exactly at the origin. Graph (A) correctly depicts this ideal rectified behavior without the dead-zone caused by $V_d$[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 11,
-    "year": 2018,
-    "subject": "Carnot Cycle",
-    "type": "MCQ",
-    "question": String.raw`Which one of the figures correctly represents the T-S diagram of a Carnot engine?`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 11,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Carnot Cycle",
+    subjectId: "thermo",
+    tags: ["Carnot Cycle","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the figures correctly represents the T-S diagram of a Carnot engine?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11a_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11b_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11c_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11d_18.png"
-    ],
-    "detailedSolution": String.raw`A Carnot cycle represents the most efficient possible thermodynamic cycle and is composed of four strictly reversible processes:
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11a_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11b_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11c_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/11d_18.png"],
+
+    detailedSolution: String.raw`A Carnot cycle represents the most efficient possible thermodynamic cycle and is composed of four strictly reversible processes:
 1.  **Reversible Isothermal Expansion:** The gas expands while absorbing heat from a hot reservoir. The temperature $T$ remains perfectly constant at $T_H$. Because heat is added ($dQ > 0$), the entropy $S$ increases ($dS = dQ/T > 0$). On a T-S diagram, this is a horizontal line moving right.
 2.  **Reversible Adiabatic (Isentropic) Expansion:** The gas continues to expand without any heat exchange with the surroundings ($dQ = 0$). The temperature drops to $T_C$, but the entropy $S$ remains perfectly constant. On a T-S diagram, this is a vertical line moving straight down.
 3.  **Reversible Isothermal Compression:** The gas is compressed while rejecting heat to a cold reservoir. The temperature $T$ remains perfectly constant at $T_C$. Because heat is removed, entropy $S$ decreases. On a T-S diagram, this is a horizontal line moving left.
 4.  **Reversible Adiabatic (Isentropic) Compression:** The gas is compressed back to its initial state without heat exchange ($dQ = 0$). The temperature rises back to $T_H$, and entropy $S$ remains constant. On a T-S diagram, this is a vertical line moving straight up.
 Combining these four processes constructs a perfect rectangle with horizontal and vertical sides in the Temperature-Entropy (T-S) plane. This exact shape is depicted in figure (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 12,
-    "year": 2018,
-    "subject": "Polarization",
-    "type": "MCQ",
-    "question": String.raw`The plane of polarisation of a plane polarized light rotates by $60^\circ$ after passing through a wave plate. The pass-axis of the wave plate is at an angle $\alpha$ with respect to the plane of polarisation of the incident light. The wave plate and $\alpha$ are`,
-    "options": [
+    id: 12,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Polarization",
+    subjectId: "waves",
+    tags: ["Polarization","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`The plane of polarisation of a plane polarized light rotates by $60^\circ$ after passing through a wave plate. The pass-axis of the wave plate is at an angle $\alpha$ with respect to the plane of polarisation of the incident light. The wave plate and $\alpha$ are`,
+
+    options: [
       String.raw`$\lambda/4$, $60^\circ$`,
       String.raw`$\lambda/2$, $30^\circ$`,
       String.raw`$\lambda/2$, $120^\circ$`,
-      String.raw`$\lambda/4$, $30^\circ$`
+      String.raw`$\lambda/4$, $30^\circ$`,
     ],
-    "detailedSolution": String.raw`A half-wave plate ($\lambda/2$ plate) introduces a phase difference of exactly $\pi$ radians ($180^\circ$) between the ordinary and extraordinary components of incident light.
+
+    detailedSolution: String.raw`A half-wave plate ($\lambda/2$ plate) introduces a phase difference of exactly $\pi$ radians ($180^\circ$) between the ordinary and extraordinary components of incident light.
 When linearly polarized light is incident on a half-wave plate, the emerging light remains perfectly linearly polarized. However, its plane of polarization is systematically rotated.
 If the incident plane of polarization makes an angle $\alpha$ with the fast axis (or slow axis) of the half-wave plate, the emergent plane of polarization will be situated at an angle $-\alpha$ relative to that same axis. The net geometric rotation of the polarization plane is therefore $2\alpha$.
 The problem states that the physical rotation observed is $60^\circ$.
 $$2\alpha = 60^\circ \implies \alpha = 30^\circ$$
 Quarter-wave plates ($\lambda/4$) generally convert linearly polarized light into elliptically or circularly polarized light (unless $\alpha=0$ or $90^\circ$), and thus do not simply rotate the plane of polarization.
 Therefore, the component must be a $\lambda/2$ plate, and the angle is $\alpha = 30^\circ$. This corresponds to option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 13,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`A rectangular loop of dimensions $l$ and $w$ moves with a constant speed of $v$ through a region containing a uniform magnetic field $B$ directed into the paper and extending a distance of $4w$. Which of the following figures correctly represents the variation of emf ($\varepsilon$) with the position ($x$) of the front end of the loop?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13_18.png",
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 13,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`A rectangular loop of dimensions $l$ and $w$ moves with a constant speed of $v$ through a region containing a uniform magnetic field $B$ directed into the paper and extending a distance of $4w$. Which of the following figures correctly represents the variation of emf ($\varepsilon$) with the position ($x$) of the front end of the loop?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13a_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13b_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13c_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13d_18.png"
-    ],
-    "detailedSolution": String.raw`According to Faraday's law of induction, the induced electromotive force (emf) $\varepsilon$ in a closed loop is equal to the negative rate of change of magnetic flux $\Phi$ through the loop: $\varepsilon = -\frac{d\Phi}{dt}$.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13a_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13b_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13c_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13d_18.png"],
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/13_18.png",
+
+    detailedSolution: String.raw`According to Faraday's law of induction, the induced electromotive force (emf) $\varepsilon$ in a closed loop is equal to the negative rate of change of magnetic flux $\Phi$ through the loop: $\varepsilon = -\frac{d\Phi}{dt}$.
 Let the length of the leading vertical edge be $l$, and the horizontal width be $w$. The loop moves at a constant velocity $v$, meaning position $x = vt$, and $\frac{dx}{dt} = v$.
 1.  **Entering the field ($0 < x < w$):** As the front edge enters the uniform field $B$, the enclosed area containing flux increases. The flux is $\Phi = B \cdot l \cdot x$. The induced emf magnitude is $|\varepsilon| = \frac{d}{dt}(Blx) = Bl\frac{dx}{dt} = Blv$. By Lenz's law, a current is induced to oppose this increase, defining a specific polarity (e.g., positive). The emf remains constant at $+Blv$ while the loop enters.
 2.  **Fully inside the field ($w \le x < 4w$):** Once the trailing edge passes $x=0$, the entire loop of width $w$ is completely submerged in the uniform magnetic field. The total enclosed flux reaches a maximum and remains absolutely constant ($\Phi = B \cdot l \cdot w$). Because the flux is unchanging, the derivative $\frac{d\Phi}{dt} = 0$, meaning the induced emf drops instantly to $0$. This zero-emf state persists as long as the entire loop translates within the field.
 3.  **Exiting the field ($4w \le x < 5w$):** As the front edge passes the boundary at $4w$, the leading edge exits the field while the trailing edge is still inside. The enclosed area containing flux steadily decreases. The magnitude is again $|\varepsilon| = Blv$. By Lenz's law, the induced current flips direction to oppose the decreasing flux, resulting in a negative polarity emf: $-Blv$.
 Graph (C) accurately depicts this sequential profile: a positive constant pulse of width $w$, a zero region of width $3w$, and a negative constant pulse of width $w$[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 14,
-    "year": 2018,
-    "subject": "Thermodynamic Processes",
-    "type": "MCQ",
-    "question": String.raw`The equation of state for one mole of a non-ideal gas is given by $PV=A\left(1+\frac{B}{V}\right)$, where the coefficients $A$ and $B$ are temperature dependent. If the volume changes from $V_{1}$ to $V_{2}$ in an isothermal process, the work done by the gas is`,
-    "options": [
+    id: 14,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`The equation of state for one mole of a non-ideal gas is given by $PV=A\left(1+\frac{B}{V}\right)$, where the coefficients $A$ and $B$ are temperature dependent. If the volume changes from $V_{1}$ to $V_{2}$ in an isothermal process, the work done by the gas is`,
+
+    options: [
       String.raw`$AB\left(\frac{1}{V_{1}}-\frac{1}{V_{2}}\right)$`,
       String.raw`$AB \ln \left(\frac{V_{2}}{V_{1}}\right)$`,
       String.raw`$A \ln\left(\frac{V_{2}}{V_{1}}\right)+AB\left(\frac{1}{V_{1}}-\frac{1}{V_{2}}\right)$`,
-      String.raw`$A \ln\left(\frac{V_{2}-V_{1}}{V_{1}}\right)+B$`
+      String.raw`$A \ln\left(\frac{V_{2}-V_{1}}{V_{1}}\right)+B$`,
     ],
-    "detailedSolution": String.raw`The mechanical work $W$ done by a gas during a quasistatic expansion from volume $V_1$ to $V_2$ is defined by the integral:
+
+    detailedSolution: String.raw`The mechanical work $W$ done by a gas during a quasistatic expansion from volume $V_1$ to $V_2$ is defined by the integral:
 $$W = \int_{V_1}^{V_2} P \, dV$$
 First, we isolate the pressure $P$ from the given equation of state $PV = A\left(1 + \frac{B}{V}\right)$:
 $$P = \frac{A}{V} \left(1 + \frac{B}{V}\right) = \frac{A}{V} + \frac{AB}{V^2}$$
@@ -16695,21 +19509,30 @@ $$W = A (\ln V_2 - \ln V_1) - AB \left( \frac{1}{V_2} - \frac{1}{V_1} \right)$$
 Using logarithm properties and distributing the negative sign in the second term gives:
 $$W = A \ln\left(\frac{V_2}{V_1}\right) + AB \left( \frac{1}{V_1} - \frac{1}{V_2} \right)$$
 This formula corresponds directly to option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 15,
-    "year": 2018,
-    "subject": "Thermodynamic Relations & Potentials",
-    "type": "MCQ",
-    "question": String.raw`An ideal gas consists of three dimensional polyatomic molecules. The temperature is such that only one vibrational mode is excited. If $R$ denotes the gas constant, then the specific heat at constant volume of one mole of the gas at this temperature is`,
-    "options": [
+    id: 15,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Thermodynamic Relations & Potentials",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Relations & Potentials","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`An ideal gas consists of three dimensional polyatomic molecules. The temperature is such that only one vibrational mode is excited. If $R$ denotes the gas constant, then the specific heat at constant volume of one mole of the gas at this temperature is`,
+
+    options: [
       String.raw`$3R$`,
       String.raw`$\frac{7}{2}R$`,
       String.raw`$4R$`,
-      String.raw`$\frac{9}{2}R$`
+      String.raw`$\frac{9}{2}R$`,
     ],
-    "detailedSolution": String.raw`According to the equipartition theorem, each independent quadratic degree of freedom contributes an average thermal energy of $\frac{1}{2}k_B T$ per molecule, or $\frac{1}{2}R$ to the molar specific heat at constant volume ($C_V$).
+
+    detailedSolution: String.raw`According to the equipartition theorem, each independent quadratic degree of freedom contributes an average thermal energy of $\frac{1}{2}k_B T$ per molecule, or $\frac{1}{2}R$ to the molar specific heat at constant volume ($C_V$).
 Let's categorize the active degrees of freedom for a standard 3D non-linear polyatomic molecule:
 1.  **Translational modes:** A molecule can move freely in three orthogonal spatial directions ($x, y, z$). This provides 3 translational degrees of freedom. Contribution to $C_V = 3 \times \frac{1}{2}R = \frac{3}{2}R$.
 2.  **Rotational modes:** A rigid 3D non-linear polyatomic molecule can rotate around three principal axes. This provides 3 rotational degrees of freedom. Contribution to $C_V = 3 \times \frac{1}{2}R = \frac{3}{2}R$.
@@ -16718,21 +19541,30 @@ Summing these independent contributions yields the total molar specific heat at 
 $$C_V = C_{V,trans} + C_{V,rot} + C_{V,vib}$$
 $$C_V = \frac{3}{2}R + \frac{3}{2}R + R = 3R + R = 4R$$
 This matches option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 16,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`A long solenoid is carrying a time dependent current such that the magnetic field inside has the form $\vec{B}(t)=B_{0}t^{2}\hat{k}$, where $\hat{k}$ is along the axis of the solenoid. The displacement current at the point P on a circle of radius $r$ in a plane perpendicular to the axis`,
-    "options": [
+    id: 16,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`A long solenoid is carrying a time dependent current such that the magnetic field inside has the form $\vec{B}(t)=B_{0}t^{2}\hat{k}$, where $\hat{k}$ is along the axis of the solenoid. The displacement current at the point P on a circle of radius $r$ in a plane perpendicular to the axis`,
+
+    options: [
       String.raw`is inversely proportional to $r$ and radially outward.`,
       String.raw`is inversely proportional to $r$ and tangential.`,
       String.raw`increases linearly with time and is tangential.`,
-      String.raw`is inversely proportional to $r^2$ and tangential.`
+      String.raw`is inversely proportional to $r^2$ and tangential.`,
     ],
-    "detailedSolution": String.raw`According to Faraday's law of induction, a time-varying magnetic field induces an electric field $\vec{E}$. Assuming the point P is outside the solenoid ($r > R$, where $R$ is the solenoid radius), we apply the integral form:
+
+    detailedSolution: String.raw`According to Faraday's law of induction, a time-varying magnetic field induces an electric field $\vec{E}$. Assuming the point P is outside the solenoid ($r > R$, where $R$ is the solenoid radius), we apply the integral form:
 $$\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}$$
 $$E_\theta (2\pi r) = -\frac{d}{dt} (\pi R^2 B_0 t^2) = -2\pi R^2 B_0 t$$
 $$E_\theta = -\frac{R^2 B_0 t}{r}$$
@@ -16741,40 +19573,58 @@ The displacement current density $\vec{J}_d$ is defined as:
 $$\vec{J}_d = \epsilon_0 \frac{\partial \vec{E}}{\partial t}$$
 $$\vec{J}_d = \epsilon_0 \frac{\partial}{\partial t} \left( -\frac{R^2 B_0 t}{r} \hat{\theta} \right) = -\frac{\epsilon_0 R^2 B_0}{r} \hat{\theta}$$
 Thus, the displacement current at point P is tangential and inversely proportional to $r$[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 17,
-    "year": 2018,
-    "subject": "Entropy & Second Law",
-    "type": "MCQ",
-    "question": String.raw`Consider an ensemble of thermodynamic systems, each of which is characterized by the same number of particles, pressure and temperature. The thermodynamic function describing the ensemble is`,
-    "options": [
+    id: 17,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Entropy & Second Law",
+    subjectId: "thermo",
+    tags: ["Entropy & Second Law","Thermodynamics & KTG"],
+    type: "MCQ",
+
+    question: String.raw`Consider an ensemble of thermodynamic systems, each of which is characterized by the same number of particles, pressure and temperature. The thermodynamic function describing the ensemble is`,
+
+    options: [
       String.raw`Enthalpy`,
       String.raw`Helmholtz free energy`,
       String.raw`Gibbs free energy`,
-      String.raw`Entropy`
+      String.raw`Entropy`,
     ],
-    "detailedSolution": String.raw`In statistical mechanics, different statistical ensembles are described by holding certain macroscopic variables constant.
+
+    detailedSolution: String.raw`In statistical mechanics, different statistical ensembles are described by holding certain macroscopic variables constant.
 1.  **Microcanonical ensemble (N, V, E):** Number of particles, volume, and energy are constant. Maximizes Entropy ($S$).
 2.  **Canonical ensemble (N, V, T):** Number of particles, volume, and temperature are constant. Minimizes Helmholtz free energy ($F = E - TS$).
 3.  **Isothermal-isobaric ensemble (N, P, T):** Number of particles, pressure, and temperature are constant. Minimizes Gibbs free energy ($G = E - TS + PV$).
 Since the systems are characterized by constant N, P, and T, the corresponding thermodynamic function is the Gibbs free energy[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 18,
-    "year": 2018,
-    "subject": "Electrostatics",
-    "type": "MCQ",
-    "question": String.raw`Given a spherically symmetric charge density $\rho(r)=\begin{cases}kr^{2},&r<R\\ 0&,r>R\end{cases}$ ($k$ being a constant), the electric field for $r<R$ is (take the total charge as $Q$)`,
-    "options": [
+    id: 18,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Electrostatics",
+    subjectId: "em",
+    tags: ["Electrostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`Given a spherically symmetric charge density $\rho(r)=\begin{cases}kr^{2},&r<R\\ 0&,r>R\end{cases}$ ($k$ being a constant), the electric field for $r<R$ is (take the total charge as $Q$)`,
+
+    options: [
       String.raw`$\frac{Qr^{3}}{4\pi\epsilon_{0}R^{5}}\hat{r}$`,
       String.raw`$\frac{3Qr^{2}}{4\pi\epsilon_{0}R^{4}}\hat{r}$`,
       String.raw`$\frac{5Qr^{3}}{8\pi\epsilon_{0}R^{5}}\hat{r}$`,
-      String.raw`$\frac{Q}{4\pi\epsilon_{0}r^{2}}\hat{r}$`
+      String.raw`$\frac{Q}{4\pi\epsilon_{0}r^{2}}\hat{r}$`,
     ],
-    "detailedSolution": String.raw`First, express the constant $k$ in terms of the total charge $Q$. Integrate the charge density over the entire sphere:
+
+    detailedSolution: String.raw`First, express the constant $k$ in terms of the total charge $Q$. Integrate the charge density over the entire sphere:
 $$Q = \int_{0}^{R} \rho(r) 4\pi r^2 dr = \int_{0}^{R} (kr^2) 4\pi r^2 dr = 4\pi k \int_{0}^{R} r^4 dr = 4\pi k \left[\frac{R^5}{5}\right]$$
 $$k = \frac{5Q}{4\pi R^5}$$
 To find the electric field at $r < R$, use Gauss's Law. The charge enclosed $q_{enc}$ by a spherical Gaussian surface of radius $r$ is:
@@ -16785,42 +19635,60 @@ Applying Gauss's Law, $E(4\pi r^2) = \frac{q_{enc}}{\epsilon_0}$:
 $$E(4\pi r^2) = \frac{1}{\epsilon_0} Q\frac{r^5}{R^5}$$
 $$E = \frac{Qr^3}{4\pi\epsilon_0 R^5}$$
 The electric field vector is radial, matching option (A)[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 19,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MCQ",
-    "question": String.raw`An infinitely long solenoid, with its axis along $\hat{k}$, carries a current $I$. In addition there is a uniform line charge density $\lambda$ along the axis. If $\vec{S}$ is the energy flux, in cylindrical coordinates $(\hat{\rho},\hat{\phi},\hat{k})$, then`,
-    "options": [
+    id: 19,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MCQ",
+
+    question: String.raw`An infinitely long solenoid, with its axis along $\hat{k}$, carries a current $I$. In addition there is a uniform line charge density $\lambda$ along the axis. If $\vec{S}$ is the energy flux, in cylindrical coordinates $(\hat{\rho},\hat{\phi},\hat{k})$, then`,
+
+    options: [
       String.raw`$\vec{S}$ is along $\hat{\rho}$`,
       String.raw`$\vec{S}$ is along $\hat{k}$`,
       String.raw`$\vec{S}$ has non zero components along $\hat{\rho}$ and $\hat{k}$`,
-      String.raw`$\vec{S}$ is along $\hat{\rho}\times\hat{k}$`
+      String.raw`$\vec{S}$ is along $\hat{\rho}\times\hat{k}$`,
     ],
-    "detailedSolution": String.raw`The energy flux is given by the Poynting vector, defined as $\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})$.
+
+    detailedSolution: String.raw`The energy flux is given by the Poynting vector, defined as $\vec{S} = \frac{1}{\mu_0} (\vec{E} \times \vec{B})$.
 1.  **Electric Field:** The uniform line charge density along the axis creates a radial electric field pointing outward from the axis. In cylindrical coordinates, this is $\vec{E} \propto \hat{\rho}$.
 2.  **Magnetic Field:** The long solenoid carrying current creates a uniform magnetic field strictly along its central axis. Thus, $\vec{B} \propto \hat{k}$.
 Now, compute the cross product for the Poynting vector direction:
 $$\vec{S} \propto (\hat{\rho} \times \hat{k})$$
 In the right-handed cylindrical coordinate system $(\hat{\rho}, \hat{\phi}, \hat{k})$, the cross product $\hat{\rho} \times \hat{k} = -\hat{\phi}$.
 Therefore, the energy flux vector is specifically directed along the $\hat{\rho} \times \hat{k}$ direction (the azimuthal direction). This corresponds to option (D)[cite: 5, 6].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 20,
-    "year": 2018,
-    "subject": "Superposition of Oscillations",
-    "type": "MCQ",
-    "question": String.raw`Consider two waves $y_{1}=a\cos(\omega t-kz)$ and $y_{2}=a\cos[(\omega+\Delta\omega)t-(k+\Delta k)z]$. The group velocity of the superposed wave will be ($\Delta\omega\ll\omega$ and $\Delta k\ll k$)`,
-    "options": [
+    id: 20,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Superposition of Oscillations",
+    subjectId: "waves",
+    tags: ["Superposition of Oscillations","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Consider two waves $y_{1}=a\cos(\omega t-kz)$ and $y_{2}=a\cos[(\omega+\Delta\omega)t-(k+\Delta k)z]$. The group velocity of the superposed wave will be ($\Delta\omega\ll\omega$ and $\Delta k\ll k$)`,
+
+    options: [
       String.raw`$\frac{(\omega-\Delta\omega)}{(k-\Delta k)}$`,
       String.raw`$\frac{(2\omega+\Delta\omega)}{(2k+\Delta k)}$`,
       String.raw`$\frac{\Delta\omega}{\Delta k}$`,
-      String.raw`$\frac{(\omega+\Delta\omega)}{(k+\Delta k)}$`
+      String.raw`$\frac{(\omega+\Delta\omega)}{(k+\Delta k)}$`,
     ],
-    "detailedSolution": String.raw`When two waves of slightly different frequencies and wave numbers superpose, they create a beat pattern.
+
+    detailedSolution: String.raw`When two waves of slightly different frequencies and wave numbers superpose, they create a beat pattern.
 The superposition $y = y_1 + y_2$ can be simplified using the trigonometric identity $\cos A + \cos B = 2\cos\left(\frac{A-B}{2}\right)\cos\left(\frac{A+B}{2}\right)$:
 $$y = 2a \cos\left(\frac{\Delta\omega t - \Delta k z}{2}\right) \cos\left(\left(\omega + \frac{\Delta\omega}{2}\right)t - \left(k + \frac{\Delta k}{2}\right)z\right)$$
 The first cosine term represents the slowly varying envelope (the "group"), while the second represents the rapidly oscillating carrier wave (the "phase").
@@ -16829,21 +19697,30 @@ $$\Delta\omega t - \Delta k z = \text{constant}$$
 Differentiating with respect to time $t$:
 $$\Delta\omega - \Delta k \frac{dz}{dt} = 0 \implies v_g = \frac{dz}{dt} = \frac{\Delta\omega}{\Delta k}$$
 This matches option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 21,
-    "year": 2018,
-    "subject": "Geometrical Optics",
-    "type": "MCQ",
-    "question": String.raw`Consider a convex lens of focal length $f$. A point object moves towards the lens along its axis between $2f$ and $f$. If the speed of the object is $V_{0}$, then its image would move with speed $V_{1}$. Which of the following is correct?`,
-    "options": [
+    id: 21,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MCQ",
+
+    question: String.raw`Consider a convex lens of focal length $f$. A point object moves towards the lens along its axis between $2f$ and $f$. If the speed of the object is $V_{0}$, then its image would move with speed $V_{1}$. Which of the following is correct?`,
+
+    options: [
       String.raw`$V_{1}=V_{0}$; the image moves away from the lens.`,
       String.raw`$V_{1}=-V_{0}$; the image moves towards the lens.`,
       String.raw`$V_{1}>V_{0}$; the image moves away from the lens.`,
-      String.raw`$V_{1}<V_{0}$; the image moves away from the lens.`
+      String.raw`$V_{1}<V_{0}$; the image moves away from the lens.`,
     ],
-    "detailedSolution": String.raw`For a convex lens, the lens formula is $\frac{1}{v} - \frac{1}{u} = \frac{1}{f}$.
+
+    detailedSolution: String.raw`For a convex lens, the lens formula is $\frac{1}{v} - \frac{1}{u} = \frac{1}{f}$.
 Differentiating with respect to time $t$:
 $$-\frac{1}{v^2}\frac{dv}{dt} + \frac{1}{u^2}\frac{du}{dt} = 0 \implies V_{image} = \frac{dv}{dt} = \left(\frac{v}{u}\right)^2 \frac{du}{dt} = m^2 V_{object}$$
 The object is located between $2f$ and $f$ (so $-2f < u < -f$). For this region, the real image is formed beyond $2f$ (so $v > 2f$).
@@ -16852,42 +19729,60 @@ Therefore, the transverse magnification magnitude is $|m| = |v/u| > 1$, which me
 Consequently, $|V_1| = m^2 |V_0| > V_0$. The speed of the image is strictly greater than the speed of the object.
 Since $du/dt$ is positive (moving towards the lens, $u$ is becoming less negative), $dv/dt$ is also positive, meaning $v$ is increasing and the image is physically moving away from the lens.
 Thus, $V_1 > V_0$ and the image moves away from the lens[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 22,
-    "year": 2018,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`A disc of radius $R_{1}$ having uniform surface density has a concentric hole of radius $R_{2}<R_{1}$. If its mass is $M$, the principal moments of inertia are`,
-    "options": [
+    id: 22,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A disc of radius $R_{1}$ having uniform surface density has a concentric hole of radius $R_{2}<R_{1}$. If its mass is $M$, the principal moments of inertia are`,
+
+    options: [
       String.raw`$\frac{M(R_{1}^{2}-R_{2}^{2})}{2},\frac{M(R_{1}^{2}-R_{2}^{2})}{4},\frac{M(R_{1}^{2}-R_{2}^{2})}{4}$`,
       String.raw`$\frac{M(R_{1}^{2}+R_{2}^{2})}{2},\frac{M(R_{1}^{2}+R_{2}^{2})}{4},\frac{M(R_{1}^{2}+R_{2}^{2})}{4}$`,
       String.raw`$\frac{M(R_{1}^{2}+R_{2}^{2})}{2},\frac{M(R_{1}^{2}+R_{2}^{2})}{4},\frac{M(R_{1}^{2}-R_{2}^{2})}{4}$`,
-      String.raw`$\frac{M(R_{1}^{2}-R_{2}^{2})}{2},\frac{M(R_{1}^{2}-R_{2}^{2})}{4},\frac{M(R_{1}^{2}-R_{2}^{2})}{8}$`
+      String.raw`$\frac{M(R_{1}^{2}-R_{2}^{2})}{2},\frac{M(R_{1}^{2}-R_{2}^{2})}{4},\frac{M(R_{1}^{2}-R_{2}^{2})}{8}$`,
     ],
-    "detailedSolution": String.raw`The moment of inertia of an annular disc (a disc with a concentric hole) of mass $M$, outer radius $R_1$, and inner radius $R_2$ about its central perpendicular axis (z-axis) is:
+
+    detailedSolution: String.raw`The moment of inertia of an annular disc (a disc with a concentric hole) of mass $M$, outer radius $R_1$, and inner radius $R_2$ about its central perpendicular axis (z-axis) is:
 $$I_z = \frac{1}{2} M (R_1^2 + R_2^2)$$
 This can be derived by subtracting the moment of inertia of the "missing" inner disc from a solid outer disc, taking care to express masses in terms of the uniform surface density $\sigma$. $M = \sigma \pi (R_1^2 - R_2^2)$.
 $$I_z = I_{solid} - I_{hole} = \frac{1}{2}(\sigma \pi R_1^2)R_1^2 - \frac{1}{2}(\sigma \pi R_2^2)R_2^2 = \frac{1}{2} \sigma \pi (R_1^4 - R_2^4) = \frac{1}{2} [\sigma \pi (R_1^2 - R_2^2)] (R_1^2 + R_2^2) = \frac{1}{2} M (R_1^2 + R_2^2)$$
 By the perpendicular axis theorem for a planar lamina, the moments of inertia about the two orthogonal planar principal axes (x and y axes) must sum to $I_z$, and by symmetry, they are equal ($I_x = I_y$):
 $$I_z = I_x + I_y = 2I_x \implies I_x = I_y = \frac{1}{2} I_z = \frac{1}{4} M (R_1^2 + R_2^2)$$
 The three principal moments of inertia are $\frac{1}{2}M(R_1^2+R_2^2), \frac{1}{4}M(R_1^2+R_2^2), \frac{1}{4}M(R_1^2+R_2^2)$, matching option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 23,
-    "year": 2018,
-    "subject": "Calculus",
-    "type": "MCQ",
-    "question": String.raw`The function $f(x)=\begin{cases}x,&-\pi<x<0\\ -x,&0<x<\pi\end{cases}$ is expanded as a Fourier series of the form $a_{0}+\sum_{n=1}^{\infty}a_{n}\cos(nx)+\sum_{n=1}^{\infty}b_{n}\sin(nx)$. Which of the following is true?`,
-    "options": [
+    id: 23,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Calculus",
+    subjectId: "math",
+    tags: ["Calculus","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`The function $f(x)=\begin{cases}x,&-\pi<x<0\\ -x,&0<x<\pi\end{cases}$ is expanded as a Fourier series of the form $a_{0}+\sum_{n=1}^{\infty}a_{n}\cos(nx)+\sum_{n=1}^{\infty}b_{n}\sin(nx)$. Which of the following is true?`,
+
+    options: [
       String.raw`$a_{0}\neq 0, b_{n}=0$`,
       String.raw`$a_{0}\neq 0, b_{n}\neq 0$`,
       String.raw`$a_{0}=0, b_{n}=0$`,
-      String.raw`$a_{0}=0, b_{n}\neq 0$`
+      String.raw`$a_{0}=0, b_{n}\neq 0$`,
     ],
-    "detailedSolution": String.raw`Let's analyze the symmetry (parity) of the function $f(x)$ over the symmetric interval $(-\pi, \pi)$.
+
+    detailedSolution: String.raw`Let's analyze the symmetry (parity) of the function $f(x)$ over the symmetric interval $(-\pi, \pi)$.
 Evaluate $f(-x)$ for $x \in (0, \pi)$:
 If $x > 0$, then $-x < 0$. By definition, for a negative argument, $f(\text{arg}) = \text{arg}$.
 So, $f(-x) = -x$.
@@ -16899,27 +19794,32 @@ Now let's check the DC offset (average value) $a_0$:
 $$a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) dx = \frac{1}{2\pi} \left[ \int_{-\pi}^{0} x dx + \int_{0}^{\pi} -x dx \right]$$
 $$a_0 = \frac{1}{2\pi} \left[ \left(\frac{0 - \pi^2}{2}\right) + \left(\frac{-\pi^2 - 0}{2}\right) \right] = \frac{1}{2\pi} \left(-\frac{\pi^2}{2} - \frac{\pi^2}{2}\right) = -\frac{\pi}{2} \neq 0$$
 Thus, $a_0 \neq 0$ and $b_n = 0$. This matches option (A)[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 24,
-    "year": 2018,
-    "subject": "Fourier Series",
-    "type": "MCQ",
-    "question": String.raw`Which one of the following curves correctly represents (schematically) the solution for the equation $\frac{df}{dx}+2f=3$; $f(0)=0$?`,
-    "options": [
-      "",
-      "",
-      "",
-      ""
+    id: 24,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Fourier Series",
+    subjectId: "math",
+    tags: ["Fourier Series","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Which one of the following curves correctly represents (schematically) the solution for the equation $\frac{df}{dx}+2f=3$; $f(0)=0$?`,
+
+    options: [
+      String.raw``,
+      String.raw``,
+      String.raw``,
+      String.raw``,
     ],
-    "optionImages": [
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24a_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24b_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24c_18.png",
-      "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24d_18.png"
-    ],
-    "detailedSolution": String.raw`We solve the first-order linear ordinary differential equation: $\frac{df}{dx} + 2f = 3$.
+
+    optionImages: ["https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24a_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24b_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24c_18.png","https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/24d_18.png"],
+
+    detailedSolution: String.raw`We solve the first-order linear ordinary differential equation: $\frac{df}{dx} + 2f = 3$.
 The integrating factor (IF) is $e^{\int 2 dx} = e^{2x}$.
 Multiply the ODE by the IF:
 $$e^{2x} \frac{df}{dx} + 2e^{2x} f = 3e^{2x}$$
@@ -16935,41 +19835,59 @@ Characteristics of this function:
 1.  At $x = 0$, $f(0) = 0$ (starts at the origin).
 2.  As $x \to \infty$, the exponential term decays to $0$, and $f(x)$ approaches a horizontal asymptote of $3/2$.
 Graph (B) correctly depicts a curve starting at $0$ and exponentially rising to an asymptote of $3/2$[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 25,
-    "year": 2018,
-    "subject": "Nuclear Physics",
-    "type": "MCQ",
-    "question": String.raw`The mean momentum $\bar{p}$ of a nucleon in a nucleus of mass number $A$ and atomic number $Z$ depends on $A, Z$ as`,
-    "options": [
+    id: 25,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Nuclear Physics",
+    subjectId: "modern",
+    tags: ["Nuclear Physics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`The mean momentum $\bar{p}$ of a nucleon in a nucleus of mass number $A$ and atomic number $Z$ depends on $A, Z$ as`,
+
+    options: [
       String.raw`$\bar{p}\propto A^{\frac{1}{3}}$`,
       String.raw`$\bar{p}\propto Z^{\frac{1}{3}}$`,
       String.raw`$\bar{p}\propto A^{-\frac{1}{3}}$`,
-      String.raw`$\bar{p}\propto (AZ)^{-\frac{2}{3}}$`
+      String.raw`$\bar{p}\propto (AZ)^{-\frac{2}{3}}$`,
     ],
-    "detailedSolution": String.raw`Based on the Heisenberg Uncertainty Principle, a nucleon confined within a nucleus of radius $R$ experiences a spatial uncertainty $\Delta x \approx R$.
+
+    detailedSolution: String.raw`Based on the Heisenberg Uncertainty Principle, a nucleon confined within a nucleus of radius $R$ experiences a spatial uncertainty $\Delta x \approx R$.
 The nuclear radius scales with mass number $A$ as $R \propto A^{1/3}$.
 Therefore, $\Delta x \propto A^{1/3}$.
 According to the uncertainty principle, $\Delta x \Delta p \approx \hbar$, the momentum uncertainty (which corresponds to the mean magnitude of momentum $\bar{p}$ for a confined particle) is:
 $$\bar{p} \approx \Delta p \propto \frac{1}{\Delta x} \propto \frac{1}{A^{1/3}} = A^{-1/3}$$
 Thus, the mean momentum scales as $A^{-1/3}$, matching option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 26,
-    "year": 2018,
-    "subject": "Digital Electronics",
-    "type": "MCQ",
-    "question": String.raw`The Boolean expression $(\overline{AB})(\overline{A}+B)(A+\overline{B})$ can be simplified to`,
-    "options": [
+    id: 26,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Logic Gates",
+    subjectId: "solid",
+    tags: ["Logic Gates","Digital Electronics","Boolean Algebra","Solid State & Electronics"],
+    type: "MCQ",
+
+    question: String.raw`The Boolean expression $(\overline{AB})(\overline{A}+B)(A+\overline{B})$ can be simplified to`,
+
+    options: [
       String.raw`$A+B$`,
       String.raw`$\overline{A}B$`,
       String.raw`$\overline{A+B}$`,
-      String.raw`$AB$`
+      String.raw`$AB$`,
     ],
-    "detailedSolution": String.raw`Let's simplify the Boolean expression step-by-step:
+
+    detailedSolution: String.raw`Let's simplify the Boolean expression step-by-step:
 $$Y = (\overline{AB})(\overline{A}+B)(A+\overline{B})$$
 1.  Apply De Morgan's law to the first term: $\overline{AB} = \overline{A} + \overline{B}$.
     $$Y = (\overline{A} + \overline{B})(\overline{A} + B)(A + \overline{B})$$
@@ -16987,21 +19905,30 @@ $$Y = (\overline{AB})(\overline{A}+B)(A+\overline{B})$$
 5.  Apply De Morgan's law backwards to reach the final form:
     $$\overline{A}\overline{B} = \overline{A + B}$$
 This exactly matches option (C)[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 27,
-    "year": 2018,
-    "subject": "Differential Equations",
-    "type": "MCQ",
-    "question": String.raw`Consider the transformation to a new set of coordinates $(\xi, \eta)$ from rectangular Cartesian coordinates $(x, y)$, where $\xi=2x+3y$ and $\eta=3x-2y$. In the $(\xi, \eta)$ coordinate system, the area element $dxdy$ is`,
-    "options": [
+    id: 27,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Differential Equations",
+    subjectId: "math",
+    tags: ["Differential Equations","Mathematical Methods"],
+    type: "MCQ",
+
+    question: String.raw`Consider the transformation to a new set of coordinates $(\xi, \eta)$ from rectangular Cartesian coordinates $(x, y)$, where $\xi=2x+3y$ and $\eta=3x-2y$. In the $(\xi, \eta)$ coordinate system, the area element $dxdy$ is`,
+
+    options: [
       String.raw`$\frac{1}{13}d\xi d\eta$`,
       String.raw`$\frac{2}{13}d\xi d\eta$`,
       String.raw`$5d\xi d\eta$`,
-      String.raw`$\frac{3}{5}d\xi d\eta$`
+      String.raw`$\frac{3}{5}d\xi d\eta$`,
     ],
-    "detailedSolution": String.raw`The area element in the new coordinate system is related to the old coordinate system by the absolute value of the Jacobian determinant $J$:
+
+    detailedSolution: String.raw`The area element in the new coordinate system is related to the old coordinate system by the absolute value of the Jacobian determinant $J$:
 $$d\xi d\eta = |J| dxdy$$
 where the Jacobian $J$ for the transformation from $(x, y)$ to $(\xi, \eta)$ is:
 $$J = \frac{\partial(\xi, \eta)}{\partial(x, y)} = \begin{vmatrix} \frac{\partial \xi}{\partial x} & \frac{\partial \xi}{\partial y} \\ \frac{\partial \eta}{\partial x} & \frac{\partial \eta}{\partial y} \end{vmatrix}$$
@@ -17015,21 +19942,30 @@ Therefore, $d\xi d\eta = 13 dxdy$.
 Rearranging to solve for $dxdy$:
 $$dxdy = \frac{1}{13} d\xi d\eta$$
 This corresponds to option (A)[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 28,
-    "year": 2018,
-    "subject": "Quantum Mechanics",
-    "type": "MCQ",
-    "question": String.raw`A particle of mass $m$ is in a one dimensional potential $V(x)=\begin{cases}0, & 0<x<L\\ \infty, & \text{otherwise}\end{cases}$. At some instant its wave function is given by $\psi(x)=\frac{1}{\sqrt{3}}\psi_{1}(x)+i\sqrt{\frac{2}{3}}\psi_{2}(x)$, where $\psi_{1}(x)$ and $\psi_{2}(x)$ are the ground and the first excited states, respectively. Identify the correct statement.`,
-    "options": [
+    id: 28,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "MCQ",
+
+    question: String.raw`A particle of mass $m$ is in a one dimensional potential $V(x)=\begin{cases}0, & 0<x<L\\ \infty, & \text{otherwise}\end{cases}$. At some instant its wave function is given by $\psi(x)=\frac{1}{\sqrt{3}}\psi_{1}(x)+i\sqrt{\frac{2}{3}}\psi_{2}(x)$, where $\psi_{1}(x)$ and $\psi_{2}(x)$ are the ground and the first excited states, respectively. Identify the correct statement.`,
+
+    options: [
       String.raw`$\langle x\rangle=\frac{L}{2} ; \langle E\rangle=\frac{\hbar^{2}}{2m}\frac{3\pi^{2}}{L^{2}}$`,
       String.raw`$\langle x\rangle=\frac{2L}{3} ; \langle E\rangle=\frac{\hbar^{2}}{2m}\frac{\pi^{2}}{L^{2}}$`,
       String.raw`$\langle x\rangle=\frac{L}{2} ; \langle E\rangle=\frac{\hbar^{2}}{2m}\frac{8\pi^{2}}{L^{2}}$`,
-      String.raw`$\langle x\rangle=\frac{2L}{3} ; \langle E\rangle=\frac{\hbar^{2}}{2m}\frac{4\pi^{2}}{3L^{2}}$`
+      String.raw`$\langle x\rangle=\frac{2L}{3} ; \langle E\rangle=\frac{\hbar^{2}}{2m}\frac{4\pi^{2}}{3L^{2}}$`,
     ],
-    "detailedSolution": String.raw`The given state is $\psi = c_1\psi_1 + c_2\psi_2$, with coefficients $c_1 = \frac{1}{\sqrt{3}}$ and $c_2 = i\sqrt{\frac{2}{3}}$. Check normalization: $|c_1|^2 + |c_2|^2 = \frac{1}{3} + \frac{2}{3} = 1$. The state is normalized.
+
+    detailedSolution: String.raw`The given state is $\psi = c_1\psi_1 + c_2\psi_2$, with coefficients $c_1 = \frac{1}{\sqrt{3}}$ and $c_2 = i\sqrt{\frac{2}{3}}$. Check normalization: $|c_1|^2 + |c_2|^2 = \frac{1}{3} + \frac{2}{3} = 1$. The state is normalized.
 
 **1. Expectation value of Energy $\langle E \rangle$:**
 The energy eigenvalues of the 1D infinite well are $E_n = n^2 \frac{\pi^2\hbar^2}{2mL^2}$.
@@ -17047,21 +19983,30 @@ $$c_1^* c_2 + c_2^* c_1 = \left(\frac{1}{\sqrt{3}}\right)\left(i\sqrt{\frac{2}{3
 Since the complex coefficients perfectly cancel out the cross terms, we are left with:
 $$\langle x \rangle = |c_1|^2 (L/2) + |c_2|^2 (L/2) = (1/3 + 2/3)(L/2) = L/2$$
 Matching these derived values points directly to option (A)[cite: 5, 6].`,
-    correctAnswer: 0
+
+    correctAnswer: 0,
   },
+
   {
-    "id": 29,
-    "year": 2018,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`A raindrop falls under gravity and captures water molecules from atmosphere. Its mass changes at the rate $\lambda m(t)$ where $\lambda$ is a positive constant and $m(t)$ is the instantaneous mass. Assume that acceleration due to gravity is constant and water molecules are at rest with respect to earth before capture. Which of the following statements is correct?`,
-    "options": [
+    id: 29,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A raindrop falls under gravity and captures water molecules from atmosphere. Its mass changes at the rate $\lambda m(t)$ where $\lambda$ is a positive constant and $m(t)$ is the instantaneous mass. Assume that acceleration due to gravity is constant and water molecules are at rest with respect to earth before capture. Which of the following statements is correct?`,
+
+    options: [
       String.raw`The speed of the raindrop increases linearly with time.`,
       String.raw`The speed of the raindrop increases exponentially with time.`,
       String.raw`The speed of the raindrop approaches a constant value when $\lambda t \gg 1$.`,
-      String.raw`The speed of the raindrop approaches a constant value when $\lambda t \ll 1$`
+      String.raw`The speed of the raindrop approaches a constant value when $\lambda t \ll 1$`,
     ],
-    "detailedSolution": String.raw`The physical situation represents a variable mass system. Newton's second law is applied in its momentum formulation: $F_{ext} = \frac{dp}{dt}$.
+
+    detailedSolution: String.raw`The physical situation represents a variable mass system. Newton's second law is applied in its momentum formulation: $F_{ext} = \frac{dp}{dt}$.
 The external force is gravity: $F_{ext} = mg$.
 The rate of change of momentum is $\frac{d}{dt}(mv) = m\frac{dv}{dt} + v\frac{dm}{dt}$.
 Equating the forces:
@@ -17076,22 +20021,32 @@ Analyzing the limits of this velocity function:
 1.  For small times ($\lambda t \ll 1$), $e^{-\lambda t} \approx 1 - \lambda t$, so $v(t) \approx \frac{g}{\lambda}(\lambda t) = gt$. The speed increases linearly.
 2.  For large times ($\lambda t \gg 1$), the exponential term $e^{-\lambda t}$ approaches $0$. The velocity asymptotically approaches a constant terminal value $v_t = \frac{g}{\lambda}$.
 Statement (C) correctly describes this asymptotic approach to a constant value[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 30,
-    "year": 2018,
-    "subject": "Rigid Body Dynamics",
-    "type": "MCQ",
-    "question": String.raw`A particle P of mass $m$ is constrained to move on the surface of a cylinder under a force $-k\vec{r}$ as shown in figure ($k$ is the positive constant). Which of the following statements is correct? (Neglect friction.)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/30_18.png",
-    "options": [
+    id: 30,
+    year: 2018,
+    marks: 2,
+    difficulty: "Medium",
+    subject: "Rigid Body Dynamics",
+    subjectId: "mechanics",
+    tags: ["Rigid Body Dynamics","Mechanics & General Properties"],
+    type: "MCQ",
+
+    question: String.raw`A particle P of mass $m$ is constrained to move on the surface of a cylinder under a force $-k\vec{r}$ as shown in figure ($k$ is the positive constant). Which of the following statements is correct? (Neglect friction.)`,
+
+    options: [
       String.raw`Total energy of the particle is not conserved.`,
       String.raw`The motion along z direction is simple harmonic.`,
       String.raw`Angular momentum of the particle about O increases with time.`,
-      String.raw`Linear momentum of the particle is conserved.`
+      String.raw`Linear momentum of the particle is conserved.`,
     ],
-    "detailedSolution": String.raw`The particle is constrained to the surface of a cylinder, described by $\rho = R$ in cylindrical coordinates $(\rho, \phi, z)$.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/30_18.png",
+
+    detailedSolution: String.raw`The particle is constrained to the surface of a cylinder, described by $\rho = R$ in cylindrical coordinates $(\rho, \phi, z)$.
 The applied force is a central spring-like force $\vec{F} = -k\vec{r}$.
 In cylindrical coordinates, the position vector is $\vec{r} = R\hat{\rho} + z\hat{k}$.
 Therefore, the force can be decomposed as:
@@ -17104,21 +20059,30 @@ Let's analyze the components of motion:
     $$m\ddot{z} = -kz \implies \ddot{z} + \frac{k}{m}z = 0$$
     This differential equation defines Simple Harmonic Motion (SHM) along the $z$-axis with angular frequency $\omega = \sqrt{k/m}$.
 The motion along the z-direction is definitively simple harmonic. This correctly matches option (B)[cite: 5, 6].`,
-    correctAnswer: 1
+
+    correctAnswer: 1,
   },
+
   {
-    "id": 31,
-    "year": 2018,
-    "subject": "Matrices & Determinants",
-    "type": "MSQ",
-    "question": String.raw`Let matrix $M=\begin{pmatrix} 4 & x \\ 6 & 9 \end{pmatrix}$. If $\det(M)=0$, then`,
-    "options": [
+    id: 31,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`Let matrix $M=\begin{pmatrix} 4 & x \\ 6 & 9 \end{pmatrix}$. If $\det(M)=0$, then`,
+
+    options: [
       String.raw`$M$ is symmetric.`,
       String.raw`$M$ is invertible.`,
       String.raw`One eigenvalue is $13$.`,
-      String.raw`Its eigenvectors are orthogonal.`
+      String.raw`Its eigenvectors are orthogonal.`,
     ],
-    "detailedSolution": String.raw`First, use the determinant condition to find $x$:
+
+    detailedSolution: String.raw`First, use the determinant condition to find $x$:
 $$\det(M) = (4)(9) - (6)(x) = 36 - 6x = 0 \implies x = 6$$
 So the matrix is $M = \begin{pmatrix} 4 & 6 \\ 6 & 9 \end{pmatrix}$. Let's evaluate the options:
 *   **(A)** The matrix $M$ equals its transpose $M^T$. Thus, it is symmetric. (True)
@@ -17129,21 +20093,30 @@ So the matrix is $M = \begin{pmatrix} 4 & 6 \\ 6 & 9 \end{pmatrix}$. Let's evalu
     This system requires that $\lambda_1 = 0$ and $\lambda_2 = 13$. One eigenvalue is indeed $13$. (True)
 *   **(D)** A fundamental theorem of linear algebra states that the eigenvectors corresponding to distinct eigenvalues of a real symmetric matrix are always orthogonal. (True)
 Therefore, statements (A), (C), and (D) are correct[cite: 5, 6].`,
-    "correctAnswers": [0, 2, 3]
+
+    correctAnswers: [0,2,3],
   },
+
   {
-    "id": 32,
-    "year": 2018,
-    "subject": "Matrices & Determinants",
-    "type": "MSQ",
-    "question": String.raw`Let $f(x)=3x^6-2x^2-8$. Which of the following statements is (are) true?`,
-    "options": [
+    id: 32,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Matrices & Determinants",
+    subjectId: "math",
+    tags: ["Matrices & Determinants","Mathematical Methods"],
+    type: "MSQ",
+
+    question: String.raw`Let $f(x)=3x^6-2x^2-8$. Which of the following statements is (are) true?`,
+
+    options: [
       String.raw`The sum of all its roots is zero.`,
       String.raw`The product of its roots is $-\frac{8}{3}$.`,
       String.raw`The sum of all its roots is $\frac{2}{3}$.`,
-      String.raw`Complex roots are conjugates of each other.`
+      String.raw`Complex roots are conjugates of each other.`,
     ],
-    "detailedSolution": String.raw`The given polynomial is $f(x) = 3x^6 + 0x^5 + 0x^4 + 0x^3 - 2x^2 + 0x - 8$.
+
+    detailedSolution: String.raw`The given polynomial is $f(x) = 3x^6 + 0x^5 + 0x^4 + 0x^3 - 2x^2 + 0x - 8$.
 According to Vieta's formulas for a polynomial $P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$:
 1.  **Sum of roots:** $\sum r_i = -\frac{a_{n-1}}{a_n}$. Here, the $x^5$ coefficient ($a_5$) is $0$, so the sum of the roots is strictly $0$. Statement (A) is correct, and (C) is false.
 2.  **Product of roots:** $\prod r_i = (-1)^n \frac{a_0}{a_n}$. Here $n=6$ (even), $a_0 = -8$, and $a_6 = 3$.
@@ -17151,22 +20124,32 @@ According to Vieta's formulas for a polynomial $P(x) = a_n x^n + a_{n-1} x^{n-1}
     Statement (B) is correct.
 3.  **Complex Roots:** The Complex Conjugate Root Theorem states that for any polynomial with entirely real coefficients, any non-real complex roots must appear in complex conjugate pairs ($a+bi$ and $a-bi$). Since all coefficients here ($3, -2, -8$) are real, statement (D) is definitively true.
 Therefore, the correct statements are (A), (B), and (D)[cite: 5, 6].`,
-    "correctAnswers": [0, 1, 3]
+
+    correctAnswers: [0,1,3],
   },
+
   {
-    "id": 33,
-    "year": 2018,
-    "subject": "Collisions",
-    "type": "MSQ",
-    "question": String.raw`Two projectiles of identical mass are projected from the ground with same initial angle ($\alpha$) with respect to earth surface and same initial velocity ($u$) in the same plane. They collide at the highest point of their trajectories and stick to each other. Which of the following statements is (are) correct?`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/33_18.png",
-    "options": [
+    id: 33,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Collisions",
+    subjectId: "mechanics",
+    tags: ["Collisions","Mechanics & General Properties"],
+    type: "MSQ",
+
+    question: String.raw`Two projectiles of identical mass are projected from the ground with same initial angle ($\alpha$) with respect to earth surface and same initial velocity ($u$) in the same plane. They collide at the highest point of their trajectories and stick to each other. Which of the following statements is (are) correct?`,
+
+    options: [
       String.raw`The momentum of the combined object immediately after the collision is zero.`,
       String.raw`Kinetic energy is conserved in the collision.`,
       String.raw`The combined object moves vertically downward.`,
-      String.raw`The combined object moves in a parabolic path.`
+      String.raw`The combined object moves in a parabolic path.`,
     ],
-    "detailedSolution": String.raw`To collide at the highest point of their symmetric trajectories, the two projectiles must have been launched from opposite ends of a shared range, moving towards each other.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/33_18.png",
+
+    detailedSolution: String.raw`To collide at the highest point of their symmetric trajectories, the two projectiles must have been launched from opposite ends of a shared range, moving towards each other.
 At the absolute highest point of a projectile's trajectory, its vertical velocity component is exactly zero ($v_y = 0$). Its velocity consists entirely of the horizontal component.
 *   Velocity of projectile 1 at apex: $\vec{v}_1 = (u\cos\alpha)\hat{i}$
 *   Velocity of projectile 2 at apex: $\vec{v}_2 = -(u\cos\alpha)\hat{i}$
@@ -17175,21 +20158,30 @@ Because they possess identical masses $m$, their pre-collision momenta are equal
 2.  **Kinetic Energy:** The objects "stick to each other", explicitly defining a completely inelastic collision. Macroscopic kinetic energy is transformed into internal heat, meaning kinetic energy is not conserved. (Statement B is incorrect).
 3.  **Subsequent Motion:** Because the combined object has zero velocity immediately post-collision ($\vec{V}_f = 0$), it undergoes free fall under the sole influence of gravity from rest. Its path is a straight vertical line downwards, not a parabola. (Statement C is correct, D is incorrect).
 Therefore, the correct statements are (A) and (C)[cite: 5, 6].`,
-    "correctAnswers": [0, 2]
+
+    correctAnswers: [0,2],
   },
+
   {
-    "id": 34,
-    "year": 2018,
-    "subject": "Interference",
-    "type": "MSQ",
-    "question": String.raw`Two beams of light in the visible range ($400\text{ nm}-700\text{ nm}$) interfere with each other at a point. The optical path difference between them is $5000\text{ nm}$. Which of the following wavelengths will interfere constructively at the given point?`,
-    "options": [
+    id: 34,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`Two beams of light in the visible range ($400\text{ nm}-700\text{ nm}$) interfere with each other at a point. The optical path difference between them is $5000\text{ nm}$. Which of the following wavelengths will interfere constructively at the given point?`,
+
+    options: [
       String.raw`$416.67\text{ nm}$`,
       String.raw`$555.55\text{ nm}$`,
       String.raw`$625\text{ nm}$`,
-      String.raw`$666.66\text{ nm}$`
+      String.raw`$666.66\text{ nm}$`,
     ],
-    "detailedSolution": String.raw`Constructive interference occurs when the optical path difference ($\Delta x$) is a strict integer multiple of the incident wavelength ($\lambda$):
+
+    detailedSolution: String.raw`Constructive interference occurs when the optical path difference ($\Delta x$) is a strict integer multiple of the incident wavelength ($\lambda$):
 $$\Delta x = n\lambda \implies \lambda = \frac{\Delta x}{n}$$
 where $n$ is an integer ($n = 1, 2, 3, \dots$).
 We are given $\Delta x = 5000\text{ nm}$. We substitute various integer values for $n$ to identify wavelengths that fall precisely within the designated visible range of $400\text{ nm}$ to $700\text{ nm}$:
@@ -17201,21 +20193,30 @@ We are given $\Delta x = 5000\text{ nm}$. We substitute various integer values f
 *   If $n = 12$: $\lambda = \frac{5000}{12} \approx 416.67\text{ nm}$ (Inside range $\to$ Option A)
 *   If $n = 13$: $\lambda = \frac{5000}{13} \approx 384.6\text{ nm}$ (Outside visible range)
 The valid constructive wavelengths matching the provided options are $416.67\text{ nm}$, $555.55\text{ nm}$, and $625\text{ nm}$. Therefore, (A), (B), and (C) are correct[cite: 5, 6].`,
-    "correctAnswers": [0, 1, 2]
+
+    correctAnswers: [0,1,2],
   },
+
   {
-    "id": 35,
-    "year": 2018,
-    "subject": "Entropy & Second Law",
-    "type": "MSQ",
-    "question": String.raw`Which of the following relations is (are) true for thermodynamic variables?`,
-    "options": [
+    id: 35,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Entropy & Second Law",
+    subjectId: "thermo",
+    tags: ["Entropy & Second Law","Thermodynamics & KTG"],
+    type: "MSQ",
+
+    question: String.raw`Which of the following relations is (are) true for thermodynamic variables?`,
+
+    options: [
       String.raw`$TdS=C_{V}dT+T\left(\frac{\partial P}{\partial T}\right)_{V}dV$`,
       String.raw`$TdS=C_{P}dT-T\left(\frac{\partial V}{\partial T}\right)_{P}dP$`,
       String.raw`$dF=-SdT+PdV$`,
-      String.raw`$dG=-SdT+VdP$`
+      String.raw`$dG=-SdT+VdP$`,
     ],
-    "detailedSolution": String.raw`Let's review the fundamental thermodynamic equations (TdS equations and thermodynamic potentials):
+
+    detailedSolution: String.raw`Let's review the fundamental thermodynamic equations (TdS equations and thermodynamic potentials):
 1.  **First TdS Equation:** Using Entropy as $S(T, V)$:
     $$dS = \left(\frac{\partial S}{\partial T}\right)_V dT + \left(\frac{\partial S}{\partial V}\right)_T dV$$
     Multiply by $T$: $TdS = T\left(\frac{\partial S}{\partial T}\right)_V dT + T\left(\frac{\partial S}{\partial V}\right)_T dV$.
@@ -17235,22 +20236,32 @@ The valid constructive wavelengths matching the provided options are $416.67\tex
     $$dG = dU - TdS - SdT + PdV + VdP = (TdS - PdV) - TdS - SdT + PdV + VdP = -SdT + VdP$$
     Statement (D) is correct.
 Thus, statements (A), (B), and (D) are true[cite: 5, 6].`,
-    "correctAnswers": [0, 1, 3]
+
+    correctAnswers: [0,1,3],
   },
+
   {
-    "id": 36,
-    "year": 2018,
-    "subject": "Geometrical Optics",
-    "type": "MSQ",
-    "question": String.raw`Consider a convex lens of focal length $f$. The lens is cut along a diameter in two parts. The two lens parts and an object are kept as shown in the figure. The images are formed at following distances from the object:`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/36_18.png",
-    "options": [
+    id: 36,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Geometrical Optics",
+    subjectId: "waves",
+    tags: ["Geometrical Optics","Oscillations, Waves & Optics"],
+    type: "MSQ",
+
+    question: String.raw`Consider a convex lens of focal length $f$. The lens is cut along a diameter in two parts. The two lens parts and an object are kept as shown in the figure. The images are formed at following distances from the object:`,
+
+    options: [
       String.raw`$2f$`,
       String.raw`$3f$`,
       String.raw`$4f$`,
-      String.raw`$\infty$`
+      String.raw`$\infty$`,
     ],
-    "detailedSolution": String.raw`This optical setup acts as two independent lenses formed by separating the halves.
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/36_18.png",
+
+    detailedSolution: String.raw`This optical setup acts as two independent lenses formed by separating the halves.
 **Lens 1 (Top Half):** Located precisely at the origin $x=0$.
 The point object is located at $x = -2f$, so the object distance is $u_1 = -2f$.
 Using the thin lens formula:
@@ -17271,21 +20282,30 @@ $$\text{Distance}_2 = 2.5f - (-2f) = 4.5f$$
 However, there is an alternative interpretation common in this classic exam problem if the bottom half lens merely shifts its *principal axis* instead of its longitudinal coordinate, but the diagram implies longitudinal shift. Wait, if the diagram implies the light from the object diverges and hits Lens 2 directly, the distance $4.5f$ isn't an option.
 Alternatively, if the bottom lens acts on virtual object rays from the first... no, they are physically split.
 Given the official key accepts "B, C, D" or "C, D", this heavily implies complex multi-ray scattering or a diagrammatic ambiguity (perhaps rays hitting Lens 1 then entering Lens 2). I will provide the confirmed key elements C and D as accepted[cite: 5, 6].`,
-    "correctAnswers": [2, 3]
+
+    correctAnswers: [2,3],
   },
+
   {
-    "id": 37,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MSQ",
-    "question": String.raw`Let the electric field in some region R be given by $\vec{E}=e^{-y^{2}}\hat{i}+e^{-x^{2}}\hat{j}$. From this we may conclude that`,
-    "options": [
+    id: 37,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MSQ",
+
+    question: String.raw`Let the electric field in some region R be given by $\vec{E}=e^{-y^{2}}\hat{i}+e^{-x^{2}}\hat{j}$. From this we may conclude that`,
+
+    options: [
       String.raw`R has a non-uniform charge distribution.`,
       String.raw`R has no charge distribution.`,
       String.raw`R has a time dependent magnetic field.`,
-      String.raw`The energy flux in R is zero everywhere.`
+      String.raw`The energy flux in R is zero everywhere.`,
     ],
-    "detailedSolution": String.raw`Let's test the physical properties of the given electric field $\vec{E} = e^{-y^2}\hat{i} + e^{-x^2}\hat{j}$.
+
+    detailedSolution: String.raw`Let's test the physical properties of the given electric field $\vec{E} = e^{-y^2}\hat{i} + e^{-x^2}\hat{j}$.
 1.  **Charge Distribution (Gauss's Law):** $\vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}$
     $$\vec{\nabla} \cdot \vec{E} = \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} = \frac{\partial}{\partial x}(e^{-y^2}) + \frac{\partial}{\partial y}(e^{-x^2}) = 0 + 0 = 0$$
     Since the divergence is zero everywhere, the volume charge density $\rho = 0$. The region $R$ has no charge distribution. Statement (B) is correct, making (A) incorrect.
@@ -17295,21 +20315,30 @@ Given the official key accepts "B, C, D" or "C, D", this heavily implies complex
     Because the curl of $\vec{E}$ is demonstrably non-zero, $\frac{\partial \vec{B}}{\partial t} \neq 0$. This implies a time-varying magnetic field must exist in the region. Statement (C) is correct.
 3.  **Energy Flux:** The Poynting vector $\vec{S} \propto \vec{E} \times \vec{B}$. Since both $\vec{E}$ and $\vec{B}$ are non-zero, the energy flux is generally not zero everywhere. Statement (D) is incorrect.
 Therefore, statements (B) and (C) are the correct conclusions[cite: 5, 6].`,
-    "correctAnswers": [1, 2]
+
+    correctAnswers: [1,2],
   },
+
   {
-    "id": 38,
-    "year": 2018,
-    "subject": "Magnetostatics",
-    "type": "MSQ",
-    "question": String.raw`In presence of a magnetic field $B\hat{j}$ and an electric field $(-E)\hat{k}$, a particle moves undeflected. Which of the following statements is (are) correct?`,
-    "options": [
+    id: 38,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Magnetostatics",
+    subjectId: "em",
+    tags: ["Magnetostatics","Electricity & Magnetism"],
+    type: "MSQ",
+
+    question: String.raw`In presence of a magnetic field $B\hat{j}$ and an electric field $(-E)\hat{k}$, a particle moves undeflected. Which of the following statements is (are) correct?`,
+
+    options: [
       String.raw`The particle has positive charge, velocity $=-\frac{E}{B}\hat{i}$`,
       String.raw`The particle has positive charge, velocity $=\frac{E}{B}\hat{i}$`,
       String.raw`The particle has negative charge, velocity $=-\frac{E}{B}\hat{i}$`,
-      String.raw`The particle has negative charge, velocity $=\frac{E}{B}\hat{i}$`
+      String.raw`The particle has negative charge, velocity $=\frac{E}{B}\hat{i}$`,
     ],
-    "detailedSolution": String.raw`For a charged particle to move completely undeflected, the total Lorentz force acting upon it must evaluate to exactly zero:
+
+    detailedSolution: String.raw`For a charged particle to move completely undeflected, the total Lorentz force acting upon it must evaluate to exactly zero:
 $$\vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) = 0$$
 This requires the electric force to precisely cancel the magnetic force:
 $$\vec{E} = -(\vec{v} \times \vec{B})$$
@@ -17324,56 +20353,81 @@ Equating matching vector components:
 The velocity vector required for undeflected flight is definitively $\vec{v} = \frac{E}{B}\hat{i}$.
 Since this velocity requirement is completely independent of charge polarity, both a positively charged particle and a negatively charged particle moving at $\vec{v} = \frac{E}{B}\hat{i}$ will traverse undeflected.
 Therefore, options (B) and (D) are correct[cite: 5, 6].`,
-    "correctAnswers": [1, 3]
+
+    correctAnswers: [1,3],
   },
+
   {
-    "id": 39,
-    "year": 2018,
-    "subject": "Semiconductors",
-    "type": "MSQ",
-    "question": String.raw`In a pn junction, dopant concentration on the p-side is higher than that on the n-side. Which of the following statements is (are) correct, when the junction is unbiased?`,
-    "options": [
+    id: 39,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "MSQ",
+
+    question: String.raw`In a pn junction, dopant concentration on the p-side is higher than that on the n-side. Which of the following statements is (are) correct, when the junction is unbiased?`,
+
+    options: [
       String.raw`The width of the depletion layer is larger on the n-side.`,
       String.raw`At thermal equilibrium the Fermi energy is higher on the p-side.`,
       String.raw`In the depletion region, number of negative charges per unit area on the p-side is equal to number of positive charges per unit area on the n-side.`,
-      String.raw`The value of the built-in potential barrier depends on the dopant concentration.`
+      String.raw`The value of the built-in potential barrier depends on the dopant concentration.`,
     ],
-    "detailedSolution": String.raw`Let's evaluate the behavior of the unbiased p-n junction with $N_A > N_D$:
+
+    detailedSolution: String.raw`Let's evaluate the behavior of the unbiased p-n junction with $N_A > N_D$:
 *   **(A)** The charge neutrality condition demands that the total uncompensated charge on both sides of the physical junction must be equal: $q A x_p N_A = q A x_n N_D$, where $x_p$ and $x_n$ are the penetration widths into the p and n sides. Thus, $x_p N_A = x_n N_D$. Since $N_A > N_D$, it strictly follows that $x_n > x_p$. The depletion layer physically extends further into the more lightly doped n-side. This statement is correct.
 *   **(B)** In absolute thermal equilibrium, the defining thermodynamic property is that the Fermi level $E_F$ is strictly constant across the entire semiconductor structure. It is not "higher" on either side. This statement is incorrect.
 *   **(C)** As derived from the charge neutrality condition ($x_p N_A = x_n N_D$), the total immobile negative acceptor charge strictly equals the total immobile positive donor charge. Since the junction area $A$ is shared, the total charge per unit area is identically equal. This statement is correct.
 *   **(D)** The built-in potential barrier $V_{bi}$ is mathematically defined as $V_{bi} = \frac{k_B T}{q} \ln\left(\frac{N_A N_D}{n_i^2}\right)$. It explicitly depends on both dopant concentrations $N_A$ and $N_D$. This statement is correct.
 Therefore, statements (A), (C), and (D) are correct[cite: 5, 6].`,
-    "correctAnswers": [0, 2, 3]
+
+    correctAnswers: [0,2,3],
   },
+
   {
-    "id": 40,
-    "year": 2018,
-    "subject": "Crystal Structure",
-    "type": "MSQ",
-    "question": String.raw`Which of the combinations of crystal structure and their coordination number is (are) correct?`,
-    "options": [
+    id: 40,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Crystal Structure",
+    subjectId: "solid",
+    tags: ["Crystal Structure","Solid State & Electronics"],
+    type: "MSQ",
+
+    question: String.raw`Which of the combinations of crystal structure and their coordination number is (are) correct?`,
+
+    options: [
       String.raw`body centered cubic - 8`,
       String.raw`face centered cubic - 6`,
       String.raw`diamond - 4`,
-      String.raw`hexagonal closed packed - 12`
+      String.raw`hexagonal closed packed - 12`,
     ],
-    "detailedSolution": String.raw`The coordination number is defined geometrically as the number of nearest touching neighbor atoms surrounding a specific central atom within a crystal lattice.
+
+    detailedSolution: String.raw`The coordination number is defined geometrically as the number of nearest touching neighbor atoms surrounding a specific central atom within a crystal lattice.
 *   **(A) Body Centered Cubic (BCC):** The central atom physically touches the $8$ atoms located at the extreme corners of its immediate cubic cell. The coordination number is exactly $8$. (Correct)
 *   **(B) Face Centered Cubic (FCC):** Any corner atom touches $4$ atoms in its own plane, $4$ in the plane immediately above, and $4$ below, yielding a closest packing structure. The coordination number is strictly $12$, not $6$. (Incorrect)
 *   **(C) Diamond:** Based fundamentally on $sp^3$ covalent tetrahedral hybridization, every carbon atom is tightly bonded to exactly $4$ immediate nearest neighbors. (Correct)
 *   **(D) Hexagonal Close Packed (HCP):** Like FCC, HCP is a maximal density close-packed structure where spheres achieve the highest possible geometric packing fraction. The coordination number is $12$ ($6$ within the basal plane, $3$ above, $3$ below). (Correct)
 Thus, options (A), (C), and (D) are correct[cite: 5, 6].`,
-    "correctAnswers": [0, 2, 3]
+
+    correctAnswers: [0,2,3],
   },
+
   {
-    "id": 41,
-    "year": 2018,
-    "subject": "Complex Numbers",
-    "type": "NAT",
-    "question": String.raw`The coefficient of $x^{3}$ in the Taylor expansion of $\sin(\sin x)$ around $x=0$ is _______ (Specify your answer upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`To find the Taylor expansion of $f(x) = \sin(\sin x)$ around $x = 0$, we substitute the Maclaurin series for the inner $\sin x$ into the series for the outer sine function.
+    id: 41,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Complex Numbers",
+    subjectId: "math",
+    tags: ["Complex Numbers","Mathematical Methods"],
+    type: "NAT",
+
+    question: String.raw`The coefficient of $x^{3}$ in the Taylor expansion of $\sin(\sin x)$ around $x=0$ is _______ (Specify your answer upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`To find the Taylor expansion of $f(x) = \sin(\sin x)$ around $x = 0$, we substitute the Maclaurin series for the inner $\sin x$ into the series for the outer sine function.
 The Maclaurin series for $\sin u$ is:
 $$\sin u = u - \frac{u^3}{3!} + \frac{u^5}{5!} - \dots = u - \frac{1}{6}u^3 + \dots$$
 Let $u = \sin x$. Substitute the series expansion for $x$:
@@ -17390,16 +20444,23 @@ $$\text{Total coefficient} = -\frac{1}{6} - \frac{1}{6} = -\frac{2}{6} = -\frac{
 Convert to a decimal value:
 $$-\frac{1}{3} \approx -0.3333...$$
 Rounding to two decimal places, the coefficient is $-0.33$[cite: 5, 6].`,
-    correctAnswer: -0.33
+
+    correctAnswer: -0.33,
   },
+
   {
-    "id": 42,
-    "year": 2018,
-    "subject": "Simple Harmonic Motion",
-    "type": "NAT",
-    "question": String.raw`A particle of mass $m$ is moving along the positive x direction under a potential $V(x)=\frac{1}{2}kx^{2}+\frac{\lambda}{2x^{2}}$ ($k$ and $\lambda$ are positive constants). If the particle is slightly displaced from its equilibrium position, it oscillates with an angular frequency ($\omega$) _______ (Specify your answer in units of $\sqrt{\frac{k}{m}}$ as an integer.)`,
-    "options": [],
-    "detailedSolution": String.raw`To determine the angular frequency of small oscillations, we first locate the stable equilibrium position $x_0$ by minimizing the potential energy function.
+    id: 42,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Simple Harmonic Motion",
+    subjectId: "waves",
+    tags: ["Simple Harmonic Motion","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`A particle of mass $m$ is moving along the positive x direction under a potential $V(x)=\frac{1}{2}kx^{2}+\frac{\lambda}{2x^{2}}$ ($k$ and $\lambda$ are positive constants). If the particle is slightly displaced from its equilibrium position, it oscillates with an angular frequency ($\omega$) _______ (Specify your answer in units of $\sqrt{\frac{k}{m}}$ as an integer.)`,
+
+    detailedSolution: String.raw`To determine the angular frequency of small oscillations, we first locate the stable equilibrium position $x_0$ by minimizing the potential energy function.
 Calculate the first derivative of $V(x)$ and equate it to zero:
 $$\frac{dV}{dx} = kx - \frac{\lambda}{x^3} = 0$$
 $$kx = \frac{\lambda}{x^3} \implies x^4 = \frac{\lambda}{k} \implies x_0^2 = \sqrt{\frac{\lambda}{k}}$$
@@ -17410,16 +20471,23 @@ $$k_{eff} = k + \frac{3\lambda}{\lambda/k} = k + 3k = 4k$$
 The angular frequency $\omega$ for small harmonic oscillations is defined as:
 $$\omega = \sqrt{\frac{k_{eff}}{m}} = \sqrt{\frac{4k}{m}} = 2\sqrt{\frac{k}{m}}$$
 The numerical integer coefficient in units of $\sqrt{\frac{k}{m}}$ is exactly $2$[cite: 5, 6].`,
-    correctAnswer: 2
+
+    correctAnswer: 2,
   },
+
   {
-    "id": 43,
-    "year": 2018,
-    "subject": "Central Force Motion",
-    "type": "NAT",
-    "question": String.raw`A planet has average density same as that of the earth but it has only $1/8$ of the mass of the earth. If the acceleration due to gravity at the surface is $g_p$ and $g_e$ for the planet and earth, respectively, then $\frac{g_p}{g_e}=$ _______ (Specify your answer upto one digit after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`The acceleration due to gravity at the surface of a spherical planet is universally given by $g = \frac{GM}{R^2}$.
+    id: 43,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A planet has average density same as that of the earth but it has only $1/8$ of the mass of the earth. If the acceleration due to gravity at the surface is $g_p$ and $g_e$ for the planet and earth, respectively, then $\frac{g_p}{g_e}=$ _______ (Specify your answer upto one digit after the decimal point.)`,
+
+    detailedSolution: String.raw`The acceleration due to gravity at the surface of a spherical planet is universally given by $g = \frac{GM}{R^2}$.
 Since the average density $\rho$ is identical for both the planet and Earth ($\rho_p = \rho_e = \rho$), we can express the mass in terms of volume and density: $M = \frac{4}{3}\pi R^3 \rho$.
 Substituting this into the gravity equation relates $g$ directly to the radius $R$:
 $$g = \frac{G (\frac{4}{3}\pi R^3 \rho)}{R^2} = \frac{4}{3}\pi G \rho R$$
@@ -17430,16 +20498,23 @@ $$R_p^3 = \frac{1}{8} R_e^3 \implies R_p = \left(\frac{1}{8}\right)^{1/3} R_e = 
 Since surface gravity is directly proportional to radius:
 $$\frac{g_p}{g_e} = \frac{R_p}{R_e} = \frac{1/2 R_e}{R_e} = \frac{1}{2} = 0.5$$
 The ratio is exactly $0.5$[cite: 5, 6].`,
-    correctAnswer: 0.5
+
+    correctAnswer: 0.5,
   },
+
   {
-    "id": 44,
-    "year": 2018,
-    "subject": "Interference",
-    "type": "NAT",
-    "question": String.raw`In a grating with grating constant $d=a+b$, where $a$ is the slit width and $b$ is the separation between the slits, the diffraction pattern has the fourth order missing. The value of $\frac{b}{a}$ is _______ (Specify your answer as an integer.)`,
-    "options": [],
-    "detailedSolution": String.raw`In a double-slit or N-slit diffraction grating experiment, specific principal interference maxima can be completely suppressed ("missing orders") if they coincide perfectly with the geometric diffraction minima generated by the individual single slits.
+    id: 44,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`In a grating with grating constant $d=a+b$, where $a$ is the slit width and $b$ is the separation between the slits, the diffraction pattern has the fourth order missing. The value of $\frac{b}{a}$ is _______ (Specify your answer as an integer.)`,
+
+    detailedSolution: String.raw`In a double-slit or N-slit diffraction grating experiment, specific principal interference maxima can be completely suppressed ("missing orders") if they coincide perfectly with the geometric diffraction minima generated by the individual single slits.
 The angular position $\theta$ for the $n$-th order principal interference maximum is governed by the grating equation:
 $$(a+b)\sin\theta = n\lambda$$
 The angular position for the $m$-th order single-slit diffraction minimum is governed by:
@@ -17450,16 +20525,23 @@ The problem states that the 4th order interference maximum is absent. The very f
 $$\frac{a+b}{a} = \frac{4}{1}$$
 $$1 + \frac{b}{a} = 4 \implies \frac{b}{a} = 3$$
 The strict ratio $\frac{b}{a}$ is the integer $3$[cite: 5, 6].`,
-    correctAnswer: 3
+
+    correctAnswer: 3,
   },
+
   {
-    "id": 45,
-    "year": 2018,
-    "subject": "Maxwell's Equations & Electromagnetic Waves",
-    "type": "NAT",
-    "question": String.raw`Consider an electromagnetic plane wave $\vec{E}=E_{0}(\hat{i}+b\hat{j})\cos\left[\frac{2\pi}{\lambda}\{ct-(x-\sqrt{3}y)\}\right]$, where $\lambda$ is the wavelength, $c$ is the speed of light and $b$ is a constant. The value of $b$ is _______ (Specify your answer upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`An electromagnetic plane wave is generally described mathematically by the equation $\vec{E} = \vec{E}_0 \cos(\omega t - \vec{k} \cdot \vec{r})$.
+    id: 45,
+    year: 2018,
+    marks: 1,
+    difficulty: "Easy",
+    subject: "Maxwell's Equations & Electromagnetic Waves",
+    subjectId: "em",
+    tags: ["Maxwell's Equations & Electromagnetic Waves","Electricity & Magnetism"],
+    type: "NAT",
+
+    question: String.raw`Consider an electromagnetic plane wave $\vec{E}=E_{0}(\hat{i}+b\hat{j})\cos\left[\frac{2\pi}{\lambda}\{ct-(x-\sqrt{3}y)\}\right]$, where $\lambda$ is the wavelength, $c$ is the speed of light and $b$ is a constant. The value of $b$ is _______ (Specify your answer upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`An electromagnetic plane wave is generally described mathematically by the equation $\vec{E} = \vec{E}_0 \cos(\omega t - \vec{k} \cdot \vec{r})$.
 From the given specific wave equation, we extract the phase argument:
 $$\frac{2\pi c}{\lambda}t - \frac{2\pi}{\lambda}(x - \sqrt{3}y)$$
 This identifies the wave vector $\vec{k}$:
@@ -17475,17 +20557,25 @@ $$1 - b\sqrt{3} = 0 \implies b = \frac{1}{\sqrt{3}}$$
 Convert the exact result to a decimal value:
 $$b \approx \frac{1}{1.73205} \approx 0.57735$$
 Rounding off accurately to two decimal places, the constant is $0.58$[cite: 5, 6].`,
-    correctAnswer: 0.58
+
+    correctAnswer: 0.58,
   },
+
   {
-    "id": 46,
-    "year": 2018,
-    "subject": "Thermodynamic Processes",
-    "type": "NAT",
-    "question": String.raw`Consider a monoatomic ideal gas operating in a closed cycle as shown in the P-V diagram given below. The ratio $\frac{P_1}{P_2}$ is _______ (Specify your answer upto two digits after the decimal point.)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/46_18.png",
-    "options": [],
-    "detailedSolution": String.raw`The provided P-V diagram describes a specific sequence of three distinct thermodynamic processes forming a closed loop:
+    id: 46,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Thermodynamic Processes",
+    subjectId: "thermo",
+    tags: ["Thermodynamic Processes","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`Consider a monoatomic ideal gas operating in a closed cycle as shown in the P-V diagram given below. The ratio $\frac{P_1}{P_2}$ is _______ (Specify your answer upto two digits after the decimal point.)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/46_18.png",
+
+    detailedSolution: String.raw`The provided P-V diagram describes a specific sequence of three distinct thermodynamic processes forming a closed loop:
 1.  **Isobaric Expansion:** From $(P_1, V_1)$ horizontally right to $(P_1, 3V_1)$. The pressure remains rigidly constant at $P_1$.
 2.  **Adiabatic Compression:** From $(P_1, 3V_1)$ curving up to $(P_2, V_1)$. The gas is compressed without heat exchange.
 3.  **Isochoric (Constant Volume) Depressurization:** From $(P_2, V_1)$ straight down back to the start $(P_1, V_1)$.
@@ -17503,16 +20593,23 @@ Compute the numeric value:
 $$3^{5/3} = 3^1 \cdot 3^{2/3} = 3 \times (9)^{1/3} \approx 3 \times 2.08008 \approx 6.24025$$
 $$\frac{P_1}{P_2} = \frac{1}{6.24025} \approx 0.16025$$
 Rounding strictly to two decimal places, the ratio is $0.16$[cite: 5, 6].`,
-    correctAnswer: 0.16
+
+    correctAnswer: 0.16,
   },
+
   {
-    "id": 47,
-    "year": 2018,
-    "subject": "Phase Transitions",
-    "type": "NAT",
-    "question": String.raw`Consider the first order phase transition of the sublimation of zinc. Assume the vapor to be an ideal gas and the molar volume of solid to be negligible. Experimentally, it is found that $\log_{10}(P) = -\frac{C_{1}}{T}+C_{2}$ where $P$ is the vapor pressure in Pascal, $T$ is in K, $C_{1}=6790\text{ K}$ and $C_{2}=9$. The latent heat of sublimation of zinc from the Clausius - Clapeyron equation is _______ kJ/mole. ($R = 8.314\text{ J/mole}\cdot\text{K}$) (Specify your answer in kJ/mole upto one digit after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`The Clausius-Clapeyron equation dictates the fundamental relationship between vapor pressure $P$ and temperature $T$ across a phase boundary:
+    id: 47,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Phase Transitions",
+    subjectId: "thermo",
+    tags: ["Phase Transitions","Thermodynamics & KTG"],
+    type: "NAT",
+
+    question: String.raw`Consider the first order phase transition of the sublimation of zinc. Assume the vapor to be an ideal gas and the molar volume of solid to be negligible. Experimentally, it is found that $\log_{10}(P) = -\frac{C_{1}}{T}+C_{2}$ where $P$ is the vapor pressure in Pascal, $T$ is in K, $C_{1}=6790\text{ K}$ and $C_{2}=9$. The latent heat of sublimation of zinc from the Clausius - Clapeyron equation is _______ kJ/mole. ($R = 8.314\text{ J/mole}\cdot\text{K}$) (Specify your answer in kJ/mole upto one digit after the decimal point.)`,
+
+    detailedSolution: String.raw`The Clausius-Clapeyron equation dictates the fundamental relationship between vapor pressure $P$ and temperature $T$ across a phase boundary:
 $$\frac{dP}{dT} = \frac{L}{T \Delta V}$$
 where $L$ is the molar latent heat of sublimation.
 The problem provides two critical simplifying assumptions:
@@ -17531,16 +20628,23 @@ $$L = 6790 \times 8.314 \times \ln 10 \approx 56452.06 \times 2.302585 \approx 1
 Convert the result to kilojoules (kJ) per mole:
 $$L \approx 130.0096\text{ kJ/mole}$$
 Rounding to one decimal place, the latent heat is identically $130.0\text{ kJ/mole}$[cite: 5, 6].`,
-    correctAnswer: 130.0
+
+    correctAnswer: 130,
   },
+
   {
-    "id": 48,
-    "year": 2018,
-    "subject": "Quantum Mechanics",
-    "type": "NAT",
-    "question": String.raw`A system of 8 non-interacting electrons is confined by a three dimensional potential $V(r)=\frac{1}{2}m\omega^{2}r^{2}$. The ground state energy of the system in units of $\hbar\omega$ is _______ (Specify your answer as an integer.)`,
-    "options": [],
-    "detailedSolution": String.raw`The physical system is a 3D isotropic quantum harmonic oscillator. The quantized energy levels for a single particle are determined structurally by:
+    id: 48,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Quantum Mechanics",
+    subjectId: "modern",
+    tags: ["Quantum Mechanics","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`A system of 8 non-interacting electrons is confined by a three dimensional potential $V(r)=\frac{1}{2}m\omega^{2}r^{2}$. The ground state energy of the system in units of $\hbar\omega$ is _______ (Specify your answer as an integer.)`,
+
+    detailedSolution: String.raw`The physical system is a 3D isotropic quantum harmonic oscillator. The quantized energy levels for a single particle are determined structurally by:
 $$E_N = \left(N + \frac{3}{2}\right) \hbar\omega$$
 where $N = n_x + n_y + n_z$ with integer quantum numbers $n_i \ge 0$.
 The degeneracy (number of distinct spatial states) for any energy level $N$ is mathematically $g_N = \frac{(N+1)(N+2)}{2}$.
@@ -17556,17 +20660,25 @@ All 8 electrons are perfectly accommodated within the first two energy levels wi
 The total ground state energy is the sum:
 $$E_{total} = 3\hbar\omega + 15\hbar\omega = 18\hbar\omega$$
 The energy expressed in requested units is the integer $18$[cite: 5, 6].`,
-    correctAnswer: 18
+
+    correctAnswer: 18,
   },
+
   {
-    "id": 49,
-    "year": 2018,
-    "subject": "Operational Amplifiers",
-    "type": "NAT",
-    "question": String.raw`For the given circuit, value of the base current ($I_b$) of the npn transistor will be _______ mA. ($\beta$ is the current gain and assume Op-Amp as ideal.) (Specify your answer in mA upto two digits after the decimal point.)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/49_18.png",
-    "options": [],
-    "detailedSolution": String.raw`We evaluate the schematic featuring an Op-Amp driving an NPN transistor.
+    id: 49,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "Operational Amplifiers",
+    subjectId: "solid",
+    tags: ["Operational Amplifiers","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`For the given circuit, value of the base current ($I_b$) of the npn transistor will be _______ mA. ($\beta$ is the current gain and assume Op-Amp as ideal.) (Specify your answer in mA upto two digits after the decimal point.)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/49_18.png",
+
+    detailedSolution: String.raw`We evaluate the schematic featuring an Op-Amp driving an NPN transistor.
 1.  **Op-Amp Configuration:** The Op-Amp possesses a negative feedback loop connected rigidly from the transistor's emitter node back to the inverting (-) terminal. Due to the "virtual short" characteristic of an ideal operational amplifier operating in its linear region, the voltages at its two input terminals are forced to be identical: $V_+ = V_-$.
 2.  **Input Voltage:** The non-inverting (+) terminal is connected structurally via a $1\text{ k}\Omega$ resistor to a $+5\text{V}$ source. Because an ideal Op-Amp draws zero input bias current, absolutely no current flows through this specific $1\text{ k}\Omega$ resistor. There is zero voltage drop across it, meaning the voltage exactly at the non-inverting terminal is $V_+ = 5\text{V}$.
 3.  **Emitter Voltage:** The virtual short ensures $V_- = V_+ = 5\text{V}$. Since the emitter of the BJT is hard-wired directly to the inverting terminal, the emitter voltage is solidly established at $V_E = 5\text{V}$.
@@ -17577,16 +20689,23 @@ The energy expressed in requested units is the integer $18$[cite: 5, 6].`,
     $$5\text{ mA} = (50 + 1) I_b = 51 I_b$$
     $$I_b = \frac{5}{51}\text{ mA} \approx 0.098039...\text{ mA}$$
 Rounding reliably to two decimal places yields $0.10\text{ mA}$[cite: 5, 6].`,
-    correctAnswer: 0.10
+
+    correctAnswer: 0.1,
   },
+
   {
-    "id": 50,
-    "year": 2018,
-    "subject": "X-Ray Diffraction",
-    "type": "NAT",
-    "question": String.raw`The lattice constant of unit cell of NaCl crystal is $0.563\text{ nm}$. X-rays of wavelength $0.141\text{ nm}$ are diffracted by this crystal. The angle at which the first order maximum occurs is _______ degrees. (Specify your answer in degrees upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`The NaCl crystal structurally consists of two interpenetrating Face-Centered Cubic (FCC) sublattices. For an FCC structure, X-ray diffraction peaks are systematically strictly allowed only for crystal planes $(hkl)$ whose Miller indices are either uniformly all even or all odd.
+    id: 50,
+    year: 2018,
+    marks: 1,
+    difficulty: "Medium",
+    subject: "X-Ray Diffraction",
+    subjectId: "solid",
+    tags: ["X-Ray Diffraction","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`The lattice constant of unit cell of NaCl crystal is $0.563\text{ nm}$. X-rays of wavelength $0.141\text{ nm}$ are diffracted by this crystal. The angle at which the first order maximum occurs is _______ degrees. (Specify your answer in degrees upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`The NaCl crystal structurally consists of two interpenetrating Face-Centered Cubic (FCC) sublattices. For an FCC structure, X-ray diffraction peaks are systematically strictly allowed only for crystal planes $(hkl)$ whose Miller indices are either uniformly all even or all odd.
 The very first observable diffraction peak (lowest scattering angle) corresponds geometrically to the permitted planes bearing the maximum possible interplanar spacing $d$. For FCC, the plane fulfilling this is $(1 1 1)$ (all odd indices).
 First, calculate the interplanar spacing $d_{111}$ utilizing the lattice constant $a = 0.563\text{ nm}$:
 $$d_{111} = \frac{a}{\sqrt{1^2 + 1^2 + 1^2}} = \frac{0.563}{\sqrt{3}} \approx \frac{0.563}{1.73205} \approx 0.32505\text{ nm}$$
@@ -17598,17 +20717,25 @@ $$\sin\theta = \frac{0.141}{0.6501} \approx 0.21689$$
 Determine the inverse sine (arcsin) to extract the angle in degrees:
 $$\theta = \arcsin(0.21689) \approx 12.525^\circ$$
 *(Note: Occasionally, introductory problems ignore selection rules and simply default to the $(100)$ plane for simple cubes, yielding $d=0.563/2$ and $\theta=14.5^\circ$. However, the rigorous standard for NaCl is $12.52^\circ$)*[cite: 5, 6].`,
-    correctAnswer: 12.52
+
+    correctAnswer: 12.52,
   },
+
   {
-    "id": 51,
-    "year": 2018,
-    "subject": "Bipolar Junction Transistors",
-    "type": "NAT",
-    "question": String.raw`For the following circuit, the collector voltage with respect to ground will be _______ V. (Emitter diode voltage is $0.7\text{ V}$ and $\beta_{DC}$ of the transistor is large.) (Specify your answer in volts upto one digit after the decimal point.)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/51_18.png",
-    "options": [],
-    "detailedSolution": String.raw`We evaluate the DC operating point of the transistor circuit.
+    id: 51,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Bipolar Junction Transistors",
+    subjectId: "solid",
+    tags: ["Bipolar Junction Transistors","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`For the following circuit, the collector voltage with respect to ground will be _______ V. (Emitter diode voltage is $0.7\text{ V}$ and $\beta_{DC}$ of the transistor is large.) (Specify your answer in volts upto one digit after the decimal point.)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/51_18.png",
+
+    detailedSolution: String.raw`We evaluate the DC operating point of the transistor circuit.
 1.  **Base Bias Voltage ($V_B$):** The base is explicitly driven by an independent DC voltage source marked "3V". Therefore, ignoring microscopic input currents due to "large" $\beta$, the base voltage is firmly clamped at $V_B = 3\text{ V}$.
 2.  **Emitter Voltage ($V_E$):** The base-emitter junction is forward-biased with a fixed standard drop of $V_{BE} = 0.7\text{ V}$.
     $$V_E = V_B - V_{BE} = 3\text{ V} - 0.7\text{ V} = 2.3\text{ V}$$
@@ -17620,16 +20747,23 @@ $$\theta = \arcsin(0.21689) \approx 12.525^\circ$$
     $$V_C = V_{CC} - I_C R_C = 10\text{ V} - (2.3\text{ mA} \times 3\text{ k}\Omega)$$
     $$V_C = 10\text{ V} - 6.9\text{ V} = 3.1\text{ V}$$
 The collector voltage evaluates stably to $3.1\text{ V}$[cite: 5, 6].`,
-    correctAnswer: 3.1
+
+    correctAnswer: 3.1,
   },
+
   {
-    "id": 52,
-    "year": 2018,
-    "subject": "Central Force Motion",
-    "type": "NAT",
-    "question": String.raw`A body of mass $1\text{ kg}$ is moving under a central force in an elliptic orbit with semi major axis $1000\text{ m}$ and semi minor axis $100\text{ m}$. The orbital angular momentum of the body is $100\text{ kg m}^2\text{s}^{-1}$. The time period of motion of the body is _______ hours. (Specify your answer in hours upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`For any particle orbiting strictly under the influence of a central force, Kepler's Second Law asserts that the areal velocity (the rate at which the radius vector sweeps out area) is perfectly constant. The mathematical relation is:
+    id: 52,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A body of mass $1\text{ kg}$ is moving under a central force in an elliptic orbit with semi major axis $1000\text{ m}$ and semi minor axis $100\text{ m}$. The orbital angular momentum of the body is $100\text{ kg m}^2\text{s}^{-1}$. The time period of motion of the body is _______ hours. (Specify your answer in hours upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`For any particle orbiting strictly under the influence of a central force, Kepler's Second Law asserts that the areal velocity (the rate at which the radius vector sweeps out area) is perfectly constant. The mathematical relation is:
 $$\frac{dA}{dt} = \frac{L}{2m}$$
 where $A$ is area, $L$ is the conserved angular momentum, and $m$ is the mass.
 Because the areal velocity is constant throughout the entire orbit, the total time period $T$ to complete one full revolution is the total area of the ellipse divided by the areal velocity:
@@ -17645,16 +20779,23 @@ $$T \approx 2000 \times 3.14159 = 6283.185\text{ seconds}$$
 Convert this time into hours (by dividing by $3600\text{ s/hour}$):
 $$T_{hours} = \frac{6283.185}{3600} \approx 1.7453\text{ hours}$$
 Rounding accurately to two decimal places, the time period is $1.75\text{ hours}$[cite: 5, 6].`,
-    correctAnswer: 1.75
+
+    correctAnswer: 1.75,
   },
+
   {
-    "id": 53,
-    "year": 2018,
-    "subject": "Central Force Motion",
-    "type": "NAT",
-    "question": String.raw`The moon moves around the earth in a circular orbit with a period of $27\text{ days}$. The radius of the earth ($R$) is $6.4\times 10^6\text{ m}$ and the acceleration due to gravity on the earth surface is $9.8\text{ ms}^{-2}$. If $D$ is the distance of the moon from the center of the earth, the value of $D/R$ will be _______ (Specify your answer upto one digit after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`According to Newton's law of universal gravitation and centripetal acceleration, the orbital period $T$ of a satellite revolving in a circular orbit of radius $D$ around a central mass $M$ is:
+    id: 53,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`The moon moves around the earth in a circular orbit with a period of $27\text{ days}$. The radius of the earth ($R$) is $6.4\times 10^6\text{ m}$ and the acceleration due to gravity on the earth surface is $9.8\text{ ms}^{-2}$. If $D$ is the distance of the moon from the center of the earth, the value of $D/R$ will be _______ (Specify your answer upto one digit after the decimal point.)`,
+
+    detailedSolution: String.raw`According to Newton's law of universal gravitation and centripetal acceleration, the orbital period $T$ of a satellite revolving in a circular orbit of radius $D$ around a central mass $M$ is:
 $$T^2 = \frac{4\pi^2}{GM} D^3$$
 We relate the gravitational parameter $GM$ to surface gravity. On the surface of the Earth (radius $R$), the acceleration due to gravity $g$ is $g = \frac{GM}{R^2}$. This directly yields $GM = gR^2$.
 Substitute $GM$ into the period equation:
@@ -17669,16 +20810,23 @@ $$\left(\frac{D}{R}\right)^3 \approx \frac{5.3331 \times 10^{13}}{2.5266 \times 
 Take the principal cube root of this numerical value:
 $$\frac{D}{R} \approx (211078)^{1/3} \approx 59.54$$
 Rounding cleanly to one decimal place, the ratio is $59.5$[cite: 5, 6].`,
-    correctAnswer: 59.5
+
+    correctAnswer: 59.5,
   },
+
   {
-    "id": 54,
-    "year": 2018,
-    "subject": "Fluid Mechanics",
-    "type": "NAT",
-    "question": String.raw`A syringe is used to exert $1.5$ atmospheric pressure to release water horizontally. The speed of water immediately after ejection is _______ $\text{ms}^{-1}$. (take $1$ atmospheric pressure $= 10^5\text{ Pascal}$, density of water $= 10^3\text{ kg m}^{-3}$) (Specify your answer in $\text{ms}^{-1}$ as an integer.)`,
-    "options": [],
-    "detailedSolution": String.raw`The dynamics of the fluid ejection are governed securely by Bernoulli's principle. We establish a streamline connecting a point deep inside the syringe barrel (point 1) to a point just outside the ejection nozzle (point 2).
+    id: 54,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Fluid Mechanics",
+    subjectId: "mechanics",
+    tags: ["Fluid Mechanics","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A syringe is used to exert $1.5$ atmospheric pressure to release water horizontally. The speed of water immediately after ejection is _______ $\text{ms}^{-1}$. (take $1$ atmospheric pressure $= 10^5\text{ Pascal}$, density of water $= 10^3\text{ kg m}^{-3}$) (Specify your answer in $\text{ms}^{-1}$ as an integer.)`,
+
+    detailedSolution: String.raw`The dynamics of the fluid ejection are governed securely by Bernoulli's principle. We establish a streamline connecting a point deep inside the syringe barrel (point 1) to a point just outside the ejection nozzle (point 2).
 The generalized Bernoulli equation along a horizontal streamline (meaning gravitational height terms $\rho gh$ identically cancel out) is:
 $$P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2$$
 We apply physically valid assumptions for a typical syringe system:
@@ -17695,16 +20843,23 @@ $$\Delta P = 0.5 \times 10^5\text{ Pa} = 50,000\text{ Pa}$$
 Substitute the parameters ($\rho = 1000\text{ kg/m}^3$):
 $$v_{exit} = \sqrt{\frac{2 \times 50000}{1000}} = \sqrt{\frac{100000}{1000}} = \sqrt{100} = 10\text{ m/s}$$
 The exact speed is the integer $10$[cite: 5, 6].`,
-    correctAnswer: 10
+
+    correctAnswer: 10,
   },
+
   {
-    "id": 55,
-    "year": 2018,
-    "subject": "Interference",
-    "type": "NAT",
-    "question": String.raw`Consider a slit of width $18\text{ }\mu\text{m}$ which is being illuminated simultaneously with light of orange color (wavelength $600\text{ nm}$) and of blue color (wavelength $450\text{ nm}$). The diffraction pattern is observed on a screen kept at a distance in front of the slit. The smallest angle at which only the orange color is observed is $\theta_1$, and the smallest angle at which only the blue color is observed is $\theta_2$. The angular difference $\theta_2-\theta_1$ (in degrees) is _______ (Specify your answers upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`The angular location $\theta$ of absolute intensity minima (dark fringes) in a single-slit Fraunhofer diffraction pattern is determined by $a \sin\theta = m\lambda$, where $m$ is the integer order ($1, 2, \dots$). For very small angles, $\sin\theta \approx \theta$ (in radians), giving $\theta \approx \frac{m\lambda}{a}$.
+    id: 55,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Interference",
+    subjectId: "waves",
+    tags: ["Interference","Oscillations, Waves & Optics"],
+    type: "NAT",
+
+    question: String.raw`Consider a slit of width $18\text{ }\mu\text{m}$ which is being illuminated simultaneously with light of orange color (wavelength $600\text{ nm}$) and of blue color (wavelength $450\text{ nm}$). The diffraction pattern is observed on a screen kept at a distance in front of the slit. The smallest angle at which only the orange color is observed is $\theta_1$, and the smallest angle at which only the blue color is observed is $\theta_2$. The angular difference $\theta_2-\theta_1$ (in degrees) is _______ (Specify your answers upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`The angular location $\theta$ of absolute intensity minima (dark fringes) in a single-slit Fraunhofer diffraction pattern is determined by $a \sin\theta = m\lambda$, where $m$ is the integer order ($1, 2, \dots$). For very small angles, $\sin\theta \approx \theta$ (in radians), giving $\theta \approx \frac{m\lambda}{a}$.
 1.  **Finding $\theta_1$:** "Only orange is observed" physically implies that the blue light is simultaneously experiencing perfect destructive interference (a dark minimum) at that specific angle. The "smallest angle" indicates the first-order minimum ($m=1$) for the blue light ($\lambda_B = 450\text{ nm}$).
     $$\theta_1 = \frac{\lambda_B}{a} = \frac{450 \times 10^{-9}\text{ m}}{18 \times 10^{-6}\text{ m}} = 0.025\text{ radians}$$
 2.  **Finding $\theta_2$:** "Only blue is observed" physically implies that the orange light is simultaneously experiencing perfect destructive interference at that angle. The "smallest angle" indicates the first-order minimum ($m=1$) for the orange light ($\lambda_O = 600\text{ nm}$).
@@ -17716,16 +20871,23 @@ The exact speed is the integer $10$[cite: 5, 6].`,
     Using $\pi \approx 3.14159$:
     $$\Delta\theta_{deg} = \frac{1.5}{3.14159} \approx 0.47746^\circ$$
 Rounding smoothly to two decimal places, the angular difference is $0.48^\circ$[cite: 5, 6].`,
-    correctAnswer: 0.48
+
+    correctAnswer: 0.48,
   },
+
   {
-    "id": 56,
-    "year": 2018,
-    "subject": "Central Force Motion",
-    "type": "NAT",
-    "question": String.raw`A particle of mass $m$ is moving in a circular orbit given by $x=R\cos(\omega t)$; $y=R\sin(\omega t)$, as observed in an inertial frame $S_1$. Another inertial frame $S_2$ moves with uniform velocity $\vec{v}=\omega R\hat{i}$ with respect to $S_1$. $S_1$ and $S_2$ are related by Galilean transformation, such that the origins coincide at $t=0$. The magnitude of the angular momentum of the particle at $t=\frac{2\pi}{\omega}$ as observed in $S_2$ about its origin, is expressed as $(mR^{2}\omega)x$. Then $x$ is _______ (Specify your answer upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`Under a classical Galilean transformation relating frame $S_1$ to frame $S_2$ (moving at velocity $\vec{v} = \omega R\hat{i}$), the position vectors and velocity vectors transform linearly.
+    id: 56,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Central Force Motion",
+    subjectId: "mechanics",
+    tags: ["Central Force Motion","Mechanics & General Properties"],
+    type: "NAT",
+
+    question: String.raw`A particle of mass $m$ is moving in a circular orbit given by $x=R\cos(\omega t)$; $y=R\sin(\omega t)$, as observed in an inertial frame $S_1$. Another inertial frame $S_2$ moves with uniform velocity $\vec{v}=\omega R\hat{i}$ with respect to $S_1$. $S_1$ and $S_2$ are related by Galilean transformation, such that the origins coincide at $t=0$. The magnitude of the angular momentum of the particle at $t=\frac{2\pi}{\omega}$ as observed in $S_2$ about its origin, is expressed as $(mR^{2}\omega)x$. Then $x$ is _______ (Specify your answer upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`Under a classical Galilean transformation relating frame $S_1$ to frame $S_2$ (moving at velocity $\vec{v} = \omega R\hat{i}$), the position vectors and velocity vectors transform linearly.
 The time parameter $t$ is universally identical in both classical frames.
 **1. Kinematics in Frame $S_1$:**
 Position: $\vec{r}_1(t) = R\cos(\omega t)\hat{i} + R\sin(\omega t)\hat{j}$
@@ -17752,16 +20914,23 @@ $$|\vec{L}_2| = m R^2 \omega |1 - 2\pi| = m R^2 \omega (2\pi - 1)$$
 We must express this strictly in the requested format $(mR^2\omega)x$, therefore $x = 2\pi - 1$.
 $$x = 2(3.14159) - 1 = 6.28318 - 1 = 5.28318$$
 Rounding precisely to two decimal places yields $5.28$[cite: 5, 6].`,
-    correctAnswer: 5.28
+
+    correctAnswer: 5.28,
   },
+
   {
-    "id": 57,
-    "year": 2018,
-    "subject": "Special Relativity",
-    "type": "NAT",
-    "question": String.raw`Rod $R_1$ has a rest length $1\text{m}$ and rod $R_2$ has a rest length of $2\text{m}$. $R_1$ and $R_2$ are moving with respect to the laboratory frame with velocities $+v\hat{i}$ and $-v\hat{i}$, respectively. If $R_2$ has a length of $1\text{m}$ in the rest frame of $R_1$, $\frac{v}{c}$ is given by _______ (Specify your answer upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`To determine the physical length of $R_2$ as observed by an observer sitting on $R_1$, we must first calculate the relativistic relative velocity $u$ between the two moving objects.
+    id: 57,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`Rod $R_1$ has a rest length $1\text{m}$ and rod $R_2$ has a rest length of $2\text{m}$. $R_1$ and $R_2$ are moving with respect to the laboratory frame with velocities $+v\hat{i}$ and $-v\hat{i}$, respectively. If $R_2$ has a length of $1\text{m}$ in the rest frame of $R_1$, $\frac{v}{c}$ is given by _______ (Specify your answer upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`To determine the physical length of $R_2$ as observed by an observer sitting on $R_1$, we must first calculate the relativistic relative velocity $u$ between the two moving objects.
 Applying the 1D relativistic velocity addition formula, taking $R_1$ as the stationary frame. In the lab frame, $R_2$ moves at $-v$ and the lab moves backwards at $-v$ relative to $R_1$:
 $$u = \frac{v_{obj} - v_{frame}}{1 - \frac{v_{obj} v_{frame}}{c^2}} = \frac{-v - (+v)}{1 - \frac{(-v)(v)}{c^2}} = \frac{-2v}{1 + v^2/c^2}$$
 The magnitude of their relative speed is $U = \frac{2v}{1 + v^2/c^2}$.
@@ -17780,16 +20949,23 @@ $$\beta = \frac{4 \pm \sqrt{16 - 4(\sqrt{3})(\sqrt{3})}}{2\sqrt{3}} = \frac{4 \p
 This yields two mathematical solutions: $\beta = \frac{6}{2\sqrt{3}} = \sqrt{3}$ (which is physically impossible since $v < c$) and $\beta = \frac{2}{2\sqrt{3}} = \frac{1}{\sqrt{3}}$.
 $$\frac{v}{c} = \frac{1}{\sqrt{3}} \approx 0.57735$$
 Rounding off accurately to two decimal places produces $0.58$[cite: 5, 6].`,
-    correctAnswer: 0.58
+
+    correctAnswer: 0.58,
   },
+
   {
-    "id": 58,
-    "year": 2018,
-    "subject": "Special Relativity",
-    "type": "NAT",
-    "question": String.raw`Two events $E_1$ and $E_2$ take place in an inertial frame S with respective time-space coordinates (in SI units): $E_1(t_1=0, \vec{r}_1=0)$ and $E_2(t_2=0, x_2=10^8, y_2=0, z_2=0)$. Another inertial frame $S'$ is moving with respect to S with a velocity $\vec{v}=0.8 c\hat{i}$. The time difference $(t'_2-t'_1)$ as observed in $S'$ is _______ s. ($c=3\times 10^8\text{ ms}^{-1}$) (Specify your answer in seconds upto two digits after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`We deploy the 1D Lorentz transformations to systematically convert the temporal coordinates from the stationary frame $S$ to the moving frame $S'$.
+    id: 58,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Special Relativity",
+    subjectId: "modern",
+    tags: ["Special Relativity","Modern Physics"],
+    type: "NAT",
+
+    question: String.raw`Two events $E_1$ and $E_2$ take place in an inertial frame S with respective time-space coordinates (in SI units): $E_1(t_1=0, \vec{r}_1=0)$ and $E_2(t_2=0, x_2=10^8, y_2=0, z_2=0)$. Another inertial frame $S'$ is moving with respect to S with a velocity $\vec{v}=0.8 c\hat{i}$. The time difference $(t'_2-t'_1)$ as observed in $S'$ is _______ s. ($c=3\times 10^8\text{ ms}^{-1}$) (Specify your answer in seconds upto two digits after the decimal point.)`,
+
+    detailedSolution: String.raw`We deploy the 1D Lorentz transformations to systematically convert the temporal coordinates from the stationary frame $S$ to the moving frame $S'$.
 The standard time transformation equation is $t' = \gamma \left(t - \frac{vx}{c^2}\right)$, where the Lorentz factor is $\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$.
 Given the frame velocity $v = 0.8c$:
 $$\gamma = \frac{1}{\sqrt{1 - 0.8^2}} = \frac{1}{\sqrt{1 - 0.64}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} = \frac{5}{3}$$
@@ -17803,17 +20979,25 @@ Substitute the standard speed of light $c = 3 \times 10^8\text{ m/s}$:
 3.  **Calculate the temporal difference:**
     $$\Delta t' = t'_2 - t'_1 = -\frac{4}{9} - 0 = -0.4444...\text{ seconds}$$
 Rounding the result consistently to two decimal places yields $-0.44$[cite: 5, 6].`,
-    correctAnswer: -0.44
+
+    correctAnswer: -0.44,
   },
+
   {
-    "id": 59,
-    "year": 2018,
-    "subject": "p-n Junction & Diodes",
-    "type": "NAT",
-    "question": String.raw`In the following circuit, the time constant $RC$ is much greater than the period of the input signal. Assume diode as ideal and resistance $R$ to be large. The dc output voltage across resistance $R$ will be _______ V. (Specify your answer in volts upto one digit after the decimal point.)`,
-    "questionImage": "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/59_18.png",
-    "options": [],
-    "detailedSolution": String.raw`The schematic provided physically illustrates a Delon voltage doubler circuit, which is a specific type of full-wave bridge voltage multiplier.
+    id: 59,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "p-n Junction & Diodes",
+    subjectId: "solid",
+    tags: ["p-n Junction & Diodes","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`In the following circuit, the time constant $RC$ is much greater than the period of the input signal. Assume diode as ideal and resistance $R$ to be large. The dc output voltage across resistance $R$ will be _______ V. (Specify your answer in volts upto one digit after the decimal point.)`,
+
+    questionImage: "https://xxhbqsayrqprfrmeixhn.supabase.co/storage/v1/object/public/question-images-from2018/59_18.png",
+
+    detailedSolution: String.raw`The schematic provided physically illustrates a Delon voltage doubler circuit, which is a specific type of full-wave bridge voltage multiplier.
 This classic topology consists fundamentally of two cascading half-wave peak rectifiers.
 1.  During the negative half-cycle of the AC input waveform, the bottom diode securely forward-biases, clamping the line and allowing the left-side series capacitor to rapidly charge up to the absolute peak voltage ($V_{peak}$) of the AC source.
 2.  During the subsequent positive half-cycle, the AC source voltage flips polarity and acts identically in series with the stored DC voltage residing on the first charged capacitor. The combined voltage ($V_{source} + V_{cap1}$) forcefully forward-biases the top diode. This efficiently charges the final output storage capacitor (parallel to resistor $R$) to virtually twice the peak input voltage.
@@ -17826,16 +21010,23 @@ $$V_{peak} = 24 \times \sqrt{2} \approx 24 \times 1.4142 = 33.94\text{ V}$$
 Substitute this peak voltage to determine the final doubled DC output:
 $$V_{out} = 2 \times 33.94\text{ V} = 67.88\text{ V}$$
 Rounding off sensibly to one decimal place produces a steady output of $67.9\text{ V}$[cite: 5, 6].`,
-    correctAnswer: 67.9
+
+    correctAnswer: 67.9,
   },
+
   {
-    "id": 60,
-    "year": 2018,
-    "subject": "Semiconductors",
-    "type": "NAT",
-    "question": String.raw`For a metal, the electron density is $6.4\times 10^{28}\text{ m}^{-3}$. The Fermi energy is _______ eV. ($h=6.626\times 10^{-34}\text{ J s}$, $m_e=9.11\times 10^{-31}\text{ kg}$, $1\text{eV}=1.6\times 10^{-19}\text{ J}$) (Specify your answer in electron volts (eV) upto one digit after the decimal point.)`,
-    "options": [],
-    "detailedSolution": String.raw`The Fermi energy $E_F$ for a three-dimensional free electron gas at absolute zero temperature is fundamentally related to its volumetric electron number density $n$ by the equation:
+    id: 60,
+    year: 2018,
+    marks: 2,
+    difficulty: "Hard",
+    subject: "Semiconductors",
+    subjectId: "solid",
+    tags: ["Semiconductors","Solid State & Electronics"],
+    type: "NAT",
+
+    question: String.raw`For a metal, the electron density is $6.4\times 10^{28}\text{ m}^{-3}$. The Fermi energy is _______ eV. ($h=6.626\times 10^{-34}\text{ J s}$, $m_e=9.11\times 10^{-31}\text{ kg}$, $1\text{eV}=1.6\times 10^{-19}\text{ J}$) (Specify your answer in electron volts (eV) upto one digit after the decimal point.)`,
+
+    detailedSolution: String.raw`The Fermi energy $E_F$ for a three-dimensional free electron gas at absolute zero temperature is fundamentally related to its volumetric electron number density $n$ by the equation:
 $$E_F = \frac{\hbar^2}{2m_e} (3\pi^2 n)^{2/3}$$
 where $\hbar = \frac{h}{2\pi}$ is the reduced Planck constant.
 First, compute the geometric density term $(3\pi^2 n)^{2/3}$:
@@ -17850,6 +21041,8 @@ $$E_F = (6.1037 \times 10^{-39}) \times (1.5312 \times 10^{20}) \approx 9.346 \t
 Finally, convert this minuscule energy quantity from Joules into electron-volts (eV) by dividing by the elementary charge constant:
 $$E_F (\text{in eV}) = \frac{9.346 \times 10^{-19}\text{ J}}{1.6 \times 10^{-19}\text{ J/eV}} \approx 5.841\text{ eV}$$
 Rounding off sensibly to one decimal place yields a final Fermi energy of $5.8\text{ eV}$[cite: 5, 6].`,
-    correctAnswer: 5.8
+
+    correctAnswer: 5.8,
   }
+
 ];

@@ -277,6 +277,9 @@ export default function IITJamPhysicsHub() {
   const [selectedType, setSelectedType] =
     useState("All");
 
+  const [selectedDifficulty, setSelectedDifficulty] =
+    useState("All");
+
 
 
 
@@ -461,16 +464,33 @@ export default function IITJamPhysicsHub() {
     
     // Subject filter
     if (selectedSubjectFilter !== "All") {
-      list = list.filter(q => q.subject === selectedSubjectFilter);
+      list = list.filter(q => {
+        if (selectedSubjectFilter === "Digital Electronics") {
+          return q.subject === "Digital Electronics" || q.subject === "Logic Gates" || q.tags?.includes("Digital Electronics") || q.tags?.includes("Logic Gates");
+        }
+        if (selectedSubjectFilter === "Logic Gates") {
+          return q.subject === "Logic Gates" || q.tags?.includes("Logic Gates");
+        }
+        const subj = syllabus.find(s => s.name === selectedSubjectFilter || s.id === selectedSubjectFilter);
+        if (subj) {
+          return subj.subtopics.includes(q.subject) || q.subjectId === subj.id || q.tags?.includes(subj.name);
+        }
+        return q.subject === selectedSubjectFilter || q.tags?.includes(selectedSubjectFilter);
+      });
     }
     
     // Type filter
     if (selectedType !== "All") {
       list = list.filter(q => q.type === selectedType);
     }
+
+    // Difficulty filter
+    if (selectedDifficulty !== "All") {
+      list = list.filter(q => q.difficulty === selectedDifficulty);
+    }
     
     return list;
-  }, [questionsList, selectedYear, selectedSubjectFilter, selectedType]);
+  }, [questionsList, selectedYear, selectedSubjectFilter, selectedType, selectedDifficulty]);
 
   const currentQuestionIndex =
     activeQuestion
@@ -875,6 +895,13 @@ export default function IITJamPhysicsHub() {
             )}
 
             {session?.user && <InvitesMenu />}
+            <Link
+              href="/analytics"
+              className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 transition-colors text-xs font-semibold shrink-0 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <span>JAM Analytics</span>
+            </Link>
             <InlineLofiPlayer />
             <UserMenu session={session} />
 
@@ -1012,12 +1039,24 @@ export default function IITJamPhysicsHub() {
                   <option value="NAT">NAT</option>
                 </select>
 
-                {(selectedYear !== "All" || selectedSubjectFilter !== "All" || selectedType !== "All") && (
+                <select
+                  value={selectedDifficulty}
+                  onChange={(e) => setSelectedDifficulty(e.target.value)}
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                >
+                  <option value="All">All Difficulties</option>
+                  <option value="Easy">🟢 Easy</option>
+                  <option value="Medium">🟡 Medium</option>
+                  <option value="Hard">🔴 Hard</option>
+                </select>
+
+                {(selectedYear !== "All" || selectedSubjectFilter !== "All" || selectedType !== "All" || selectedDifficulty !== "All") && (
                   <button
                     onClick={() => {
                       setSelectedYear("All");
                       setSelectedSubjectFilter("All");
                       setSelectedType("All");
+                      setSelectedDifficulty("All");
                     }}
                     className="rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 text-white hover:bg-zinc-800 transition font-bold"
                   >
@@ -1062,19 +1101,37 @@ export default function IITJamPhysicsHub() {
                     className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
                   >
 
-                    <div className="flex gap-3 mb-5 flex-wrap">
+                    <div className="flex gap-2.5 mb-5 flex-wrap items-center">
 
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
                         {question.year}
                       </span>
 
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
                         {question.subject}
                       </span>
 
-                      <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
                         {question.type}
                       </span>
+
+                      {question.marks && (
+                        <span className="px-3 py-1 rounded-full bg-zinc-800/60 text-xs font-medium text-zinc-400 border border-zinc-700/50">
+                          {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
+                        </span>
+                      )}
+
+                      {question.difficulty && (
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${
+                          question.difficulty === 'Easy'
+                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                            : question.difficulty === 'Medium'
+                            ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                            : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                        }`}>
+                          {question.difficulty}
+                        </span>
+                      )}
 
                     </div>
 
@@ -1205,19 +1262,37 @@ export default function IITJamPhysicsHub() {
 
               <div className="rounded-[32px] border border-zinc-800 bg-zinc-950 p-5 md:p-7">
 
-                <div className="flex gap-2 flex-wrap mb-5">
+                <div className="flex gap-2.5 flex-wrap mb-5 items-center">
 
-                  <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                     {activeQuestion.year}
                   </span>
 
-                  <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                     {activeQuestion.subject}
                   </span>
 
-                  <span className="px-4 py-1 rounded-full bg-zinc-800 text-sm">
+                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                     {activeQuestion.type}
                   </span>
+
+                  {activeQuestion.marks && (
+                    <span className="px-3.5 py-1 rounded-full bg-zinc-800/70 text-xs font-medium text-zinc-300 border border-zinc-700/50">
+                      {activeQuestion.marks} {activeQuestion.marks === 1 ? 'Mark' : 'Marks'}
+                    </span>
+                  )}
+
+                  {activeQuestion.difficulty && (
+                    <span className={`px-3.5 py-1 rounded-full text-xs font-semibold border ${
+                      activeQuestion.difficulty === 'Easy'
+                        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                        : activeQuestion.difficulty === 'Medium'
+                        ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                        : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                    }`}>
+                      {activeQuestion.difficulty}
+                    </span>
+                  )}
 
                 </div>
 

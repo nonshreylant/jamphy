@@ -139,7 +139,7 @@ export default function IITJamPrepPlatform() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex items-center justify-center px-10 py-4 rounded-[2rem] bg-white/[0.04] backdrop-blur-[40px] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] transition-all hover:bg-white/[0.08]"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 sm:gap-3 p-1.5 rounded-[2.5rem] bg-white/[0.04] backdrop-blur-[40px] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]"
         >
           <Link
             href="/questions"
@@ -151,10 +151,22 @@ export default function IITJamPrepPlatform() {
                 navigateWithTransition("/questions");
               }
             }}
-            className="flex items-center gap-2 text-white/90 text-sm font-medium tracking-wide"
+            className="flex items-center gap-2 text-white px-5 sm:px-7 py-3 rounded-[2rem] bg-white/10 hover:bg-white/20 transition-all text-xs sm:text-sm font-medium tracking-wide shadow-sm"
           >
             Explore Questions
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </Link>
+
+          <Link
+            href="/analytics"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateWithTransition("/analytics");
+            }}
+            className="flex items-center gap-1.5 sm:gap-2 text-cyan-300 hover:text-white px-4 sm:px-6 py-3 rounded-[2rem] hover:bg-white/10 transition-all text-xs sm:text-sm font-semibold tracking-wide"
+          >
+            <span>📊</span>
+            JAM Analytics
           </Link>
         </motion.div>
       </div>
