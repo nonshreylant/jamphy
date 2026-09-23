@@ -927,7 +927,7 @@ export default function IITJamPhysicsHub() {
             {session?.user && <InvitesMenu />}
             <Link
               href="/analytics"
-              className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 transition-colors text-xs font-semibold shrink-0 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+              className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white transition-colors text-xs font-medium shrink-0"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
               <span>JAM Analytics</span>
@@ -1227,9 +1227,9 @@ export default function IITJamPhysicsHub() {
                   className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
                 >
                   <option value="All">All Difficulties</option>
-                  <option value="Easy">🟢 Easy</option>
-                  <option value="Medium">🟡 Medium</option>
-                  <option value="Hard">🔴 Hard</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
                 </select>
 
                 <button
@@ -1291,13 +1291,7 @@ export default function IITJamPhysicsHub() {
                       )}
 
                       {question.difficulty && (
-                        <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${
-                          question.difficulty === 'Easy'
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                            : question.difficulty === 'Medium'
-                            ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                            : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                        }`}>
+                        <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-zinc-800 text-zinc-400">
                           {question.difficulty}
                         </span>
                       )}
@@ -1451,13 +1445,7 @@ export default function IITJamPhysicsHub() {
                   )}
 
                   {activeQuestion.difficulty && (
-                    <span className={`px-3.5 py-1 rounded-full text-xs font-semibold border ${
-                      activeQuestion.difficulty === 'Easy'
-                        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                        : activeQuestion.difficulty === 'Medium'
-                        ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                        : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                    }`}>
+                    <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-zinc-800 text-zinc-400">
                       {activeQuestion.difficulty}
                     </span>
                   )}
