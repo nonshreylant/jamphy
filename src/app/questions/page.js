@@ -1137,11 +1137,11 @@ export default function IITJamPhysicsHub() {
                 <span>←</span> Back to Browse
               </button>
 
-              <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-10 text-white">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-8 text-white">
                 {selectedSubject ? selectedSubject.name : `IIT JAM ${selectedBrowseYear}`}
               </h2>
 
-              <div className="flex flex-wrap gap-4 mb-10">
+              <div className="flex flex-wrap gap-3 mb-8">
 
                 {selectedSubject && (
                   <select
@@ -1149,7 +1149,7 @@ export default function IITJamPhysicsHub() {
                     onChange={(e) =>
                       setSelectedYear(e.target.value)
                     }
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
                   >
 
                     <option value="All">
@@ -1174,7 +1174,7 @@ export default function IITJamPhysicsHub() {
                     onChange={(e) =>
                       setSelectedSubtopic(e.target.value)
                     }
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
                   >
 
                     <option value="All">
@@ -1199,7 +1199,7 @@ export default function IITJamPhysicsHub() {
                   <select
                     value={selectedSubjectFilter}
                     onChange={(e) => setSelectedSubjectFilter(e.target.value)}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
                   >
                     <option value="All">All Subjects</option>
                     {syllabus.map((s) => (
@@ -1213,7 +1213,7 @@ export default function IITJamPhysicsHub() {
                   onChange={(e) =>
                     setSelectedType(e.target.value)
                   }
-                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
                 >
                   <option value="All">All Types</option>
                   <option value="MCQ">MCQ</option>
@@ -1224,7 +1224,7 @@ export default function IITJamPhysicsHub() {
                 <select
                   value={selectedDifficulty}
                   onChange={(e) => setSelectedDifficulty(e.target.value)}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
                 >
                   <option value="All">All Difficulties</option>
                   <option value="Easy">Easy</option>
@@ -1240,21 +1240,19 @@ export default function IITJamPhysicsHub() {
                     setSelectedType("All");
                     setSelectedDifficulty("All");
                   }}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-900 px-6 py-4 text-white hover:bg-zinc-800 transition font-bold"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-3 text-sm text-white hover:bg-zinc-800 transition font-medium"
                 >
                   Reset Filters
                 </button>
 
               </div>
 
-              <div className="mb-8 text-zinc-400 text-lg">
-
+              <div className="mb-6 text-zinc-400 text-sm font-medium">
                 Showing{" "}
                 <span className="text-white font-bold">
                   {filteredQuestions.length}
                 </span>{" "}
                 questions
-
               </div>
 
               <div className="grid gap-6">
@@ -1270,28 +1268,34 @@ export default function IITJamPhysicsHub() {
                     className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
                   >
 
-                    <div className="flex gap-2.5 mb-5 flex-wrap items-center">
+                    <div className="flex gap-2 mb-4 flex-wrap items-center">
 
-                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
+                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                         {question.year}
                       </span>
 
-                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
+                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                         {question.subject}
                       </span>
 
-                      <span className="px-3.5 py-1 rounded-full bg-zinc-800/90 text-xs font-semibold text-zinc-300">
+                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                         {question.type}
                       </span>
 
                       {question.marks && (
-                        <span className="px-3 py-1 rounded-full bg-zinc-800/60 text-xs font-medium text-zinc-400 border border-zinc-700/50">
+                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                           {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
                         </span>
                       )}
 
                       {question.difficulty && (
-                        <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-zinc-800 text-zinc-400">
+                        <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${
+                          question.difficulty === 'Easy'
+                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                            : question.difficulty === 'Medium'
+                            ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                            : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                        }`}>
                           {question.difficulty}
                         </span>
                       )}
@@ -1424,28 +1428,34 @@ export default function IITJamPhysicsHub() {
 
               <div className="rounded-[32px] border border-zinc-800 bg-zinc-950 p-5 md:p-7">
 
-                <div className="flex gap-2.5 flex-wrap mb-5 items-center">
+                <div className="flex gap-2 flex-wrap mb-5 items-center">
 
-                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                  <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.year}
                   </span>
 
-                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                  <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.subject}
                   </span>
 
-                  <span className="px-3.5 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
+                  <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.type}
                   </span>
 
                   {activeQuestion.marks && (
-                    <span className="px-3.5 py-1 rounded-full bg-zinc-800/70 text-xs font-medium text-zinc-300 border border-zinc-700/50">
+                    <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-400">
                       {activeQuestion.marks} {activeQuestion.marks === 1 ? 'Mark' : 'Marks'}
                     </span>
                   )}
 
                   {activeQuestion.difficulty && (
-                    <span className="px-3.5 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-zinc-800 text-zinc-400">
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${
+                      activeQuestion.difficulty === 'Easy'
+                        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                        : activeQuestion.difficulty === 'Medium'
+                        ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                        : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                    }`}>
                       {activeQuestion.difficulty}
                     </span>
                   )}

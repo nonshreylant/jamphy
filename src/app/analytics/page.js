@@ -265,14 +265,14 @@ function AnalyticsContent() {
         {/* Top Header & Navigation */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-4 border-b border-zinc-800/80">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-medium uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-[11px] font-medium uppercase tracking-wider mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
               Paper Insights
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
               IIT JAM <span className="text-zinc-400">Analytics</span>
             </h1>
-            <p className="text-zinc-500 text-sm md:text-base mt-1 font-light">
+            <p className="text-zinc-400 text-xs sm:text-sm mt-1 font-normal">
               9-Year Exam Distribution (2018–2026), Subject Breakdown & Difficulty Insights
             </p>
           </div>
@@ -280,14 +280,14 @@ function AnalyticsContent() {
           <div className="flex items-center gap-3 self-start md:self-auto">
             <Link 
               href="/questions" 
-              className="px-4 py-2.5 rounded-2xl bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white transition-all text-xs font-medium flex items-center gap-2"
+              className="px-4 py-2 rounded-2xl bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white transition-all text-xs font-medium flex items-center gap-2"
             >
               <span>Explore Questions</span>
               <span className="text-zinc-500">→</span>
             </Link>
             <Link 
               href="/" 
-              className="px-4 py-2.5 rounded-2xl bg-zinc-950 border border-zinc-800 hover:bg-zinc-900 text-zinc-400 hover:text-white transition-all text-xs font-medium"
+              className="px-4 py-2 rounded-2xl bg-zinc-950 border border-zinc-800 hover:bg-zinc-900 text-zinc-400 hover:text-white transition-all text-xs font-medium"
             >
               Home
             </Link>
@@ -298,7 +298,7 @@ function AnalyticsContent() {
         <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-zinc-950 border border-zinc-800 w-fit">
           <button
             onClick={() => setActiveTab("jam")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
               activeTab === "jam"
                 ? "bg-zinc-800 text-white shadow-sm border border-zinc-700/60"
                 : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900"
@@ -308,7 +308,7 @@ function AnalyticsContent() {
           </button>
           <button
             onClick={() => setActiveTab("personal")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
               activeTab === "personal"
                 ? "bg-zinc-800 text-white shadow-sm border border-zinc-700/60"
                 : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900"
@@ -331,11 +331,11 @@ function AnalyticsContent() {
               <div className="bg-zinc-950 border border-zinc-800 rounded-3xl p-6 relative overflow-hidden group hover:border-zinc-700 transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-zinc-400 text-xs font-medium uppercase tracking-wider">Total Questions</span>
-                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-zinc-900 text-zinc-400 border border-zinc-800 font-medium">
+                  <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-zinc-900 text-zinc-400 border border-zinc-800 font-medium">
                     9 Years
                   </span>
                 </div>
-                <p className="text-4xl font-black text-white tracking-tight">{jamStats.totalQuestions}</p>
+                <p className="text-3xl font-bold text-white tracking-tight">{jamStats.totalQuestions}</p>
                 <div className="mt-3 flex items-center gap-2 text-xs text-zinc-500">
                   <span>60 Qs / Year</span>
                   <span>•</span>
@@ -346,57 +346,89 @@ function AnalyticsContent() {
               {/* Easy Questions Card */}
               <Link 
                 href="/questions"
-                className="bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 transition-all group"
+                className="bg-zinc-950 border border-zinc-800 hover:border-emerald-500/40 rounded-3xl p-6 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-zinc-400 text-xs font-medium uppercase tracking-wider">
                     Easy Questions
                   </span>
-                  <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Practice →</span>
+                  <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                    Easy
+                  </span>
                 </div>
-                <p className="text-4xl font-black text-white tracking-tight">{jamStats.difficultyCounts.Easy}</p>
+                <p className="text-3xl font-bold text-emerald-400 tracking-tight">{jamStats.difficultyCounts.Easy}</p>
                 <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
                   <span>{Math.round((jamStats.difficultyCounts.Easy / jamStats.totalQuestions) * 100)}% of questions</span>
-                  <span className="text-zinc-400 font-medium">~17 Qs / paper</span>
+                  <span className="text-emerald-400/80 font-medium">~17 Qs / paper</span>
                 </div>
               </Link>
 
               {/* Medium Questions Card */}
               <Link 
                 href="/questions"
-                className="bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 transition-all group"
+                className="bg-zinc-950 border border-zinc-800 hover:border-amber-500/40 rounded-3xl p-6 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-zinc-400 text-xs font-medium uppercase tracking-wider">
                     Medium Questions
                   </span>
-                  <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Practice →</span>
+                  <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-medium">
+                    Medium
+                  </span>
                 </div>
-                <p className="text-4xl font-black text-zinc-200 tracking-tight">{jamStats.difficultyCounts.Medium}</p>
+                <p className="text-3xl font-bold text-amber-400 tracking-tight">{jamStats.difficultyCounts.Medium}</p>
                 <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
                   <span>{Math.round((jamStats.difficultyCounts.Medium / jamStats.totalQuestions) * 100)}% of questions</span>
-                  <span className="text-zinc-400 font-medium">~23 Qs / paper</span>
+                  <span className="text-amber-400/80 font-medium">~23 Qs / paper</span>
                 </div>
               </Link>
 
               {/* Hard Questions Card */}
               <Link 
                 href="/questions"
-                className="bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-3xl p-6 transition-all group"
+                className="bg-zinc-950 border border-zinc-800 hover:border-rose-500/40 rounded-3xl p-6 transition-all group"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-zinc-400 text-xs font-medium uppercase tracking-wider">
                     Hard Questions
                   </span>
-                  <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Practice →</span>
+                  <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-medium">
+                    Hard
+                  </span>
                 </div>
-                <p className="text-4xl font-black text-zinc-300 tracking-tight">{jamStats.difficultyCounts.Hard}</p>
+                <p className="text-3xl font-bold text-rose-400 tracking-tight">{jamStats.difficultyCounts.Hard}</p>
                 <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
                   <span>{Math.round((jamStats.difficultyCounts.Hard / jamStats.totalQuestions) * 100)}% of questions</span>
-                  <span className="text-zinc-400 font-medium">~20 Qs / paper</span>
+                  <span className="text-rose-400/80 font-medium">~20 Qs / paper</span>
                 </div>
               </Link>
 
+            </div>
+
+            {/* Overall Difficulty Visual Distribution Bar */}
+            <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-medium text-zinc-400">Difficulty Ratio</span>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-400">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    Easy (29%)
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-amber-400">
+                    <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+                    Medium (38%)
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-rose-400">
+                    <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+                    Hard (33%)
+                  </span>
+                </div>
+              </div>
+              <div className="flex-1 max-w-md h-2 rounded-full bg-zinc-900 overflow-hidden flex">
+                <div style={{ width: `${(jamStats.difficultyCounts.Easy / jamStats.totalQuestions) * 100}%` }} className="bg-emerald-500 h-full" title={`Easy: ${jamStats.difficultyCounts.Easy}`} />
+                <div style={{ width: `${(jamStats.difficultyCounts.Medium / jamStats.totalQuestions) * 100}%` }} className="bg-amber-500 h-full" title={`Medium: ${jamStats.difficultyCounts.Medium}`} />
+                <div style={{ width: `${(jamStats.difficultyCounts.Hard / jamStats.totalQuestions) * 100}%` }} className="bg-rose-500 h-full" title={`Hard: ${jamStats.difficultyCounts.Hard}`} />
+              </div>
             </div>
 
             {/* MAIN SECTION: Subject Breakdown Over The Years (2018–2026) */}
@@ -548,16 +580,16 @@ function AnalyticsContent() {
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div>
                     <span className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Exam Breakdown</span>
-                    <h3 className="text-2xl font-bold text-white mt-1">IIT JAM {selectedYearFilter} Paper Deep-Dive</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">IIT JAM {selectedYearFilter} Paper Deep-Dive</h3>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="px-3.5 py-1.5 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-medium">
                       {selectedYearSummary.easy} Easy
                     </span>
-                    <span className="px-3.5 py-1.5 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-medium">
                       {selectedYearSummary.med} Medium
                     </span>
-                    <span className="px-3.5 py-1.5 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 text-xs font-medium">
                       {selectedYearSummary.hard} Hard
                     </span>
                   </div>
@@ -580,44 +612,47 @@ function AnalyticsContent() {
             {/* YEAR VS SUBJECT COMPREHENSIVE MATRIX TABLE */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-[32px] p-6 sm:p-8 space-y-6">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white">
-                  Year-by-Year Subject Weightage Matrix
+                <h2 className="text-lg sm:text-xl font-semibold text-white tracking-tight">
+                  Year-by-Year Subject & Difficulty Matrix
                 </h2>
-                <p className="text-xs sm:text-sm text-zinc-500 mt-1">
-                  Complete breakdown of question counts per subject for each exam year (2018–2026)
+                <p className="text-xs text-zinc-400 mt-1">
+                  Complete breakdown of question counts per subject and difficulty tier for each exam year (2018–2026)
                 </p>
               </div>
 
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-sm border-collapse">
+                <table className="w-full text-left text-xs border-collapse">
                   <thead>
-                    <tr className="border-b border-zinc-800 text-zinc-400 text-xs font-medium">
-                      <th className="py-3 px-4">Exam Year</th>
+                    <tr className="border-b border-zinc-800 text-zinc-400 text-[11px] font-medium uppercase tracking-wider">
+                      <th className="py-3 px-3">Exam Year</th>
                       {Object.keys(SUBJECT_CONFIG).map(sId => (
-                        <th key={sId} className="py-3 px-3 text-center text-zinc-300">
+                        <th key={sId} className="py-3 px-2.5 text-center text-zinc-300 font-medium">
                           {SUBJECT_CONFIG[sId].shortName}
                         </th>
                       ))}
-                      <th className="py-3 px-4 text-right text-white">Total Qs</th>
+                      <th className="py-3 px-2.5 text-center text-emerald-400 font-medium">Easy</th>
+                      <th className="py-3 px-2.5 text-center text-amber-400 font-medium">Medium</th>
+                      <th className="py-3 px-2.5 text-center text-rose-400 font-medium">Hard</th>
+                      <th className="py-3 px-3 text-right text-white font-medium">Total</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-zinc-800/60 font-medium">
                     {jamStats.yearlySubjectData.map((row) => (
                       <tr key={row.year} className="hover:bg-zinc-900/60 transition-colors">
-                        <td className="py-3.5 px-4 font-semibold text-white">
+                        <td className="py-3 px-3 font-medium text-white whitespace-nowrap">
                           IIT JAM {row.year}
                         </td>
                         {Object.keys(SUBJECT_CONFIG).map(sId => {
                           const count = row[sId] || 0;
                           return (
-                            <td key={sId} className="py-3.5 px-3 text-center">
+                            <td key={sId} className="py-3 px-2.5 text-center">
                               <span 
-                                className={`inline-block px-2.5 py-1 rounded-lg text-xs font-semibold ${
+                                className={`inline-block px-2 py-0.5 rounded-md text-[11px] font-medium ${
                                   count >= 10 
-                                    ? "bg-zinc-800 text-white font-bold border border-zinc-700" 
+                                    ? "bg-zinc-800 text-white font-semibold border border-zinc-700" 
                                     : count >= 7 
                                     ? "bg-zinc-900 text-zinc-300" 
-                                    : "bg-zinc-950 text-zinc-500"
+                                    : "text-zinc-500"
                                 }`}
                               >
                                 {count}
@@ -625,23 +660,41 @@ function AnalyticsContent() {
                             </td>
                           );
                         })}
-                        <td className="py-3.5 px-4 text-right font-bold text-white">
+                        <td className="py-3 px-2.5 text-center font-medium text-emerald-400">
+                          {row.easy}
+                        </td>
+                        <td className="py-3 px-2.5 text-center font-medium text-amber-400">
+                          {row.medium}
+                        </td>
+                        <td className="py-3 px-2.5 text-center font-medium text-rose-400">
+                          {row.hard}
+                        </td>
+                        <td className="py-3 px-3 text-right font-semibold text-white">
                           {row.total}
                         </td>
                       </tr>
                     ))}
                     
                     {/* Overall Summary Row */}
-                    <tr className="bg-zinc-900/70 font-bold border-t border-zinc-700">
-                      <td className="py-4 px-4 text-white">
+                    <tr className="bg-zinc-900/70 font-semibold border-t border-zinc-700">
+                      <td className="py-3.5 px-3 text-white">
                         Total (9 Years)
                       </td>
                       {Object.keys(SUBJECT_CONFIG).map(sId => (
-                        <td key={sId} className="py-4 px-3 text-center font-bold text-white">
+                        <td key={sId} className="py-3.5 px-2.5 text-center font-semibold text-white">
                           {jamStats.subjectCounts[sId].count}
                         </td>
                       ))}
-                      <td className="py-4 px-4 text-right font-black text-white text-base">
+                      <td className="py-3.5 px-2.5 text-center font-bold text-emerald-400">
+                        {jamStats.difficultyCounts.Easy}
+                      </td>
+                      <td className="py-3.5 px-2.5 text-center font-bold text-amber-400">
+                        {jamStats.difficultyCounts.Medium}
+                      </td>
+                      <td className="py-3.5 px-2.5 text-center font-bold text-rose-400">
+                        {jamStats.difficultyCounts.Hard}
+                      </td>
+                      <td className="py-3.5 px-3 text-right font-bold text-white text-sm">
                         540
                       </td>
                     </tr>
@@ -656,10 +709,10 @@ function AnalyticsContent() {
               {/* High Yield Subtopics Leaderboard */}
               <div className="lg:col-span-2 bg-zinc-950 border border-zinc-800 rounded-[32px] p-6 sm:p-8 space-y-6">
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-white">
+                  <h2 className="text-lg sm:text-xl font-semibold text-white tracking-tight">
                     High-Yield Topic Weightage
                   </h2>
-                  <p className="text-xs sm:text-sm text-zinc-500 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1">
                     Top tested topics in IIT JAM Physics with quick practice shortcuts
                   </p>
                 </div>
@@ -673,7 +726,7 @@ function AnalyticsContent() {
                         className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900 transition flex flex-col justify-between group"
                       >
                         <div className="flex items-start justify-between gap-2">
-                          <span className="text-sm font-semibold text-white">
+                          <span className="text-sm font-medium text-white">
                             {topic.name}
                           </span>
                           <span className="text-[10px] px-2 py-0.5 rounded-full shrink-0 font-medium bg-zinc-800 text-zinc-400 border border-zinc-700/60">
@@ -683,7 +736,7 @@ function AnalyticsContent() {
 
                         <div className="mt-4 flex items-center justify-between">
                           <div className="flex items-center gap-2 text-xs">
-                            <span className="font-bold text-white">{topic.count} Qs</span>
+                            <span className="font-semibold text-white">{topic.count} Qs</span>
                             <span className="text-zinc-500">({topic.marksTotal} Marks)</span>
                           </div>
 
@@ -703,10 +756,10 @@ function AnalyticsContent() {
               {/* Question Format & Pattern Breakdown */}
               <div className="bg-zinc-950 border border-zinc-800 rounded-[32px] p-6 sm:p-8 space-y-6 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-white">
+                  <h2 className="text-lg sm:text-xl font-semibold text-white tracking-tight">
                     Exam Blueprint
                   </h2>
-                  <p className="text-xs sm:text-sm text-zinc-500 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1">
                     Official IIT JAM Paper Structure
                   </p>
                 </div>
