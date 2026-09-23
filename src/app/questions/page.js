@@ -51,100 +51,67 @@ export default function IITJamPhysicsHub() {
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false);
   const [questionsList, setQuestionsList] = useState(staticQuestions);
   const [isSharing, setIsSharing] = useState(false);
-  const [isCopyingLink, setIsCopyingLink] = useState(false);
+  const [copiedImage, setCopiedImage] = useState(false);
   const captureRef = useRef(null);
-
-  const handleCopyLink = async () => {
-    if (!captureRef.current) return;
-    try {
-      setIsCopyingLink(true);
-      
-      const shareId = crypto.randomUUID();
-      const shareUrl = `${window.location.origin}/share/${shareId}`;
-      
-      const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at ${shareUrl}`;
-      await navigator.clipboard.writeText(textMessage);
-      alert("Link copied! Preview is generating in the background...");
-
-      await new Promise(r => setTimeout(r, 100));
-      
-      const dataBlob = await htmlToImage.toBlob(captureRef.current, {
-        quality: 1,
-        backgroundColor: '#09090b',
-        pixelRatio: 2,
-      });
-
-      const reader = new FileReader();
-      reader.readAsDataURL(dataBlob);
-      reader.onloadend = async () => {
-        try {
-          await fetch('/api/share', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: shareId, imageData: reader.result })
-          });
-        } catch (err) {
-          console.error("Failed to upload share image", err);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to copy link", error);
-    } finally {
-      setIsCopyingLink(false);
-    }
-  };
 
   const handleShareQuestion = async () => {
     if (!captureRef.current) return;
     try {
       setIsSharing(true);
       // Brief delay to let the UI update and fonts load in the hidden div
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, 120));
       
-      const dataUrl = await htmlToImage.toBlob(captureRef.current, {
+      const dataBlob = await htmlToImage.toBlob(captureRef.current, {
         quality: 1,
         backgroundColor: '#09090b', // zinc-950
         pixelRatio: 2, // High res for retina
       });
       
-      if (dataUrl) {
-        const textMessage = `Attempt this question on Jamphy! Practice more IIT JAM Physics questions for free at https://jamphy.com`;
-        
-        // Use Web Share API if supported (Works on mobile, Safari, macOS Chrome)
-        // This flawlessly passes both the image AND text directly to WhatsApp/other apps.
-        if (navigator.canShare) {
-          const file = new File([dataUrl], 'jamphy-question.png', { type: 'image/png' });
-          if (navigator.canShare({ files: [file], text: textMessage })) {
-            try {
-              await navigator.share({
-                title: 'Jamphy Question',
-                text: textMessage,
-                files: [file]
-              });
-              return; // Shared successfully via share sheet
-            } catch (err) {
-              if (err.name === 'AbortError') return; // User cancelled, do nothing
-              console.error("Web Share failed, falling back to clipboard", err);
-            }
+      if (!dataBlob) {
+        throw new Error("Failed to generate image");
+      }
+
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // On mobile devices, use native Web Share API with the file only (no duplicate text)
+      if (isMobile && navigator.canShare) {
+        const file = new File([dataBlob], `jamphy-${activeQuestion.year}-q${activeQuestion.id}.png`, { type: 'image/png' });
+        if (navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file]
+            });
+            return;
+          } catch (err) {
+            if (err.name === 'AbortError') return; // User cancelled, do nothing
+            console.error("Web Share failed, falling back to clipboard", err);
           }
         }
+      }
 
-        // Fallback: Clipboard API
-        const textBlob = new Blob([textMessage], { type: 'text/plain' });
-        const htmlBlob = new Blob([`<p>${textMessage}</p>`], { type: 'text/html' });
-        
+      // Desktop / Clipboard: Write exclusively 'image/png' to the clipboard
+      // Omitting text/plain and text/html prevents apps (WhatsApp Web, Telegram, Slack, Notes)
+      // from pasting two copies of the image.
+      if (navigator.clipboard && window.ClipboardItem) {
         await navigator.clipboard.write([
           new ClipboardItem({ 
-            'image/png': dataUrl,
-            'text/plain': textBlob,
-            'text/html': htmlBlob
+            'image/png': dataBlob
           })
         ]);
-        alert("Image and link copied to clipboard! You may need to paste twice depending on the app.");
+        setCopiedImage(true);
+        setTimeout(() => setCopiedImage(false), 2500);
+        return;
       }
+
+      // Fallback for browsers that do not support clipboard.write with images
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(dataBlob);
+      a.download = `jamphy-${activeQuestion.year}-q${activeQuestion.id}.png`;
+      a.click();
+      URL.revokeObjectURL(a.href);
     } catch (error) {
       console.error("Failed to share question", error);
-      alert("Failed to share question. Please try again.");
+      alert("Failed to copy image. Please try again.");
     } finally {
       setIsSharing(false);
     }
@@ -1336,29 +1303,36 @@ export default function IITJamPhysicsHub() {
                 
                 <div className="flex items-center gap-3">
                   <button
-                    onClick={handleCopyLink}
-                    disabled={isCopyingLink}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
-                  >
-                    {isCopyingLink ? (
-                      <span className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin" />
-                    ) : (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                    )}
-                    {isCopyingLink ? 'Copying...' : 'Copy Link'}
-                  </button>
-                  
-                  <button
                     onClick={handleShareQuestion}
                     disabled={isSharing}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 text-sm tracking-wide transition-all font-light"
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm tracking-wide transition-all ${
+                      copiedImage
+                        ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400 font-medium"
+                        : "border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 font-light"
+                    }`}
                   >
-                    {isSharing ? (
-                      <span className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin" />
+                    {copiedImage ? (
+                      <>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Image Copied!</span>
+                      </>
+                    ) : isSharing ? (
+                      <>
+                        <span className="w-4 h-4 border border-white/20 border-t-white rounded-full animate-spin" />
+                        <span>Generating...</span>
+                      </>
                     ) : (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                      <>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                          <polyline points="16 6 12 2 8 6"></polyline>
+                          <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </svg>
+                        <span>Share Image</span>
+                      </>
                     )}
-                    {isSharing ? 'Sharing...' : 'Share Image'}
                   </button>
                 </div>
               </div>
