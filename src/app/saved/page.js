@@ -61,13 +61,13 @@ export default function IITJamPhysicsHub() {
       setIsSharing(true);
       // Brief delay to let the UI update and fonts load in the hidden div
       await new Promise(r => setTimeout(r, 120));
-      
+
       const dataBlob = await htmlToImage.toBlob(captureRef.current, {
         quality: 1,
         backgroundColor: '#09090b', // zinc-950
         pixelRatio: 2, // High res for retina
       });
-      
+
       if (!dataBlob) {
         throw new Error("Failed to generate image");
       }
@@ -95,7 +95,7 @@ export default function IITJamPhysicsHub() {
       // from pasting two copies of the image.
       if (navigator.clipboard && window.ClipboardItem) {
         await navigator.clipboard.write([
-          new ClipboardItem({ 
+          new ClipboardItem({
             'image/png': dataBlob
           })
         ]);
@@ -241,6 +241,9 @@ export default function IITJamPhysicsHub() {
   const [selectedSubtopic, setSelectedSubtopic] =
     useState("All");
 
+  const [selectedSubSubtopic, setSelectedSubSubtopic] =
+    useState("All");
+
   const [selectedType, setSelectedType] =
     useState("All");
 
@@ -270,7 +273,7 @@ export default function IITJamPhysicsHub() {
   const [isReporting, setIsReporting] = useState(false);
   const [vaultItems, setVaultItems] = useState(new Set());
   const [toastMessage, setToastMessage] = useState("");
-  
+
   const [showDiscussion, setShowDiscussion] = useState(false);
   const [newComment, setNewComment] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
@@ -360,7 +363,7 @@ export default function IITJamPhysicsHub() {
     if (currentlySaved) {
       try {
         await fetch(`/api/bookmarks?questionId=${qid}`, { method: "DELETE" });
-        await fetch(`/api/bookmarks?questionId=${legacyQid}`, { method: "DELETE" }).catch(() => {});
+        await fetch(`/api/bookmarks?questionId=${legacyQid}`, { method: "DELETE" }).catch(() => { });
         setVaultItems(prev => {
           const next = new Set(prev);
           next.delete(qid);
@@ -423,12 +426,12 @@ export default function IITJamPhysicsHub() {
 
   const filteredQuestions = useMemo(() => {
     let list = questionsList;
-    
+
     // Year filter
     if (selectedYear !== "All") {
       list = list.filter(q => q.year.toString() === selectedYear);
     }
-    
+
     // Subject filter
     if (selectedSubjectFilter !== "All") {
       list = list.filter(q => {
@@ -445,7 +448,17 @@ export default function IITJamPhysicsHub() {
         return q.subject === selectedSubjectFilter || q.tags?.includes(selectedSubjectFilter);
       });
     }
-    
+
+    // Subtopic filter
+    if (selectedSubtopic !== "All") {
+      list = list.filter(q => q.subject === selectedSubtopic || q.tags?.includes(selectedSubtopic));
+    }
+
+    // Sub-subtopic filter
+    if (selectedSubSubtopic !== "All") {
+      list = list.filter(q => q.subSubtopic === selectedSubSubtopic || q.tags?.includes(selectedSubSubtopic));
+    }
+
     // Type filter
     if (selectedType !== "All") {
       list = list.filter(q => q.type === selectedType);
@@ -455,9 +468,9 @@ export default function IITJamPhysicsHub() {
     if (selectedDifficulty !== "All") {
       list = list.filter(q => q.difficulty === selectedDifficulty);
     }
-    
+
     return list;
-  }, [questionsList, selectedYear, selectedSubjectFilter, selectedType, selectedDifficulty]);
+  }, [questionsList, selectedYear, selectedSubjectFilter, selectedSubtopic, selectedSubSubtopic, selectedType, selectedDifficulty]);
 
   const currentQuestionIndex =
     activeQuestion
@@ -576,9 +589,9 @@ export default function IITJamPhysicsHub() {
     const [correctOptionIndex] = getCorrectOptions(activeQuestion);
     const correct = selectedAnswer === correctOptionIndex;
     setIsCorrect(correct);
-    
+
     const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
-    
+
     if (session?.user) {
       const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
       fetch('/api/vault', {
@@ -586,7 +599,7 @@ export default function IITJamPhysicsHub() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, isCorrect: correct })
       }).catch(err => console.error(err));
-      
+
       fetch('/api/attempts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -640,9 +653,9 @@ export default function IITJamPhysicsHub() {
       getCorrectOptions(activeQuestion)
     );
     setIsCorrect(correct);
-    
+
     const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
-    
+
     if (session?.user) {
       const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
       fetch('/api/vault', {
@@ -650,7 +663,7 @@ export default function IITJamPhysicsHub() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, isCorrect: correct })
       }).catch(err => console.error(err));
-      
+
       fetch('/api/attempts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -668,7 +681,7 @@ export default function IITJamPhysicsHub() {
     if (isNaN(enteredAnswer)) {
       return;
     }
-    
+
     let correct = false;
 
     if (
@@ -685,11 +698,11 @@ export default function IITJamPhysicsHub() {
       );
       correct = enteredAnswer === correctAnswer;
     }
-    
+
     setIsCorrect(correct);
-    
+
     const timeTaken = Math.floor((Date.now() - questionLoadTime.current) / 1000);
-    
+
     if (session?.user) {
       const questionId = `${activeQuestion.year}-${activeQuestion.id}`;
       fetch('/api/vault', {
@@ -697,14 +710,14 @@ export default function IITJamPhysicsHub() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, isCorrect: correct })
       }).catch(err => console.error(err));
-      
+
       fetch('/api/attempts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, isCorrect: correct, timeTaken, subject: activeQuestion.subject, selectedAnswer: String(enteredAnswer) })
       })
-      .then(() => fetchGoalData())
-      .catch(err => console.error(err));
+        .then(() => fetchGoalData())
+        .catch(err => console.error(err));
     }
   };
 
@@ -748,8 +761,8 @@ export default function IITJamPhysicsHub() {
                 <div className="hidden sm:flex items-center gap-2 py-2">
                   <span className="text-[12px] text-zinc-400 font-light tracking-wide hidden md:inline">Goal</span>
                   <div className="w-36 h-2 rounded-full bg-zinc-800 overflow-hidden relative border border-zinc-700/30">
-                    <div 
-                      className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-500" 
+                    <div
+                      className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-500"
                       style={{ width: `${Math.min(goalData.percentage, 100)}%` }}
                     />
                   </div>
@@ -784,14 +797,14 @@ export default function IITJamPhysicsHub() {
                     </span>
                   </div>
                 </div>
-                
+
                 {/* Tooltip/Popover below the bar, visible only when group-hovered */}
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 z-50 transform origin-top">
                   <div className="bg-zinc-900 border border-zinc-800 text-white text-xs px-4 py-3 rounded-2xl shadow-2xl whitespace-nowrap flex flex-col items-center gap-2">
                     <div className="font-medium text-zinc-300">
                       {goalData.completed} out of {goalData.target} questions done ({Math.round(goalData.percentage)}%)
                     </div>
-                    <button 
+                    <button
                       onClick={() => setIsGoalModalOpen(true)}
                       className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors uppercase tracking-wider text-[10px]"
                     >
@@ -804,9 +817,9 @@ export default function IITJamPhysicsHub() {
 
             {session?.user && (
               <div className="relative w-32 sm:w-48 z-[60]">
-                <input 
-                  type="text" 
-                  placeholder="Search friends..." 
+                <input
+                  type="text"
+                  placeholder="Search friends..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => { if (searchQuery.length >= 1) setShowSearchDropdown(true); }}
@@ -816,7 +829,7 @@ export default function IITJamPhysicsHub() {
                 {isSearching && (
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 border border-white/20 border-t-white rounded-full animate-spin"></div>
                 )}
-                
+
                 {showSearchDropdown && searchResults.length > 0 && (
                   <div className="absolute top-full mt-2 w-64 bg-zinc-950 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-64 overflow-y-auto text-left right-0">
                     {searchResults.map(user => (
@@ -833,17 +846,16 @@ export default function IITJamPhysicsHub() {
                           </div>
                           <div className="min-w-0">
                             <Link href={`/profile/${user.id}`} className="block font-bold text-xs text-white hover:text-cyan-400 transition truncate w-24">{user.name}</Link>
-                            <div className="text-[10px] text-zinc-500" style={{color: LEAGUE_COLORS[user.currentLeague]}}>{user.currentLeague}</div>
+                            <div className="text-[10px] text-zinc-500" style={{ color: LEAGUE_COLORS[user.currentLeague] }}>{user.currentLeague}</div>
                           </div>
                         </div>
                         {!user.isSelf && (
-                          <button 
+                          <button
                             onClick={() => toggleFollow(user.id)}
-                            className={`text-[10px] px-2.5 py-1 rounded-lg font-bold border transition ${
-                              myFollows.has(user.id) 
-                              ? "border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700" 
+                            className={`text-[10px] px-2.5 py-1 rounded-lg font-bold border transition ${myFollows.has(user.id)
+                              ? "border-zinc-700 bg-zinc-800 text-white hover:bg-zinc-700"
                               : "border-cyan-500/50 bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20"
-                            }`}
+                              }`}
                           >
                             {myFollows.has(user.id) ? "Following" : "Follow"}
                           </button>
@@ -852,7 +864,7 @@ export default function IITJamPhysicsHub() {
                     ))}
                   </div>
                 )}
-                
+
                 {showSearchDropdown && searchQuery.length >= 1 && searchResults.length === 0 && !isSearching && (
                   <div className="absolute top-full mt-2 w-64 bg-zinc-950 border border-zinc-800 rounded-2xl p-3 text-center text-xs text-zinc-500 shadow-2xl right-0">
                     No users found
@@ -875,7 +887,7 @@ export default function IITJamPhysicsHub() {
             {/* Three-line Options Dropdown Menu */}
             {session?.user && (
               <div className="relative shrink-0 group/menu">
-                <button 
+                <button
                   className="w-[38px] h-[38px] rounded-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 flex items-center justify-center transition-all cursor-pointer focus:outline-none"
                 >
                   <div className="flex flex-col justify-between w-4 h-3.5 cursor-pointer transition-transform duration-300 group-hover/menu:rotate-90 py-[2px] px-[0.5px]">
@@ -884,7 +896,7 @@ export default function IITJamPhysicsHub() {
                     <span className="w-full h-[1.5px] bg-zinc-300 group-hover/menu:bg-white rounded-full transition-colors"></span>
                   </div>
                 </button>
-                
+
                 <div className="absolute right-0 top-full pt-3 w-56 opacity-0 scale-95 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:scale-100 group-hover/menu:pointer-events-auto transition-all duration-200 z-50 transform origin-top-right">
                   <div className="bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden">
                     <div className="py-2">
@@ -984,8 +996,12 @@ export default function IITJamPhysicsHub() {
 
                 <select
                   value={selectedSubjectFilter}
-                  onChange={(e) => setSelectedSubjectFilter(e.target.value)}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                  onChange={(e) => {
+                    setSelectedSubjectFilter(e.target.value);
+                    setSelectedSubtopic("All");
+                    setSelectedSubSubtopic("All");
+                  }}
+                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
                 >
                   <option value="All">All Subjects</option>
                   {syllabus.map((s) => (
@@ -994,6 +1010,42 @@ export default function IITJamPhysicsHub() {
                     </option>
                   ))}
                 </select>
+
+                {selectedSubjectFilter !== "All" && (
+                  <>
+                    <select
+                      value={selectedSubtopic}
+                      onChange={(e) => {
+                        setSelectedSubtopic(e.target.value);
+                        setSelectedSubSubtopic("All");
+                      }}
+                      className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
+                    >
+                      <option value="All">All Subtopics</option>
+                      {syllabus.find(s => s.name === selectedSubjectFilter || s.id === selectedSubjectFilter)?.subtopics.map(topic => (
+                        <option key={topic} value={topic}>{topic}</option>
+                      ))}
+                    </select>
+
+                    <select
+                      value={selectedSubSubtopic}
+                      onChange={(e) => setSelectedSubSubtopic(e.target.value)}
+                      className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[230px] truncate"
+                    >
+                      <option value="All">All Sub-subtopics</option>
+                      {(() => {
+                        const subj = syllabus.find(s => s.name === selectedSubjectFilter || s.id === selectedSubjectFilter);
+                        if (!subj?.subSubtopics) return null;
+                        const list = selectedSubtopic === "All"
+                          ? Object.values(subj.subSubtopics).flat()
+                          : (subj.subSubtopics[selectedSubtopic] || []);
+                        return list.map(subSub => (
+                          <option key={subSub} value={subSub}>{subSub}</option>
+                        ));
+                      })()}
+                    </select>
+                  </>
+                )}
 
                 <select
                   value={selectedType}
@@ -1017,11 +1069,13 @@ export default function IITJamPhysicsHub() {
                   <option value="Hard">Hard</option>
                 </select>
 
-                {(selectedYear !== "All" || selectedSubjectFilter !== "All" || selectedType !== "All" || selectedDifficulty !== "All") && (
+                {(selectedYear !== "All" || selectedSubjectFilter !== "All" || selectedSubtopic !== "All" || selectedSubSubtopic !== "All" || selectedType !== "All" || selectedDifficulty !== "All") && (
                   <button
                     onClick={() => {
                       setSelectedYear("All");
                       setSelectedSubjectFilter("All");
+                      setSelectedSubtopic("All");
+                      setSelectedSubSubtopic("All");
                       setSelectedType("All");
                       setSelectedDifficulty("All");
                     }}
@@ -1055,60 +1109,65 @@ export default function IITJamPhysicsHub() {
               ) : (
                 <div className="grid gap-6">
 
-                {filteredQuestions.map((question) => (
+                  {filteredQuestions.map((question) => (
 
-                  <button
-                    key={`${question.year}-${question.id}`}
-                    onClick={() => {
-                      setActiveQuestion(question);
-                      resetQuestionState();
-                    }}
-                    className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
-                  >
+                    <button
+                      key={`${question.year}-${question.id}`}
+                      onClick={() => {
+                        setActiveQuestion(question);
+                        resetQuestionState();
+                      }}
+                      className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
+                    >
 
-                    <div className="flex gap-2 mb-4 flex-wrap items-center">
+                      <div className="flex gap-2 mb-4 flex-wrap items-center">
 
-                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                        {question.year}
-                      </span>
-
-                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                        {question.subject}
-                      </span>
-
-                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                        {question.type}
-                      </span>
-
-                      {question.marks && (
-                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
-                          {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
+                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                          {question.year}
                         </span>
-                      )}
 
-                      {question.difficulty && (
-                        <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${
-                          question.difficulty === 'Easy'
+                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                          {question.subject}
+                        </span>
+
+                        {question.subSubtopic && (
+                          <span className="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-zinc-300">
+                            {question.subSubtopic}
+                          </span>
+                        )}
+
+                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                          {question.type}
+                        </span>
+
+                        {question.marks && (
+                          <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
+                            {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
+                          </span>
+                        )}
+
+                        {question.difficulty && (
+                          <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${question.difficulty === 'Easy'
                             ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                             : question.difficulty === 'Medium'
-                            ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                            : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                        }`}>
-                          {question.difficulty}
-                        </span>
-                      )}
+                              ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                              : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                            }`}>
+                            {question.difficulty}
+                          </span>
+                        )}
 
-                    </div>
+                      </div>
 
-                    <MathText className="question-preview text-lg leading-relaxed text-zinc-200 line-clamp-3 overflow-hidden">
-                      {question.question}
-                    </MathText>
+                      <MathText className="question-preview text-lg leading-relaxed text-zinc-200 line-clamp-3 overflow-hidden">
+                        {question.question}
+                      </MathText>
 
-                  </button>
+                    </button>
 
-                ))}
+                  ))}
 
-              </div>
+                </div>
               )}
 
             </motion.section>
@@ -1132,16 +1191,15 @@ export default function IITJamPhysicsHub() {
                 >
                   ← Back to Questions
                 </button>
-                
+
                 <div className="flex items-center gap-3">
                   <button
                     onClick={handleShareQuestion}
                     disabled={isSharing}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm tracking-wide transition-all ${
-                      copiedImage
-                        ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400 font-medium"
-                        : "border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 font-light"
-                    }`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm tracking-wide transition-all ${copiedImage
+                      ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-400 font-medium"
+                      : "border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-300 font-light"
+                      }`}
                   >
                     {copiedImage ? (
                       <>
@@ -1171,7 +1229,7 @@ export default function IITJamPhysicsHub() {
 
               {/* Hidden Capture Area for Sharing */}
               <div className="fixed top-0 left-0 -z-50 pointer-events-none opacity-0 overflow-hidden">
-                <div 
+                <div
                   ref={captureRef}
                   className="bg-zinc-950 p-10 border border-zinc-800 rounded-3xl flex flex-col w-[800px]"
                   style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
@@ -1179,7 +1237,7 @@ export default function IITJamPhysicsHub() {
                   <div className="flex items-center gap-3 mb-6 pb-6 border-b border-zinc-800/50">
                     <img src="/jamphy2sized.png" alt="Jamphy" className="h-8 object-contain" />
                   </div>
-                  
+
                   <div className="flex gap-2 flex-wrap mb-5">
                     <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                       {activeQuestion.year}
@@ -1187,6 +1245,11 @@ export default function IITJamPhysicsHub() {
                     <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                       {activeQuestion.subject}
                     </span>
+                    {activeQuestion.subSubtopic && (
+                      <span className="px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/60 text-xs font-medium text-zinc-200">
+                        {activeQuestion.subSubtopic}
+                      </span>
+                    )}
                     <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                       {activeQuestion.type}
                     </span>
@@ -1205,7 +1268,7 @@ export default function IITJamPhysicsHub() {
                       />
                     </div>
                   )}
-                  
+
                   {(activeQuestion.type === "MCQ" || activeQuestion.type === "MSQ") && activeQuestion.options && (
                     <div className="grid grid-cols-2 gap-4 mt-6">
                       {activeQuestion.options.map((option, index) => (
@@ -1244,6 +1307,12 @@ export default function IITJamPhysicsHub() {
                     {activeQuestion.subject}
                   </span>
 
+                  {activeQuestion.subSubtopic && (
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-medium text-zinc-200">
+                      {activeQuestion.subSubtopic}
+                    </span>
+                  )}
+
                   <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.type}
                   </span>
@@ -1255,13 +1324,12 @@ export default function IITJamPhysicsHub() {
                   )}
 
                   {activeQuestion.difficulty && (
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${
-                      activeQuestion.difficulty === 'Easy'
-                        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                        : activeQuestion.difficulty === 'Medium'
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${activeQuestion.difficulty === 'Easy'
+                      ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                      : activeQuestion.difficulty === 'Medium'
                         ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
                         : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                    }`}>
+                      }`}>
                       {activeQuestion.difficulty}
                     </span>
                   )}
@@ -1476,11 +1544,10 @@ export default function IITJamPhysicsHub() {
 
                     <button
                       onClick={toggleVault}
-                      className={`flex items-center justify-center w-16 h-[60px] rounded-2xl border transition-all ${
-                        vaultItems.has(`${activeQuestion.year}-${activeQuestion.id}`) || vaultItems.has(String(activeQuestion.id))
-                          ? "bg-amber-500/20 border-amber-500 text-amber-500 hover:bg-amber-500/30"
-                          : "bg-zinc-900 border-zinc-700 text-zinc-400 hover:bg-zinc-800 hover:text-white"
-                      }`}
+                      className={`flex items-center justify-center w-16 h-[60px] rounded-2xl border transition-all ${vaultItems.has(`${activeQuestion.year}-${activeQuestion.id}`) || vaultItems.has(String(activeQuestion.id))
+                        ? "bg-amber-500/20 border-amber-500 text-amber-500 hover:bg-amber-500/30"
+                        : "bg-zinc-900 border-zinc-700 text-zinc-400 hover:bg-zinc-800 hover:text-white"
+                        }`}
                       title="Save Question"
                     >
                       {vaultItems.has(`${activeQuestion.year}-${activeQuestion.id}`) || vaultItems.has(String(activeQuestion.id)) ? (
@@ -1597,7 +1664,7 @@ export default function IITJamPhysicsHub() {
                   <div className="text-xl font-bold text-white mb-6">
                     Comments {commentsData?.comments ? `(${commentsData.comments.length})` : ""}
                   </div>
-                  
+
                   <div className="space-y-6">
                     {status === "authenticated" ? (
                       <div className="flex gap-4 items-start">
@@ -1631,7 +1698,7 @@ export default function IITJamPhysicsHub() {
                         Please <button onClick={() => signIn()} className="text-cyan-400 font-bold hover:underline">sign in</button> to join the discussion.
                       </div>
                     )}
-                    
+
                     <div className="space-y-4">
                       {!commentsData ? (
                         <div className="text-center py-4 text-zinc-500">Loading comments...</div>
@@ -1739,7 +1806,7 @@ export default function IITJamPhysicsHub() {
           )}
 
           {liveRoomActive && (
-            <TestModal 
+            <TestModal
               title="Create Live Room"
               onClose={() => setLiveRoomActive(false)}
               onGenerate={async (config) => {

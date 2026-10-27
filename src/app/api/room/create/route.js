@@ -15,10 +15,12 @@ export async function POST(req) {
 
     let allowedSubtopicsSet = null;
     if (config.syllabusMode === "specific") {
-      const allowedSubtopics = syllabus
-        .filter(s => config.selectedChapters.includes(s.id))
-        .flatMap(s => s.subtopics);
-      allowedSubtopicsSet = new Set(allowedSubtopics);
+      if (config.selectedChapters && config.selectedChapters.length > 0) {
+        const allowedSubtopics = syllabus
+          .filter(s => config.selectedChapters.includes(s.id))
+          .flatMap(s => s.subtopics);
+        allowedSubtopicsSet = new Set(allowedSubtopics);
+      }
     }
 
     // Replicate logic from TestManager.js to generate questions on server
@@ -37,9 +39,22 @@ export async function POST(req) {
         }
       }
 
-      // 3. Syllabus
-      if (config.syllabusMode === "specific" && allowedSubtopicsSet) {
-        if (!allowedSubtopicsSet.has(q.subject)) return false;
+      // 3. Syllabus (Sub-subtopic, Subtopic, or Chapter granularity)
+      if (config.syllabusMode === "specific") {
+        if (config.selectedSubSubtopics && config.selectedSubSubtopics.length > 0) {
+          const subSubSet = new Set(config.selectedSubSubtopics);
+          if (q.subSubtopic) {
+            if (!subSubSet.has(q.subSubtopic)) return false;
+          } else if (config.selectedSubtopics && config.selectedSubtopics.length > 0) {
+            if (!config.selectedSubtopics.includes(q.subject)) return false;
+          } else if (allowedSubtopicsSet && !allowedSubtopicsSet.has(q.subject)) {
+            return false;
+          }
+        } else if (config.selectedSubtopics && config.selectedSubtopics.length > 0) {
+          if (!config.selectedSubtopics.includes(q.subject)) return false;
+        } else if (allowedSubtopicsSet) {
+          if (!allowedSubtopicsSet.has(q.subject)) return false;
+        }
       }
 
       return true;

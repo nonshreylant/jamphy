@@ -27,15 +27,17 @@ export default function TestManager({ allQuestions, onClose }) {
       return true; // We'll refine this logic inside the component.
     });
 
-    // Actually, let's just do the filtering here.
+    // Filtering logic
     const { syllabus } = require("../../data/syllabus");
     
     let allowedSubtopicsSet = null;
     if (newConfig.syllabusMode === "specific") {
-      const allowedSubtopics = syllabus
-        .filter(s => newConfig.selectedChapters.includes(s.id))
-        .flatMap(s => s.subtopics);
-      allowedSubtopicsSet = new Set(allowedSubtopics);
+      if (newConfig.selectedChapters && newConfig.selectedChapters.length > 0) {
+        const allowedSubtopics = syllabus
+          .filter(s => newConfig.selectedChapters.includes(s.id))
+          .flatMap(s => s.subtopics);
+        allowedSubtopicsSet = new Set(allowedSubtopics);
+      }
     }
 
     filtered = allQuestions.filter(q => {
@@ -45,7 +47,7 @@ export default function TestManager({ allQuestions, onClose }) {
       // 2. Years
       if (newConfig.yearMode !== "All") {
         if (newConfig.yearMode === "Last 3") {
-          if (q.year < 2024) return false; // Assuming 2026 is latest
+          if (q.year < 2024) return false;
         } else if (newConfig.yearMode === "Last 5") {
           if (q.year < 2022) return false;
         } else if (newConfig.yearMode === "Custom") {
@@ -53,9 +55,22 @@ export default function TestManager({ allQuestions, onClose }) {
         }
       }
 
-      // 3. Syllabus
-      if (newConfig.syllabusMode === "specific" && allowedSubtopicsSet) {
-        if (!allowedSubtopicsSet.has(q.subject)) return false;
+      // 3. Syllabus (Sub-subtopic, Subtopic, or Chapter granularity)
+      if (newConfig.syllabusMode === "specific") {
+        if (newConfig.selectedSubSubtopics && newConfig.selectedSubSubtopics.length > 0) {
+          const subSubSet = new Set(newConfig.selectedSubSubtopics);
+          if (q.subSubtopic) {
+            if (!subSubSet.has(q.subSubtopic)) return false;
+          } else if (newConfig.selectedSubtopics && newConfig.selectedSubtopics.length > 0) {
+            if (!newConfig.selectedSubtopics.includes(q.subject)) return false;
+          } else if (allowedSubtopicsSet && !allowedSubtopicsSet.has(q.subject)) {
+            return false;
+          }
+        } else if (newConfig.selectedSubtopics && newConfig.selectedSubtopics.length > 0) {
+          if (!newConfig.selectedSubtopics.includes(q.subject)) return false;
+        } else if (allowedSubtopicsSet) {
+          if (!allowedSubtopicsSet.has(q.subject)) return false;
+        }
       }
 
       return true;

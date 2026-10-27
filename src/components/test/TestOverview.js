@@ -51,6 +51,18 @@ export default function TestOverview({ config, questionsCount, onStart, onCancel
             <span className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em]">Question Types</span>
             <span className="text-lg font-light tracking-widest">{config.types.join(", ")}</span>
           </div>
+          <div className="flex justify-between items-end border-b border-zinc-700 pb-2">
+            <span className="text-zinc-500 text-xs font-medium uppercase tracking-[0.2em]">Syllabus</span>
+            <span className="text-sm font-light text-right max-w-[280px] truncate text-zinc-300">
+              {config.syllabusMode === "full"
+                ? "Full Syllabus"
+                : config.selectedSubSubtopics?.length
+                ? `${config.selectedSubSubtopics.length} Sub-subtopic${config.selectedSubSubtopics.length > 1 ? 's' : ''}`
+                : config.selectedSubtopics?.length
+                ? `${config.selectedSubtopics.length} Subtopics`
+                : `${config.selectedChapters?.length || 0} Chapters`}
+            </span>
+          </div>
         </div>
 
         <div className="w-full flex gap-12 justify-center">

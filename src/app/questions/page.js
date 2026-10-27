@@ -233,6 +233,9 @@ export default function IITJamPhysicsHub() {
   const [selectedSubtopic, setSelectedSubtopic] =
     useState("All");
 
+  const [selectedSubSubtopic, setSelectedSubSubtopic] =
+    useState("All");
+
   const [selectedType, setSelectedType] =
     useState("All");
 
@@ -451,6 +454,11 @@ export default function IITJamPhysicsHub() {
               ? (q.subject === "Logic Gates" || q.tags?.includes("Logic Gates"))
               : (q.subject === selectedSubtopic || q.tags?.includes(selectedSubtopic));
 
+      const subSubtopicMatch =
+        selectedSubSubtopic === "All"
+          ? true
+          : (q.subSubtopic === selectedSubSubtopic || q.tags?.includes(selectedSubSubtopic));
+
       const subjectFilterMatch =
         selectedSubjectFilter === "All"
           ? true
@@ -471,6 +479,7 @@ export default function IITJamPhysicsHub() {
         browseYearMatch &&
         yearFilterMatch &&
         subtopicMatch &&
+        subSubtopicMatch &&
         subjectFilterMatch &&
         typeMatch &&
         difficultyMatch
@@ -483,6 +492,7 @@ export default function IITJamPhysicsHub() {
     selectedBrowseYear,
     selectedYear,
     selectedSubtopic,
+    selectedSubSubtopic,
     selectedSubjectFilter,
     selectedType,
     selectedDifficulty,
@@ -1022,6 +1032,7 @@ export default function IITJamPhysicsHub() {
                         setSelectedBrowseYear(null);
                         setSelectedYear("All");
                         setSelectedSubtopic("All");
+                        setSelectedSubSubtopic("All");
                       }}
                       className="rounded-[20px] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 text-left hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col items-start group"
                     >
@@ -1053,6 +1064,8 @@ export default function IITJamPhysicsHub() {
                         setSelectedBrowseYear(year);
                         setSelectedSubject(null);
                         setSelectedSubjectFilter("All");
+                        setSelectedSubtopic("All");
+                        setSelectedSubSubtopic("All");
                         setSelectedType("All");
                       }}
                       className="rounded-[20px] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 text-left hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col items-start group"
@@ -1138,12 +1151,12 @@ export default function IITJamPhysicsHub() {
                 {selectedSubject && (
                   <select
                     value={selectedSubtopic}
-                    onChange={(e) =>
-                      setSelectedSubtopic(e.target.value)
-                    }
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                    onChange={(e) => {
+                      setSelectedSubtopic(e.target.value);
+                      setSelectedSubSubtopic("All");
+                    }}
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
                   >
-
                     <option value="All">
                       All Subtopics
                     </option>
@@ -1158,21 +1171,78 @@ export default function IITJamPhysicsHub() {
                         </option>
                       )
                     )}
+                  </select>
+                )}
 
+                {selectedSubject && (
+                  <select
+                    value={selectedSubSubtopic}
+                    onChange={(e) => setSelectedSubSubtopic(e.target.value)}
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[230px] truncate"
+                  >
+                    <option value="All">All Sub-subtopics</option>
+                    {(selectedSubtopic === "All"
+                      ? (selectedSubject.subSubtopics ? Object.values(selectedSubject.subSubtopics).flat() : [])
+                      : (selectedSubject.subSubtopics?.[selectedSubtopic] || [])
+                    ).map((subSub) => (
+                      <option key={subSub} value={subSub}>
+                        {subSub}
+                      </option>
+                    ))}
                   </select>
                 )}
 
                 {selectedBrowseYear && (
                   <select
                     value={selectedSubjectFilter}
-                    onChange={(e) => setSelectedSubjectFilter(e.target.value)}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                    onChange={(e) => {
+                      setSelectedSubjectFilter(e.target.value);
+                      setSelectedSubtopic("All");
+                      setSelectedSubSubtopic("All");
+                    }}
+                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
                   >
                     <option value="All">All Subjects</option>
                     {syllabus.map((s) => (
                       <option key={s.id} value={s.id}>{s.name}</option>
                     ))}
                   </select>
+                )}
+
+                {selectedBrowseYear && selectedSubjectFilter !== "All" && (
+                  <>
+                    <select
+                      value={selectedSubtopic}
+                      onChange={(e) => {
+                        setSelectedSubtopic(e.target.value);
+                        setSelectedSubSubtopic("All");
+                      }}
+                      className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
+                    >
+                      <option value="All">All Subtopics</option>
+                      {syllabus.find(s => s.id === selectedSubjectFilter)?.subtopics.map(topic => (
+                        <option key={topic} value={topic}>{topic}</option>
+                      ))}
+                    </select>
+
+                    <select
+                      value={selectedSubSubtopic}
+                      onChange={(e) => setSelectedSubSubtopic(e.target.value)}
+                      className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[230px] truncate"
+                    >
+                      <option value="All">All Sub-subtopics</option>
+                      {(() => {
+                        const subj = syllabus.find(s => s.id === selectedSubjectFilter);
+                        if (!subj?.subSubtopics) return null;
+                        const list = selectedSubtopic === "All"
+                          ? Object.values(subj.subSubtopics).flat()
+                          : (subj.subSubtopics[selectedSubtopic] || []);
+                        return list.map(subSub => (
+                          <option key={subSub} value={subSub}>{subSub}</option>
+                        ));
+                      })()}
+                    </select>
+                  </>
                 )}
 
                 <select
@@ -1203,6 +1273,7 @@ export default function IITJamPhysicsHub() {
                   onClick={() => {
                     setSelectedYear("All");
                     setSelectedSubtopic("All");
+                    setSelectedSubSubtopic("All");
                     setSelectedSubjectFilter("All");
                     setSelectedType("All");
                     setSelectedDifficulty("All");
@@ -1244,6 +1315,12 @@ export default function IITJamPhysicsHub() {
                       <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                         {question.subject}
                       </span>
+
+                      {question.subSubtopic && (
+                        <span className="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-zinc-300">
+                          {question.subSubtopic}
+                        </span>
+                      )}
 
                       <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
                         {question.type}
@@ -1355,6 +1432,11 @@ export default function IITJamPhysicsHub() {
                     <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                       {activeQuestion.subject}
                     </span>
+                    {activeQuestion.subSubtopic && (
+                      <span className="px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/60 text-xs font-medium text-zinc-200">
+                        {activeQuestion.subSubtopic}
+                      </span>
+                    )}
                     <span className="px-3 py-1 rounded-full bg-zinc-800 text-xs font-semibold text-white">
                       {activeQuestion.type}
                     </span>
@@ -1411,6 +1493,12 @@ export default function IITJamPhysicsHub() {
                   <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.subject}
                   </span>
+
+                  {activeQuestion.subSubtopic && (
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-medium text-zinc-200">
+                      {activeQuestion.subSubtopic}
+                    </span>
+                  )}
 
                   <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-300">
                     {activeQuestion.type}
