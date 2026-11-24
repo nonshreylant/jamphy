@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
+import { isFreeProEmail } from "@/lib/razorpay";
 
 export const dynamic = 'force-dynamic';
 
@@ -176,14 +177,14 @@ export const authOptions = {
         try {
           const dbUser = await prisma.user.findUnique({
             where: { id: session.user.id },
-            select: { name: true, image: true, username: true, isBlocked: true, isPro: true, proPurchasedAt: true }
+            select: { name: true, image: true, username: true, email: true, isBlocked: true, isPro: true, proPurchasedAt: true }
           });
           
           if (dbUser) {
             session.user.name = dbUser.name;
             session.user.image = dbUser.image;
             session.user.username = dbUser.username;
-            session.user.isPro = Boolean(dbUser.isPro);
+            session.user.isPro = Boolean(dbUser.isPro) || isFreeProEmail(dbUser.email || session.user.email);
             session.user.proPurchasedAt = dbUser.proPurchasedAt;
             if (dbUser.isBlocked) {
               session.error = "UserBlocked";

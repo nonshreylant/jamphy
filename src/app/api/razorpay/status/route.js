@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { isFreeProEmail } from "@/lib/razorpay";
 
 export const dynamic = "force-dynamic";
 
@@ -15,13 +16,14 @@ export async function GET() {
     const user = await prisma.user.findUnique({
       where: { id: session.user.id },
       select: {
+        email: true,
         isPro: true,
         proPurchasedAt: true,
       },
     });
 
     return NextResponse.json({
-      isPro: Boolean(user?.isPro),
+      isPro: Boolean(user?.isPro) || isFreeProEmail(user?.email),
       proPurchasedAt: user?.proPurchasedAt || null,
     });
   } catch (error) {

@@ -9,6 +9,16 @@ export const PRO_PLAN_CODE = "PRO_LIFETIME";
 export const PRO_PLAN_NAME = "Jamphy Pro Pass";
 export const PRO_PLAN_DESCRIPTION = "One-time lifetime access to Custom Tests, Live Rooms, Analytics, Year-wise PYQs & All Filters";
 
+export const FREE_PRO_EMAILS = new Set([
+  "sharmashreyans001@gmail.com",
+  "sharmashreyansh001@gmail.com",
+]);
+
+export function isFreeProEmail(email) {
+  if (!email || typeof email !== "string") return false;
+  return FREE_PRO_EMAILS.has(email.trim().toLowerCase());
+}
+
 let razorpayInstance = null;
 
 export function getRazorpayKeyId() {
@@ -79,8 +89,8 @@ export async function isUserPro(userId) {
   if (!userId) return false;
   const user = await prisma.user.findUnique({
     where: { id: userId },
-    select: { isPro: true },
+    select: { isPro: true, email: true },
   });
-  return Boolean(user?.isPro);
+  return Boolean(user?.isPro) || isFreeProEmail(user?.email);
 }
 

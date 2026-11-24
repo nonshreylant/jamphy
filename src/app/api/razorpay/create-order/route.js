@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import {
   getRazorpayClient,
   getRazorpayKeyId,
+  isFreeProEmail,
   PRO_PLAN_CODE,
   PRO_PLAN_CURRENCY,
   PRO_PLAN_PRICE_PAISE,
@@ -28,7 +29,7 @@ export async function POST() {
       return NextResponse.json({ error: "User not found." }, { status: 404 });
     }
 
-    if (user.isPro) {
+    if (user.isPro || isFreeProEmail(user.email)) {
       return NextResponse.json({ error: "You already have Jamphy Pro access." }, { status: 400 });
     }
 
