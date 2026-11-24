@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import {
   getRazorpayClient,
   getRazorpayKeyId,
+  IS_PAYWALL_ENABLED,
   isFreeProEmail,
   PRO_PLAN_CODE,
   PRO_PLAN_CURRENCY,
@@ -15,6 +16,10 @@ export const dynamic = "force-dynamic";
 
 export async function POST() {
   try {
+    if (!IS_PAYWALL_ENABLED) {
+      return NextResponse.json({ error: "Payments are currently disabled." }, { status: 403 });
+    }
+
     const session = await getServerSession(authOptions);
     if (!session?.user?.id) {
       return NextResponse.json({ error: "Please sign in to continue." }, { status: 401 });
