@@ -169,13 +169,13 @@ export function ProProvider({ children }) {
       }
 
       const options = {
-        key: orderData.keyId,
+        key: orderData.keyId || process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: orderData.amount,
         currency: orderData.currency,
         name: "Jamphy",
         description: "Jamphy Pro Pass — Lifetime Access",
         image: "/faviconnew.png",
-        order_id: orderData.orderId,
+        order_id: orderData.order_id || orderData.orderId,
         prefill: {
           name: orderData.user?.name || session.user.name || "",
           email: orderData.user?.email || session.user.email || "",

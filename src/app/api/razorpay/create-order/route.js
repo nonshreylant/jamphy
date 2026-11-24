@@ -38,6 +38,13 @@ export async function POST() {
       return NextResponse.json({ error: "You already have Jamphy Pro access." }, { status: 400 });
     }
 
+    if (PRO_PLAN_PRICE_PAISE < 100) {
+      return NextResponse.json(
+        { error: "Order amount must be at least 100 paise." },
+        { status: 400 }
+      );
+    }
+
     const razorpay = getRazorpayClient();
     const receipt = `jp_${user.id.slice(-8)}_${Date.now()}`;
 
@@ -64,6 +71,7 @@ export async function POST() {
     });
 
     return NextResponse.json({
+      order_id: order.id,
       orderId: order.id,
       amount: order.amount,
       currency: order.currency,
@@ -75,6 +83,12 @@ export async function POST() {
     });
   } catch (error) {
     console.error("Razorpay create-order error:", error);
+    if (error?.statusCode === 401) {
+      return NextResponse.json(
+        { error: "Razorpay authentication failed. Check your API credentials." },
+        { status: 401 }
+      );
+    }
     const message =
       error?.message?.includes("Razorpay keys are not configured")
         ? error.message
