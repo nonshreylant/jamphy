@@ -2,7 +2,7 @@ import Razorpay from "razorpay";
 import crypto from "crypto";
 import { prisma } from "@/lib/prisma";
 
-export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED === "true";
+export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED !== "false";
 
 export const PRO_PLAN_PRICE_INR = 499;
 export const PRO_PLAN_PRICE_PAISE = PRO_PLAN_PRICE_INR * 100;

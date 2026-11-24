@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useCallback, useEffect } from "rea
 import { useSession, signIn } from "next-auth/react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED === "true";
+export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED !== "false";
 
 const ProContext = createContext({
   isPro: !IS_PAYWALL_ENABLED,
