@@ -15,7 +15,7 @@ import { usePro } from "@/components/ProProvider";
 
 export default function ProfilePage() {
   const { data: session, status } = useSession();
-  const { isPro, openUpgradeModal } = usePro();
+  const { isPro, isPaywallEnabled, openUpgradeModal } = usePro();
   const router = useRouter();
   const { navigateWithTransition } = useTransitionContext();
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -86,17 +86,19 @@ export default function ProfilePage() {
           <div className="relative z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-2 w-full">
             <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
               <h1 className="text-4xl font-light tracking-wide truncate max-w-full">{session.user.name}</h1>
-              {isPro ? (
-                <span className="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[11px] font-bold uppercase tracking-wider">
-                  Pro Member
-                </span>
-              ) : (
-                <button
-                  onClick={() => openUpgradeModal()}
-                  className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 hover:bg-amber-500/25 text-amber-300 text-[11px] font-bold uppercase tracking-wider transition cursor-pointer"
-                >
-                  Upgrade to Pro · ₹499
-                </button>
+              {isPaywallEnabled && (
+                isPro ? (
+                  <span className="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[11px] font-bold uppercase tracking-wider">
+                    Pro Member
+                  </span>
+                ) : (
+                  <button
+                    onClick={() => openUpgradeModal()}
+                    className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 hover:bg-amber-500/25 text-amber-300 text-[11px] font-bold uppercase tracking-wider transition cursor-pointer"
+                  >
+                    Upgrade to Pro · ₹499
+                  </button>
+                )
               )}
             </div>
             <p className="text-zinc-500 font-light tracking-wider truncate w-full max-w-full">{session.user.email}</p>

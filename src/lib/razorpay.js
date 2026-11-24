@@ -2,6 +2,8 @@ import Razorpay from "razorpay";
 import crypto from "crypto";
 import { prisma } from "@/lib/prisma";
 
+export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED === "true";
+
 export const PRO_PLAN_PRICE_INR = 499;
 export const PRO_PLAN_PRICE_PAISE = PRO_PLAN_PRICE_INR * 100;
 export const PRO_PLAN_CURRENCY = "INR";
@@ -86,6 +88,7 @@ export function verifyWebhookSignature({ rawBody, signature }) {
 }
 
 export async function isUserPro(userId) {
+  if (!IS_PAYWALL_ENABLED) return true;
   if (!userId) return false;
   const user = await prisma.user.findUnique({
     where: { id: userId },

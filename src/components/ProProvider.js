@@ -4,12 +4,18 @@ import { createContext, useContext, useState, useCallback, useEffect } from "rea
 import { useSession, signIn } from "next-auth/react";
 import { AnimatePresence, motion } from "framer-motion";
 
+export const IS_PAYWALL_ENABLED = process.env.NEXT_PUBLIC_PAYWALL_ENABLED === "true";
+
 const ProContext = createContext({
-  isPro: false,
-  isProLoading: true,
+  isPro: !IS_PAYWALL_ENABLED,
+  isProLoading: IS_PAYWALL_ENABLED,
+  isPaywallEnabled: IS_PAYWALL_ENABLED,
   openUpgradeModal: () => {},
   closeUpgradeModal: () => {},
-  requirePro: () => false,
+  requirePro: (feature, cb) => {
+    if (typeof cb === "function") cb();
+    return true;
+  },
 });
 
 const PRO_FEATURES = [
@@ -59,6 +65,7 @@ function loadRazorpayScript() {
 }
 
 export function ProLockBadge({ className = "" }) {
+  if (!IS_PAYWALL_ENABLED) return null;
   return (
     <span
       className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[10px] font-bold tracking-wider uppercase shrink-0 ${className}`}
@@ -91,8 +98,8 @@ export function ProProvider({ children }) {
   const [errorMessage, setErrorMessage] = useState("");
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
-  const isPro = Boolean(session?.user?.isPro) || optimisticPro;
-  const isProLoading = status === "loading";
+  const isPro = !IS_PAYWALL_ENABLED || Boolean(session?.user?.isPro) || optimisticPro;
+  const isProLoading = IS_PAYWALL_ENABLED && status === "loading";
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -101,6 +108,10 @@ export function ProProvider({ children }) {
   }, [status]);
 
   const openUpgradeModal = useCallback((feature = "", onUnlocked = null) => {
+    if (!IS_PAYWALL_ENABLED) {
+      if (typeof onUnlocked === "function") onUnlocked();
+      return;
+    }
     setFeatureLabel(feature);
     setErrorMessage("");
     setPaymentSuccess(false);
@@ -236,6 +247,7 @@ export function ProProvider({ children }) {
       value={{
         isPro,
         isProLoading,
+        isPaywallEnabled: IS_PAYWALL_ENABLED,
         openUpgradeModal,
         closeUpgradeModal,
         requirePro,

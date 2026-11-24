@@ -2,12 +2,16 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
-import { isFreeProEmail } from "@/lib/razorpay";
+import { isFreeProEmail, IS_PAYWALL_ENABLED } from "@/lib/razorpay";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
+    if (!IS_PAYWALL_ENABLED) {
+      return NextResponse.json({ isPro: true, paywallEnabled: false }, { status: 200 });
+    }
+
     const session = await getServerSession(authOptions);
     if (!session?.user?.id) {
       return NextResponse.json({ isPro: false }, { status: 200 });

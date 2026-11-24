@@ -8,7 +8,7 @@ import { usePro, ProLockBadge } from "./ProProvider";
 
 export default function UserMenu() {
   const { data: session, status } = useSession();
-  const { isPro, openUpgradeModal } = usePro();
+  const { isPro, isPaywallEnabled, openUpgradeModal } = usePro();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [dueCount, setDueCount] = useState(0);
@@ -103,7 +103,7 @@ export default function UserMenu() {
               <p className="text-sm font-medium text-white truncate">
                 {session.user?.name}
               </p>
-              {isPro && (
+              {isPaywallEnabled && isPro && (
                 <span className="px-1.5 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider shrink-0">
                   PRO
                 </span>
@@ -114,7 +114,7 @@ export default function UserMenu() {
             </p>
           </div>
           <div className="py-2">
-            {!isPro && (
+            {isPaywallEnabled && !isPro && (
               <button
                 onClick={() => {
                   setIsOpen(false);
