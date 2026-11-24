@@ -1,15 +1,10 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import { isFreeProEmail, IS_PAYWALL_ENABLED } from "@/lib/razorpay";
 
 export const dynamic = 'force-dynamic';
-
-const isDevBypassEnabled =
-  process.env.NODE_ENV !== "production" &&
-  process.env.NEXT_PUBLIC_DEV_BYPASS_LOGIN === "true";
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
@@ -25,31 +20,6 @@ export const authOptions = {
         }
       }
     }),
-    ...(isDevBypassEnabled
-      ? [
-          CredentialsProvider({
-            id: "dev-login",
-            name: "Dev Testing Mode",
-            credentials: {},
-            async authorize() {
-              const devUser = await prisma.user.upsert({
-                where: { email: "dev.tester@jamphy.local" },
-                update: {},
-                create: {
-                  email: "dev.tester@jamphy.local",
-                  name: "Dev Tester",
-                  username: "devtester",
-                  college: "Test Institute",
-                  year: "3rd Year",
-                  course: "B.Sc Physics",
-                  isPro: false,
-                },
-              });
-              return devUser;
-            },
-          }),
-        ]
-      : []),
   ],
   session: {
     strategy: "jwt",
@@ -81,7 +51,6 @@ export const authOptions = {
       if (account && user) {
         token.id = user.id;
         token.username = user.username;
-        token.provider = account.provider;
         token.access_token = account.access_token;
         token.expires_at = account.expires_at;
         token.refresh_token = account.refresh_token;
@@ -92,11 +61,6 @@ export const authOptions = {
       if (trigger === "update" && session) {
         if (session.name !== undefined) token.name = session.name;
         if (session.username !== undefined) token.username = session.username;
-        return token;
-      }
-
-      // Dev testing credentials session doesn't use Google OAuth token refresh
-      if (token.provider === "dev-login" || !token.expires_at) {
         return token;
       }
 
