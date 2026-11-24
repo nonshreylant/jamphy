@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { isUserPro } from "@/lib/razorpay";
 import { questions } from "@/data/questions";
 import { syllabus } from "@/data/syllabus";
 
@@ -9,6 +10,13 @@ export async function POST(req) {
     const session = await getServerSession(authOptions);
     if (!session || !session.user) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    if (!(await isUserPro(session.user.id))) {
+      return Response.json(
+        { error: "Jamphy Pro is required to create Live Rooms.", code: "PRO_REQUIRED" },
+        { status: 403 }
+      );
     }
 
     const config = await req.json();

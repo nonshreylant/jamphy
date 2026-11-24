@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import TestInterface from "@/components/test/TestInterface";
 import TestResult from "@/components/test/TestResult";
 import TestOverview from "@/components/test/TestOverview";
+import { usePro } from "@/components/ProProvider";
+import ProPaywallCard from "@/components/ProPaywallCard";
 import { questions as allQuestions } from "@/data/questions";
 
 export default function RoomPage({ params }) {
@@ -14,7 +16,8 @@ export default function RoomPage({ params }) {
   const resolvedParams = use(params);
   const roomId = resolvedParams.roomId;
   
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const { isPro, isProLoading } = usePro();
   const router = useRouter();
   
   const [room, setRoom] = useState(null);
@@ -30,7 +33,7 @@ export default function RoomPage({ params }) {
   const [submittedAnswers, setSubmittedAnswers] = useState(null);
 
   useEffect(() => {
-    if (!session) return;
+    if (!session || !isPro) return;
 
     const syncRoom = async () => {
       try {
@@ -66,7 +69,7 @@ export default function RoomPage({ params }) {
     const interval = setInterval(syncRoom, 3000); // Poll every 3 seconds
 
     return () => clearInterval(interval);
-  }, [roomId, session, hasStarted]);
+  }, [roomId, session, hasStarted, isPro]);
 
   const handleJoin = async () => {
     try {
@@ -143,6 +146,24 @@ export default function RoomPage({ params }) {
     handleProgress(testQuestions.length, score, true);
     setSubmittedAnswers(answers);
   };
+
+  if (status === "loading" || isProLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white">
+        <div className="w-10 h-10 border border-white/20 border-t-white rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  if (!isPro) {
+    return (
+      <ProPaywallCard
+        title="Unlock Live Study Rooms"
+        featureName="Live Study Rooms"
+        description="Host and join real-time multiplayer mock sessions with live progress leaderboards. Unlock lifetime access to Live Rooms and all Jamphy Pro features for a one-time payment of ₹499."
+      />
+    );
+  }
 
   if (error === "Not a participant") {
     return (

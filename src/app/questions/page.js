@@ -16,6 +16,7 @@ import MathText from "../../components/MathText";
 import { useTransitionContext } from "../../components/TransitionProvider";
 import GoalSettingsModal from "../../components/GoalSettingsModal";
 import InlineLofiPlayer from "../../components/InlineLofiPlayer";
+import { usePro, ProLockBadge } from "../../components/ProProvider";
 import { motion, AnimatePresence } from "framer-motion";
 import * as htmlToImage from "html-to-image";
 
@@ -39,7 +40,15 @@ const icons = {
 
 export default function IITJamPhysicsHub() {
   const { data: session, status, update } = useSession();
+  const { isPro, openUpgradeModal, requirePro } = usePro();
   const { navigateWithTransition } = useTransitionContext();
+
+  const handleProFilterMouseDown = (e, label) => {
+    if (!isPro) {
+      e.preventDefault();
+      openUpgradeModal(label);
+    }
+  };
   const cursorRef = useRef(null);
   const [mounted, setMounted] = useState(false);
   const [goalData, setGoalData] = useState({ target: 20, completed: 0, percentage: 0 });
@@ -908,6 +917,7 @@ export default function IITJamPhysicsHub() {
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
               <span>JAM Analytics</span>
+              {!isPro && <ProLockBadge />}
             </Link>
             <InlineLofiPlayer />
             <UserMenu session={session} />
@@ -929,16 +939,18 @@ export default function IITJamPhysicsHub() {
                   <div className="bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden">
                     <div className="py-2">
                       <button
-                        onClick={() => setTestActive(true)}
-                        className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                        onClick={() => requirePro("Create Custom Tests", () => setTestActive(true))}
+                        className="flex items-center justify-between w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
                       >
-                        Create Test
+                        <span>Create Test</span>
+                        {!isPro && <ProLockBadge />}
                       </button>
                       <button
-                        onClick={() => setLiveRoomActive(true)}
-                        className="block w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                        onClick={() => requirePro("Live Study Rooms", () => setLiveRoomActive(true))}
+                        className="flex items-center justify-between w-full text-left px-4 py-2.5 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
                       >
-                        Live Room
+                        <span>Live Room</span>
+                        {!isPro && <ProLockBadge />}
                       </button>
                       <Link
                         href="/sprint"
@@ -1012,15 +1024,16 @@ export default function IITJamPhysicsHub() {
                     Choose by Subject
                   </button>
                   <button 
-                    onClick={() => setBrowseMode('year')}
-                    className={`px-6 py-2 rounded-full font-medium text-xs tracking-wide transition-all duration-300 ${browseMode === 'year' ? 'bg-white/10 text-white shadow-md' : 'text-zinc-500 hover:text-zinc-300'}`}
+                    onClick={() => requirePro("Year-wise PYQ Section", () => setBrowseMode('year'))}
+                    className={`flex items-center gap-2 px-6 py-2 rounded-full font-medium text-xs tracking-wide transition-all duration-300 ${browseMode === 'year' && isPro ? 'bg-white/10 text-white shadow-md' : 'text-zinc-500 hover:text-zinc-300'}`}
                   >
-                    Choose by Year
+                    <span>Choose by Year</span>
+                    {!isPro && <ProLockBadge />}
                   </button>
                 </div>
               </div>
 
-              {browseMode === 'subject' ? (
+              {browseMode === 'subject' || !isPro ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
 
                   {syllabus.map((subject) => (
@@ -1121,19 +1134,28 @@ export default function IITJamPhysicsHub() {
                 {selectedSubject ? selectedSubject.name : `IIT JAM ${selectedBrowseYear}`}
               </h2>
 
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-3 mb-8 items-center">
 
                 {selectedSubject && (
                   <select
-                    value={selectedYear}
-                    onChange={(e) =>
-                      setSelectedYear(e.target.value)
-                    }
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                    value={isPro ? selectedYear : "All"}
+                    onMouseDown={(e) => handleProFilterMouseDown(e, "Year Filter")}
+                    onChange={(e) => {
+                      if (!isPro) {
+                        openUpgradeModal("Year Filter");
+                        return;
+                      }
+                      setSelectedYear(e.target.value);
+                    }}
+                    className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium ${
+                      !isPro
+                        ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                        : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                    }`}
                   >
 
                     <option value="All">
-                      All Years
+                      {isPro ? "All Years" : "🔒 All Years (Pro)"}
                     </option>
 
                     {availableYears.map((year) => (
@@ -1150,15 +1172,24 @@ export default function IITJamPhysicsHub() {
 
                 {selectedSubject && (
                   <select
-                    value={selectedSubtopic}
+                    value={isPro ? selectedSubtopic : "All"}
+                    onMouseDown={(e) => handleProFilterMouseDown(e, "Topic-wise Filter")}
                     onChange={(e) => {
+                      if (!isPro) {
+                        openUpgradeModal("Topic-wise Filter");
+                        return;
+                      }
                       setSelectedSubtopic(e.target.value);
                       setSelectedSubSubtopic("All");
                     }}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
+                    className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium max-w-[200px] truncate ${
+                      !isPro
+                        ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                        : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                    }`}
                   >
                     <option value="All">
-                      All Subtopics
+                      {isPro ? "All Subtopics" : "🔒 All Subtopics (Pro)"}
                     </option>
 
                     {selectedSubject.subtopics.map(
@@ -1176,11 +1207,22 @@ export default function IITJamPhysicsHub() {
 
                 {selectedSubject && (
                   <select
-                    value={selectedSubSubtopic}
-                    onChange={(e) => setSelectedSubSubtopic(e.target.value)}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[230px] truncate"
+                    value={isPro ? selectedSubSubtopic : "All"}
+                    onMouseDown={(e) => handleProFilterMouseDown(e, "Topic-wise Filter")}
+                    onChange={(e) => {
+                      if (!isPro) {
+                        openUpgradeModal("Topic-wise Filter");
+                        return;
+                      }
+                      setSelectedSubSubtopic(e.target.value);
+                    }}
+                    className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium max-w-[230px] truncate ${
+                      !isPro
+                        ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                        : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                    }`}
                   >
-                    <option value="All">All Sub-subtopics</option>
+                    <option value="All">{isPro ? "All Sub-subtopics" : "🔒 All Sub-subtopics (Pro)"}</option>
                     {(selectedSubtopic === "All"
                       ? (selectedSubject.subSubtopics ? Object.values(selectedSubject.subSubtopics).flat() : [])
                       : (selectedSubject.subSubtopics?.[selectedSubtopic] || [])
@@ -1194,15 +1236,24 @@ export default function IITJamPhysicsHub() {
 
                 {selectedBrowseYear && (
                   <select
-                    value={selectedSubjectFilter}
+                    value={isPro ? selectedSubjectFilter : "All"}
+                    onMouseDown={(e) => handleProFilterMouseDown(e, "Topic-wise Filter")}
                     onChange={(e) => {
+                      if (!isPro) {
+                        openUpgradeModal("Topic-wise Filter");
+                        return;
+                      }
                       setSelectedSubjectFilter(e.target.value);
                       setSelectedSubtopic("All");
                       setSelectedSubSubtopic("All");
                     }}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[200px] truncate"
+                    className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium max-w-[200px] truncate ${
+                      !isPro
+                        ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                        : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                    }`}
                   >
-                    <option value="All">All Subjects</option>
+                    <option value="All">{isPro ? "All Subjects" : "🔒 All Subjects (Pro)"}</option>
                     {syllabus.map((s) => (
                       <option key={s.id} value={s.id}>{s.name}</option>
                     ))}
@@ -1212,8 +1263,13 @@ export default function IITJamPhysicsHub() {
                 {selectedBrowseYear && selectedSubjectFilter !== "All" && (
                   <>
                     <select
-                      value={selectedSubtopic}
+                      value={isPro ? selectedSubtopic : "All"}
+                      onMouseDown={(e) => handleProFilterMouseDown(e, "Topic-wise Filter")}
                       onChange={(e) => {
+                        if (!isPro) {
+                          openUpgradeModal("Topic-wise Filter");
+                          return;
+                        }
                         setSelectedSubtopic(e.target.value);
                         setSelectedSubSubtopic("All");
                       }}
@@ -1226,8 +1282,15 @@ export default function IITJamPhysicsHub() {
                     </select>
 
                     <select
-                      value={selectedSubSubtopic}
-                      onChange={(e) => setSelectedSubSubtopic(e.target.value)}
+                      value={isPro ? selectedSubSubtopic : "All"}
+                      onMouseDown={(e) => handleProFilterMouseDown(e, "Topic-wise Filter")}
+                      onChange={(e) => {
+                        if (!isPro) {
+                          openUpgradeModal("Topic-wise Filter");
+                          return;
+                        }
+                        setSelectedSubSubtopic(e.target.value);
+                      }}
                       className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium max-w-[230px] truncate"
                     >
                       <option value="All">All Sub-subtopics</option>
@@ -1246,42 +1309,71 @@ export default function IITJamPhysicsHub() {
                 )}
 
                 <select
-                  value={selectedType}
-                  onChange={(e) =>
-                    setSelectedType(e.target.value)
-                  }
-                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                  value={isPro ? selectedType : "All"}
+                  onMouseDown={(e) => handleProFilterMouseDown(e, "Question Type Filter")}
+                  onChange={(e) => {
+                    if (!isPro) {
+                      openUpgradeModal("Question Type Filter");
+                      return;
+                    }
+                    setSelectedType(e.target.value);
+                  }}
+                  className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium ${
+                    !isPro
+                      ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                      : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                  }`}
                 >
-                  <option value="All">All Types</option>
+                  <option value="All">{isPro ? "All Types" : "🔒 All Types (Pro)"}</option>
                   <option value="MCQ">MCQ</option>
                   <option value="MSQ">MSQ</option>
                   <option value="NAT">NAT</option>
                 </select>
 
                 <select
-                  value={selectedDifficulty}
-                  onChange={(e) => setSelectedDifficulty(e.target.value)}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none focus:border-zinc-600 hover:border-zinc-700 transition font-medium"
+                  value={isPro ? selectedDifficulty : "All"}
+                  onMouseDown={(e) => handleProFilterMouseDown(e, "Difficulty Filter")}
+                  onChange={(e) => {
+                    if (!isPro) {
+                      openUpgradeModal("Difficulty Filter");
+                      return;
+                    }
+                    setSelectedDifficulty(e.target.value);
+                  }}
+                  className={`rounded-2xl border bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition font-medium ${
+                    !isPro
+                      ? "border-amber-500/25 text-zinc-400 cursor-pointer hover:border-amber-500/50"
+                      : "border-zinc-800 focus:border-zinc-600 hover:border-zinc-700"
+                  }`}
                 >
-                  <option value="All">All Difficulties</option>
+                  <option value="All">{isPro ? "All Difficulties" : "🔒 All Difficulties (Pro)"}</option>
                   <option value="Easy">Easy</option>
                   <option value="Medium">Medium</option>
                   <option value="Hard">Hard</option>
                 </select>
 
-                <button
-                  onClick={() => {
-                    setSelectedYear("All");
-                    setSelectedSubtopic("All");
-                    setSelectedSubSubtopic("All");
-                    setSelectedSubjectFilter("All");
-                    setSelectedType("All");
-                    setSelectedDifficulty("All");
-                  }}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-3 text-sm text-white hover:bg-zinc-800 transition font-medium"
-                >
-                  Reset Filters
-                </button>
+                {isPro ? (
+                  <button
+                    onClick={() => {
+                      setSelectedYear("All");
+                      setSelectedSubtopic("All");
+                      setSelectedSubSubtopic("All");
+                      setSelectedSubjectFilter("All");
+                      setSelectedType("All");
+                      setSelectedDifficulty("All");
+                    }}
+                    className="rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-3 text-sm text-white hover:bg-zinc-800 transition font-medium"
+                  >
+                    Reset Filters
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => openUpgradeModal("Advanced Question Filters")}
+                    className="rounded-2xl border border-amber-500/30 bg-amber-500/10 px-5 py-3 text-sm text-amber-300 hover:bg-amber-500/20 transition font-semibold cursor-pointer"
+                  >
+                    Unlock All Filters · ₹499
+                  </button>
+                )}
 
               </div>
 
@@ -1987,14 +2079,14 @@ export default function IITJamPhysicsHub() {
 
           )}
 
-          {testActive && (
+          {testActive && isPro && (
             <TestManager
               allQuestions={questionsList}
               onClose={() => setTestActive(false)}
             />
           )}
 
-          {liveRoomActive && (
+          {liveRoomActive && isPro && (
             <TestModal 
               title="Create Live Room"
               onClose={() => setLiveRoomActive(false)}
@@ -2006,6 +2098,11 @@ export default function IITJamPhysicsHub() {
                     body: JSON.stringify(config)
                   });
                   const data = await res.json();
+                  if (res.status === 403 && data.code === "PRO_REQUIRED") {
+                    setLiveRoomActive(false);
+                    openUpgradeModal("Live Study Rooms");
+                    return;
+                  }
                   if (res.ok) {
                     window.location.href = `/room/${data.roomId}`;
                   } else {

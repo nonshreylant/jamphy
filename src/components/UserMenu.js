@@ -4,9 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { usePro, ProLockBadge } from "./ProProvider";
 
 export default function UserMenu() {
   const { data: session, status } = useSession();
+  const { isPro, openUpgradeModal } = usePro();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [dueCount, setDueCount] = useState(0);
@@ -97,14 +99,35 @@ export default function UserMenu() {
       {isOpen && (
         <div className="absolute right-0 mt-3 w-56 bg-zinc-900 border border-zinc-800 rounded-2xl shadow-xl overflow-hidden z-50 transform origin-top-right transition-all">
           <div className="px-4 py-3 border-b border-zinc-800">
-            <p className="text-sm font-medium text-white truncate">
-              {session.user?.name}
-            </p>
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-sm font-medium text-white truncate">
+                {session.user?.name}
+              </p>
+              {isPro && (
+                <span className="px-1.5 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider shrink-0">
+                  PRO
+                </span>
+              )}
+            </div>
             <p className="text-xs text-zinc-400 truncate">
               {session.user?.email}
             </p>
           </div>
           <div className="py-2">
+            {!isPro && (
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  openUpgradeModal();
+                }}
+                className="w-full text-left px-4 py-2.5 text-sm font-semibold text-amber-300 hover:bg-amber-500/10 transition-colors flex items-center justify-between cursor-pointer"
+              >
+                <span>Upgrade to Pro</span>
+                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-200">
+                  ₹499
+                </span>
+              </button>
+            )}
             <Link
               href="/profile"
               onClick={() => setIsOpen(false)}
@@ -122,9 +145,10 @@ export default function UserMenu() {
             <Link
               href="/analytics"
               onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm text-cyan-400 hover:bg-zinc-800 hover:text-cyan-300 transition-colors"
+              className="flex items-center justify-between px-4 py-2.5 text-sm text-cyan-400 hover:bg-zinc-800 hover:text-cyan-300 transition-colors"
             >
-              Analytics
+              <span>Analytics</span>
+              {!isPro && <ProLockBadge />}
             </Link>
 
             <button

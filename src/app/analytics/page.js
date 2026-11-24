@@ -10,6 +10,8 @@ import {
   BarChart, Bar, Cell
 } from 'recharts';
 import ActivityRing from "@/components/ActivityRing";
+import { usePro } from "@/components/ProProvider";
+import ProPaywallCard from "@/components/ProPaywallCard";
 import { questions } from "@/data/questions";
 import { syllabus } from "@/data/syllabus";
 
@@ -122,6 +124,7 @@ const CustomYearChartTooltip = ({ active, payload, label }) => {
 
 function AnalyticsContent() {
   const { data: session, status } = useSession();
+  const { isPro, isProLoading } = usePro();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("jam"); // "jam" | "personal"
   const [selectedChartType, setSelectedChartType] = useState("stacked"); // "stacked" | "grouped" | "trend"
@@ -129,7 +132,7 @@ function AnalyticsContent() {
 
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: personalData, isLoading: isPersonalLoading } = useSWR(
-    status === "authenticated" && activeTab === "personal" ? "/api/analytics" : null,
+    status === "authenticated" && isPro && activeTab === "personal" ? "/api/analytics" : null,
     fetcher,
     { revalidateOnFocus: true }
   );
@@ -257,6 +260,24 @@ function AnalyticsContent() {
 
     return { total: qOfYear.length, easy, med, hard, subjectList };
   }, [selectedYearFilter]);
+
+  if (status === "loading" || isProLoading) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="w-10 h-10 border border-white/20 border-t-white rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  if (!isPro) {
+    return (
+      <ProPaywallCard
+        title="Unlock IIT JAM & Personal Analytics"
+        featureName="JAM & Personal Analytics"
+        description="Get full access to 9-year IIT JAM exam trends, subject & difficulty weightage matrices, high-yield topic leaderboards, and your personal accuracy insights with a one-time payment of ₹499."
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-black text-white p-4 sm:p-6 md:p-10 font-sans">

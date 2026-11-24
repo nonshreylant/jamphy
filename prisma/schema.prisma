@@ -71,8 +71,29 @@ model User {
   showActivityPublicly  Boolean   @default(true)
   showSubjectsPublicly  Boolean   @default(true)
   isBlocked             Boolean   @default(false)
+  isPro                 Boolean   @default(false)
+  proPurchasedAt        DateTime?
+  payments              Payment[]
 
   @@index([email])
+}
+
+model Payment {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  razorpayOrderId   String   @unique
+  razorpayPaymentId String?  @unique
+  razorpaySignature String?
+  amount            Int      // Amount in paise (e.g., 49900 for ₹499)
+  currency          String   @default("INR")
+  status            String   @default("CREATED") // CREATED, PAID, FAILED, REFUNDED
+  plan              String   @default("PRO_LIFETIME")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([userId])
+  @@index([status])
 }
 
 model VerificationToken {

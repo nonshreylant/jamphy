@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
+import { isUserPro } from "@/lib/razorpay";
 
 export async function GET(req) {
   try {
@@ -63,6 +64,13 @@ export async function POST(req) {
     } 
     
     if (action === "ACCEPT") {
+      if (!(await isUserPro(session.user.id))) {
+        return Response.json(
+          { error: "Jamphy Pro is required to join Live Rooms.", code: "PRO_REQUIRED" },
+          { status: 403 }
+        );
+      }
+
       await prisma.roomInvite.update({
         where: { id: inviteId },
         data: { status: "ACCEPTED" }

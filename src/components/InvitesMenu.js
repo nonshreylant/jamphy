@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { usePro } from "./ProProvider";
 
 export default function InvitesMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,7 @@ export default function InvitesMenu() {
   const [notifications, setNotifications] = useState([]);
   const menuRef = useRef(null);
   const router = useRouter();
+  const { isPro, openUpgradeModal } = usePro();
 
   const fetchNotifications = async () => {
     try {
@@ -40,6 +42,12 @@ export default function InvitesMenu() {
   }, []);
 
   const handleAction = async (inviteId, action) => {
+    if (action === "ACCEPT" && !isPro) {
+      setIsOpen(false);
+      openUpgradeModal("Live Study Rooms");
+      return;
+    }
+
     try {
       const res = await fetch("/api/room/invites", {
         method: "POST",
@@ -48,6 +56,12 @@ export default function InvitesMenu() {
       });
       const data = await res.json();
       
+      if (res.status === 403 && data.code === "PRO_REQUIRED") {
+        setIsOpen(false);
+        openUpgradeModal("Live Study Rooms");
+        return;
+      }
+
       if (res.ok) {
         setInvites(invites.filter(inv => inv.id !== inviteId));
         setIsOpen(false);
