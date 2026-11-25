@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import { isFreeProEmail, IS_PAYWALL_ENABLED } from "@/lib/razorpay";
+import { isAdminEmail } from "@/lib/admin";
 
 export const dynamic = 'force-dynamic';
 
@@ -149,6 +150,7 @@ export const authOptions = {
             session.user.image = dbUser.image;
             session.user.username = dbUser.username;
             session.user.isPro = !IS_PAYWALL_ENABLED || Boolean(dbUser.isPro) || isFreeProEmail(dbUser.email || session.user.email);
+            session.user.isAdmin = isAdminEmail(dbUser.email || session.user.email);
             session.user.proPurchasedAt = dbUser.proPurchasedAt;
             if (dbUser.isBlocked) {
               session.error = "UserBlocked";

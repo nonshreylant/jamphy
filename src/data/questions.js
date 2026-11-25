@@ -10559,10 +10559,10 @@ Rounding to two decimal places gives $1.67$.`,
     year: 2022,
     marks: 1,
     difficulty: "Easy",
-    subject: "Matrices & Determinants",
+    subject: "Complex Numbers",
     subjectId: "math",
-    subSubtopic: "Rank, Trace & Determinant Properties",
-    tags: ["Matrices & Determinants","Mathematical Methods","Rank, Trace & Determinant Properties"],
+    subSubtopic: "Complex Algebra & Euler's Formula",
+    tags: ["Complex Numbers","Mathematical Methods","Complex Algebra & Euler's Formula"],
     type: "MCQ",
 
     question: String.raw`
@@ -10985,10 +10985,10 @@ Looking at the typical options:
     year: 2022,
     marks: 2,
     difficulty: "Medium",
-    subject: "Matrices & Determinants",
+    subject: "Calculus",
     subjectId: "math",
-    subSubtopic: "Rank, Trace & Determinant Properties",
-    tags: ["Matrices & Determinants","Mathematical Methods","Rank, Trace & Determinant Properties"],
+    subSubtopic: "Taylor & Maclaurin Series",
+    tags: ["Calculus","Mathematical Methods","Taylor & Maclaurin Series"],
     type: "MCQ",
 
     question: String.raw`

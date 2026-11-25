@@ -17,6 +17,8 @@ import { useTransitionContext } from "../../components/TransitionProvider";
 import GoalSettingsModal from "../../components/GoalSettingsModal";
 import InlineLofiPlayer from "../../components/InlineLofiPlayer";
 import { usePro, ProLockBadge } from "../../components/ProProvider";
+import AdminEditQuestionModal, { AdminQuestionMenu } from "../../components/AdminEditQuestionModal";
+import { applyOverridesToList, getQuestionKey } from "../../lib/questionOverrides";
 import { motion, AnimatePresence } from "framer-motion";
 import * as htmlToImage from "html-to-image";
 
@@ -42,6 +44,8 @@ export default function IITJamPhysicsHub() {
   const { data: session, status, update } = useSession();
   const { isPro, openUpgradeModal, requirePro } = usePro();
   const { navigateWithTransition } = useTransitionContext();
+  const isAdmin = Boolean(session?.user?.isAdmin);
+  const [editingQuestion, setEditingQuestion] = useState(null);
 
   const handleProFilterMouseDown = (e, label) => {
     if (!isPro) {
@@ -128,28 +132,59 @@ export default function IITJamPhysicsHub() {
   };
 
   useEffect(() => {
-    fetch("/api/bookmarks")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.bookmarks) {
-          const allQuestions = [...staticQuestions];
-          const loaded = data.bookmarks.map(item => {
-            return allQuestions.find(q => {
-              const qStrId = String(q.id);
-              const qYearId = `${q.year}-${q.id}`;
-              return String(item.questionId) === qStrId || String(item.questionId) === qYearId;
-            });
-          }).filter(Boolean);
+    Promise.all([
+      fetch("/api/bookmarks").then((res) => res.json()),
+      fetch("/api/questions").then((res) => res.json()).catch(() => ({})),
+    ])
+      .then(([bookmarksData, questionsData]) => {
+        if (bookmarksData.bookmarks) {
+          const overrides = questionsData?.overrides || {};
+          const dbQuestions = questionsData?.questions || [];
+          const existingKeys = new Set(staticQuestions.map((q) => `${q.year}-${q.id}`));
+          const mergedQuestions = applyOverridesToList(
+            [
+              ...staticQuestions,
+              ...dbQuestions.filter((q) => !existingKeys.has(`${q.year}-${q.id}`)),
+            ],
+            overrides
+          );
+          const loaded = bookmarksData.bookmarks
+            .map((item) =>
+              mergedQuestions.find((q) => {
+                const qStrId = String(q.id);
+                const qYearId = `${q.year}-${q.id}`;
+                return (
+                  String(item.questionId) === qStrId ||
+                  String(item.questionId) === qYearId
+                );
+              })
+            )
+            .filter(Boolean);
           setQuestionsList(loaded);
-          setVaultItems(new Set(data.bookmarks.map(b => b.questionId)));
+          setVaultItems(new Set(bookmarksData.bookmarks.map((b) => b.questionId)));
         }
         setIsLoadingSaved(false);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
         setIsLoadingSaved(false);
       });
   }, []);
+
+  const handleQuestionEdited = (updatedQuestion) => {
+    const updatedKey = getQuestionKey(updatedQuestion);
+    setQuestionsList((prev) =>
+      prev.map((q) => (getQuestionKey(q) === updatedKey ? updatedQuestion : q))
+    );
+    setActiveQuestion((prev) =>
+      prev && getQuestionKey(prev) === updatedKey ? updatedQuestion : prev
+    );
+    const dest = updatedQuestion.subSubtopic
+      ? `${updatedQuestion.subject} → ${updatedQuestion.subSubtopic}`
+      : updatedQuestion.subject;
+    setToastMessage(`Moved question to ${dest}`);
+    setTimeout(() => setToastMessage(""), 3000);
+  };
 
   const handleSaveGoal = (newTarget) => {
     setIsGoalModalOpen(false);
@@ -1174,59 +1209,69 @@ export default function IITJamPhysicsHub() {
 
                   {filteredQuestions.map((question) => (
 
-                    <button
+                    <div
                       key={`${question.year}-${question.id}`}
-                      onClick={() => {
-                        setActiveQuestion(question);
-                        resetQuestionState();
-                      }}
-                      className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition"
+                      className="relative"
                     >
+                      <button
+                        onClick={() => {
+                          setActiveQuestion(question);
+                          resetQuestionState();
+                        }}
+                        className={`w-full rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-left hover:bg-zinc-900 transition ${isAdmin ? "pr-16" : ""}`}
+                      >
 
-                      <div className="flex gap-2 mb-4 flex-wrap items-center">
+                        <div className="flex gap-2 mb-4 flex-wrap items-center">
 
-                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                          {question.year}
-                        </span>
-
-                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                          {question.subject}
-                        </span>
-
-                        {question.subSubtopic && (
-                          <span className="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-zinc-300">
-                            {question.subSubtopic}
+                          <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                            {question.year}
                           </span>
-                        )}
 
-                        <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-                          {question.type}
-                        </span>
-
-                        {question.marks && (
-                          <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
-                            {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
+                          <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                            {question.subject}
                           </span>
-                        )}
 
-                        {question.difficulty && (
-                          <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${question.difficulty === 'Easy'
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                            : question.difficulty === 'Medium'
-                              ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
-                              : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
-                            }`}>
-                            {question.difficulty}
+                          {question.subSubtopic && (
+                            <span className="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-zinc-300">
+                              {question.subSubtopic}
+                            </span>
+                          )}
+
+                          <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+                            {question.type}
                           </span>
-                        )}
 
-                      </div>
+                          {question.marks && (
+                            <span className="px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-400">
+                              {question.marks} {question.marks === 1 ? 'Mark' : 'Marks'}
+                            </span>
+                          )}
 
-                      <MathText className="question-preview text-lg leading-relaxed text-zinc-200 line-clamp-3 overflow-hidden">
-                        {question.question}
-                      </MathText>
+                          {question.difficulty && (
+                            <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${question.difficulty === 'Easy'
+                              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+                              : question.difficulty === 'Medium'
+                                ? 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                                : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
+                              }`}>
+                              {question.difficulty}
+                            </span>
+                          )}
 
-                    </button>
+                        </div>
+
+                        <MathText className="question-preview text-lg leading-relaxed text-zinc-200 line-clamp-3 overflow-hidden">
+                          {question.question}
+                        </MathText>
+
+                      </button>
+
+                      {isAdmin && (
+                        <div className="absolute top-6 right-6 z-20">
+                          <AdminQuestionMenu onEdit={() => setEditingQuestion(question)} />
+                        </div>
+                      )}
+                    </div>
 
                   ))}
 
@@ -1287,6 +1332,9 @@ export default function IITJamPhysicsHub() {
                       </>
                     )}
                   </button>
+                  {isAdmin && (
+                    <AdminQuestionMenu onEdit={() => setEditingQuestion(activeQuestion)} />
+                  )}
                 </div>
               </div>
 
@@ -1935,6 +1983,13 @@ export default function IITJamPhysicsHub() {
           currentTarget={goalData.target}
           onClose={() => setIsGoalModalOpen(false)}
           onSave={handleSaveGoal}
+        />
+      )}
+      {isAdmin && editingQuestion && (
+        <AdminEditQuestionModal
+          question={editingQuestion}
+          onClose={() => setEditingQuestion(null)}
+          onSaved={handleQuestionEdited}
         />
       )}
       {/* Toast Notification */}
