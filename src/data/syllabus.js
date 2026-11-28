@@ -1,8 +1,8 @@
 export const syllabus = [
   {
-    id: "math",
-    name: "Mathematical Methods",
-    subtopics: [
+    "id": "math",
+    "name": "Mathematical Methods",
+    "subtopics": [
       "Calculus",
       "Vector Algebra & Vector Calculus",
       "Fourier Series",
@@ -11,12 +11,11 @@ export const syllabus = [
       "Complex Numbers",
       "Error Analysis & Statistics"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Calculus": [
         "Functions of Single & Several Variables",
         "Partial Derivatives & Total Differential",
         "Taylor & Maclaurin Series",
-        "Maxima and Minima",
         "Multiple Integrals (Double & Triple Integrals)",
         "Line, Surface & Volume Integrals",
         "Jacobians & Coordinate Transformations"
@@ -30,54 +29,42 @@ export const syllabus = [
       ],
       "Fourier Series": [
         "Fourier Series Expansion & Coefficients",
-        "Even & Odd Functions & Half-Range Series",
-        "Dirichlet Conditions & Convergence",
-        "Parseval's Identity"
+        "Even & Odd Functions & Half-Range Series"
       ],
       "Differential Equations": [
         "First-Order Linear & Non-linear ODEs",
-        "Separable & Exact Differential Equations",
-        "Second-Order Linear ODEs with Constant Coefficients",
-        "Homogeneous & Inhomogeneous Equations",
-        "Cauchy-Euler Equations"
+        "Second-Order Linear ODEs with Constant Coefficients"
       ],
       "Matrices & Determinants": [
         "Eigenvalues and Eigenvectors",
-        "Diagonalization & Cayley-Hamilton Theorem",
         "Hermitian, Unitary, Symmetric & Orthogonal Matrices",
         "Rank, Trace & Determinant Properties",
         "System of Linear Equations"
       ],
       "Complex Numbers": [
         "Complex Algebra & Euler's Formula",
-        "Analytic Functions & Cauchy-Riemann Conditions",
-        "Cauchy's Integral Theorem & Formula",
-        "Residue Theorem & Contour Integration",
-        "Taylor & Laurent Series"
+        "Residue Theorem & Contour Integration"
       ],
       "Error Analysis & Statistics": [
-        "Propagation of Errors",
-        "Mean, Standard Deviation & Variance",
-        "Gaussian / Normal Distribution",
-        "Least Squares Curve Fitting",
-        "Binomial & Poisson Distributions"
+        "Propagation of Errors"
       ]
     }
   },
   {
-    id: "mechanics",
-    name: "Mechanics & General Properties",
-    subtopics: [
+    "id": "mechanics",
+    "name": "Mechanics & General Properties",
+    "subtopics": [
       "Newtonian Mechanics",
       "Non-Inertial Frames",
       "Central Force Motion",
+      "Gravitation",
       "Conservation Laws",
       "System of Particles",
       "Collisions",
       "Rigid Body Dynamics",
       "Fluid Mechanics"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Newtonian Mechanics": [
         "Newton's Laws & Equations of Motion",
         "Work-Energy Theorem & Potential Energy Curves",
@@ -86,16 +73,18 @@ export const syllabus = [
       ],
       "Non-Inertial Frames": [
         "Inertial vs Non-Inertial Frames",
-        "Centrifugal Force",
         "Coriolis Force & Applications",
         "Fictitious / Pseudo Forces"
       ],
       "Central Force Motion": [
         "Two-Body Problem & Reduced Mass",
-        "Kepler's Laws of Planetary Motion",
-        "Gravitational Potential & Bound / Unbound Orbits",
         "Effective Potential & Orbit Stability",
-        "Runge-Lenz Vector & Orbital Dynamics"
+        "Central Force Trajectories & Bound / Unbound Orbits"
+      ],
+      "Gravitation": [
+        "Newton's Law of Gravitation & Gravitational Field",
+        "Kepler's Laws of Planetary Motion",
+        "Satellite Motion, Orbital & Escape Velocity"
       ],
       "Conservation Laws": [
         "Conservation of Linear Momentum",
@@ -110,30 +99,24 @@ export const syllabus = [
       ],
       "Collisions": [
         "Elastic & Inelastic Collisions in 1D & 2D",
-        "Coefficient of Restitution",
-        "Laboratory vs Center of Mass (CM) Frames",
-        "Scattering Angle & Energy Transfer"
+        "Coefficient of Restitution"
       ],
       "Rigid Body Dynamics": [
         "Moment of Inertia & Tensor of Inertia",
         "Parallel & Perpendicular Axis Theorems",
-        "Rotational Dynamics & Torque Equation",
-        "Pure Rolling & Rolling with Slipping",
-        "Precession & Gyroscopic Motion"
+        "Rotational Dynamics & Torque Equation"
       ],
       "Fluid Mechanics": [
         "Equation of Continuity",
         "Bernoulli's Theorem & Applications",
-        "Viscosity & Poiseuille's Flow",
-        "Stokes' Law & Terminal Velocity",
-        "Surface Tension & Capillary Action"
+        "Stokes' Law & Terminal Velocity"
       ]
     }
   },
   {
-    id: "waves",
-    name: "Oscillations, Waves & Optics",
-    subtopics: [
+    "id": "waves",
+    "name": "Oscillations, Waves & Optics",
+    "subtopics": [
       "Simple Harmonic Motion",
       "Superposition of Oscillations",
       "Damped & Forced Oscillations",
@@ -145,62 +128,47 @@ export const syllabus = [
       "Diffraction",
       "Polarization"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Simple Harmonic Motion": [
         "Undamped SHM Differential Equation",
-        "Energy in SHM (Kinetic, Potential, Total)",
-        "Simple & Physical Pendulum",
-        "Torsional Oscillations & LC Oscillators"
+        "Simple & Physical Pendulum"
       ],
       "Superposition of Oscillations": [
         "Superposition of Collinear Oscillations & Beats",
-        "Superposition of Perpendicular Oscillations (Lissajous Figures)",
-        "Phase Difference & Amplitude Relations"
+        "Superposition of Perpendicular Oscillations (Lissajous Figures)"
       ],
       "Damped & Forced Oscillations": [
-        "Damped Harmonic Oscillator (Under, Over, Critical)",
-        "Quality Factor (Q) & Logarithmic Decrement",
-        "Forced Oscillations & Resonance (Amplitude & Velocity)",
-        "Power Absorption & Bandwidth"
+        "Damped Harmonic Oscillator (Under, Over, Critical)"
       ],
       "Wave Motion": [
         "1D Wave Equation & General Solutions",
         "Traveling Waves & Wave Parameters",
         "Standing / Stationary Waves & Boundary Conditions",
-        "Reflection & Transmission at Boundaries",
-        "Energy Density & Power Transmission"
+        "Reflection & Transmission at Boundaries"
       ],
       "Phase & Group Velocity": [
         "Phase Velocity vs Group Velocity",
-        "Dispersion Relations in Media (Normal vs Anomalous)",
-        "Wave Packets & Pulse Spreading"
+        "Dispersion Relations in Media (Normal vs Anomalous)"
       ],
       "Sound Waves": [
-        "Speed of Sound in Gases, Liquids & Solids",
-        "Pressure Waves vs Displacement Waves",
         "Doppler Effect for Sound (Source, Observer, Wind)",
         "Organ Pipes, Resonance Tubes & Acoustics"
       ],
       "Geometrical Optics": [
         "Fermat's Principle & Laws of Reflection/Refraction",
-        "Matrix Methods in Paraxial Optics (Ray Matrices)",
-        "Thick & Thin Lenses & Combinations",
-        "Optical Instruments (Microscopes & Telescopes)",
-        "Chromatic & Spherical Aberrations"
+        "Thick & Thin Lenses & Combinations"
       ],
       "Interference": [
         "Young's Double Slit Experiment & Fringe Width",
         "Interference in Thin Films & Wedge Films",
         "Newton's Rings & Radius Calculation",
-        "Michelson Interferometer & Fringe Shifts",
-        "Temporal & Spatial Coherence"
+        "Michelson Interferometer & Fringe Shifts"
       ],
       "Diffraction": [
         "Fraunhofer Diffraction at a Single Slit",
         "Fraunhofer Diffraction at Double & N-Slits (Grating)",
         "Circular Aperture & Airy Disk",
-        "Resolving Power of Grating, Microscope & Telescope",
-        "Fresnel Diffraction & Zone Plates"
+        "Resolving Power of Grating, Microscope & Telescope"
       ],
       "Polarization": [
         "Linear, Circular & Elliptic Polarization",
@@ -213,9 +181,9 @@ export const syllabus = [
     }
   },
   {
-    id: "em",
-    name: "Electricity & Magnetism",
-    subtopics: [
+    "id": "em",
+    "name": "Electricity & Magnetism",
+    "subtopics": [
       "Electrostatics",
       "Laplace's Equation",
       "Conductors, Capacitors & Electrostatic Energy",
@@ -227,7 +195,7 @@ export const syllabus = [
       "Reflection & Refraction of EM Waves",
       "Charged Particle Dynamics"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Electrostatics": [
         "Coulomb's Law & Electric Field Calculations",
         "Gauss's Law in Integral & Differential Form",
@@ -237,36 +205,28 @@ export const syllabus = [
       ],
       "Laplace's Equation": [
         "Poisson's & Laplace's Equations",
-        "Boundary Value Problems in Cartesian, Cylindrical & Spherical",
-        "Uniqueness Theorem",
-        "Method of Images (Point Charge near Plane/Sphere)"
+        "Boundary Value Problems in Cartesian, Cylindrical & Spherical"
       ],
       "Conductors, Capacitors & Electrostatic Energy": [
         "Properties of Ideal Conductors",
-        "Capacitance of Parallel Plate, Cylindrical & Spherical",
-        "Capacitors with Dielectrics (Series & Parallel)",
-        "Electrostatic Energy Density & Forces on Conductors"
+        "Capacitance of Parallel Plate, Cylindrical & Spherical"
       ],
       "Dielectrics": [
         "Electric Polarization & Bound Charge Densities",
-        "Electric Displacement Vector (D-field)",
         "Linear Dielectrics & Dielectric Constant / Susceptibility",
-        "Boundary Conditions for D and E Fields",
-        "Clausius-Mossotti Equation"
+        "Boundary Conditions for D and E Fields"
       ],
       "Magnetostatics": [
         "Biot-Savart Law & Magnetic Field of Wire, Loop, Solenoid",
         "Ampère's Circuital Law & Differential Form",
         "Magnetic Vector Potential (A-field) & Gauge Invariance",
         "Magnetic Dipole & Force / Torque on Dipoles",
-        "Boundary Conditions on B and H Fields",
-        "Magnetization & Magnetic Susceptibility / Permeability"
+        "Boundary Conditions on B and H Fields"
       ],
       "Electromagnetic Induction": [
         "Faraday's Law & Lenz's Law",
         "Motional EMF & Eddy Currents",
         "Self-Inductance & Mutual Inductance",
-        "Magnetic Energy & Energy Density in B-Field",
         "RL & RLC Transient Response"
       ],
       "DC & AC Circuits": [
@@ -280,27 +240,23 @@ export const syllabus = [
         "Displacement Current & Maxwell's Correction",
         "Complete Maxwell's Equations (Differential & Integral)",
         "EM Wave Equation in Vacuum & Non-Conducting Media",
-        "Poynting Vector & Energy Flux Density",
-        "Radiation Pressure & Momentum of EM Waves"
+        "Poynting Vector & Energy Flux Density"
       ],
       "Reflection & Refraction of EM Waves": [
         "EM Waves at Dielectric Interfaces",
-        "Fresnel's Equations & Polarization by Reflection",
-        "Brewster's Angle & Total Internal Reflection (TIR)",
-        "Skin Depth & Propagation in Conducting Media"
+        "Fresnel's Equations & Polarization by Reflection"
       ],
       "Charged Particle Dynamics": [
         "Lorentz Force (Electric + Magnetic Forces)",
         "Cyclotron Motion & Helical Trajectories",
-        "Velocity Selector & Mass Spectrometry",
-        "Magnetic Mirror & Drift Velocities"
+        "Velocity Selector & Mass Spectrometry"
       ]
     }
   },
   {
-    id: "thermo",
-    name: "Thermodynamics & KTG",
-    subtopics: [
+    "id": "thermo",
+    "name": "Thermodynamics & KTG",
+    "subtopics": [
       "Kinetic Theory of Gases",
       "Equations of State",
       "Laws of Thermodynamics",
@@ -311,18 +267,14 @@ export const syllabus = [
       "Phase Transitions",
       "Statistical Mechanics"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Kinetic Theory of Gases": [
-        "Pressure & Kinetic Temperature of Ideal Gas",
         "Maxwell-Boltzmann Velocity & Speed Distributions",
         "Equipartition of Energy & Degrees of Freedom",
         "Specific Heat of Monatomic, Diatomic & Polyatomic Gases",
         "Mean Free Path, Collision Frequency & Transport Phenomena"
       ],
       "Equations of State": [
-        "Ideal Gas Equation of State",
-        "Van der Waals Equation & Real Gases",
-        "Critical Constants (Pc, Vc, Tc) & Reduced Equation",
         "Virial Expansion & Compressibility Factor"
       ],
       "Laws of Thermodynamics": [
@@ -334,33 +286,23 @@ export const syllabus = [
       "Thermodynamic Processes": [
         "Isothermal & Adiabatic Processes (Work Done, PV Diagram)",
         "Isobaric & Isochoric Processes",
-        "Polytropic & Quasi-static Processes",
-        "Reversible vs Irreversible Processes",
         "Free Expansion & Joule-Thomson Effect"
       ],
       "Entropy & Second Law": [
-        "Clausius & Kelvin-Planck Statements",
-        "Carnot's Theorem & Thermodynamic Temperature Scale",
-        "Clausius Inequality & Definition of Entropy",
-        "Entropy Change in Reversible & Irreversible Processes",
-        "Principle of Increase of Entropy"
+        "Entropy Change in Reversible & Irreversible Processes"
       ],
       "Carnot Cycle": [
         "Carnot Engine Cycle & Efficiency",
-        "Carnot Refrigerator & Heat Pump (COP)",
         "Otto, Diesel & Stirling Cycles"
       ],
       "Thermodynamic Relations & Potentials": [
         "Helmholtz Free Energy (F) & Gibbs Free Energy (G)",
         "Maxwell's Thermodynamic Relations",
-        "TdS Equations & Thermodynamic Identities",
-        "Heat Capacity Ratios & Differences",
-        "Joule-Thomson Coefficient & Inversion Temperature"
+        "TdS Equations & Thermodynamic Identities"
       ],
       "Phase Transitions": [
         "First-Order Phase Transitions & Latent Heat",
         "Clausius-Clapeyron Equation & Applications",
-        "Second-Order Phase Transitions & Ehrenfest's Equations",
         "Triple Point & Phase Diagrams"
       ],
       "Statistical Mechanics": [
@@ -373,9 +315,9 @@ export const syllabus = [
     }
   },
   {
-    id: "modern",
-    name: "Modern Physics",
-    subtopics: [
+    "id": "modern",
+    "name": "Modern Physics",
+    "subtopics": [
       "Special Relativity",
       "Quantum Phenomena",
       "Atomic Physics",
@@ -384,39 +326,28 @@ export const syllabus = [
       "Radioactivity",
       "Quantum Principles"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Special Relativity": [
-        "Postulates of Special Relativity",
         "Lorentz Transformations & Spacetime Invariance",
         "Length Contraction & Time Dilation (Twin Paradox)",
         "Relativistic Addition of Velocities",
         "Relativistic Momentum, Energy & Mass-Energy Equivalence",
-        "Relativistic Doppler Effect",
         "Relativistic Collisions & Decay"
       ],
       "Quantum Phenomena": [
         "Photoelectric Effect & Einstein's Equation",
         "Compton Scattering & Compton Wavelength",
         "Blackbody Radiation & Planck's Radiation Law",
-        "Wave-Particle Duality & de Broglie Wavelength",
-        "Pair Production & Annihilation",
-        "X-Ray Spectra, Bremsstrahlung & Moseley's Law",
-        "Franck-Hertz Experiment"
+        "X-Ray Spectra, Bremsstrahlung & Moseley's Law"
       ],
       "Atomic Physics": [
         "Bohr's Model of Hydrogen Atom & Energy Levels",
-        "Rydberg Formula & Spectral Series",
-        "Reduced Mass Correction in Atomic Spectra",
-        "Sommerfeld Model & Orbital Quantization",
-        "Stern-Gerlach Experiment & Electron Spin",
-        "Fine Structure & Spin-Orbit Coupling",
-        "Zeeman Effect (Normal & Anomalous)"
+        "Stern-Gerlach Experiment & Electron Spin"
       ],
       "Quantum Mechanics": [
         "1D Time-Independent & Time-Dependent Schrödinger Equations",
         "Particle in 1D & 3D Infinite Potential Wells (Box)",
         "Quantum Harmonic Oscillator",
-        "Finite Potential Well & Bound States",
         "Potential Step, Barrier & Quantum Tunneling",
         "Wavefunction Properties, Normalization & Probability Current",
         "Quantum Operators, Eigenvalues, Commutators & Expectation Values",
@@ -425,31 +356,22 @@ export const syllabus = [
       "Nuclear Physics": [
         "Nuclear Size, Mass, Density & Binding Energy",
         "Semi-Empirical Mass Formula (Liquid Drop Model)",
-        "Nuclear Spin, Magnetic Dipole & Electric Quadrupole Moment",
-        "Nuclear Forces & Deuteron Problem",
-        "Nuclear Fission, Fusion & Q-Value of Nuclear Reactions",
-        "Magic Numbers & Nuclear Shell Model Basics"
+        "Nuclear Fission, Fusion & Q-Value of Nuclear Reactions"
       ],
       "Radioactivity": [
         "Radioactive Decay Law, Half-Life & Mean Life",
-        "Alpha Decay & Geiger-Nuttall Law",
-        "Beta Decay (Fermi Theory, Neutrino, Beta Spectra)",
-        "Gamma Decay & Internal Conversion",
         "Radioactive Equilibrium (Secular & Transient) & Carbon Dating"
       ],
       "Quantum Principles": [
         "Postulates of Quantum Mechanics & Dirac Bra-Ket Notation",
-        "Superposition Principle & Measurement Collapse",
-        "Compatible vs Incompatible Observables & Simultaneous Eigenstates",
-        "Ehrenfest Theorem & Correspondence Principle",
-        "Parity & Conservation Laws in Quantum Systems"
+        "Superposition Principle & Measurement Collapse"
       ]
     }
   },
   {
-    id: "solid",
-    name: "Solid State & Electronics",
-    subtopics: [
+    "id": "solid",
+    "name": "Solid State & Electronics",
+    "subtopics": [
       "Crystal Structure",
       "X-Ray Diffraction",
       "Semiconductors",
@@ -461,74 +383,49 @@ export const syllabus = [
       "Digital Electronics",
       "Logic Gates"
     ],
-    subSubtopics: {
+    "subSubtopics": {
       "Crystal Structure": [
         "Bravais Lattices, Unit Cells & Crystal Systems (SC, BCC, FCC, HCP)",
         "Miller Indices & Interplanar Spacing",
-        "Atomic Packing Fraction & Coordination Number",
-        "Reciprocal Lattice Vectors & Properties",
-        "Brillouin Zones"
+        "Atomic Packing Fraction & Coordination Number"
       ],
       "X-Ray Diffraction": [
         "Bragg's Law of X-Ray Diffraction",
-        "Laue Equations & Equivalence to Bragg's Law",
-        "Powder Diffraction Method & Structure Factor",
         "Systematic Absences & Lattice Identification"
       ],
       "Semiconductors": [
-        "Intrinsic Semiconductors & Carrier Concentration",
         "Extrinsic Semiconductors (n-type & p-type) & Dopant Ionization",
         "Fermi Level Position & Temperature Dependence",
-        "Carrier Drift, Mobility, Conductivity & Einstein Relation",
-        "Hall Effect & Hall Coefficient",
         "Band Gap (Direct vs Indirect Band Gap)"
       ],
       "p-n Junction & Diodes": [
         "Built-in Potential & Depletion Region Width",
         "Diode Equation & I-V Characteristics",
-        "Reverse Breakdown: Zener & Avalanche Breakdown",
         "Zener Diode as Voltage Regulator",
-        "Rectifiers (Half-Wave, Full-Wave, Bridge) & Filter Circuits",
-        "Special Diodes (Photodiode, LED, Solar Cell)"
+        "Rectifiers (Half-Wave, Full-Wave, Bridge) & Filter Circuits"
       ],
       "Bipolar Junction Transistors": [
         "BJT Construction & Working (NPN, PNP)",
-        "Transistor Configurations (CB, CE, CC) & Characteristics",
-        "Current Gain Parameters (alpha, beta, gamma) & Relations",
-        "Transistor Biasing & Operating Point (Q-Point Stability)",
-        "DC & AC Load Lines"
+        "Transistor Biasing & Operating Point (Q-Point Stability)"
       ],
       "Amplifiers": [
-        "Small-Signal CE Amplifier & h-Parameter Model",
-        "Voltage Gain, Current Gain, Input & Output Impedance",
-        "Frequency Response & Gain-Bandwidth Product",
-        "Feedback in Amplifiers (Positive vs Negative Feedback)",
-        "Effects of Negative Feedback on Gain, Bandwidth, Noise & Impedance"
+        "Small-Signal CE Amplifier & h-Parameter Model"
       ],
       "Oscillators": [
-        "Barkhausen Criterion for Sustained Oscillations",
-        "RC Phase Shift Oscillator & Wien Bridge Oscillator",
-        "LC Tuned Oscillators (Hartley & Colpitts Oscillators)",
-        "Crystal Oscillators & Frequency Stability"
+        "LC Tuned Oscillators (Hartley & Colpitts Oscillators)"
       ],
       "Operational Amplifiers": [
         "Ideal Op-Amp Characteristics & Virtual Ground Concept",
         "Inverting & Non-Inverting Amplifiers",
         "Summing Amplifier, Difference Amplifier & Instrumentation Amplifier",
         "Integrator & Differentiator Circuits",
-        "Comparators & Schmitt Trigger",
         "Slew Rate, CMRR & Offset Voltages"
       ],
       "Digital Electronics": [
-        "Number Systems (Binary, Octal, Decimal, Hex) & Conversions",
-        "1's and 2's Complement Arithmetic",
-        "BCD, Gray Codes & Parity Codes",
-        "Multiplexers, Demultiplexers, Encoders & Decoders",
-        "Flip-Flops (SR, JK, D, T) & Counters / Shift Registers"
+        "Number Systems (Binary, Octal, Decimal, Hex) & Conversions"
       ],
       "Logic Gates": [
         "Basic Gates (AND, OR, NOT) & Truth Tables",
-        "Universal Gates (NAND, NOR) & Function Realization",
         "Exclusive Gates (XOR, XNOR) & Parity Checkers",
         "Boolean Algebra & De Morgan's Laws",
         "Karnaugh Maps (K-Maps) & SOP / POS Minimization"
